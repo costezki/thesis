@@ -2,7 +2,7 @@
 
 PhD thesis LaTeX source code.
 
-# Template Used
+## Template Used
 
 [CUED template](https://github.com/kks32/phd-thesis-template)
 
