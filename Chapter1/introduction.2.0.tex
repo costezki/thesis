@@ -1,0 +1,377 @@
+\chapter{Introduction}
+
+\section{Practical relevance}
+%\todo[inline]{
+%First, point to the increasing and increasingly recognized
+%need for deeper, richer semantic/pragmatic analyses across
+%a broad range of applications: corpora, human-machine
+%interaction, intelligent interfaces and assistance robotics,
+%whatever you can find with references supporting the
+%claim.}
+Developed over thousands and thousands of years, human language has become a nuanced form of communication that carries a wealth of meaning that by far transcends the words alone. When it comes to human-machine interaction this highly articulated communication form is deemed impractical. So far humans had to learn to interact with computers and do it in  formal, strict and rigorous manner via graphical user interfaces, command line terminals and programming languages. Advancements in \textit{Natural Language Processing} (NLP) which is a branch of \textit{Artificial Intelligence} (AI) are a game changer in this domain. NLP starts to unlocks the information treasure locked in the human speech and make it available for processing to computers. NLP becomes an important technology in bridging the gap between natural data and digital structured data.
+
+In a world such ours, where technology is ubiquitous and pervasive in almost all aspects of our life, NLP becomes of great value and importance regardless whether it materializes as a spell-checker, intuitive recommender system, spam filter, (not so) clever machine translator or a voice controlled device. 
+
+Every time you ask Siri or Alexa for directions to the nearest Peruvian restaurant, how to cook Romanian beef stew or what is the dictionary definition for the word \textit{germane}, a complex chain of operations is activated that allows `her' to understand the question, search for the information you are looking for and respond in a human understandable language. Such tasks are possible only in the past few years thanks to advances in NLP. Until now we have been interacting with computers in a language they understand rather than us. Now they are learning our language. 
+
+%\textit{Computational Linguistics} (CL) was mentioned in the 1950 in the context of automatic translations \citep{Hutchins1999} of Russian text into English developing before the field of proper AI. Only a few years later CL became a sub-domain of AI as an interdisciplinary field dedicated to developing algorithms and computer software for intelligent processing of text (leaving the very hard questions of intelligence and human cognition aside). Besides \textit{machine translation} CL incorporates a broader range of tasks such as \textit{speech synthesis and recognition, text tagging, syntactic and semantic parsing, text generation, document summarisation, information extraction}, etc. 
+
+\subsection{NLP for businesses}
+NLP opens new and quite dramatic horizons for businesses. Navigating with limited resources stormy markets of competitors, customers and regulators and finding an optimal answer/action to a business question is not a trivial task. 
+Markets are influenced by the information exchange and being able to process massive amounts of text and extract meaning can help asses the status of an industry and play an essential role in crafting a strategy or a tactical action. 
+Relevant NLP tasks for gathering market intelligence are \textit{named entity recognition} (NER), \textit{event extraction} and \textit{sentence classification}. With these tasks alone one can build a database about companies, people, governments, places, events together with positive or negative statements about them and run versatile analytics to audit the state of affairs.
+
+Compliance with governmental, European or international regulations is a big issue for large corporations. One question for addressing this problem is whether a product is a liability or not and if yes then in which way. Pharma companies for example, once a drug has been released for clinical trials, need to process the unstructured clinical narratives or patient's reports about their health and gather information on the side effects. The NLP tasks needed for this applications are primarily \textit{NER} to extract names of drugs, patients and pharma companies and \textit{relation detection} used to identify the context in which the side effect is mentioned. NER task help transforming a sentence such as ``Valium makes me sleepy'' to ``(drug) makes me (symptom)'' and relation detection will apply patterns such as ``I felt (symptom) after taking (drug)'' to detect the presence of side effects.
+
+Many customers, before buying a product, check online reviews about the company and the product whether it is pizza or a smartphone. Popular sources for such inquiry are the blogs, forums, reviews, social media, reports, news, company websites, etc. All of them contain a plethora of precious information that stays trapped in unstructured human generated text. This information if unlocked can play a great deal in company's reputation management and decisions for necessary actions to improve it. The NLP tasks sufficient to address this business required are \textit{sentiment analysis} to identify attitude, judgement, emotions and intent of the speaker, and \textit{co-reference resolution} which connects mentions of things to their pronominal reference in the following or preceding text. These tasks alone can extract the positive and negative attitudes from sentence ``The pizza was amazing but the waiter was awful!'' and connect it to the following sentence ``I adore when it is topped with my favourite artichoke'' about pizza and not the waiter and discover a topping preference.
+
+NLP is heavily used in customer service in order to figure out what customer means not just what she says. Interaction of companies with their customers contain many hints pointing towards their dissatisfaction and interaction itself is often one of the causes. Companies record, transcribe and analyse large numbers of call recordings for extended insights. They deploy chat bots fo increased responsiveness by providing immediate answers to simple needs and also decrease the load of the help desk staff. NLP tasks that are essential in addressing some of the customer service needs are \textit{speech recognition} that converts speech audio signal into text and \textit{question answering} which is a complex task of recognising the human language question, extract the meaning, searching relevant information in a knowledge base and generate an ineligible answer. Advances in deep learning allow nowadays to skip the need for searching in a knowledge base by learning from large corpora of question-answer pairs complex interrelations. 
+
+The above cases underline the increased need in NLP whereas the variation and ever increasing complexity of tasks reveal the need in deeper and richer semantic and pragmatic analysis across a broad range of domains and applications. Any analysis of text beyond the formal aspects such as morphology, lexis and syntax inevitably lead to a functional paradigm of some sort which can be applied not only at the clause level but at the discourse as a whole. This makes the text also an artefact with relation socio-cultural context where it occurs. 
+
+\section{The linguistic framework}
+Any description or analysis involving language implies some theory of how language works. In this thesis I chose the Systemic Functional Linguistic (SFL) framework because of its versatility to account for the complexity and phenomenological diversity of human language providing descriptions along \textit{multiple semiotic dimensions} \citep{Halliday2003} (i.e. paradigmatic, syntagmatic, meta-functional, stratification and instantiation dimensions) and at different \textit{delicacy levels} of the \textit{lexico-grammatical cline} \citep{Halliday2002, Hasan2014}. 
+
+Elaborating the foundations laid by his British teacher J. R. Firth, \citet{Hjelmslev53} from Copehagen School of linguistics and a group of European linguists from Prague School, Halliday develops the beginnings of SFL in his seminal paper \cite{Halliday61-orig}. This paper constitutes a response to the need for a \textit{general theory of language} that would be holistic enough to guide empirical research in the broad discipline of linguistic science:
+\begin{quotation}
+    ... the need for a \textit{general} theory of description, as opposed to a \textit{universal} scheme of descriptive categories, has long been apparent, if often unformulated, in the description of all languages \citep[p.54; emphasis in original]{Halliday57}
+\end{quotation} 
+\begin{quotation}
+    If we consider general linguistics to be the body of theory, which guides and controls the procedures of the various branches of linguistic science, then any linguistic study, historical or descriptive, particular or comparative, draws on and contributes to the principles of general linguistics \citep[p.55]{Halliday57}
+\end{quotation} 
+
+% deeper on SFL
+With this perspective, paradigmatic organization of language received priority as the primary focus of linguistic description and subsequently the structure is analysed as a realisation of features. 
+
+SFL regards language as a social semiotic system where any act of communication is regarded as a conflation of \textit{linguistic choices} available in a particular language. Choices are organised on a paradigmatic rather than structural axis and represented as \textit{system networks}. Moreover, in the SFL perspective language has evolved to serve particular \textit{functions} influencing their the structure and organisation of the language. However, their organisation around the paradigmatic dimension leads to a significantly different functional organisation than those found in several other frameworks which \citet{Butler2003-pt1, Butler2003-pt2} treats extensively. 
+
+Embracing the \textit{oragnon model} formulated by \citet{Buhler34}, Halliday refers to the language functions as metafunctions or lines of meaning offering a trinocular perspective on language through \textit{ideational}, \textit{interpersonal} and \textit{textual} metafunctions. In SFL, language is first of all an interactive action serving to enact social relations under the umbrella of the \textit{interpersonal metafunction}. Then it is a medium to express the embodied human experience of inner (mental) and outer (perceived material) worlds via \textit{ideational metafunction}. Finally the two weave together into a coherent discourse flow whose mechanisms are characterised through the \textit{textual metafunction}.
+
+% on metafunctions
+%TODO briefly introduce and refere to other extensive sources
+%To account for the complexity and phenomenological diversity of human language the SFL theory provides descriptions along \textit{syntagmatic, (meta)functional, paradigmatic, stratification and instantiation axes}. 
+
+% 
+There are two models of SFG: the \textit{Sydney Grammar} developed by \citet{Halliday2013}, the founding fathers of \textit{Systemic Functional Linguistics} (SFL), and \textit{Cardiff Grammar} developed by \citet{Fawcett2008}, an extension and in a way simplification of Sydney Grammar. Each of the two grammars has advantages and shortcomings which I present in analyse and select based on theoretical soundness and suitability to the goals of the current project.
+
+Cardiff and Sydney grammars had been used as language models in natural language generation projects within 
+the broader contexts of social interaction. Some researchers \citep{Kasper1988, ODonoghue1991a, ODonnell1993, Souter1996, Day2007} attempted to reuse the grammars for the purpose of syntactic parsing within the borders of NL generation coverage. I come back to these works in more detail in Section \ref{sec:sota}.
+
+As we part away from the surface form of text and aim for rich semantics or aim at analyses higher than the clause level i.e. discourse, the functional is increasingly useful and revealing of meanings in text. Such analyses have been done manually by linguists, semioticians and educators in an informal manner as there have not been any tools to automate such processes. Besides Linguistics, there is a plethora of linguistic analysis using SFL framework in other fields of research. SFL has been used extensively as a descriptive framework in Critical Discourse Analysis and in Education studies. Automatising the language analysis with SFL framework will unlock the potential of these fields. Next I provide a glimpse of what opportunities they offer. 
+
+\section{The Opportunity}
+\todo[inline]{
+    Second, a large amount of description of this kind has
+    traditionally been done, and done a lot, in SFL. Here again
+    you need to find a good collection of example 'applications'
+    in SFL (not computational) where the deeper analysis
+    has been found useful and give references: education,
+    text/discourse analysis (critical)\citep{tenorio2011} [Encarnacion Hidalgo Tenorio 2011, Critical Discourse Analysis, An overview], whatever plus references.
+    
+    Survey of studies in systemic functional language description \citep{Mwinlaaru2016}
+    
+    functional information is found useful for text analysis, but this has only been done informally
+    
+    well, look at the education work, the typology work,
+    the CDA work: these are the main areas where SFL appears
+    and has papers.
+}
+
+Critical Discourse Analysis from it's inception was designed, but is not limited to, questioning the status quo by detecting, analysing and also resisting enactments of power abuse as transmitted in private and public discourses. The philosophical and linguistic bases on which CDA is grounded are certain branches of social theory and earlier discourse analysis, text linguistics and interactional sociolinguistics. CDA seeks to expose the manipulative nature of discursive practices, and improve communication and well-being by removing the barriers of assumed beliefs legitimised through discourse\citep{Tenorio2011}. 
+
+SFL theory of language has been widely adopted in CDA community. It comes handy when one and the same piece of reality is portrayed differently depending on the side and role of the source. For example one and the same historical event can be described as a riot, demonstration, or a protest. For the same reason various agents can be either presented as antagonists that instigate the conflict or protagonists that oppose it by simple selections of grammatical coding. Thus different linguistic descriptions lead to different constructions of the reality. 
+%Controlling and knowing how to manipulate these constructions leads to accumulation and hold of power. 
+
+
+
+\section{The Barrier}
+\todo[inline]{
+    But, until now it has not been possible to use these
+    detailed analysis in computational contexts: this makes
+    them unavailable for corpus work, for training data in
+    machine learning, etc. etc. (add as many points as occur
+    to you).}
+
+
+\section{Previous Attempts}
+\todo[inline]{
+    There have been attempts to make this work (which you
+    will come back to and describe in Chapter X in detail), however,
+    but these have not worked. As you you say you will describe in detail
+    in Chapter X, there is however a strong diagnostic as to
+    just why these attempts have not been successful: i.e., the
+    lack of structural detail that SFG descriptions typically
+    provide. This is argued in general in Bateman (2008)
+    and Teich (1999) [and any other references you can find].}
+
+
+\section{Some interesting examples}
+\todo[inline]{
+    You then give EXAMPLES of some difficult cases, where
+    you illustrate what an SFG analysis would like look and
+    you point out the lack of structural detail, informally
+    so that it can be understood directly without further
+    technical detail. Preferably bringing out some
+    cases where it is evident that there is no information,
+    e.g., about raising and control (Teich) and anything
+    else which would make interpretation difficult.}
+
+\section{Proposed Solution}
+\todo[inline]{
+    Your proposed solution to this problem, and the goal of the thesis,
+    is therefore to add some more structural information to a
+    complete augmented SFG account by drawing on frameworks which
+    have demonstrated coverage of structural detail and which
+    also have supported computational instantiation. This will
+    be shown and evaluated in the thesis.}
+
+
+\section{Thesis Goal}
+\todo[inline]{
+    So, the thesis goal and outline will be to (and you list them
+    explicitly like this too):\newline
+    - characterise SFL in its two major variants\newline
+    - characterise the previous attempts to parse with SFL and their problems\newline
+    - set out two further linguistic frameworks which (a) have\newline
+    strong accounts of structural relationships, (b) have shown
+    themselves supportive of computational instantiation, and (c) can
+    be shown to exhibit suggestive theoretical/descriptive
+    links with SFG: in particular, DG and GB.
+    
+    Chapter X does this for DG
+    Chapter Y does this for GB.}
+
+\section{Provisional Thesis Structure}
+\todo[inline]{
+    1: introduction, reasons and goals \newline
+    2: SFG \newline
+    3: State of the Art in approaches to Parsing with SFG and complexity \newline
+    4: DepGrammar \newline
+    5: GBT  \newline
+    6: Single architecture \newline
+    : 
+    : Empirical Evaluation \newline
+    : Conclusions (what has been achieved and outlook) \newline
+    }
+
+
+
+
+\section{References}
+
+[Butler2003] Structure and Function 
+[Hjelmslev1953] - Prolegomena-to-a-Theory-of-Language-by-Luis-Hjmeslev
+[Elke Teich 1999 ] - Systemic Functional Grammar \& Natural Language Generation - Ch5
+
+
+
+\begin{Verbatim}
+
+
+% feedback Chapter 1 + 2
+Dear Eugene,
+
+thanks for file; attached are the detailed comments and corrections and
+suggestions for Chapters 1 + 2. I suggest some reorganisation of the
+introduction and how the materials in the current chapter 2 are described, you will need to work through the comments to get the
+sense of this. But, in short, I think an organisation along the
+lines:
+
+Chapter 1: introduction, reasons and goals
+Chapter 2: SFG
+Chapter 3: State of the Art in approaches to Parsing with SFG and complexity
+Chapter 4: DepGrammar
+Chapter 5: GBT (perhaps, haven't read these yet)
+
+would get the thesis off to a better start. Also you need to think
+about whether all the detail of the SFG variants is important enough
+for your task. You will need to provide some more detail of the
+organisation of the actual grammars as well in any case, as otherwise
+you can't talk about Mood and Transitivity and the like. This is
+all clarified in the comments. Alternatively you say very little about
+these and introduce them when you get to the later chapters: that
+might make sense; I'll see when I get that far. If one went that
+road, it would mean not including comments about Mood and Transitivity
+in the current chapter 2 though, which might be awkward.
+
+I'll proceed with the other chapters, but as you will see, you have
+a fair bit to get going with in any case.
+
+I will not be able to work on the thesis after the end of March. 
+
+theses don't really work like that; so we'll see how far you get.
+You (and I) don't want a repeat of the Daniel situation.
+
+Let me know if anything is unclear.
+
+Best,
+John.
+
+%feedback Chapter 1 + 2
+
+Dear Eugene,
+
+Comments/corrections for chapters 3 + 4 attached.
+
+Now I'm getting more of a view of the thesis, I'd say that
+at present, systemicists will get confused because they'd
+wonder why alien things like GB and dependency grammar
+appear, and formal/computational linguists would get
+confused because they wouldn't be clear why one would
+want to take something like SFL. This can be managed
+fairly straightforwardly I suspect by setting up the
+argument in the Introduction in a clear way, so that
+everyone knows just why these things are coming together.
+I'd suggest the following kind of outline for the
+introduction to make that work, let me know if you
+have any problems or questions about this as it
+would seem (to me) to be a good way of making all
+the bits fits together in a reasonably convincing
+fashion. This would also help avoid a reoccurring problem
+in your text at the moment, where you frequently want
+to talk about things that you have not yet introduced - this
+just makes the text confused and impossible to follow (many
+examples of this are picked out explicitly in the comments).
+
+So...
+
+Structure the Intro to the thesis more like this:
+
+First, point to the increasing and increasingly recognized
+need for deeper, richer semantic/pragmatic analyses across
+a broad range of applications: corpora, human-machine
+interaction, intelligent interfaces and assistance robotics,
+whatever you can find with references supporting the
+claim.
+
+Second, a large amount of description of this kind has
+traditionally been done, and done a lot, in SFL. Here again
+you need to find a good collection of example 'applications'
+in SFL (not computational) where the deeper analysis
+has been found useful and give references: education,
+text/discourse analysis (critical), whatever plus references.
+
+But, until now it has not been possible to use these
+detailed analysis in computational contexts: this makes
+them unavailable for corpus work, for training data in
+machine learning, etc. etc. (add as many points as occur
+to you).
+
+There have been attempts to make this work (which you
+will come back to and describe in Chapter X in detail), however,
+but these have not worked. As you you say you will describe in detail
+in Chapter X, there is however a strong diagnostic as to
+just why these attempts have not been successful: i.e., the
+lack of structural detail that SFG descriptions typically
+provide. This is argued in general in Bateman (2008)
+and Teich (1999) [and any other references you can find].
+
+You then give EXAMPLES of some difficult cases, where
+you illustrate what an SFG analysis would like look and
+you point out the lack of structural detail, informally
+so that it can be understood directly without further
+technical detail. Preferably bringing out some
+cases where it is evident that there is no information,
+e.g., about raising and control (Teich) and anything
+else which would make interpretation difficult.
+
+Your proposed solution to this problem, and the goal of the thesis,
+is therefore to add some more structural information to a
+complete augmented SFG account by drawing on frameworks which
+have demonstrated coverage of structural detail and which
+also have supported computational instantiation. This will
+be shown and evaluated in the thesis.
+
+So, the thesis goal and outline will be to (and you list them
+explicitly like this too):
+- characterise SFL in its two major variants
+- characterise the previous attempts to parse with SFL and their problems
+- set out two further linguistic frameworks which (a) have
+strong accounts of structural relationships, (b) have shown
+themselves supportive of computational instantiation, and (c) can
+be shown to exhibit suggestive theoretical/descriptive
+links with SFG: in particular, DG and GB.
+
+Chapter X does this for DG
+Chapter Y does this for GB.
+
+- Following this, Chapter Y+1 brings these altogether in a single
+architecture (can be short: material from the current introduction
+about the system architecture goes here, or can be longer, if
+you take the material about merging GB and DG and then with SFG
+here too: this might be best).
+
+- rest of chapters go into details.
+
+- Chapter $-1 Evaluation
+- Chapter $ What has been achieved and outlook.
+
+
+I think this kind of explicit form in the Introduction of
+the thesis would tell a convincing story that
+would make the most of what you currently have and simply wrap
+this in a structure that readers can follow and accept. Then
+you strengthen the existing bits of text to explicitly draw
+attention to these goals as you go so that the reader
+remembers where they are and what you are trying to do (and why).
+I think this is a fair bit of work still, but relatively
+straightforward as it is more about imposing structure and
+getting things in the right order. Definitely a thesis in
+there struggling to get out! :-)
+
+Best,
+John.
+
+%feedback Chapter 5
+
+Hi Eugen,
+
+here is chapter 5 commented. In this one, there are many more
+comments about content that will need fixing up, so not just
+style of presentation. Many of the problems though come, I suspect,
+because you have not yet introduced the algorithm and pipeline
+and its datastructures sufficiently that the reader has any
+idea what your formalisations here are attempting to do. I think
+many of them can just disappear, since you certainly won't
+be able to use them anywhere. To define a data structure, you
+don't need a full first-order theory, that is overkill. You
+do not get any points for formalisation; you'd only get points
+for appropriate, necessary and well motivated formalisation,
+and many of the definitions in this chapter do not meet
+this requirement. You only need as much formalism as necessary
+to get the job done. And the job is the task that you need
+to have described as the pipeline of the system: probably best
+immediately after the discussion of GB. There are many
+interesting decisions made in this chapter, but they are
+just lost in the mass of probably hardly relevant detail.
+So introducing the pipeline and its data structures first,
+would give you a better way of picking out just that which
+is a crucial contribution of your thesis, i.e., the stuff
+that makes parsing work. Providing definitions of
+morphisms between graphs does *not* do that; and it is
+hardly your job and has been done more or less completely
+before in appropriate formal texts in any case.
+
+In short, you need to provide the new architecture and pipeline
+chapter and rewrite this one accordingly.
+
+Let me know when that has happened, as that will be the next
+major version that it would be sensible for me to comment on
+I think. The actual details of the parsing algorithm that
+occurs in subsequent chapters will I hope be more straightforward,
+once the groundwork is out of the way.
+
+Best,
+John.
+
+---
+Am 08.03.18 um 22:00 schrieb Eugen Costezki:
+> I wanted to say that this chapter 5 represented a special kind of struggle  as I was tempted to define entire computer science.
+
+yes, I noticed! :-) Fortunately, you do not need to do this...
+so simplifications are ahead!
+
+Best,
+John
+
+\end{Verbatim}

@@ -1,0 +1,194 @@
+\chapter{Conclusions}
+\label{ch:conclusions}
+
+%\todo{A summary of the main text or main points of the study}
+
+\todo{why is it useful?}
+%\todo{for whom is it useful?}
+\todo{make reference to the software}
+
+\section{The thesis summary}
+
+The aim of this work is to design a reliable method for English text parsing with Systemic Functional Grammars. To achieve this goal I have designed a pipeline which, starting from a dependency parse of a sentence, generates the SFL-like constituency structure serving as a syntactic backbone and then enriches it with various grammatical features. 
+
+In this process a primary milestone the first steps is the creation of constituency structure. Chapter \ref{ch:sfg} describes the essential theoretical foundations of two SFL schools, namely Sydney and Cardiff schools, and provides a critical analysis of the two to reconcile on the diverging points on rank scale, unit classes, the constituency structure, treatment of coordination, grammatical unit structure, clause boundaries, etc. and state the position adopted in this work. 
+
+In order to create the constituency structure from the dependency structure there needs to be a mechanism in place providing a theoretical and a practical mapping between the two. The theoretical account on the dependency grammar and how it is related to SFL is described in Chapter \ref{ch:dependecy-grappamr}. The practical aspects and concrete algorithms are described in Chapter \ref{ch:parsing-algorithm} together with the mapping rules used in the process. 
+
+To make clear what are the basic ingredients and how the algorithms are cooked, Chapter \ref{ch:data-structures} introduces all the data structures and operations on them. These structures are defined from a computer scientific point of view emulating the needed SFL concepts. These range from a few graph types, simple attribute-value dictionaries and ordered lists with logical operators. In addition to that, a set of specific graph operations have been defined to perform pattern matching and system network traversals.
+
+Once the constituency structure is created, the second milestone is to enrich it with systemic features. Many features can be associated to or derived from the dependency and constituency graph fragments. Therefore graph pattern matching is a cornerstone operation used for inserting new or missing units and adding features to existing ones. I describe these operations in detail in the second part of \ref{ch:data-structures}. Then in Chapters \ref{ch:parsing-algorithm} and \ref{ch:semantic-parsing} I show how these operations are being used for enrichment of the syntactic backbone with systemic features.
+
+The more precisely graph pattern is defined the less instances it will be matched to and thus decreasing the number of errors and increasing the accuracy. The semantic enrichment is performed via spotting instances of semantic graph patterns. It is often the case that the patterns, in their canonical form, list all the participants of a semantic configuration but in practice, instances of such configurations may miss a participant or two. If applied in their canonical form the patterns will not identify with such the instance. One solution would be to reduce the specificity of the patterns, which leads to a high increase in erroneous applications or populate where possible the covert participants to yield successful matches. It is the second approach that was implemented in this work. To identify and create the covert participants I turned to Government and Binding theory. Two more contributions I bring in this thesis is the theoretical mapping from GBT into dependency structures covered in Chapter \ref{ch:gbt} and then a concrete implementation described in Chapter \ref{ch:semantic-parsing}.
+
+In the last part of the thesis I describe the empirical evaluation I conducted in order to test the parser accuracy on various features. To conduct this evaluation I created together with Ela Oren a corpus using blog articles of OCD patients covering the Mood system and another corpus was provided to my by Anke Schultz covering the Transitivity system. The results show very good performance (0.6 -- 0.9 F1) on Mood features slightly decreasing as the delicacy of the features increases. On Transitivity features, the results are expectedly less precise (0.4 -- 0.8 F1) and constitute a good baseline for future improvements. 
+
+As discussed in the Section \ref{sec:evaluation-discussion} further investigation shall be conducted to determine the error types, shortcomings in the corpus and the parser. Since for both syntactic and semantic annotations there is only a single author annotation available, the results shall be considered indicative and by no means representative for the parser performance. Nevertheless they can already be considered as a good feedback for looking into certain areas of the grammar with considerably low performance in order identify the potential problems.
+
+%This is already covered in the futire work chapter.  
+%\section{Limitations of the work}
+%The grammar and the set of features used in the current work is limited to high level Mood and Transitivity.  Nevertheless it can be extended to a much larger coverage as for example Nigel grammar. 
+%\todo{A statement about the limitations of the work}
+
+\section{Practical applications}
+A wide variety of tasks in natural language processing such as document classification, topic detection, sentiment analysis, word sense disambiguation don't need parsing. These are tasks can achieve high performance and accuracy with no linguistic feature or with shallow ones such as as lemmas or part of speech by using powerful statical or machine learning techniques. What these tasks have in common is that they generally train on a large corpus and then operate again on large input text to finally yield a prediction for a single feature that they have been trained for. Consider for example the existing methods for sentiment analysis: they will provide a value between -1 to 1 estimating the sentiment polarity for a text that can be anything from one word to a whole page. 
+ 
+Conversely, there are tasks where extracting from text (usually short) as much knowledge as possible is crucial for the task success. Consider a dialogue system: where deep understanding is essential for a meaningful, engaging and close to natural interaction with a human subject. It is no longer enough to assign a few shallow features to the input text, but a deep understanding for planning a proper response. Or consider the case of information extraction or relationship mining tasks when knowledge is extracted at the sub-sentential level thus the deeper linguistic understanding is possible the better. 
+
+Current parser is useful to achieve the latter set of tasks. The rich constituency parses can be an essential ingredient for further goals such as anaphora resolution, clausal taxis analysis, rhetoric relation parsing, speech act detection, discourse model generation, knowledge extraction and other ones.   
+
+All these tasks are needed for creating an intelligent interactive agent for various domains such as call centers, ticketing agencies, intelligent cars and houses, personal companions or assistants and many other. 
+
+In marketing research, understanding the clients needs is one of the primary tasks. Mining intelligence from the unstructured data sources such as forums, customer reviews, social media posts is particularly difficult task. In such cases the more features are available in the analysis the better. With the help of  statistical methods feature correlations, predictive models and interpretations can be conveyed for task at hand such as satisfaction level, requirement or complaint discovery, etc.
+
+\section{Impact on future research}
+%\todo{The implication of the work for future research (i.e. Recommendations)}
+
+Pattern graphs and the matching methods developed in this work can be applied for expressing many more grammatic features than the ones presented in this work. They can serve as language for systematizing grammatical realizations especially that the realization statements play a vital role in SG grammars. The graph matching method itself can virtually be applied to any other languages than English. So similar parsers can be implemented for other languages and and respectively grammars. 
+
+Linguists study various language properties, to do so they need to hand annotate large amounts of text to come up with conclusive statements or formulate hypothesizes. Provided the parser with a target set of feature coverage, the scale at which text analysis is performed can be uplifted orders of magnitude helping linguists come with statistically significant and grounded claims in much shorter time. Parsimonious Vole could play the role of such a text annotator helping the research on text genre, field and tenor.
+
+%\todo{critical analysis of current methods using graph matching, it is fast and has potential to extend to arbitrary number of features} 
+
+%\todo{Other important facts and figures not mentioned in the main body}
+
+%
+%
+%
+\section{Further work}
+\label{sec:future-work}
+This section describes improvements of the project that are desirable or at least worth considering along with major improvements that arouse in the process of theoretical development and parser implementation. 
+
+\subsection{Verbal group again: from syntactically towards semantically sound analysis}
+The \textit{one main verb per clause} principle of the Cardiff school that I adopted in this thesis (briefly discussed in Section \ref{sec:verbal-grpoup-and-clause-division}) provides a basis for simple and reliable syntactic structures. The alternative is adopting the concept of verbal group, simple  or complex, as proposed by the Sydney school in \citep[p.396--418, 567--592]{Halliday2013}, which provides a richer semantically motivated description. However, analysis with verbal group complex is potentially complex one and subject to ambiguities.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		{\it Ants} & {\it keep}                                    & {\it biting}                                   & {\it me}    \\ \hline
+		Subject    & Finite                                        & Predicator                                     & complement  \\ \hline
+		Actor      & \multicolumn{2}{c|}{Process: Material}                                                          & Goal/Medium \\ \hline
+		& \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}Verbal group complex \\ {expansion, elaborative, time-phase, durative} \\ $\alpha \longrightarrow =\beta$ \end{tabular}} &             \\ \hline
+	\end{tabular}
+	\caption{Sydney sample analysis of a clause with a \textit{verbal group complex}}
+	\label{tab:example-syndey-vb}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		{\it Ants} & {\it keep}          & -             & {\it biting}    & {\it me}   \\ \hline
+		Subject    & Finite/Main Verb           & \multicolumn{3}{c|}{Complement}              \\ \hline
+		Agent      & Process: Influential & \multicolumn{3}{c|}{Phenomena}               \\ \hline
+		\multicolumn{2}{|c|}{}           & Subject(null) & Main Verb       & Complement \\ \hline
+		\multicolumn{2}{|c|}{}           & Agent         & Process: Action & Affected   \\ \hline
+	\end{tabular}
+	\caption{Cardiff sample analysis of a clause \textit{embedded} into another}
+	\label{tab:example-cardiff-vb}
+\end{table}
+
+Check the sample analyses in Table \ref{tab:example-syndey-vb} and \ref{tab:example-cardiff-vb}. The two-clause analysis proposed by Cardiff school can be quite intuitively transformed into a single experiential structure with the top clause expressing a set of aspectual features of the process in the lower (embedded) clause just like in the Sydney analysis in Table \ref{tab:example-syndey-vb}. 
+
+The class of \textit{influential} processes proposed in the Cardiff transitivity system was introduced to handle expressions of process aspects through other lexical verbs. I consider it as a class of pseudo-processes with a set of well defined and useful syntactic functions but with poor semantic foundation. The analysis with influential process types reminds me to an unstable chemical substance that, in a chain of reactions, is an intermediary step towards some more stable substance. Similarly, I propose merging the two clauses towards a more meaningful analysis, such as the one suggested by Sydney grammar. 
+
+\begin{generalization}[Merging of influential clauses] \label{def:merging-influential}
+	When the top clause has an influential process and the lower (embedded) one has any of the other processes, then the lower one shall be enriched with aspectual features that can be derived from the top one.
+\end{generalization}
+
+This rule of thumb is described in Generalization \ref{def:merging-influential}. Of course, this raises a set of problems that are worth investigating. Firstly, one should investigate the connections and mappings between the influential process system network described in Cardiff grammar and the system of verbal group complex described in Sydney grammar \citep[p.589]{Halliday2013}. Secondly, one should investigate how this merger impacts the syntactic structure. 
+
+The benefits of such a merger leads to an increased comprehensiveness, not only of the transitivity analysis -- demonstrated by the examples in Tables \ref{tab:example-syndey-vb} and \ref{tab:example-cardiff-vb} -- but also of the modal assessment that includes modality, as demonstrated by the Examples \ref{ex:modalityass1} and \ref{ex:modalityass2}. 
+
+\begin{exe}
+	\ex\label{ex:modalityass1} \textit{I think} I've been pushed forward; \textit{I don't really know}, \citep[p.183]{Halliday2013}
+	\ex\label{ex:modalityass2} \textit{I believe} Sheridan once said you would've made an excellent pope. \citep[p.182]{Halliday2013}
+\end{exe}
+
+Examples \ref{ex:modalityass1} and \ref{ex:modalityass2} represent cases when the modal assessment of the lower clause is carried on by the higher one. In both examples, the higher clause can be replaced by the modal verb \textit{maybe} or the adverb \textit{perhaps}. 
+
+\subsection{Nominal, Quality, Quantity and other groups of Cardiff grammar: from syntactically towards semantically sound analysis}
+Cardiff unit classes are semantically motivated as compared to more syntactic ones in Sydney grammar. This has been presented in Sections \ref{sec:cardiff-theory-grammar} and discussed in \ref{sec:discussion-unit-classes}.
+
+For instance, Nominal class structure proposed in Cardiff grammar (discussed in Section \ref{sec:nominal-group}), uses elements that are more semantic in nature (e.g. various types of determiners: representational, quantifying, typic, partitive etc.) than the syntactic one offered in Sydney grammar (e.g. only deictic determiner). To do this shift we need to think of two problems: (a) how to detect the semantic head of the nominal units and (b) how to craft (if none exists) a lexical-semantic resources to help determining potential functions (structural elements) for each lexical item in the nominal group. In my view building lexical-semantic resources asked at point (b) bears actually a solution for point (a) as well.
+
+I need to stress that some existing lexical resources such as WordNet \citep{Miller1995} and/or FrameNet\citep{Baker1998} could and most likely are suitable for fulfilling the needs at point (b) but the solution is not straight forward and further adaptations need to be done for the context of SFL.
+
+The same holds for Adverbial and Adjectival groups (discussed in Section \ref{sec:advectival-adverbial-groups}) which, in Cardiff grammar, are split into the Quality and Quantity groups. The existent lexical resources such as such as WordNet \citep{Miller1995} and/or FrameNet\citep{Baker1998} combined with the delicate classification proposed by \citet{Tucker1997} (and other research must exist on adverbial groups of which I am not aware at the moment) can yield positive results in parsing with Cardiff unit classes. 
+
+Just like in the case of verb groups discussed in previous section, moving towards semantically motivated unit classes, as proposed in Cardiff grammar, would greatly benefit applications requiring deeper natural language understanding.
+
+\subsection{Taxis analysis and potential for discourse relation detection}
+Currently Parsimonious Vole parser implements a simple taxis analysis technique based on patterns represented as regular expressions. 
+
+
+%As presented in Appendix \ref{ch:texis-patterns} I have created 
+In the Appendix is listed a database of clause taxis patterns according to systematization in IFG 3 \citep{Halliday2004}. Each relation type has a set of patterns ascribed to it which represent clause order and presence or absence of explicit lexical markers or clause features. 
+
+Then, in taxis analysis process, each pair of adjacent clauses in the sentence is tested for compliance with every pattern in the database. The matches represent potential manifestation of the corresponding relation.  
+
+Currently this part of the parser has not been tested and it remains a highly desirable future work. Further improvements and developments can be performed based on incremental testing and corrections of the taxis pattern database.
+
+This work can be extended to handle relations between sentences taking on a discourse level analysis which is perfectly in line with the Rhetorical Structure Theory (RST) \citep{Mann1988,Mann1992}. 
+
+To increase the accuracy of taxis analysis, I believe the following additional elements shall be included into the pattern representation: Transitivity configurations including process type and participant roles, co-references resolved between clauses/sentences and Textual metafunction analysis in terms of Theme/Rheme and eventually New/Given.
+
+\subsection{Towards speech act analysis}
+As Robin Fawcett explains \citep{Fawcett2011}, Halliday's approach to MOOD analysis differs from that of Transitivity in the way that the former is not ``pushed forward towards semantics'' as the latter is. Having a semantically systematised MOOD system would take the interpersonal text analysis into a realm compatible with Speech Act Theory proposed by \citet{Austin1975} or its latter advancements such as the one of \citet{Searle1969} which, in mainstream linguistics, are placed under the umbrella of pragmatics. 
+
+Halliday proposes a simple system of speech functions \citep[p.136]{Halliday2013} which Fawcett develops into a quite delicate system network \citep{Fawcett2011}. It is worth exploring ways to implement Fawcett's latest developments and because the two are not conflicting but complementing each other, one could use Hallidayan MOOD system as a foundation, especially that it has already been implemented and described in the current work. 
+
+\subsection{Process Types and Participant Roles}
+The PTDB \citep{Neale2002} is the first lexical-semantic resource for Cardiff grammar Transitivity system. Its usability in the original form doesn't go beyond that of a resource to be consulted by linguists in the process of manual analysis. It was rich in human understandable comments and remarks but not formal enough to be usable by computers. In the scope of current work the PTDB has been cleaned and brought into a machine readable form but this is far from it's potential as a lexical-grammatical resource for semantic parsing. 
+
+In the mainstream computational linguistics, there exist several other lexical-semantic resources used for Semantic Role Labelling (SRL) such as FrameNet \citep{Baker1998}, VerbNet \citep{Kipper2008}. Mapping or combining PTDB with these resources into a new one would yield benefits for both sides combining strengths of each and covering their shortcomings.
+
+Combining PTDB with VerbNet for example, would be my first choice for the following reasons. PTDB is well semantically systematised according to Cardiff Transitivity system however it lacks any links to syntactic manifestations. VerbNet, on the other hand contains an excellent mapping to the syntactic patterns in which each verb occur, each with associated semantic representation of participant roles and some first order predicates. However, the systematization of frames and participant roles could benefit from a more robust basis of categorisation. Also the lexical coverage of VerbNet is wider than that of PTDB. 
+
+Turning towards resources like FrameNet and WordNet could bring other benefits. For example FrameNet has a set of annotated examples for every frame which, after transformation into Transitivity system, could be used as a training corpus for machine learning algorithms. Another potential benefit would be generating semantic constrains (for example in terms of WordNet \citep{Miller1995} synsets or GUM \citep{Bateman1995,Bateman2010} classes) for every participant role in the system.
+
+PTDB can benefit from mappings with GUM ontology which formalises the experiential model of Sydney school. First by increasing delicacy (at at the moment it covers only three top levels of the system) and second by importing constraints on process types and participant roles from Nigel grammar \citep{Matthiessen1985}. To achieve this, one would have to first map Cardiff and Sydney Transitivity systems and second extract lexical entries from Nigel grammar along with adjacent systemic selections. 
+
+\subsection{Reasoning with systemic networks}
+Systemic networks are a powerful instrument to represent paradigmatic dimension of language. Besides hierarchies they can include constraints on which selections can actually go together or a more complex set of non hierarchical selection interdependencies. Moreover systemic choices can be also accompanied by the realization rules very useful for generation purpose but they could potentially be used in parsing as well. 
+
+In current work system networks are used solely for representation purposes and what would be highly desirable is to enable reasoning capabilities for constraint checking on systemic selections and on syntactic and semantic constituency. For example one could as whether a certain set of features are compatible with each other, or provided a systemic network and several feature selections what would be the whole set of system choices, or being in a particular point in the system network what are the possible next steps towards more delicate systemic choices, or for a particular choice or set of choices what should be present or absent in the constituency structure of the text and so on. All these questions could potentially be resolved by a systemic reasoner. 
+
+Martin Kay is the first to attempt formalization of systemics that would become known as Functional Unification Grammar (FUG) \citep{Kay1985}. This formalization caught on popularity in other linguistic domains such as HPSG, Lexical Functional Grammars and Types Feature Structures. One could look at what has been done and adapt the or build a new reasoning system for systemic networks. 
+
+With the same goal in mind, one could also look at existing reasoners for different logics and attempt an axiomatization of the systemic networks; and more specifically one could do that in Prolog language or with description logics (DL) as there is a rich set of tools and resources available in the context of Semantic Web.
+
+\subsection{Creation of richly annotated corpus with all metafunction: interpersonal, experiential and textual}
+In order to evaluate a parser, a gold standard annotation corpus is essential.  The bigger the corpus, covering various the text genres, the more reliable are the evaluation results. A corpus can as well be the source of grammar or distribution probabilities for structure element and potential filling units as is explored by \citet{Day2007}, \citet{Souter1996} and other scholars in Cardiff. Moreover such a corpus can also constitute the training data set for a machine learning algorithm for parsing.
+
+A corpus of syntactically annotated texts with Cardiff grammar already exists but, from personal communication with Prof. Robin Fawcett, it is not yet been released to public because it is considered still incomplete. Even so this corpus covers only the constituency structures and what I would additionally find very useful, would be a set of systemic features of the constituting units covering a full SFG analysis in terms of experiential, interpersonal and textual metafunctions; and not only the unit class and the element it fills.
+
+A small richly annotated set of text had been created in the scope of the current work for the purpose of evaluating the parser. However it is by far not enough to offer a reliable evaluation. Therefore it is highly desirable to create one. 
+
+To approach this task one could use a systemic functional annotation tool such as UAM Corpus Tool \citep{ODonnell2008,ODonnell2008a} developed and still maintained by Mick O'Donnell or any other tool that supports segment annotation with systemic network tag set structure.
+
+To aid this task one could bootstrap this task by converting other existing corpuses such as Penn Treebank. This task had been already explored by Honnibal in \citeyear{Honnibal2004a,Honnibal2007}.
+
+\subsection{The use of Markov Logics for pattern discovery}
+Markov Logic \citep{Richardson2006,Domingos2010} is a probabilistic logic which applies ideas of Markov network to first order logic enabling uncertain inference. What is very interesting about this logics is that tools implementing it have learning capabilities not only of formulas weights but also of new logical clauses. 
+
+In current approach I am using graph patterns matching technique to generate a rich set of features for the constituent units. However creating those patterns is a tremendous effort. 
+
+Since, graph patterns can be expressed via first order functions and individuals, and assuming that there would already exist a richly annotated corpus, the Markov Logic instruments (for example Alchemy\footnote{\url{http://alchemy.cs.washington.edu/}}, Tuffy\footnote{\url{http://i.stanford.edu/hazy/hazy/tuffy/}} and others) can be employed to inductively learn such patterns from the corpus. 
+
+This approach resembles the Vertical Strips (VS) of \citet{ODonoghue1991a}. The similarity is the probabilistic learning of patterns from the corpus. The difference is that VS patterns are syntactic segment chains from the root node down to tree leafs while with ML more complex patterns can be learned independently of their position in the syntactic tree. Moreover such patterns can be bound to specific feature set. 
+
+\todo{propose a natural language task classification based on the number of features needed as input and provided as output}
+
+
+%
+%
+%
+\section{Overall evaluations}
+\todo{A deduction made on the basis of the main body (i.e. Concluding statements)}
+\todo{The writer’s personal opinion on what has been discussed}
+
+
+\section{A final word}
+\todo{half to one page max}

@@ -1,0 +1,1100 @@
+\chapter{On Graphs, Feature Structures and Systemic Networks}
+\label{ch:data-structures}
+%graphs, graph patterns, attribute-value matrices etc.\\ what can they do?
+
+%\section{Introduction}
+%\menote*{Rewrite}{
+%In this section I present a method to generate mood constituency graph together with more general graph properties and operations over them. The Stanford Dependency Schema proposed by \citet{Marneffe2006} and re-motivated latter in \citeyearpar{Marneffe2008} constitutes the departing point of the current approach in building a  Mood Constituency Graph (MCG). MCG is the structure reflecting mood analysis(described in chapter \ref{}) and serves as the backbone for performing transitivity analysis(described \ref{}) via Graph Matching operations. The method involves three types of graph structures: (1) Dependency Graphs, (2) Mood Constituency Graphs and (3) Pattern Graphs. 
+%
+%In the following I first introduce the specifics of a generic graph structure and the operations that these graphs support and then we present the parsing algorithms. 
+%}
+%{\tiny }
+%The parsing algorithm does not operate on free text but uses a dependency parser (in this case Stanford Dependency Parser \cite{}) bootstrapping the process with a DG backbone.
+
+The parsing algorithm operates mainly with operations on graphs, attribute-value matrices and ordered lists with logical operators. This chapter defines the main types of graphs, their structure and how they are used in the algorithm. It also covers the operations relevant to the parsing algorithm: \textit{conditional traversal and querying} of nodes and edges, \textit{graph matching},\textit{pattern-graph matching} and \textit{pattern-based node selection, insertion and update}.
+
+While developing the Parsimonious Vole parser a set of representational and operational requirements arose. These requirements are as follows:
+\begin{itemize}
+	\item arbitrary relations (i.e. typed and untyped edges)
+	\item description rich (i.e. features of nodes and edges)
+	\item linear ordering and configurations (i.e. syntagmatic and compositional)
+	\item hierarchical tree-like structure (with a root node) and also orthogonal relations among siblings and non-siblings
+	\item statements of absence of a node or edge (i.e. negative statements in pattern graphs)
+	\item disjunctive descriptions (needed for polysemy and uncertainty)
+	\item conjunctive descriptions (needed for multiple feature selections in recursive systems)
+	\item (conditional) pattern specifications (i.e. define patterns of graphs)
+	\item operational pattern specifications (i.e. a functional description to be executed in pattern graphs)
+\end{itemize}
+
+\section{Basic Definitions}
+The general approach to construct an SFG parse structure revolves around the graph pattern matching and graph traversal. In this section I present the instruments used for building such structures, starting from generic computer scientific definition of graphs and moving towards specific graph types covering also the feature structures and conditional sets. 
+
+At this point you may ask why graphs and not trees since in the field of computational linguistics trees has been taken as the de facto data representation for parse structures. Firstly, the trees are a special kind of graphs and anything expressed as a graph could as well be expressed as a tree. Secondly, we gain a higher degree of expressiveness even if at the expense of computational complexity, a point to which we will come back latter in this chapter.  This expressiveness is needed when dealing with interconnection of various linguistic theories. 
+
+\begin{definition}[Graph]\label{def:graph}
+	A \textit{graph} $G=(V,E)$ is a data structure consisting of non-empty set $V$ of nodes and a set $E\subseteq V \times V$ of edges connecting nodes.
+\end{definition}
+
+\begin{definition}[Digraph]\label{def:digraph}
+	A \textit{digraph} is a graph with directed edges. A directed edge $(u,v)\in E$ is an ordered pair that has a start node $u$ and an end node $v$ (with $u, v \in V$)
+\end{definition}
+
+%A directed graph is a set of objects called nodes some of which are connected in pairs by directed links called edges. The nodes are feature structures or are objects described by a feature structure while the edges are represented as triples \textit{(x,y,f)} where \textit{x} and \textit{y} are the connected nodes and \textit{f} is the feature structure of the edge.
+
+\citet{Pollard1987} have formally described the useful concepts for grammatical representations of HPSG. Taking on board and extending the typed feature structure theory and extending it in several useful forms. Including definitions of hierarchy, feature structure recursion, logical evaluation and compositions and unification the key operation parsing feature structured grammars. In this thesis however I simplified feature structures to only a few concepts. This si due to mixing concept of \textit{graph} as structure carriers with the concept of \textit{feature structure} as mainly description carrier. This mix does not exist in \citep{Pollard1987} who use feature structure as both structure and description carriers. Nevertheless, besides a few instrumental concepts, I proceed defining feature structure as follows:
+
+\begin{definition}[Feature Structure (FS)]\label{def:fs}
+	A \textit{feature structure} $F$ is a finite set of attribute-value pairs $f_{i} \in F$. A \textit{feature} $f_{i}=(a,v)$ is a mapping between an identifier $a$ (a symbol) and a value $v$ which is either a symbol, an ordered set or another feature structure. The function $att(f_{i})$ is a function returning the feature identifier $att(f_{i})=a$ and the function $val(f_{i})$ is a function returning the ascribed value of a feature $(f_{i})=v$
+\end{definition}
+
+\begin{definition}[Ordered Set]\label{def:set}
+	An \textit{ordered set} $S=\{o_1,o_2,...,o_n\}$ is a finite well defined collection of distinct objects $o_{i}$ arranged in a sequence such that $\forall o_{i-1},o_{i} \in S: o_{i-1}<o{i}$
+\end{definition}
+
+\begin{definition}[Conjunction Set]\label{def:conj-set}
+	A \textit{Conjunction Set} $S_{conj}=(S,conj)$ is an ordered set $S$ whose interpretation is given by the logical operand $conj$ (also denoting the type of the set) such that $\forall o_{i},o_{j} \in S: conj(o_{i}, o_{j})$ holds.
+\end{definition}
+
+The conjunction sets used in current work are \textit{AND-set} ($S_{AND}$), \textit{OR-set} ($S_{OR}$), \textit{XOR-set} ($S_{XOR}$) and \textit{NAND-set} ($S_{NAND}$). The assigned logical operands play a role in the functional interpretation of conjunction sets.% such that for example a $S_{AND}$ set $T_1={a,b,c}$ is interpreted as the logical conjunction $a \wedge b \wedge c$. 
+Formally these sets are defined as follows.
+
+\begin{definition}[AND-Set]\label{def:and-set}
+	$AND-Set$ (also called \textit{conjunctive set}) is a conjunction set $S_{AND}=\{a,b,c...\}$ that is interpreted as a logical conjunction of its elements $a \wedge b \wedge c \wedge ...$ 
+\end{definition}
+
+\begin{definition}[NAND-Set]\label{def:nand-set}
+	$AND-Set$ (also called \textit{negative conjunctive set}) is a conjunction set $S_{NAND}=\{a,b,c...\}$ that is interpreted as a negation of the logical conjunction of its elements $a \uparrow b \uparrow c \uparrow ...$ equivalent to $ \neg(a \wedge b \wedge c \wedge ...)$ 
+\end{definition}
+
+\begin{definition}[OR-Set]\label{def:or-set}
+	$OR-Set$ (also called \textit{disjunctive set}) is a conjunction set $S_{OR}=\{a,b,c...\}$ that is interpreted as a logical disjunction of its elements $a \vee b \vee c \vee ...$
+\end{definition}
+
+\begin{definition}[XOR-Set]\label{def:xor-set}
+	$OR-Set$ (also called \textit{exclusive disjunctive set}) is a conjunction set $S_{XOR}=\{a,b,c...\}$ that is interpreted as a logical exclusive disjunction of its elements $a \bigoplus b \bigoplus c \bigoplus ...$ equivalent to $ (a \wedge \neg (b \wedge c \wedge ... )) \vee (b \wedge \neg (a \wedge c \wedge ...)) \vee (c \wedge \neg (a \wedge b \wedge ...)) $
+\end{definition}
+
+When conjunction sets are used as values in FSs then the type of logical operand dictates the interpretation of the FS. When the set type is $S_{AND}$ then all the set elements hold simultaneously as feature values. If it is a $S_{OR}$ then one or more of the set elements hold as values. If is $S_{XOR}$ then one and only one of set elements holds and finally if it is a $S_{NAND}$ set then none of elements hold as feature values.
+
+I use $\tau$ function defined $\tau:S \rightarrow \{S_{AND},S_{OR},S_{XOR},S_{NAND} \}$ to return the type of the conjunction set and $size$ function defined $size:S \rightarrow \mathbb{N}$ to return the number of elements in the set.
+ 
+\begin{definition}[Feature Rich Graph (FRG)]\label{def:feature-rich-graph}
+	A \textit{feature rich graph} is a digraph whose nodes $V$ are feature structures and whose edges $(u,v,f) \in E$ are three valued tuples with $ u,v \in V$ and $f \in F$ an arbitrary feature structure.
+\end{definition}
+
+Further on, when I refer to a graph I will a feature rich digraph, unless otherwise stated. The parsing algorithm operates with three feature graph types: \textit{Dependency Graphs} (DG) (example figure \ref{fig:dep-graph}), \textit{Constituency Graphs} (CG) also called Mood Constituency Graphs (MCG) (example figure \ref{fig:mcg-graph}) and Pattern Graphs (PG) which can also be viewed as \textit{Query Graphs} (QG). 
+
+\begin{definition}[Dependency Graph]\label{def:dep-graph}
+	The \textit{dependency graph} is a feature rich digraph whose nodes $V$ correspond to words, morphemes or punctuation marks in the text and carry but not limited to the following features: \textit{word}, \textit{lemma}, part of speech (\textit{pos}) and when appropriate the named entity type (net); while the edges $E$ describe the dependency relation (\textit{rel}).
+\end{definition}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[tree-style,level distance=7em,]
+\node[pattern-node] {word:gave,\\lemma:give,\\pos:VBD}
+ child {node[pattern-node] {word:He,\\lemma:he,\\pos:PRP} edge from parent node[left] {\{rel:nsubj\}} }
+ child {node[pattern-node]{word:cakes,\\lemma:cake\\pos:NN} 
+ 	child { node[pattern-node]{word:the,\\lemma:the,\\pos:DT} edge from parent node[right] {\{rel:det\}}} 
+ 	edge from parent node[above right] {\{rel:dobj\}} }
+ child {node[pattern-node] {word:away,\\lemma:away,\\pos:RB} edge from parent node[right] {\{rel:advmod\}}};
+\end{tikzpicture}
+\caption{Dependency graph example with FS nodes and edges}
+\label{fig:dep-graph}
+\end{figure}
+
+
+\begin{definition}[Constituency Graph]\label{def:constituency-graph}
+	The \textit{constituency graph} is a feature rich digraph whose nodes $V$ correspond to SFL \textit{units} and carry but not limited to the unit class and the function within the parent unit (except for the root node); while the edges $E$ carry mainly the constituency relation between parent and daughter nodes but also potentially other relation types. 
+\end{definition}
+
+The basic features of a constituent node are the \textit{unit class} and the function(s) it takes which is to say the \textit{element(s)} it fills in the parent unit (see theoretical aspects of SFL in Chapter \ref{ch:sfg}). The root node (usually a clause) is an exception and it does not act as a functional element because it does't have a parent unit. The leaf nodes carry the same features as the DG nodes plus the class feature which correspond to the traditional grammar part of speech. 
+
+Apart from the essential features of class and function, the CG nodes carry additional class specific features selected from the relevant system network. For example gender, number and animacy are specific to nominal unit classes such as nouns and nominal group; while tense and modality are specific mainly to clause class.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[tree-style,]
+\node (cla) [pattern-node] {class:clause, tense:past simple, voice:active, polarity:positive}
+	child { node (sub)[pattern-node] {element:subject,\\class:pronoun,\\pos:PRP, word:He,\\lemma:he}}		
+	child { node (mv)[pattern-node] {element:main verb,\\class:verb,\\pos:VBD, word:gave,\\lemma:give}}
+	child { node (com)[pattern-node] {element:complement,\\class:nominal group}
+	      child { node (det)[pattern-node]{element:deictic,\\class:determiner,\\pos:DT, word:the,\\lemma:the}}
+	      child { node (nou)[pattern-node]{element:thing,\\class:noun,\\pos:NN, word:cake,\\lemma:cake}}}
+	child {node[pattern-node,xshift=-1em,yshift=-0.7em](adjunct)
+			{element:adjunct,\\class:adverb,\\word:away,\\lemma:away,\\pos:RB}
+};
+\end{tikzpicture}
+\caption{Constituency graph example}
+\label{fig:mcg-graph}
+\end{figure}
+
+Regardless of the graph type, constituency or dependency, it is essential to express patters over those graphs in order to facilitate various operations. The PG (defined in \ref{def:graph-pattern}) are special kinds of graphs meant to represent small (repeatable) parts of parse graphs that stand for a certain grammatical feature. The patterning is described as both graph structure and feature presence (or absence) in node or edge.
+Such pattern graphs can be viewed as the conditional part of a query language if not the entire query statements (i.e. select, insert, update, delete operation descriptions). This kinds of graphs need last four requirements listed in the beginning of this section. 
+
+\begin{definition}[Pattern Graph]\label{def:graph-pattern}
+	A \textit{pattern graph} (PG) describes regularities in node-edge configuration and feature structure including descriptions of \textit{negated nodes or edges} (i.e. absence of), logical operators over feature sets (AND, OR, XOR and NAND) and operations once the pattern is identified in a target graph (select, insert, delete and update).
+\end{definition}
+
+The feature structure of a PG are always \textit{underspecified} as compared to the dependency or constituency graph in the sense that irrelevant attribute-value 
+pairs are omitted sometimes down to an empty FS. However often it is useful to specify more than one value for the same feature as a list of disjunctive values allowing the pattern to cover larger set of possible cases. I will call these FS as being \textit{over-specified}. 
+
+An example of PG is depicted in figure \ref{fig:gp1} in the Section \ref{sec:pattern-graph-matching}. It deals with pattern graph matching and other operations with in detail. But before that I will first briefly cover generic operations on graphs and the problem of graph matching also known in computer science as the \textit{graph isomorphism} problem.
+
+\section{More on Pattern Graphs}
+\label{sec:pattern-graphs}
+As already mentioned in the previous section we are dealing with a special case of graph isomorphism precisely because the graphs we consider are feature rich graphs. Specifically, besides the graph structure, the node and edge identity checking is a secondary check to consider.
+
+Before I dive into pattern graph matching and operations with pattern graphs I will first discuss two example of pattern graphs. Consider the case of present perfect continuous tense which traditional grammar defines as in Table \ref{tab:ppc-pattern} regardless of the element order. 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|clclc|}
+		\hline
+		\textit{has/have}       & + & \textit{been}          & + & \textit{Vb-ing}          \\
+		to have, present simple &   & to be, past participle &   & verb, present participle \\ \hline
+	\end{tabular}
+	\caption{Present perfect continuous pattern}
+	\label{tab:ppc-pattern}
+\end{table}
+
+Examples \ref{ex:ppc1}-\ref{ex:ppc3} show variations of this tense in a simple clause according to the mood and ``has'' contraction. Of course there are also voice variations but I skipped them in this example because it adds combinatorially to the number examples. The Figures \ref{fig:ppc1}-\ref{fig:ppc3} represent dependency parses for the above examples.
+
+\begin{exe}
+	\ex\label{ex:ppc1} He has been reading a text.
+	\ex\label{ex:ppc2} He's been reading a text.
+	\ex\label{ex:ppc3} Has he been reading a text?
+\end{exe}
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}[b]{0.45\textwidth}
+		\centering
+		\begin{dependency}[dep-style-narrow]
+			\begin{deptext}[]
+				PRP \& VBZ \& VBN \& VBG \& DT \& NN \& . \\
+				He \& has \& been \& reading \& a \& text \& . \\
+			\end{deptext}
+			\deproot{4}{root}
+			\depedge{4}{1}{nsubj}
+			\depedge{4}{2}{aux}
+			\depedge{4}{3}{aux}
+			\depedge{4}{6}{dobj}
+			\depedge{6}{5}{det}
+		\end{dependency}
+		\caption{Present perfect continuous: indicative mood, un-contracted ``has''}
+		\label{fig:ppc1}
+	\end{minipage}
+	\quad
+	\begin{minipage}[b]{0.45\textwidth}
+		\begin{dependency}[dep-style-narrow]
+			\begin{deptext}[]
+				PRP \& VBZ \& VBN \& VBG \& DT \& NN \& . \\
+				He \& 's \& been \& reading \& a \& text \& . \\
+			\end{deptext}
+			\deproot{4}{root}
+			\depedge{4}{1}{nsubj}
+			\depedge{4}{2}{aux}
+			\depedge{4}{3}{aux}
+			\depedge{4}{6}{dobj}
+			\depedge{6}{5}{det}
+		\end{dependency}
+		\caption{Present perfect continuous: indicative mood, contracted ``has'' }
+		\label{fig:ppc2}
+	\end{minipage}
+\end{figure}
+%
+\begin{figure}[H]
+	\centering
+	\begin{dependency}[dep-style]
+		\begin{deptext}[]
+			VBZ \& PRP \& VBN \& VBG \& DT \& NN \& . \\
+			Has \& he \& been \& reading \& a \& text \& . \\
+		\end{deptext}
+		\deproot{4}{root}
+		\depedge{4}{2}{nsubj}
+		\depedge{4}{1}{aux}
+		\depedge{4}{3}{aux}
+		\depedge{4}{6}{dobj}
+		\depedge{6}{5}{det}
+		%\depedge[collage]{5}{6}{dobj}
+	\end{dependency}
+	\caption{Present perfect continuous: interrogative mood, un-contracted ``has''}
+	\label{fig:ppc3}
+\end{figure}
+
+The present perfect continuous tense can be formulated as a pattern graph (including voice) over the dependency structure as illustrated in Figure \ref{fig:gp1} below.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[tree-style]
+	\node[pattern-node, anchor=center] (vb1){pos:VBG}
+	child {node[pattern-node] {lemma:be\\pos:VBN} edge from parent node[left] {rel:$_{OR}$[aux,auxpass]} }
+	child {node[pattern-node] {lemma:have\\pos:$_{OR}$[VBZ,VBP]} edge from parent node[right] {rel:aux}};
+	\end{tikzpicture}
+	\caption{The graph pattern capturing features of the present perfect continuous tense}
+	\label{fig:gp1}
+\end{figure}
+
+In this a pattern the main lexical verb is \textit{present participle} indicated via \textit{VBG} part of speech. It is accompanied by two auxiliary verbs: \textit{to be} in \textit{past participle} (\textit{VBN}) form and \textit{to have} in \textit{present simple} form specified by either \textit{VBZ} for 3rd person or \textit{VBP} for non-3rd person. Also the \textit{to be} can be either connected by \textit{aux} relation or in case of passive form by \textit{auxpass} relation. Note that the pattern in Figure \ref{fig:gp1} over-specifies the edge type (using the OR set notation) to the verb \textit{to be} which can be either \textit{aux} or \textit{auxpass} and the part of speech of the verb \textit{to have} which can be \textit{VBZ} or \textit{VBP}.
+
+One of the fundamental features of language is its sequentiality and directionality. Place and order of constituent elements play an important role in SFG (see Section \ref{sec:unit-sydney}). Unfortunately capturing the aspect of order is not straight forward in graphs which inherently lack the capacity to capture linear order specifically. In the simplest form, they just describe connections between nodes and are agnostic to any meaning or interpretation. 
+
+To demonstrate how the order is specified in the graph patterns, lets turn now to the clause mood and capture specifically the distinction between declarative and Yes/No interrogative moods. In SFG this features is described in terms of relative order of clause elements. If the finite is before the subject then mood is Yes/No-interrogative whereas when the finite succeeds subject then mood is declarative. The example \ref{ex:ppc3} clearly contrasts in mood with \ref{ex:ppc1} and \ref{ex:ppc2}. 
+
+Order can be specified in absolute or relative terns, partially or exhaustively. To overcome this problem I introduce three special features that cove all cases: the node \textit{id}, \textit{precede} and \textit{position}. Node id take a token to uniquely identifies a node, the precede feature takes ordered sets to indicate the (partial) precedence of node ids, and the position feature indicates the absolute position of a node.
+
+One way to introduce order among nodes is marking them with an absolute position. The parse graphs i.e. DGs and MCGs are automatically assigned at the creation time the absolute position of the node in the sentence text via the feature \textit{position}. Only the leaf nodes can have a position assigned. The leaf nodes position corresponds to the order number in which they occur in the sentence text while the non-leaf node's position is calculated to the lowest of it's constituent nodes. The absolute position description rarely is used in the PGs, mainly for stating that a constituent is the first or the last one in the sentence.  %In the PGs the absolute position is interpreted strictly as an order in the PG without affecting how the PG is matched to the parse graphs which may contain other nodes in between. 
+
+Another way to specify node order is through relative positions for which the node id and the precedence features are introduced. 
+
+Continuing the example of mood features Figures \ref{fig:pg-declarative} and \ref{fig:pg-declarative2} illustrate the use of relative and absolute node ordering constrains for declarative mood. In PGs, the relative order is preferred to absolute one but either is usable. Figure \ref{fig:pg-interrogative} depicts the PG for the Yes/No interrogative mood using the relative node ordering.    
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[tree-style,]
+		\node (cla) [pattern-node] {class:clause}
+		child { node (sub)[pattern-node] {element:subject,\\position:1}}		
+		child { node (f)[pattern-node] {element:finite,\\position:2}};
+		\end{tikzpicture}
+		\caption{Declarative mood pattern graph with relative element order}
+		\label{fig:pg-declarative}
+	\end{minipage}
+	\quad
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[tree-style,]
+		\node (cla) [pattern-node] {class:clause,\\ precedence:(s1,f1)}
+		child { node (sub)[pattern-node] {element:subject,\\id:s1}}		
+		child { node (f)[pattern-node] {element:finite,\\id:f1}};
+		\end{tikzpicture}
+		\caption{Declarative mood pattern graph with absolute element order}
+		\label{fig:pg-declarative2}
+	\end{minipage}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[tree-style,]
+	\node (cla) [pattern-node] {class:clause,\\ precedence:[(f1,s1),(s1,mv1)]}
+	child { node (f)[pattern-node] {element:finite,\\id:f1}}
+	child { node (sub)[pattern-node] {element:subject,\\id:s1}}		
+	child { node (mv)[pattern-node] {element:main verb,\\id:mv1}};
+	\end{tikzpicture}
+	\caption{Pattern graph for Yes/No-interrogative mood with a redundant main verb node}
+	\label{fig:pg-interrogative}
+\end{figure}
+
+From the usability point of view there are few technicalities I shall emphasize. First, the precedence feature can be used on any node. When matched, the precedence declarations are collected from all nodes into a single set before being checked. However I recommend as a good practice to specify the order of nodes on the parent constituent. 
+
+Second, the notation in Figure \ref{fig:pg-interrogative} follows the Python bracketing meaning i.e. the round brakes signify tuples while the square ones lists (ordered sets). So the main verb element is redundant and is introduced to demonstrate multiple order specifications. However the order can be either specified as a set of binary tuples or as an ordered set (i.e. a Python list). So precedence:[(f1,s1),(s1,mv1)] is equivalent to precedence:[f1,s1,mv1]. 
+
+Thirdly the ordering can be defined in absolute terms via position or in relative terms. Note that in the case of PGs the absolute ordering of nodes is interpreted relatively so PG in figure \ref{fig:pg-declarative} is identical to \ref{fig:pg-declarative2}.
+
+Patterns like the ones explained above can be created for many other grammatical features and tested via graph pattern matching operation whether the feature is found in the parse graph or not. Once the pattern is identified it can act as a triggering condition to various operation affecting the parse graph or other external structures which I describe in the next sections. For example once the pattern \ref{fig:gp1} is identified then the clause can be marked with the \textit{tense} feature or in the case of dependency structure clause corresponding to the dominant verb node.
+
+\section{Graph Operations}
+%There is a set of basic operations on graphs used for CG creation and for grammatical feature identification according to the literature of mood and transitivity \citep{Fawcett2008, Halliday2013} containing a range of methods for detecting and selecting features from system networks. To support those methodical specifications the graphs allow a number of operations. 
+
+\begin{definition}[Atomic Query]\label{def:query}
+%Given a graph $G=(V,E)$ to query nodes or edges is to select a set of nodes or a set of edges that satisfy the query constraint condition on feature structure.
+	\textit{Querying} $q_{V}(F,G)$ or $q_{E}(F,G)$ over the nodes $V$ or edges $E$ of a graph $G$ is an operation that returns a set of nodes or edges filtered by the conditional feature structure $F$.
+\end{definition}
+
+For example, for a given dependency graph, to select all the determiners we query the nodes with condition that part of speech has DT value i.e. \textit{pos=NP} or to select all the edges connection a noun to it's determiner then the query is formulated for all edges whose relation type is \textit{rel=det}.
+
+The graph traversal defined in \ref{def:traversal} is another important operation. For example DG traversal is used in bootstrapping the CG as a parallel structure. Another usage is conditional sub-graph selection of a given DG or CG. For example in the semantic enrichment phase (see Section \ref{sec:enrichment-stage}), to ensure that the semantic patterns are applied iteratively to each clause, from a multi-clause MCG graphs are selected each individual clause sub-graphs without including the embedded (dependent) clauses. Using sub-graphs for performing the pattern matching, like in the case of semantic enrichment, decreases drastically the complexity of the graph isomorphism problem (described in Section \ref{sec:graph-matching}) thus increasing the overall performance. 
+
+\begin{definition}[Traversal]\label{def:traversal}
+	Traversal $t(V_S,G)$ of a graph $G$ starting from node $V_S$ is a recursive operation that returns a set of sequentially visited nodes the neighbouring each other in either \textit{breadth first} ($t_{BF}$) or \textit{width first} ($t_{WF}$) orders.
+\end{definition}
+
+\begin{definition}[Conditional Traversal]\label{def:conditional-traversal}
+	\textit{Conditional traversal} $t(F_V,F_E,V_S,G)$ of the graph $G$ starting from node $V_S$ under node conditions $F_V$ and edge conditions $F_E$ is a traversal operation where a node is visited if and only if its feature structure conditionally fulfils the $F_V$ and the edge that leads to this node conditionally fulfils the $F_E$.
+\end{definition}
+
+The graph traversal can be used in various ways, either for searching a node, an edge or finding a sub-graph that fulfils certain conditions on its nodes and edges if it is a conditional traversal. A traversal can be also used to execute generative operations on parallel data structure. 
+
+\begin{definition}[Generative Traversal]\label{def:generative-traversal}
+	\textit{Generative traversal} $m(M,G)$ of a graph $G$ via a operation matrix $M$ is an operation resulting in creation of another graph $H$ by contextually applying generative operations. The operation matrix $M$ is a set of tuples $(ctx,o,p)$ that link the visited node context $ctx$ (as features of the node, the edge and previously visited neighbour) to a certain operation $o$ that shall be executed on the target graph $H$ with parameters $p$.
+\end{definition}
+
+Now that generative traversal is defined, you may point out that similarly (or by analogy) update, insert and delete traversals can be defined on the source or target graph by using the same mechanism of \textit{operation matrices} mapping contexts of visited nodes and edges to update, insert and delete operations. 
+
+But such traversal operations cannot be easily defined. While traversal context may be sufficient for generative operations on a new structure, it is insufficient for executing affecting operations on the traversed graph. To overcome this limitation, instead of using traversal context I take a different approach: the \textit{pattern graphs}, defined in previous section combined with generic graph matching algorithm. This mechanism offers a similar algorithmic independence of mapping structural context to operation(s) triggered by it. 
+
+\section{Graph Matching}
+\label{sec:graph-matching}
+The graph matching problem is known in computer science as \textit{graph isomorphism problem} which is an NP-complete problem. 
+A peculiar characteristic of such problems is that given a solution then it can be very quickly \textit{verified} in polynomial time but the time required to find a solution increases exponentially with the size of the problem. Therefore to prove whether or not such problems can be solved quickly is one of the main unsolved problems in computer science and the performance of of algorithms solving NP-complete problems is an important issue and requires careful investigation. 
+
+\begin{definition}[Graph Matching]\label{def:gmatching}
+For two given graphs $G$ and $H$ where $H \leq G$, \textit{graph matching} (or \textit{graph isomorphism}) is an operation of finding an sub-graph $G_{1} \subseteq G$ that is structurally isomorphic to $H$.
+\end{definition}
+
+To the moment no algorithm exist to solve the graph isomorphism problem in polynomial time, however the latest available algorithms such as VF2 \cite{Cordella2001,Cordella2004} or QuickSI \cite{Shang2008} performs the task quickly when the addressed graphs are of limited size. 
+
+Next I present some estimate calculations and compare to benchmarking study of \citet{Lee2013}.
+ 
+The graphs used in benchmarking tests described by \citep{Lee2013} on AIDS dataset are composed of 2--215 nodes and 1--217 edges on which VF2 algorithm performs the isomorphism problem on average in 20--25 milliseconds for sub-graphs sizing between 4--24 edges. The NASA dataset (used in the same benchmarking study) which contains 36790 graphs sizing between 2--889 nodes and 1--888 edges the VF2 algorithm performs on average in 250 milliseconds for sub-graphs of 4 edges.
+
+To put it into the context we have to answer the questions: how big the sentence graphs are, what size are the patterns and what would be a rule of thumb estimation of performance?
+ 
+According to \citep{Koeva2012}, on average, an English sentence is composed of 12-20 words($n$) with about 1.6 clauses per sentence . % Koeva2012 Bulgarian-English parallel corpus stats
+The parse graph of an average English sentence is a tree or very close to a tree whose number of nodes is within the limits between $n+1$ and $2n-1$ for a $n$ number of leaf nodes (in our case the words). So for a sentence of 20 words the parse tree would be maximum 39 nodes.
+
+Lets assume the size of a sentence is ten times the average i.e. 200 words and a maximum estimate of 399 nodes in the parse tree. The patterns used in current work are 1--5 edges. Overall in the parsing algorithm, the graph matching is mostly applied at the clause level which on average in English is of 6~8 words yields an average maximum of 15 nodes per parse graph which is 0.38 of the average sentence and 0.01 of the unusually big sentence.
+As used in the current implementation and given relatively small graphs, the performance VF2 algorithm fits well within reasonable time limits.
+
+\section{Rich Graph Matching}
+\label{sec:rich-graph-matching}
+In order to accommodate feature rich graphs (FRG), VF2 algorithm is extended to perform custom identity checks. In the original implementation two node $V_{1}$ and $V_{2}$ are said to be equal if the nodes are of simple data types (e.g. integer or string) and they carry the same value. In our case, feature structures are attached to edges and stand for graph nodes. And there are cases when two nodes, even if the have somehow different structures, to be considered the same. 
+
+Therefore identity of complex structures becomes an elastic concept. Of course strict identify checking function is important, but we can derive more power from a nuanced check instead of a strict identity. 
+
+The functions that decide the identity of two objects (i.e. which is to say that they are the same) are called \textit{morphisms}.   
+
+\begin{definition}[Morphism]\label{def:morphism}
+	A morphism (also called \textit{identity function}) $f:X \rightarrow Y$ is a structure preserving map from one object $X$ to the other $Y$ where the objects are complex structures such as sets, feature structures or graphs.
+\end{definition}
+
+\begin{definition}[Identity Morphism]\label{def:identity-morphism}
+	for every object $X$, there exists a morphism $id_{X}:X \rightarrow X$, called \textit{identity morphism} on $X$, such that for every morphism $f:A \rightarrow B$ we have $id_{B} \circ f = f = f \circ id_{A}$
+\end{definition}
+
+In this work, for \textit{identity morphism} I use interchangeably the terms \textit{identity checking function} or \textit{identity function}.
+
+\begin{definition}[Isomorphism]\label{def:isomorphism}
+	The morphism $f:X \rightarrow Y$ is called \textit{isomorphism} if there exists a morphism $g:Y \rightarrow X$ such that $f \circ g = id_{X}$ and $ g \circ f = id_{X}$
+\end{definition}
+
+I already have defined (somehow ahead) what is graph isomorphism; and that the graph matching should always be an isomorphic function. However the nodes and edges shall be rather loosely identical or they shall only be considered identical but not necessarily be so. Therefore the node and edge morphism functions shall rather be \textit{asymmetric} or simply a morphisms without any assumptions of exact identity. Now I can define the rich graph matching as follows.  
+
+\begin{definition}[Rich Graph Matching]\label{def:rgmatching}
+	For two given graphs $G$ and $H$ where $H \leq G$ and two \textit{morphism functions} $f_{V}$ and $f_{E}$, the \textit{rich graph matching} is the function that finds a structural isomorphism between $H$ and $G_{1} \subseteq G$ provided that for all nodes $V_{i} \in H$ their \textit{morphism function} $V_{j} \in G_{1}$ satisfies the identity function $f_{V}(V_{i})=V_{j}$ 
+\end{definition}
+
+%\begin{definition}[Identity Function]\label{def:identityt-function}
+%	For two entities $a$ and $b$ an \textit{identity function} $f_{I}(a,b)$ returns True if $a \equiv b$ or $a \cong b$ (read ``considered the same as'') and False otherwise.
+%\end{definition}
+
+So, the functions that compare whether two node or edge are the same in fact compare their feature structures and in fact the sameness is defined in accordance with the goals of the particular task. That's why identity checking function is provided as a parameter to the rich graph matching algorithm.
+
+How is the node and edge identity checking done (or how are the morphism functions defined) is covered in the next section. What is important to mention here is the complexity of such nuanced checks since we have discussed the complexity of VF2 algorithm only on graphs where the edges and nodes are simple data structures. 
+
+The comparison of two FS is a PTIME problem that is efficiently solvable in polynomial time. Of course, this (slightly) increase the complexity of the matching process as a whole but still this lies well within the limits of practical computability. 
+
+The current implementation of VF2 algorithm includes the custom morphism functions for nodes and edges. So far I have not encountered performance issues with it. For the future however it would be of tremendous value to know exactly how much is the original VF2 algorithm burdened by such extra checks and what are the reasonable upper limits for the node size (i.e the complexity of the node feature structure). And perform some stress testing for the whole enterprise.  
+
+
+\section{Pattern Graph Matching}
+\label{sec:pattern-graph-matching}
+An extension and particular case of rich graph matching is the \textit{pattern graph matching} where $H$ (Definition \ref{def:rgmatching}) is a pattern graph (Definition \ref{def:graph-pattern}) and the identity checking function(s) are not strict but permissive to feature over-specification of node and edge feature structures. 
+
+I will define now how the identity checking function (identity morphism) used for pattern graph matching. It operates on feature structure values, which can be either atomic types $simple$ of one of the conjunctive sets: $S_{AND}$, $S_{OR}$, $S_{XOR}$ and $S_{NAND}$. I use both set theoretic notations for inclusion $\subseteq$, intersection $\cup$ and element belonging to a set $\in$ and the logical notations for conjunction $\wedge$ and tautology $\top$. The unary function $T(x)$ returns the type of $x$ element. 
+
+When checking the identity of two feature values, three cases can be asserted: $x=y$ i.e. $x$ is definitely equal to $y$, $x\neq y$ i.e. $x$ is definitely different from $y$ and $x\sim y$ i.e. $x$ is maybe (or could be) equal to $y$. 
+
+I define below two identity morphisms: (a) \textit{permissive} $I_{permissive}$ (defined by Equation \ref{eq:permissive}) which includes the uncertain cases and (b) \textit{strict} $I_{strict}$ (defined by Equation \ref{eq:strict}) which excludes the uncertain cases. The main difference between the two morphism functions is whether on the right side (the instance graph) any uncertainty is accepted. This is to say any of the disjunctive sets $s_{OR}$ and $S_{XOR}$. 
+
+\begin{definition}[Strict Pattern Graph Matching]\label{def:strict-matching}
+	\textit{Strict pattern graph matching} is a rich graph matching where a morphism for the pattern graph $H$ is found in the target graph $G$ given that $H \leq G$ and that for any node $p \in H$ there is a node $r \in G$ satisfying the strict identity morphism $I_{strict}:p \rightarrow r$
+\end{definition}
+
+
+\begin{equation} \label{eq:strict}
+	I_{strict}:p \rightarrow r \models
+	\begin{cases}
+	p = r, & \text{if}\ T(p) = simple \wedge T(r) = simple \\
+	p \in r, & \text{if}\ T(p) = simple \wedge T(r) = S_{AND} \\
+	p \subseteq r, & \text{if}\ T(p) = S_{AND} \wedge T(r)= S_{AND} \\
+	p \cap r \neq \varnothing, & \text{if}\ T(p) = S_{OR} \wedge T(r) = S_{AND}\\
+	r \in p, & \text{if}\ T(p) = S_{OR} \wedge T(r) = simple \\
+	%p \cap r \neq \varnothing, & \text{if}\ T(p) = S_{XOR} \wedge T(r) \in \{S_{OR}, S_{XOR}\} \\
+	r \in p, & \text{if}\ T(p) = S_{XOR} \wedge T(r) = simple \\
+	p \cap r = \varnothing, & \text{if}\ T(p) = S_{NAND} \wedge T(r) \in \{S_{AND}, S_{OR}, S_{XOR}\} \\
+	r \notin p, & \text{if}\ T(p) = S_{NAND} \wedge T(r) = simple \\
+	\top, & \text{if}\ T(p) = S_{NAND} \wedge T(r) = S_{NAND}
+	\end{cases}
+\end{equation}
+
+\begin{definition}[Permissive Pattern Graph Matching]\label{def:permissive-matching}
+	\textit{Permissive pattern graph matching} is a rich graph matching where a morphism for the pattern graph $H$ is found in the target graph $G$ given that $H \leq G$ and that for any node $p \in H$ there is a node $r \in G$ satisfying the permissive identity morphism $I_{permissive}:p \rightarrow r$
+\end{definition}
+
+\begin{equation} \label{eq:permissive}
+	I_{permissive}:p \rightarrow r \models
+	\begin{cases}
+	p = r, & \text{if}\ T(p) = simple \wedge T(r) = simple \\
+	p \in r, & \text{if}\ T(p) = simple \wedge T(r) \in \{S_{AND}, S_{OR}, S_{XOR}\} \\
+	p \subseteq r, & \text{if}\ T(p) = S_{AND} \wedge T(r) = S_{AND} \\
+	p \cap r \neq \varnothing, & \text{if}\ T(p) = S_{OR} \wedge T(r) \in \{S_{AND}, S_{OR}, S_{XOR}\}\\
+	r \in p, & \text{if}\ T(p) = S_{OR} \wedge T(r) = simple \\
+	p \cap r \neq \varnothing, & \text{if}\ T(p) = S_{XOR} \wedge T(r) \in \{S_{OR}, S_{XOR}\} \\
+	r \in p, & \text{if}\ T(p) = S_{XOR} \wedge T(r) = simple \\
+	p \cap r = \varnothing, & \text{if}\ T(p) = S_{NAND} \wedge T(r) \in \{S_{AND}, S_{OR}, S_{XOR}\} \\
+	r \notin p, & \text{if}\ T(p) = S_{NAND} \wedge T(r) = simple \\
+	\top, & \text{if}\ T(p) = S_{NAND} \wedge T(r) = S_{NAND}
+	\end{cases}
+\end{equation}
+
+Of course these two are not the only identity morphisms that can be defined for the pattern matching. The implementation accepts any binary function that returns a truth value meaning that the two arguments shall be considered the same or not. Moreover the identity function can be provided for edges as well, but I skip it in the current thesis because I do not use. In the future it would be useful to define the edge morphism functions and identify the use cases that employ them.
+
+Now that I have defined how patterns are identified in the graphs, lets take a look at more advanced applications of it. In the next section I explain how the graph isomorphism can be enacted once they are identified. 
+
+\section{Pattern-Based Operations}
+\label{sec:pattern-based-operations}
+The patterns are searched for in a graph always for a purpose. Graph isomorphism is only a precondition for another operation, be it a simple selection (i.e. non-affecting operation) or an affecting operation such as feature structure enrichment (on either nodes or edges), inserting or deleting a node or drawing a new connection between nodes. So it seems only natural that the end goal is embedded into the pattern, so that when it is identified, also the desired operation(s) is(are) triggered. I call such graph patterns \textit{affordance patterns} (Definition \ref{def:affordance-pattern}). Next I explain how to embed the operations into the graph pattern and how they are used in the algorithm. 
+
+The operational aspect of the pattern graph is specified in the node FS via three special features: \textit{id}, \textit{operation} and \textit{arg}. The \textit{id} feature (the same as for relative node ordering) is used to mark the node for further referencing as argument of an operation, the \textit{operation} feature names the function to be executed once the pattern is identified and the \textit{arg} feature specifies the function arguments if any required and they are tightly coupled with function implementation. So far the implemented operations are \textit{insert}, \textit{delete} and \textit{update}. But anyone that finds appropriate can extend it with any other operations that may be useful.
+
+\begin{definition}[Affordance Graph Pattern]\label{def:affordance-pattern}
+	An \textit{affordance graph pattern } is a graph pattern that, at least one node or edge, has \textit{operation} and \textit{arg} features.
+\end{definition}
+
+I say that the affordance patterns are enacted once they are tested for isomorphism in another graph and if one is found then all the defined operations are executed accordingly.
+
+\begin{definition}[Affordance Graph Enacting]\label{def:enacted-pattern}
+	For an affordance graph $H$ and a target graph $G$, \textit{affordance graph enacting} is a two step operation that first performs the permissive or strict pattern graph matching and if any isomorphism graph $G_{1} \subseteq G$ is identified and second for every node $p \in H$ with an operation features, executes that operation on the corresponding node $r \in G_{1}$ of the isomorphism.  
+\end{definition}
+
+\subsection{Pattern-Based Node Selection}
+It is often needed to select nodes from a graph that have certain properties and are placed in a particular configuration. This operation is very similar to the \textit{atomic graph query} defined in \ref{def:query}. The main difference is ability to specify that the node is a part of the a certain structural configuration which is not possible via the atomic query. 
+
+For example let's say that we are interested in all nodes in a dependency graph that can take semantic roles specifically subjects, and complements of the clause. For the sake of simplicity example I exclude prepositional phrases and embedded clauses that sometimes can also take semantic roles. 
+The pattern identifying such nodes looks like the one in Figure \ref{fig:gp3}. It selects all the nodes that are connected via \textit{nsubj}, \textit{nsubjpass}, \textit{iobj}, \textit{dobj} and \textit{agent} edges to a VB node. 
+
+\begin{figure}[hbtp]
+\centering
+\begin{tikzpicture}[]
+\node[pattern-node, anchor=center](vb1){pos:VB};
+\node[pattern-node, right of=vb1, anchor=center, node distance = 7cm] (aux1){operation:select};
+\path (vb1) edge[edge-style] node[anchor=center, align=center] {nsubj,nsubjpass,\\iobj,dobj,agent} (aux1);
+
+\end{tikzpicture}
+\caption{Graph pattern that selects all the nodes that can receive semantic roles}
+\label{fig:gp3}
+\end{figure}
+
+\subsection{Pattern-Based Node (FS) Update} 
+There are other cases when the FS of the nodes needs to be updated either by adding or altering a feature value. This can be achieved via \textit{pattern-based update} operation. For example, consider the example analysis \ref{tab:transitive1} and the task to assign \textit{Agent} feature to the subject node and \textit{Possessed} feature to the complement. PG depicted in figure \ref{fig:gp2} fulfils exactly this purpose.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[tree-style, level 1/.style={sibling distance=15em},]
+\node[pattern-node]{element:clause}
+	child {node[pattern-node]{element:subject,\\operation:update,\\ arg1:\{participant:agent\}} edge from parent node[left] {}}
+	child {node[pattern-node]{element:complement,\\operation:update,\\ arg1:\{participant:affected\}} edge from parent node[right] {}};
+\end{tikzpicture}
+\caption{Graph pattern for inserting the agent and affected participant role features to subject and direct object nodes.}
+\label{fig:gp2}
+\end{figure}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{class:clause}                                                               \\ \hline
+element:subject & element: main verb & \multicolumn{2}{c|}{element:complement} & element:adjunct \\ \hline
+He              & gave               & the               & cake               & away.            \\ \hline
+\end{tabular}
+\caption{MCG with a transitive verb}
+\label{tab:transitive1}
+\end{table}
+
+%\begin{figure}[hbtp]
+%\centering
+%%\includegraphics[width=0.8\textwidth]{figures/data-structures/dep-gr-e2.png}
+%\begin{minipage}{0.47\linewidth}
+%\centering
+%\begin{dependency}[dep-style-narrow]
+%	\begin{deptext}[]
+%	PRP \& VBD \& DT \& NN \& RB \& . \\
+%	He \& gave \& the \& cake \& away \& . \\
+%	\end{deptext}
+%\deproot{2}{root}
+%\depedge{2}{1}{nsubj}
+%\depedge{2}{4}{dobj}
+%\depedge{2}{5}{advmod}
+%\depedge[]{4}{3}{det}
+%%\depedge[collage]{5}{6}{dobj}
+%\end{dependency}
+%\caption{Dependency parse for ``He gave the cake away.''}
+%\label{fig:ge1}
+%\end{minipage}
+%\quad
+%\begin{minipage}{0.47\linewidth}
+%\centering
+%%\includegraphics[width=0.8\textwidth]{figures/data-structures/dep-gr-e1.png}
+%\begin{dependency}[dep-style-narrow]
+%	\begin{deptext}[]
+%	PRP \& VBD \& PRP \& DT \& NN \& . \\
+%	He \& gave \& her \& a \& cake \& . \\
+%	\end{deptext}
+%\deproot{2}{root}
+%\depedge{2}{1}{nsubj}
+%\depedge{2}{3}{iobj}
+%\depedge{2}{5}{dobj}
+%\depedge{5}{4}{det}
+%%\depedge[collage]{5}{6}{dobj}
+%\end{dependency}
+%\caption{Dependency parse for ``He gave her a cake.''}
+%\label{fig:ge2}
+%\end{minipage}
+%\end{figure}
+
+Consider the very same pattern, but applied to a sentence in the Table \ref{tab:di-transitive1}. 
+The clause has two complements and they are by no means distinguished in the pattern graph. When such cases are encountered the PG yields two matches, (each with another complement) and the update operation is executed to both of the complements. To overcome such cases from happening PG allow defining \textit{negative nodes}, meaning that those are nodes that shall be missing in the target graph.
+
+For example to solve previous case I define the PG depicted in figure \ref{fig:gp4} whose second complement is a negative node and it is marked with dashed line. This pattern is matched only against clauses with exactly one complement leaving aside the di-transitive ones because of the second complement.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{class:clause}                                                                  \\ \hline
+element:subject & element: main verb & element:complement & \multicolumn{2}{c|}{element:complement} \\ \hline
+He              & gave               & her                & the               & cake.               \\ \hline
+\end{tabular}
+\caption{MCG with a di-transitive verb}
+\label{tab:di-transitive1}
+\end{table}
+
+\begin{figure}[hbtp]
+\centering
+\begin{tikzpicture}[tree-style, level 1/.style={sibling distance=12em},]
+\node[pattern-node, anchor=center](vb1){element:clause}
+	child {node[pattern-node,xshift=0em] {element:subject,\\operation:update,\\ arg1:\{participant:agent\}} edge from parent node[above] {}}
+	child {node[pattern-node,xshift=0em] {element:complement,\\operation:update,\\ arg1:\{participant:posessed\}} edge from parent node[below right] {}}
+	child {node[pattern-node-negative, xshift=0em] {element:complement} edge from parent node[above] {}};
+\end{tikzpicture}
+\caption{PG for inserting agent and possessed participant roles to subject and complement nodes only if there is no second complement.}
+\label{fig:gp4}
+\end{figure}
+
+The current implementation of matching the patterns that contain negative nodes is performed in two steps. First the matching is performed with the PG without the negative nodes and in case of success another matching is attempted with the negative nodes included. If the second time the matching yields success then the whole matching process is unsuccessful but if the second phase fails then the whole matching process is successful because no configuration with negative nodes is detected.
+
+For the sake of explanation I call the pattern graph with all the nodes (turned positive) \textit{big} and the pattern graph without the nodes marked negative \textit{small}. So then, matching a pattern with negative nodes means that matching the \textit{big} pattern (with negative nodes turned into positive) shall fail while matching the \textit{small} one (without the negative nodes) shall yield success.
+
+%
+\subsection{Pattern-Based Node Insertion} 
+In English language there are cases when an constituent is missing because it is implied by the (grammatical) context. These are the cases of Null Elements treated in the Chapter \ref{ch:gbt}. 
+
+\begin{exe}
+	\ex\label{ex:albert} Albert asked [$\varnothing$ to go alone].
+\end{exe}
+
+Consider the Example \ref{ex:albert}. There are two clauses: first in which Albert asks something and the second where he goes alone. So it is Albert that goes alone, however it is not made explicit through a subject constituent in the second clause. Such implied elements are called \textit{null or empty constituents} discussed in detail in the Section \ref{sec:null-elements-gbt}. The table \ref{tab:Albert-example} provides a constituency analysis for the example and the null elements (in italic) are appended for the explicit grammatical account. In the Section \ref{sec:placing-null-elements} I offer the grammatical account of the graph patterns that insert these null elements into the parse graphs (so in fact extensively using the pattern based node insertion treated here).
+
+\begin{table}[ht]
+\centering
+\begin{tabulary}{0.84\textwidth}{|C|C|C|C|C|C|}
+\hline
+\multicolumn{6}{|c|}{class:clause}                                                                                          \\ \hline
+element: subject & element: main verb & \multicolumn{4}{c|}{element: complement, class:clause}                                \\ \cline{3-6} 
+                &                    & \textit{element: subject}  & \multicolumn{2}{c|}{element: main verb} & element: adjunct \\ \hline
+Albert          & asked              & \textit{Albert}           & to                 & go                & alone.          \\ \hline
+\end{tabulary}
+\caption{The constituency analysis that takes null elements into consideration}
+\label{tab:Albert-example}
+\end{table}
+
+%\begin{figure}[hbtp]
+%\centering
+%%\includegraphics[width=0.8\textwidth]{figures/data-structures/dep-str-e11.png}
+%\begin{dependency}[dep-style]
+%	\begin{deptext}[]
+%	NNP \& VBD \& TO \& VB \& RB \& . \\
+%	Albert \& asked \& to \& go \& alone \& . \\
+%	\end{deptext}
+%\deproot{2}{root}
+%\depedge{2}{1}{nsubj}
+%\depedge{2}{4}{xcomp}
+%\depedge{4}{3}{aux}
+%\depedge{4}{5}{advmod}
+%%\depedge[collage]{5}{6}{dobj}
+%\end{dependency}
+%\caption{Dependecy parse for ``Albert asked to go alone.''}
+%\label{fig:ge3}
+%\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[tree-style] 
+\node[pattern-node, anchor=center] (vb1){class:clause}
+	child {node[pattern-node] (subj1) {element:subject,\\id:subj1}}
+	child {node[pattern-node] (vb2) {element:complement,\\class:clause}
+		child {node[pattern-node-negative] (subj2) {element:subject,\\operation:insert,\\arg1:\{id:subj1\}}}
+	};
+\end{tikzpicture}
+\caption{A graph pattern to insert a reference node}
+\label{fig:gp5}
+\end{figure}
+
+%explain the negated node
+%explain the reference/clone vs brand new 
+
+%The pattern that enables creation of reference node in subject position is illustrated in figure \ref{fig:gp5}. Note that the created node appears negated(or marked to be non-existent), this is to ensure that a subject does not already exist and avoid creating a clause with two subjects. 
+To insert a new node the, PG needs to specify that (1) the inserted node does not already exist, so it is marked as negative node, (2) specify \textit{operation:insert} in the FS of the same and (3) provide id of the referenced node as FS argument (arg1) if one shall be taken.
+
+In operational terms, the insertion operation means that the whole pattern will first go through a matching process. If there is a match then the new node is created. A peculiar thing about the created node is that it may keep a reference to another node or not. In our example it does keep a reference to the subject of dominant clause. If so, then all the features of the referee node are inherited by the new node. And if any are additionally provided then the new node overrides the inherited ones.
+
+This section concludes our journey in the world of graph patterns, isomorphisms and graph based operations. Leaving only one more important data structure to cover: the system networks. 
+
+\section{Systems and Systemic Networks}
+In the Section \ref{sec:system} I present the basic definition of System and System Network as it is formulated in the SF theory of grammar. The that definition in te context of theory of grammar is shaped into a more practical definition closer to what may be operationalized and represented with computer systems. In addition I cover few more useful concepts for implementation of system networks applied to enrichment of constituents with systemic features. 
+The graphical notations introduced by \citet{Halliday2013} are useful in reading and writing system networks in this thesis. Below is a system network with a simple entry condition (Figure \ref{fig:system-network-notation1}), a system network grouping that share the same entry condition (Figure \ref{fig:system-network-notation2}), a system network with a disjunctive and conjunctive entry conditions (Figure \ref{fig:system-network-notation3} and \ref{fig:system-network-notation4}). 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[]
+	\node (prec) [system-name] {a};
+	\node (f1) [system-name, right = 2em of prec, yshift=1em] {x};
+	\node (f2) [system-name, right = 2em of prec, yshift=-1em] {y};
+	%\draw [decorate,decoration={brace,amplitude=3em},xshift=-4pt,yshift=0pt] ([xshift=0.0em] f1.west) -- (f2.west) node [black,midway,xshift=-0.6cm] {qwe}; 
+	\draw [thick] ([xshift=-0.0em] f1.west) to [square right brace ] ([xshift=-0.0em] f2.west);
+	\draw[precondition] ([xshift=0.1em] prec.east) -- ([xshift=1.0em,yshift=0em] prec.east);
+	\end{tikzpicture}
+	\caption{A system with a single entry condition: if \textit{a} then either \textit{x} or \textit{y}}
+	\label{fig:system-network-notation1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[]
+	\node (prec) [system-name] {a};
+	\node (f1) [system-name, right = 2.5em of prec, yshift=3em] {x};
+	\node (f2) [system-name, right = 2.5em of prec, yshift=1em] {y};
+	
+	\node (f3) [system-name, right = 2.5em of prec, yshift=-1em] {p};
+	\node (f4) [system-name, right = 2.5em of prec, yshift=-3em] {q};
+ 
+	\draw [thick] ([xshift=-0.0em] f1.west) to [square right brace ] ([xshift=-0.0em] f2.west);
+	\draw [thick] ([xshift=-0.0em] f3.west) to [square right brace ] ([xshift=-0.0em] f4.west);
+
+	\draw [decorate,thick, decoration={brace, amplitude=0.6em},xshift=0pt,yshift=0pt] ([xshift=-2.6em] f4.south) -- ([xshift=-2.6em] f1.north);
+
+	\draw[precondition] ([xshift=0.5em, yshift=2em] prec.east) -- ([xshift=1.6em, yshift=2em] prec.east);
+	\draw[precondition] ([xshift=0.5em, yshift=-2em] prec.east) -- ([xshift=1.6em, yshift=-2em] prec.east);
+	\end{tikzpicture}
+	\caption{Two systems grouped under the same entry condition: if \textit{a} then both either \textit{x} or \textit{y} and, independently, either \textit{p} or \textit{q}}
+	\label{fig:system-network-notation2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[]
+	\node (prec1) [system-name] {a};
+	\node (prec2) [system-name, below=2em of prec1] {c};
+	
+	\draw [thick] ([xshift=-0.0em] prec1.east) to [square left brace ] ([xshift=-0.0em] prec2.east);
+	\draw[precondition] ([xshift=1.6em, yshift=-1em] prec1.south) -- ([xshift=2.4em, yshift=-1em] prec1.south);
+	
+	\node (f1) [system-name, right =2.8em of prec1] {x};
+	\node (f2) [system-name, right =2.8em of prec2] {y};
+
+	\draw [thick] ([xshift=-0.0em] f1.west) to [square right brace ] ([xshift=-0.0em] f2.west);
+	
+	\end{tikzpicture}
+	\caption{A system network with a disjunctive entry condition: if either \textit{a} or \textit{c} (or both), then either \textit{x} or \textit{y}}
+	\label{fig:system-network-notation3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[]
+	\node (prec1) [system-name] {a};
+	\node (prec2) [system-name, below=4em of prec1] {b};
+	
+	\node (f1) [system-name, right =5em of prec1, yshift=-1em] {x};
+	\node (f2) [system-name, right =5em of prec2, yshift=1em] {y};
+	
+	\draw [thick] ([xshift=-0.0em] f1.west) to [square right brace ] ([xshift=-0.0em] f2.west);
+	
+	\draw [decorate,thick, decoration={brace, amplitude=0.6em},xshift=0pt,yshift=0pt] ([xshift=-4.0em, yshift=-0.6em] f1.north) -- ([xshift=-4.0em, yshift=0.6em] f2.south);
+	
+	\draw[precondition] ([xshift=3.2em, yshift=-2.1em] prec1.south) -- ([xshift=4.1em,yshift=-2.1em] prec.south);
+	
+	\draw[thick] (prec1.south east) -- ([xshift=1.5em, yshift=-1.8em] prec1.east);
+	\draw[thick] (prec2.north east) -- ([xshift=1.5em, yshift=1.8em] prec2.east);
+	
+	\end{tikzpicture}
+	\caption{A system with a conjunctive entry condition: if both \textit{a} and \textit{b} then, either \textit{x} or \textit{y}}
+	\label{fig:system-network-notation4}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Now that the graphical notations are introduced, I would like to start with the abstract concept of \textit{hierarchy} defined in a computer scientific way by \citet{Pollard1987}. This is a formal rephrasing of Definition \ref{def:hierarchy} that Haliday provides.
+
+\begin{definition}[Hierarchy]\label{def:hierarchy-cs}
+	A hierarchy is finite bounded complete partial order $(\varDelta,\prec)$. 
+\end{definition}
+
+The next concept that required higher order of formalization os that of a System first established in Definition \ref{def:system}. For precision purposes, this one has a narrower scope without considering the system networks or precondition constraints which are introduced shortly afterwards building upon current one.
+
+\begin{definition}[System]\label{def:formal-system}
+A \textit{system} $\Sigma=(p,C)$ is defined by a finite disjoint set of distinct and mutually defining terms called a \textit{choice set} $C$ and an \textit{entry condition} $p$ establishing the delicacy relations within a system network; subject to the following conditions: 
+\begin{enumerate}
+	\item the choice set is a $S_{OR}$ or $S_{XOR}$ conjunction set.
+	\item the entry condition is a $S_{OR}$, $S_{XOR}$ or $S_{AND}$ conjunction set.
+	\item \begin{equation*}
+	\infty > size(C) \geq
+	\begin{cases}
+	2, & \text{if}\ T(C) = S_{XOR} \\
+	3, & \text{if}\ T(C) = S_{OR} \\
+	\end{cases}
+	\end{equation*}
+\end{enumerate} 
+\end{definition}
+
+There is a set of functions applied to system: $label(\Sigma)=l$ is a function returning the system name, $choices(\Sigma)=C$ is a function returning the choice set, $precondition(\Sigma)=p$ is a function returning the entry condition, and the $size(\Sigma)$ return the number of elements in the system choice set.  
+
+\begin{definition}[Systemic delicacy]\label{def:delicacy-hierarchy}
+	We say that a system $S_{1}$ is more delicate than $S_{2}$ denoted as $S_{1} \prec S_{2}$ if 
+	\begin{enumerate}
+		\item both system belong to the same system network: $S_{1}, S_{2} \in SN$ 
+		\item there is at least a feature but not all of $S_{1}$ which belong to the entry condition of $S_{2}$  
+	\end{enumerate} 
+\end{definition}
+
+Systems are rarely if ever used in isolation. SF grammars often are vast networks of interconnected systems defined as follows. 
+
+\begin{definition}[System Network]\label{def:system-network}
+	A \textit{system network} $SN=(r,SS)$ is defined as a hierarchy within set of systems $SS$ where the order is that of systemic delicacy where:
+	\begin{enumerate}
+		\item $S_{i}$ is an arbitrary system within the hierarchy $S_{i} \in SS $
+		\item $r \in S_{i}$ is the unique root of the system network with empty precondition $precondition(r)=\varnothing $
+		\item $p_{i} = precondition(S_{i})$ the entry condition of system $S_{i}$.
+		\item $\tau: f \times S_{i} \rightarrow S_{j}$ a transition function from a feature $f \in precondition(S_{i})$ to a less delicate system $S_{j}, f \in choices(S_{j})$. We say that $S_{j} \prec S_{i}$
+	\end{enumerate}
+	subject to the following conditions:
+	\begin{enumerate}
+		\item $\forall x \in \cup \{ P_{i}| \forall P_{i} \in SN \}, \exists y \in \cup \{ choices(S_{i})| \forall S_{i} \in SN \}: x=y$ every precondition value is among the choice values
+		\item $\forall x \in \cup \{ P_{i}| \forall P_{i} \in SN \}$ there is a path $\pi$ (i.e. a sequence of systems) such that $\tau(x,\pi)=r$ (ensuring the connectedness of entire systemic network and a unique root)
+		\item $\nexists x \in \cup \{ P_{i}| \forall P_{i} \in SN \}$ and $\nexists \pi$ such that $\exists S_{j}=\tau(x,\pi)$ and that $ S_{j} \in \pi \vee x \in values(S_{j}) $ (ensuring the system network is no cyclical)
+	\end{enumerate}
+\end{definition}
+
+Now you may ask a pertinent question: what is the basis on which is the systemic selection made? To answer it I must first introduce two types of constraints. 
+First, The systems are interconnected with each other by a set of preselection (entry) conditions forming systemic networks (Definition \ref{def:system-network}). Second, is an aspect not always mentioned in the SFL literature, the systemic \textit{realisation statements} which are shaping the context where the system is applied. These aspects are covered in Section \ref{sec:system-network-execution} talking about execution of system networks.  
+
+The notation for writing system networks from \citep{Halliday2013} uses colon (:) to symbolize entry condition leading to terms in systems, slash (/) for systemic contrast (disjunction) and ampersand (\&) for systemic combination (conjunction). So a sample network will be written as follows:
+
+\begin{exe}
+	\ex\label{ex:system10} $\varnothing: i_1 / i_2/i_3 $
+	\ex\label{ex:system11} $i_1: i_4 / i_5 $
+	\ex\label{ex:system12} $i_2$ \& $i_4: i_6 / i_7 $
+\end{exe}
+
+However in this thesis we need to account for the disjunction type and system name. So we adopt a slightly different notation of three slots separated by colon (:) where the first slot signifies the system name, second the set of system features and the third is the entry condition. Examples \ref{ex:system1} to \ref{ex:system3} show three systems definitions (without selection functions i.e. no realization statements). 
+\begin{exe}
+	\ex\label{ex:system1} $S_1:OR(i_1,i_2,i_3):\varnothing$
+	\ex\label{ex:system2} $S_2:XOR(i_4,i_5):OR(i_1)$
+	\ex\label{ex:system3} $S_3:XOR(i_6,i_7):AND(i_2,i_4)$
+\end{exe}
+
+The system network can be represented as a graph where each node is a system and edges represent precondition dependencies. All system features must be unique in the network i.e. ${\forall S_1, S_2 \in SN: choice\_feature\_set(S_1) \cap choice\_feature\_set(S_2) = \varnothing}$ and there must be no dependency loops in the system definitions.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[]
+	\tikzstyle{system-features}=[rectangle, draw=black, rounded corners, text centered, anchor=west, rectangle split, thick]
+	\tikzstyle{system-name}=[rectangle, draw=none, thick, text centered]
+	\tikzstyle{precondition} = [->, thick, black]
+	
+	\node (s1n) [system-name] {$S_1$};
+	\node (s1b) [system-features, rectangle split parts=4, right =0em of s1n.north east, anchor=north west]
+		{OR  
+		\nodepart{second}
+		$i_1$ \nodepart{third}
+		$i_2$ \nodepart{fourth}
+		$i_3$};
+	\node (es) [system-name, left = 2em of s1n] {$\varnothing$};
+	\draw[precondition] (s1n.west) -- (es.east);
+	
+	\node (s2n) [system-name, above right = 4em of s1b.north,xshift = 1em] {$S_2$};
+	\node (s2b) [system-features, rectangle split parts=3, right=0em of s2n.north east, anchor=north west]
+		{XOR  
+		\nodepart{second}$i_4$
+		\nodepart{third}$i_5$};
+%	\draw[black, thick] (s2n.south) -- (s2b.west);
+
+	\node (s3n) [system-name, below right = 4em of s2b.south, xshift = 2em] {$S_3$};
+	\node (s3b) [system-features, rectangle split parts=3, right =0em of s3n.north east, anchor=north west]
+		{XOR  
+		\nodepart{second}$i_6$
+		\nodepart{third}$i_7$};
+%	\draw[black, thick] (s3n.south) -- (s3b.west);
+	
+	\draw[precondition] (s3n.west) -- ([xshift=0.5em,yshift=0em] s2b.east);
+	\draw[precondition] (s3n.west) -- ([xshift=0.5em,yshift=-0.8em] s1b.east);
+	\draw[precondition] (s2n.south) -- ([xshift=0.5em,yshift=0.5em] s1b.east);
+	
+	\end{tikzpicture}
+	\caption{Example System Network presented as graphs}
+	\label{fig:system-network-example}
+\end{figure}
+
+In a systemic network $SN$ where a system $S_l$ depends on the choices in another system $S_e$ (i.e. the preconditions of $S_l$ are features of $S_e$) we call the $S_e$ and \textit{early(older) system} and the $S_l$ a \textit{late(younger) system}. This is just another way to refer to order systems according to their delicacy but applying this ordering to execution of systemic selection. 
+
+When the features are selected from systems within a network they form a path. It is often useful to check whether a set of arbitrary features belong to a \textit{consistent} and \textit{complete selection path}. Next I introduce a few concepts useful in addressing this task.
+
+First a system network can be reduced to a graph of features called feature network (Definition \ref{def:maximal-selection-graph} sometimes referred to as \textit{maximal selection graph}) interconnected by system entry conditions. 
+
+\begin{definition}[Feature Network]\label{def:maximal-selection-graph}
+We call \textit{Feature Network} $FN(N,E)$ a directed graph whose nodes $N$ are the union of choice sets of the systems in the network and edges $E$ connect choice features with the entry condition features. Formally it can be expressed as follows: 
+\begin{enumerate}
+	\item $N = \bigcup choices(\Sigma_{i})$ where $\Sigma_{i} \in SN$ for $0 < i size(SN)$
+	\item $E = \{(f_{m},f_{n})\}$ where $f_{m} \in  choices(\Sigma_{i}), f_{n} \in precondition(\Sigma_{i})$
+\end{enumerate}
+
+\end{definition}
+%eventually offer a formal description of edges and nodes
+
+The Feature Network in fact is an expansion of the System Network. The former is a network of interconnected features while the latter a network of systems. 
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[]
+	\tikzstyle{system-features}=[rectangle, draw=black, rounded corners, text centered, thick]
+	\tikzstyle{system-name}=[rectangle, draw=none, thick, text centered]
+	\tikzstyle{precondition} = [->, thick, black]
+	
+	\node (i1) [system-features] {$i_1$};
+	\node (i2) [system-features, below =1em of i1] {$i_2$};
+	\node (i3) [system-features, below =1em of i2] {$i_3$};
+
+	\node (i4) [system-features, above right =5em of i2] {$i_5$};
+	\node (i5) [system-features, below =1em of i4] {$i_4$};
+	
+	\node (i6) [system-features, below right=5em of i4] {$i_6$};
+	\node (i7) [system-features, below =1em of i6] {$i_7$};
+	
+	\draw[precondition] ([xshift=-0.1em] i5.west) -- ([xshift=0.3em,yshift=-0.2em] i1.east);
+	\draw[precondition] ([xshift=-0.1em] i4.west) -- ([xshift=0.3em,yshift=0.1em] i1.east);
+	\draw[precondition] ([xshift=-0.1em] i6.west) -- ([xshift=0.3em,yshift=0.1em] i5.east);
+	\draw[precondition] ([xshift=-0.1em] i7.west) -- ([xshift=0.3em,yshift=-0.3em] i5.east);
+	\draw[precondition] ([xshift=-0.1em] i6.west) -- ([xshift=0.3em,yshift=0.2em] i2.east);
+	\draw[precondition] ([xshift=-0.1em] i7.west) -- ([xshift=0.3em,yshift=-0.2em] i2.east);		
+	\end{tikzpicture}
+	\caption{Example Feature Network}
+	\label{fig:feature-network-example}
+\end{figure}
+
+\begin{definition}[Selection Path]\label{def:selection-path}
+A \textit{Selection Path} $SP(N,E)$ is a connected sub-graph of the Feature Network representing system network instantiation through choice making traversal.
+\end{definition}
+
+\begin{definition}[Complete Selection Path]\label{def:complete-selection-path}
+A \textit{Complete Selection Path} is a selection path starting from the network root and ending in one of the leafs.
+\end{definition}
+
+We use terms related to age to underline order in which systems activated i.e. older systems must be chosen from before younger ones. 
+
+\begin{definition}[System Network Instance]\label{def:system-network-instance}
+A \textit{System Network Instance} $SNI$ of a constituent node $n$ is a directed graph representing the union of all Complete Selection Paths applicable to a constituent. 
+\end{definition}
+
+Let's come back to Figure \ref{fig:feature-network-example}. As you can notice this is a handy device for efficiently checking the path completeness (whether the path is from head to tail of a feature network), consistency with respect to the order of elements (whether such a path exits). There is one aspect that cannot be checked in feature network and it is the conjunctive entry conditions which require that both system networks precede any choice in the current one. In other words, a conjunctive entry states that two paths merging into one and they can only be checked in isolation as two distinct paths, which happen to share a common portion. This shorcoming will be dressed in future work.
+
+In this section there were mentions to selection, instantiation and traversal processes but no specific definition were provided. Next, let's turn our attention towards the system network instantiation through traversal and selection. 
+
+\section{Systemic Network Execution}
+\label{sec:system-network-execution}
+Every node from a constituency graph is enriched with feature selections grammatically characterising it. This is an important stage in the parsing algorithm discussed in Section \ref{sec:enrichment-stage}. The enrichment stage is in fact system network instantiation and ascription of complete selection paths to each constituent node . 
+
+\textit{Executing} a system network is an incremental process that builds selection paths by making choices in the system networks. There are two ways to \textit{instantiate} (or execute) a system network: either by \textit{forward activation} or \textit{backward induction} processes which both imply a different order of network traversal. 
+
+When it comes to traversing system networks and making choices there is a specific mechanism responsible for this instantiation process. The \textit{choice makers} are selector functions associated to (some) systems. Selector functions implement realization statements corresponding to a system $S_{i}$ and represents the instantiation mechanism turning the generic set of alternative choices into a concrete choice for a specific context.
+
+Each node in a constituency graph carries features whose names and values are constrained to the set of systems defined in the grammar. In this sense, systems represent constraint definitions for what features may be used and what values those features can take. The algorithm has to evaluate these constraints in order to select the set of relevant features for a given constituent. Traversing system by system within the systemic network, with a known previously selected set of features and a given syntagmatic structure a selector function is executed to make the systemic choice. 
+
+\begin{definition}[Selector Function]\label{def:selection-function}
+	A \textit{selector function} ${\sigma_{ctx}:S \rightarrow R}$ is defined from a system S to a feature structure $R$ within a given context $ctx$ where:
+	\begin{enumerate}
+		\item the context $ctx=(G,fn)$ is a binary tuple of a constituency graph $G$ and a focus node $fn \in G$ belonging to it
+		\item \textit{preselection feature set} (PFS) is the already assigned set of features to the focus node $pfs = featureSet(fn)$ 
+		\item $size(R) \in \{0,1\}$ meaning that there is either no choice made and an empty feature structure is returned or there is a choice made and a feature structure is returned with one feature bearing values from the system choice set
+	\end{enumerate}
+	subject to the following condition:
+	\begin{enumerate}
+		\item if $size(R)=1$ then for the only $f_{i} \in R $ it holds that $att(f_{i})=name(S) \ \wedge \ val(f_{i}) \subset choices(S) \ \wedge \ val(f_{i}) \neq \varnothing $
+	\end{enumerate}
+\end{definition}
+
+If the PFS is an \textit{OR set} then it requires that any of the features (at least one) must be in a Selection Path (Definition \ref{def:selection-path}). If the PFS is an \textit{AND set} then it requires that all of the features must be in a Selection Path.
+
+
+\subsection{Forward Activation}
+Forward activation is a process that enables systems to be executed (chosen from by selection function) only after choices from an older system has been already added to a selection path. In other words the selection path is constructed from older to younger systems/features.
+
+We say that a system $S_y$ \textit{activates} another system $S_o$ if and only if\\ ${\forall S_o, S_y: S_o < S_y, precondition(S_y) \cap choices(S_o) \neq \varnothing}$. Activation process is the process that ensures advancement from an older to a younger system. This implies checking and ensuring entry condition is satisfied and executing the selection function. If the entry condition of the younger system is simple then the choice in the old system suffices, however if the entry condition is a complex conjunction, then first the older sibling systems have to be selected from before entering the younger one. 
+
+\SetKwFunction{forward}{forward\_activate}
+
+\SetKwData{sp}{sp}
+\SetKwData{sn}{sn}
+\SetKwData{node}{node}
+\SetKwData{cg}{cg}
+\SetKwData{asys}{system}
+\SetKwData{cs}{choice set}
+
+\begin{algorithm}
+\Input{ \sp (current selection path), \sn (system network), \node (constituent), \cg (constituency graph) }
+	\Fn{\forward{\sp, \sn, \node, \cg}}{{
+		\For{\asys \KwTo \sn systems activated by the last \sp feature}
+			{
+				get \cs by executing \asys selection function (given \asys, \node, \cg)\;
+				append \sp by the \cs \;
+			}
+		\If{\sp has changed}
+			{
+				\forward(updated \sp, \sn, \node, \cg) \;
+			}
+	}
+}
+\caption{Forward Activation Algorithm}
+\label{alg:forward-activation}
+\end{algorithm}
+
+Algorithm \ref{alg:forward-activation} outlines how the forward activation is executed recursively. The systems that are active at a particular moment of the depend on the configuration of the \textit{selection\_path}. \textit{activated\_systems} function returns a set of systems from the system network whose preconditions are satisfied and their choices are not in the selection path (or the system has not yet been executed) $\forall S \in SN : precondition(S) \subset selection\_path,\\ choice\_set(S) \cap selection\_path = \varnothing$.
+
+For each activated system, its selector function is executed returning a selection set. The result selection is is used to extend the the selection\_path thus potentially fulfilling preconditions of younger systems. If the path has been changed then the same procedure is applied recursively to the updated path until no more changes are done to the selection\_path. 
+
+\subsection{Backwards Induction}
+Backwards induction is a process opposite to forward activation. If a system is executed yielding a selection set then the preconditions of this system are induced as valid selections in the older systems defining those precondition features, and so on until a system is reached with no preconditions. 
+
+\SetKwFunction{backwardsnaive}{backwards\_induction\_naive}
+\SetKwFunction{backwardschecked}{backwards\_induction\_verified}
+
+\begin{algorithm}
+\Input{ \sp (current selection path), \sn (system network), \node (constituent), \cg (constituency graph) }
+	
+\Fn{\backwardsnaive{\sp, \sn, \node, \cg}}{
+	
+	\For{\asys \KwTo \sn systems preconditioning selection \sp features}
+	{
+		get \cs by executing \asys selection function (given \asys, \node, \cg)\;
+		
+	 	\For{induced\_system \KwTo dependecy\_chain(act\_sys,sn) }
+	 	{choice\_set.add( precondition\_set(induced\_sys) )\;}
+	 	selection\_path += create\_selection\_path\_from(choice\_set)\;
+	}
+	\Return{selection\_path}
+}
+\caption{Naive Backwards induction}
+\label{alg:backward-induction-naive}
+\end{algorithm}
+
+The naive approach to is represented in Algorithm \ref{alg:backward-induction-naive} which executes the selection functions of leaf systems and the yielded selections induce choices in the older systems through the precondition chain down to the oldest systems of the network. 
+
+So for example if SYNTACTIC-TYPE system in Figure \ref{fig:polarity1} is executed and yields \textit{verbal-marker} feature then the Algorithm \ref{alg:backward-induction-naive} will add to the selection path the chain $negative\rightarrow interpersonal\rightarrow syntactic\rightarrow verbal-marker$.
+
+This approach works very well in classification networks or networks covering a concise vocabulary such as determiners or pronouns. Such network has selection functions on the leaf systems only. However if in the middle of the selection path there are systems with selection functions then the there may exist a conflict between what is induced through precondition of younger systems and what is yielded by the selection function. 
+
+In fact confronting the preconditions with selection function is a good technique to verify whether the SN is well constructed. Following the previous example let's imagine that INTERPERSONAL-TYPE system has it's own selection function and it yields the \textit{morphological} feature same time when the \textit{verbal-marker} is selected  in the SYNTACTIC-TYPE. Since the precondition of the latter system is the selection of \textit{syntactic} feature, then we have a mismatch in either the way systems are constructed and the precondition of the latter system needs to be changed or the selection function is poorly implemented in the former system. 
+
+The Algorithm \ref{alg:backward-induction-verified} implements the verification of whether the induced features match those from the selection function.
+
+\begin{algorithm}
+\Fn{\backwardschecked{list\_of\_leafs, sn, constituent, mcg}}{
+	\For{act\_sys \KwTo list\_of\_leafs}
+	{
+		choice\_set = execute\_selection\_function(act\_sys)\;
+		\If {choice\_set $\neq \varnothing$ }{
+			induced\_system\_set = find\_dependent(act\_sys,sn)\;
+		}
+	 	\For{induced\_sys \KwTo induced\_system\_set}
+	 	{
+	 		ind\_choice\_set = selection\_function(induced\_sys)\;
+	 		minimal\_valid\_set = precondition\_set(induced\_sys) $\cap$ choice\_set(act\_sys)\;
+	 		\eIf{minimal\_valid\_set $\subseteq$ ind\_choice\_set}
+	 		{
+		 		selection\_path += create\_selection\_path\_from(choice\_set)\;
+	 		}{
+	 		 \Raise{Execption: The precondition set different from selection function result}
+	 		}
+	 	}
+	 	\backwardschecked{induced\_system\_set, sn, constituent, mcg}
+	}
+	\Return{selection\_path}
+}
+\caption{Backwards Induction with verification mechanism}
+\label{alg:backward-induction-verified}
+\end{algorithm}
+
+It is a recursive algorithm that executes a system $S_1$, and also the systems $S_2 .. S_n$ which $S_1$ depends on an then verifies if $ \forall S_i \in dependent\_systems(S_1): precondition\_set(S_1) \cap choice\_set(S_i) \subseteq selection\_function(S_i)$
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Figures/SFL-grammar/polarity-system.pdf}
+\caption{Polarity System}
+\label{fig:polarity1}
+\end{figure}
+
+Take for instance the POLARITY system in Figure \ref{fig:polarity1}. Its default selection is \textit{positive} feature unless there is a negative marker. So we must asses NEGATIVE-TYPE system to resolve POLARITY system. But NEGATIVE-TYPE also must be postponed because we do not know if there is a negative marker unless we run tests for each marker type (i.e. presence of a ``no'' particle, negative subject or adjunct etc.). So we postpone selection decision and activate further the INTERPERSONAL-TYPE and TEXTUAL-TYPE systems and base the assessment on the selections yielded by the latter two systems. The same story is with INTERPERSONAL-TYPE which can make selections based on what SYNTACTIC-TYPE system yields. If SYNTACTIC-TYPE and TEXTUAL-TYPE systems yield no selection then we return recursively to INTERPERSONAL-TYPE and to NEGATIVE-TYPE and yield no selection in those systems as well. However if, for instance, \textit{verbal-marker} is detected in the clause then the \textit{syntactic} feature is yielded by the INTERPERSONAL-TYPE and \textit{interpersonal} by the NEGATIVE-TYPE and thus \textit{negative} is yielded by the POLARITY-TYPE. 
+
+Moreover the negative markers can be of various types and more than one can occur simultaneously without any interdependence between them so the algorithm needs to check presence of every type of negative marker i.e. verbal, nominal adverbial, conjunctive and continuative markers. 
+
+That being said the intermediary systems and features i.e. interpersonal, textual, syntactic, morphological are there for the classification purpose only and do not carry any particular algorithmic value making the network from Figure \ref{fig:polarity1} reducible to the one in Figure \ref{fig:polarity1-condensed}. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{Figures/SFL-grammar/polarity-condensed.pdf}
+\caption{Condensed Polarity System}
+\label{fig:polarity1-condensed}
+\end{figure}
+
+Execution of system networks is subject to constituent \textit{enrichment phase} of the parsing algorithm. Reducing the POLARITY network to the one in Figure \ref{fig:polarity1-condensed} would lead to loss of information which may be relevant for choice-making in other systems (e.g. MODALITY) so it is useful to expand the selection set with dependent features to achieve feature rich constituents.
+
+%TODO
+\section{Discussion}
+This chapter describes the elemental data structure and the kinds of operations that current implementation applies to generate the SFG parse structures. It lays down the foundations for next chapter which focuses on the parsing pipeline and algorithms. 
+
+A central theme covered here are the graphs and graph patterns. They play the key role in identifying grammatical features in dependency and constituency structures. They are also excellent candidate for expressing \textit{systemic realization rules}. 
+
+Robin Fawcett recurrently emphasises the role of realization rules in the composition of system networks. He often stresses ``no system networks without realization rules''. They are important because they formally express ways in which a feature is identified or realised. It is the \textit{instantiation} process that in Halliday's words ``is the relation between a semiotic system and the \textit{observable} events or `acts' of meaning'' \citep[emphasis added]{Halliday2003-systemic-theory}. The realisation rules for a systemic feature are the statement of operations through which that feature contributes to the structural configuration (that is being either generated or recognised) \citep[p.86]{Fawcett2000}.
+
+It is not easy however for linguists and grammarians to provide such statements for the systemic features. Doing so means an explicit formalisation of grammar on top of charting the systemic composition and dependencies which is already a challenging task in its own. The realisation rules most of the time remain in the minds of the interpreters who can recognise a feature when it occurs. Adding the formal specification of the realisation rule requires tools for consistency checking with respect to the rest of the grammar and large corpus query tool to test various rule hypotheses. 
+
+Moreover the expression of rules is proposed in terms of atomic operations such as lexify, preselect, insert, order, etc. Which may not always be fully transparent to the grammarian. Expressing realization rules as operations contextualised in fragments of parse structure is a promising way to ease the grammar authoring process. They could then be used directly by the parser to recognise such structures making the corpus annotation and grammar construction an in-parallel evolving process.
+
+The data structures and operations described in this chapter can be a suitable approach to address the problem of missing realisation rules from the system networks. To do so however requires creation of a system network authoring tool (such as the one available in UAM Corpus Tool \citep{ODonnell2008a}) which besides systemic network editor should contain also a graph pattern editor allowing association of graph patterns to systemic features and . 
+
+In current parser the pattern graphs are represented as compositions of Python dictionaries and lists such as the one below.
+%* The Patterns are written as python data structures thus not very user friendly, an editor would be much more helpful
+\begin{Verbatim}[fontsize=\relsize{-2}]
+{
+    NODES: {  
+        "cl": [
+            {C_TYPE: 'clause', 
+             VOICE: ACTIVE},
+            {CONFIGURATION: ['two-role-action', ['Ag', 'Ra', 'Cre']], }],
+        'pred': [
+            {C_TYPE: [PREDICATOR, PREDICATOR_FINITE], }, 
+            {VERB_TYPE: "main", PROCESS_TYPE: 'two-role-action'} ],
+        'subj': [
+            {C_TYPE: SUBJECT, }, 
+            {PARTICIPANT_ROLE: 'Ag'}],
+        'compl1': [
+            {C_TYPE: [COMPLEMENT, COMPLEMENT_DATIVE], },
+            {PARTICIPANT_ROLE: 'Ra'}],
+        'compl2': [
+            {C_TYPE: [COMPLEMENT, COMPLEMENT_ADJUNCT, ], },
+            {PARTICIPANT_ROLE: 'Cre'}],
+    },
+    EDGES: [
+    ['cl', 'pred', None], 
+    ['cl', 'subj', None], 
+    ['cl', 'compl1', None], 
+    ['cl', 'compl2', None],]
+}
+\end{Verbatim}
+
+This Python dictionary contains two top keys: NODES defined as  with node identifiers each associated with a set of systemic features and EDGES defined as a list with three tuples of source, target and eventually a dictionary of features. The nodes contain a list of two dictionaries. The first dictionary enlists the features that the backbone structure should already carry, and against which the pattern matching is performed. The second dictionary contains the set of features that the node shall receive in case of a successful match of the entire pattern. 
+
+Writing such structures is cumbersome and requires in depth knowledge of the parser and employed system networks therefore the need for an editor is even higher. Unfortunately building such an editor is out of the scope of the current work and is among the priorities in the future developments just as switching to better technology for working with graphs such as Semantic Web suite of tools. This and other future work are described in the Section \ref{sec:future-work}.
+
+In the next chapter I describe the parsing pipeline and how each step is implemented starting from Stanford dependency graph all the way down to a rich constituency systemic functional parse structure.

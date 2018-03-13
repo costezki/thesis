@@ -1,5 +1,10 @@
 # Parsimonious Vole: a systemic functional parser
-PhD Thesis source code
+
+PhD thesis LaTeX source code.
+
+# Template Used
+
+[CUED template](https://github.com/kks32/phd-thesis-template)
 
 ## License
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)

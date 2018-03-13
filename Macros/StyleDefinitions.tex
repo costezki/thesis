@@ -1,0 +1,220 @@
+%
+% Theorem styling
+%
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{generalization}{Generalization}[section]
+\newtheorem{proposition}{Proposition}[section]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+%
+% Tkiz styling
+%
+\depstyle{dep-style}{edge style = {thick, RoyalBlue,}, label style = {thick, text=RoyalBlue, fill=white, draw=RoyalBlue, font=\footnotesize, }, text style = {column sep=0.5cm, row sep=1ex,}, edge unit distance = 0.7em}
+\depstyle{dep-style-narrow}{edge style = {thick, RoyalBlue},label style = {thick, text=RoyalBlue, fill=white, draw=RoyalBlue, font=\footnotesize,}, text style = {column sep=0.25cm, row sep=1ex}}
+
+% Global node and Endge styling
+\tikzset{
+	every node/.style={
+		align=center,
+	},
+	every path/.style={
+		align=center,
+	},
+}
+
+% Special styles
+\tikzset{
+	pattern-node/.style={
+		rectangle,
+		rounded corners,
+		draw=black, very thick,
+		minimum height=2em,
+		inner sep=0.3em,
+		text centered,
+		align=center,
+		node distance=3cm,
+		anchor=center
+	},
+	pattern-node-negative/.style={
+		rectangle,
+		rounded corners,
+		draw=black, very thick, dashed,
+		minimum height=2em,
+		inner sep=0.3em,
+		text centered,
+		align=center,
+		node distance=3cm,
+		anchor=center
+	},
+	edge-style/.style   = {very thick, ->,>=stealth,rounded corners=3mm },
+	tree-style/.style = {edge from parent fork down,
+		edge from parent/.style={draw,rounded corners=3mm},
+		edge-style,
+		level 1/.style={sibling distance=10em},
+		level 2/.style={sibling distance=10em}, 
+		level distance=7em,
+	},
+%	graph-style/.style = {sibling distance = 5em}
+}
+
+%% http://tex.stackexchange.com/questions/55068/is-there-a-tikz-equivalent-to-the-pstricks-ncbar-command
+\tikzset{
+	ncbar angle/.initial=90,
+	ncbar/.style={
+		to path=(\tikztostart)
+		-- ($(\tikztostart)!#1!\pgfkeysvalueof{/tikz/ncbar angle}:(\tikztotarget)$)
+		-- ($(\tikztotarget)!($(\tikztostart)!#1!\pgfkeysvalueof{/tikz/ncbar angle}:(\tikztotarget)$)!\pgfkeysvalueof{/tikz/ncbar angle}:(\tikztostart)$)
+		-- (\tikztotarget)
+	},
+	ncbar/.default=0.5cm,
+}
+
+% Styles used for drawing in data structures chapter
+\tikzset{square left brace/.style={ncbar=0.8em}}
+\tikzset{square right brace/.style={ncbar=-0.8em}}
+\tikzset{round left paren/.style={ncbar=0.5em,out=120,in=-120}}
+\tikzset{round right paren/.style={ncbar=0.5em,out=60,in=-60}}
+\tikzstyle{system-features}=[rectangle, draw=black, rounded corners, text centered, anchor=west, rectangle split, thick]
+\tikzstyle{system-name}=[rectangle, draw=none, thick, text centered]
+\tikzstyle{precondition} = [->, thick, black]
+
+%style used for drawing in introduction
+\tikzset{split-node/.style={%
+		draw,%                    
+		shape=rectangle split,%   
+		rectangle split parts=3,% 
+		rectangle split part align={center,center,center},%
+		rectangle split part fill={blue!20,red!20,green!20}}
+}
+
+\tikzstyle{flow-arrow} = [signal, signal from=west thick, draw, dashed, black, rotate=270, aspect=0.10, minimum width=4em, minimum height=3.5em, align=center, fill=YellowGreen]
+
+%
+% some BPMN diagram propoerties
+%
+\tikzstyle{every task} = [thick,fill=OrangeRed]
+\tikzstyle{every data} = [thick,fill=ForestGreen]
+\tikzstyle{every persistent-data} = [thick,fill=BurntOrange]
+\tikzstyle{every sequence} = [thick]
+\tikzstyle{every gateway} = [thick,fill=white]
+\tikzstyle{every event} = [thick,fill=white]
+\tikzstyle{end event} = [event,line width=2.5pt,fill=white]
+%
+
+%
+% algorithm2e - Set up Python like pseudo code syntax
+%
+\SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+\SetStartEndCondition{ }{}{}%
+\SetKwProg{Fn}{def}{\string:}{}
+\SetKw{KwTo}{in}\SetKwFor{For}{for}{\string:}{}%
+\SetKwIF{If}{ElseIf}{Else}{if}{:}{elif}{else:}{}%
+\SetKwFor{While}{while}{:}{fintq}%
+\SetKwComment{comment}{\#}{}
+\SetKw{Raise}{raise}
+\AlgoDontDisplayBlockMarkers\SetAlgoNoEnd\SetAlgoNoLine\DontPrintSemicolon%
+
+%only these algorithm keywords shall remain
+\SetKwData{dg}{dg}
+\SetKwData{cg}{cg}
+\SetKwData{Children}{children}
+\SetKwData{stack}{constituency stack}
+\SetKwData{cgPointer}{cg pointer}
+\SetKwData{rrule}{rule}
+\SetKwData{operation}{operation}
+\SetKwData{elementType}{element type}
+\SetKwData{rt}{rule table}
+\SetKwData{edge}{edge}
+
+\SetKwData{simpleKey}{generic key}
+\SetKwData{ctxKey}{specific key}
+\SetKwData{headPos}{head POS}
+\SetKwData{tailPos}{tail POS}
+\SetKwData{fn}{free nodes}
+\SetKwData{node}{node}
+\SetKwData{sspan}{span}
+\SetKwData{Element}{element}
+\SetKwData{Group}{group}
+\SetKwData{whGroup}{wh-group}
+\SetKwData{Function}{function}
+
+
+\SetKwData{network}{network}
+\SetKwData{function}{selector function}
+\SetKwData{choices}{systemic choices}
+
+%\SetKwFunction{enrich}{enrich\_mcg}
+%\SetKwFunction{whtrace}{create\_wh\_traces}
+%\SetKwFunction{whtraceadjunct}{create\_adjunct\_wh\_traces}
+%\SetKwFunction{whtracetheta}{create\_theta\_wh\_traces}
+%\SetKwFunction{gencpg}{generate\_cpg\_from\_PTDB}
+%\SetKwFunction{transitivity}{parse\_transitivity}
+%
+%%
+
+
+%
+% Link colors 
+%
+\hypersetup{
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=RoyalBlue,          % color of internal links (change box color with linkbordercolor)
+	citecolor=BrickRed,        % color of links to bibliography
+	filecolor=magenta,      % color of file links
+	urlcolor=RoyalBlue           % color of external links
+}
+
+%
+% Bib style
+%
+\setcitestyle{authoryear}
+\newcommand{\citets}[2][]{\citeauthor{#2}'s (\citeyear[#1]{#2})}
+\bibpunct[: ]{(}{)}{;}{}{}{,}
+
+%
+% %%%%
+%
+
+\setlength{\emergencystretch}{12pt}
+
+%
+% Json Listing
+%
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+	basicstyle=\normalfont\ttfamily,
+	keywordstyle=\ttfamily\bfseries,
+	keywords= {false,true},
+	numbers=left,
+	numberstyle=\scriptsize,
+	stepnumber=1,
+	numbersep=8pt,
+	showstringspaces=false,
+	breaklines=true,
+	frame=lines,
+	backgroundcolor=\color{background},
+	alsoletter= 0123456789.,
+	literate=
+	*{0}{{{\color{numb}0}}}{1}
+	{1}{{{\color{numb}1}}}{1}
+	{2}{{{\color{numb}2}}}{1}
+	{3}{{{\color{numb}3}}}{1}
+	{4}{{{\color{numb}4}}}{1}
+	{5}{{{\color{numb}5}}}{1}
+	{6}{{{\color{numb}6}}}{1}
+	{7}{{{\color{numb}7}}}{1}
+	{8}{{{\color{numb}8}}}{1}
+	{9}{{{\color{numb}9}}}{1}
+	{:}{{{\color{punct}{:}}}}{1}
+	{,}{{{\color{punct}{,}}}}{1}
+	{\{}{{{\color{delim}{\{}}}}{1}
+	{\}}{{{\color{delim}{\}}}}}{1}
+	{[}{{{\color{delim}{[}}}}{1}
+	{]}{{{\color{delim}{]}}}}{1},
+}
