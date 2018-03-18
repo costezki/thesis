@@ -1,20 +1,25 @@
 \chapter{The systemic functional theory of grammar} %The systemic functional grammar}
 \label{ch:sfg}
-There are two variants of Systemic Functional Grammars: the \textit{Sydney Grammar} started in 1961 by \citet{Halliday2002} and the \textit{Cardiff Grammar} proposed by \citet{Fawcett2008} which is a simplification and an extension of Sydney Grammar.
 
-To understand the underlying motives and how exactly they are different we shall start looking at the theories of grammar before we look at the grammars proposed in Sydney and Cardiff SFL schools. 
+Any description of language requires a theory that provides the frame, scope and the necessary concepts. 
+%used to describe a grammar i.e. structure, categories, functions, relations and how they relate to one another. 
+Having a solid theory of grammar contributes to explaining what language is and how it works. It also frames how language is ought yo be analysed by either human or machines. 
+%A grammar, as a description of linguistic rules, is thus framed by a theory of grammar expressing what language is, how it functions and in which ways it shall be describes.
 
-What is the difference between grammar and the theory of grammar, you may ask. If the grammar describes language in terms of categories, functions, relations, structures, meaning choices etc. then the theory of grammar defines what are the concepts that should be used to describer a grammar i.e. categories, functions, relations are and how they related to one another. Having a solid theory of grammar contributes to explaining what language is and how it works. It also frames how  language is analysed by either human or machines. 
+In his seminal paper \citet{Halliday61} addresses the ardent need of the time for a general theory of language and partially answers the proposal for a universal theory of language. He sets out what was known at the time as Scale and Category Grammar. 
+In such a model \textit{units} are set up to account for for pieces of language which carry grammatical patterns. They are seen as arranged on a hierarchical \textit{rank} scale of words, groups and clauses. These and other foundational concepts are covered in the first part of this Chapter. 
 
-This chapter discusses comparatively Halliday's \citep{Halliday2002} and Fawcett's \citep{Fawcett2000} theoretical foundations of SFL. 
+There are two variants of Systemic Functional Grammars: the \textit{Sydney Grammar} started in 1961 by \citet{Halliday2002} and the \textit{Cardiff Grammar} proposed by \citet{Fawcett2008} which is a simplification and an extension of the Sydney Grammar. To understand the underlying motives and how exactly they are different we shall start looking at the theories of grammar before we look at the grammars proposed in Sydney and Cardiff SFL schools.
+
+This chapter first sets out the basic organisational dimensions of the theory and then discusses comparatively Halliday's \citep{Halliday2002} and Fawcett's \citep{Fawcett2000} SFL.
 
 %Because SFL grammar works with more complex structures than simply word dependencies like Dependency Grammars therefore the pragmatics of this chapter is at large oriented towards describing what constituents and functions can be derived from dependency structure and word classes and what is beyond that of a more semantic nature.
 
 \section{A word on wording}
-Before going into deeper discussion I would like to first make a few terminological clarifications on the terms: grammar, grammatics, syntax, semantics and lexicogrammar. I start with a few definitions adopted in the ``mainstream'' generative linguistics and then present how the same terms are discussed in systemic functional linguistics.
+Before going into deeper discussion I first make terminological clarifications on the terms: grammar, grammatics, syntax, semantics and lexicogrammar. I start with a definitions adopted in ``mainstream'' generative linguistics and then present how the same terms are discussed in systemic functional linguistics.
 
 %Radford1997: A minimalist introiduction to syntax
-A. Radford, a generative linguist, in the ``Minimalist Introduction to Syntax'' (\citeyear{Radford1997}), starts with a description of grammar as a field of study, which, in his words is traditionally subdivided into two inter-related areas of study: syntax and morphology. %\citep[p.1]{Radford1997}.
+Radford, a generative linguist, in the ``Minimalist Introduction to Syntax'' (\citeyear{Radford1997}), starts with a description of grammar as a field of study, which, in his words, is traditionally subdivided into two inter-related areas of study: syntax and morphology. %\citep[p.1]{Radford1997}.
 
 \begin{definition}[Morphology (Radford)]\label{def:morphology-min}
 Morphology is the study of how words are formed out of smaller units (traditionally called morphemes) \citep[p.1]{Radford1997}.
@@ -24,8 +29,15 @@ Morphology is the study of how words are formed out of smaller units (traditiona
 Syntax is the study of how words can be combined together to form phrases and sentences. \citep[p.1]{Radford1997}
 \end{definition}
 
-%In London school of linguistics this distinction is perceived as unnecessary. %Halliday (on grammar) 2002
-Halliday, in the context of rank scale discussion \citep[p. 51]{Halliday2002}, refers to the traditional meaning of syntax as the \textit{grammar above the word} and to morphology as \textit{grammar below the word}. Such distinction, he stresses, has no theoretical status. His precursor, Firth, puts it in following terms: ``[...] the distinction between morphology and syntax is no longer useful or convenient in descriptive linguistics.'' \citep[p.14]{Firth1957}
+%In London school of linguistics this distinction is perceived as unnecessary. %Halliday (on grammar) 2002 
+%He take this position to motivate the proposed SFG architecture.
+Halliday, in the context of rank scale discussion \citep[p. 51]{Halliday2002}, refers to the traditional meaning of syntax as the \textit{grammar above the word} and to morphology as \textit{grammar below the word}. Such a distinction, he states, has no theoretical status and is deemed as unnecessary distinction. Halliday adopts this position to motivate the architecture of grammar he was developing and is inherited from his precursor, Firth, as he puts it: 
+\begin{quote}
+	\dots the distinction between morphology and syntax is no longer useful or convenient in descriptive linguistics. \citep[p.14]{Firth1957}
+\end{quote}
+
+%[JB] if you say that this is Halliday's position and was used to motivate the architecture of SFG, then no one can complain or disagree, because that is simply a statement of fact.
+%[JB] Morphology works with very different principles to syntax (that is why in our versions of many grammar, we have such different realisation rules for morphology and for syntax). 
 
 Radford adds that, traditionally, grammar is not only concerned with the principles governing formation of words, phrases and sentences but also with principles governing their interpretation. Therefore \textit{structural aspects of meaning} are said to be also a part of grammar. 
 
@@ -33,20 +45,26 @@ Radford adds that, traditionally, grammar is not only concerned with the princip
 [Grammar is] the study of the principles which govern the formation and interpretation of words, phrases and sentences. \citep[p.1]{Radford1997}
 \end{definition}
 
-Interestingly enough, the Definition \ref{def:grammar-min} makes not mention at all to the lexicon. This is because the formal grammars focus primarily on unit classes and how they are accommodated in various structures and so in formal linguistics the lexicon is disconnected from the grammar. The systemic grammar, on the other hand, along with formal descriptions of grammatical categories and structures, include lexicon as part of grammar to form a \textit{lexicogrammar}.
+Interestingly enough, the Definition \ref{def:grammar-min} makes no mention at all to the lexicon. This is because the formal grammars focus primarily on unit classes and how they are accommodated in various structures and so in formal linguistics the lexicon is often disconnected from the grammar. The systemic grammar, on the other hand, along with formal descriptions of grammatical categories and structures, includes the lexicon as part of grammar to form a \textit{lexicogrammar}. At this point I have to mention that systemic functional grammar is not the only lexicalised one and there are others taking the same approach such as 
+%TODO: references needed
+Lexical Functional Grammar (LFG), Head Phrase Structure Grammar (HPSG), Combinatory Categorial Grammar (CCG) and others. 
 
-Another important aspect to notice is that the grammar is defined as a field of study rather than a set of rules. Halliday, since his early papers, became conscious of the confusion made in the literature between a study of a phenomenon with the phenomenon itself. By analogy to language as phenomenon and linguistics as the study of the phenomenon, Halliday adopts the same wording for \textbf{grammar} as phenomenon and \textit{grammatics} as the study of grammar; the same distinction holds for \textit{syntax} and \textit{syntactics}.
+Another important aspect to notice is that the grammar is defined as a field of study rather than a set of rules. De divergence in perspective on the subject led Halliday, since his early papers, to become conscious the difference between a study of a phenomenon with the phenomenon itself. By analogy to language as phenomenon and linguistics as the study of the phenomenon, discussed in  \citep{Halliday1997-linguistics}, Halliday adopts the same wording for \textit{grammar} as phenomenon and \textit{grammatics} as the study of grammar; the same distinction holds for \textit{syntax} and \textit{syntactics}.
 
 \begin{definition}[Grammatics (Halliday)]\label{def:grammatics-halliday}
 	Grammatics is a theory for explaining grammar \citep[p.369]{Halliday2002}
 \end{definition}
 
 %E. Moravcsik
-E. Moravcsik, another generative linguist stresses the same distinction , in her ``An introduction to syntax'' \citep{Moravcsik2006}, and presents two ways in which the word ``syntax'' is used in literature: (a) in reference to a particular aspect of grammatical structure and (b) in reference to a sub-field of descriptive linguistics that describes this aspect of grammar. 
+Moravcsik, another generative linguist, stresses the same distinction, in her ``An introduction to syntax'' \citep{Moravcsik2006}, and presents two ways in which the word \textit{syntax} is used in the literature: (a) in reference to a particular aspect of grammatical structure and (b) in reference to a sub-field of descriptive linguistics that describes this aspect of grammar. 
+In her words: 
 
-In her words ``syntax describes the selection and order of words that make well-formed sentences and it does so in as general a manner as possible so as to bring out similarities among different sentences of the same language and different languages and render them explainable. [...] syntax rules also need to account for the relationship between string of word meanings and the entire sentence meaning, on one hand, and relationship between strings of word forms and the entire sentential phonetic form, on the other hand.'' \citep[p.25]{Moravcsik2006}
+\begin{quote}
+	\dots
+	syntax describes the selection and order of words that make well-formed sentences and it does so in as general a manner as possible so as to bring out similarities among different sentences of the same language and different languages and render them explainable. \dots syntax rules also need to account for the relationship between string of word meanings and the entire sentence meaning, on one hand, and relationship between strings of word forms and the entire sentential phonetic form, on the other hand. \citep[p.25]{Moravcsik2006}	
+\end{quote}
 
-In her definition of grammar she includes lexicon and semantics which is somewhat more explicit statement than Radford's ``interpretation''. She is getting, in Definition \ref{def:grammar-moravcsik}, somewhat closer to what grammar stands for in SFL - Definition \ref{def:grammar-halliday}. 
+In her definition of grammar she includes the lexicon and semantics which is a somewhat more explicit statement than Radford's \textit{interpretation}. She is also getting, in Definition \ref{def:grammar-moravcsik}, somewhat closer to what grammar stands for in SFL - Definition \ref{def:grammar-halliday}. 
 
 \begin{definition}[Grammar (Moravcsik)]\label{def:grammar-moravcsik}
 ... maximally general analytic descriptions, provided by descriptive linguistics, [are] called grammars. A grammar has five components: phonology (or, depending on the medium, its correspondent e.g. morphology), lexicon, syntax and semantics\citep[pp.24--25]{Moravcsik2006}. 
@@ -56,22 +74,22 @@ In her definition of grammar she includes lexicon and semantics which is somewha
 
 %Halliday (on grammar) 2002
 \begin{definition}[Grammar (Halliday)]\label{def:grammar-halliday}
-	To Halliday, lexico-grammar or short grammar is a part of language and it means the wording system - the ``lexical-grammatical stratum of natural language as traditionally understood, comprising its syntax, vocabulary together with any morphology the language may display [...]'' \citep[p.369]{Halliday2002}.
+	To Halliday, lexico-grammar, or for short,simply grammar is a part of language and it means the wording system - the ``lexical-grammatical stratum of natural language as traditionally understood, comprising its syntax, vocabulary together with any morphology the language may display [...]'' \citep[p.369]{Halliday2002}.
 \end{definition}
 
 %Another important aspect to note about the generative linguistics is the focus on the formal aspects of language where even the semantics (also referred to as interpretation) refers only to the ``formal aspect of meaning''. 
 
-The last point I want to mention is the approach to semantics. Formal grammars aim to account for the realisation variations, that is formation of words, phrases and sentences along with their arrangements and the mentions of semantics merely refer to the ``formal aspect of meaning''. 
+The last point I want to mention is the approach to semantics. Formal grammars aim to account for the realisation variations, that is formation of words, phrases and sentences along with their arrangements and mention of semantics is often restricted to what may be termed the \textit{formal aspect of meaning}. 
 
-By contrast, a systemic grammar is a functional grammar, which means (among other things) that it is semantically motivated, i.e. ``natural''. So the fundamental distinctions between formal and functional grammars is the semantic basis for explanations of structure. 
+By contrast, a systemic grammar is a functional grammar, which means (among other things) that it is semantically motivated, i.e. ``natural''. 
+%TODO: [JB] note that most contemporary theories of grammar assume a close morphism betwene grammar and semantics - this is then also 'natural' (even more generally, this is the long acknowledged operation of iconicity in grammar), so be careful what you state as being about grammar and what is meant to be specific about 'SFG'.
+So the fundamental distinctions between formal and functional grammars is the semantic basis for explanations of structure. 
+%TODO: [JB] Here you might be better going back to Butler's definitions and distinctions btween formal and functional grammars, as the boundary is by no means clearcut. The way you have it, most modern formal linguists would be alienated: think of CCG, there the relation between semantics and grammar is enforced even more strongly than in SFG: each and every grammar rule is at the same time a semantic rule. This is also in Montague grammar and so is not new. I would phrase these things by placing the basic assumptions of SFG as running alongside these assumptions, not as a distinction that separates SFG from them.
 
-Also, in SFL, the meaning is being approached from a semiotic perspective, punting the linguistic semantics in perspective with the linguistic expression and the real world situation. 
- 
+Also, in SFL, the meaning is being approached from a semiotic perspective, placing the linguistic semantics in perspective with the linguistic expression and the real world situation. 
 In this respect, \citet{Lemke93} offers a well formulated theoretical foundation that ``human communities are eco-social systems that persist in time through ongoing exchange with their environment; and the same holds true for any of their sub-subsystems [...]'' including language. The social practices constituting such systems are both material and semiotic, with a constant dynamic interplay between the two. \citep[p.387]{Halliday2002}
 
-The term \textit{semiotic} means to Halliday oriented towards meaning rather than sign. In other words, the interaction is between \textit{the practice of doing and the practice of meaning}.  
-
-As the two sets of practices are strongly coupled, Lemke points out that there is a high degree of redundancy between the material-semiotic interplay. And it perfectly resonates with Firth's idea of \textit{mutual expectancy} between the text and the situation.
+To Halliday, the term \textit{semiotic} accounts for an orientation towards meaning rather than sign. In other words, the interaction is between \textit{the practice of doing and the practice of meaning}. As the two sets of practices are strongly coupled, Lemke points out that there is a high degree of redundancy between the \textit{material-semiotic interplay}. And it perfectly resonates with Firth's idea of \textit{mutual expectancy} between the text and the situation. This idea of interplay is incorporated in SFL as \textit{language stratification} and is graphically represented in Figure \ref{fig:stratification-sfl}.
 
 \begin{figure}[h]
 	\centering
@@ -116,36 +134,39 @@ As the two sets of practices are strongly coupled, Lemke points out that there i
 	\caption{The levels of abstraction along the realisation axis}
 	\label{fig:stratification-sfl}
 \end{figure}
+ 
 
-Having that said, the best way to relate the formal and the systemic functional grammars is by placing the two of them along the stratification axis.
+Having that said, the stratification axis is a useful dimension to relate the formal and the systemic functional grammars. This is also an instrument employed by Hjelmslev \citep{Taverniers2011}. %TODO: eventually expand here
 
-The SFL model defines language as a resource organised into three strata: phonology (sounding), lexicogrammar (wording) and semantics (meaning). Each is defined according to its level of abstraction on the realisation axis. The realisation axis is divided into two planes: the expression and the content planes. The first strata (i.e. phonology) belongs to the \textit{expression plane} and the last two (lexicogrammar and semantics) belong to the \textit{content plane}. But the division is not so clear because some parts of semantics and lexicogrammar transcend from content into expression plane. 
-In this context, the formal grammar could be localised entirely within the expression plane, including the phonology/morphology, syntax, lexicon and semantics but stripped of any explanations in terms of the meaning potential available in the content plane.
-
+The SFL model defines language as a resource organised into three strata: phonology (sounding), lexicogrammar (wording) and semantics (meaning). Each is defined according to its level of abstraction on the realisation axis. The realisation axis is divided into two planes: the expression and the content planes. 
+Although debate about the precise division continues, for current purpose it is sufficient to see the first stratum (i.e. phonology/morphology) belongs to the \textit{expression plane} and the last two (lexicogrammar and semantics) belong to the \textit{content plane}.
+%But the division is not so clear because some parts of semantics and lexicogrammar transcend from content into expression plane. 
+In this context, the formal grammar could be localised entirely within the expression plane, including the phonology/morphology, syntax, lexicon while formal semantics, stripped of any explanations in terms of the meaning potential, belongs in the content plane.
 
 \section{Sydney theory of grammar}
 \label{sec:sydney-theory-of-grammar}
-\citet{Halliday2002} proposes four fundamental categories of grammar: \textit{unit}, \textit{structure}, \textit{class} and \textit{system}. Each of these categories is logically derivable from and related to other ones in a way that they mutually define each other. These categories relate to each other on three scales of abstraction: \textit{rank}, \textit{exponence}, \textit{delicacy}. Halliday also uses three scale types: \textit{hierarchy}, \textit{taxonomy} and \textit{cline}.
+I start introducing the terms of SFL theory with the Sydney grammar as this is in accordance with the historical development originating with \citet{Halliday2002} defining the categories of the theory fo grammar. He proposes four fundamental categories: \textit{unit}, \textit{structure}, \textit{class} and \textit{system}. Each of these categories is logically derivable from and related to the other ones in a way that they mutually define each other. These categories relate to each other on three scales of abstraction: \textit{rank}, \textit{exponence}, \textit{delicacy}. Halliday also uses three scale types: \textit{hierarchy}, \textit{taxonomy} and \textit{cline}.
 
 \begin{definition}[Hierarchy]\label{def:hierarchy}
-	Hierarchy [is] a system of terms related along a single dimension which involves a some sort of logical precedence. 
+	Hierarchy [is] a system of terms related along a single dimension which involves some sort of logical precedence. 
 	\citep[p.42]{Halliday2002}. 
 \end{definition}
 
 \begin{definition}[Taxonomy]\label{def:taxonomy}
 	Taxonomy [is] a type of hierarchy with two characteristics:
 	\begin{enumerate}
-		\item the relation between a terms and the immediately following and preceding one is constant
+		\item the relation between terms and the immediately following and preceding one is constant
 		\item the degree is significant and is defined by the place in the order of a term relative to following and preceding terms. \citep[p.42]{Halliday2002}
 	\end{enumerate}
-\end{definition}
+\end{definition} 
 
 \begin{definition}[Cline]\label{def:cline}
 	Cline [is] a hierarchy that instead of being made of a number of discrete terms, is a continuum carrying potentially infinite gradations.
 	\citep[p.42]{Halliday2002}. 
 \end{definition}
 
-Next I define and introduce each category of grammar and the related concepts that constitute the theoretical foundation for the Sydney Theory of grammar.
+The concept of cline may not necessarily originate in SFL but it is used quite extensively in the domain literature.
+Next I define and introduce each category of \textit{grammatics} and the related concepts that constitute the theoretical foundation for the Sydney Theory of grammar.
 
 \subsection{Unit}
 \label{sec:unit-sydney}
