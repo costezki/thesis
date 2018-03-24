@@ -106,6 +106,9 @@ Besides collapsing prepositions and conjunctions the DG is further processed to 
 Relations like \textit{ref} introduce cycles but add valuable information useful in various stages of further processing. However, ensuring a tree structure in important for the CG creation stage because it is based on a top down traversal. This is taken care of in the preprocessing stage described in the next stage.
 
 \section{Penn part-of-speech tag set}
+In traditional grammar \textit{word classes} or \textit{parts of speech} are a commonly accepted concept. However in SFL, it plays rather an orientation or an approximation role, precisely because the part of speech do not have one to one correspondence to the elements they expound. So terms such as \textit{noun} or \textit{adjective} are useful to denote a class of words that expound a certain element of the structure, but such word class to element correspondences shall by no means treated as definite rules. 
+%This is in fact the approach taken in current work and correspondence mappings had between established between part of speech to the set of elements they may expound in various units. %TODO[JB] give examples
+
 Stanford dependency parser starts creation of the parse structure process from the list of tokens annotated with Penn part-op-speech tags. Embedded into the dependency graph, these tags are the part of the syntactic context from which SFG constituency graph is built. 
 
 The Penn tagset was developed to annotate the Penn Treebank corpora \citep{Marcus1993}. It is a large, richly articulated tagset that provides distinct coding for classes of words that have distinct grammatical behaviour.

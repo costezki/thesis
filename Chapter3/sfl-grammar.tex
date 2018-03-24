@@ -9,9 +9,14 @@ Having a solid theory of grammar contributes to explaining what language is and 
 In his seminal paper \citet{Halliday61} addresses the ardent need of the time for a general theory of language and partially answers the proposal for a universal theory of language. He sets out what was known at the time as Scale and Category Grammar. 
 In such a model \textit{units} are set up to account for for pieces of language which carry grammatical patterns. They are seen as arranged on a hierarchical \textit{rank} scale of words, groups and clauses. These and other foundational concepts are covered in the first part of this Chapter. 
 
-There are two variants of Systemic Functional Grammars: the \textit{Sydney Grammar} started in 1961 by \citet{Halliday2002} and the \textit{Cardiff Grammar} proposed by \citet{Fawcett2008} which is a simplification and an extension of the Sydney Grammar. To understand the underlying motives and how exactly they are different we shall start looking at the theories of grammar before we look at the grammars proposed in Sydney and Cardiff SFL schools.
+There are two variants of Systemic Functional Grammars: the \textit{Sydney Grammar} started in 1961 by \citet{Halliday2002} and the \textit{Cardiff Grammar} proposed by \citet{Fawcett2008} which is a simplification and an extension of the Sydney Grammar. To understand the underlying common motives and how they are different we shall start looking at their theories of grammar. They also have quite different historical developments. 
 
-This chapter first sets out the basic organisational dimensions of the theory and then discusses comparatively Halliday's \citep{Halliday2002} and Fawcett's \citep{Fawcett2000} SFL.
+%Sydney theory of grammar originates with \citet{Halliday61-orig} defining the categories of the theory of grammar. It has been then  further refined in \citep{Halliday2003-systemic-theory} and in highly influential ``Introduction to Functional Grammar'' \citep{ifg}. Sydney grammar developed by \citet{Matthiessen-lexcartog-book} had been computationally implemented as part of a large scale natural language generation project called PENMAN \citep{PenmanOverview,Penman89}. It is worth noting that one of the well known SFG implementations for English, Nigel grammar \citep{intronigel}, was part of the same project.  
+%Cardiff theory of grammar crystallised in ``A theory of syntax for Systemic Functional Linguistics'' \citep{Fawcett2000} which represents a large body of research part of the COMMUNAL project \citep{Fawcett90-communal,Fawcett93-ewnlg4} performed at Cardiff University.
+
+Sydney and Cardiff grammars have been formalised to the point where they could be computationally applied to natural language generation. They have been implemented in PENMAN \citep{PenmanOverview,Penman89} and respectively COMMUNAL projects \citep{Fawcett90-communal}. Both versions of SF grammars have been used predominantly for English and implementations of for other languages are also available. The major component of PENMAN is a computer model of Halliday's SF grammar described by \citet{gazebo}, \citet{MatthiessenBateman91}, \citep{Matthiessen-lexcartog-book} and others. COMMUNAL is the computer implementation of Cardiff grammar described by \citet{Fawcett:1988}, \citet{Fawcett93-ewnlg4} and others. 
+
+This chapter first sets out the basic organisational dimensions for each of the theories and then discusses comparatively Halliday's \citep{Halliday2002} and Fawcett's \citep{Fawcett2000} versions of SFL.
 
 %Because SFL grammar works with more complex structures than simply word dependencies like Dependency Grammars therefore the pragmatics of this chapter is at large oriented towards describing what constituents and functions can be derived from dependency structure and word classes and what is beyond that of a more semantic nature.
 
@@ -19,21 +24,21 @@ This chapter first sets out the basic organisational dimensions of the theory an
 Before going into deeper discussion I first make terminological clarifications on the terms: grammar, grammatics, syntax, semantics and lexicogrammar. I start with a definitions adopted in ``mainstream'' generative linguistics and then present how the same terms are discussed in systemic functional linguistics.
 
 %Radford1997: A minimalist introiduction to syntax
-Radford, a generative linguist, in the ``Minimalist Introduction to Syntax'' (\citeyear{Radford1997}), starts with a description of grammar as a field of study, which, in his words, is traditionally subdivided into two inter-related areas of study: syntax and morphology. %\citep[p.1]{Radford1997}.
+Radford, a generative linguist, in the ``Minimalist Introduction to Syntax'' (\citeyear{Radford1997}), starts with a description of grammar as a field of study, which, in his words, is traditionally subdivided into two inter-related areas of study: syntax and morphology. %\citep[1]{Radford1997}.
 
 \begin{definition}[Morphology (Radford)]\label{def:morphology-min}
-Morphology is the study of how words are formed out of smaller units (traditionally called morphemes) \citep[p.1]{Radford1997}.
+Morphology is the study of how words are formed out of smaller units (traditionally called morphemes) \citep[1]{Radford1997}.
 \end{definition}
 
 \begin{definition}[Syntax (Radford)]\label{def:syntax-min}
-Syntax is the study of how words can be combined together to form phrases and sentences. \citep[p.1]{Radford1997}
+Syntax is the study of how words can be combined together to form phrases and sentences. \citep[1]{Radford1997}
 \end{definition}
 
 %In London school of linguistics this distinction is perceived as unnecessary. %Halliday (on grammar) 2002 
 %He take this position to motivate the proposed SFG architecture.
-Halliday, in the context of rank scale discussion \citep[p. 51]{Halliday2002}, refers to the traditional meaning of syntax as the \textit{grammar above the word} and to morphology as \textit{grammar below the word}. Such a distinction, he states, has no theoretical status and is deemed as unnecessary distinction. Halliday adopts this position to motivate the architecture of grammar he was developing and is inherited from his precursor, Firth, as he puts it: 
+Halliday, in the context of \textit{rank} scale discussion (see Definition \ref{def:constituency-principles} and \ref{def:rank-skale-constraints}), refers to the traditional meaning of syntax as the \textit{grammar above the word} and to morphology as \textit{grammar below the word} \citep[ 51]{Halliday2002}. Such a distinction, he states, has no theoretical status and is deemed as unnecessary distinction. Halliday adopts this position to motivate the architecture of grammar he was developing and is inherited from his precursor, Firth, as he puts it: 
 \begin{quote}
-	\dots the distinction between morphology and syntax is no longer useful or convenient in descriptive linguistics. \citep[p.14]{Firth1957}
+	\dots the distinction between morphology and syntax is no longer useful or convenient in descriptive linguistics. \citep[14]{Firth1957}
 \end{quote}
 
 %[JB] if you say that this is Halliday's position and was used to motivate the architecture of SFG, then no one can complain or disagree, because that is simply a statement of fact.
@@ -42,7 +47,7 @@ Halliday, in the context of rank scale discussion \citep[p. 51]{Halliday2002}, r
 Radford adds that, traditionally, grammar is not only concerned with the principles governing formation of words, phrases and sentences but also with principles governing their interpretation. Therefore \textit{structural aspects of meaning} are said to be also a part of grammar. 
 
 \begin{definition}[Grammar (Radford)]\label{def:grammar-min}
-[Grammar is] the study of the principles which govern the formation and interpretation of words, phrases and sentences. \citep[p.1]{Radford1997}
+[Grammar is] the study of the principles which govern the formation and interpretation of words, phrases and sentences. \citep[1]{Radford1997}
 \end{definition}
 
 Interestingly enough, the Definition \ref{def:grammar-min} makes no mention at all to the lexicon. This is because the formal grammars focus primarily on unit classes and how they are accommodated in various structures and so in formal linguistics the lexicon is often disconnected from the grammar. The systemic grammar, on the other hand, along with formal descriptions of grammatical categories and structures, includes the lexicon as part of grammar to form a \textit{lexicogrammar}. At this point I have to mention that systemic functional grammar is not the only lexicalised one and there are others taking the same approach such as 
@@ -52,7 +57,7 @@ Lexical Functional Grammar (LFG), Head Phrase Structure Grammar (HPSG), Combinat
 Another important aspect to notice is that the grammar is defined as a field of study rather than a set of rules. De divergence in perspective on the subject led Halliday, since his early papers, to become conscious the difference between a study of a phenomenon with the phenomenon itself. By analogy to language as phenomenon and linguistics as the study of the phenomenon, discussed in  \citep{Halliday1997-linguistics}, Halliday adopts the same wording for \textit{grammar} as phenomenon and \textit{grammatics} as the study of grammar; the same distinction holds for \textit{syntax} and \textit{syntactics}.
 
 \begin{definition}[Grammatics (Halliday)]\label{def:grammatics-halliday}
-	Grammatics is a theory for explaining grammar \citep[p.369]{Halliday2002}
+	Grammatics is a theory for explaining grammar \citep[369]{Halliday2002}
 \end{definition}
 
 %E. Moravcsik
@@ -61,20 +66,20 @@ In her words:
 
 \begin{quote}
 	\dots
-	syntax describes the selection and order of words that make well-formed sentences and it does so in as general a manner as possible so as to bring out similarities among different sentences of the same language and different languages and render them explainable. \dots syntax rules also need to account for the relationship between string of word meanings and the entire sentence meaning, on one hand, and relationship between strings of word forms and the entire sentential phonetic form, on the other hand. \citep[p.25]{Moravcsik2006}	
+	syntax describes the selection and order of words that make well-formed sentences and it does so in as general a manner as possible so as to bring out similarities among different sentences of the same language and different languages and render them explainable. \dots syntax rules also need to account for the relationship between string of word meanings and the entire sentence meaning, on one hand, and relationship between strings of word forms and the entire sentential phonetic form, on the other hand. \citep[25]{Moravcsik2006}	
 \end{quote}
 
 In her definition of grammar she includes the lexicon and semantics which is a somewhat more explicit statement than Radford's \textit{interpretation}. She is also getting, in Definition \ref{def:grammar-moravcsik}, somewhat closer to what grammar stands for in SFL - Definition \ref{def:grammar-halliday}. 
 
 \begin{definition}[Grammar (Moravcsik)]\label{def:grammar-moravcsik}
-... maximally general analytic descriptions, provided by descriptive linguistics, [are] called grammars. A grammar has five components: phonology (or, depending on the medium, its correspondent e.g. morphology), lexicon, syntax and semantics\citep[pp.24--25]{Moravcsik2006}. 
+... maximally general analytic descriptions, provided by descriptive linguistics, [are] called grammars. A grammar has five components: phonology (or, depending on the medium, its correspondent e.g. morphology), lexicon, syntax and semantics\citep[24--25]{Moravcsik2006}. 
 \end{definition}
 
 %Halliday and Matthiessen 1999 - Construing experience through meaning
 
 %Halliday (on grammar) 2002
 \begin{definition}[Grammar (Halliday)]\label{def:grammar-halliday}
-	To Halliday, lexico-grammar, or for short,simply grammar is a part of language and it means the wording system - the ``lexical-grammatical stratum of natural language as traditionally understood, comprising its syntax, vocabulary together with any morphology the language may display [...]'' \citep[p.369]{Halliday2002}.
+	To Halliday, lexico-grammar, or for short,simply grammar is a part of language and it means the wording system - the ``lexical-grammatical stratum of natural language as traditionally understood, comprising its syntax, vocabulary together with any morphology the language may display [...]'' \citep[369]{Halliday2002}.
 \end{definition}
 
 %Another important aspect to note about the generative linguistics is the focus on the formal aspects of language where even the semantics (also referred to as interpretation) refers only to the ``formal aspect of meaning''. 
@@ -87,7 +92,7 @@ So the fundamental distinctions between formal and functional grammars is the se
 %TODO: [JB] Here you might be better going back to Butler's definitions and distinctions btween formal and functional grammars, as the boundary is by no means clearcut. The way you have it, most modern formal linguists would be alienated: think of CCG, there the relation between semantics and grammar is enforced even more strongly than in SFG: each and every grammar rule is at the same time a semantic rule. This is also in Montague grammar and so is not new. I would phrase these things by placing the basic assumptions of SFG as running alongside these assumptions, not as a distinction that separates SFG from them.
 
 Also, in SFL, the meaning is being approached from a semiotic perspective, placing the linguistic semantics in perspective with the linguistic expression and the real world situation. 
-In this respect, \citet{Lemke93} offers a well formulated theoretical foundation that ``human communities are eco-social systems that persist in time through ongoing exchange with their environment; and the same holds true for any of their sub-subsystems [...]'' including language. The social practices constituting such systems are both material and semiotic, with a constant dynamic interplay between the two. \citep[p.387]{Halliday2002}
+In this respect, \citet{Lemke93} offers a well formulated theoretical foundation that ``human communities are eco-social systems that persist in time through ongoing exchange with their environment; and the same holds true for any of their sub-subsystems [...]'' including language. The social practices constituting such systems are both material and semiotic, with a constant dynamic interplay between the two. \citep[387]{Halliday2002}
 
 To Halliday, the term \textit{semiotic} accounts for an orientation towards meaning rather than sign. In other words, the interaction is between \textit{the practice of doing and the practice of meaning}. As the two sets of practices are strongly coupled, Lemke points out that there is a high degree of redundancy between the \textit{material-semiotic interplay}. And it perfectly resonates with Firth's idea of \textit{mutual expectancy} between the text and the situation. This idea of interplay is incorporated in SFL as \textit{language stratification} and is graphically represented in Figure \ref{fig:stratification-sfl}.
 
@@ -149,32 +154,33 @@ I start introducing the terms of SFL theory with the Sydney grammar as this is i
 
 \begin{definition}[Hierarchy]\label{def:hierarchy}
 	Hierarchy [is] a system of terms related along a single dimension which involves some sort of logical precedence. 
-	\citep[p.42]{Halliday2002}. 
+	\citep[42]{Halliday2002}. 
 \end{definition}
 
 \begin{definition}[Taxonomy]\label{def:taxonomy}
 	Taxonomy [is] a type of hierarchy with two characteristics:
 	\begin{enumerate}
 		\item the relation between terms and the immediately following and preceding one is constant
-		\item the degree is significant and is defined by the place in the order of a term relative to following and preceding terms. \citep[p.42]{Halliday2002}
+		\item the degree is significant and is defined by the place in the order of a term relative to following and preceding terms. \citep[42]{Halliday2002}
 	\end{enumerate}
 \end{definition} 
 
 \begin{definition}[Cline]\label{def:cline}
 	Cline [is] a hierarchy that instead of being made of a number of discrete terms, is a continuum carrying potentially infinite gradations.
-	\citep[p.42]{Halliday2002}. 
+	\citep[42]{Halliday2002}. 
 \end{definition}
 
 The concept of cline may not necessarily originate in SFL but it is used quite extensively in the domain literature.
 Next I define and introduce each category of \textit{grammatics} and the related concepts that constitute the theoretical foundation for the Sydney Theory of grammar.
+%TODO [JB] note how you've already lost the other three terms you had above: rank, exponence and delicacy. Either define them immediately or say where they are going to be defined.
 
 \subsection{Unit}
 \label{sec:unit-sydney}
-Language is patterned activity of meaningful organization. The patterned organization of substance (\textit{graphic} or \textit{phonic}) along a linear progression is called \textit{syntagmatic order} (or simply \textit{order}). 
+Language is a patterned activity of meaningful organization. The patterned organization of substance (\textit{graphic} or \textit{phonic}) along a linear progression is called \textit{syntagmatic order} (or simply \textit{order}). 
 
 \begin{definition}[Unit]\label{def:unit}
-	The unit is a grammatical category that accounts for the stretches that carry grammatical patterns. \citep[p.42]{Halliday2002}.
-	The units carry a fundamental \textit{class} distinction and should be fully identifiable in description. \citep[p.45]{Halliday2002}.
+	The unit is a grammatical category that accounts for the stretches that carry grammatical patterns \citep[42]{Halliday2002}.
+	The units carry a fundamental \textit{class} distinction and should be fully identifiable in description \citep[45]{Halliday2002}.
 \end{definition}
 
 \begin{generalization}[Constituency principles]\label{def:constituency-principles}
@@ -183,12 +189,22 @@ Language is patterned activity of meaningful organization. The patterned organiz
 		\item There is a scale or rank in the grammar of every language. That of English (typical of many) can be represented as: clause, group/phrase, word, morpheme.
 		\item Each unit consists of \textit{one or more} units of rank next below.
 		\item Units of every rank may form complexes.
-		\item There is potential for rank shift, whereby a unit of one rank my be downranked to function in a structure of a unit of its own rank or of a rank below. 
-		\item Under certain circumstances it is possible for one unit to be enclsoed within another, not as a constituent but simply in such a way as to split the other oe into two discrete parts. \citep[pp.9--10]{Halliday2013} 
+		\item\label{item:downrank} There is potential for rank shift, whereby a unit of one rank my be down-ranked to function in a structure of a unit of its own rank or of a rank below.
+		\item\label{item:unit-split} Under certain circumstances it is possible for one unit to be enclosed within another, not as a constituent but simply in such a way as to split the other into two discrete parts \citep[9--10]{Halliday2013}.
 	\end{enumerate}
 \end{generalization}
 
-The relation between units is that of consistency for witch we say that a unit \textit{consists of} other units. The scale on which the units are ranged is the \textit{rank scale}. The rank scale is a levelling system of units supporting unit composition regulating how units are organised at different granularity levels from clause, to groups/phrases to words and the units of a higher rank scale consist of units of the rank next below. The Table \ref{tab:rank-scale} presents a schematic representation of the rank scale and its derived complexes.
+For example, the down-ranking (Point \ref{item:downrank}) can be observed in nominal groups that incorporate a relative clause functioning as qualifier. In example \ref{ex:downranking} \textit{that I got for Christmas} is a relative clause specifying which books are being referred. The unit split (Point \ref{item:unit-split}) can be encountered in the instances of Wh-interrogative clauses containing a preposition at the end which in fact belongs to the Wh-group. In example \ref{ex:unit-split2} the prepositional phrase \textit{Who \dots about} is gapped and has an inverted order of constituents. 
+
+%TODO: write 2 examples here
+
+\begin{exe}
+	\ex\label{ex:downranking} I haven't read any books \textit{that I got for Christmas}.
+	\ex\label{ex:unit-split2} \textit{Who} are you talking \textit{about}?
+	\ex\label{ex:unit-split1} I am talking about George.
+\end{exe}
+
+The relation between units is that of consistency for which we say that a unit \textit{consists of} other units. The scale on which the units are ranged is the \textit{rank scale}. The rank scale is a levelling system of units supporting unit composition regulating how units are organised at different granularity levels from clause, to groups/phrases to words and the units of a higher rank scale consist of units of the rank next below. Table \ref{tab:rank-scale} presents a schematic representation of the rank scale and its derived complexes.
 
 \begin{table}[h]
 	\centering
@@ -213,23 +229,29 @@ The relation between units is that of consistency for witch we say that a unit \
 	\begin{enumerate}
 		\item downward \textit{rankshift} is allowed i.e. the transfer of a given unit to a lower rank.
 		\item upward rankshift is not allowed.
-		\item only whole units can enter into higher units.\citep[p.44]{Halliday2002}.
+		\item only whole units can enter into higher units \citep[44]{Halliday2002}.
 	\end{enumerate}
 \end{generalization}
 
-The Generalization \ref{def:rank-skale-constraints} taken as a whole means that a unit can include, in what it consists of, a unit of rank higher than or equal to itself but not a unit of rank more than one degree lower than itself; and not in any case a part of any unit. \citep[p.42]{Halliday2002}. 
+The Generalization \ref{def:rank-skale-constraints} taken as a whole means that a unit can include, in what it consists of, a unit of rank higher than or equal to itself but not a unit of rank more than one degree lower than itself; and not in any case a part of any unit \citep[42]{Halliday2002}. 
+
+Following the rank scale constraints above the concept of embedding can be defined as follows. 
+
+\begin{definition}[Embedding]\label{def:embedding0}
+    Embedding is the mechanism whereby a clause or phrase comes to function as a constituent within the structure of a group, which is itself a constituent of a clause. \citep[242]{Halliday2013}
+\end{definition}
 
 \subsection{Structure}
-%TODO: Top down is good for generation and botton mup for parsing
+%TODO: Top down is good for generation and bottom up for parsing
 %TODO: agnation as a clive vs instanciation as a cline | subclassification rel vs class-instance rel
 %TODO: Rebekah Wegener PhD SFL thesis online [Parameters of context]: Chapter in SFL theory 
 
 \begin{definition}[Structure]\label{def:structure}
-	The structure (of a given unit) is the arrangement of \textit{elements} that take places distinguished by order relationship \citep[p.46]{Halliday2002}. 
+	The structure (of a given unit) is the arrangement of \textit{elements} that take places distinguished by the order relationship \citep[46]{Halliday2002}.
 \end{definition}
 
 \begin{definition}[Element]\label{def:element}
-	The element is defined by the place stated as absolute or relative position in sequence and with the reference to the unit next below \citep[p.47]{Halliday2002}. 
+	Element is defined by the place stated as absolute or relative position in sequence and with reference to the unit next below \citep[47]{Halliday2002}. 
 \end{definition}
 
 
@@ -300,41 +322,151 @@ The Generalization \ref{def:rank-skale-constraints} taken as a whole means that 
 	\label{fig:structure-representation}
 \end{figure}
 
-We say that an unit is composed of elements located in places and that its internal structure is accounted via elements in terms of functions and places taken by the lower (constituting) units or lexical items. The graphic representation of the unit structure is depicted in Figure \ref{fig:structure-representation}. The unit structure is referred in linguistic terminology as \textit{constituency} (whose principles are enumerated in Generalization \ref{def:constituency-principles}). In the unit structure, the elements resemble an array of empty slots that are \textit{filled} by other units or lexical items.
+We say that a unit is composed of elements located in places and that its internal structure is accounted for elements in terms of functions and places taken by the lower (constituting) units or lexical items. The graphic representation of the unit structure is depicted in Figure \ref{fig:structure-representation}. The unit structure is referred in linguistic terminology as \textit{constituency} (whose principles are enumerated in Generalization \ref{def:constituency-principles}). In the unit structure, the elements resemble an array of empty slots that are \textit{filled} by other units or lexical items.
+
+For example to account for the English clause structure four elements are needed: \textit{subject}, \textit{predicator}, \textit{complement} and \textit{adjunct}. They yield the distinct symbols, so that S, P, C, A is the inventory of elements. They then can be arranged in various orders falling in particular places, say SPC, SAPA, ASPCC etc. The places of elements are important with respect to the structure of the whole unit but also with respect to the relative ordering between these elements. For example S always fronts P, C is fronted by P unless the clause realises a Wh-interrogative whereas A is quite free and can occur anywhere in the unit structure. 
 
 \subsection{Class}
+
+To one place in the structure corresponds one occurrence of the unit next below. This means that there will be a certain grouping of members identified by the functional element they take in the structure. Patterning such groupings leads to emergence of \textit{classes} of units.
+
+In the clause structure example, elements in the unit are occupied by units of lower rank and of a particular class. The relation between the element and the class is mutually determined. In each of these elements is placed a lower rank unit and of an expected class. For instance in the S position can be placed a \textit{noun}, \textit{nominal group}, \textit{pronoun} or another \textit{clause} (that will be a down-ranking situation defined above).
+
 \begin{definition}[Class]\label{def:class}
-	The class is that grouping of members of a given unit which is defined by operation in the structure of the unit next above \citep[p.49]{Halliday2002}.
+	The class is that grouping of members of a given unit which is defined by the operation (i.e. functional element) in the structure of the unit next above \citep[49]{Halliday2002}.
 \end{definition}
 
-Halliday defines class (Definition \ref{def:class}) as likeness of the same rank ``phenomena'' to occur together in the structure. He adopts a top-down approach stating that the class of a unit is determined by the \textit{function} (Definition \ref{def:function}) it plays in the unit above and not by its internal structure of elements. In SG the structure of each class is well accounted in terms of syntactic variation recognizing six unit classes: \textit{clause}, \textit{prepositional phrase} and \textit{nominal}, \textit{verbal}, \textit{adverbial} and \textit{conjunction} groups.
-Sydney grammar is briefly summarised in the Appendix \ref{ch:syntax-overview}. %TODO resolve the appendinx references
+Halliday defines class (Definition \ref{def:class}) as likeness of the same rank \textit{phenomena} to occur together in the structure. He adopts a top-down approach stating that the class of a unit is determined by the \textit{function} (Definition \ref{def:function}) it plays in the unit above and not by its internal structure of elements. In SFG the structure of each class is well accounted in terms of syntactic variation recognizing six unit classes: \textit{clause}, \textit{nominal}, \textit{verbal}, \textit{adverbial} and \textit{conjunction} groups and \textit{prepositional phrase}. The Sydney grammar unit structure model is briefly summarised in the Appendix \ref{ch:syntax-overview}.
 
 \subsection{System}
 \label{sec:system}
-Structure is a syntagmatic ordering in language capturing regularities and patterns which can be paraphrased as \textit{what goes together with what}. However, language is best represented as a set of system networks (Definition \ref{def:system}) which is a paradigmatic ordering in language describing \textit{what could go instead of what} \citep[p.~22]{Halliday2013}.
-
-This is an essential assumption of systemicists is that the language is best represented in the form of system networks and not as an inventory of structures. The structure of course is a part of language description but it is only a syntagmatic manifestation of the systemic choices \citep[p.23]{Halliday2013}.
+As described above, structure is a syntagmatic ordering in language capturing regularities and patterns which can be paraphrased as \textit{what goes together with what}. However in SFG most of the descriptive work is carried not syntagmatically but paradigmatically via \textit{system networks} (Definition \ref{def:system}) describing \textit{what could go instead of what} \citep[22]{Halliday2013}. Note that the paradigmatic-syntagmatic axes date back to the works of \citet{Saussure15}. Both are important for completing a linguistic description. Here lies one of the main differences between SFL and other approaches which is is taking the paradigmatic path whereas many others take the syntagmatic path to language representing it as an inventory of structures. 
+%An essential assumption of systemicists is that the language is best represented in the form of system networks and not as an inventory of structures. 
+The structure of course is a part of language description but it is only a syntagmatic manifestation of the systemic choices and one needs to account for both \citep[23]{Halliday2013}.
 
 \begin{definition}[System]\label{def:system}
-	A system is a set of mutually exclusive set of terms referring to meaning potentials in language and are mutually defining. It always means a \textit{closed system} and has the following characteristics:
+	A system is a set of mutually exclusive set of terms referring to meaning potentials in language and are mutually defining. The system is considered self-contained, closed and complete with the following characteristics:
 	\begin{enumerate}
 		\item the number of terms is finite,
 		\item each term is exclusive of all others,
-		\item if a new term is added to the system it changes the meaning of all other terms. \citep[p.41]{Halliday2002}
+		\item if a new term is added to the system it changes the meaning of all the other terms \citet[41]{Halliday2002}.
 	\end{enumerate}
 \end{definition}
 
-A class is a grouping of items identified by operation in the structure. It is not a list of formal items but an abstraction from them. By increase in \textit{delicacy} the class is broken into secondary classes which stand in the relation of exponent to an element of primary structure of the unit next above. This breakdown gives a system of classes that constitute choices implied by the nature of the class. \citep[p.41]{Halliday2002}
+The concept of a system as presented in Definition \ref{def:system} has its roots in the works of \citet{Saussure15} and \citet{Hjelmslev53} and Halliday only cements it in SFL architecture of grammar.
 
-\subsection{Functions and metafunction}
-\begin{definition}[Function]\label{def:function}
-	The functional categories or functions provide an interpretation of grammatical structure in terms of the overall meaning potential of the language. \citep[p.76]{Halliday2013}.
+Going back to the notion of class previously defined as a grouping of items identified by functions in the structure, it needs stressed here that class is not a list of formal items but an abstraction from them. By increase in \textit{delicacy} a class is broken into secondary classes. 
+
+\begin{definition}[Delicacy]\label{def:delicacy-sydney}
+	Delicacy is the scale of differentiation or depth of detail whose limit at one end is the primary degree of categories of structure  and class and on the other end, theoretically, is the point beyond which no further grammatical relations obtain. \citet[58]{Halliday2002}  
 \end{definition}
 
-Most constituents of the clause structure, however, have more than one function which is called a \textit{conflation of elements}. For example in the sentence ``Bill gave Dolly a rose'', ``Bill'' is the Actor doing the act of giving but also the Subject of the sentence. So we say that Actor and Subject functions are conflated in the constituent ``Bill''. This is exactly the point where the concept of \textit{metafunction} or \textit{strand of meaning} comes into the picture. The Subject function is said to belong to the \textit{interpersonal metafunction} while Actor function belongs in the \textit{experiential metafunction}. 
+We say that a category is refined into more subtle distinctions of subcategories which form a system as define above. Subsequently those distinctions fo subcategories can be further refined in other systems. This relationship between these two systems is one of delicacy where the second one is more delicate than the first one and together they form a \textit{system network}. As a side note, the delicacy in a system network is akin to sub-classification relation, which was originally the intended one and the predominant one. In practice, however, a few kinds of abstraction relations can be encountered as there are multiple kinds of abstraction (e.g abstraction as information reduction, or as approximation, or as idealisation etc.) that are extensively treated by \citet{Saitta2013}. This discussion however is not in the scope of the current work.
 
-Halliday identifies three fundamental dimensions of structure in the clause each with distinct meaning: \textit{experiential}, \textit{interpersonal} and \textit{textual}. He refers to them as \textit{metafunctions} and they account of how language meaning has evolved. Table \ref{tab:metafucntions} presents metafunctions and their reflexes in the grammar as proposed in \citep[p.85]{Halliday2013}.
+%%%
+The graphical notations introduced by \citet{Halliday2013} are useful in reading and writing system networks in this thesis. Below is a system network with a simple \textit{entry condition} (Figure \ref{fig:system-network-notation1}), a \textit{system network grouping} that share the same entry condition (Figure \ref{fig:system-network-notation2}), a system network with a \textit{disjunctive} and \textit{conjunctive} entry conditions (Figure \ref{fig:system-network-notation3} and \ref{fig:system-network-notation4}). 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[]
+    \node (prec) [system-name] {a};
+    \node (f1) [system-name, right = 2em of prec, yshift=1em] {x};
+    \node (f2) [system-name, right = 2em of prec, yshift=-1em] {y};
+    %\draw [decorate,decoration={brace,amplitude=3em},xshift=-4pt,yshift=0pt] ([xshift=0.0em] f1.west) -- (f2.west) node [black,midway,xshift=-0.6cm] {qwe}; 
+    \draw [thick] ([xshift=-0.0em] f1.west) to [square right brace ] ([xshift=-0.0em] f2.west);
+    \draw[precondition] ([xshift=0.1em] prec.east) -- ([xshift=1.0em,yshift=0em] prec.east);
+    \end{tikzpicture}
+    \caption{A system with a single entry condition: if \textit{a} then either \textit{x} or \textit{y}}
+    \label{fig:system-network-notation1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[]
+    \node (prec) [system-name] {a};
+    \node (f1) [system-name, right = 2.5em of prec, yshift=3em] {x};
+    \node (f2) [system-name, right = 2.5em of prec, yshift=1em] {y};
+    
+    \node (f3) [system-name, right = 2.5em of prec, yshift=-1em] {p};
+    \node (f4) [system-name, right = 2.5em of prec, yshift=-3em] {q};
+    
+    \draw [thick] ([xshift=-0.0em] f1.west) to [square right brace ] ([xshift=-0.0em] f2.west);
+    \draw [thick] ([xshift=-0.0em] f3.west) to [square right brace ] ([xshift=-0.0em] f4.west);
+    
+    \draw [decorate,thick, decoration={brace, amplitude=0.6em},xshift=0pt,yshift=0pt] ([xshift=-2.6em] f4.south) -- ([xshift=-2.6em] f1.north);
+    
+    \draw[precondition] ([xshift=0.5em, yshift=2em] prec.east) -- ([xshift=1.6em, yshift=2em] prec.east);
+    \draw[precondition] ([xshift=0.5em, yshift=-2em] prec.east) -- ([xshift=1.6em, yshift=-2em] prec.east);
+    \end{tikzpicture}
+    \caption{Two systems grouped under the same entry condition: if \textit{a} then both either \textit{x} or \textit{y} and, independently, either \textit{p} or \textit{q}}
+    \label{fig:system-network-notation2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[]
+    \node (prec1) [system-name] {a};
+    \node (prec2) [system-name, below=2em of prec1] {c};
+    
+    \draw [thick] ([xshift=-0.0em] prec1.east) to [square left brace ] ([xshift=-0.0em] prec2.east);
+    \draw[precondition] ([xshift=1.6em, yshift=-1em] prec1.south) -- ([xshift=2.4em, yshift=-1em] prec1.south);
+    
+    \node (f1) [system-name, right =2.8em of prec1] {x};
+    \node (f2) [system-name, right =2.8em of prec2] {y};
+    
+    \draw [thick] ([xshift=-0.0em] f1.west) to [square right brace ] ([xshift=-0.0em] f2.west);
+    
+    \end{tikzpicture}
+    \caption{A system network with a disjunctive entry condition: if either \textit{a} or \textit{c} (or both), then either \textit{x} or \textit{y}}
+    \label{fig:system-network-notation3}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[]
+    \node (prec1) [system-name] {a};
+    \node (prec2) [system-name, below=4em of prec1] {b};
+    
+    \node (f1) [system-name, right =5em of prec1, yshift=-1em] {x};
+    \node (f2) [system-name, right =5em of prec2, yshift=1em] {y};
+    
+    \draw [thick] ([xshift=-0.0em] f1.west) to [square right brace ] ([xshift=-0.0em] f2.west);
+    
+    \draw [decorate,thick, decoration={brace, amplitude=0.6em},xshift=0pt,yshift=0pt] ([xshift=-4.0em, yshift=-0.6em] f1.north) -- ([xshift=-4.0em, yshift=0.6em] f2.south);
+    
+    \draw[precondition] ([xshift=3.2em, yshift=-2.1em] prec1.south) -- ([xshift=4.1em,yshift=-2.1em] prec.south);
+    
+    \draw[thick] (prec1.south east) -- ([xshift=1.5em, yshift=-1.8em] prec1.east);
+    \draw[thick] (prec2.north east) -- ([xshift=1.5em, yshift=1.8em] prec2.east);
+    
+    \end{tikzpicture}
+    \caption{A system with a conjunctive entry condition: if both \textit{a} and \textit{b} then, either \textit{x} or \textit{y}}
+    \label{fig:system-network-notation4}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%TODO example of polarity system from IFG4 p23
+
+It is worth noting that when a piece of language is analysed, it can be approached at various levels of delicacy. We say that delicacy is variable in description, and one may choose to provide coarse grained analysis without going beyond primary grammatical categories or it can dive into fine grained categorial distinctions, still being comprehensive with regards to the rank, \textit{exponence} and grammatical categories. 
+
+\begin{definition}[Exponence]\label{def:exponence-sydney}
+    Exponence is the scale which relates the categories of theory which are with high degree of abstraction to formal items on its low end. Each exponent can be linked directly to the formal item or by taking successive steps on the exponence scale and changing rank where necessary. \citet[57]{Halliday2002}
+\end{definition}
+
+And in relation to the previous section, the class stand in the relation of exponence to an element of primary structure of the unit next above. This breakdown gives a system of classes that constitute choices implied by the nature of the class \citep[41]{Halliday2002}. 
+
+
+
+\subsection{Functions and metafunction}
+Above, when talking about structure, I described a unit as being composed of elements accounted in terms of \textit{functions} and places taken by the lower (constituting) units or lexical items.
+
+\begin{definition}[Function]\label{def:function}
+	The functional categories or functions provide an interpretation of grammatical structure in terms of the overall meaning potential of the language. \citep[76]{Halliday2013}.
+\end{definition}
+
+Most constituents of clause structure, however, have more than one function, which is called a \textit{conflation of elements}. For example in the sentence ``Bill gave Dolly a rose'', ``Bill'' is the Actor doing the act of giving but also the Subject of the sentence. So we say that Actor and Subject functions are conflated in the constituent ``Bill''. This is the concept of \textit{metafunction} or \textit{strand of meaning} comes into the picture. The Subject function is said to belong to the \textit{interpersonal metafunction} while the Actor function belongs to the \textit{experiential metafunction}. 
+
+Halliday identifies three fundamental dimensions of structure in the clause, each meaning: \textit{experiential}, \textit{interpersonal} and \textit{textual}. He refers to them as \textit{metafunctions} and they account for the functions that language units take on in communication. Table \ref{tab:metafucntions} presents the metafunctions and their reflexes in grammar as proposed by  \citet[85]{Halliday2013}.
 
 \begin{table}[H]
 	\centering
@@ -344,159 +476,206 @@ Halliday identifies three fundamental dimensions of structure in the clause each
 		experiential       & construing a model of experience  & clause as representation             & segmental (based on constituency) \\ \hline
 		interpresonal      & enacting social relationship      & clause as exchange                   & prosodic                          \\ \hline
 		textual            & creating relevance to context     & clause as message                    & culminative                       \\ \hline
-		logical            & constructing logical relations    & -                                    & iterative                         \\ \hline
+		logical            & constructing logical relations    & complexes (taxis \& logico-semantic type) & iterative                         \\ \hline
 	\end{tabulary}
 	\caption{Metafunctions and their reflexes in the grammar}
 	\label{tab:metafucntions}
 \end{table}
 
+Across the rank scale, with respect to structure and metafunctions, Halliday formulates the general principle of \textit{exhaustiveness} (Generalization \ref{def:exhaustiveness}) saying that clause constituents have at least one and may have multiple functions in different strands of meaning; however this does not mean that it must have a function in each of them. For example interpersonal Adjuncts such as ``perhaps'' ot textual Adjuncts such as ``however'' play no role in the clause as representation. 
+
 \begin{generalization}[Exhaustiveness principle]\label{def:exhaustiveness}
-	Everything in the wording has some function at every rank but not everything has a function in every dimension of structure. \citep{Halliday2002,Halliday2013}
+    Everything in the wording has some function at every rank but not everything has a function in every dimension of structure \citep{Halliday2002,Halliday2013}.
 \end{generalization}
 
-With respect to structure and metafunctions, Halliday formulates the general principle of \textit{exhaustiveness} (Generalization \ref{def:exhaustiveness}) saying that clause constituents have at least one and may have multiple functions in different strands of meaning, however it does not mean that it must have a function in each of them. 
+This principle implicitly relates to the property of language meaning that 
+%it naturally evolves towards the shortest and most effective way of expressing a meaning. 
+there is nothing meaningless and thus every piece of language must be explained and accounted for in the lexicogrammar. 
 
-This principle implicitly relates to the economic property of language meaning that it naturally evolves towards the shortest and most effective way of expressing a meaning. There is nothing meaningless thus every piece of language must be explained and accounted for in the lexicogrammar. 
+At the very top of the rank scale, clauses form complex structures. Halliday employs systematically the concepts of \textit{taxis} and \textit{logico-semantic relations} to account for inter-clausal relations. 
 
-\subsection{Lexis and lexicogrammar}
-In SFL the terms \textit{word} and \textit{lexical item} are not really synonymous. They are strongly related but they refer to different things. The term ``word'' is reserved (in early Halliday) for the grammatical unit of the lowest rank whose \textit{exponents} are lexical items. %While word refers to the unit of structure below the group/phrase rank and above the morphemes, the lexical item is defies as follows. 
-
-\begin{definition}[Lexical Item]\label{def:lexical-item}
-	In English, a lexical item may be a \textit{morpheme}, \textit{word} (in traditional sense) or \textit{group (of words)} and it is assigned to no rank. \citep[p.60]{Halliday2002}
+\begin{definition}[Taxis]\label{def:taxis}
+    \textit{Taxis} represents the degree of interdependency between units systematically arranged in a linear sequence where \textit{parataxis} means equal and \textit{hypotaxis} means unequal status of units forming a \textit{nexus} together.
 \end{definition}
 
-Examples of lexical items are all of the following ones: `` 's '' (the possessive morpheme), ``house, walk, on'' (words in traditional sense) and ``in front of, according to, ask around, add up to, break down'' (multi word prepositions and phrasal verbs)
+Of importance here is the concept of taxis which is very useful at describing unit relations not only at the group and clause ranks but all the way down to smallest linguistic unit such as morphemes and phonemes. I will also refer to it when describing the Cardiff theory of grammar and also briefly in the discussion of dependency relations in Section \ref{sec:cross-theoretical-bridge}. 
 
-If most linguists treat the grammar and lexis as discrete phenomena, Halliday brings them together as opposite poles of the same cline. We say that they are paradigmatically related through delicacy relation. He refers to this merge as \textit{lexicogrammar} and he expressed his dream that one day linguists will be able to turn whole linguistic form into (lexico)grammar showing that lexis is the most delicate grammar. 
+\subsection{Lexis and lexicogrammar}
+In SFL the terms \textit{word} and \textit{lexical item} are not really synonymous. They are related but they refer to different things. The term \textit{word} is reserved (in early Halliday) for the grammatical unit of the lowest rank whose \textit{exponents} are lexical items. %While word refers to the unit of structure below the group/phrase rank and above the morphemes, the lexical item is defies as follows. 
 
-\citet{Hasan2014}, explores the reality of Halliday's dream in terms of project feasibility and exploring the implications of what would it mean to turn the ``whole linguistic form into grammar''. This then implies two completely new assumptions: that lexis is not form and that its relation to semantics is unique (challenging the problems of polysemy). It would be the function of the lexicogrammar to map the multiple \textit{meta-functional strata} into a unified structure. 
+\begin{definition}[Lexical Item]\label{def:lexical-item}
+	In English, a lexical item may be a \textit{morpheme}, \textit{word} (in traditional sense) or \textit{group (of words)} and it is assigned to no rank \citep[60]{Halliday2002}.
+\end{definition}
+
+Examples of lexical items are the following: ``'s'' (the possessive morpheme), ``house'', ``walk'', ``on'' (words in traditional sense) and ``in front of'', ``according to'', ``ask around'', ``add up to'', ``break down'' (multi word prepositions and phrasal verbs).
+
+If some theories treat grammar and lexis as discrete phenomena, Halliday brings them together as opposite poles of the same cline. He refers to this merge as \textit{lexicogrammar} where they are paradigmatically related through delicacy relation.
+% and he expressed his dream that one day linguists will be able to turn whole linguistic form into (lexico)grammar showing that lexis is the most delicate grammar. 
+\citet{Hasan2014}, explores the feasibility of what would it mean to turn the ``whole linguistic form into grammar''. This then implies a assumption that lexis is not form and that its relation to semantics is unique which  in turn is challenging the problems of polysemy. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Cardiff Theory of grammar}
+\section{The Cardiff theory of grammar}
 \label{sec:cardiff-theory-grammar}
-This section present the theory of grammar as conceived by Robin Fawcett at University of Cardiff. The biggest difference to Hallidayan theory is renouncing the concept of rank scale which has an impact on the whole theory. As a consequence, to accommodate the lack of rank-scale, Fawcett adapts the definitions of the fundamental concepts and slightly changes the choice of words.
+As presented in the introduction and explained by \citet{Bateman2008}, the accounts along the syntagmatic axis had gone missing in the Sydney grammar leaving unresolved how to best represent the structure of language at the level of form. This section present the theory of systemic functional grammar as conceived by Robin Fawcett at the University of Cardiff. His book ``A theory of syntax for Systemic Functional Linguistics'' \citep{Fawcett2000} presented a proposal for a \textit{unified syntactic model} for SFL that contrasts several aspects of Hallidayan grammar but share the same set of fundamental assumptions about the language; it is an extension and a simplification in a way.
 
-In \citeyear{Fawcett2000}, Robin Fawcett presents a theory of grammar in contrast to some aspects of Michael Halliday's grammar \citeyear{Halliday2002}. One of the main differences is the rejection of the rank scale concept. Another is the bottom-up approach to unit definition as opposed to top-down one advocated by Halliday. These two and few other discrepancies have quite an important implication on the overall theory of grammar and of course the grammar itself. 
+Fawcett questions the status of multiple structures in the theory and whether they can finally be integrated into a simpler sole representation. A big difference to Hallidayan theory is renouncing the concept of rank scale which has an impact on the whole theory. Another is the bottom-up approach to unit definition as opposed to top-down one advocated by Halliday. These two and a few other differences have important implications for the overall theory of grammar and consequently for the grammar itself. As a consequence, to accommodate the lack of rank-scale, Fawcett adapts the definitions of the fundamental concepts and changes his choice of words (for example ``class'' and ``unit'' turn into ``class of unit'' treated as one concept rather than two distinct ones).
 
-\citet{Fawcett2000} proposes three fundamental categories in the theory of grammar: \textit{class of unit}, \textit{element of structure} and \textit{item}. Constituency is a relation accounting for prominent compositional dimension of language. However a unit does not function directly as a constituent of another unit but via a specialised relation. Fawcett breaks down constituency into three relations: \textit{componence}, \textit{filling} and \textit{exponence}. Informally is said that a unit is composed of elements which are either filled by another unit or expounded by an item. He also proposes three secondary relations of \textit{coordination}, \textit{embedding} and \textit{reiteration} to account for the full range of syntactic phenomena.
+\citet{Fawcett2000} proposes three fundamental categories in the theory of grammar: \textit{class of unit}, \textit{element of structure} and \textit{item}. Constituency is a relation accounting for the prominent compositional dimension of language. However a unit does not function directly as a constituent of another unit but via a specialised relation which Fawcett breaks down into three sub-relations: \textit{componence}, \textit{filling} and \textit{exponence}. Informally it is said that a unit is composed of elements which are either filled by another unit or expounded by an item. He also proposes three secondary relations of \textit{coordination}, \textit{embedding} and \textit{reiteration} to account for a more complete range of syntactic phenomena.
 
 \subsection{Class of units}
+Fawcett's theory of language assumes a model with two levels of \textit{meaning} and \textit{form} corresponding to \textit{semantic units} and \textit{syntactic units} which are mutually determined (which is the case for any sign in a Saussurean approach to language). 
+
 \begin{definition}[Class of Unit]\label{def:class2}
-	The class of unit [...] expresses a specific array of meanings that are associated with each one of the major classes of entities in semantics [...and] are to be identified by the elements of their internal structure \citep[p.195]{Fawcett2000}. 
+	The class of unit [...] expresses a specific array of meanings that are associated with each one of the major classes of entity in semantics [...and] are to be identified by the elements of their internal structure \citep[195]{Fawcett2000}. 
 \end{definition}
 
-Class of unit is determined based on its internal structure i.e. by its elements of structure (and not by the function it plays in the parent unit).
+For English Fawcett proposes four main kinds of semantic entities: situations, things, qualities (of both situations and things) and quantities. Each of these semantic units corresponds to five major classes of syntactic units: \textit{clause}, \textit{nominal group}, \textit{prepositional group}, \textit{quality group} and \textit{quantity group}. In addition he recognises two more minor classes i.e. the \textit{genitive cluster} and the \textit{proper name cluster} \citep[193--194]{Fawcett2000}. 
 
-Fawcett takes a semantic stance in classifying units which in line with Saussurean approach to language. He proposes that in English there are four major semantic classes of entities: situations, things, qualities (of situations and things) and quantities (typically of things but also of situations and qualities) corresponding to major syntactic units of \textit{clause}, \textit{nominal group}, \textit{prepositional group}, \textit{quality group} and \textit{quantity group} \citep[p.~193--194]{Fawcett2000} along with a set of minor classes such as \textit{genitive cluster } and \textit{proper name cluster}. 
+%He proposes that in English there are four major semantic classes of entities: situations, things, qualities (of situations and things) and quantities (typically of things but also of situations and qualities) corresponding to major syntactic units of \textit{clause}, \textit{nominal group}, \textit{prepositional group}, \textit{quality group} and \textit{quantity group} along with a set of minor classes such as \textit{genitive cluster} and \textit{proper name cluster}  \citep[193--194]{Fawcett2000}. 
 
-His classification is based on the idea that the syntactic and semantic units are mutually determined and supported by grammatical patterns. However those patterns are beyond the syntactic variations of the grammar and blend into lexical semantics.
+Fawcett's classification is based on the idea that the syntactic and semantic units are mutually determined and supported by grammatical patterns. However those patterns lie beyond the syntactic variations of the grammar and so blend into lexical semantics.
 
-\subsection{Element of Structure}
+In Sydney theory the class is determined by the function it plays in the unit above. By contrast, in Cardiff theory, the class of unit is determined based on its internal structure i.e. by its \textit{elements of structure} (and not by the function it plays in the parent unit).  
+
+\subsection{Element of structure}
 \label{sec:elements-of-structure}
+
+The terms \textit{element} and \textit{structure} have roughly the same meaning as defined in Sydney theory of grammar (defined in Section \ref{sec:sydney-theory-of-grammar}) but with two additional stipulations presented below.
+
 \begin{definition}[Element of Structure]\label{def:elementStructure}
-	The elements of structure are immediate components of classes of units and are defined in terms of their \textit{function} in expressing meaning and not in terms of their absolute or relative position in the unit. \citep[pp.213--214]{Fawcett2000}. 
+	Elements of structure are immediate components of classes of units and are defined in terms of their \textit{function} in expressing meaning and not in terms of their absolute or relative position in the unit. \citep[213--214]{Fawcett2000}. 
 \end{definition}
 
-\begin{generalization}[]
-	Definition \ref{def:elementStructure} leads to the following two principles:
-	\begin{enumerate}
-		\item Every element in a given class of unit serves a function in that unit different from the function of the sibling elements.
-		\item Every element in every class of unit will be different from every element in every other class of unit. \citep[p.214]{Fawcett2000}
-	\end{enumerate}
+The definition above leads as a consequences to two important properties of elements formulated as follows.
+
+\begin{generalization}[Element functional uniqueness]
+Every element in a given class of unit serves a function in that unit different from the function of the sibling elements \citep[214]{Fawcett2000}. 
 \end{generalization} 
 
-The elements (of structure) are functional slots which define the internal structure of an unit but still they are \textit{located} in \textit{places}. One more category that intervenes between element and unit is the concept of \textit{place} which become essential for the generative versions of grammar.
+Even if for example, different types of \textit{modifiers} in English nominal group seem to have very slight differences in functions, they are still there.
 
-There are two ways to approach place definition. The first, is to treat places a positions of elements relative to each other (usually previous). This leads to the need of an \textit{anchor} or a  \textit{pivotal element} which may not always be present/realised. 
+\begin{generalization}[Element descriptive uniqueness]
+    Every element in every class of unit will be different from every element in every other class of unit \citep[214]{Fawcett2000}. 
+\end{generalization} 
 
-The second, is to treat places as a linear sequence of locations at which elements may be located, identified by numbers ``place 1'', ``place 2'' etc. This place assignment approach is absolute within the unit structure and makes elements independent of each other. This approach has been used in COMMUNAL and Penman projects. 
+Thus the terms of modifier and head shall not be used for more than one class of unit. In English grammar the head and modifier are used for nominal group only. And in other groups the elements of structure may seem similar to modifier and head, they still receive different names such as \textit{apex} and \textit{temperer} in the quality group.
+
+The elements (of structure) are functional slots which define the internal structure of a unit but still they are \textit{located} in \textit{places}. One more category that intervenes between element and unit is the concept of \textit{place} which become essential for the generative versions of grammar.
+
+There are two ways to approach place definition. The first is to treat places as positions of elements relative to each other (usually previous). This leads to the need for an \textit{anchor} or a \textit{pivotal element} which may not always be present/realised. 
+
+The second is to treat places as a linear sequence of locations at which elements may be located, identified by numbers ``place 1'', ``place 2'' etc. This place assignment approach is absolute within the unit structure and makes elements independent of each other. This approach has been used in COMMUNAL \citep{Fawcett90-communal} and PENMAN \citep{PenmanOverview} projects. 
 
 \subsection{Item}
 \begin{definition}[Item]\label{def:item}
-	The item is a lexical manifestation of meaning outside syntax corresponding to both words (in the traditional sense), morphemes and either intonation or punctuation (depending whether the text is spoken or written). \citep[pp.226--232]{Fawcett2000}. 
+	The item is a lexical manifestation of meaning outside syntax corresponding to both words (in the traditional sense), morphemes and either intonation or punctuation (depending whether the text is spoken or written). \citep[226--232]{Fawcett2000}. 
 \end{definition}
 
-Items correspond to the leaves of syntactic trees and constitute the raw \textit{phonetic} or \textit{graphic} manifestation of language. The collection of items of a language is generally referred as \textit{lexis}.
+Items correspond to the leaves of syntactic trees and constitute the raw \textit{phonetic} or \textit{graphic} manifestation of language. The collection of items of a language is generally referred to as \textit{lexis}.
 
-Since items and units are of different nature, the relationship between an element and a (lexical) item must be different from that to a unit. We say that items \textit{expound} elements and not that they \textit{fill} elements as units do.  
+Since items and units are of different natures, the relationship between an element and a (lexical) item must be different from that to a unit. We say that items \textit{expound} elements and not that they \textit{fill} elements as units do. 
 
-In traditional grammar \textit{word classes} or \textit{parts of speech} are a commonly accepted concept. However in SFL, it plays rather an orientation or an approximation role, precisely because the word classes do not properly correspond to the elements they expound. So terms as \textit{noun} or \textit{adjective} are useful to denote a class of words that expound a certain element of the structure, but such word class to element correspondence shall by no means treated as definite rule.
+\begin{definition}[Exponence (restricted)]\label{def:exponence}
+    Exponence is the relation by which an element of structure is realised by a (lexical) item \citep[254]{Fawcett2000}. 
+\end{definition}
 
-\subsection{Componence}
+If in Sydney model exponence (Definition \ref{def:exponence-sydney}) is a relation that links abstract grammatical categorise to the data In Cardiff model it has a restricted meaning referring to relation between items and elements only. 
+
+\subsection{Componence and obscured dependency}
 \label{sec:componence}
 \begin{definition}[Componence]\label{def:componence}
-    Componence is the part-whole relationship between a unit and the elements it is composed of. \citep[p.244]{Fawcett2000}. 
+    Componence is the part-whole relationship between a unit and the elements it is composed of \citep[244]{Fawcett2000}. 
 \end{definition}
 
-Note that componence is not a relationship between a unit and its places, the latter, as discussed in Section \ref{sec:elements-of-structure}, simply locationally relate elements of a unit to each other. 
+Note that componence is not a relationship between a unit and its places; the latter, as discussed in Section \ref{sec:elements-of-structure}, simply locationally relate elements of a unit to each other.
 
-Componence intuitively implies a part-whole constituency relationship between the unit and its elements. But this is not the only view. Another perspective is the concept of \textit{dependency} or strictly speaking \textit{sister or sibling dependency} (because the traditional concept of dependency is parent-daughter relation). However the sister dependency is not necessary in the grammar model and is a by-product or second order concept that can be deduced from the constituency structure. 
+Componence intuitively implies a part-whole constituency relationship between the unit and its elements. But this is not the only view. Another perspective is the concept of \textit{dependency} (which I will address in Chapter \ref{ch:dependecy-grappamr}) or strictly speaking the \textit{sister} or \textit{sibling dependency} (not parent-daughter). 
+It is suitable for describing relations between elements of structure within a unit. 
 
-The (supposed) dependency relation between a modifier and the head, in the framework of SFG is, not a direct one that form-centered linguists consider to be. They simply assume that what modifier modifies is the head. Here however the general function of the modifiers is to contribute to the meaning of the whole unit which is anchored by the head. For example, in the nominal group, the modifier contributes to the description of the referent stated by the head. So the head realises one type of meaning that relates the referent while modifier realises another one. Both of them describe the referent via different kinds of meaning, therefore they are related indirectly to each other because the modifier does not modify the head but the referent denoted by the head. \citep[p.216]{Fawcett2000}
+\begin{exe}
+    \ex\label{ex:the-man-with-a-stick} the man with a stick
+\end{exe}
 
-Moreover the dependency relations are expressed between system networks and according to Fawcett this is the true place for dependencies in SFL. 
+For example the componence of nominal group in Example \ref{ex:the-man-with-a-stick} is (\textit{dd h q}) which are symbols for (\textit{determiner head qualifier}). The same can be expressed in terms of sibling dependency relations depicted in Figure \ref{fig:dep-example-man-with-a-stick}. The relations from \textit{stick} to \textit{with a} are not depicted because they belong in description of prepositional group \textit{with a stick}.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{dependency}[dep-style]
+        \begin{deptext}[column sep=1em]
+            (the \& man \& ( with \& a \& stick )) \\
+        \end{deptext}
+        \deproot{2}{ROOT}
+        \depedge[edge unit distance =1em]{2}{1}{dd}
+        \depedge[edge unit distance =0.333em]{2}{5}{q}
+    \end{dependency}
+	\caption{Sibling dependency representation for ``the man with a stick''}
+    \label{fig:dep-example-man-with-a-stick}
+\end{figure}
+
+In both SFL theories, the sister dependency relations is considered a by-product or second order concept that can be deduced from the constituency structure thus unnecessary in the grammar model. I will come back to this point because current work relies on this dual view on elements of structure and relation to the whole unit. 
+
+The (supposed) dependency relation between a modifier and the head, in the framework of SFG is, not a direct one. 
+% that form-centred linguists consider to be
+Simply assume that what modifier modifies is the head. Here, however, the general function of the modifiers is to contribute to the meaning of the whole unit which is anchored by the head. 
+
+In the nominal group from Example \ref{ex:the-man-with-a-stick}, the \textit{determiner} and \textit{qualifier} are modifiers that contributes to the description of the referent stated by the \textit{head}. So the head realises one type of meaning that relates the \textit{referent} while modifier realises another one. Both of them describe the referent via different kinds of meaning, therefore, according to Fawcett, they are related indirectly to each other because the modifier does not modify the head but the referent denoted by the head From this point of view, whether the element is dependent on a sibling element such as the head or on the parent unit is beside the point because in syntax we can observe its realization in system networks \citep[216--217]{Fawcett2000}.
+Next I move towards last concept in Cardiff model, that of \textit{filling}, which is a relation between the elements of structure and the units below.
 
 \subsection{Filling and the role of probabilities}
 \begin{definition}[Filling]\label{def:filling}
-    Filling is the probabilistic relationship between a element and the unit lower in the tree that operates at that element. \citep[p.238, 251]{Fawcett2000}. 
+    Filling is the probabilistic relationship between a element and the unit lower in the tree that operates at that element \citep[238, 251]{Fawcett2000}. 
 \end{definition}
 
-Fawcett renounces the concept of rank scale and alternatively proposed the concept of \textit{filling probabilities}. The probabilistic predictions are made in terms of filling relationship between a unit and an element of structure in a higher unit in the tree rather than being a relationship between units of different ranks. This places focus from the fact that a unit is for example a group, to what group class it is. 
+Fawcett replaces the rank scale with the concept of \textit{filling probabilities}. The probabilistic predictions are made in terms of filling relationship between a unit and an element of structure in a higher unit in the tree rather than being a relationship between units of different ranks. This moves focus away from the fact that a unit is for example a group, and towards what group class it is. 
 
-In this line of though, some elements of a clause are frequently filled by groups, but some other element almost never being rather expounded by items. The frequency varies greatly and is an important factor for predicting or recognizing either the unit class or the element type in the filling relationship. 
+In this line of thought, some elements of a clause are frequently filled by groups, but some other elements are rather \textit{expounded} by items. The frequency varies greatly and is an important factor for predicting or recognizing either the unit class or the element type in the filling relationship. 
 
-Filling may add a single unit to the element of structure or it can introduce multiple coordinated units. Filling also makes possible the embedding relation. Both, coordination and embedding relations makes it possible to deal without inter-clausal \textit{hypotaxis} and \textit{parataxis} relations described in Sydney Grammar.
+Filling may add a \textit{single unit} to the element of structure or it can introduce \textit{multiple coordinated units}. Coordination (Example \ref{ex:coordination}) is usually marked by an overt \textit{Linker} such as \textit{and}, \textit{or}, \textit{but}, etc. and sometimes is enforced by another linker that introduces the first unit such as \textit{both}.
 
-Note also that filling and componence are two complementary relations that occur in the syntactic tree down to the level when the analysis moves out of abstract syntactic categories to more concrete category of items via the relationship of exponence. 
-
-\subsection{A few more concepts}
-\begin{definition}[Exponence]\label{def:exponence}
-	Exponence is the relation by which an element of structure is realised by a (lexical) item \citep[p.254]{Fawcett2000}. 
-\end{definition}
-
-%\subsection{coordination}
 \begin{definition}[Coordination]\label{def:coordination}
-	Coordination is the relation between units that fill the same element of structure \citep[p.263]{Fawcett2000}. 
+    Coordination is the relation between units that fill the same element of structure \citep[263]{Fawcett2000}. 
 \end{definition}
 
-Coordination is usually marked by an overt \textit{Linker} such as \textit{and}, \textit{or}, \textit{but}, etc. and sometimes it is enforced by another linker that introduces the first unit such as \textit{both}. 
+\begin{exe}
+    \ex\label{ex:coordination} she is (friendly, nice and polite)
+    \ex\label{ex:reiteration} she is (very very) nice!
+\end{exe}
 
-Coordination is through by Fawcett as being not between syntactic units but between mental referents. It always introduces more than one unit which are syntactically and semantically in similar (somehow) resulting in a \textit{syntactic parallelism} which often leads to \textit{ellipsis}.
+Coordination is through by Fawcett as being not between syntactic units but between mental referents. It always introduces more than one unit which are syntactically and semantically in similar (somehow) resulting in a \textit{syntactic parallelism} which often leads to \textit{ellipsis}. 
 
-%\subsection{Reiteration}
 \begin{definition}[Reiteration]\label{def:reiteration}
-	Reiteration is the relation between successive occurrences of the same item expounding the same element of structure  \citep[p.271]{Fawcett2000}. 
+    Reiteration is the relation between successive occurrences of the same item expounding the same element of structure  \citep[271]{Fawcett2000}. 
 \end{definition}
 
-Reiteration often is used to create the effect of emphasis such as for example ``she's very very nice!''. Like coordination, reiteration is a relation between entities that fill the same element of the unit structure which is problematic in my opinion and I further discuss it in Section \ref{sec:coordination}.
+Reiteration (Example \ref{ex:reiteration}) often is used to create the effect of emphasis. Like coordination, reiteration is a relation between entities that fill the same element of the unit structure which is problematic in my opinion and I further discuss it in Section \ref{sec:coordination}.
 
-%\subsection{Embedding}
-\begin{definition}[Embedding]\label{def:embedding}
-	Embedding is the relation that occurs when a unit fills an element of the same class of units, i.e. when a unit of the same class occurs (immediately) above it in the tree structure \citep[p.264]{Fawcett2000}. 
+Filling also makes possible the embedding relation  which Fawcett treats as a general principle in contrast to more specific Definition \ref{def:embedding0} from Sydney model.
+
+\begin{definition}[Embedding (generic)]\label{def:embedding}
+    Embedding is the relation that occurs when a unit fills (directly or indirectly) an element of the same class of units; that is when a unit of the same class occurs (immediately) above it in the tree structure \citep[264]{Fawcett2000}. 
 \end{definition}
 
-Fawcett opens embedding as a general principle as opposed to exceptional/controlled embedding indicated by Halliday. I will further discuss it in the context of rank-scale concept in Section \ref{sec:rank-system}
+\begin{exe}
+    \ex\label{ex:embedding-direct} (To become an opera singer) takes years of training.
+    \ex\label{ex:embedding-indirect} The girl (whom he is talking to) is an opera singer.
+\end{exe}
 
-%\subsection{Conflation}
+In Example \ref{ex:embedding-direct} we can see an occurrence of direct embedding where an infinite clause acts as the subject of another clause. In Example \ref{ex:embedding-indirect} the embedding is indirect as the relative clause is part of the nominal group which functions as the subject in the parent clause. In both cases we say that a lower clause is embedded (directly or indirectly) in higher or parent clause. I will further discuss this in the context of rank-scale concept in Section \ref{sec:rank-system}.
+
+A situation converse to reiteration and coordination where a element is filled by more than one unit, is known as \textit{conflation} where a unit can take more than one function within another. 
+
 \begin{definition}[Conflation]\label{def:conflation}
-	Conflation is the relationship between two elements that are filled by the same unit having the meaning of ``immediately after and fused with'' and function as one element\ \citep[pp.249--250]{Fawcett2000}. 
+    Conflation is the relationship between two elements that are filled by the same unit having the meaning of ``immediately after and fused with'' and function as one element \citep[249--250]{Fawcett2000}. 
 \end{definition}
 
-Conflation is useful in expressing multi-faceted nature of language when for example syntactic and semantic elements/functions are realised by the same unit for example the Subject and the Agent or Complement and Affected. Also conflation relations frequently occur between syntactic elements as well such as for example the Main Verb and Operator or Operator and Auxiliary Verb.
+Conflation is useful in expressing multi-faceted nature of language when for example syntactic and semantic elements/functions are realised by the same unit. For example the Subject ``the girl whom he is talking to'' is also a \textit{Carrier} while the Complement ``an opera singer'' is also an \textit{Attribute}. Also conflation relations frequently occur between syntactic elements as well such as for example the \textit{Main Verb} and \textit{Operator} or \textit{Operator} and \textit{Auxiliary Verb}.
 
-\begin{definition}[Taxis]\label{def:taxis}
-	\textit{Taxis} represents the degree of interdependency between units systematically arranged in a linear sequence where \textit{parataxis} means equal and \textit{hypotaxis} means unequal status of units forming a \textit{nexus} together.
-\end{definition}
+% taxis
+Both, coordination and embedding relations make it possible to deal without inter-clausal \textit{hypotaxis} and \textit{parataxis} relations described in Sydney Grammar.
 
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=0.678\linewidth]{Figures/SFL-grammar/taxis.pdf}
-	\caption{Types of relations between clauses \citep[p.438]{Halliday2013}}
-	\label{fig:taxis}
-\end{figure}
-
-Taxis play a central role in explaining the textual cohesion. Figure \ref{fig:taxis} depicts the Taxis and clause logico-semantic relations in a single system network. Here taxis relations are employed in explaining how clauses form a nexus with certain tactic relations to one another \citep[pp. 438 -- 443]{Halliday2013}. These concepts nevertheless are very useful at describing unit relations not only at the group and clause ranks but all the way down to smallest linguistic unit such as morphemes and phonemes. I will also employ the concept of taxis in the discussion of dependency relations in Section \ref{sec:cross-theoretical-bridge}. Next I discuss the strengths and weaknesses of the two schools with a pragmatic goal of parsing in mind. 
+%
+Note also that filling and componence are two complementary relations that occur in the syntactic tree down to the level when the analysis moves out of abstract syntactic categories to more concrete category of items via the relationship of exponence.
 
 %\section{Critical discussion on the categories of the theory of grammar: a conciliation of the two theories}
 \section{Critical discussion on both theories}
@@ -509,7 +688,7 @@ The two sections above cover the definitions and fundamental concepts from each 
 %TODO: diconnect syntax and metafunctions.
 %TODO: metafunctional dimesion breaks down when we look at the context
 
-The \textit{rank scale} proposed by \citet{Halliday2002} became overtime a highly controversial concept in linguistics. Whether it is a suitable for grammatical description or not still continues up to date. The historic development of this polemic is documented in \cite[p.309--338]{Fawcett2000}. %Some strong opponents of the rank scale are Hudson, Huddleston and Fawcett.
+The \textit{rank scale} proposed by \citet{Halliday2002} became overtime a highly controversial concept in linguistics. Whether it is a suitable for grammatical description or not still continues up to date. The historic development of this polemic is documented in \cite[309--338]{Fawcett2000}. %Some strong opponents of the rank scale are Hudson, Huddleston and Fawcett.
 
 %The hierarchy of scale varies across languages and for English there are only three levels: clause, group and word. At each rank level of the scale each unit shall be unambiguously described so that it can be identified and distinguished from others. This is the \textit{``total accountability''} principle seems attainable from the descriptive perspective however is quite difficult to fulfil in generative terms.
 
@@ -527,7 +706,7 @@ Halliday's theory allows the downwards rank shift, forbids upwards rank shift an
 	\ex \label{ex:small-wooden} some very small wooden ones
 \end{exe}
 
-The above rules often pose analysis difficulties and complications. For example in nominal groups what seems to be an element is not a single word but a group of words. Consider example \ref{ex:small-wooden} where Epithet \textit{``very small''} is not a single word but a group \citep[pp.~390--396]{Halliday2013}. This kind of phenomena introduced a \textit{substructure} of modifiers and heads (see analysis in table \ref{tab:example-substructure-analisys}) which complicates the general structure of the nominal group. Accordingly, the Epithet \textit{``very small''} is composed of a head ``small'' and a modifier ``very''. This kind of intricate cases can be simplified through rank-shift constraints allowing the elements of a group to be filled by other groups or expounded by words. 
+The above rules often pose analysis difficulties and complications. For example in nominal groups what seems to be an element is not a single word but a group of words. Consider example \ref{ex:small-wooden} where Epithet \textit{``very small''} is not a single word but a group \citep[390--396]{Halliday2013}. This kind of phenomena introduced a \textit{substructure} of modifiers and heads (see analysis in table \ref{tab:example-substructure-analisys}) which complicates the general structure of the nominal group. Accordingly, the Epithet \textit{``very small''} is composed of a head ``small'' and a modifier ``very''. This kind of intricate cases can be simplified through rank-shift constraints allowing the elements of a group to be filled by other groups or expounded by words. 
 
 \begin{table}[H]
 	\centering
@@ -566,16 +745,12 @@ However I drop the constituency constraints and hence allowing the flexibility f
 
 The rank system constrains had consequences on the phenomena of embedding defined by Halliday in Definition \ref{def:embedding0}, which I consider way too restrictive.
 
-\begin{definition}[Embedding (strict)]\label{def:embedding0}
-	Embedding is the mechanism whereby a clause or phrase comes to function as a constituent within the structure of a group, which is itself a constituent of a clause. \citep[p.242]{Halliday2013}
-\end{definition}
-
 The weakening of constituency constrains makes embedding a normal (as defined in broad sense \ref{def:embedding} by Fawcett) rather than an exceptional (as defined in a strict sense in \ref{def:embedding0} by Hallliday) phenomena. And I agree with Fawcett's definition because the human language allows construction of units that contain other units within them regardless of their class.
 
 \subsection{The unit classes}
 Fawcett drops the concept of rank system (discussed in Section \ref{sec:rank-system}) and through a bottom-up approach redefining the class as a ``class of unit'' as in \ref{def:class2}.
 
-He adopts Saussurean perspective on language which states that semantics and syntax are strongly intertwined with each other so major semantic classes of entities correspond to the major syntactic units. This lead Fawcett to take a semantic basis for classifying syntactic units into: clause, nominal group, prepositional group, quality group and quantity group \citep[p.~193--194]{Fawcett2000} along with a set of minor classes such as genitive and proper name clusters. 
+He adopts Saussurean perspective on language which states that semantics and syntax are strongly intertwined with each other so major semantic classes of entities correspond to the major syntactic units. This lead Fawcett to take a semantic basis for classifying syntactic units into: clause, nominal group, prepositional group, quality group and quantity group \citep[193--194]{Fawcett2000} along with a set of minor classes such as genitive and proper name clusters. 
 
 The problem with this approach is that these classes are beyond the syntactic variations of the grammar and blend into lexical semantics which makes it difficult to apply to parsing, at least nowadays with current state of word classification.   
 
@@ -695,7 +870,7 @@ In this subsection I defined the system and systemic network, presented two syst
 %TODO: sometimes the second element is more representative of the complex or the first one maybe, maybe just take the class of the first unit and then ingnore teh class of the rest, or the last one and ingnore classes of the first ones
 
 \label{sec:coordination}
-In SG unit complexes fill an important part of the grammar along with the \textit{taxis relations} which express the interdependency relations in unit complexes. \textit{Parataxis} relations bind units of equal status while the \textit{Hypotaxis} ones bind the dominant and  the dependant units. Fawcett bypasses the taxis relations replacing them with coordination and embedding \citep[p.~271]{Fawcett2000} seemingly an oversimplified approach leading to abandonment of unit complexing as well. While embedding accounts for the depth and complexity of syntax his approach to coordination is problematic. I further discuss and argue for utility of unit-complexes for the coordination but this idea can be further extended to other phenomena which involve fixed idiomatic structures such as comparatives or conditionals.
+In SG unit complexes fill an important part of the grammar along with the \textit{taxis relations} which express the interdependency relations in unit complexes. \textit{Parataxis} relations bind units of equal status while the \textit{Hypotaxis} ones bind the dominant and  the dependant units. Fawcett bypasses the taxis relations replacing them with coordination and embedding \citep[271]{Fawcett2000} seemingly an oversimplified approach leading to abandonment of unit complexing as well. While embedding accounts for the depth and complexity of syntax his approach to coordination is problematic. I further discuss and argue for utility of unit-complexes for the coordination but this idea can be further extended to other phenomena which involve fixed idiomatic structures such as comparatives or conditionals.
 
 Coordination is challenge not only for SFL but for other linguistic theories as well. CG treats this phenomena as two or more units filling or expounding the same element. For example, in table \ref{ex:Cardiff-example-analisys} ``his shirt'' and ``and his jeans'' are two nominal groups that are siblings and both of them fill the same complement. 
 
@@ -791,7 +966,7 @@ For the reasons of limited space I skipped introducing the Sydney and Cardiff gr
 
 \subsection{The verbal group and clause division}
 \label{sec:verbal-grpoup-and-clause-division}
-In SG the verbal group is described as an expansion of a verb just like the nominal group is the expansion of the noun\citep[p.396]{Halliday2013}. There are certainly words that are closely related and syntactically dependent on the verb all together forming a unit that functions as a whole. For example the auxiliary verbs, adverbs or the negation particles are words that are directly linked to a lexical verb. The verb group functions as Finite + Predicator elements of the clause in mood structure and as Process in Transitivity structure. 
+In SG the verbal group is described as an expansion of a verb just like the nominal group is the expansion of the noun\citep[396]{Halliday2013}. There are certainly words that are closely related and syntactically dependent on the verb all together forming a unit that functions as a whole. For example the auxiliary verbs, adverbs or the negation particles are words that are directly linked to a lexical verb. The verb group functions as Finite + Predicator elements of the clause in mood structure and as Process in Transitivity structure. 
 
 In CG the verb group is dissolved moving the Main Verb as the pivotal element of the Clause unit. All the elements that form the clause structure and those that form the verb group structure are brought up together to the same level as elements of a clause. The clause structure in CG comprises elements with clause related functions(like Subject, Adjunct, Complement etc.) and other elements with Main Verb related functions(Auxiliary, Negation particle, Finite operator etc.).
 
@@ -835,7 +1010,7 @@ As mentioned before \ref{structure} the elements of a structure are defined in t
 
 \subsection{The Nominal Group}
 \label{sec:nominal-group}
-The nominal group expresses things, classes of things or a selection of instances in that class. In the table \ref{tab:example-ng} is presented an example analysis of the nominal group proposed in Sydney grammar \citep[pp.~364--369]{Halliday2013}. 
+The nominal group expresses things, classes of things or a selection of instances in that class. In the table \ref{tab:example-ng} is presented an example analysis of the nominal group proposed in Sydney grammar \citep[364--369]{Halliday2013}. 
 \begin{table}[!ht]
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
@@ -909,7 +1084,7 @@ The elements in CG differ from those of SG. The table \ref{tab:carfiff-ng} exemp
 	
 	%3. introduction of negation element, linker, punctuation
 	%``No'' as determiner. negative pronoun noone.
-	%\citep[p.~62,109,185]{Quirk1985}, \citep[p.~365--374]{Halliday2013}, 
+	%\citep[62,109,185]{Quirk1985}, \citep[365--374]{Halliday2013}, 
 	%
 	%The negation element is in Cardiff Grammar in clause structure so that it is separated from the finite. It's adoption in noun structure might or might not be a good idea. It is useful for complex groups. 
 	%
@@ -918,7 +1093,7 @@ The elements in CG differ from those of SG. The table \ref{tab:carfiff-ng} exemp
 	%No breathing man or animal can escape that forest alive.
 	%\end{exe} 
 	
-	Another simplification is renouncing to distinction between the Head and Thing \citep[p.~390--396]{Halliday2013} for the semantic ambiguity reasons as the determiners in CG. Thus if the logical Head of the nominal group is a noun then it is labelled as the Thing leaving the semantic discernment as a secondary process and out of the current scope. Otherwise, in cases of nominal groups without the Thing element, if the Head is pronoun(other than personal), numeral or adjective (mainly superlatives) then they function as Deictic, Numerative or Epithet. So I propose to parse the nominal groups in two steps: first determine the main constituting chunks and assign functions to the unambiguous ones and second perform a semantically driven evaluation for the less certain units.
+	Another simplification is renouncing to distinction between the Head and Thing \citep[390--396]{Halliday2013} for the semantic ambiguity reasons as the determiners in CG. Thus if the logical Head of the nominal group is a noun then it is labelled as the Thing leaving the semantic discernment as a secondary process and out of the current scope. Otherwise, in cases of nominal groups without the Thing element, if the Head is pronoun(other than personal), numeral or adjective (mainly superlatives) then they function as Deictic, Numerative or Epithet. So I propose to parse the nominal groups in two steps: first determine the main constituting chunks and assign functions to the unambiguous ones and second perform a semantically driven evaluation for the less certain units.
 	
 %	\todo*{probably remove: discussion of Head/Thing and CG determiners distinction}{
 		In other cases the Thing is present but it is different from the Head. Consider example \ref{ex:dectic-ngs}. In Sydney grammar they're treated as a nominal groups with qualifiers introduced by the \textit{``of''} preposition. But these nominal groups are not really about the ``cup'', ``some'' or ``another one'' but rather about ``tea'', ``youngsters'' and ``eruptions''. 
@@ -952,7 +1127,7 @@ The elements in CG differ from those of SG. The table \ref{tab:carfiff-ng} exemp
 	
 	For example ``very lucky'' in \ref{ex:lucky} is analysed as a short form of the nominal group ``very lucky one'' where ``lucky'' is the head of the nominal group with a missing Thing element ``one''. In this example ``very'' is not nominal modifier, it does not modify the missing nominal head but the adjective ``lucky'' so they constitute a head-modifier structure filling the Epithet element and as the rank scale system does not allow groups to fill elements of groups then it is described as a substructure of the nominal group.
 	
-	In SG ``The adverbial group has an adverb as Head which may or may not be accompanied by modifying elements''\citep[p.~419]{Halliday2013}. The adverbial groups may fill modal and circumstantial adjunct elements in a clause corresponding to eight semantic classes of: time, place, four types of manner and two types of assessment. The adverbial pre-modifiers express polarity, comparison and intensification along with only one comparison post-modifier \citep[p.420-421]{Halliday2013}. 
+	In SG ``The adverbial group has an adverb as Head which may or may not be accompanied by modifying elements''\citep[419]{Halliday2013}. The adverbial groups may fill modal and circumstantial adjunct elements in a clause corresponding to eight semantic classes of: time, place, four types of manner and two types of assessment. The adverbial pre-modifiers express polarity, comparison and intensification along with only one comparison post-modifier \citep[420-421]{Halliday2013}. 
 	
 	
 	A thorough systemic functional examination has been provided for the first time by Tucker \citet{Tucker1997,Tucker1998} materialised into a lexical-grammatical systematization of adjectives and the structure of Quality Group in CG. Fawcett uses the quality group structure for Adverbials as well as they follow similar grammatical behaviour. He avoids calling the group according to the word class but rather refers to the semantic meaning of what both groups express, i.e. the quality of things, situations or qualities themselves. The qualities of things have adjectives as their head while the qualities of situations an adverb. 

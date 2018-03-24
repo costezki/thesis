@@ -3,10 +3,6 @@
 
 \documentclass[a4paper,12pt,times,numbered,print,index]{Classes/PhDThesisPSnPDF}
 
-% Extra imports and definitions
-\include{Macros/ImportsAndDefinitions}
-\include{Macros/StyleDefinitions}
- 
 % ******************************************************************************
 % ******************************* Class Options ********************************
 % *********************** See README for more details **************************
@@ -84,7 +80,10 @@
 
 % ********************************** Preamble **********************************
 % Preamble: Contains packages and user-defined commands and settings
+\input{Macros/ImportsAndDefinitions}
 \input{Preamble/preamble}
+% Extra imports and definitions
+\input{Macros/StyleDefinitions}
  
 % ************************ Thesis Information & Meta-data **********************
 % Thesis title and author information, refernce file for biblatex
@@ -131,7 +130,9 @@
 \listoftables
 
 %TODO: add list of definitions and generalisations
-%\listof
+%\listtheoremname[ignoreall,show={definition,generalization}]
+\listoftheorems[ignoreall,show={definition,generalization}]
+%\tracinggroups=1
 
 % \printnomenclature[space] space can be set as 2em between symbol and description
 %\printnomenclature[3em]
@@ -142,7 +143,7 @@
 \mainmatter
 
 %\include{Chapter1/introduction}
-\include{Chapter1/introduction.2.0}
+%\include{Chapter1/introduction.2.0}
 \include{Chapter3/sfl-grammar}
 %\include{Chapter4/dependecy-grammar}
 %\include{Chapter5/gbt}

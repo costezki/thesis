@@ -644,89 +644,9 @@ In operational terms, the insertion operation means that the whole pattern will 
 This section concludes our journey in the world of graph patterns, isomorphisms and graph based operations. Leaving only one more important data structure to cover: the system networks. 
 
 \section{Systems and Systemic Networks}
-In the Section \ref{sec:system} I present the basic definition of System and System Network as it is formulated in the SF theory of grammar. The that definition in te context of theory of grammar is shaped into a more practical definition closer to what may be operationalized and represented with computer systems. In addition I cover few more useful concepts for implementation of system networks applied to enrichment of constituents with systemic features. 
-The graphical notations introduced by \citet{Halliday2013} are useful in reading and writing system networks in this thesis. Below is a system network with a simple entry condition (Figure \ref{fig:system-network-notation1}), a system network grouping that share the same entry condition (Figure \ref{fig:system-network-notation2}), a system network with a disjunctive and conjunctive entry conditions (Figure \ref{fig:system-network-notation3} and \ref{fig:system-network-notation4}). 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[]
-	\node (prec) [system-name] {a};
-	\node (f1) [system-name, right = 2em of prec, yshift=1em] {x};
-	\node (f2) [system-name, right = 2em of prec, yshift=-1em] {y};
-	%\draw [decorate,decoration={brace,amplitude=3em},xshift=-4pt,yshift=0pt] ([xshift=0.0em] f1.west) -- (f2.west) node [black,midway,xshift=-0.6cm] {qwe}; 
-	\draw [thick] ([xshift=-0.0em] f1.west) to [square right brace ] ([xshift=-0.0em] f2.west);
-	\draw[precondition] ([xshift=0.1em] prec.east) -- ([xshift=1.0em,yshift=0em] prec.east);
-	\end{tikzpicture}
-	\caption{A system with a single entry condition: if \textit{a} then either \textit{x} or \textit{y}}
-	\label{fig:system-network-notation1}
-\end{figure}
+In the Section \ref{sec:system} I present the basic definition of System and System Network and the notations as formulated in the SF theory of grammar. In this section I formalise them in terms of what may be represented and instantiated in computational terms. In addition I cover few more useful concepts for implementation of system networks applied to enrichment of constituents with systemic features. 
 
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[]
-	\node (prec) [system-name] {a};
-	\node (f1) [system-name, right = 2.5em of prec, yshift=3em] {x};
-	\node (f2) [system-name, right = 2.5em of prec, yshift=1em] {y};
-	
-	\node (f3) [system-name, right = 2.5em of prec, yshift=-1em] {p};
-	\node (f4) [system-name, right = 2.5em of prec, yshift=-3em] {q};
- 
-	\draw [thick] ([xshift=-0.0em] f1.west) to [square right brace ] ([xshift=-0.0em] f2.west);
-	\draw [thick] ([xshift=-0.0em] f3.west) to [square right brace ] ([xshift=-0.0em] f4.west);
-
-	\draw [decorate,thick, decoration={brace, amplitude=0.6em},xshift=0pt,yshift=0pt] ([xshift=-2.6em] f4.south) -- ([xshift=-2.6em] f1.north);
-
-	\draw[precondition] ([xshift=0.5em, yshift=2em] prec.east) -- ([xshift=1.6em, yshift=2em] prec.east);
-	\draw[precondition] ([xshift=0.5em, yshift=-2em] prec.east) -- ([xshift=1.6em, yshift=-2em] prec.east);
-	\end{tikzpicture}
-	\caption{Two systems grouped under the same entry condition: if \textit{a} then both either \textit{x} or \textit{y} and, independently, either \textit{p} or \textit{q}}
-	\label{fig:system-network-notation2}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[]
-	\node (prec1) [system-name] {a};
-	\node (prec2) [system-name, below=2em of prec1] {c};
-	
-	\draw [thick] ([xshift=-0.0em] prec1.east) to [square left brace ] ([xshift=-0.0em] prec2.east);
-	\draw[precondition] ([xshift=1.6em, yshift=-1em] prec1.south) -- ([xshift=2.4em, yshift=-1em] prec1.south);
-	
-	\node (f1) [system-name, right =2.8em of prec1] {x};
-	\node (f2) [system-name, right =2.8em of prec2] {y};
-
-	\draw [thick] ([xshift=-0.0em] f1.west) to [square right brace ] ([xshift=-0.0em] f2.west);
-	
-	\end{tikzpicture}
-	\caption{A system network with a disjunctive entry condition: if either \textit{a} or \textit{c} (or both), then either \textit{x} or \textit{y}}
-	\label{fig:system-network-notation3}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[]
-	\node (prec1) [system-name] {a};
-	\node (prec2) [system-name, below=4em of prec1] {b};
-	
-	\node (f1) [system-name, right =5em of prec1, yshift=-1em] {x};
-	\node (f2) [system-name, right =5em of prec2, yshift=1em] {y};
-	
-	\draw [thick] ([xshift=-0.0em] f1.west) to [square right brace ] ([xshift=-0.0em] f2.west);
-	
-	\draw [decorate,thick, decoration={brace, amplitude=0.6em},xshift=0pt,yshift=0pt] ([xshift=-4.0em, yshift=-0.6em] f1.north) -- ([xshift=-4.0em, yshift=0.6em] f2.south);
-	
-	\draw[precondition] ([xshift=3.2em, yshift=-2.1em] prec1.south) -- ([xshift=4.1em,yshift=-2.1em] prec.south);
-	
-	\draw[thick] (prec1.south east) -- ([xshift=1.5em, yshift=-1.8em] prec1.east);
-	\draw[thick] (prec2.north east) -- ([xshift=1.5em, yshift=1.8em] prec2.east);
-	
-	\end{tikzpicture}
-	\caption{A system with a conjunctive entry condition: if both \textit{a} and \textit{b} then, either \textit{x} or \textit{y}}
-	\label{fig:system-network-notation4}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Now that the graphical notations are introduced, I would like to start with the abstract concept of \textit{hierarchy} defined in a computer scientific way by \citet{Pollard1987}. This is a formal rephrasing of Definition \ref{def:hierarchy} that Haliday provides.
+First I would like to introduce abstract concept of \textit{hierarchy} defined in a computer scientific way by \citet{Pollard1987}. This is a formal rephrasing of Definition \ref{def:hierarchy} that Haliday provides.
 
 \begin{definition}[Hierarchy]\label{def:hierarchy-cs}
 	A hierarchy is finite bounded complete partial order $(\varDelta,\prec)$. 
