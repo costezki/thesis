@@ -799,15 +799,23 @@ The weakening of constituency constraints makes embedding a normal (broadly defi
 An approach to describe units outside the rank-scale was suggested by \cite{Fawcett2000} and \cite{Butler1985}. Fawcett proposes replacing it with the filling probabilities to guide the unit composition simply mapping elements to a set of legal unit classes that may fill it. Units are carriers of a grammatical pattern, they can be described in terms of their internal structure instead of their potential for operation in the unit above. Nonetheless I do not abandon the rank scale completely and I use it as the top level classifier of grammatical units (see Figure \ref{fig:group-classes}) falling in line with more traditional syntactic classes.
 
 %TODO: continue here
-\subsection{The unit classes}
-\
-Fawcett drops the concept of rank system (discussed in Section \ref{sec:rank-system}) and through a bottom-up approach redefining the class as a ``class of unit'' as in \ref{def:class2}.
+\subsection{The (unit) classes}
+\label{sec:unit-classes}
+%Fawcett drops the concept of rank system (discussed in Section \ref{sec:rank-system}) and through a bottom-up approach redefining the class as a ``class of unit'' as in \ref{def:class2}.
 
-He adopts Saussurean perspective on language which states that semantics and syntax are strongly intertwined with each other so major semantic classes of entities correspond to the major syntactic units. This lead Fawcett to take a semantic basis for classifying syntactic units into: clause, nominal group, prepositional group, quality group and quantity group \citep[193--194]{Fawcett2000} along with a set of minor classes such as genitive and proper name clusters. 
+In SFL at large there is the consensus that linguistic forms and meanings are intertwined and mutually determined just like for any sign in a Saussurean approach to language. Both Halliday (quote below) and Fawcett (Definition \ref{def:class2}) adopt this position. 
 
-The problem with this approach is that these classes are beyond the syntactic variations of the grammar and blend into lexical semantics which makes it difficult to apply to parsing, at least nowadays with current state of word classification.   
+\begin{quotation}
+    something that is distinctly non-arbitrary [in language] is the way different kinds of meaning in language are expressed by different kinds of grammatical structure, as appears when linguistic structure is interpreted in functional terms \citep{Halliday2003-Ideas-about-language}.
+\end{quotation}
 
-In the current project I turn to Sydney classification of syntactic units that is close in line with traditional syntactic classification \citep{Quirk1985}. I adopt the clause as a unit plus the four group classes of Sidney grammar depicted in Figure \ref{fig:group-classes}.
+When it comes to establishing the lexicogrammatical classes the two schools diverge. Halliday adopts the traditional grammar \textit{word classes} or \textit{parts of speech}: noun, verb, adjective etc. He then derives a set of groups (e.g. nominal group, verbal group, adverbial group etc.) that share properties of the word classes. In fact the class, in Halliday's words, ``indicates the in a general way its potential range of grammatical functions'' \citep[76]{Halliday2013}. For example the nominal group is a formation that functions as a noun may do and expresses same kind of meaning. 
+
+Following the idea that major semantic classes of entities (situations, things, qualities and quantities) correspond to the major syntactic units, Fawcett decided to mirror them into the lexicogrammar. This lead to a semantically based classification of syntactic units: clause, nominal group, prepositional group, quality group and quantity group \citep[193--194]{Fawcett2000} along with a set of minor classes such as genitive and proper name clusters. This is, in a way, a tight coupling of the grammatical units with an ontology which may be subject to change in the future. 
+
+The converse may also be stated that the traditional part of speech are disconnected from the semantics in the sense that there is no one to one correspondence (as Fawcett attempts) but rather complex set of mappings. Establishing the exact interface of syntax and semantics is a hot ongoing theoretical exploration across the entire linguistic discipline a difficult task in practice. This discussion however is beyond the scope here.   
+
+In the current work I side with the Sydney classification of syntactic units that is close in line with traditional syntactic classifications \citep{Quirk1985}. I adopt the clause as a unit plus the four group classes of the Sidney grammar depicted in Figure \ref{fig:group-classes}. 
 
 \begin{figure}[H]
 	\centering
@@ -826,6 +834,18 @@ In the current project I turn to Sydney classification of syntactic units that i
 	\caption{The group and word classes}
 	\label{fig:group-classes}
 \end{figure}
+
+%The main reason is that Cardiff classes are beyond the syntactic variations of the grammar and blend into lexical semantics which makes it difficult to apply to parsing, at least nowadays with current state of word classification.
+
+The word classes or part of speech tags that I adopt here are the ones employed to annotate Penn Treebank corpora called the Penn tag set \citep{Marcus1993} which, like Sidney unit classes, are also in line with the traditional grammar. This tag set has become a widely accepted standard in mainstream computational linguistics and there are multiple implementation of the part of speech taggers. The Stanford Parser which plays an important role in the software implementation of this thesis and is described in the Chapter \ref{ch:dependecy-grappamr}, employs precisely the Penn tag set.
+
+The Penn tag set was developed to annotate the Penn Treebank corpora \citep{Marcus1993}. It is a large, richly articulated tag set that provides distinct codings for classes of words that have distinct grammatical behaviour.
+
+The Penn tag set is based on the Brown Corpus tag set \citep{Kucera1968} but differs in several ways. First, the authors reduced the lexical and syntactic redundancy. In the Brown corpus there are many unique tags to a lexical item. In the Penn tag set the intention is to reduce this phenomenon to a minimum. Also distinctions that are recoverable from lexical variation of the same word such as verb or adjective forms or distinctions recoverable from syntactic structure are reduced to a single tag. 
+
+Second the Penn Corpus takes into consideration the syntactic context. Thus the Penn tags, to a degree, encodes syntactic functions when possible. For example, \textit{one} is tagged as NN (singular common noun) when it is the head of the noun phrases rather than CD (cardinal number). 
+
+Third, Penn POS set allows multiple tags per word, meaning that the annotators may be unsure of which one to choose in certain cases. There are 36 main POS and 12 other tags in the Penn tag set. A detailed description of the schema, the design principles and annotation guidelines are described in \citep{Santorini1990}. Figure \ref{fig:group-classes} depicts a classification summarising the Penn tag set. 
 
 \subsection{The structure}
 The \textit{unit} and \textit{structure} are two out of the four fundamental categories in the systemic theories of grammar. Sydney and Cardiff theories vary in their perspectives on \textit{unit} and \textit{structure} influencing how units are defined and identified.
