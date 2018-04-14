@@ -365,7 +365,7 @@ Going back to the notion of class previously defined as a grouping of items iden
 	Delicacy is the scale of differentiation or depth of detail whose limit at one end is the primary degree of categories of structure  and class and on the other end, theoretically, is the point beyond which no further grammatical relations obtain. \citet[58]{Halliday2002}  
 \end{definition}
 
-We say that a category is refined into more subtle distinctions of subcategories which form a system as define above. Subsequently those distinctions fo subcategories can be further refined in other systems. This relationship between these two systems is one of delicacy where the second one is more delicate than the first one and together they form a \textit{system network}. As a side note, the delicacy in a system network is akin to sub-classification relation, which was originally the intended one and the predominant one. In practice, however, a few kinds of abstraction relations can be encountered as there are multiple kinds of abstraction (e.g abstraction as information reduction, or as approximation, or as idealisation etc.) that are extensively treated by \citet{Saitta2013}. This discussion however is not in the scope of the current work.
+We say that a category is refined into more subtle distinctions of subcategories which form a system as define above. Subsequently those distinctions fo subcategories can be further refined in other systems. This relationship between these two systems is one of delicacy where the second one is more delicate than the first one and together they form a \textit{system network}.
 
 %%%
 The graphical notations introduced by \citet{Halliday2013} are useful in reading and writing system networks in this thesis. Below is a system network with a simple \textit{entry condition} (Figure \ref{fig:system-network-notation1}), a \textit{system network grouping} that share the same entry condition (Figure \ref{fig:system-network-notation2}), a system network with a \textit{disjunctive} and \textit{conjunctive} entry conditions (Figure \ref{fig:system-network-notation3} and \ref{fig:system-network-notation4}). 
@@ -500,10 +500,14 @@ there is nothing meaningless and thus every piece of language must be explained 
 At the very top of the rank scale, clauses form complex structures. Halliday employs systematically the concepts of \textit{taxis} and \textit{logico-semantic relations} to account for inter-clausal relations. 
 
 \begin{definition}[Taxis]\label{def:taxis}
-    \textit{Taxis} represents the degree of interdependency between units systematically arranged in a linear sequence where \textit{parataxis} means equal and \textit{hypotaxis} means unequal status of units forming a \textit{nexus} together.
+    \textit{Taxis} represents the degree of interdependency between units systematically arranged in a linear sequence where \textit{parataxis} means equal and \textit{hypotaxis} means unequal status of units forming a \textit{nexus} or a \textit{unit complex} together.
 \end{definition}
 
-Of importance here is the concept of taxis which is very useful at describing unit relations not only at the group and clause ranks but all the way down to smallest linguistic unit such as morphemes and phonemes. I will also refer to it when describing the Cardiff theory of grammar and also briefly in the discussion of dependency relations in Section \ref{sec:cross-theoretical-bridge}. 
+The concept of taxis which is very useful at describing unit relations not only at the group and clause ranks but all the way down to smallest linguistic unit such as morphemes and phonemes. I will also refer to it when describing the Cardiff theory of grammar and also briefly in the discussion of dependency relations in Section \ref{sec:cross-theoretical-bridge}.
+
+The elements of logical paratactic structure are notated left to right with numbers ($1\quad2$) while those of hypotactic structure with Greek letters ($\beta\quad\alpha$) right to left. The tactic relations can be of two types: that of expansion which relates phenomena of the same order of experience and that of projection which relates phenomena of one order of experience (usually saying or thinking) to an order of experience higher (what is said or thought). Projection can be of two types: \textit{idea} \mbox{(' single quote)} and \textit{locution} \mbox{( `` double quotes)}.
+
+Expansion is further divided into three: \textit{elaborating} \mbox{(= equals)}, \textit{extending} \mbox{(+ is added to)} and \textit{enhancing} \mbox{($\times$ is multiplied by)}. Elaboration is a way to restate the same thing, exemplify, comment or specify in detail. Extending is the way to add new element give an exception or offer an alternative. And finally enhancing is the way to qualify something with some circumstantial feature of time, place, cause, intensity or condition. 
 
 \subsection{Lexis and lexicogrammar}
 In SFL the terms \textit{word} and \textit{lexical item} are not really synonymous. They are related but they refer to different things. The term \textit{word} is reserved (in early Halliday) for the grammatical unit of the lowest rank whose \textit{exponents} are lexical items. %While word refers to the unit of structure below the group/phrase rank and above the morphemes, the lexical item is defies as follows. 
@@ -678,13 +682,13 @@ A situation converse to reiteration and coordination where a element is filled b
 Conflation is useful in expressing multi-faceted nature of language when for example syntactic and semantic elements/functions are realised by the same unit. For example the Subject ``the girl whom he is talking to'' is also a \textit{Carrier} while the Complement ``an opera singer'' is also an \textit{Attribute}. Also conflation relations frequently occur between syntactic elements as well such as for example the \textit{Main Verb} and \textit{Operator} or \textit{Operator} and \textit{Auxiliary Verb}.
 
 % taxis
-Both, coordination and embedding relations make it possible to deal without inter-clausal \textit{hypotaxis} and \textit{parataxis} relations described in Sydney Grammar.
+Cardiff Grammar in case of both coordination and embedding relations deals without \textit{hypotaxis} and \textit{parataxis} relations described in Sydney Grammar.
 
 %
 Note also that filling and componence are two complementary relations that occur in the syntactic tree down to the level when the analysis moves out of abstract syntactic categories to more concrete category of items via the relationship of exponence.
 
 %\section{Critical discussion on the categories of the theory of grammar: a conciliation of the two theories}
-\section{Critical discussion on both theories}
+\section{Critical discussion on both theories: consequences and decisions for parsing} 
 
 The two sections above cover the definitions and fundamental concepts from each of the two systemic functional theories of grammar. The work in this thesis uses a mix of concepts from both theories and this section discusses in detail what is being adopted and why attempting a rather pragmatic reconciliation for the purposes of achieving a parsing system than a theoretical debate. Next I draw parallels and highlight correspondences between the Sydney and Cardiff theories of grammar and where alter and present my position on the matter. 
 
@@ -715,7 +719,7 @@ In this section I present a few cases that highlighting when the rank scale as d
     \ex \label{ex:small-wooden} some very small wooden ones
 \end{exe}
 
-Consider the nominal group \ref{ex:small-wooden}. Here the modifying element, the Epithet ``very small'', is not a single word but a group \citep[390--396]{Halliday2013}. As the rank scale constraints mentioned above state that the group elements need to be filled by words. To account for this phenomena, Halliday, introduces a \textit{substructure} of modifiers and heads leading to a logical structure analysis as the one in Table \ref{tab:example-substructure-analisys-logical}. In such a structure the modifier is further broken down into a Sub-Head and Sub-Modifiers. 
+Consider the nominal group \ref{ex:small-wooden}. Here the modifying element, the Epithet ``very small'', is not a single word but a group \citep[390--396]{Halliday2013}. As the rank scale constraints mentioned above state that the group elements need to be filled by words. To account for this phenomena, Halliday, introduces a \textit{substructure} of modifiers and heads leading to a logical structure analysis as the one in \mbox{Table \ref{tab:example-substructure-analisys-logical}}. In such a structure the modifier is further broken down into a Sub-Head and Sub-Modifiers. 
 
 \begin{table}[!ht]
     \centering
@@ -731,7 +735,7 @@ Consider the nominal group \ref{ex:small-wooden}. Here the modifying element, th
     \label{tab:example-substructure-analisys-logical}
 \end{table}
 
-The corresponding experiential structure analysis is provided in the Table \ref{tab:example-substructure-analisys}. Accordingly, the Epithet ``very small'' is composed of a quality adjective ``small'' and an enhancer modifier ``very''. 
+The corresponding experiential structure analysis is provided in the \mbox{Table \ref{tab:example-substructure-analisys}} \citet[391]{Halliday2013}. Accordingly, the Epithet ``very small'' is composed of a quality adjective ``small'' and an enhancer modifier ``very''. 
  
 \begin{table}[!ht]
     \centering
@@ -800,7 +804,53 @@ The weakening of constituency constraints makes embedding a normal (broadly defi
 
 An approach to describe units outside the rank-scale was suggested by \cite{Fawcett2000} and \cite{Butler1985}. Fawcett proposes replacing it with the filling probabilities to guide the unit composition simply mapping elements to a set of legal unit classes that may fill it. Units are carriers of a grammatical pattern, they can be described in terms of their internal structure instead of their potential for operation in the unit above. Nonetheless I do not abandon the rank scale completely and I use it as the top level classifier of grammatical units (see Figure \ref{fig:group-classes}) falling in line with more traditional syntactic classes.
 
-\subsection{The unit classes}
+\subsection{Approach to structure formation}
+The \textit{unit} and \textit{structure} are two out of the four fundamental categories in the systemic theories of grammar. The Sydney and Cardiff theories vary in their perspectives on \textit{unit} and \textit{structure} influencing how units are defined and identified.
+
+For Halliday, the \textit{structure} (Definition \ref{def:structure}) characterises each unit as a carrier of a pattern of a particular order of \textit{elements}. The order is not necessarily a linear realisation sequence but a theoretical relation of relative or absolute placement. This perspective has been demonstrated to be useful in generation where unit placement emerges out of the realisation process.
+
+The Cardiff School takes a bottom up approach and defines class in terms of its internal structure describing a relative or absolute order of elements. This sort of syntagmatic account is precisely what is deemed useful in parsing and is the one adopted in this thesis. 
+%It is well established algorithmically how to recognise classes and construct them bottom up. 
+In this work, as motivated in the Introduction, generation of the constituency structure is derived from the Stanford dependency parse trees. As it consists of words and relations between them the intuitive approach to form groups, clauses and complexes is by working them out bottom up. 
+%from the laves of the dependency tree towards the root of it. 
+The method is to let the unit class emerge from recognition of constituent word classes and dependency relations between or sequence of already formed lower units. The exact mechanism how it is done I explain in Chapter \ref{ch:parsing-algorithm}. What is important to note here is the bottom up approach which is in line with Cardiff way of defining unit classes in contrast to top down approach of Sydney school.
+
+%In other words the unit class is defined by the unit structure and not by it's function in the parent unit, as Sydney school predicates, and this is precisely the reason why creation of constituency structure is computationally accessible. 
+
+\subsection{Relation typology in the system networks}
+%TODO argue for multiple types of relations in the systemnetworks and for importance of distinguishing among them
+%TODO example ``typology rel'' in the polarity vs ``activation rel'' in finitnness network
+
+As system is expanded in delicacy to forms a systemic network of choices, choice of a feature in one system becomes the \textit{entry condition} for choices in more delicate systems below. Halliday states that the relation on the systemic cline of delicacy is essentially of \textit{sub-categorisation} (see Definition \ref{def:delicacy-sydney}). In this subsection argue for occurrence of multiple kinds of inter-systemic relations. I also call them \textit{activations relations} because in the traversal process from less to more delicate systems, when choices are made in the former then choice making is enabled or \textit{activated} in the latter.
+
+Next I present a distinction between two activation relations: the \textit{sub-categorisation} and \textit{choice enabling}. that are of interest in the present thesis but this is by no means exhaustive distinction and more work is needed here.
+
+Lets take as example the polarity system represented in figure \ref{fig:polarity}. It contains two choices either positive or negative. 
+%And when one says it is positive one means not negative which is obvious and self evident how the two choices are mutually exclusive.
+% entry condition relationship types
+An increase in delicacy can be seen as a taxonomic ``is a'' relationship between features of higher systems and lower systems like in the case of POLARITY TYPE and NEGATIVE TYPE in figure \ref{fig:polarity} and in fact for the rest of the network. 
+%may abstraction types
+As a side note, the delicacy in a system network is akin to sub-classification relation, which was originally the intended one and the predominant one. In practice, however, a few kinds of abstraction relations can be encountered (e.g abstraction as information reduction, as approximation, as idealisation etc.) extensively treated by \citet{Saitta2013}. This discussion however beyond the scope of the current work.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/SFL-grammar/polarity-system.pdf}
+    \caption{System network of POLARITY}
+    \label{fig:polarity}
+\end{figure}
+
+But the activation relation among systems in the cline of delicacy is not always taxonomic. Another relation is ``enables selection of'' without any sub-categorisation implied. As an example see the FINITENESS system in Figure \ref{fig:finitness-fraction} where in case that the finite option is selected then what this choice enables is not subtypes of finite but merely other systems that become available i.e. DEIXIS and INDICATIVE TYPE. The latter is there because selection of finite implies also selection of indicative feature in a sibling of FINITNES system, MOOD-TYPE comprised of options indicative and imperative.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/SFL-grammar/finitness-system.pdf}
+    \caption{A fraction of the finiteness system where increase of delicacy is not a ``is a'' relation}
+    \label{fig:finitness-fraction}
+\end{figure}
+
+The distinction in the systemic relations is incorporated into the technical data structure definitions and traversal algorithms proposed in the Chapter \ref{ch:data-structures}.
+
+\subsection{Unit classes}
 \label{sec:unit-classes}
 %Fawcett drops the concept of rank system (discussed in Section \ref{sec:rank-system}) and through a bottom-up approach redefining the class as a ``class of unit'' as in \ref{def:class2}.
 
@@ -846,171 +896,166 @@ Second the Penn Corpus takes into consideration the syntactic context. Thus the 
 
 Third, Penn POS set allows multiple tags per word, meaning that the annotators may be unsure of which one to choose in certain cases. There are 36 main POS and 12 other tags in the Penn tag set. A detailed description of the schema, the design principles and annotation guidelines are described in \citep{Santorini1990}. Figure \ref{fig:group-classes} depicts a classification summarising the Penn tag set. 
 
-\subsection{The approach to structure formation}
-The \textit{unit} and \textit{structure} are two out of the four fundamental categories in the systemic theories of grammar. The Sydney and Cardiff theories vary in their perspectives on \textit{unit} and \textit{structure} influencing how units are defined and identified.
 
-For Halliday, the \textit{structure} (Definition \ref{def:structure}) characterises each unit as a carrier of a pattern of a particular order of \textit{elements}. The order is not necessarily a linear realisation sequence but a theoretical relation of relative or absolute placement. This perspective has been demonstrated to be useful in generation where unit placement emerges out of the realisation process.
 
-The Cardiff School takes a bottom up approach and defines class in terms of its internal structure describing a relative or absolute order of elements. This sort of syntagmatic account is precisely what is deemed useful in parsing and is the one adopted in this thesis. 
-%It is well established algorithmically how to recognise classes and construct them bottom up. 
-In this work, as motivated in the Introduction, generation of the constituency structure is derived from the Stanford dependency parse trees. As it consists of words and relations between them the intuitive approach to form groups, clauses and complexes is by working them out bottom up. 
-%from the laves of the dependency tree towards the root of it. 
-The method is to let the unit class emerge from recognition of constituent word classes and dependency relations between or sequence of already formed lower units. The exact mechanism how it is done I explain in Chapter \ref{ch:parsing-algorithm}. What is important to note here is the bottom up approach which is in line with Cardiff way of defining unit classes in contrast to top down approach of Sydney school.
-
-%In other words the unit class is defined by the unit structure and not by it's function in the parent unit, as Sydney school predicates, and this is precisely the reason why creation of constituency structure is computationally accessible. 
-
-\subsection{The syntactic and semantic heads}
+\subsection{Syntactic and semantic heads}
+\label{sec:heads}
 %TODO[JB]I fear this is confused. A grammatical head cannot be semantic, because it is grammar and not semantics: different strata. Do you mean that the grammatical heads may be *motivated* by semantic or syntactic criteria?
-In SFG the heads may be motivated by semantic or syntactic criteria (simply called here semantic or syntactic heads). In most cases they coincide but there are exceptions when they differ or even diverge. This topic is especially important in the discussions of the nominal group structure on which \citet{Halliday2013} offer a thorough examination and \citet{Fawcett2000} a more generic perspective on this issue.
+In SFG the heads may be motivated by semantic or syntactic criteria (simply called here semantic or syntactic heads). In most cases they coincide but there are exceptions when they differ or even diverge. This topic is especially important in the discussions of the \textbf{nominal group} structure (continued in Section \ref{sec:nominal-group}) on which \citet{Halliday2013} offers a thorough examination and \citet{Fawcett2000} provides a more generic perspective.
 
-In this discussion I persuade two important things: first, that the class of the head is not always raised to establish the group class but the whole underlying structure determines the group class; second, that syntactically motivated heads (referred by Fawcett as \textit{pivotal elements}) are easy to establish because it is based solely on the formal grounds whereas the semantic heads require an evaluation at the level of entire group once, one is established, employing additional lexical semantic resources.
+In this discussion I show few examples when the syntactic and semantic heads diverge and argue my position on the group formation on two points. First, the class of the Head (in Sydney school) or pivotal element (in Cardiff school) is not always raised to establish the group class but the whole underlying structure determines the group class. Second, that syntactically motivated heads are easy to establish because they are based solely on the formal grounds whereas the semantic heads require an evaluation at the level of entire group, once one is established, employing additional lexical semantic resources. This can be a two step process but in the current implementation only the group structure on syntactic grounds is provided. 
 
-As mentioned before in Section \ref{sec:functions-metafunctions}, Sydney grammar fulfils the exhaustiveness principle (Generalization \ref{def:exhaustiveness}) through multiple parallel structures while Cardiff grammar through a single syntactic structure resembling a mixture of the former. 
+As mentioned before in Section \ref{sec:functions-metafunctions}, Sydney grammar fulfils the exhaustiveness principle (Generalization \ref{def:exhaustiveness}) through multiple parallel structures while Cardiff grammar through a single syntactic structure resembling a mixture of the former.
 
-Let's briefly return to the Example \ref{ex:small-wooden} analysed in Table \ref{tab:example-substructure-analisys-logical} and \ref{tab:example-substructure-analisys} that reflect the nominal group logical and experiential structures \citet[391]{Halliday2013}. When the Head coincides with the Thing we say that they are conflated. And examples as this one may lead to the assumption that the Head (motivated by syntactic criteria) is also always the Thing (motivated by the semantic criteria) but this is not so.
+Let's briefly return to the Example \ref{ex:small-wooden} analysed with Sydney grammar in Table \ref{tab:example-substructure-analisys-logical} and \ref{tab:example-substructure-analisys} that reflect the nominal group logical and experiential structures \citet[391]{Halliday2013}. When the Head (called here the \textit{syntactic head} of the nominal group) coincides with the Thing (called here the \textit{semantic head}) we say that they are conflated (Definition \ref{def:conflation}) and examples as this one may lead to the assumption that the Head, which is motivated by syntactic criteria, is also always the Thing which is motivated by the semantic criteria, but this is not so.
 
-The logical form is a Head-Modifier structure and ``represents the generalised logical-semantic relations that are encoded in the natural language'' \citep[388]{Halliday2013}. The experiential structure of the nominal group as a whole has the function of specifying the class of things, through the Thing element, and some category of membership in this class, through the rest of the elements. In the nominal group there is always a Head but the Thing, also referred here as the semantic head, may be missing and so the Head element is conflated instead with either Epithet, Numerative, Classifier or Deictic.
+The logical structure is a Head-Modifier structure and ``represents the generalised logical-semantic relations that are encoded in the natural language'' \citep[388]{Halliday2013}. The experiential structure of the nominal group as a whole has the function of specifying the class of things, through the Thing element, and some category of membership in this class, through the rest of the elements. In the nominal group there is always a Head but the Thing may be missing and so the Head element is conflated with either Epithet, Numerative, Classifier or Deictic instead.
 
 \begin{exe}
-	\ex\label{ex:one} Have a cup of tea. 
+	\ex\label{ex:one} (Have) a cup of tea. 
+   	\ex\label{ex:the-old-example} The old shall pass first.
 	\ex\label{ex:three} I'll give you three.
 \end{exe}
 
 
-%TODO[JB] OK, got what you mean: but actually, in (Sydney) SFG, 'Head' is only a term of the logical metafunction, not of interpersonal *or* experiential. So the assumption that the Thing is automatically the Head is what is wrong here. One can see this is phrases such as:
+%%TODO[JB] OK, got what you mean: but actually, in (Sydney) SFG, 'Head' is only a term of the logical metafunction, not of interpersonal *or* experiential. So the assumption that the Thing is automatically the Head is what is wrong here. One can see this is phrases such as:
 %
 %'I'll give you three'
 %
 %the Thing is not even there and the Head (logical) has shifted along to the numerative. So where do you get the idea that the Thing is necessarily the Head? If this is said somewhere give a reference (exact, with page numbers and possibly even with quotes: it is not enough, actually, to refer to entire books when you pursue a discussion, you should be giving the exact relevant page numbers).
 
-Consider Example \ref{ex:one} analysed in three different ways in the Table \ref{tab:the-head-differences}. The Sydney Grammar offers two analyses in which the semantic and the syntactic heads differ. In the \textit{experiential} analysis the head is ``tea'' which functions as Thing, while in the logical analysis the head is ``cup'' which functions as Head. 
+Consider Example \ref{ex:one} analysed with Sydney and Cardiff grammars in Table \ref{tab:the-head-differences}. In the Sydney Grammar the semantic and the syntactic heads differ. In the experiential analysis the semantic head is ``tea'' which functions as Thing, while in the logical analysis the syntactic head is ``cup'' which functions as Head. Cardiff Grammar does not offer multi-structural analysis and there is no Head/Thing distinction. The functional elements are already established based on semantic criteria and this is further discussed in Section \ref{sec:nominal-group}. 
 
-Cardiff Grammar does not offer multi-structural analysis and there is no Head/Thing distinction. The functional elements are already established based on semantic criteria as further discussed in Section \ref{sec:nominal-group}. Nevertheless the logical analysis of Sydney Grammar resonates closely with the traditional ``semantically blinded'' grammars because it always provides a syntactic Head even if this differs from the syntactically motivated \textit{pivotal element} in Cardiff Grammar (defined in Section \ref{sec:elements-of-structure}). 
- 
-
-\begin{table}[h]
+\begin{table}[!ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		\multicolumn{2}{|c|}{} & \textbf{a} & \textbf{cup} & \textbf{of} & \textbf{tea} \\ \hline
-		\multirow{2}{*}{Sidney Grammar} & experiential & \multicolumn{3}{c|}{\textit{Numerative}} & \textit{Thing} \\ \cline{2-6} 
-		& interpersonal & \textit{Modifier} & \textit{Head} & \multicolumn{2}{c|}{\textit{Qualifier}} \\ \hline
-		\multicolumn{2}{|l|}{Cardiff Grammar} & \multicolumn{2}{c|}{\textit{Quantifying Determiner}} & \textit{Selector} & \textit{Head} \\ \hline
-	\end{tabular}
-	\caption{Example of diverging semantic and syntactic heads}
+        \hline
+        \multicolumn{2}{|c|}{\textit{}}                 & \textit{a}           & \textit{cup}         & \textit{of}         & tea          \\ \hline
+        \multirow{2}{*}{Sidney Grammar} & experiential  & \multicolumn{3}{c|}{Numerative}                                   & Thing        \\ \cline{2-6} 
+        & interpersonal & Pre-Modifier         & Head                 & \multicolumn{2}{c|}{Post-Modifier} \\ \hline
+        \multicolumn{2}{|l|}{Cardiff Grammar}           & \multicolumn{2}{c|}{Quantifying Determiner} & Selector            & Head         \\ \hline
+    \end{tabular}
+	\caption{Analysis of Example \ref{ex:one} with Sydney and Cardiff grammars: diverging semantic and syntactic heads.}
 	\label{tab:the-head-differences}
 \end{table}
 
+%%TODO[JB] is this all relevant for parsing: you should make the relevance of all these discussions for the purpose of parsing much clearer: at present this often goes under. (defined in Section \ref{sec:elements-of-structure})
+In the nominal group ``The old'' which is Subject in Example \ref{ex:the-old-example}, the Head is adjective ``old'' and not a noun as would normally be expected. The noun modified by the adjective ``old'', also the \textit{pivotal element} of the group defined in Section \ref{sec:elements-of-structure}, is left covert and it should consequently be recoverable anaphorically or cataphorically from the context. We can insert a generic noun ``one'' to form a canonical noun group ``the old one''. In such cases when the pivotal noun is missing, the logical Head is conflated with other element in this case the Epithet. The group class is not raised from the word class to quality group but is identified by internal structure  of the whole group and in this case the presence of determiner signals a nominal class. Similarly, in Example \ref{ex:three}, ``three'' in Sydney grammar is a nominal group where the Thing is missing and the Head has shifted left towards the Numeral. With examples as these ones, Fawcett argues that none of the constituting elements of the unit is mandatorily realised, even the so called pivotal element which is the group defining element. In Chapter \ref{ch:gbt} is provided an in depth description of the recovering mechanisms for covert nominal elements at the level of the clause.
 
-In the Example \ref{ex:three} the Thing is missing and the Head has shifted left towards the Numeral ``three''. In Cardiff terms we say that the Head (also the pivotal element of the nominal group) is missing. In such cases the pivotal element is conditioner covert and can be filled by the impersonal pronoun ``one(s)'' that shall be anaphorically resolved in the discourse context. With examples as these ones, Fawcett argues that none of the constituting elements of the unit is mandatorily realised, even the so called \textit{pivotal element} which is the group defining element. 
+% In Cardiff terms the Head (also the pivotal element of the nominal group) is missing. In such cases the pivotal element is conditioner covert and can be filled by the impersonal pronoun ``one(s)'' that shall be anaphorically resolved in the discourse context. 
+ 
 
-The logical structure heads, of Sydney grammar, are always realised and correspond to dependency heads established in the Stanford dependency tree which will be described in Chapter \ref{ch:dependecy-grappamr}. Based on the unit class, the logical structure heads are conflated with specific functions. For instance in nominal group the Head is usually conflated with the Thing, in quality group with the Apex, in quantity group with the Amount, in clause with the Main Verb and so on. But in language it is not unusual to have nominal groups with the Thing missing or elliptic clauses with missing the Main verb so no rigid correspondence can be established between the Head, unit class and the corresponding pivotal element of the group. So because the unit class depends on its internal structure, this leads to a circular interdependency between the unit class and the unit structure. To solve this issue Fawcett argues for a bottom-up approach where head-modifier relations are identified between lexical items and then between units (i.e. groups and clauses) serving as cues to identify elements of the higher unit and therefore its class. Usually the class membership of head is raised to the unit class although sometimes the presence or absence of certain elements (during the reconstruction process) may alter the unit class to a different one from the logical head. 
+%\begin{table}[!ht]
+%    \centering
+%    \resizebox{\textwidth}{!}{%
+%        \begin{tabular}{|c|c|c|c|c|c|}
+%            \hline
+%            & \textit{I}    & \textit{will}   & \textit{give}   & \textit{you}  & \textit{three} \\ \hline
+%            \multirow{4}{*}{Sydney Grammar (interpersonal)}    & Subject       & Finite          & Predicator      & Complement    & Adjunct        \\ \cline{2-6} 
+%            & nominal group & \multicolumn{2}{c|}{verbal group} & nominal group & nominal group  \\ \cline{2-6} 
+%            & Thing         & Auxiliary       & Event           & Thing         & Numerative     \\ \cline{2-6} 
+%            & pronoun       & modal verb      & verb            & pronoun       & numeral        \\ \hline
+%            \multirow{2}{*}{Cardiff Grammar (syntax)} & Subject       & Operator        & Main Verb       & Complement    & Adjunct        \\ \cline{2-6} 
+%            & pronoun       & modal verb      & verb            & pronoun       & numeral        \\ \hline
+%        \end{tabular}%
+%    }
+%    \caption{My caption}
+%    \label{tab:three-sydney}
+%\end{table}
 
-\begin{exe}
-	\ex\label{ex:the-old-example} The old shall pass first.
-\end{exe}
 
-%TODO[JB] is this all relevant for parsing: you should make the relevance of all these discussions for the purpose of parsing much clearer: at present this often goes under.
-Consider the nominal group ``The old'' which is the subject in example \ref{ex:the-old-example}. The head of the nominal group is the adjective ``old'' and not a noun as would normally be expected. The noun modified by the adjective ``old'' is left covert and it should consequently be recoverable from the context. We can insert a generic noun ``one'' to form a canonical noun group:``the old one''. In such cases when the head noun is missing, the logical head is conflated with other element in this case the Epithet. The group class is not raised from the word class to quality group but is identified by internal structure  of the whole group and in this case the presence of determiner signals a nominal class. 
-%TODO[JB] don't explain what you said after, explain it before you say it!
-%I point out through this example that the class of the head is not always raised to establish the group class but the whole underlying structure determines the group class.
+%TODO follow the argumentation along the promisses in the section introduction
 
-Conclusion: 
-I use the Sydney approach to heads which is syntactically motivated, It is possible to convert to Cardiff semantic heads in a second step. Currently is not implemented and it is subject to future work. 
+In this work I adopt the principles for establishing the logical structure of Sydney Grammar. It resonates closely with the traditional ``semantically blinded'' grammars because and it always provides a Head element even if it differs from the syntactically motivated pivotal element in Cardiff Grammar. Moreover these logical Heads correspond to dependency heads established in the Stanford dependency parse. Chapter \ref{ch:dependecy-grappamr} provides the grounds for cross-theoretical mappings and the empirical evaluation in Chapter \ref{ch:evaluation} validates it.
 
-\subsection{Systems and systemic networks}
-%\label{sec:system}
-% exemplification of system
-%TODO: Margaret Berry on Systems/Networks, David Butt on Systems, see citations in Rebekas's Thesis
-%TODO: write email to Rebekah and ask about theory comparison literature
+In language is not unusual to have nominal groups with the Thing missing or elliptic clauses with the Main verb missing therefore no rigid correspondence can be established between the logical Head and unit class. 
+%And because the unit class depends on its internal structure (in Cardiff school), this leads to a circular interdependency between the unit class and the unit structure. 
+In this thesis the structure creation is performed in two steps first establishing the group boundaries and the unambiguous unit elements through a top down perspective (that is Sydney approach to unit creation) and second for each established group evaluate the internal structure in order to establish the group class (that is Cardiff approach to group formation). This process is detailed in the Chapter \ref{ch:parsing-algorithm}.
 
-Fore example consider polarity system represented in figure \ref{fig:polarity}. It contains two choices either positive or negative. And when one says it is positive one means not negative which is obvious and self evident how the two choices are mutually exclusive.
+The evaluation in the second step, besides finalising the syntactically motivated unit structure, can as well assign semantically motivated unit structure. This part however is left out in the current thesis for the groups and only the clauses receive semantic role labels and process types described in Chapter \ref{ch:semantic-parsing}.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Figures/SFL-grammar/polarity-system.pdf}
-	\caption{System network of POLARITY}
-	\label{fig:polarity}
-\end{figure}
+%To solve th issue Fawcett argues for a bottom-up approach where head-modifier relations are identified between lexical items and then between units (i.e. groups and clauses) serving as cues to identify elements of the higher unit and therefore its class. Usually the class membership of head is raised to the unit class although sometimes the presence or absence of certain elements (during the reconstruction process) may alter the unit class to a different one from the logical head.
 
-In language it may be often the case that a choice in a system may lead to re-entering the same system again to make another choice again forming this way recursive systems. Alternatively, we can say that a system allows multiple choices for the same unit. These perspectives are the sides of the same coin where the recursion perspective is useful for natural language generation while multiple choice perspective suits better the parsing task and next I explain why by continuing the discussion on polarity system. 
+%Based on the unit class, the logical structure heads are conflated with specific functions. For instance in nominal group the Head is usually conflated with the Thing, in quality group with the Apex, in quantity group with the Amount, in clause with the Main Verb and so on. 
 
-The negative polarity in English clauses can be realised in several ways: via a noun group with intrinsic negative polarity feature like \textit{``nobody''} (\ref{ex:neg1}), negation particle of the verb \textit{``n't''} (\ref{ex:neg2}) or adverb with intrinsic negative polarity (\ref{ex:neg3}). 
+%%TODO conclude
+%Conclusion: 
+%I use the Sydney approach to heads which is syntactically motivated, It is possible to convert to Cardiff semantic heads in a second step. Currently is not implemented and it is subject to future work. 
 
-\begin{exe}
-	\ex\label{ex:neg1} Nobody with any sense is going. 
-	\ex\label{ex:neg2} I don't have to mow my lawn.
-	\ex\label{ex:neg3} Never expect her to come back.
-\end{exe}
 
-Consider now, the cases of double negation from the example \ref{ex:double-negatives1} where two kinds of negations are realised in the same clause: the negation by verb particle \textit{``n't''} and the pronoun \textit{``nobody''}. 
-
-\begin{exe}
-	\ex \label{ex:double-negatives1}
-	Nobody with any sense isn't going. 
-	\ex \label{ex:double-negatives2} I don’t have nobody to mow my lawn.
-\end{exe}
-
-The systems can be recursive and thus choices are not always mutually exclusive. Even though the system network  clearly distinguishes one type of negation from another multiple negations can still occurring simultaneously. Note that this more delicate distinctions in kind of negation, still is a negation and for any of them it is impossible to co-occur with positive polarity. 
-The issue here is not semantic about whether the clause is positive or negative but what kinds of grammatical choices can be identified within the clause. The problem of whether the double negation shall be interpreted as positive is not necessarily as relevant as the task of identifying the two instances of negation. 
-
-Halliday states that the speaker makes only one choice from a system. If this rule is interpreted as two choices from the same system at a time being impossible then it clearly does not cover the recursive systems and needs weakening to accommodate border cases. I propose relaxing the constraint of \textit{mutual exclusivity} to \textit{disjunction}. Correspondingly, two types of systemic networks emerge differing by \textit{the relation among choices}: the original Hallidayan XOR systems (such as POLARITY TYPE in figure \ref{fig:polarity}) and the OR systems for accommodating cases of multiple feature selections (such as SYSTEMIC TYPE in the same figure).
-
-% entry condition relationship types
-As system is expanded in delicacy to forms a systemic network of choices. Choice of a feature in one system becomes the entry condition for choices in more delicate systems below. I turn now to discuss the relationship types of relationships forming entry conditions to more delicate systems. For instance, an increase in delicacy can be seen as a taxonomic ``is a'' relationship between features of higher systems and lower systems like in the case of POLARITY TYPE and NEGATIVE TYPE in figure \ref{fig:polarity}. 
-
-\begin{figure}[hbtp]
-	\centering
-	\includegraphics[width=0.5\textwidth]{Figures/SFL-grammar/finitness-system.pdf}
-	\caption{A fraction of the finiteness system where increase of delicacy is not ``is a'' relation}
-	\label{fig:finitness-fraction}
-\end{figure}
-
-The activation relation among systems in the cline of delicacy is not always taxonomic. Another relation is ``enables selection of'' without a any sub-categorisation implied. For example see FINITENESS system in figure \ref{fig:finitness-fraction} where in case that the finite option is selected then what this choice enables are not subtypes of finite but merely other options that become available i.e. DEIXIS and INDICATIVE TYPE. The latter is there because selection of finite implies also selection of indicative feature in a FINITNES's sibling system MOOD-TYPE comprised of options indicative vs. imperative. 
-
-In this subsection I defined the system and systemic network, presented two system types by the relationship between their choices and distinguished two kinds of activation relations between systems on the cline of delicacy.
-
-\subsection{coordination as unit complexing}
+\subsection{Coordination as unit complexing} % coordination as
 %TODO: the complex class is semantic and not grammatical
 %TODO: sometimes the second element is more representative of the complex or the first one maybe, maybe just take the class of the first unit and then ingnore teh class of the rest, or the last one and ingnore classes of the first ones
-
 \label{sec:coordination}
-In Sydney Grammar unit complexes fill an important part of the grammar along with the \textit{taxis relations} which express the interdependency relations in unit complexes. \textit{Parataxis} relations bind units of equal status while the \textit{Hypotaxis} ones bind the dominant and  the dependant units. Fawcett bypasses the taxis relations replacing them with coordination and embedding \citep[271]{Fawcett2000} seemingly an oversimplified approach leading to abandonment of unit complexing as well. While embedding accounts for the depth and complexity of syntax his approach to coordination is problematic. I further discuss and argue for utility of unit-complexes for the coordination but this idea can be further extended to other phenomena which involve fixed idiomatic structures such as comparatives or conditionals.
 
-Coordination is challenge not only for SFL but for other linguistic theories as well. Cardiff Grammar treats this phenomena as two or more units filling or expounding the same element. For example, in table \ref{ex:Cardiff-example-analisys} ``his shirt'' and ``and his jeans'' are two nominal groups that are siblings and both of them fill the same complement. 
+In Sydney Grammar unit complexes fill an important part of the grammar along with the \textit{taxis relations} (Definition \ref{def:taxis}) which express the interdependency relations in unit complexes. \textit{Parataxis} relations bind units of equal status while the \textit{Hypotaxis} ones bind the dominant and the dependant units. Fawcett bypasses the taxis relations replacing them with coordination and embedding \citep[271]{Fawcett2000} leading to abandonment of unit complexing entirely. While embedding elegantly accounts for the depth and complexity of syntax, this approach to coordination is problematic.
+
+Hereafter I discuss the utility and even necessity of keeping unit complexes in parsing. In particular I address the treatment of group and clause \textit{coordination} but the same
+principle applies to fixed idiomatic structures such as \textit{comparatives}, \textit{conditionals} or \textit{appositions}.
+
+Treatment of the coordination phenomena is a challenge not only for SFL but for other linguistic theories as well. Sydney Grammar approaches it through unit complexing and taxis relations while Cardiff Grammar treats this phenomena as multiple distinct units filling or expounding the same element. 
+
+%Sydney
+%%TODO the function of the conjunction is not very clear, with the logical accounts
+
+Table \ref{ex:Sydeny-example-analisys} illustrates an example analysis where the Complement is filled by a homogeneous nominal group complex held together through \textit{paratactic extension} where the first element is a nominal group and the second is nominal group together with the conjunction which is not part of the experiential structure but remains accounted only in the logical structure of the nexus. 
 
 \begin{table}[h]
+    \centering
+    \begin{tabular}{cc|c|c|c|c|c|}
+        \hline
+        \multicolumn{1}{|c|}{\textit{Ike}} & \textit{washed} & \textit{his} & \textit{shirt} & \textit{and} & \textit{his} & \textit{jeans} \\ \hline
+        \multicolumn{1}{|c|}{Subject} & Predicate/Finite & \multicolumn{5}{c|}{Complement} \\ \hline
+        &  & \multicolumn{2}{c|}{1} & \multicolumn{3}{c|}{+2} \\ \cline{3-7} 
+        &  & Deictic & Thing &  & Deictic & Thing \\ \cline{3-4} \cline{6-7} 
+    \end{tabular}
+    \caption{Clause with nominal group complex}
+    \label{ex:Sydeny-example-analisys}
+\end{table}
+
+In Table \ref{tab:sydney-coordination-ifg} the Epithet is filled by a nexus of paratactic extension. The first element of the nexus is the word ``immediate'' and the second element is the set of words ``and not so far distant''. The ``not so far distant'' is an adverbial group with a logical structure of sub-modifiers already discussed in Section \ref{sec:rank-system} and the conjunction ``and'' is left implicitly part of the logical structure of the nexus creating a gap in the structure that is addressed in this discussion. Also note that, in Sydney Grammar the coordination is accounted as unit complex ensuring that only one unit fills an element of the parent, in contrast, as we will see below, to Cardiff Grammar. 
+
+\begin{table}[H]
+    \centering
+%    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{ccc|c|c|c|c|c}
+            \hline
+            \multicolumn{1}{|c|}{\textit{the}} & \multicolumn{1}{c|}{\textit{immediate}} & \textit{and}          & \textit{not} & \textit{so} & \textit{far} & \textit{distant}          & \multicolumn{1}{c|}{\textit{future}} \\ \hline
+            \multicolumn{7}{|c|}{Modifier} & \multicolumn{1}{c|}{Head} \\ \hline
+            \multicolumn{1}{|c|}{$\gamma$}            & \multicolumn{6}{c|}{$\beta$}                                                                                                                  & \multicolumn{1}{c|}{$\alpha$}               \\ \hline
+            \multicolumn{1}{|c|}{Deictic}      & \multicolumn{6}{c|}{Epithet}                                                                                                            & \multicolumn{1}{c|}{Thing}           \\ \hline
+            \multicolumn{1}{c|}{}              & \multicolumn{1}{c|}{1}                  & \multicolumn{5}{c|}{+2}                                                                       &                                      \\ \cline{2-7}
+            \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l|}{} & \multicolumn{3}{c|}{Sub-Modifier} & Sub-Head & \multicolumn{1}{l}{} \\ \cline{4-7}
+            &  &  & $\delta$ & $\gamma$ & $\beta$ & $\alpha$ &  \\ \cline{4-7}
+        \end{tabular}%
+%    }
+    \caption{Nominal group with word complex from \citep[564]{Halliday2013}}
+    \label{tab:sydney-coordination-ifg}
+\end{table}
+
+%Cardiff
+%%TODO the filling of an element with a conjunction is not right, 
+%%TODO conjunction element should be outside the group
+%TODO first group/word can be the head and the rest modifier or the conjunction can be head and the others modifier, but both are tricky, how about apposition? 
+
+In Table \ref{ex:Cardiff-example-analisys} is presented an example of analysis with Cardiff Grammar. The Complement is filled by two \textit{sibling} nominal groups ``his shirt'' and ``and his jeans'' that are both of them fill the same element in accordance to Definition ref{def:coordination}. The conjunction ``and'' is accounted directly as part of the nominal group structure.
+
+\begin{table}[!ht]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\hline
-		\textit{Ike} & \textit{washed} & \textit{his} & \textit{shirt} & \textit{and} & \textit{his} & \textit{jeans} \\ \hline
-		Subject         & Main Verb               & \multicolumn{5}{c|}{Complement}                                                    \\ \hline
-		&                 & \multicolumn{2}{c|}{Nominal Group}      & \multicolumn{3}{c|}{Nominal Group}                     \\ \hline
-		&                 & Deictic Determiner           & Head              & \&           & Deictic Determiner           & Head              \\ \hline
-	\end{tabular}
+        \begin{tabular}{cc|c|c|c|c|c|}
+            \hline
+            \multicolumn{1}{|c|}{\textit{Ike}} & \textit{washed} & \textit{his}       & \textit{shirt} & \textit{and} & \textit{his}       & \textit{jeans} \\ \hline
+            \multicolumn{1}{|c|}{Subject}      & Main Verb       & \multicolumn{5}{c|}{Complement}                                                          \\ \hline
+             &  & Deictic Determiner & Head & \& & Deictic Determiner & Head \\ \cline{3-7} 
+        \end{tabular}%
 	\caption{Coordination analysis in Cardiff Grammar}
 	\label{ex:Cardiff-example-analisys}
 \end{table}
 
-In Sydney Grammar the coordination is analised as a \textit{complex unit} held together through paratactic relations ensuring that only one unit fills an element of the parent constituent in our example the complement of the clause. The table \ref{ex:Sydeny-example-analisys} illustrates an example analysis involving the complex unit approach. 
+Opinions are divided (between Sydney and Cardiff schools) whether to invite the notion of a complex unit to handle coordination or not. If we side with Cardiff grammar and dismiss the unit complex then we allow an element to be filled by more than one units. And this is a problem because if we do not account unit elements each in a unique place within the unit structure then we loose the capacity to order them. Therefore in this thesis I adopt the Sydney definition of structure (Definition \ref{def:structure}) that constraints each element into a single place that is filled by another unit. Therefore the conjunction must be a nexus acting as a single unit filling a single element. 
 
-\begin{table}[h]
-	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\hline
-		\textit{Ike}     & \textit{washed}      & \textit{his} & \textit{shirt} & \textit{and} & \textit{his} & \textit{jeans} \\ \hline
-		Subject          & Predicate/Finite     & \multicolumn{5}{c|}{Complement}                                              \\ \hline
-		\multicolumn{2}{|c|}{\multirow{3}{*}{}} & \multicolumn{5}{c|}{nominal group complex}                                   \\ \cline{3-7} 
-		\multicolumn{2}{|c|}{}                  & \multicolumn{2}{c|}{1}        & \multicolumn{3}{c|}{+2}                      \\ \cline{3-7} 
-		\multicolumn{2}{|c|}{}                  & Deictic      & Thing          & \&           & Deictic      & Thing          \\ \hline
-	\end{tabular}
-	\caption{Coordination analysis in Sydney Grammar}
-	\label{ex:Sydeny-example-analisys}
-\end{table}
+I argue for adoption of such unit type in order to ensure that maximum one unit can fill the place of an element. In the theory of grammar, only units are accounted for structure while the elements can only be filled by an unit (see Figure \ref{fig:structure-representation}). Allowing multiple units to fill an element requires accounting at least for the \textit{order} if not also for the relation between the filler units. The structure as it is described in theories of grammar by Halliday \citep{Halliday2002} and Fawcett \citep{Fawcett2000} is defined by the unit and not the element. There is no direct reference in the theory to the unit ordering. Instead, the order relation is accounted in the structure through the concept of place. A unit has a specific possible structure in terms of places of elements which hold absolute position in the unit structure or relative one to each other. Therefore if an element is filled by two units simultaneously it constitutes a violation of the above principle as the order of those units is not accounted for but it matters which is easy to show in the following examples.
 
-The opinions are divided by whether to invite the notion of a complex unit to handle coordination or not. If we dismiss the unit complex then an element could be filled by more than one units and if we adopt it then the complexing relations need to be accounted along with unit class and what is its structure.
-
-I would argue for adoption of such unit type for two reasons. First, only units are accounted for structure while the elements can only be filled by an unit. Allowing multiple units to fill an element requires accounting at least for order if not also for the relation between the units. The structure as it is described in theories of grammar by Halliday \citep{Halliday2002} and Fawcett \citep{Fawcett2000} is defined in the unit and not the element. A unit has a specific possible structure in terms of places of elements however if an element is filled by two units simultaneously it constitutes a violation of the above principle as the order of those units is not accounted for but it matters.
 \begin{exe}
 	\ex\label{ex:conj2-extra-marker1}
 	(Both my wife and her friend) arrived late.  
@@ -1021,26 +1066,72 @@ I would argue for adoption of such unit type for two reasons. First, only units 
 	* I want the front wall (or in green either in blue). 
 \end{exe}
 
-If the order would not have mattered then we could say that the conjunctions from the example \ref{ex:conj2-extra-marker1} can be reformulated into \ref{ex:conj2-extra-marker11} and the one from \ref{ex:conj2-extra-marker2} into \ref{ex:conj2-extra-marker21}. But such reformulations are grammatically incorrect. Obviously the places do matter and they need to be described in the unit structure. 
+If the order would not have mattered then we could say that the conjunctions from the example \ref{ex:conj2-extra-marker1} can be reformulated into \ref{ex:conj2-extra-marker11} and the one from \ref{ex:conj2-extra-marker2} into \ref{ex:conj2-extra-marker21}. But such reformulations are grammatically incorrect. Obviously the places do matter and they need to be accounted in the unit structure as one element per place with no more than a single unit filling it.
 
-Secondly, the lexical items that signal the conjunction are not a part of the conjuncted units. This is contrary to what is being described in Cardiff and Sydney grammars. Fawcett present the Linker elements (\&) which are filled by conjunctions as parts of virtually any unit class placed in the first position of the unit. Halliday omits to discuss in IFG \citep{Halliday2013} the place of Linkers but implicitly proposes the same as Fawcett through his examples of paratactic relations at various rank levels where the lexical items signalling conjunction are included in the units they precede.
+I turn now to the role and position of lexical items signalling the conjunction which I consider having no place in the structure of the conjuncted units but outside of them, that way forming together a higher order unit, the \textit{complex unit}. This is contrary to what is being described in Cardiff and Sydney grammars for different reasons. 
 
-For example in the ``or in green'' the presence of ``or'' signalls the presence at least of one more unit of the same nature and does not contribute to the meaning of the prepositional group but to the meaning outside the group requiring presence of a sibling. Even more, the lack of a sibling most of the time would constitute an ungrammatical formulation. I say sometimes because it is perfectly acceptable to start a clause/sentence with a conjunction most often ``but''. But even in those cases it still invites the presence of a sibling clause/sentence preceding the current one to be resolved at the discourse level. 
+Fawcett present the Linker elements (\&) which are filled by conjunctions as parts of virtually any unit class placed in the first position of the unit. For example in the ``or in green'' the presence of ``or'' signals the presence at least of one more unit of the same nature and does not contribute to the meaning of the prepositional group but to the meaning outside the group requiring presence of a sibling. Even more, the lack of a sibling most of the time would constitute an ungrammatical formulation. The only potential objection here is for the perfectly acceptable cases of clauses/sentences starting with a conjunction such as ``and'' or ``but''. In those cases the conjunction plays a textual function and still invites the presence of a sibling clause/sentence preceding the current one to be resolved in a clause complex or discourse level. 
 
-So conjunctions and pre-conjunctions shall not be placed as elements of the conjuncted units because they do not contribute to their meaning.
+Halliday omits to discuss in IFG \citep{Halliday2013} the place of Linkers. He implicitly proposes the same as Fawcett through his examples of paratactic relations at various rank levels \citep[422, 534, 564, 566]{Halliday2013} that the lexical items signalling conjunction are included in the units they precede in the logical structure but not the experiential one. The main insufficiency here is that the logical structure does not provide any meaningful elements or unit class but some sort of proto-elements that resemble rather places than any functions. In this sense I consider treatment of conjunctions insufficiently accounted in IFG.  
 
-Adopting the unit complex and in particular coordination unit requires two clarifications (1) does the unit complex carry a syntactic class, and if so according to which criteria is it established? (2) Does it have any intrinsic features or not?
+So conjunctions and pre-conjunctions shall not be placed inside the conjuncted units because they do not contribute to their meaning. They shall be enclosed as Linkers into unit complexes. But if we adopt the unit complexing then we need to define a unit structure. Hence I propose the following generic structure for the \textit{coordination unit}.
 
-Zhang states in her thesis that the coordinating constructions do not have any categorial features thus there is no need to provide a new unit type. Instead the categorial properties of the conjuncts are transferred upwards \citep{NinaZhang2010}. For example if two nominal groups are conjuncted then the complex receives the nominal class. This principle holds for most of the cases however there are rare cases when the units are of different classes. Consider the example \ref{ex:conj3-different-unit-types} where the conjuncts are a nominal group ``last Monday'' and a prepositional group ``during the previous weekend''.
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        Pre-Linker & Initiating Conjunct & ... Conjunct ... & Linker & Conjunct \\ \hline
+        \multicolumn{2}{|c|}{1} & + 2 ... + n_{-1} & \multicolumn{2}{c|}{+ n} \\ \hline
+    \end{tabular}
+    \caption{Generic structure of the coordination unit}
+    \label{tab:coordination-complex}
+\end{table}
+
+In Table \ref{tab:coordination-complex} the first row presents a series of Conjuncts where the first one is initiating or the head and the rest are continuation Conjuncts of the former. In the first place there may be a Pre-Linker element such as ``both'' or ``either'' for example but it is optional and in the place before the last one is located the Linker element that determines the type of coordination. On the second row I provide, for orientation purposes, the Sydney logical structure of a paratactic expansion applied to the coordination unit complex. Note that the Pre-Linker and the Linker elements are merged with the conjuncted units.
+
+Applying this structure to the previous example yields analysis such as in Table \ref{tab:distant-future-compelx}. The nominal group has the Epithet element filled by a coordination group formed of two Conjuncts and a Linker.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c|c|c|c|c|c}
+        \hline
+        \multicolumn{1}{|c|}{\textit{the}} & \textit{immediate} & \textit{and} & \textit{not} & \textit{so} & \textit{far} & \textit{distant} & \multicolumn{1}{c|}{\textit{future}} \\ \hline
+        \multicolumn{1}{|c|}{Determiner} & \multicolumn{6}{c|}{Epithet} & \multicolumn{1}{c|}{Head} \\ \hline
+        & Initiating Conjunct & Linker & \multicolumn{4}{c|}{Conjunct} &  \\ \cline{2-7}
+    \end{tabular}
+    \caption{Example analysis with coordination unit complex structure}
+    \label{tab:distant-future-compelx}
+\end{table}
+
+Adopting the unit complex and in particular coordination unit requires two more clarifications (1) does the complex unit carry a syntactic class, and if so according to which criteria is it established? (2) Does it have any intrinsic features or all of them are inherited from the conjuncts?
+
+Zhang states in her thesis that the coordinating constructions do not have any categorial features thus there is no need to provide a new unit type. Instead the categorial properties of the conjuncts are transferred upwards \citep{NinaZhang2010}. For example if two nominal groups are conjuncted then the complex receives the nominal class.  
+
+This principle holds for most of the cases however there are rare cases when the units are of different classes. Consider \ref{ex:conj3-different-unit-types} analysed in Table \ref{tab:mixed-coordination} where the conjuncts are a nominal group ``last Monday'' and a prepositional group ``during the previous weekend''.
+
 \begin{exe}
 	\ex\label{ex:conj3-different-unit-types}
 	I lost it (either last Monday or during the previous weekend). 
 \end{exe}
 
-%In unit types are of different classes: a nominal group and a prepositional phrase.
-In this case there are two unit types that can be raised and it is not clear how to resolve this case. Options are to leave the class unspecified, transfer the class of the first unit upwards, or semantically resolve the class as both represent temporal circumstances even if they are realised through two different syntactic categories. Another option is to leave the class generic and assign the conjunction unit the class of \textit{``coordination complex''} without sub-classifying it according to the constituent units below, i.e. without upward unit class transfer. 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textit{either} & \textit{last} & \textit{Monday} & \textit{or} & \textit{during} & \textit{the} & \textit{previous} & \textit{weekend} \\ \hline
+        Pre-Linker & \multicolumn{2}{c|}{Initiating Conjunct} & Linker & \multicolumn{4}{c|}{Conjunct} \\ \hline
+    \end{tabular}
+    \caption{Coordination group with mixed class conjuncts}
+    \label{tab:mixed-coordination}
+\end{table}
 
-I address the second question regarding the intrinsic features of the complex unit. The coordination complex can have categorial features which none of the constituting units has. In the example \ref{ex:conj-plural-right} the conjunction of two singular noun groups requires plural agreement with the verb. Even though semantic interpretation that only one item is selected at a time, syntactically both items are listed in the clause and attempting third person singular verb forms like in \ref{ex:conj-plural-wrong} is grammatically incorrect.
+%In unit types are of different classes: a nominal group and a prepositional phrase.
+In this case there are two unit types that can be raised and it is not clear how to resolve this case. Options are (a) to leave the generic class \textit{coordination complex}, (b) transfer the class of the first unit upwards, or (c) semantically resolve the class as both represent temporal circumstances even if they are realised through two different syntactic categories. This means that if no sub-classification is provided based on the constituent units below than there is no need to project/transfer upward the class of the conjunct units. In this work I decided to leave the class generic and leave for the future an extensive unit complex classification.
+
+I turn now to the last issue of this discussion, specifically whether the complex unit may have intrinsic features emerging from the conjunct elements. 
+
+In the example \ref{ex:conj-plural-right} the conjunction of two singular noun groups requires plural agreement with the verb. Even though semantic interpretation that only one item is selected at a time, syntactically both items are listed in the clause and attempting third person singular verb forms in \ref{ex:conj-plural-wrong} is grammatically incorrect. That leads to the conclusion that the coordination complex can have categorial features which none of the constituting units has. 
+
 \begin{exe}
 	\ex\label{ex:conj-plural-right}
 	A pencil or a pen \textbf{are} equally good as a smart-phone.
@@ -1048,36 +1139,41 @@ I address the second question regarding the intrinsic features of the complex un
 	\ex\label{ex:conj-plural-wrong} * A pencil or a pen \textbf{is} equally good as a smart-phone.
 	%\ex\label{ex:conj-plural-wrong1} * A fork and knife \textit{has} to be placed on the sides of each plate.
 \end{exe}
-\begin{figure}[hbtp]
+
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=\textwidth]{Figures/SFL-grammar/conjunction-system.pdf}
 	\caption{Systemic network of coordination types}
 	\label{fig:conj-rel-types}
 \end{figure}
 
-In the case of nominal group conjunction we can see that the plural feature emerges even if each individual unit is singular. For other unit classes it is not so obvious whether there are any linguistic features that emerge to the conjunction level. The meaning variation is rather semantic as for example conjunction of two verbs or clauses might mean very different things like consecutive actions, concomitant actions or presence of two states at the same time and so on. This brings us to another feature of the coordination complex - the type of the relationship it constructs. The lexical choice of head conjunct is the indicator of relationship among the conjuncts. Either \textit{and}, \textit{or}, \textit{but}, \textit{yet}, \textit{for}, \textit{nor} or \textit{so} they express different meanings which are well representable as a  relationship types systemic network in figure \ref{fig:conj-rel-types}.
-
+In the case of nominal group conjunction we can see that the plural feature emerges even if each individual unit is singular. For other unit classes it is not so obvious whether there are any linguistic features that emerge at the conjunction level. The meaning variation is semantic as for example conjunction of two verbs or clauses might mean very different things such as consecutive actions, concomitant actions or presence of two states at the same time and so on. This brings us to another feature of the coordination complex - the type of the relationship it constructs. The lexical items expounding the Linker and Pre-Linker (e.g. \textit{and}, \textit{or}, \textit{but}, \textit{yet}, \textit{for}, \textit{nor} or \textit{so}) are indicator of relationship among the conjuncts and together can be systematised as the relationship types in the systemic network in \mbox{Figure \ref{fig:conj-rel-types}}.
 
 %The coordination complex has a structure as depicted in figure \ref{fig:coord-complex-elements}. The lexical item signalling the coordination complex is the head of the construction. The Conjunct elements are the ones being related to each other and they can be filled or expounded by virtually any unit type. The Enumerator element substitutes the head and delimits the Conjuncts when there are more than two of them. The Enumerator is almost always a comma in written texts. 
 
-Adopting the unit complexing enables various kinds of constructions and coordination is only one of them. Below we discuss taxis relations and their role in unit complexing.
+%Adopting the unit complexing enables various kinds of constructions and coordination is only one of them. Below we discuss taxis relations and their role in unit complexing.
 
-\section{Critical discussion of the grammatical units}
+This section laid out how and why I treat the coordination phenomena in parsing. I adopt the unit complexing mechanism with taxis relations described in Sydney grammar in order to account for a new unit class, the \textit{coordination unit}. I do that to ensure that each element of a unit is filled by no more than one other unit contrary to what Cardiff grammar proposes (see Definition \ref{def:coordination}). But taxis relations in Sydney grammars are represented via logical structures which is not rich enough to account for internal structure of the coordination unit. Therefore I also propose here a unit structure in terms of ordered functional elements just as for the rest of unit classes. 
+%This discussion aimed to solve the specifics of the coordination phenomena but in part it is generic enough to be applied to other unit complex types especially the ones with a fixes idiomatic structure such as comparatives, conditionals and so on. 
+%I turn now to briefly discuss the units of
+
+\section{The grammatical units for parsing}
 \label{sec:discussion-unit-classes}
 
-Now that the important theoretical details have been covered I would like focus on the grammars of the two schools. They have common parts and also differ in large parts on their paradigmatic and syntagmatic descriptions. This section discusses the main units considered in each of the grammars. Like in the previous section I argue on pragmatic grounds for adoption of unit structures from either grammar. This may seem like an inconsistency add below I try to convince you of the opposite below. The argument runs along the line that some unit structures are closer to the syntactic analysis and thus are easier to detect and parse and the other ones may be a level of abstraction higher falling more on the semantic grounds thus becoming more difficult to capture in structural variance and requiring lexico-semantic resources.
+Now that the important theoretical details have been covered I would like focus on the specific grammars of the two schools. They have common parts and also differ in large parts on their paradigmatic and syntagmatic descriptions. This section discusses the main units considered in each of the grammars. As in the previous section I argue on pragmatic grounds for the adoption of unit structures from one or the other grammar. The argument runs along the lines that some unit structures are closer to the traditional syntactic analysis and thus are easier to detect and parse and the other ones may be a level of abstraction higher falling more on semantic grounds and thus becoming more difficult to capture in structural variance and requiring lexico-semantic resources.
 
-For the reasons of limited space I skipped introducing the Sydney and Cardiff grammars and in turn assume that the reader is familiar with the details fo both of them. And for a general overview of the unit structure in each of the grammars please refer to Appendix \ref{ch:syntax-overview}. Nevertheless, as it is a parallel contrastive discussion, even if the reader is familiar with one grammar only I hope it becomes clear how does certain phenomena are dealt with in the other one. 
+%For the reasons of limited space I skipped introducing the Sydney and Cardiff grammars and in turn assume that the reader is familiar with the details fo both of them. And for a general overview of the unit structure in each of the grammars please refer to Appendix \ref{ch:syntax-overview}. 
+%Nevertheless, as it is a parallel contrastive discussion, even if the reader is familiar with one grammar only I hope it becomes clear how does certain phenomena are dealt with in the other one. 
 
-\subsection{The verbal group and clause division}
+\subsection{Verbal group and clause boundaries}
 \label{sec:verbal-grpoup-and-clause-division}
 In Sydney Grammar the verbal group is described as an expansion of a verb just like the nominal group is the expansion of the noun\citep[396]{Halliday2013}. There are certainly words that are closely related and syntactically dependent on the verb all together forming a unit that functions as a whole. For example the auxiliary verbs, adverbs or the negation particles are words that are directly linked to a lexical verb. The verb group functions as Finite + Predicator elements of the clause in mood structure and as Process in Transitivity structure. 
 
 In Cardiff Grammar the verb group is dissolved moving the Main Verb as the pivotal element of the Clause unit. All the elements that form the clause structure and those that form the verb group structure are brought up together to the same level as elements of a clause. The clause structure in Cardiff Grammar comprises elements with clause related functions(like Subject, Adjunct, Complement etc.) and other elements with Main Verb related functions(Auxiliary, Negation particle, Finite operator etc.).
 
-Regarding from the Hallidayan rank scale perspective, merging the elements of the verb group into clause structure is not permitted because the units are of different rank scales. However it is not a problem for the relaxed rank scale version presented in subsection \ref{sec:rank-system}. The reason for adopting such an approach is best illustrated via complex verb groups with more than one non-auxiliary verb such as in examples \ref{ex:complex-verb-groups1}--\ref{ex:complex-verb-groups3}. 
+Regarded from the Hallidayan rank scale perspective, merging the elements of the verb group into clause structure is not permitted because the units are at different ranks. However it is not a problem for the relaxed rank scale version presented in subsection \ref{sec:rank-system}. The reason for adopting such an approach is best illustrated via complex verb groups with more than one non-auxiliary verb such as in examples \ref{ex:complex-verb-groups1}--\ref{ex:complex-verb-groups3}. 
 
-Next I address the impact of this merger on (a) the clause structure (b) the clause boundaries and (c) semantic role distribution within the clause.
+I begin by addressing the impact of this merger on (a) the clause structure (b) the clause boundaries and (c) semantic role distribution within the clause.
 
 \begin{exe}
 	\ex\label{ex:complex-verb-groups1}
@@ -1089,25 +1185,33 @@ Next I address the impact of this merger on (a) the clause structure (b) the cla
 \end{exe}
 
 %Then answers to the above questions boil down to whether we allow for more than one lexical verb per predicate or not. 
-In Sydney Grammar ``started to investigate'' (example \ref{ex:complex-verb-groups1}) is considered a single predicate of investigation which has specified the aspect of event incipiency despite the fact that there are two lexical verbs within the same verbal group. The ``starting'' doesn't constitute any kind of process in semantic terms but rather specifies aspectual information about the investigation process. The boundaries of the clause governed by this predicate stretch to entire sentence.
+In Sydney Grammar ``started to investigate'' (in \ref{ex:complex-verb-groups1}) is considered a single predicate of investigation which has specified the aspect of event incipiency despite the fact that there are two lexical verbs within the same verbal group. The ``starting'' doesn't constitute any kind of process in semantic terms but rather specifies aspectual information about the investigation process. 
+This is argued by looking at the conditions on the participants and it is equivalent in a formal approach to looking at where the selection restrictions for complements come from.
+The boundaries of the clause governed by this predicate stretch to the entire sentence.
 
-Semantically it is a sound approach because despite the presence of two lexical verbs there is only one event. However allowing such compositions leads to unwanted syntactic analysis for multiple lexical verb cases like in example \ref{ex:complex-verb-groups3}.To solve this kind of problems Fawcett dismisses the verb groups and merges their elements into clause structure. He proposes the syntactically elegant principle of \textit{``one main verb per clause''} \citep{Fawcett2008}. Apply this principle to the same sentence yields a structure of two clauses illustrated in example \ref{ex:complex-verb-groups2} where the main clause is governed by the verb ``to start'' and the embedded one by the verb ``to investigate''. Note the conflict between ``one main verb per clause'' with Halliday's principle that only whole units form the constituency of others (the (c) principle of rank scale described in subsection \ref{sec:rank-system}). So allowing incomplete groups into the constituency structure would breach entire idea of unit based constituency. 
+Semantically it is a sound approach because despite the presence of two lexical verbs there is only one event. However allowing such compositions leads to unwanted syntactic analysis for multiple lexical verb cases in examples such as \ref{ex:complex-verb-groups3}. To solve this kind of problem Fawcett dismisses the verb groups and merges their elements into clause structure. He proposes the syntactically elegant principle of \textit{one main verb per clause} \citep{Fawcett2008}. Applying this principle to the same sentence yields a structure of two clauses illustrated in example \ref{ex:complex-verb-groups2} where the main clause is governed by the verb ``to start'' and the embedded one by the verb ``to investigate''. Note the conflict between ``one main verb per clause'' with Halliday's principle that only whole units form the constituency of others (the (c) principle of rank scale described in subsection \ref{sec:rank-system}). So allowing incomplete groups into the constituency structure would breach the entire idea of unit based constituency. 
 
-Semantically the clause in SFL is a description of an event or situation as a figure with a process, participants and eventually circumstances where the process is realised through a lexical verb. Looking back to our examples, does the verb ``to start'' really describes a process or merely an aspect of it? Halliday treats such verbs as aspectual and when co-occurring with other lexical verbs are considered to form a single predicate. Accommodating Fawcett's stance, mentioned above and contradicting Halliday's approach, requires weakening the semantic requirement and allowing aspectual verbs to form clauses that contribute \textit{aspectually or modally} to the embedded ones. I mention also the modal contribution because some verbs like \textit{want, wish, hope}, etc. behave syntactically exactly like the aspectual ones. Moreover, Fawcett introduces into Cardiff Grammar Transitivity network ``influential'' process type including all categories of meanings that semantically function as process modifiers: tentative, failing, starting, ending etc.
+Semantically the clause in SFL is a description of an event or situation as a figure with a process, participants and eventually circumstances where the process is realised through a lexical verb. Looking back to our examples, does the verb ``to start'' really describes a process or merely an aspect of it? Halliday treats such verbs as aspectual and when co-occurring with other lexical verbs they are considered to form a single predicate. Accommodating Fawcett's stance, mentioned above and contradicting Halliday's approach, requires weakening the semantic requirement and allowing aspectual verbs to form clauses that contribute \textit{aspectually or modally} to the embedded ones. I mention also the modal contribution because some verbs like \textit{want, wish, hope} and others behave syntactically like the aspectual ones. Moreover, Fawcett introduces into the Cardiff Grammar Transitivity network an \textit{influential} process type including all categories of meanings that semantically function as process modifiers: tentative, failing, starting, ending etc.
 
-Fawcett's ``one main verb per clause'' principle changes the way clauses are partitioned, leads to abolition of the verbal group and introduces the ``influential'' process type.
+I adopt here Fawcett's ``one main verb per clause'' principle which as a consequence changes the way clauses are partitioned, leads to abolition of the verbal group and introduces the ``influential'' process type. Next I discuss it's impact on the structure of the clause unit. 
 
 \subsection{The Clause}
 \label{sec:cardiff-clause}
-It is commonly agreed in linguistic communities that the unit of clause is one of the core elements in human language. It is consider the syntactic unit that expresses semantic units of a situation referring to a potentially rich array of meanings. The clause structure has been studied for long time and the main clause constituents are roughly the same in SFL as the ones in the traditional grammar \citep{Quirk1985}, transformational grammar \citep{Chomsky1957} an indirectly in dependency grammar \citep{Hudson2010}.
+It is commonly agreed in linguistic communities that the unit of the clause is one of the core elements in human language. 
+%It is considered the syntactic unit that expresses semantic units of a situation referring to a potentially rich array of meanings. The clause structure has been studied for long time and 
+The main clause constituents are roughly the same in SFL as the ones in the traditional grammar \citep{Quirk1985}, transformational grammar \citep{Chomsky1957} an indirectly in dependency grammar \citep{Hudson2010}.
 
-In current work I adopt the Cardiff Grammar Clause structure with the \textit{Main Verb} as pivotal element. Though there is no element that is obligatorily realised in English language, the Main Verb is realised with a reliably high degree of probability. Exceptions are the minor clauses (exclamations, calls, greetings and alarms) that occur in conversational contexts and elliptical clauses \citet{Halliday2013} such as the one in example \ref{ex:elipted-clause} which are not currently covered.
+In current work I adopt the Cardiff Grammar clause structure with the \textit{Main Verb} as pivotal element. Though there is no element that is obligatorily realised in English, I consider in the current work, the Main Verb to be way to flag a clause. In SFL are described clauses without a main verb such as minor clauses (exclamations, calls, greetings and alarms) that occur in conversational contexts and elliptical clauses \citet{Halliday2013} such as the one in example \ref{ex:elipted-clause}, none of which are covered in the present work.
 
 \begin{exe}
 	\ex\label{ex:elipted-clause} They were in the bar, \textit{Dave in the restroom and Sarah by the bar}.
 \end{exe}
 
-As mentioned before \ref{structure} the elements of a structure are defined in terms of their function contributing to the formation of the whole unit. The elements of an English clause are \textit{Subject}, \textit{Finite}, \textit{Main Verb}(a part of the Predicator), up to two \textit{Complements} and a various number of \textit{Adjuncts}. All the elements of the assumed verbal group are part of the clause as well such as Auxiliary Verbs, Main Verb Extensions, Negators etc. (see Appendix \ref{ch:syntax-overview} for a complete list). 
+%As mentioned before in Definition \ref{def:structure} the elements of a structure are defined in terms of their function contributing to the formation of the whole unit.
+I adopt Cardiff Grammar clause structure for English. It is formed of the \textit{Subject}, \textit{Finite}, \textit{Main Verb}, up to two \textit{Complements} and a various number of \textit{Adjuncts}. All the elements of the assumed verbal group are part of the clause as well such as Auxiliary Verbs, Main Verb Extensions, Negators etc. (see Appendix \ref{ch:syntax-overview} for a 
+complete list).
+
+%%TODO insert the complete list as done for nominal group below
 
 %\todo*{}{TODO continue, maybe mention about the clause complexing}
 %SFG accounts for how clauses form nexuses of tactic relations (see Definition \ref{def:taxis}).
@@ -1115,39 +1219,45 @@ As mentioned before \ref{structure} the elements of a structure are defined in t
 
 \subsection{The Nominal Group}
 \label{sec:nominal-group}
-The nominal group expresses things, classes of things or a selection of instances in that class. In the table \ref{tab:example-ng} is presented an example analysis of the nominal group proposed in Sydney grammar \citep[364--369]{Halliday2013}. 
+
+The nominal group expresses things, classes of things or a selection of instances in that class. This section argues for adoption of the Sydney grammar noun group structure with a specific extension. It is that the elements of the nominal group can be filled, in addition to word classes, by the groups as well. This possibility is opened by the rank scale relaxation (Section \ref{sec:rank-system}) and Cardiff embedding principle (Definition \ref{def:embedding}). In addition to that I argue below for working on semantic and syntactic heads in two steps. First create the structure with the syntactic one (the Head) and then derive the semantic one (the Thing).
+
 \begin{table}[!ht]
+    \centering
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		\textit{those} & \textit{two} & \textit{old} & \textit{electric} & \textit{trains} & \textit{from Luxembourg} \\ \hline
-		\multicolumn{4}{|c|}{pre-modifier}                               & head            & post-modifier            \\ \hline
+		\multicolumn{4}{|c|}{Pre-Modifier}                               & Head            & Post-Modifier            \\ \hline
 		Deictic        & Numerative   & Epithet      & Classifier        & Thing           & Qualifyier               \\ \hline
 		determiner     & numeral      & adjective    & adjective         & noun            & prepositional phrase     \\ \hline
 	\end{tabular}
-	\caption{The example of a nominal group in Sydeny Grammar}
+	\caption{An example of a nominal group in the Sydney Grammar \citep[264]{Halliday2013}}
 	\label{tab:example-ng}
 \end{table}
 
-In Sydney Grammar it is constituted by a head nominal item modified by descriptors or selectors such as: \textit{Deictic}, \textit{Numerative}, \textit{Epithet}, \textit{Classifier}, \textit{Thing} and \textit{Qualifier}. Each element has a fairly stable correspondence to the word classes, expected to be expounded by lexical items. The table \ref{tab:function-pos-mapping} presents the mappings between the functions and the word classes.
+In  Table \ref{tab:example-ng} an example analysis is presented of the nominal group proposed in the Sydney grammar \citep[364--369]{Halliday2013}. The Sydney nominal group is constituted by a head nominal item modified by descriptors or selectors such as: \textit{Deictic}, \textit{Numerative}, \textit{Epithet}, \textit{Classifier}, \textit{Thing} and \textit{Qualifier}. Each element has a fairly stable correspondence to the word classes, expected to be expounded by lexical items. Table \ref{tab:function-pos-mapping} presents the mappings between the elements of nominal group and the word classes. 
 
 \begin{table}[h]
-	\begin{tabular}{|c|c|}
+        \centering
+	\begin{tabulary}{0.9\linewidth}{|C|C|}
 		\hline
 		\textbf{Experiential function in noun group} & \textbf{class (of word or unit)} \\ \hline
-		Deictic                             & determiner, predeterminer, pronoun \\ \hline
-		Epithet                             & adjective                    \\ \hline
-		Numerative                          & numeral(ordinal,cardinal)    \\ \hline
-		Classifier                          & adjective, noun              \\ \hline
+		Deictic                             & determiner, predeterminer, pronoun, adjective \\ \hline
+		Numerative                          & numeral(ordinal or cardinal) \\ \hline
+		Epithet                             & adjective \\ \hline
+		Classifier                          & adjective, noun \\ \hline
 		Thing                               & noun                         \\ \hline
 		Qualifier                           & prepositional phrase, clause \\ \hline
-	\end{tabular}
-	\caption{The mapping of noun group elements to classes}
+	\end{tabulary}
+	\caption{Mapping of noun group elements to classes \citep[379]{Halliday2013}}
 	\label{tab:function-pos-mapping}
 \end{table}
 
+Inspired from Cardiff grammar, in addition to word classes, the elements of the nominal group can also be filled by the group classes corresponding to each word class above. This way the Numerative, in addition to words, can be filled by a noun group, Epithet by an adjectival group, Classifier by an adjective or noun group and finally each of the elements can be filled by a coordination group discussed in Section \ref{sec:coordination}.
+
 %There is little variation in how these functions are linked to the word classes. However the variation is not provided in the Sydney Grammar as it is in Cardiff Grammar. The latter provides data driven filling probabilities for each functional element to a set of possible unit classes \citep{Fawcett2000}.
 
-The elements in Cardiff Grammar differ from those of Sydney Grammar. The table \ref{tab:carfiff-ng} exemplifies a noun group analysed with Cardiff Grammar covering all the possible elements. The table \ref{tab:cg-mappings} provides a legend for Cardiff Grammar acronyms along with mappings to unit and word classes that can fill each element.
+The elements in Cardiff Grammar differ from those of Sydney Grammar. Table \ref{tab:carfiff-ng} exemplifies a noun group analysed with Cardiff Grammar covering all the possible elements. Table \ref{tab:cg-mappings} provides a legend for the Cardiff Grammar acronyms along with mappings to unit and word classes that can fill each element.
 
 \begin{table}[H]
 	\resizebox{\linewidth}{!}{
@@ -1162,7 +1272,7 @@ The elements in Cardiff Grammar differ from those of Sydney Grammar. The table \
 	\end{table}
 	%
 	\begin{table}[h]
-		\begin{tabular}{|c|c|c|}
+		\begin{tabulary}{\textwidth}{|C|C|C|}
 			\hline
 			\textbf{symbol} & \textbf{function meaning} & \textbf{class (of word or unit)} \\ \hline
 			rd & representational determiner & noun, noun group \\ \hline
@@ -1179,13 +1289,13 @@ The elements in Cardiff Grammar differ from those of Sydney Grammar. The table \
 			q & qualifier & prepositional phrase, clause \\ \hline
 			\& & linker & conjunction \\ \hline
 			e & ender & punctuation mark \\ \hline
-		\end{tabular}
+		\end{tabulary}
 		\caption{The mapping of noun group elements to classes in Cardiff grammar}
 		\label{tab:cg-mappings}
 	\end{table}
 	%
 	
-	The elements in Cardiff Grammar have are based on semantic criteria supported by lexical and syntactic choices. Consequently some elements cannot be derived based on solely syntactic criteria requiring semantically motivated lexical resources. Semantically bound elements are predominantly determiners \textit{Representational, Partitive, Fractional, Superlative, Typic Determiners} while the rest of the elements: \textit{Head, Qualifier, Selector, Modifier and Deictic, Ordinative and Quantifying Determiners} can be determined solely on the syntactic criteria. The latter correspond fairly well to Sydney version of nominal group which is adopted in present work with the  benefits of relaxed rank system replacing the sub-structures with embedded units and simplifying the syntactic structures. 
+The elements in Cardiff Grammar are based on semantic criteria supported by lexical and syntactic choices. Consequently some elements cannot be derived based on solely syntactic criteria, requiring semantically motivated lexical resources. Semantically bound elements which are a challenge are predominantly determiners \textit{Representational, Partitive, Fractional, Superlative, Typic Determiners} while the rest of the elements: \textit{Head, Qualifier, Selector, Modifier and Deictic, Ordinative and Quantifying Determiners} can be determined solely on the syntactic criteria. The latter correspond fairly well to the Sydney version of nominal group which is adopted in the present work with the benefits of the relaxed rank system replacing the sub-structures with embedded units and simplifying the syntactic structures. 
 	
 	%3. introduction of negation element, linker, punctuation
 	%``No'' as determiner. negative pronoun noone.
@@ -1198,27 +1308,53 @@ The elements in Cardiff Grammar differ from those of Sydney Grammar. The table \
 	%No breathing man or animal can escape that forest alive.
 	%\end{exe} 
 	
-	Another simplification is renouncing to distinction between the Head and Thing \citep[390--396]{Halliday2013} for the semantic ambiguity reasons as the determiners in Cardiff Grammar. Thus if the logical Head of the nominal group is a noun then it is labelled as the Thing leaving the semantic discernment as a secondary process and out of the current scope. Otherwise, in cases of nominal groups without the Thing element, if the Head is pronoun(other than personal), numeral or adjective (mainly superlatives) then they function as Deictic, Numerative or Epithet. So I propose to parse the nominal groups in two steps: first determine the main constituting chunks and assign functions to the unambiguous ones and second perform a semantically driven evaluation for the less certain units.
+Another simplification is renouncing to distinction between the Head and Thing \citep[390--396]{Halliday2013} discussed in Section \ref{sec:heads}. Thus if the logical Head of the nominal group is a noun then it is labelled as the Thing leaving the semantic discernment as a secondary process and out of the current scope. Otherwise, in cases of nominal groups without the Thing element, if the Head is a pronoun (other than personal), numeral or adjective (mainly superlatives) then they function as Deictic, Numerative or Epithet. So, as will be described in Chapter \ref{ch:parsing-algorithm}, I propose to parse the nominal groups in two steps: first determine the main constituting chunks and assign functions to the unambiguous ones and second perform a semantically driven evaluation for the less certain units. 
+%However, in the present work the second step has not been covered. 
 	
 %	\todo*{probably remove: discussion of Head/Thing and Cardiff Grammar determiners distinction}{
-		In other cases the Thing is present but it is different from the Head. Consider example \ref{ex:dectic-ngs}. In Sydney grammar they're treated as a nominal groups with qualifiers introduced by the \textit{``of''} preposition. But these nominal groups are not really about the ``cup'', ``some'' or ``another one'' but rather about ``tea'', ``youngsters'' and ``eruptions''. 
-		\begin{exe}
-			\ex \label{ex:dectic-ngs} (a cup) of (tea)
-			\ex (some) of (those youngsters)
-			\ex (another one) of (those periodic eruptions)
-		\end{exe}
-		So then the syntactic Head still remains the first noun in the nominal group, but then by a semantic evaluation the Thing is shifted into the Qualifier introduced by ``of'' preposition. Cardiff Grammar weakens the assumption that every prepositional phrase acts as Qualifier in a nominal group and it the special case of the preposition ``of''. It is allowed to act not as the element introducing a prepositional phrase but as a end mark of a determiner-like selector. Thus making the former noun group a determiner in the latter one. This approach shifts the noun group head into the position of semantically based Thing and erases the discrepancy problem between them. Nonetheless this is not straight forward solution as it requires lexical-semantic informed decision.
-        % However this is not straight forward solution. There is a lot of space for variations the syntactic structure. 
-        For example in \ref{ex:of-qualifiers} (Head/Thing marked in bold) the preposition ``of'' introduces Qualifiers. 
-		\begin{exe}
-			\ex \label{ex:of-qualifiers}
-			He was the \textbf{confidant} of the prime minister.
-			\ex It was the \textbf{clash} of two cultures.
-		\end{exe}
-		
-		The distinction between cases when the proposition ``of'' introduces a Qualifier or ends a Selector/Deictic requires a semantic evaluation answering the questions ``what is the Thing that this nominal group is about?''. While it is easy to just assume that the first noun in the nominal group is the head. 
-        
-        Therefore, I propose to parse the nominal groups in two steps: first determine the main constituting chunks and assign functions to the unambiguous ones and then in the second step to perform a semantically driven evaluation for the less certain units. This evaluation can be performed by further capturing the structure of nominal groups that act as Dyslectics through their lexico-syntactic realisation patterns.
+Next I explain the two step process using for illustration cases when the Thing is present but it is different from the Head such as in examples \ref{ex:dectic-ngs}--\ref{ex:dectic-ngs2}. 
+\begin{exe}
+    \ex \label{ex:dectic-ngs} (a cup) of (tea)
+    \ex \label{ex:dectic-ngs1}(some) of (those youngsters)
+    \ex \label{ex:dectic-ngs2}(another one) of (those periodic eruptions)
+\end{exe}
+
+These nominal groups can be analysed in two ways. Either  being about the ``cup'', ``some'' or ``another one'' leading to a structure where the first noun is the head succeeded by a prepositional phrase Qualifier; or rather about ``tea'', ``youngsters'' and ``eruptions'' where the second noun is the head and so adopting a structure with complex determiners.
+
+Table \ref{tab:exmaple-analisys-parsing-syn-sem-heads} shows on the first row an analysis with syntactic head i.e. the Head defined in Sydney grammar and on the second row an analysis with semantic head i.e. the Head defined in Cardiff grammar that also coincides with the Thing from Sydney grammar.
+
+The syntactic Head is always the first noun in the nominal group. 
+In the semantic evaluation phase special attention is given to Qualifiers filled by prepositional phrases starting with ``of'' preposition and whether the nominal group may function as qualifying, quantifying, ordination or other type of determiner. 
+
+Cardiff Grammar weakens the assumption that every prepositional phrase acts as Qualifier in a nominal group and it the special case of the preposition ``of''. It is allowed to act not as the element introducing a prepositional phrase but as a end mark of a determiner-like selector. Thus making the former noun group a determiner in the latter one. 
+
+If the above conditions are satisfied, in the semantic evaluation phase, then the prepositional phrase Qualifyier is disassembled, the the preposition ``of'' is ascribed as a Selector element of the nominal group (in a way an upwards transfer) and the former nominal group (syntactically headed) becomes one of the determiners. This approach shifts the noun group head into the position of semantically based Thing and erases the discrepancy problem between them. 
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textit{a} & \textit{cup} & \textit{of} & \textit{tea} \\ \hline
+        Determiner & Head & \multicolumn{2}{c|}{Qualifier} \\ \hline
+        \multicolumn{2}{|c|}{Quantifying Determiner} & Selector & Head/Thing \\ \hline
+    \end{tabular}
+    \caption{Example analysis with syntactic and semantic heads}
+    \label{tab:exmaple-analisys-parsing-syn-sem-heads}
+\end{table}
+
+\begin{exe}
+    \ex \label{ex:of-qualifiers}He was the \textbf{confidant} of the prime minister.
+    \ex It was the \textbf{clash} of two cultures.
+\end{exe}
+
+The above explanation is not a straight forward solution. The distinction between cases when the proposition ``of'' introduces a Qualifier or ends a Selector/Deictic requires lexical-semantic informed decision answering the question ``what is the Thing that this nominal group is about?''. And there is a lot of space for variations the syntactic structure. For example in \ref{ex:of-qualifiers} (Head/Thing marked in bold) the preposition ``of'' introduces Qualifiers.
+ 
+In this section was discussed in detail the problem of semantic and syntactic heads (started in Section \ref{sec:heads}) applied to nominal groups in particular and how to approach parsing them. I conclude that it is fairly unambiguous and straight forward to determine the structure of nominal groups according to Sydney grammar yielding a syntactically founded structure. Once such a structure is ready it serves a a proper basis for a semantic evaluation that can be performed in terms of Cardiff grammar resulting in potential restructuring of the nominal group. The current implementation of the parser only the generation of syntactic structure is implemented leaving the semantically motivated noun groups for the future works. 
+
+%While it is easy to just assume that the first noun in the nominal group is the head. 
+%
+%Therefore, I propose to parse the nominal groups in two steps: first determine the main constituting chunks and assign functions to the unambiguous ones and then in the second step to perform a semantically driven evaluation for the less certain units. 
+%This evaluation can be performed by further capturing the structure of nominal groups that act as Dyslectics through their lexico-syntactic realisation patterns.
 %	}
 	
 	\subsection{The Adjectival and Adverbial Groups}
