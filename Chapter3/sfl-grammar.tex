@@ -689,7 +689,7 @@ Note also that filling and componence are two complementary relations that occur
 
 %\section{Critical discussion on the categories of the theory of grammar: a conciliation of the two theories}
 \section{Critical discussion on both theories: consequences and decisions for parsing} 
-
+\label{sec:critical-on-two-theories}
 The two sections above cover the definitions and fundamental concepts from each of the two systemic functional theories of grammar. The work in this thesis uses a mix of concepts from both theories and this section discusses in detail what is being adopted and why attempting a rather pragmatic reconciliation for the purposes of achieving a parsing system than a theoretical debate. Next I draw parallels and highlight correspondences between the Sydney and Cardiff theories of grammar and where alter and present my position on the matter. 
 
 \subsection{Relaxing the rank scale}
@@ -1357,35 +1357,51 @@ In this section was discussed in detail the problem of semantic and syntactic he
 %This evaluation can be performed by further capturing the structure of nominal groups that act as Dyslectics through their lexico-syntactic realisation patterns.
 %	}
 	
-	\subsection{The Adjectival and Adverbial Groups}
+\subsection{The Adjectival and Adverbial Groups}
 	\label{sec:advectival-adverbial-groups}
 %	\todo{Revise the whole subsection}
-	Following the rationale of head-modifier like in the case of nominal groups, the adjectives and adverbs function as pivotal elements to form groups. The structure of adverbial and adjectival constructions is briefly covered in Sydney grammar in terms of head-modifier logical structures without an elaborated experiential structure like in the case of nominal groups. While the adverbial group is recognised as a distinct syntactic unit the adjectival group is treated as a special case of nominal group specifically as a sub-structure of Epithet or Classifier elements.
+
+    This section introduces how the adverbial and adjectival groups are handled by the Sydney grammar and then how their equivalent quality group is structured in the Cardiff grammar. As the structure of the quality group is semantically motivated some elements may be identified still at the syntactic level whereas some other ones require a more sophisticated lexical-semantic resources. In the last part of the section I estimate the complexity of parsing some the quality group elements elements. 
+
+	Following the rationale of head-modifier similar to the case of nominal groups, the adjectives and adverbs function as pivotal elements to form groups. The structure of adverbial and adjectival constructions is briefly covered in the Sydney grammar in terms of head-modifier logical structures without an elaborated experiential structure like in the case of nominal groups. While the adverbial group is recognised as a distinct syntactic unit, the adjectival group is treated as a special case of nominal group. %specifically as a sub-structure of Epithet or Classifier elements.
 	
 	\begin{exe}
-		\ex\label{ex:lucky} He is \textit{very lucky}.
+		\ex\label{ex:lucky} You're \textit{a very lucky boy}.
+        \ex\label{ex:lucky1} You're \textit{very lucky}.
+        \ex\label{ex:lucky2} \textit{The very lucky (one)} is you.
+%        \ex\label{ex:the-veryu-old} The extremely old shall pass first.
 	\end{exe}
 	
-	For example ``very lucky'' in \ref{ex:lucky} is analysed as a short form of the nominal group ``very lucky one'' where ``lucky'' is the head of the nominal group with a missing Thing element ``one''. In this example ``very'' is not nominal modifier, it does not modify the missing nominal head but the adjective ``lucky'' so they constitute a head-modifier structure filling the Epithet element and as the rank scale system does not allow groups to fill elements of groups then it is described as a substructure of the nominal group.
+    
+%    Recall the example analysis of \textit{some very small wooden ones} in Table \ref{tab:example-substructure-analisys-logical} and \ref{tab:example-substructure-analisys} from Section \ref{sec:rank-system}. There the Epithet \textit{very small} has a logical sub structure.
+
+    In the environments where nominal group functions as Attribute, typically in the attributive clauses such as \ref{ex:lucky}, it can take also more contracted forms without the Thing and Deictic where the Head moves left onto the Epithet such as in example \ref{ex:lucky1}. One particularity of these nominal groups which here are distinguished as \textit{adjectival group} units is that they cannot function as subject. For the example \ref{ex:lucky2} to be grammatical, where the Attribute is in the Subject position, I had to add a determiner and eventually an unspecified nominal Head. 
+
+    
+%    For example the nominal group \textit{a very lucky boy} with non-specific Deictic and 
+    
+%	For example ``very lucky'' in \ref{ex:lucky1} is analysed as a short form of the nominal group ``a very lucky boy'' in \ref{ex:lucky}. Here the Epithet is the Head of the group while the non-specific Determiner together with the Thing are missing. In example ``very'' is not nominal modifier, it does not modify the missing nominal head but the adjective ``lucky'' so they constitute a head-modifier structure filling the Epithet element and as the rank scale system does not allow groups to fill elements of groups then it is described as a substructure of the nominal group.
 	
-	In Sydney Grammar ``The adverbial group has an adverb as Head which may or may not be accompanied by modifying elements''\citep[419]{Halliday2013}. The adverbial groups may fill modal and circumstantial adjunct elements in a clause corresponding to eight semantic classes of: time, place, four types of manner and two types of assessment. The adverbial pre-modifiers express polarity, comparison and intensification along with only one comparison post-modifier \citep[420-421]{Halliday2013}. 
-	
-	
-	A thorough systemic functional examination has been provided for the first time by Tucker \citet{Tucker1997,Tucker1998} materialised into a lexical-grammatical systematization of adjectives and the structure of Quality Group in Cardiff Grammar. Fawcett uses the quality group structure for Adverbials as well as they follow similar grammatical behaviour. He avoids calling the group according to the word class but rather refers to the semantic meaning of what both groups express, i.e. the quality of things, situations or qualities themselves. The qualities of things have adjectives as their head while the qualities of situations an adverb. 
+	The \textit{adverbial group}, in Sydney Grammar, has an adverb as Head which may or may not be accompanied by modifying elements \citep[419]{Halliday2013}. The adverbial groups may fill modal and circumstantial adjunct elements in a clause corresponding to eight semantic classes of: time, place, four types of manner and two types of assessment. The adverbial pre-modifiers express polarity, comparison and intensification along with only one comparison post-modifier \citep[420--421]{Halliday2013}. The adjectival and adverbial group are covered by the \textit{quality group} unit in Cardiff grammar.
+    
+	A thorough systemic functional examination in terms of lexis has been provided for the first time by Tucker \citet{Tucker1997,Tucker1998} materialised into a lexical-grammatical systematization of adjectives and the fine grained structure of quality group. He avoids calling the group according to the word class (adjective or adverb) but rather refers to the semantic meaning of what both groups express, i.e. the quality of things, situations or qualities themselves. The qualities of things have adjectives as their head while the qualities of situations an adverb.       
 	
 	In Cardiff Grammar, the head of the quality group is called \textit{Apex} while the set of modifying elements: \textit{Quality Group Deictic, Quality Group Quantifier, Emphasizing Temperer, Degree Temperer, Adjunctival Temperer, Scope} and \textit{Finisher}. The quality group most frequently fills complements and adjuncts in clauses and fill modifiers and superlative determiners in nominal groups but there are also other cases found in the data. 
 	
-	Just like in the case of nominal group the adverbial and adjectival groups in Cardiff grammar are semantically motivated. To automatically identify elements of the quality group requires lexico-semantic resources.
+	Just like in the case of nominal group the adverbial and adjectival groups in Cardiff grammar are semantically motivated. To automatically identify elements of the quality group would according to this scheme therefore require lexico-semantic resources.
     
-    Some adverbs are different from others at least because not all of them can be heads of the adverbial group like for example \textit{very, much, less, pretty} also being able to act as adjectival modifiers whereas others cannot. So a naive attempt is to use a list of words to identify the Emphasizing and Degree Temperers. 
+    Next I discuss 
     
-    Other elements of the quality group like the \textit{Scoper} or \textit{Finisher} are more difficult to identify and localize as part of the group only by syntactic cues and/or lists of words because of their inherent semantic nature. The problem is similar to detecting whether a prepositional phrase is filling a qualifier element in the preceding nominal group or it is filling a complement or adjunct in the clause. Not surprisingly the Scopers and Finishers are most of the time prepositional phrases. 
+    Some adverbs are different from others at least because not all of them can be heads of the adverbial group. Usually the adverbs that cannot act as heads, such as for example \textit{very, much, less, pretty}, function as Emphasizing and Degree Temperers. The same ones also act as adjectival modifiers. A naive attempt to identify these Temperers would be to use a list of frequent words found in these functions.
+    
+    Other elements of the quality group like the \textit{Scoper} or \textit{Finisher} are more difficult to identify and localize as part of the group only by syntactic cues and/or lists of words because of their inherent semantic nature. The problem is similar to detecting whether a prepositional phrase is filling a qualifier element in the preceding nominal group or is filling a complement or adjunct in the clause. Not surprisingly the Scopers and Finishers are most of the time prepositional phrases. 
 	
-	Another issue is continuity. The question is whether a grammar shall allow at least at syntactic level for discontinuous constituents or not. And then if so how to detect all the parts of the group even if they do not stand in proximity of each other. For example, comparatives, a complex case of a quality group, could be realised in a continuous or discontinuous forms. Compare the analyses presented in \ref{tab:csgq1} and \ref{tab:csgq2}. In the first case the comparative structure is a continuous quality group. In the second case the comparative is dissociated and analysed as separate adjuncts. 
+	Another issue is continuity. The question is whether a grammar shall allow at least at a syntactic level discontinuous constituents or not. And then if so how to detect all the parts of the group even if they do not stand in proximity to each other. For example, comparatives, a complex case of a quality group, could be realised in a continuous or discontinuous forms. Compare the analyses presented in Table \ref{tab:csgq1} and \ref{tab:csgq2}. In the first case the comparative structure is a continuous quality group. In the second case the comparative is dissociated and analysed as separate adjuncts. 
 	
-	On one hand it is not a problem treating them as two adjuncts, because that is what they are from the syntactic point of view. However, semantically as Fawcett proposes, there is only one quality group with a discontinuous realisation whose Scope element is placed in a thematic position before the subject. 
+	On one hand it is not a problem treating them as two adjuncts, because that is what they are from the syntactic point of view. However, semantically as Fawcett proposes, there is only one quality group with a discontinuous realisation whose Scope element is placed in a thematic position before the Subject. 
+    
 	%
-	\begin{table}[h]
+	\begin{table}[H]
 		\centering
 		\begin{tabular}{|c|c|c|c|l|c|c|}
 			\hline
@@ -1398,7 +1414,7 @@ In this section was discussed in detail the problem of semantic and syntactic he
 		\label{tab:csgq1}
 	\end{table}
 	%
-	\begin{table}[h]
+	\begin{table}[H]
 		\centering
 		\begin{tabular}{|c|c|c|c|c|c|c|}
 			\hline
@@ -1411,17 +1427,19 @@ In this section was discussed in detail the problem of semantic and syntactic he
 		\label{tab:csgq2}
 	\end{table}
 	%
-	For an automatic process to identify a complex quality group is a difficult task. It needs to pick up queues like a comparative form of the adjective followed by the preposition ``than'' and then look for two terms being compared. Given some initial syntactic structure such patterns could be modelled and applied but only as a secondary semantically oriented process.
+    
+	For an automatic process to identify a complex quality group is a difficult task. It needs to pick up cues like a comparative form of the adjective followed by the preposition ``than'' and then look for two terms being compared. Given some initial syntactic structure such patterns could be modelled and applied but only as a secondary semantically oriented process.
 	
-	Since both the adverbial and adjectival groups have similar structures, it is syntactically feasible to automatically analyse them in terms of head-modifier structures in a first phase followed by a complementary process which assigns functional roles to the quality group components. 
+	Since both the adverbial and adjectival groups have similar structures, it is syntactically feasible to automatically analyse them in terms of head-modifier structures in a first phase followed by a complementary process which assigns functional roles to the quality group components.
 
 \section{Discussion}
 
-    This chapter introduces the fundamentals of systemic functional linguistics and presents an adaptation of Sydney and Cardiff theories of grammar to the task of parsing.
+    This chapter has introduced the fundamentals of systemic functional linguistics and presented a consideration of Sydney and Cardiff theories of grammar to the task of parsing.
     
-    Because of bottom up approach to unit structure, rank scale relaxation and accommodation of embedding as a general principle Cardiff systemic functional theory is more suitable for parsing than Sydney one. Nonetheless the unit definitions in Cardiff grammar are deeply semantic in nature. Parsing with such units requires most of the time lexical-semantic informed decisions beyond merely syntactic variations. This is one of the reasons why the parsing attempts by \citet{ODonoghue1991a} and others in COMMUNAL project were all based on a corpus.
+    Because of its bottom up approach to unit structure, rank scale relaxation and accommodation of embedding as a general principle, Cardiff systemic functional theory is more suitable for parsing than the Sydney one. Nonetheless the unit definitions in the Cardiff grammar are deeply semantic in nature. Parsing with such units requires most of the time lexical-semantically informed decisions beyond merely syntactic variations. This is one of the reasons why the parsing attempts by \citet{ODonoghue1991a} and others in the COMMUNAL project were all based on a corpus.
     
-    As there was no corpus available and because the parsing approach is based on syntactic backbone none of the theories could be fully used as such. The second part of the chapter attempts to merge and adapt the grammars and theories of grammar to this parsing approach.
+%    TODO: JB: since the backbone is a solution to a different problem, one that you will introduce when you discuss complexity, better omit this here and come back to it when you have all the parts together.
+    As there was no corpus available and because the parsing approach is based on a syntactic backbone none of the theories could be fully used as such. Section \ref{sec:critical-on-two-theories} and \ref{sec:discussion-unit-classes} attempts to merge and adapt the grammars and theories of grammar to the parsing approach of this thesis.
     
-    Next chapter lays the theoretical foundations of Dependency Grammar and introduces the Stanford dependency parser used as a departing point in current parsing pipeline. Because there is a transformation step from dependency to systemic functional consistency structure, next chapter also covers a theoretical compatibility analysis and how such a transformation should in principle look like. 
+    Next chapter lays the theoretical foundations of Dependency Grammar and introduces the Stanford dependency parser used as a departing point in current parsing pipeline. Because there is a transformation step from dependency to systemic functional consistency structure, the next chapter also covers a theoretical compatibility analysis and how such a transformation should in principle look like. 
 
