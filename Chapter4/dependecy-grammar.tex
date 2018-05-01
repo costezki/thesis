@@ -3,7 +3,7 @@
 
 The Stanford dependency analysis of a given text constitutes the input for the algorithm developed in the current work. It provides the foundation to build the syntactic backbone used adopted here. This chapter offers an overview of the grammar and the parser developed at the Stanford university. In the last part of the chapter is discussed the cross theoretical connection between the dependency and systemic functional grammars. 
 
-\section{An introduction to dependency theory of grammar}
+\section{Origins of the dependency theory}
 %In this section I outline the theory of dependency grammar. I will make references sometimes to concepts in SFG. 
 For the first time a complete linguistic theory based on the dependency concept was elaborated by the French linguist Lucien Tesniere in his seminal work \textit{``Elements de syntaxe strusturale''} published in \citeyear{Tesniere59} after his death. He devoted much effort to argue for the adequacy of \textit{dependency} as the organizational principle underlying numerous phenomena and in fact attempting to demonstrate the universality of his syntactic analysis method for human languages. In doing so he introduced a series of concepts and ideas among which the \textit{verb centrality}, \textit{stratification}, \textit{language typology}, \textit{nuclei}, \textit{valency}, \textit{metataxis}, \textit{junction} and \textit{transfer} are the most important ones which I introduce following the connections.
 
@@ -19,10 +19,10 @@ Tesniere holds the view that the connection, what is know today as \textit{depen
     Structural connections establish \textit{dependency} relations between words. In principle, each connection unites a superior term and an inferior term. The superior term is called the \textit{governor}, and the inferior term the \textit{subordinate}. We say that the subordinate depends on the governor and that the governor governs the subordinate. [\dots] A word can be both subordinate to a superior word and governor of an inferior word. [\dots] The set of words of a sentence constitutes a veritable \textit{hierarchy}. \citep[5--6]{Tesniere2015}
 \end{quotation}
 
-Introduction of hierarchy and governor-subordinate dependencies permeates definition \textit{node} and \textit{stemma} now known as \textit{dependency tree}. 
+Introduction of hierarchy and governor-subordinate dependencies permeates to define now what is a \textit{node} and the \textit{stemma} resembling what is now known as \textit{dependency tree} (although the stemmas do not include labels on the tree edges). 
 
 \begin{quotation}
-    [\dots] In principle, a subordinate can only depend on a sole governor. A governor, in contrast, can govern multiple subordinates [...] Every governor that governs one or more subordinates forms what we call a node.  [\dots] it follows that \textit{each subordinate shares the fate of its governor}. \citep[6]{Tesniere2015}
+    [\dots] In principle, a subordinate can only depend on a sole governor. A governor, in contrast, can govern multiple subordinates [\dots] Every governor that governs one or more subordinates forms what we call a node. [\dots] it follows that \textit{each subordinate shares the fate of its governor}. \citep[6]{Tesniere2015}
 \end{quotation}
 
 \begin{figure}[!ht]
@@ -32,14 +32,14 @@ Introduction of hierarchy and governor-subordinate dependencies permeates defini
     \node[below=1em of speaks] (alfred) {Alfred};
     \draw[] (speaks) -- (alfred);
     \end{tikzpicture}
-    \label{fig:stemma1}
     \caption{Stemma for ``Alfred speaks''}
+    \label{fig:stemma1}
 \end{figure}
 
-This asymmetry of connection permits construction of a tree-like structure. The diagram of the two word sentence ``Alfred speaks'' is provided in the Figure \ref{fig:stemma1}. The word \textit{speaks} is the governor of the word \textit{Alfred}. The connection is depicted bu the vertical line connecting the two. But to make it complete it is important to decide on the root node. 
+This asymmetry of connection permits construction of a tree-like structure. The diagram of the two word sentence ``Alfred speaks'' is provided in the Figure \ref{fig:stemma1}. The word ``speaks'' is the governor of the word ``Alfred''. The connection is depicted bu the vertical line connecting the two. But to make it complete it is important to decide on the root node. 
 
 \begin{quotation}
-    The node formed by the governor that governs all the subordinates of a sentence is the \textit{node of nodes}, or the central node. It is at the center of the sentence and ensures its structural unity by tying the diverse elements into a single bundle. It can be identified with a sentence. \textit{The node of nodes is generally verbal} [\dots] \citep[7]{Tesniere2015}
+    The node formed by the governor that governs all the subordinates of a sentence is the \textit{node of nodes}, or the central node. It is at the centre of the sentence and ensures its structural unity by tying the diverse elements into a single bundle. It can be identified with a sentence. \textit{The node of nodes is generally verbal} [\dots] \citep[7]{Tesniere2015}
 \end{quotation}
 
 % the verb centrality
@@ -54,8 +54,8 @@ The fundamental insight presented above about the nature of the syntactic struct
     \draw[] (speaks) -- (alfred);
     \draw[] (speaks) -- (slowly);
     \end{tikzpicture}
-    \label{fig:stemma2}
     \caption{Stemma for ``Alfred speaks slowly''}
+    \label{fig:stemma2}
 \end{figure}
 
 % stratification
@@ -66,7 +66,7 @@ Tesniere is among pioneer linguists recognising that the language is organised a
 \end{quotation}
 
 % syntax semantix difference
-In the structural realm Tesniere goes even deeper and describes the separation between syntax and semantics. To argue for that, he uses an example similar to the famous Chomskian ``Colourless green ideas sleep furiously'' \citep{Chomsky57} (that occurred three years after Tesniere's death). He employed the sentence ``The vertebral silence antagonizes the lawful sail''.
+In the structural realm Tesniere goes even deeper and describes the separation between syntax and semantics. To argue for that, he uses an example similar to the famous Chomskian \textit{colourless green ideas sleep furiously} \citep{Chomsky57} (that occurred three years after Tesniere's death). He employed the sentence \textit{the vertebral silence antagonizes the lawful sail}.
 
 \begin{quotation}
     Syntax is distinct from morphology, and it is no less distinct from semantics. The structure of a sentence is one thing, and the idea that it expresses and that constitutes its meaning is another. It is therefore necessary to distinguish between the structural plane and the semantic plane.
@@ -88,7 +88,7 @@ Latter in the book, he uses the term node to mean merely a vertex and even redef
 \end{quotation}
 
 %valency
-A notable contribution to the field of syntax is the concept of \textit{valency}. It is the notion used in other linguistic schools (e.g. \textit{transitivity}) to express combinatorial properties of verbs and other lexical items. Inspired from natural sciences, Tesniere compares the relationship between verbs and the so called \textit{actants} (known as \textit{arguments}) to atom's bonds. 
+A notable contribution to the field of syntax is the concept of \textit{valency}. It is the notion used in other linguistic schools as \textit{transitivity} to express combinatorial properties of verbs and other lexical items. Inspired from natural sciences, Tesniere compares the relationship between verbs and the so called \textit{actants} (a.k.a. \textit{arguments}) to atom's bonds. 
 
 \begin{quotation}
     The verb may therefore be compared to a sort of atom, susceptible to attracting a greater or lesser number of actants, according to the number of bonds the verb has available to keep them as dependents. The number of bonds a verb has constitutes what we call the verb’s \textit{valency} \citep[241]{Tesniere2015}.
@@ -98,13 +98,13 @@ A notable contribution to the field of syntax is the concept of \textit{valency}
 Atoms are not the only metaphor he uses and next I present another one regarding the \textit{verbal node} that is especially important for showing the syntax-semantics interplay. 
 
 \begin{quotation}
-     The verbal node, found at the center of the majority of European languages, is a theatrical performance. Like a drama, it obligatorily involves a \textit{process} and most often \textit{actors} and \textit{circumstances}. [\dots] Transferred from the theatre to structural syntax, the process, the actors, and the circumstances become respectively the \textit{verb}, the \textit{actants}, and the \textit{circumstants} \citep[97]{Tesniere2015}.
+     The verbal node, found at the centre of the majority of European languages, is a theatrical performance. Like a drama, it obligatorily involves a \textit{process} and most often \textit{actors} and \textit{circumstances}. [\dots] Transferred from the theatre to structural syntax, the process, the actors, and the circumstances become respectively the \textit{verb}, the \textit{actants}, and the \textit{circumstants} \citep[97]{Tesniere2015}.
 \end{quotation}
 
 Comparison of the verb to an atom seems to emphasize connection to the syntactic aspect of valency while comparing it to a theatrical performance seems to emphasize the semantic properties of valency. Therefore his theory of valency has semantic and syntactic properties. He believed that the first actant is the agent of the action, identified as the subject in traditional grammar, and the second actant is the one that bears the action, identified as the syntactic object. Tesniere regards both of them as complements to complete the governor verb making, in this sense, the subject indistinguishable from other complements. 
 
 %junction
-There are some problematic phenomena such as \textit{coordination} or \textit{apposition} because they are not governor-subordinate relations but are rather orthogonal relations among siblings. Tesniere analyses the coordination, or as he calls it \textit{junction}, as a phenomena used in language to express (semantic) content efficiently. 
+There are some phenomena that are deemed quite problematic, namely they are the \textit{coordination} or \textit{apposition}. They constitute a challenge because they are not governor-subordinate relations but are rather orthogonal relations among siblings. Tesniere analyses the coordination, or as he calls it \textit{junction}, as a phenomena used in language to express (semantic) content efficiently. 
 
 He viewed the junction as fundamentally different from the subordination  and represented it with horizontal lines. Subordination is a principle of organization on the vertical axis whereas the coordination (i.e. junction) on the horizontal axis. Figure \ref{fig:stemma3} depicts two example representations for the sentence ``Young boys and girls played'' and ``Alfred adores cookies and detests punishments''. 
 
@@ -153,7 +153,7 @@ He viewed the junction as fundamentally different from the subordination  and re
 %The junction is total when the conjuncts shared their heads and/or dependents and partial when some are not shared. For the total junction Tesniere used terms of heraldry: \textit{coped} (upwards triangle formed by two conjuncts sharing a dependant), \textit{shod} (downwards triangle formed by a head governing two conjuncts) and \textit{dressed} (diamond formed by conjuncts with one shared head and one shared dependant). The partial structures are called \textit{bifid} are asymmetric one way or another and are classified as \textit{anadidymic}, \textit{catadidymic}, \textit{anacatadidymic}
 
 %transfer
-A big part of the Tesniere's \textit{Elements} \citep{Tesniere59} is dedicated to the theory of \textit{transfer}. It describes the phenomena when one class of a syntactic unit occupies a position usually devoted to another one. For example the noun can be transferred to an adjective by preposition ``of'', as for example \textit{a linguist of France} where the source \textit{France} is transferred to target \textit{of France} which modify \textit{linguist} that is typically an adjectival function. Transfer is a tool that explains how for example a clause can be embedded into another one or how a verb can be subordinate to another one. 
+A big part of the Tesniere's \textit{Elements} \citep{Tesniere59} is dedicated to the theory of \textit{transfer}. It describes the phenomena when one class of a syntactic unit occupies a position usually devoted to another one. In SFL it is called the grammatical metaphor defined in \ref{def:gramatical-metaphor}. For example the noun can be transferred to an adjective by preposition ``of'', as for example \textit{a linguist of France} where the source \textit{France} is transferred to target \textit{of France} which modify \textit{linguist} that is typically an adjectival function. Transfer is a tool that explains how for example a clause can be embedded into another one or how a verb can be subordinate to another one. 
 
 Tesniere splits the words into \textit{function words} or \textit{translatives} (i.e. prepositions, conjunctions, auxiliary verbs and articles) and four basic categories of \textit{content words} (i.e. verbs (I), nouns (O), adverbs (E) and adjectives (A) ). The former are empty of content marker transfer of content words from one syntactic category to another one. That is, allowing one word to occupy a position that is generally associated with a word of another category. 
 
@@ -248,113 +248,321 @@ Bringing back the discussion on the number of nodes, the constituency structure 
 %Elements - transaltors intro - https://kahanedotfr.files.wordpress.com/2017/01/tesniere-introduction-benjamins2015.pdf
 
 
+\section{Evolution into the modern dependency theory}
+Nowadays the dependency theory differs from the original one presented by Tesniere. At the time the original text was written there was no such distinction as dependency and constituency structures and that Tesniere's Elements \citep{Tesniere59} in fact contains descriptions of and references to what may nowadays be considered constituency. 
+Next I present which of the initial ideas did not take hold, were not addressed or merely assumed and instead have evolved into the modern dependency theory of grammar.
 
-%
-%
-%
+\subsection{Definition of dependency}
+Tesniere's definition of dependency is not satisfiable. His mentalist approach that ``the mind perceives connections between the word and it's neighbours''\citep[3]{Tesniere2015} makes it impossible to falsify his choices hence leaving no means to validate one choice over the other ones.
 
+One way to define dependency relations and structure is by employing the constituency concept. There are efforts by \citep{Bloomfield33,Hockett58,harris1951methods} in constituency grammar to identify constituents using tests that shed light on which segments should hold together as phrases or whether they should be considered constituents at all. One needs to decide within each constituent which word it is being headed by which means deciding which word controls the distribution of that constituent \citep{Bloomfield33,Zwicky85-heads} . A word \textit{y} depends of a word \textit{x} if and only if \textit{y} heads the a phrase which is an immediate constituent of the phrase headed by \textit{x} \citep{Lecerf1961}. 
 
+Another way to define dependencies, avoiding constituency, is by using combinations of two words as proposed by \citet{Garde1977} and \citet{melcuk88}. To discern which governs the other one needs to determine which determined the distribution of the two together. This way the governor is the word that determines the environment in which the two together can appear \citep[lxi]{Tesniere2015}. In fact the word notion is not necessary to define dependency, it can be abstracted away to the notion of syntactic units. As soon as two units combine one can posit dependency between them whereby the dependency structure is the set of dependencies between the most granular syntactic units \citep{gerdes2013defining}.
 
-Traditionally, Latin language tended to be analysed with the \textit{dependency model} based on theories of what was called \textit{government}. It explains the syntagmatic relations of the subtype Firth called \textit{colligation} (i.e. relations between grammatical categories). Government is a way of explaining the rich inflections of language (such as Latin) in terms of how particular words govern, that is to say, determine, the inflection of other words. \citep[p.66]{McDonald2008}
+In addition Tesniere did not make distinctions between the dependency types. As discussed in the previous section, he had noticed that there is a difference between syntactic and semantic dependencies and that the former generally corresponds to the latter but not as a strict rule and even some other times the correspondence is in the opposite direction e.g. ``the stone frees'' vs. ``the frozen stone''. The dependency based semantic representations have been around since '60s named \textit{semantic networks} \citep{ZolkovskijMelcuk67,melcuk88} and \textit{conceptual graphs} \citep{schank1969, Sowa1976}.
 
-\citet{Tesniere2015} explains how government works by giving example of Latin text analysis where the inflections immediately give aloto of information about relations between different words. For example the verb agree in person and number with its subject. From this point of view the verb governs the subject. The verb also governs complements and adjuncts which can be seen as relations of dependency between a governing element or controller and a governed element or dependant. It is important to note that Tesniere analysed syntax at the level of clause where he identified a verb node as the main controller. 
+\subsection{Grammatical function} 
+In the modern linguistics the notion of grammatical functions e.g. subject, object, determiner etc. are attached to the notion of syntactic dependency. They are in fact an essential account in the modern dependency-based approaches because they are the only way to distinguish between various roles the dependents play in relation to their governors. The grammatical functions attached to the dependency relations are primitives of the dependency grammars. This is not the case for Chomskian phrase structure constituency where the functions are derived from the structural configurations. Nevertheless in latter constituency models such as \textit{Lexical Functional Grammars} \citep{Brensan2000} and \textit{Head-Driven Phrase Structure} \citep{PollardSag1994} have introduces the grammatical functions as grammatical primitives.
 
-Contrary to Latin, languages like English or Chinese, where there is little or most of the time none of the inflectional marking to identify dependency relations, are much harder to analyse in terms of such relations. This was a motivation for Tesniere to reinterpret dependency relation in semantic terms rather than inflectional marking. As \citet{McDonald2008} points out, this can be regarded as extending syntagmatic relations of the clause to include what Firth was calling \textit{collocation} relations (i.e. links between lexical items). Tesniere framed his theory in terms of syntagmatic relations as expressing a model of experience. He compares the verbal node of the clause to a complete little drama. Like a drama, it obligatorily consists of an action, most often actors and features of settings. Expressed in terms of syntactic structure, the action, actors and settings become the verb, participants and circumstances \citep{Tesniere2015}. 
+The grammatical functions were not important in Tesniere's theory. He mentioned only, in the context of valency theory, three \textit{actant functions} called \textit{first}, \textit{second} and \textit{third} the other verb dependants being \textit{circumstantial}. Most dependecy grammars assume dozens of functions to offer a fine-grained syntactic characterization of language based on distinguishable syntactic properties. This way two elements have the same grammatical function if and only if they have the same \textit{markers,} \textit{order} (linear position), \textit{agreement properties} and \textit{distribution}. Several grammatical function sets have been developed in the fields of formal dependency grammars, parsers and tree-banks. The most important ones for English Language are the ones of \citet{MelcukPertsov86}, of \citet{Johnson2000} and of \citet{Marneffe2008, Marneffe2008a}. In this work is employed the latter as it is part of the Stanford dependency parser described latter in this Chapter. 
 
-Further, Tesniere explains \textit{categories of language} as \textit{categories of thought}. The human mind shapes the world in its own measure by organising experience into a systematic framework of ideas and beliefs called categories of though. Likewise, the language shapes thought in its own measure by organising it into a systematic framework of grammatical categories \citep{Tesniere2015}. He stresses though, that the latter ones can vary considerably from language to language and that the analysis of syntactic relations shall be carried on not in terms of grammatical categories but rather in terms of functions. He explain through an example that analysis in terms of nouns and verbs i.e. grammatical categories, tells nothing about the tie that links the words, whereas if we turn to notions such as subject and complement it all of the sudden becomes clear: the connections are established, the lifeless words become a living organism and the sentence take on a meaning \citep{Tesniere2015}.
+\subsection{Projectivity}
+Central to how the word order is accounted for in dependency grammar is \textit{projectivity}. It is not present in the Elements but it is the basis for identifying \textit{long-distance dependencies} also known as \textit{discontinuities} or \textit{gapping}. The concept is introduced by \citet{Lecerf1961} following publication of the Elements \citep{Tesniere59}. It is defined in terms of crossing lines when drawing dependency trees where the ones without containing crossing lines are called \textit{projective} and the ones with crossing lines are called \textit{non-projective} i.e. violating projection principle. 
 
-\section{Stanford dependency grammar (and parser)}
-Dominant \citet{Chomsky1981} theories define grammatical relations as configurations of \textit{phrase structure} representations, which is nesting of multi word constituents. Other theories such as Lexical-Functional Grammar reject the adequacy of such an approach \citep{Brensan2000} and advocate a functional representation for syntax.
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}
+    \node[] (did) {did};
+    \node[below=1em of did, xshift=-4em] (tesniere) {Tesniere};
+    \node[below=1em of did, xshift=3em] (not) {not}; 
+    \node[below=1em of did, xshift=7em] (identify) {identify}; 
+    \node[below=1em of identify, xshift=13em] (concept) {concept}; 
+    \node[below=1em of concept, xshift=-10em] (the) {the}; 
+    \node[below=1em of concept, xshift=-5em] (projectivity) {projectivity}; 
+    
+    \node[below=9em of did] (did1) {did};
+    \node[below=6.7em of tesniere] (tesniere1) {Tesniere};
+    \node[below=6.7em of not] (not1) {not};
+    \node[below=6.5em of identify] (identify1) {identify};
+    \node[below=4.2em of concept] (concept1) {concept.};
+    \node[below=1.6em of the] (the1) {the};
+    \node[below=1.5em of projectivity] (projectivity1) {projectivity};
+    
+    \draw[] (did) -- (tesniere);
+    \draw[] (did) -- (not);
+    \draw[] (did) -- (identify);
+    \draw[] (identify) -- (concept);
+    \draw[] (concept) -- (the);
+    \draw[] (concept) -- (projectivity);
+    
+    \draw[dashed] (did) -- (did1);
+    \draw[dashed] (not) -- (not1);
+    \draw[dashed] (tesniere) -- (tesniere1);
+    \draw[dashed] (the) -- (the1);
+    \draw[dashed] (concept) -- (concept1);
+    \draw[dashed] (projectivity) -- (projectivity1);
+    \draw[dashed] (identify) -- (identify1);
+    
+    \end{tikzpicture}
+    \caption{Projective tree}
+    \label{fig:stemma6}
+\end{figure}
 
-When motivating its stance, \citet{Marneffe2006} insists on practical rather than theoretical concerns proposing that structural configurations be defined as grammatical roles (to be read as grammatical functions)\citep{Marneffe2006}. For example she insists that, information about functional dependencies between words grants direct access to the predicate-argument relations which are not readily available form the phrase structure parses and can be used off the shelf for real world applications. She avoids going into theoretical debates and focuses on the suitability of the grammar for parsing within the context of relation extraction, machine translation, question answering and other tasks.
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}
+    \node[] (did) {did};
+    \node[below=1em of did, xshift=4em] (tesniere) {Tesniere};
+    \node[below=1em of did, xshift=8em] (not) {not}; 
+    \node[below=1em of did, xshift=12em] (identify) {identify}; 
+    \node[below=1em of identify, xshift=-15em] (what) {What};
+    
+    \node[below=7em of did] (did1) {did};
+    \node[below=4.7em of tesniere] (tesniere1) {Tesniere};
+    \node[below=4.7em of not] (not1) {not};
+    \node[below=4.5em of identify] (identify1) {identify?};
+    \node[below=2em of what] (what1) {What};
+    
+    \draw[] (did) -- (tesniere);
+    \draw[] (did) -- (not);
+    \draw[] (did) -- (identify);
+    \draw[] (identify) -- (what);
+    
+    \draw[dashed] (did) -- (did1);
+    \draw[dashed] (not) -- (not1);
+    \draw[dashed] (tesniere) -- (tesniere1);
+    \draw[dashed] (identify) -- (identify1);
+    \draw[dashed] (what) -- (what1);    
+    \end{tikzpicture}
+    \caption{Non-projective tree}
+    \label{fig:stemma7}
+\end{figure}
 
-The functional dependency descriptions is precisely the aspect which makes possible the link between the Stanford Dependency Grammar and Systemic Functional Structures targeted in the current thesis. 
+To illustrate this principle consider Figure \ref{fig:stemma6} where there are no crossing lines whereas Figure \ref{fig:stemma7} contains projectivity violation because the word ``what'' is connected to it's governor ``identify'' crossing three dashed projection lines. Linguistic phenomena involving non-projecting are: wh-fronting, topicalization, scrambling, and extrapolation. 
 
-%\section{The dependency set}
-The design of Stanford dependency set \citep{Marneffe2006, Marneffe2008,  Marneffe2014, Silveira2014} bears a strong intellectual debt to the framework of Lexical Functional Grammars \citep{Brensan2000}. \citet{Marneffe2006} started designing the relation typology from GR \citep{Carroll1999} and PARK \citep{King2003} schemes following a LFG style and according to the principles described in Generalization \ref{def:design-principles}.
+\subsection{Function words}
+Tesniere's transfer theory, despite it's insightfulness, has little if any at all application in modern dependency grammar. The main reason is the implications it has on the hierarchical structure because it does not provide the \textit{translatives} (prepositions, auxiliary verbs, sub-ordinators and conjunctions) with autonomy but a kind of secondary status and thus cannot be constitutive of a nucleus. The issue is reduced to the hierarchical status of such translatives whether they gain node status or not. 
+
+\begin{figure}[!ht]
+    \centering
+    \begin{subfigure}{.33\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \node[rounded corners=0.5em, draw] (has) {has departed};
+            \node[below=1em of has] (tom) {Tom};
+            \draw[] (tom) -- (has);
+        \end{tikzpicture}
+        \caption{}
+        \label{fig:stemma8-sub1}
+    \end{subfigure}%
+    \begin{subfigure}{.33\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \node[] (has) {has};
+            \node[below=1em of has, xshift=-3em] (tom) {Tom};
+            \node[below=1em of has, xshift=3em] (departed) {departed};
+            \draw[] (tom) -- (has);
+            \draw[] (departed) -- (has);
+        \end{tikzpicture}
+        \caption{}
+        \label{fig:stemma8-sub2}
+    \end{subfigure}
+    \begin{subfigure}{.33\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \node[] (has) {departed};
+            \node[below=1em of has, xshift=-7em] (tom) {Tom};
+            \node[below=1em of has, xshift=-4em] (departed) {has};
+            \draw[] (tom) -- (has);
+            \draw[] (departed) -- (has);
+        \end{tikzpicture}
+        \caption{}
+        \label{fig:stemma8-sub3}
+    \end{subfigure}
+    \caption{Possible analysis representation for ``Tom has departed''}
+    \label{fig:stemma8}
+\end{figure}
+
+Figure \ref{fig:stemma8} represents three possible ways to analyse the word has in ``Tom has departed''. In Figure \ref{fig:stemma8-sub1} is represented the original approach Tesniere proposed using transfer schema where the word ``has'' is enclosed within the full verb node ``departed''. The two together are granted the status of a dissociated nucleus which means that neither alone can form a nucleus. In contrast the Figure \ref{fig:stemma8-sub2} and \ref{fig:stemma8-sub3} the auxiliary has is granted autonomy and corresponds to the modern analysis varying from one model to the other. 
+
+As we will see in the next Section, the Stanford dependency schema \citep{Marneffe2008,Marneffe2008a} adopts the content words as governors of the function words. This corresponds to the representation in Figure \ref{fig:stemma8-sub3}. Moreover it provides a collapsed schema where the function words are suffixed to the grammatical functions. For example in ``Bob and Jacob'' there is a ``conj'' dependency relation between Jacob and Bob and a ``cc'' relation between ``and'' and ``Bob''. In the collapsed form the relation becomes ``conj:and'' between between Jacob and Bob integrating the conjunction into the relation name. This is the case for prepositions and conjunctives whereas auxiliary verbs remain nodes in the collapsed form. 
+
+\section{Dependency grammar in automated text processing}
+Tesniere had no intention in providing a computational theory of grammar and he was neither aware that ideas he was proposing have such potential. Shortly after his death, inspired by Chomsky's Syntactic Structure \citep{Chomsky57}, \citet{Hays1960,Hays1964} makes the first attempts to formalise the dependency grammar with intention to apply it to automated text processing. A year latter his colleague \citet{Gaifman1965} proofs that the \textit{dependency grammar} formalism proposed by Hays is equivalent to Chomsky's \textit{context free grammar} and to \textit{categorial grammars} proposed by \citet{BarHillel53}.
+
+Outshined by Chomskyan grammars, the serious developments in parsing with dependency grammars did not come into being until mid '90s. First efficient parser with the dependency-based model called \textit{Link Grammar} was created by \citet{sleator1995parsing} and ten year latter the dependency parsing gain in popularity yielding remarkable results such as the MaltParser \citep{Nivre2006,Nivre2007parser}, MATE parser \citep{Bohnet2010} and early Stanford parser \citep{Marneffe2006} that was generating the dependency trees from phrase structure trees. A summary of dependency parsing techniques is provided by \citet{kubler2009dependency}.
+
+In parallel to parsers, large annotated corpses and treebanks have been developed for parser training and testing and suitable as well for theoretical applications. A treebank is a collection of records consisting of natural language sentences associated with corresponding syntax tree (using a specific grammatical model) and optionally additional annotations such as part of speech tags, named entities, and other annotations. The first treebank was Penn Treebank \citep{Santorini1990,Marcus1993} which is a constituency-base treebank. A well known dependency treebank is the Prague Dependency Treebank \citep{hajic2001prague,Bohmova2003} originally created for Czech but now containing English as well. Recently started an initiative to create a Universal Dependency model \citep{nivre2015} and correspondingly with extended efforts was also created a multilingual treebank applying the scheme \citep{Nivre2016ud} which continues growing today.
+
+%TODO introduce GR and PARK schemes
+
+Before arriving to the broadly accepted Universal Dependency, early dependency grammars were quite dispersed. The schemes more often were developed in the context of corpus annotation. An early work \citep{carroll1998parser} towards unification was within the Grammar Evaluation Interest Group \citep{Harrison1991} also know as \textit{PARSEVAL} initiative that was originally destined for constituency parsers. \citet{Carroll1999} proposed an application independent corpus annotations scheme (see Figure \ref{fig:grEarly}) specifying the syntactic dependency which holds between each head and its dependent(s) that took into account language phenomena in English, Italian, French and German. 
+
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}
+        \node[] (dependent){dependent};
+        \node[below=1em of dependent, xshift=-7em] (mod){mod};
+        \node[below=1em of dependent, xshift=0em] (argmod){arg\_mod};
+        \node[below=1em of dependent, xshift=7em] (arg){arg};
+        
+        \node[below=1em of mod, xshift=-4em] (ncmod){ncmod};
+        \node[below=1em of mod, xshift=-0em] (xmod){xmod};
+        \node[below=1em of mod, xshift=4em] (cmod){cmod};
+        
+        \node[below=5em of arg, xshift=-7em] (subj){subj};
+        \node[below=2.7em of arg, xshift=0em] (sodo){subj\_or\_dobj};
+        \node[below=5em of arg, xshift=7em] (comp){comp};
+        
+        \node[below=1em of subj, xshift=-4em] (ncsubj){ncsubj};
+        \node[below=1em of subj, xshift=0em] (xsubj){xsubj};
+        \node[below=1em of subj, xshift=4em] (csubj){csubj};
+        
+        \node[below=1.4em of comp, xshift=-4em] (obj){obj};
+        \node[below=1.3em of comp, xshift=6em] (clausal){clausal};
+        
+        \node[below=1em of obj, xshift=-3em] (dobj){dobj};
+        \node[below=1em of obj, xshift=0em] (obj2){obj2};
+        \node[below=1em of obj, xshift=3em] (iobj){iobj};
+        
+        \node[below=1.5em of clausal, xshift=-3em] (xcomp){xcomp};
+        \node[below=1.5em of clausal, xshift=3em] (ccomp){ccomp};
+        
+        \draw[] (dependent) -- (mod);
+        \draw[] (dependent) -- (arg);
+        \draw[] (dependent) -- (argmod);
+        
+        \draw[] (ncmod) -- (mod);
+        \draw[] (xmod) -- (mod);
+        \draw[] (cmod) -- (mod);
+        
+        \draw[] (sodo) -- (arg);
+        \draw[] (subj) -- (arg);
+        \draw[] (comp) -- (arg);
+        
+        \draw[] (subj) -- (ncsubj);
+        \draw[] (subj) -- (xsubj);
+        \draw[] (subj) -- (csubj);
+        
+        \draw[] (subj) -- (sodo);
+        \draw[] (sodo) -- (dobj);
+        
+        \draw[] (comp) -- (obj);
+        \draw[] (comp) -- (clausal);
+        
+        \draw[] (dobj) -- (obj);
+        \draw[] (obj2) -- (obj);
+        \draw[] (iobj) -- (obj);
+        
+        \draw[] (xcomp) -- (clausal);
+        \draw[] (ccomp) -- (clausal);
+    \end{tikzpicture}
+    \caption{The grammatical relations (GR) hierarchy from \citet{Carroll1999}}
+    \label{fig:grEarly}
+\end{figure}
+
+In early 2000 the existing treebanks were still inadequate for evaluating the predicate-argument structure of English clauses. To address this problem, PARC 700 treebank \citep{King2003} was created by randomly extracting 700 sentences from Penn treebank, parsed with a Lexical Functional Grammar (LFG), converted into dependency relations and manually corrected by human validators. This scheme has played role in creation of Stanford dependency model that I describe in detail latter. 
+
+%CoNLL
+One advantage of dependency representations is that they can be encoded in a tabular format such as CoNLL \citep{nivre2007conll} which now is adopted as the standard representation. It is employed in a recurring open competition called ``CoNLL shared task'' launched for improving and innovating the dependency parsing methods. The most notable are the ones from 2006 on dependency parsing \citep{Buchholz2006} followed in 2007 that included a track for multilingual and one for domain specific dependency parsing. Fast forward to 2017 \citep{zeman2017conll} the task was for parsing from raw text (as previous ones were lemmatised and annotated with part of speech) into universal dependency.
+
+\section{The Stanford dependency model}
+The functional dependency descriptions is precisely the aspect which makes possible the beneficial link between the Stanford Dependency Grammar and the Systemic Functional structures targeted in the current thesis. 
+
+Stanford parser is one of the leaders in the domain of dependency parsing. Since 2006 \citep{Marneffe2006} for ten years Stanford parser implemented the Stanford dependency model for English (and a few other languages). Then in 2015 \citet{Nivre2016ud} proposes the language independent Universal Dependency scheme. In this section I present the Stanford dependency model (prior to Universal Dependency) that is used in the current parser. 
+
+The design of the Stanford dependency set \citep{Marneffe2006, Marneffe2008,  Marneffe2014, Silveira2014} bears a strong intellectual debt to the framework of Lexical Functional Grammars \citep{Brensan2000} from which many relations  were adopted. \citet{Marneffe2006} departs from the relation typology described in \citep{Carroll1999} which was employed in PAREVAL initiative \citep{Harrison1991} and from the grammatical relations of PARC 700 \citep{King2003} scheme following a style of Lexical Functional Grammar. Marneffe arranges the grammatical relations into a hierarchy rooted in a generic relation \textit{dependent}. This is then classified into a more fine-grained set of relations thet may hold between a head and its dependent following the set of principles \citep{Marneffe2008a} stipulated in Generalization \ref{def:design-principles}.
 
 \begin{generalization}[Design principles for Stanford dependency set]\label{def:design-principles}\leavevmode
-	\begin{enumerate}
-		\item Everything is represented uniformly and some binary relation between two sentence words.
-		\item Relations should be semantically contentful and useful to applications.
-		\item Where possible, relations should use notions of traditional grammar \citep{Quirk1985} for easier comprehension by users.
-		\item The representation should be spartan rather than overwhelming with linguistic details. 
-	\end{enumerate}
+    \begin{enumerate}
+        \item Everything is represented uniformly as binary relation pairs of words.
+        \item Relations should be semantically contentful and useful to NLP applications.
+        \item Where possible, relations should use the notions of traditional grammar \citep{Quirk1985} for easier comprehension by users.
+        \item To deal with text complexities underspecified relations should be available.
+        \item When possible content words shall be connected directly, not indirectly mediated by function words (prepositions, conjunctions, auxiliaries, etc.).
+    \end{enumerate}
 \end{generalization}
 
-When proposing the Stanford dependency, \citet{Marneffe2006} inherits many relations from Lexical Functional Grammars\citep{Brensan2000} and departs from the sets described by \citet{Carroll1999} and \citet{King2003}. She arranges the grammatical relations into a hierarchy rooted in a generic relation \textit{dependent}. This is then classified into a more fine-grained set of relations between a head and its dependent. 
-%TODO continue describing Stanford dependecy set 
+When motivating the approach to schema development, \citet{Marneffe2006} insists on practical rather than theoretical concerns proposing that structural configurations be defined as grammatical roles (to be read as grammatical functions)\citep{Marneffe2006}. In the Chomsky tradition \citet{Chomsky1981} the grammatical relations are defined structurally as configurations of phrase structure. Other theories such as Lexical-Functional Grammar reject the adequacy of such an approach \citep{Brensan2000} and advocate a functional representation for syntax at the atomic level. Following the latter approach, she insists that information about functional dependencies between words is very important and shall be explicitly available in the dependency tree. 
 
-\section{Stanford Parser: collapsed-cc output}
+The advantage of explicit relations is that the predicate-argument relations are readily available as edge labels in the dependency structure and can be used off the shelf for real world applications which was an important goal in the schema design. The grammar had to be suitable for parsing within the context of syntactic pattern learning \citep{snow2005learning}, relation extraction, machine translation, question answering and inference rule discovering \citep{lin2001discovery}, domain specific parsing \citep{clegg2007benchmarking}, and others. The complete set of dependency relations is Appendix \ref{ch:stanfordDepRel}.
+
+\section{Stanford Parser}
 \label{sec:collapsed-cc-output}
 % describing the cc-collapsed
-The Stanford Dependency Parser is capable of generating several types of dependency representations. The most convenient and informative version is Collapsed-CC-processed. This structure is created after the initial parse is ready and constitutes a simplified and more intuitive representation of the dependency parse. The collapsed form concerns prepositions, conjunctions and relative clause referents. Dependencies involving prepositions and conjunctions are transformed from basic form in Figure \ref{fig:prep-transf1} to the form where preposition are embedded into the edge relation, as in Figure \ref{fig:prep-transf2}. Similar transformation is done for conjunctions. 
+The Stanford Dependency Parser generates four types of dependency representations. It produces parse trees with \textit{basic dependencies}, \textit{collapsed dependencies} and \textit{collapsed dependencies with propagation of conjunct} that are not necessarily a tree structure and finally the \textit{collapsed dependencies that preserve a tree structure}. The variant employed in the current work is the collapsed dependencies with propagation of conjunct. This structure concerns preposition, conjunction and relative clause referent nodes, and is generated by a series of transformations after the initial basic dependency parse is ready.
 
-\begin{figure}
+For example, consider fragment ``based in Luxembourg''. In basic dependency representation, such as is shown in Figure \ref{fig:prep-transf1}, the function words are governing the content words and thus there is a preposition (prep) edge from ``based'' to a dependent preposition ``in'' from from which continues a preposition object edge (pobj) to ``Luxembourg''. In collapsed dependency representation the relation sequences of the type ``prep-pobj'' are replaced by a direct edge between the two content words labelled with ``prep'' function concatenated with the intermediary preposition as can be seen in Figure \ref{fig:prep-transf2}. There is a single relation between ``based'' and ``Luxembourg'' labelled ``prep\_in''. Similar transformations are done for conjunctions.
+
+\begin{figure}[!ht]
 	\centering
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\begin{dependency}[dep-style]
-			\begin{deptext}[]
-				based \& in \& Luxembourg\\
-			\end{deptext}
-			\depedge{1}{2}{prep}
-			\depedge{2}{3}{pobj}
-		\end{dependency}
-		\caption{Basic(uncollapsed) preposition dependency}
-		\label{fig:prep-transf1}
-	\end{minipage}
+	\begin{subfigure}{.45\textwidth}
+        \centering
+        \begin{dependency}[dep-style]
+            \begin{deptext}[]
+                based \& in \& Luxembourg\\
+            \end{deptext}
+            \depedge{1}{2}{prep}
+            \depedge{2}{3}{pobj}
+        \end{dependency}
+        \caption{Basic (uncollapsed) preposition dependency}
+        \label{fig:prep-transf1}
+    \end{subfigure}
 	\quad
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\begin{dependency}[dep-style]
-			\begin{deptext}[]
-				based \& in \& Luxembourg\\
-			\end{deptext}
-			\depedge{1}{3}{prep\_in}
-		\end{dependency}
-		\caption{Collapsed preposition dependency}
-		\label{fig:prep-transf2}
-	\end{minipage}
+	\begin{subfigure}{.45\textwidth}
+        \centering
+        \begin{dependency}[dep-style]
+            \begin{deptext}[]
+                based \& in \& Luxembourg\\
+            \end{deptext}
+            \depedge{1}{3}{prep\_in}
+        \end{dependency}
+        \caption{Collapsed preposition dependency}
+        \label{fig:prep-transf2}
+    \end{subfigure}
+    \caption{Function words in Stanford dependency model}
+    \label{fig:prep-transf}
 \end{figure}
 
-Besides collapsing prepositions and conjunctions the DG is further processed to introduce more relations (i.e. connections) even if they break the tree structure. For example the \textit{ref} relation does not appear in the basic dependency structure in figure \ref{fig:rel-transf1} but it appears in the processed dependency structure forming a cycle with \textit{rcmod} and \textit{subjpass} relations.
+Besides collapsing prepositions and conjunctions the dependency structure is further processed to introduce more relations even if they break the tree structure. The relative clauses is such a case where the tree structure is broken. Consider Figure \ref{fig:rel-transf1} where the relative clause is introduced by a relative clause modifier relation (rcmod) from the noun ``Nina'' to the main verb of the relative clause ``coming''. The clause contains an interrogative pronoun ``who''  functioning as passive subject (subjpass) and which anaphorically resolves to the clause governor ``Nina''. This sort of information about the antecedent of the relative clause is also introduced in the collapsed dependency representation. And thus, as depicted in Figure \ref{fig:rel-transf2}, a new referent relation is added connecting ``Nina'' to the subordinate subject ``who'' of the relative clause.
 
-\begin{figure}
+\begin{figure}[!ht]
 	\centering
-	\begin{minipage}[b]{0.45\textwidth}
-		
-		\begin{dependency}[dep-style-narrow]
-			\begin{deptext}[]
-				Nina \& , \& who \& is \& coming \& tomorrow\\ % \& , \& makes \& ... \\
-			\end{deptext}
-			\depedge[edge unit distance =2.2ex]{1}{5}{rcmod}
-			\depedge{5}{3}{nsubjpass}
-			\depedge{5}{4}{auxpass}
-			\depedge{5}{6}{tmod}
-		\end{dependency}
-		\caption{Basic(uncollapsed) preposition dependency}
-		\label{fig:rel-transf1}
-	\end{minipage}
+	\begin{subfigure}{.45\textwidth}
+        \begin{dependency}[dep-style-narrow]
+            \begin{deptext}[]
+                Nina, \& who \& is \& coming \& tomorrow\\ % \& , \& makes \& ... \\
+            \end{deptext}
+            \depedge[edge unit distance =1.3em]{1}{4}{rcmod}
+            \depedge{4}{2}{nsubjpass}
+            \depedge{4}{3}{auxpass}
+            \depedge{4}{5}{tmod}
+        \end{dependency}
+        \caption{Basic (uncollapsed) relative clause}
+        \label{fig:rel-transf1}
+    \end{subfigure}
 	\quad
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\begin{dependency}[dep-style-narrow]
-			\begin{deptext}[]
-				Nina \& , \& who \& is \& coming \& tomorrow\\ % \& , \& makes \& ... \\
-			\end{deptext}
-			\depedge[edge unit distance =2.2ex]{1}{5}{rcmod}
-			\depedge{1}{3}{ref}
-			\depedge{5}{3}{nsubjpass}
-			\depedge{5}{4}{auxpass}
-			\depedge{5}{6}{tmod}
-		\end{dependency}
-		\caption{Collapsed preposition dependency}
-		\label{fig:rel-transf2}
-	\end{minipage}
+    \begin{subfigure}{.45\textwidth}
+    \centering
+    \begin{dependency}[dep-style-narrow]
+        \begin{deptext}[]
+            Nina, \& who \& is \& coming \& tomorrow\\ % \& , \& makes \& ... \\
+        \end{deptext}
+        \depedge[edge unit distance =1.3em]{1}{4}{rcmod}
+        \depedge{1}{2}{ref}
+        \depedge{4}{2}{nsubjpass}
+        \depedge{4}{3}{auxpass}
+        \depedge{4}{5}{tmod}
+    \end{dependency}
+    \caption{Collapsed relative clause}
+    \label{fig:rel-transf2}
+\end{subfigure}
+    \caption{Relative clause in Stanford dependency model}
+    \label{fig:rel-transf}
 \end{figure}
 
-Relations like \textit{ref} introduce cycles but add valuable information useful in various stages of further processing. However, ensuring a tree structure in important for the CG creation stage because it is based on a top down traversal. This is taken care of in the preprocessing stage described in the next stage.
+There are other language phenomena such as relative clauses that break the tree structure in the collapsed dependency representation by introducing either cycles or nodes with multiple governors. 
+This is the reason why often in this thesis the references ar to dependency graphs and not trees. In fact the fundamental assumption here is that the dependency structures are graphs with a root node. I further develop this assumption in Chapter \ref{ch:data-structures}. Nevertheless additional or direct relations between content words (moving accounts of the function words into the graph edges) increase the usability of the dependency graphs for various purposes including the present parse method which is detailed in Chapter \ref{ch:parsing-algorithm}. 
 
 \section{Penn part-of-speech tag set}
 %NOTE: this section is transfered into SFL grammar chapter

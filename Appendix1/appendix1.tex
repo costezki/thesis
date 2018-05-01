@@ -91,3 +91,220 @@ Process~|Range \\
 Initiating~|Continuing \\
 \noindent\textbf{Possible Relative Order of Elements in the Hypoataxis Structure:} \\ \noindent
 Dependent~|Dominant~|Dependent\\
+
+\chapter{Stanford Dependency schema}
+\label{ch:stanfordDepRel}
+The Stanford dependency relations as defined in Stanford typed dependencies manual \citep{Marneffe2008}
+
+\begin{figure}[!ht]
+    \centering
+    \begin{forest}
+        for tree={
+            font=\ttfamily,
+            grow'=0,
+            child anchor=west,
+            parent anchor=south,
+            anchor=west,
+            calign=first,
+            edge path={
+                \noexpand\path [draw, \forestoption{edge}]
+                (!u.south west) +(7.5pt,0) |- node[fill,inner sep=1.25pt] {} (.child anchor)\forestoption{edge label};
+            },
+            before typesetting nodes={
+                if n=1
+                {insert before={[,phantom]}}
+                {}
+            },
+            fit=band,
+            before computing xy={l=15pt},
+        }
+        [dep - dependent
+        [arg - argument 
+        [agent - agent ]
+        [comp - complement 
+        [acomp - adjectival complement ]
+        [attr - attributive ]
+        [ccomp - clausal complement with internal subject ]
+        [xcomp - clausal complement with external subject ]
+        [compl - complementizer ]
+        [obj - object 
+        [dobj - direct object ]
+        [iobj - indirect object ]
+        [pobj - object of preposition ]
+        ]
+        [mark - marker (word introducing an advcl) ]
+        [rel - relative (word introducing a rcmod) ]
+        ]
+        [subj - subject 
+        [nsubj - nominal subject 
+        [nsubjpass - passive nominal subject ]
+        ]
+        [csubj - clausal subject 
+        [csubjpass - passive clausal subject ]
+        ]
+        ]
+        ]
+        [\dots]
+        ] 
+    \end{forest}
+    \caption{The Stanford dependency scheme - part one}
+    \label{fig:grStanford1}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \begin{forest}
+        for tree={
+            font=\ttfamily,
+            grow'=0,
+            child anchor=west,
+            parent anchor=south,
+            anchor=west,
+            calign=first,
+            edge path={
+                \noexpand\path [draw, \forestoption{edge}]
+                (!u.south west) +(7.5pt,0) |- node[fill,inner sep=1.25pt] {} (.child anchor)\forestoption{edge label};
+            },
+            before typesetting nodes={
+                if n=1
+                {insert before={[,phantom]}}
+                {}
+            },
+            fit=band,
+            before computing xy={l=15pt},
+        }
+        [dep - dependent
+        [\dots]
+        [mod - modifier 
+        [abbrev - abbreviation modifier ]
+        [amod - adjectival modifier ]
+        [appos - appositional modifier ]
+        [advcl - adverbial clause modifier ]
+        [purpcl - purpose clause modifier ]
+        [det - determiner ]
+        [predet - predeterminer ]
+        [preconj - preconjunct ]
+        [infmod - infinitival modifier ]
+        [partmod - participial modifier ]
+        [advmod - adverbial modifier 
+        [neg - negation modifier ]			
+        ]
+        [rcmod - relative clause modifier ]
+        [quantmod - quantifier modifier ]
+        [tmod - temporal modifier ]
+        [measure - measure-phrase modifier ]
+        [nn - noun compound modifier ]
+        [num - numeric modifier ]
+        [number - element of compound number ]
+        [prep - prepositional modifier ]
+        [poss - possession modifier ]
+        [possessive - possessive modifier ('s) ]
+        [prt - phrasal verb particle ]
+        ]
+        [\dots]
+        ] 
+    \end{forest}
+    \caption{The Stanford dependency scheme - part two}
+    \label{fig:grStanford2}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \begin{forest}
+        for tree={
+            font=\ttfamily,
+            grow'=0,
+            child anchor=west,
+            parent anchor=south,
+            anchor=west,
+            calign=first,
+            edge path={
+                \noexpand\path [draw, \forestoption{edge}]
+                (!u.south west) +(7.5pt,0) |- node[fill,inner sep=1.25pt] {} (.child anchor)\forestoption{edge label};
+            },
+            before typesetting nodes={
+                if n=1
+                {insert before={[,phantom]}}
+                {}
+            },
+            fit=band,
+            before computing xy={l=15pt},
+        }
+        [dep - dependent
+        [\dots]
+        [aux - auxiliary 
+        [auxpass - passive auxiliary ]
+        [cop - copula ]
+        ]
+        [cc - coordination ]
+        [conj - conjunct ]
+        [expl - expletive (expletive "there") ]
+        [parataxis - parataxis ]
+        [punct - punctuation ]
+        [ref - referent ]
+        [sdep - semantic dependent 
+        [xsubj - controlling subject ]
+        ]
+        ] 
+    \end{forest}
+    \caption{The Stanford dependency scheme - part three}
+    \label{fig:grStanford3}
+\end{figure}
+
+\chapter{Penn treebank tag-set}
+\label{ch:PennTagset}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+    \centering
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|l|l|l|}
+            \hline
+            \textbf{Tag} & \textbf{Description}                      & \textbf{Example}           \\ \hline
+            CC           & conjunction, coordinating                 & and, or, but               \\ \hline
+            CD           & cardinal number                           & five, three, 13\%          \\ \hline
+            DT           & determiner                                & the, a, these              \\ \hline
+            EX           & existential there                         & there were six boys        \\ \hline
+            FW           & foreign word                              & mais                       \\ \hline
+            IN           & conjunction, subordinating or preposition & of, on, before, unless     \\ \hline
+            JJ           & adjective                                 & nice, easy                 \\ \hline
+            JJR          & adjective, comparative                    & nicer, easier              \\ \hline
+            JJS          & adjective, superlative                    & nicest, easiest            \\ \hline
+            LS           & list item marker                          &                            \\ \hline
+            MD           & verb, modal auxillary                     & may, should                \\ \hline
+            NN           & noun, singular or mass                    & tiger, chair, laughter     \\ \hline
+            NNS          & noun, plural                              & tigers, chairs, insects    \\ \hline
+            NNP          & noun, proper singular                     & Germany, God, Alice        \\ \hline
+            NNPS         & noun, proper plural                       & we met two Christmases ago \\ \hline
+            PDT          & predeterminer                             & both his children          \\ \hline
+            POS          & possessive ending                         & 's                         \\ \hline
+            PRP          & pronoun, personal                         & me, you, it                \\ \hline
+            PRP\$        & pronoun, possessive                       & my, your, our              \\ \hline
+            RB           & adverb                                    & extremely, loudly, hard    \\ \hline
+            RBR          & adverb, comparative                       & better                     \\ \hline
+            RBS          & adverb, superlative                       & best                       \\ \hline
+            RP           & adverb, particle                          & about, off, up             \\ \hline
+            SYM          & symbol                                    & \%                         \\ \hline
+            TO           & infinitival to                            & what to do?                \\ \hline
+            UH           & interjection                              & oh, oops, gosh             \\ \hline
+            VB           & verb, base form                           & think                      \\ \hline
+            VBZ          & verb, 3rd person singular present         & she thinks                 \\ \hline
+            VBP          & verb, non-3rd person singular present     & I think                    \\ \hline
+            VBD          & verb, past tense                          & they thought               \\ \hline
+            VBN          & verb, past participle                     & a sunken ship              \\ \hline
+            VBG          & verb, gerund or present participle        & thinking is fun            \\ \hline
+            WDT          & wh-determiner                             & which, whatever, whichever \\ \hline
+            WP           & wh-pronoun, personal                      & what, who, whom            \\ \hline
+            WP\$         & wh-pronoun, possessive                    & whose, whosever            \\ \hline
+            WRB          & wh-adverb                                 & where, when                \\ \hline
+            .            & punctuation mark, sentence closer         & .;?*                       \\ \hline
+            ,            & punctuation mark, comma                   & ,                          \\ \hline
+            :            & punctuation mark, colon                   & :                          \\ \hline
+            (            & contextual separator, left paren          & (                          \\ \hline
+            )            & contextual separator, right paren         & )                          \\ \hline
+        \end{tabular}%
+    }
+    \caption{Penn Treebank tag set}
+    \label{tab:penntagset}
+\end{table}
