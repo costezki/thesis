@@ -284,7 +284,12 @@ The issue emerges from the way connections and (cross-)classifications are organ
 
 For the generation task, that size, is not a problem at all as the number of choice points is actually rather small. Such a paradigmatic organisation is, in fact, an incredibly concise and efficient way to express the linguistic choices where the possible feature selections are relevant only when they are enabled by prior paradigmatic choices and it is only those alternatives that need to be considered \citep[12--13]{Halliday96-grammatics} .
 
-In the analysis task, the paradigmatic context of choice, that helps navigation during the generation process, is no longer available. It is not knownany longer which features of a systemic network are relevant and which are not. This leads to a radical asymmetry between the two tasks. Thatis: in generation, the simple traversal of the network finds only the compatible choicesbecause that is what the network leads to; whereas in analysis it is not evident inadvance which path to follow therefore the task is virtually to explore entire searchspace in order to discover which features apply to the text. This means that any path is potentially relevant and shall be passed and checked leading to evaluation of the system network as a whole; and that there is no way to restricting the search space, as in the case of generation, to a a set of familiar paradigmatic lines \citep[29]{Bateman2008}. 
+In the analysis task, the paradigmatic context of choice, that helps navigation during the generation process, is no longer available. It is not known
+any longer which features of a systemic network are relevant and which are not. This leads to a radical asymmetry between the two tasks. That
+is: in generation, the simple traversal of the network finds only the compatible choices
+because that is what the network leads to; whereas in analysis it is not evident in
+advance which path to follow therefore the task is virtually to explore entire search
+space in order to discover which features apply to the text. This means that any path is potentially relevant and shall be passed and checked leading to evaluation of the system network as a whole; and that there is no way to restricting the search space, as in the case of generation, to a a set of familiar paradigmatic lines \citep[29]{Bateman2008}. 
 
 One of the grammars successfully used in generation tasks is Nigel grammar developed within Penman generation project \citep{Mann83}. It contains 767 grammatical systems defined over 1381 grammatical features which Bateman evaluates as ``a very large computational grammar by current standards, although nowadays by no means the broadest when considered in terms of raw grammatical coverage'' \citep[29]{Bateman2008}. To parse with such a grammar would means exploring an incredibly vast search space $ 3 \times 10^{18} $ to be more precise. A more detailed break down the complexity by rank or primary class as provided in Table \ref{tab:size} below.
 
@@ -319,46 +324,83 @@ Such databases describe domain independent \textit{semantic frames} (know in SFL
 The tendency is to identify frames that are generic enough to cover classes of verb meanings (for example Action, Cognition, Perception, Possession frames) and the same applies to participant roles where the tendency is to reuse roles across semantic frames (for example agent role from Action frame is reused in Perception or Possession frames, or Phenomenon is reused in Cognition and Perception frames).
 
 %example of covert constituents
-Besides being difficult to pin them down in text, the problem with semantic features goes even step further. Sometimes the semantic roles correspond to constituents that are displaced or not even realised in the text which makes them even more difficult to identify and correctly assign. Consider Example \ref{ex:glance2}. It is a sentence that has three non-auxiliary verbs: seem, worry and arrive. According to Cardiff grammar this corresponds to three clauses as represented in Table \ref{tab:three-clauses} below.
-
-%todo continue example
-
-% seem: Attributive: Ca + At
-% worry about: two role cognition: Ag Cog + Ph
-% miss: possessive : Af Ca + Pos
+Besides being difficult to pin them down in text, the problem with semantic features goes even step further. Sometimes the semantic roles correspond to constituents that are displaced or not even realised in the text which makes them even more difficult to identify and correctly assign. Consider Example \ref{ex:glance2}. It is a sentence that has three non-auxiliary verbs: seem, worry and arrive. According to Cardiff grammar (that will be introduced in Chapter \ref{ch:sfg}) this corresponds to three clauses \textbf{embedded} into each other as represented in Table \ref{tab:glance-analsys}.
 
 \begin{exe}
     \ex\label{ex:glance2} She seemed to worry about missing the river boat.
+%    \ex\label{ex:glance3} She seemed [to worry [about missing the river boat]].
 \end{exe}
 
+\begin{table}[!ht]
+    \centering
+    \resizebox{\columnwidth}{!}{%
+    \begin{tabular}{cccc|c|c|c|c|c|}
+        \hline
+        \multicolumn{1}{|c|}{\textit{She}} & \multicolumn{1}{c|}{\textit{seemed}} & \multicolumn{1}{c|}{\textit{to}}        & \textit{worry} & \textit{about} & \textit{missing} & \textit{the} & \textit{river} & \textit{boat.} \\ \hline
+        \multicolumn{9}{|c|}{clause}                                                                                                                                                                                              \\ \hline
+        \multicolumn{1}{|c|}{Subject}      & \multicolumn{1}{c|}{Main Verb}       & \multicolumn{7}{c|}{Complement}                                                                                                               \\ \hline
+        & \multicolumn{1}{c|}{}                & \multicolumn{7}{c|}{clause}                                                                                                                   \\ \cline{3-9} 
+        & \multicolumn{1}{c|}{}                & \multicolumn{1}{c|}{Infinitive Element} & Main Verb      & \multicolumn{5}{c|}{Complement}                                                    \\ \cline{3-9} 
+        &                                      &                                         &                & \multicolumn{5}{c|}{clause}                                                        \\ \cline{5-9} 
+        &                                      &                                         &                & Binder         & Main Verb        & \multicolumn{3}{c|}{Complement}                \\ \cline{5-9} 
+    \end{tabular}%
+    }
+    \caption{SF constituency analysis in Cardiff grammar style}
+    \label{tab:glance-analsys}
+\end{table}
 
+The participant role configurations (or the semantic frames) these verbs bring about are provided in the Table \ref{tab:semantic-role-distro}. For the sake of this example lets say that the first role corresponds to the Subject constituent and the second to the Complement constituent. This way the verb meaning seem_{1} corresponds to an Attributive configuration that distributes Carrier and Attribute roles to the Subject ``She'' and the Complement ``to worry about missing the river boat''. In the case of worry about_1 and miss_1 the first roles are compound (i.e. composed of two simple ones) while the second ones are simple. So the verb meaning worry about_1 distributes the Phenomenon to the Complement ``about missing the river boat'' and the Agent \& Cognizant role to an empty Subject that is said to be \textit{non-realised}, \textit{covert} or \textit{null element}. A similar situation is for miss_1 that assigns an Affected \& Carrier role to the empty Subject and the Possessed role to the Complement ``the river boat''. 
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|l|}
+        \hline
+        \textit{verb meaning} & \textit{semantic configuration} & \textit{participant role mandatory distribution}  \\ \hline
+        seem_{1}           & Attributive                     & Carrier + Attribute                     \\ \hline
+        worry about_{1}   & Two Role Cognition              & Agent \& Cognizant + Phenomenon         \\ \hline
+        miss_{1}           & Possessive                      & Affected \& Carrier + Possessed (thing) \\ \hline
+    \end{tabular}
+    \caption{Semantic role configurations according to \citet{Neale2002,Fawcett2009}}
+    \label{tab:semantic-role-distro}
+\end{table}
+
+Those unrealised Subjects in the embedded clauses are recoverable and correspond to the Subject in the higher clause. This is easy to see in Examples \ref{ex:glance3} and \ref{ex:glance4} therefore we can just mark the places of the null Subjects in the embedded clause in order to be able to assign the semantic labels (otherwise the frame is considered incomplete and thus invalid). Notice that I have provided also an index \textit{i} to highlight that the null elements correspond to the higher clause Subject ``She''. 
+
+\begin{exe}
+    \ex\label{ex:glance3} She worried about missing the river boat.
+    \ex\label{ex:glance4} She missed the river boat.
+    \ex\label{ex:glance5} She_i seemed [\textit{null-Subject}_i to worry [about \textit{null-Subject}_i missing the river boat]].
+\end{exe}
+
+Now that the places of covert constituents are explicitly marked and the recoverable constituent coindexed we can see the distribution of semantic roles realised for this sentence in the Table \ref{tab:glance-analsys-semantic} below. 
+
+\begin{table}[!ht]
+    \centering
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{cccccc|c|c|c|c|c|}
+            \hline
+            \multicolumn{1}{|c|}{\textit{She_i}}   & \multicolumn{1}{c|}{\textit{seemed}} & \multicolumn{1}{c|}{\textit{null_i}}   & \multicolumn{1}{c|}{\textit{to}} & \multicolumn{1}{c|}{\textit{worry}} & \textit{about} & \textit{null_i}    & \textit{missing} & \textit{the} & \textit{river} & \textit{boat.} \\ \hline
+            \multicolumn{11}{|c|}{Attributive configuration}                                                                                                                                                                                                                         \\ \hline
+            \multicolumn{1}{|c|}{Agent} & \multicolumn{1}{c|}{}       & \multicolumn{9}{c|}{Attribute}                                                                                                                                                                               \\ \cline{1-1} \cline{3-11} 
+            & \multicolumn{1}{c|}{}       & \multicolumn{9}{c|}{Two Role Cognition configuration}                                                                                                                                                        \\ \cline{3-11} 
+            & \multicolumn{1}{c|}{}       & \multicolumn{1}{c|}{Agent \& Cognizant} &                         & \multicolumn{1}{c|}{}               & \multicolumn{6}{c|}{Phenomenon}                                                                       \\ \cline{3-3} \cline{6-11} 
+            &                             &                                      &                         & \multicolumn{1}{c|}{}               & \multicolumn{6}{c|}{Possessive configuration}                                                         \\ \cline{6-11} 
+            &                             &                                      &                         &                                     &                & Affected \& Carrier &                  & \multicolumn{3}{c|}{Possessed}                 \\ \cline{7-7} \cline{9-11} 
+        \end{tabular}%
+    }
+    \caption{Transitivity analysis in Cardiff grammar style \citep{Neale2002,Fawcett2009}}
+    \label{tab:glance-analsys-semantic}
+\end{table}
+
+In language there are many cases where constituents are empty but recoverable from the immediate vicinity relying in most cases on syntactic means and in a few cases additional lexical-semantic resources are required. The mechanisms of detecting and resolving the empty constituents are captured in the Government and Binding Theory (GBT) developed in \citep{Chomsky81, Chomsky1982, Chomsky1986} and based on the phrase structure grammar. GBT explains how some constituents can \textit{move} from one place to another, where are the places of \textit{non-overt constituents} and what constituents do they refer to i.e. what are their \textit{antecedents}. Such accounts of empty elements are missing from any SFG grammar yet they are useful in determining the correct distribution of participant roles to the clause constituents. Translating the mechanisms from GBT into SFG could contribute to decreasing the complexity of the parsing problem mentioned above.
 
 % concluding problem
-Now the question would be how could the vast search space of grammars such as Nigel be restricted to a reasonable size and how can be compensated the lack of proper syntagmatic description in SFGs? The first part of the question has already been addressed in \citet{ODonnell1993} but the lack for an answer to the second part and probably for other hidden reasons the results are not usable in real world applications. In fact the have been more attempts, \citet{Kasper1988}, \citet{Kay1985}, \citet{ODonoghue1991a}, \citet{ODonnell1993} and \citet{Day2007}, to mention just a few, none of which managed to parse broad coverage English with full SFG without aid of some sort. Each had to accept limitations either in grammar or language size and eventually used simpler syntactic trees as a starting point of the parsing process. A detailed account of the current state of the art in parsing with SFGs is provided in Chapter \ref{ch:sota}. 
 
+To conclude, I have drown attention to several issues related to parsing with SFG. First, the parsing task cannot be treated as a reversible generation task because the methods that have been shown to work for generation are not usable for parsing as such due to a high computational complexity. Second, the parsing task, regardless of the grammar, should first and foremost account for the sentence structure on the syntagmatic axis and only afterwards for the (semantic) features selected on the paradigmatic axis. Such syntagmatic account in SFL is insufficient for the parsing task. Third, syntagmatic account alone does not provide enough clues for assignment of semantic features and require a lexical-semantic account within the grammar or as external semantic databases. Moreover it can be aided by identification of places where covert constituents are said to exist. Identifying such the null elements is not the only method of assigning semantic features and some approaches do without them but having access to such information is considered valuable in the present thesis.
 
+Next I promote the benefits of reusing successes in other areas of linguistics that have shown to solve problems similar to the ones identified above. Instead of trying to engineer novel solutions within the current framework an alternative approach, I argue below, would be to establish cross-theoretical and inter-grammatical links to enable integration of the ready solutions. 
 
-\section{The problem of semantic parsing}
-\label{sec:semantic-parsing-problem}
-%todo move upwards and explain as minor problem? 
-
-%As the analysis moves away from directly observable grammatical variations towards more abstract semantic variations the difficulty of generating an accurate account increases drastically. In computational linguistics this area is known as \textit{semantic parsing}. One of the main challenges (well explained in \citep[245--250]{gildea2002automatic}) in  here remains the same since \citet{Winograd1972} that is moving away from the domain specific, hand-crafted semantic specifications towards domain independent and robust set of semantic specifications. This goal was undertaken in several projects to build large broad-scope lexico-semantic databases such as WordNet \citep{Fellbaum98-wn}, FrameNet \citep{Baker1998, Johnson2000, fillmore2003background} and VerbNet \citep{schuler2005verbnet, Kipper2008}.
-
-%Such databases describe domain independent \textit{semantic frames} which describe semantic actions and relationships, along with \textit{semantic roles} ascribed to their participants. The semantic frames generally are governed by verbs and more specifically each verb meaning has a dedicated semantic frame. For instance the perception frame contains \textit{Perceiver} and \textit{Phenomenon} roles as can be seen in Example \ref{ex:glance}. 
-%
-%\begin{exe}
-%    \ex\label{ex:glance} [_{Agent-Perceiver} Jaqueline] glanced [_{Phenomenon} at her new watch].
-%\end{exe}
-%
-%The tendency is to identify frames that are generic enough to cover classes of verb meanings (for example Action, Cognition, Perception, Possession frames) and the same applies to participant roles where the tendency is to reuse roles across semantic frames (for example agent role from Action frame is reused in Perception or Possession frames, or Phenomenon is reused in Cognition and Perception frames).
-
-Semantic role labelling, as motived in \citep[246]{gildea2002automatic}, can play an important role in word sense disambiguation, information extraction, question answering, semantic dialogue systems, machine translation, automatic text summarisation.
-
-%A shallow semantic interpreter operates in terms of domain independent \textit{semantic frames} which describe semantic actions and relationships, along with \textit{semantic roles} ascribed to their participants. 
-
-%Most successful semantic role labelling systems today \citep{he2017deep} are built statistical or (deep) machine learning algorithms training on annotated corpora and incorporating lexical-semantic databases mentioned above. Some stress the importance of syntactic information \citep{punyakanok2008importance} whereas others show good results without \citep{he2017deep}.
-%
-%In SFL this sort of semantic information is well described in the Transitivity system of the grammar systematising the semantic frames (called \textit{figures} or \textit{configurations}) and the participant roles (called simply \textit{participants}). There is also a lexical-semantic resource called Process Type Database (PTDB) \citep{Neale2002}
+%Now the question would be how could the vast search space of grammars such as Nigel be restricted to a reasonable size and how can be compensated the lack of proper syntagmatic description in SFGs? The first part of the question has already been addressed in \citet{ODonnell1993} but the lack for an answer to the second part and probably for other hidden reasons the results are not usable in real world applications. In fact the have been more attempts, \citet{Kasper1988}, \citet{Kay1985}, \citet{ODonoghue1991a}, \citet{ODonnell1993} and \citet{Day2007}, to mention just a few, none of which managed to parse broad coverage English with full SFG without aid of some sort. Each had to accept limitations either in grammar or language size and eventually used simpler syntactic trees as a starting point of the parsing process. A detailed account of the current state of the art in parsing with SFGs is provided in Chapter \ref{ch:sota}. 
 
 
 \section{On theoretical compatibility and reuse}
