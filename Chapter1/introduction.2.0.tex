@@ -53,10 +53,10 @@ In this thesis I adopt the Systemic Functional Linguistic (SFL) framework becaus
 
 In his seminal paper ``Categories of the theory of grammar'' \citep{Halliday61-orig}, Halliday lays the foundations of SFL following the works of his British teacher J. R. Firth, inspired by Louis Hjelmslev \citep{Hjelmslev53} from Copehagen School of linguistics and by a group of European linguists from Prague Linguistic Circle. This paper constitutes a response to the need for a \textit{general theory of language} that would be holistic enough to guide empirical research in the broad discipline of linguistic science:
 \begin{quotation}
-    ... the need for a \textit{general} theory of description, as opposed to a \textit{universal} scheme of descriptive categories, has long been apparent, if often unformulated, in the description of all languages \citep[p.54; emphasis in original]{Halliday57}
+    ... the need for a \textit{general} theory of description, as opposed to a \textit{universal} scheme of descriptive categories, has long been apparent, if often unformulated, in the description of all languages \citep[54; emphasis in original]{Halliday57}
 \end{quotation} 
 \begin{quotation}
-    If we consider general linguistics to be the body of theory, which guides and controls the procedures of the various branches of linguistic science, then any linguistic study, historical or descriptive, particular or comparative, draws on and contributes to the principles of general linguistics \citep[p.55]{Halliday57}
+    If we consider general linguistics to be the body of theory, which guides and controls the procedures of the various branches of linguistic science, then any linguistic study, historical or descriptive, particular or comparative, draws on and contributes to the principles of general linguistics \citep[55]{Halliday57}
 \end{quotation} 
 
 % deeper on SFL
@@ -151,7 +151,7 @@ Lets take now the clause constituent that is the root of the constituency tree a
 \begin{figure}[!ht]
     \centering      
     \includegraphics[width=0.91\textwidth]{Figures/Example/mood-selections.pdf}      
-    \caption{The systematisation of three pronominal features in traditional grammar}
+    \caption{The feature selections in the Mood system network for Example \ref{ex:1}}
     \label{fig:mood-selections}
 \end{figure}
 
@@ -311,11 +311,11 @@ One of the grammars successfully used in generation tasks is Nigel grammar devel
 \end{table}
 
 %difficulty SLR
-Another difficulty in parsing with SFGs lays in the fact that, as the analysis moves away from directly observable grammatical variations towards more abstract semantic variations, the difficulty of generating an accurate account increases drastically. Transitivity system network for example is made up of such semantic features and it is comparable to what is called in computational linguistics (shallow) \textit{semantic parsing}.
+Another difficulty in parsing with SFGs lays in the fact that, as the analysis moves away from directly observable grammatical variations towards more abstract semantic variations, the difficulty of generating an accurate account increases drastically. Transitivity system network for example is made up of such semantic features and it is comparable to what is called in computational linguistics (shallow) \textit{semantic parsing} or \textit{Semantic Role Labelling} (SRL) \citep{Carreras2005}.
 
 The main challenges (well explained in \citep[245--250]{gildea2002automatic}) in here remains the same since \citet{Winograd1972} that is moving away from the domain specific, hand-crafted semantic specifications towards domain independent and robust set of semantic specifications. This goal was undertaken in several projects to build large broad-scope lexico-semantic databases such as WordNet \citep{Fellbaum98-wn}, FrameNet \citep{Baker1998, Johnson2000, fillmore2003background} and VerbNet \citep{schuler2005verbnet, Kipper2008}. A similar database exists for Transitivity system network as described in \citet{Fawcett2009} called Process Type Database \citep{Neale2002}. 
 
-Such databases describe domain independent \textit{semantic frames} (know in SFL as \textit{configurations} or \textit{figures}) which describe semantic actions and relationships, along with \textit{semantic roles} ascribed to their \textit{participants}. The semantic frames generally are governed by verbs and more specifically each verb meaning has a dedicated semantic frame. For instance the perception frame contains \textit{Perceiver} and \textit{Phenomenon} roles as can be seen in Example \ref{ex:glance1}. 
+Such databases describe domain independent \textit{semantic frames} \citep{Fillmore1985} (know in SFL as \textit{configurations} or \textit{figures}) which describe semantic actions and relationships, along with \textit{semantic roles} ascribed to their \textit{participants}. The semantic frames generally are governed by verbs and more specifically each verb meaning has a dedicated semantic frame. For instance the perception frame contains \textit{Perceiver} and \textit{Phenomenon} roles as can be seen in Example \ref{ex:glance1}. 
 
 \begin{exe}
     \ex\label{ex:glance1} [_{Agent-Perceiver} Jaqueline] glanced [_{Phenomenon} at her new watch].
@@ -398,20 +398,19 @@ In language there are many cases where constituents are empty but recoverable fr
 
 To conclude, I have drown attention to several issues related to parsing with SFG. First, the parsing task cannot be treated as a reversible generation task because the methods that have been shown to work for generation are not usable for parsing as such due to a high computational complexity. Second, the parsing task, regardless of the grammar, should first and foremost account for the sentence structure on the syntagmatic axis and only afterwards for the (semantic) features selected on the paradigmatic axis. Such syntagmatic account in SFL is insufficient for the parsing task. Third, syntagmatic account alone does not provide enough clues for assignment of semantic features and require a lexical-semantic account within the grammar or as external semantic databases. Moreover it can be aided by identification of places where covert constituents are said to exist. Identifying such the null elements is not the only method of assigning semantic features and some approaches do without them but having access to such information is considered valuable in the present thesis.
 
-Next I promote the benefits of reusing successes in other areas of linguistics that have shown to solve problems similar to the ones identified above. Instead of trying to engineer novel solutions within the current framework an alternative approach, I argue below, would be to establish cross-theoretical and inter-grammatical links to enable integration of the ready solutions. 
+Considering the problems above how could the vast search space of grammars such as Nigel be restricted to a reasonable size and how can be compensated the lack of proper syntagmatic description in SFGs? The first part of the question has already been addressed in \citet{ODonnell1993} but the lack for an answer to the second part and probably for other hidden reasons the results are not usable in real world applications. There have been, in fact, multiple attempts such as \citet{Kasper1988}, \citet{Kay1985}, \citet{ODonoghue1991a}, \citet{ODonnell1993} and \citet{Day2007}, to mention just a few, none of which managed to parse broad coverage English with full SFG without aid of some sort. Each had to accept limitations either in grammar or language size and eventually used simpler syntactic trees as a starting point of the parsing process. A detailed account of the current state of the art in parsing with SFGs is provided in Chapter \ref{ch:sota}. 
 
-%Now the question would be how could the vast search space of grammars such as Nigel be restricted to a reasonable size and how can be compensated the lack of proper syntagmatic description in SFGs? The first part of the question has already been addressed in \citet{ODonnell1993} but the lack for an answer to the second part and probably for other hidden reasons the results are not usable in real world applications. In fact the have been more attempts, \citet{Kasper1988}, \citet{Kay1985}, \citet{ODonoghue1991a}, \citet{ODonnell1993} and \citet{Day2007}, to mention just a few, none of which managed to parse broad coverage English with full SFG without aid of some sort. Each had to accept limitations either in grammar or language size and eventually used simpler syntactic trees as a starting point of the parsing process. A detailed account of the current state of the art in parsing with SFGs is provided in Chapter \ref{ch:sota}. 
-
+Some linguistic frameworks, other than SFL, have been shown to work well in computational contexts solving problems similar to the ones identified above. Next I provide a motivation and the benefits of reusing some of them. Instead of attempting to find novel solutions within the current framework an alternative approach, I argue below, would be to establish cross-theoretical and inter-grammatical links to enable integration of the ready solutions.
 
 \section{On theoretical compatibility and reuse}
 \label{sec:reuse}
 % reuse motivation, context to parsing 
 In the past decades many significant progresses have been made in natural language parsing framed in one or another linguistic theory each adopting a distinct perspective and set of assumptions about language. The theoretical layout and the available resources influence directly what is implemented into the parser and each implementation approach encounters challenges that may or may not be common to other approaches in the same or other theories. 
 
-Parsers implementing one theoretical framework may face common or different problems to those implementing other theories. The same can be said of the solutions. When a solution is achieved using one theory it is potentially reusable in others. The successes and achievements in any school of thought can be regarded as valuable cross theoretical results to the degree links and correspondences can be established. Therefore reusing components that have been shown to work and yield ``good enough results'' is a strong pragmatic motivation in the present work.
+Parsers implementing one theoretical framework may face common or different challenges to those implementing other frameworks. The converse can be said of the solutions. When a solution is achieved using one framework it is potentially reusable in other ones. The successes and achievements in any school of thought can be regarded as valuable cross theoretical results to the degree links and correspondences can be established. Therefore reusing components that have been shown to work and yield ``good enough results'' is a strong pragmatic motivation in the present work.
 
 %
-This thesis employs three linguistic frameworks namely the \textit{Systemic Functional Linguistics}, \textit{Dependency Grammar} and \textit{Governance \& Binding Theory}. SFL has already been motivated in Section \ref{sec:framework} and is introduced in detail in Chapter \ref{ch:sfl}. The other two frameworks are employed because some of the accomplishments using them are directly reused in this thesis and I explain below how. Chapter \ref{ch:dependecy-grappamr} and \ref{ch:gbt} besides introducing the Dependency grammar and correspondingly Government and Binding Theory show how these frameworks relate to each other and to which degree they are compatible to undergo a conversion process for the purpose of reuse.
+This thesis employs three linguistic frameworks namely the \textit{Systemic Functional Linguistics}, \textit{Dependency Grammar} and \textit{Governance \& Binding Theory}. SFL has already been motivated as target analysis framework in Section \ref{sec:framework} which is in detail introduced in Chapter \ref{ch:sfl}. The other two frameworks are employed because some of the accomplishments in those domains I attempt at reusing in this thesis as motivated below. 
 
 %The compatibility
 %It demonstrates how selected grammatical frameworks namely \textit{Systemic Functional Grammar}, \textit{Dependency Grammar} and \textit{Governance \& Binding Theory} relate to each other and to which degree they are compatible to undergo a conversion process and to show that simple patterns carrying grammatical information can be used to enrich syntactically and semantically the parse structures. And here is a brief motivation for selecting these frameworks.   
@@ -420,55 +419,107 @@ This thesis employs three linguistic frameworks namely the \textit{Systemic Func
 In the last years \textit{Dependency Grammar} \citep{Tesniere2015} became quite popular in natural language processing world favoured in many projects and systems. The grammatical lightness and the  modern algorithms implemented into dependency parsers such as Stanford Dependency Parser \citep{Marneffe2006}, MaltParser \citep{Nivre2006}, MSTParser \citep{McDonald2006} and Enju \citep{Miyao2005} are increasingly efficient and highly accurate. Among the variety of dependency parsing algorithms, a special contribution bring the \textit{machine learning} methods such as those described in \citet{mcdonald2005online, mcdonald2006online, carreras2007experiments, zhang2011transition, pei2015effective} to name just a few. 
 
 As the dependency parse structures provide information about functional dependencies between words and grants direct access to the predicate-argument relations and can be used off the shelf for real world applications. 
-This information alone, would makes the dependency grammar a suitable candidate to supplement the syntagmatic account missing in SFGs and provide some functional hooks for reducing complexity in parsing with SFGs. Hence once of the goals in this work is investigating to which degree the dependency grammar is structurally and functionally compatible with SFGs to undergo a cross theoretic transformation. This hypothesis is theoretically investigated in Chapter \ref{ch:dependecy-grammar} and then evaluate empirically in Chapter \ref{ch:evaluation}. The investigation is based specifically on Stanford Dependencies parser version 3.5 \citep{Marneffe2008a,Marneffe2008, Marneffe2014}. 
+This information alone makes the dependency grammar a suitable candidate to supplement the syntagmatic account missing in SFGs and provide some functional hooks for reducing complexity in parsing with SFGs. One of the goals in this work is to investigate to which degree the dependency grammar is structurally and functionally compatible with SFGs to undergo a cross theoretic transformation. This hypothesis is investigated at the theoretical level in Chapter \ref{ch:dependecy-grammar} and then indirectly evaluated empirically in Chapter \ref{ch:evaluation} based on Stanford Dependencies parser version 3.5 \citep{Marneffe2008a,Marneffe2008, Marneffe2014}. 
 
-\todo{to be continued for GBT}
+The problem of accounting for the \textit{null elements}, mentioned above, is not addressed neither in SFL nor in Dependency Grammar. It is, however, in detail addressed in the Government and Binding Theory (GBT) \citep{Chomsky81,Haegeman1991} which is one of Chomsky's Transformational Grammars \citep{Chomsky1957}. One other goal in this thesis is to investigate to which degree GBT accounts of null elements can be reused as DG or SFG structures to undergo a cross-theoretic transformation enabling those accounts in DG or SFG contexts. In Chapter \ref{ch:gbt} I introduce GBT and investigate this hypothesis providing some of the cross-theoretic and inter-grammatical links to Dependency and SFL grammars that as we will see in Chapter \ref{ch:semantic-parsing} benefits the Transitivity analysis.
 
-\section{Thesis Goal and Proposed Solution}
+%Chapter \ref{ch:dependecy-grappamr} and \ref{ch:gbt} besides introducing the Dependency grammar and correspondingly Government and Binding Theory show how these frameworks relate to each other and to which degree they are compatible to undergo a conversion process for the purpose of reuse.
 
-%todo: move towards potential solution
+\section{Thesis Goals and Proposed Solution}
+\label{sec:solution}
 
-The first difficulty that needs to be addressed, in the analysis process, is discovering from a sequence of words what possible groups are combinable into grammatical groups, phrases or clauses. This is a task of bridging a sequence of words as input and the grammatical description of how they can combine to form a (syntactic) structure (known in SFL as \textit{syntagmatic organizations} and described in Section \ref{sec:structure-sydney}) can already partition the search space into relevant network sub-parts cutting down the complexity by a large factor. Moreover if the syntagmatic account would involve \textit{configurations of grammatical functions} (see Section \ref{sec:functions-metafunctions}) then these grammatical functions can serve as paradigmatic context (similar to the one available during generation task) for traversing the system network and extend to the full set of systemic features. This sort of description can restrict the search space to applicable network parts and provide to an extent traversal context during analysis task.
+As will be described in Chapter \ref{sec:sota}, some parsing approaches use a syntactic backbone which is then flashed out with an SFG description. Others use a reduced set or a single layer of SFG representation; and the third group use an annotated corpus as the source of a probabilistic grammar. Regardless of approach, each limits the SFG in one way or another, balancing the depth of description with language coverage: that is either \textit{deep description but a restricted language} or \textit{shallow description but broad language coverage} is attempted. The current thesis tilts towards the latter: while keeping the language coverage as broad as possible  to provide in the parse result a number of systemic features as high as possible.
 
-Addressing the gap of the syntagmatic account within the SFG framework, can be done by, first, providing information about which grammatical functions operate at each rank, second which grammatical functions can be filled by which classes of units and third by providing relative and absolute account of ordering within each unit structure. This sort of information can guide the building of a constituency backbone structure. As a second stage, as mentioned above, the unit classes and grammatical functions can operate as ``hooks'' on system network to guide the traversal in the same way the paradigmatic context available in the generation process. 
+The process developed in this thesis can be viewed as a pipeline architecture comprising of two major phases: the \textit{structure creation} and the \textit{structure enrichment}. The structure creation phase aims to account for the syntagmatic dimension of language. The structure enrichment phase aims at discovering and assigning systemic features afferent to each of the nodes constituting the structure. The enrichment phase aims at accounting for the paradigmatic dimension of language. In this phase, two kinds of feature enrichments can be distinguished based on the clues used for feature identification. The first kind of features can be detected from the \textit{structural patterns} alone while the second kind requires lexical-semantic and potentially more kinds of resources in addition to the structural patterns.
 
-Alternatively the problem of structure construction can be outsourced for parsing with other grammars. Then the problem changes into creating a transformation mechanism to obtain the SFL constituency structure rather than build it from scratch. Starting the SFG parsing process from a syntactic tree produced with other grammars reduces the computational complexity of the task and reduce the search space. 
+\subsection{Towards the syntagmatic account}
+%solution to syntagmatic deficit
+The problem in using SFGs for parsing, as we have seen in Section \ref{sec:problem} above, manifests when the grammar is instantiated computationally with a primary focus on paradigmatic organisation (prevalent in SFL) at the cost of syntagmatics which leads to the first difficulty that needs to be addressed: discovering from a sequence of words what possible groups are combinable into grammatical groups, phrases or clauses. This is a task of bridging a sequence of words as input and the grammatical description of how they can combine to form a (syntactic) constituency tree structure (known in SFL as \textit{syntagmatic organizations} addressed in Section \ref{sec:structure-sydney}). 
 
-The second stage of constituent enrichment by network traversal can be further aided by checking an arbitrary set of patterns for preselecting even more features recoverable via lexico-syntactic patterns. The pattern recognition plays an essential role in current parsing method for fleshing out the constituent backbone with systemic selections.
+This challenge can be addressed by filling the gap of the syntagmatic account within the SFL grammar directly. It involves, first, providing information about which grammatical functions operate at each rank, second, which grammatical functions can be filled by which classes of units and, third, providing relative and absolute description of the element order for each unit class. This information in the grammar can guide the process of building the constituency structure. 
+
+Alternatively the problem of structure construction can be outsourced as parsing with other grammars. This is done in the works of Kasper \citet{Kasper1988} and \citet{Honnibal2004a, Honnibal2007} and is knows in SFL literature as \textit{parsing with a syntactic backbone}. In this case, the problem changes into creating a transformation mechanism to obtain the SFL constituency structure rather than build it from scratch. 
+
+%Starting the SFG parsing process from a syntactic tree produced with other grammars reduces the computational complexity and the search space discussed in Section \ref{sec:problem} above. 
+
+This thesis addresses the problem of building the constituency structure by the latter approach: parsing the text with Stanford Dependencies parser version 3.5 \citep{Marneffe2008a,Marneffe2008, Marneffe2014} and then transforming the parse result into SFG constituency tree. The transformation mechanisms from one grammar into the other one requires also a theoretical discussion in terms of what is being transformed. Such account of linguistic primitives or configurations of primitives in the source grammar corresponds to SFG primitives is provided in Chapter \ref{ch:dependecy-grammar}. 
+
+The SFG constituency structures is generated through a process that involves: traversing the source (dependency) parse tree and, at each traversal step, executing a constructive operation on a parallel tree following a predefined rule set of operations and mapping relations. The detailed description of the structure generation process is provided in the Chapter \ref{ch:parsing-algorithm}. 
+
+%todo provide example
+
+\subsection{Towards the paradigmatic account}
+
+Once the constituency structure is in place it can inform the following feature derivation process. The configurations of units of specific classes and carrying grammatical functions can operate as ``hooks'' on system network to guide the traversal in the same way the paradigmatic context available in the generation process. Such configurations resemble the SFG \textit{realization rules} which, in the generation process, instantiate the (abstract) features into text. 
+
+\begin{figure}[!ht]
+    \centering      
+    \includegraphics[width=0.91\textwidth]{Figures/Example/just-mood.pdf}      
+    \caption{A fragment of mood system from \citet[366]{Halliday2013}}
+    \label{fig:just-mood}
+\end{figure}
+
+The system network fragment in Figure \ref{fig:just-mood} contains the realisation rules in rectangles below some features. These realisation rules indicate what shall be reflected in the structure when a feature is selected. The converse holds: if structure contains a certain pattern then it is a (potential) manifestation of a given feature. 
+
+For example the structure of a \textit{major} clause needs to have a predicate or Main Verb element realised. In the parsing process, testing whether there is a unit functioning as Main Verb below in the clause node suffices to assign the \textit{major} feature to that clause. Next, if the clause has no unit functioning as Subject then it shall be assigned \textit{imperative} feature otherwise the \textit{indicative} one. Further the INDICATIVE-TYPE system is enabled. Here the test is whether a Subject node is positioned in front of the Finite node and whether the Subject contain the preposition ``who''. This sort of queries on the structure can be formulated as \textit{structure patterns} (see Section \ref{sec:pattern-graphs}) and associated to features in the system network in the same manner the realisation rules are. 
+
+The pattern recognition plays an essential role in current parsing method for fleshing out the constituent backbone with systemic selections. In the parsing process the structural patterns are tested whether they \textit{match} (see Section \ref{sec:pattern-graph-matching}) anywhere in the constituency structure and if so then the matched nodes are enriched with the features proved in the pattern (described in Section \ref{sec:pattern-based-operations}). 
+
+The structural patterns in this work are expressed as \textit{graph patterns} (described in Section \ref{sec:pattern-graphs}). Note that I employ graph and not tree patterns because the tree patterns would be too restrictive for the purpose of the current work. While most of the time they are hierarchically structured as a tree there are patterns that involve sibling connections or nodes with more than one parent. In both cases the tree structure is broken. The graph approach allows a wide range of structures which also includes the trees. 
+
+The enrichment stage of the parsing process comprises of a series of graph pattern matching operations that in case of success leads to the enrichment of the constituency structure with the features given in the graph pattern. This mechanism is described in detail in the Section \ref{sec:enrichment-stage}. 
+
+In this work most of the graph patterns have been manually created. Because this is laborious exercise only a few system networks have been covered in the implementation of the parser. Nonetheless they suffice for deriving some conclusions regarding the parsing approach. The future work may investigate how can graph patterns be generated automatically from the realisation rules of large grammars such as Nigel grammar. 
+
+The two main system networks targeted in this are MOOD and TRANSITIVITY (both briefly described in Chapter \ref{ch:sfg}). The MOOD network is composed of features which can be identified through graph patterns involving only the unit classes and functions provided in the constituency structure (described in Chapter \ref{ch:parsing-algorithm}). The TRANSITIVITY network requires a lexical-semantic database in order to derive graph patterns. This work employs the Process Type Database (PTDB) \citep{Neale2002} to aid enrichment with TRANSITIVITY features described in Chapter \ref{ch:semantic-parsing}.  
 
 
-\todo[inline]{I Reuse the structural account from other theories}
-\todo[inline]{
-    Your proposed solution to this problem, and the goal of the thesis,
-    is therefore to add some more structural information to a
-    complete augmented SFG account by drawing on frameworks which
-    have demonstrated coverage of structural detail and which
-    also have supported computational instantiation. This will
-    be shown and evaluated in the thesis.}
 
-\todo[inline]{
-    Reuse structural accounts from other theories that have shown to work well computationally.
-Could use famous Chomskyan approach but will use it latter for a more specific problem, that of finding covert constituents (give example of null subject in embedded clause). Instead I turn to Dependency Grammar that increasingly gained popularity in the last 15 years. It has been shown to be computationally fast and it is compatible in many ways with SFG which I will show latter how (mapping DG to SFG). }
+%Moreover if the syntagmatic account is available then they can serve as paradigmatic context (similar to the one available during generation task) for traversing the system network and extend to the full set of systemic features. This sort of description can restrict the search space to applicable network parts and provide to an extent traversal context during analysis task.
 
-\todo[inline]{how: (1) by aligning the primitives and drawing cross-theoretical bridges (see section X), (2) then by mapping grammars (see section Y), (3) implemented using graph transformations (see section Z)}
 
-\todo[inline]{II Enrich the constituency structure with features (since the original goal is to have rich language analysis), that in traditional sense are spanning from purely syntactic (such as tense, voice, case, gender, number etc.) or more semantic or even pragmatic (such as semantic role labels, speech acts, sentiment and appraisal and others) }
+%...
 
-\todo[inline]{how: (1) by mapping structure to features (SFL Mood) (see section X), (2) by mapping lexical-semantic resources to fragments of syntactic structure and lexis (lexis contextualised by syntactic structure) (SFL Transitivity) (see section Y), (3) implemented by graph pattern matching (see section Z)}
+%solution to feature enrichment. Transitivity
 
-\todo[inline]{
-    So, the thesis goal and outline will be to (and you list them
-    explicitly like this too):\newline
-    - characterise SFL in its two major variants\newline
-    - characterise the previous attempts to parse with SFL and their problems\newline
-    - set out two further linguistic frameworks which (a) have\newline
-    strong accounts of structural relationships, (b) have shown
-    themselves supportive of computational instantiation, and (c) can
-    be shown to exhibit suggestive theoretical/descriptive
-    links with SFG: in particular, DG and GB.
-    
-    Chapter X does this for DG
-    Chapter Y does this for GB.}
+
+%The second stage of constituent enrichment by network traversal can be further aided by checking an arbitrary set of patterns for preselecting even more features recoverable via lexico-syntactic patterns. 
+
+
+%\todo[inline]{I Reuse the structural account from other theories}
+%\todo[inline]{
+%    Your proposed solution to this problem, and the goal of the thesis,
+%    is therefore to add some more structural information to a
+%    complete augmented SFG account by drawing on frameworks which
+%    have demonstrated coverage of structural detail and which
+%    also have supported computational instantiation. This will
+%    be shown and evaluated in the thesis.}
+%
+%\todo[inline]{
+%    Reuse structural accounts from other theories that have shown to work well computationally.
+%Could use famous Chomskyan approach but will use it latter for a more specific problem, that of finding covert constituents (give example of null subject in embedded clause). Instead I turn to Dependency Grammar that increasingly gained popularity in the last 15 years. It has been shown to be computationally fast and it is compatible in many ways with SFG which I will show latter how (mapping DG to SFG). }
+%
+%\todo[inline]{how: (1) by aligning the primitives and drawing cross-theoretical bridges (see section X), (2) then by mapping grammars (see section Y), (3) implemented using graph transformations (see section Z)}
+%
+%\todo[inline]{II Enrich the constituency structure with features (since the original goal is to have rich language analysis), that in traditional sense are spanning from purely syntactic (such as tense, voice, case, gender, number etc.) or more semantic or even pragmatic (such as semantic role labels, speech acts, sentiment and appraisal and others) }
+%
+%\todo[inline]{how: (1) by mapping structure to features (SFL Mood) (see section X), (2) by mapping lexical-semantic resources to fragments of syntactic structure and lexis (lexis contextualised by syntactic structure) (SFL Transitivity) (see section Y), (3) implemented by graph pattern matching (see section Z)}
+%
+%\todo[inline]{
+%    So, the thesis goal and outline will be to (and you list them
+%    explicitly like this too):\newline
+%    - characterise SFL in its two major variants\newline
+%    - characterise the previous attempts to parse with SFL and their problems\newline
+%    - set out two further linguistic frameworks which (a) have\newline
+%    strong accounts of structural relationships, (b) have shown
+%    themselves supportive of computational instantiation, and (c) can
+%    be shown to exhibit suggestive theoretical/descriptive
+%    links with SFG: in particular, DG and GB.
+%    
+%    Chapter X does this for DG
+%    Chapter Y does this for GB.}
+
+\subsection{The Parser Architecture}
 
 
 \section{Provisional Thesis Structure}
@@ -492,12 +543,11 @@ Could use famous Chomskyan approach but will use it latter for a more specific p
 }
 
 
-\section{References}
-
-[Butler2003] Structure and Function 
-[Hjelmslev1953] - Prolegomena-to-a-Theory-of-Language-by-Luis-Hjmeslev
-[Elke Teich 1999 ] - Systemic Functional Grammar \& Natural Language Generation - Ch5
-
+%\section{References}
+%todo [JB] useful references in introduction
+%[Butler2003] Structure and Function 
+%[Hjelmslev1953] - Prolegomena-to-a-Theory-of-Language-by-Luis-Hjmeslev
+%[Elke Teich 1999 ] - Systemic Functional Grammar \& Natural Language Generation - Ch5
 
 
 \begin{Verbatim}

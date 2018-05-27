@@ -287,6 +287,8 @@ Continuing the example of mood features Figures \ref{fig:pg-declarative} and \re
 	\label{fig:pg-interrogative}
 \end{figure}
 
+\todo{remove the main verb node}
+
 From the usability point of view there are few technicalities I shall emphasize. First, the precedence feature can be used on any node. When matched, the precedence declarations are collected from all nodes into a single set before being checked. However I recommend as a good practice to specify the order of nodes on the parent constituent. 
 
 Second, the notation in Figure \ref{fig:pg-interrogative} follows the Python bracketing meaning i.e. the round brakes signify tuples while the square ones lists (ordered sets). So the main verb element is redundant and is introduced to demonstrate multiple order specifications. However the order can be either specified as a set of binary tuples or as an ordered set (i.e. a Python list). So precedence:[(f1,s1),(s1,mv1)] is equivalent to precedence:[f1,s1,mv1]. 

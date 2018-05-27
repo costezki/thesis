@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1 Tiny//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd'>
+<svg width='1281' height='332' xmlns='http://www.w3.org/2000/svg'>
+    <text x='10' y='199' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>major</text>
+    <text x='15' y='228' style='stroke-width: 0; font-family: Courier; font-size: 20pt;'>+Main Verb</text>
+    <text x='189' y='185' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>MOOD-</text>
+    <text x='189' y='209' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>TYPE</text>
+    <text x='286' y='102' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>indicative</text>
+    <text x='398' y='88' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>INDICATIVE-</text>
+    <text x='398' y='112' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>TYPE</text>
+    <text x='555' y='32' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>declarative</text>
+    <text x='560' y='61' style='stroke-width: 0; font-family: Courier; font-size: 20pt;'>Subject ^ Finite</text>
+    <text x='560' y='84' style='stroke-width: 0; font-family: Courier; font-size: 20pt;'>-Wh-subject</text>
+    <text x='555' y='173' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>interrogative</text>
+    <text x='699' y='159' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>INTERROGATIVE-</text>
+    <text x='699' y='183' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>TYPE</text>
+    <text x='918' y='123' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>yes-no</text>
+    <text x='923' y='152' style='stroke-width: 0; font-family: Courier; font-size: 20pt;'>Finite ^ Subject</text>
+    <text x='918' y='224' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>wh</text>
+    <text x='962' y='210' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>WH-</text>
+    <text x='962' y='234' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>SELECTION</text>
+    <text x='1112' y='188' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>wh-subject</text>
+    <text x='1112' y='224' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>wh-complement</text>
+    <text x='1112' y='260' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>wh-adjunct</text>
+    <text x='286' y='296' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>imperative</text>
+    <text x='291' y='325' style='stroke-width: 0; font-family: Courier; font-size: 20pt;'>-Subject</text>
+    <rect x='14.0' y='206.0' width='164.0' height='28.0' style='stroke: black; stroke-width: 1.0; fill: none;'/>
+    <polyline points='190.0 190.0 281.0 190.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='281.0 93.0 281.0 288.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='399.0 93.0 550.0 93.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='550.0 23.0 550.0 165.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <rect x='559.0' y='39.0' width='260.0' height='54.0' style='stroke: black; stroke-width: 1.0; fill: none;'/>
+    <polyline points='554.0 23.0 550.0 23.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='700.0 164.0 913.0 164.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='913.0 114.0 913.0 216.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <rect x='922.0' y='130.0' width='260.0' height='28.0' style='stroke: black; stroke-width: 1.0; fill: none;'/>
+    <polyline points='917.0 114.0 913.0 114.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='963.0 215.0 1107.0 215.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='1107.0 179.0 1107.0 252.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='1111.0 179.0 1107.0 179.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='1111.0 215.0 1107.0 215.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='1111.0 251.0 1107.0 251.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='953.0 215.0 963.0 215.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='917.0 215.0 913.0 215.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='690.0 164.0 700.0 164.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='554.0 164.0 550.0 164.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='389.0 93.0 399.0 93.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='285.0 93.0 281.0 93.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <rect x='290.0' y='303.0' width='132.0' height='28.0' style='stroke: black; stroke-width: 1.0; fill: none;'/>
+    <polyline points='285.0 287.0 281.0 287.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='74.0 190.0 190.0 190.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+</svg>
