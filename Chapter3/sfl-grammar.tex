@@ -616,7 +616,7 @@ If in Sydney model exponence (Definition \ref{def:exponence-sydney}) is a relati
 
 Note that componence is not a relationship between a unit and its places; the latter, as discussed in Section \ref{sec:elements-of-structure}, simply locationally relate elements of a unit to each other.
 
-Componence intuitively implies a part-whole constituency relationship between the unit and its elements. But this is not the only view. Another perspective is the concept of \textit{dependency} (which I will address in Chapter \ref{ch:dependecy-grappamr}) or strictly speaking the \textit{sister} or \textit{sibling dependency} (not parent-daughter). 
+Componence intuitively implies a part-whole constituency relationship between the unit and its elements. But this is not the only view. Another perspective is the concept of \textit{dependency} (which I will address in Chapter \ref{ch:dependecy-grammar}) or strictly speaking the \textit{sister} or \textit{sibling dependency} (not parent-daughter). 
 It is suitable for describing relations between elements of structure within a unit. 
 
 \begin{exe}
@@ -903,7 +903,7 @@ In the current work I side with the Sydney classification of syntactic units tha
 
 %The main reason is that Cardiff classes are beyond the syntactic variations of the grammar and blend into lexical semantics which makes it difficult to apply to parsing, at least nowadays with current state of word classification.
 
-The word classes or part of speech tags that I adopt here are the ones employed to annotate Penn Treebank corpora called the Penn tag set \citep{Marcus1993} which, like Sidney unit classes, are also in line with the traditional grammar. This tag set has become a widely accepted standard in mainstream computational linguistics and there are multiple implementation of the part of speech taggers. The Stanford Parser which plays an important role in the software implementation of this thesis and is described in the Chapter \ref{ch:dependecy-grappamr}, employs precisely the Penn tag set.
+The word classes or part of speech tags that I adopt here are the ones employed to annotate Penn Treebank corpora called the Penn tag set \citep{Marcus1993} which, like Sidney unit classes, are also in line with the traditional grammar. This tag set has become a widely accepted standard in mainstream computational linguistics and there are multiple implementation of the part of speech taggers. The Stanford Parser which plays an important role in the software implementation of this thesis and is described in the Chapter \ref{ch:dependecy-grammar}, employs precisely the Penn tag set.
 
 The Penn tag set was developed to annotate the Penn Treebank corpora \citep{Marcus1993}. It is a large, richly articulated tag set that provides distinct codings for classes of words that have distinct grammatical behaviour.
 
@@ -983,7 +983,7 @@ In the nominal group ``The old'' which is Subject in Example \ref{ex:the-old-exa
 
 %TODO follow the argumentation along the promisses in the section introduction
 
-In this work I adopt the principles for establishing the logical structure of Sydney Grammar. It resonates closely with the traditional ``semantically blinded'' grammars because and it always provides a Head element even if it differs from the syntactically motivated pivotal element in Cardiff Grammar. Moreover these logical Heads correspond to dependency heads established in the Stanford dependency parse. Chapter \ref{ch:dependecy-grappamr} provides the grounds for cross-theoretical mappings and the empirical evaluation in Chapter \ref{ch:evaluation} validates it.
+In this work I adopt the principles for establishing the logical structure of Sydney Grammar. It resonates closely with the traditional ``semantically blinded'' grammars because and it always provides a Head element even if it differs from the syntactically motivated pivotal element in Cardiff Grammar. Moreover these logical Heads correspond to dependency heads established in the Stanford dependency parse. Chapter \ref{ch:dependecy-grammar} provides the grounds for cross-theoretical mappings and the empirical evaluation in Chapter \ref{ch:evaluation} validates it.
 
 In language is not unusual to have nominal groups with the Thing missing or elliptic clauses with the Main verb missing therefore no rigid correspondence can be established between the logical Head and unit class. 
 %And because the unit class depends on its internal structure (in Cardiff school), this leads to a circular interdependency between the unit class and the unit structure. 
@@ -1407,9 +1407,7 @@ In this section was discussed in detail the problem of semantic and syntactic he
 	
 	Just like in the case of nominal group the adverbial and adjectival groups in Cardiff grammar are semantically motivated. To automatically identify elements of the quality group would according to this scheme therefore require lexico-semantic resources.
     
-    Next I discuss 
-    
-    Some adverbs are different from others at least because not all of them can be heads of the adverbial group. Usually the adverbs that cannot act as heads, such as for example \textit{very, much, less, pretty}, function as Emphasizing and Degree Temperers. The same ones also act as adjectival modifiers. A naive attempt to identify these Temperers would be to use a list of frequent words found in these functions.
+    I turn now to discuss some relevant affinities concerning the adverbial groups. Some adverbs are different from others at least because not all of them can be heads of the adverbial group. Usually the adverbs that cannot act as heads, such as for example \textit{very, much, less, pretty}, function as Emphasizing and Degree Temperers. The same ones also act as adjectival modifiers. A naive attempt to identify these Temperers would be to use a list of frequent words found in these functions.
     
     Other elements of the quality group like the \textit{Scoper} or \textit{Finisher} are more difficult to identify and localize as part of the group only by syntactic cues and/or lists of words because of their inherent semantic nature. The problem is similar to detecting whether a prepositional phrase is filling a qualifier element in the preceding nominal group or is filling a complement or adjunct in the clause. Not surprisingly the Scopers and Finishers are most of the time prepositional phrases. 
 	
@@ -1449,8 +1447,45 @@ In this section was discussed in detail the problem of semantic and syntactic he
 	
 	Since both the adverbial and adjectival groups have similar structures, it is syntactically feasible to automatically analyse them in terms of head-modifier structures in a first phase followed by a complementary process which assigns functional roles to the quality group components.
 
-\section{Discussion}
+\section{Selected system networks for parsing}
+    The previous section described the units of structure adopted in the current work. I turn now to describe a few systemic networks relevant to selected units that are fairly low in delicacy and are quite close to what is considered grammatical features in the traditional grammar. 
 
+    %The system networks organise the grammatical features realised in structure
+    
+    
+    
+    It is close to terms and concepts of syntactic structure in traditional grammar (role and definition of Subject, Complement and other functional elements) and the . 
+    
+\subsection{MOOD}
+    One of the first system networks presented in Introduction to Functional Grammar \citep{Halliday2013} is that of MOOD. 
+    This system is introduced in the discussion of interpersonal metafunction of language. In this view a clause is conceptualised as message exchanged between dialogue interactants. A range of grammatical features from traditional grammar such as \textit{mood}, \textit{modality}, \textit{aspect}, \textit{mode}, \textit{polarity}, \textit{tense} etc. are covered, under different names, in this system network. 
+    
+    The terms in SFL literature sometimes are capitalised to distinguish system names, functions and features. Note that here the \textit{MOOD} (all capital) refers here to the name of the system network; the \textit{Mood} (first capital) is an element of clause structure formed of the Subject and Finite elements which, in fact, is not used in this work because of a general orientation towards Cardiff approach to structure; and the \textit{mood} (no capital) is a type of feature carried by finite clauses (e.g. imperative, indicative, interrogative etc.)
+
+    Figure \ref{fig:clause-mood} presents 
+    
+    \begin{figure}[!ht]
+        \centering
+        \includegraphics[width=\linewidth]{Figures/SFL-grammar/clause-mood.pdf}
+        \caption{An adaptation of the MOOD system network \citep[162]{Halliday2013}}
+        \label{fig:clause-mood}
+    \end{figure}
+
+
+%    not SFL features
+%    * voice
+%    * tense
+%    
+%    * agency system from (elsewhere)
+%    * assessment extensions integrated 
+      
+%      SN developed during the development of the OCD corpus 
+      
+      
+\subsection{TRANSITIVITY}
+
+
+\section{Discussion}
     This chapter has introduced the fundamentals of systemic functional linguistics and presented a consideration of Sydney and Cardiff theories of grammar to the task of parsing.
     
     Because of its bottom up approach to unit structure, rank scale relaxation and accommodation of embedding as a general principle, Cardiff systemic functional theory is more suitable for parsing than the Sydney one. Nonetheless the unit definitions in the Cardiff grammar are deeply semantic in nature. Parsing with such units requires most of the time lexical-semantically informed decisions beyond merely syntactic variations. This is one of the reasons why the parsing attempts by \citet{ODonoghue1991a} and others in the COMMUNAL project were all based on a corpus.

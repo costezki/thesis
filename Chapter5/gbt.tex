@@ -54,7 +54,7 @@ This section is set as introduction to the fundamental concepts from Government 
 
 Chomsky developed a formal theory of grammar \citep{Chomsky56} where transformations manipulated not just the surface strings, but the parse tree associated with them, making transformational grammar a system of tree automata \citep{Stockwell1973}.
 
-A transformational-generative (or simply transformational) grammar thus involved two types of productive rules: \textit{phrase structure rules}, such as ``S -> NP VP'' (meaning that a sentence may consist of a noun phrase followed by a verb phrase) etc., which could be used to generate grammatical sentences with associated parse trees (phrase markers, or P markers); and \textit{transformational rules}, such as rules for converting statements to questions or active to passive voice, which acted on the phrase markers to produce further grammatically correct sentences \citep[59-66]{Bach1966}. This notion of transformation proved adequate for subsequent versions including the ``extended'', ``revised extended'' and Government-Binding (GB) versions of generative grammar, but may no longer be sufficient for the latest ``minimalist'' grammar \ref{Chomsky93}. It require a formal definition that goes beyond the tree manipulation. For the purpose of the current work, however, the GBT employing the idea of transformations is perfectly suitable. I selected it because of clear and extensive descriptions of the mechanisms for identification of \textit{null elements} (also known as \textit{empty categories}) and how to provide them with an interpretation. 
+A transformational-generative (or simply transformational) grammar thus involved two types of productive rules: \textit{phrase structure rules}, such as ``S -> NP VP'' (meaning that a sentence may consist of a noun phrase followed by a verb phrase) etc., which could be used to generate grammatical sentences with associated parse trees (phrase markers, or P markers); and \textit{transformational rules}, such as rules for converting statements to questions or active to passive voice, which acted on the phrase markers to produce further grammatically correct sentences \citep[59-66]{Bach1966}. This notion of transformation proved adequate for subsequent versions including the ``extended'', ``revised extended'' and Government-Binding (GB) versions of generative grammar, but may no longer be sufficient for the latest ``minimalist'' grammar \citep{Chomsky93}. It require a formal definition that goes beyond the tree manipulation. For the purpose of the current work, however, the GBT employing the idea of transformations is perfectly suitable. I selected it because of clear and extensive descriptions of the mechanisms for identification of \textit{null elements} (also known as \textit{empty categories}) and how to provide them with an interpretation. 
 
 \subsection{Phrase structure}
 The notion of structure in a generative grammar refers to the way words are combined together to form phrases and sentences. \textit{Merging} is the technical term used in GBT for the operation of bringing two words together into a phrase. In this operation one word will always be more prominent and is therefore called the \textit{head} of the phrase. The resulting combination is a new constituent and is called a \textit{projection} of the head. This is known as \textit{X-bar theory} (often denoted as X' or $\bar{X}$) and embodies two primary claims: (a) that the phrases may contain intermediary constituents projected from a head X and (b) that this system of projected constituency may be common to more than one category (such as N, V, A, P etc.).
@@ -128,7 +128,7 @@ The same holds for precedence: the \textit{immediate precedence} is when a node 
     \label{fig:maximal-projection}
 \end{figure}
 
-An important principle in GBT is that of \textit{projection} formulated in Generalisation \ref{gen:pp}. For example in Figure \ref{fig:maximal-projection}, projections of V that are dominated by more comprehensive projections of V are called \textit{intermediate projections} while the node labelled VP is the \textit{maximal projection} of V. Maximal projections are also barrier to government (see Definition \ref{def:ef:government1} below). The role of lexicon in syntax from to GBT perspective is discussed at large in \citet{stowell1992syntax}. 
+An important principle in GBT is that of \textit{projection} formulated in Generalisation \ref{gen:pp}. For example in Figure \ref{fig:maximal-projection}, projections of V that are dominated by more comprehensive projections of V are called \textit{intermediate projections} while the node labelled VP is the \textit{maximal projection} of V. Maximal projections are also barrier to government (see Definition \ref{def:government1} below). The role of lexicon in syntax from to GBT perspective is discussed at large in \citet{stowell1992syntax}. 
 
 \subsection{Theta theory}
 This section introduces which constituents are minimally required to form a sentence and why. Traditionally three types of verbs are recognised: \textit{transitive}, \textit{di-transitive} and \textit{intransitive}. This distinction is based on how many complements a verb requires to form a minimal complete sentence. If a verb is transitive then one NP direct object is required. If the verb is di-transitive then two NP or one NP and one PP direct and indirect objects are required. Finally, if it is intransitive then no NP complement is allowed. 
@@ -149,7 +149,7 @@ In literature these relations between the verb and the arguments are called \tex
 
 In GBT the theory of thematic roles is very sketchy and does not go beyond distinction of several thematic roles (Agent/Actor, Patient, Theme, Experiencer, Beneficiary, Goal, Source, Location and the controversial Theme) \citep[50]{Haegeman1991}. The theta theory has a central criterion that is stipulated in Generalisation \ref{gen:theta-criterion}.
 
-\begin{generalization}[Theta criterion]\label{gen:gen:theta-criterion}
+\begin{generalization}[Theta criterion]\label{gen:theta-criterion}
     Theta criterion requires that: 
     \begin{itemize}
         \item each argument is associated one and only one theta role
@@ -837,7 +837,6 @@ For clarity purposes I define the Wh-group and Wh-element as given in Definition
 The Functional distribution for Wh-elements and Wh-groups is presented in the table \ref{tab:wh-functions} below.
 
 \begin{table}[H]
-    \label{tab:wh-functions}
     \begin{tabulary}{\textwidth}{|C|C|C|C|}
         \hline 
         \textbf{Features} & \multicolumn{2}{c|}{\textbf{Clause functions of the Wh-group}} & \textbf{Group functions of Wh-element} \\ 
@@ -860,6 +859,7 @@ The Functional distribution for Wh-elements and Wh-groups is presented in the ta
         \hline 
     \end{tabulary}
     \caption{Functions and features of Wh-elements and groups}
+    \label{tab:wh-functions}
 \end{table}
 
 %* Wh traces in interrogative complex clauses: Wh-movemen in embedded questions and Wh-movement in interrogative matrix clause.

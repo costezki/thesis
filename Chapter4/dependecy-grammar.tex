@@ -696,39 +696,38 @@ Generalisation \ref{gen:correspondence3} provides the link between the projected
 
 % anotehr example 
 
-%\begin{table}[ht]
-%	\centering
-%	\begin{tabular}{c|c|c|cc}
-%        \hline
-%        \multicolumn{1}{|c|}{\textit{some}}          & \textit{very}   & \textit{small}   & \multicolumn{1}{c|}{\textit{wooden}} & \multicolumn{1}{c|}{\textit{ones}} \\ \hline
-%        \multicolumn{5}{|c|}{nominal group}                                                                                                                           \\ \hline
-%        \multicolumn{1}{|c|}{Quantifying Determiner} & \multicolumn{2}{c|}{Epithet}       & \multicolumn{1}{c|}{Classifier}      & \multicolumn{1}{c|}{Head}          \\ \hline
-%        & \multicolumn{2}{c|}{quality group} &                                      &                                    \\ \cline{2-3}
-%        & Temperer        & Apex             &                                      &                                    \\ \cline{2-3}
-%    \end{tabular}
-%	\caption{SF analysis of Example \ref{ex:small-wooden} (reproduced from Table \ref{tab:example-substructure-analisys-cardiff} )}
-%	\label{tab:example-substructure-analisys-cardiff-repeated}
-%\end{table}
-%
-%\begin{figure}[ht]
-%	\centering
-%	\begin{dependency}[dep-style-narrow]
-%		\begin{deptext}[]
-%			some/DT \& very/RB \& small/JJ \& wooden/JJ \& ones/NNS \\
-%		\end{deptext}
-%		\depedge[edge unit distance =2.2ex]{5}{1}{det}
-%		\depedge{3}{2}{advmod}
-%		\depedge{5}{3}{amod}
-%		\depedge{5}{4}{amod}
-%	\end{dependency}
-%	\caption{Dependency analysis for Table \ref{tab:example-substructure-analisys-cardiff-repeated} }
-%	\label{fig:small-wooden-dependecy}
-%\end{figure}
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{c|c|c|cc}
+        \hline
+        \multicolumn{1}{|c|}{\textit{some}}          & \textit{very}   & \textit{small}   & \multicolumn{1}{c|}{\textit{wooden}} & \multicolumn{1}{c|}{\textit{ones}} \\ \hline
+        \multicolumn{5}{|c|}{nominal group}                                                                                                                           \\ \hline
+        \multicolumn{1}{|c|}{Quantifying Determiner} & \multicolumn{2}{c|}{Epithet}       & \multicolumn{1}{c|}{Classifier}      & \multicolumn{1}{c|}{Head}          \\ \hline
+        & \multicolumn{2}{c|}{quality group} &                                      &                                    \\ \cline{2-3}
+        & Temperer        & Apex             &                                      &                                    \\ \cline{2-3}
+    \end{tabular}
+	\caption{SF analysis of Example \ref{ex:small-wooden} (reproduced from Table \ref{tab:example-substructure-analisys-cardiff} )}
+	\label{tab:example-substructure-analisys-cardiff-repeated}
+\end{table}
+
+\begin{figure}[ht]
+	\centering
+	\begin{dependency}[dep-style-narrow]
+		\begin{deptext}[]
+			some/DT \& very/RB \& small/JJ \& wooden/JJ \& ones/NNS \\
+		\end{deptext}
+		\depedge[edge unit distance =2.2ex]{5}{1}{det}
+		\depedge{3}{2}{advmod}
+		\depedge{5}{3}{amod}
+		\depedge{5}{4}{amod}
+	\end{dependency}
+	\caption{Dependency analysis for Table \ref{tab:example-substructure-analisys-cardiff-repeated} }
+	\label{fig:small-wooden-dependecy}
+\end{figure}
 
 %The dependency structure is overloaded with two kinds of meaning
 
-
-%Figure \ref{fig:small-wooden-dependecy} and Table \ref{tab:example-substructure-analisys-cardiff-repeated} represent the analysis of a nominal group from Example \ref{ex:small-wooden} (``some small very small wooden ones'') in the SFG and the Stanford dependency grammar contrasting the two structures. Consider the dependency relation ``det'' acting as a link between the noun ``ones'' and the determiner ``some''. When translated into the SF variant the dependency relation stands within the nominal group between the Head element (filled by word ``ones'') and the Quantifying Determiner element (filled by the word ``some''). As mentioned earlier all the elements in a unit are equal in the structure so the Head and Quantifying Determiner are siblings. So the items (words) filling those elements are also siblings. How then is the dependency relation established? 
+Figure \ref{fig:small-wooden-dependecy} and Table \ref{tab:example-substructure-analisys-cardiff-repeated} represent the analysis of a nominal group from Example \ref{ex:small-wooden} (``some small very small wooden ones'') in the SFG and the Stanford dependency grammar contrasting the two structures. Consider the dependency relation ``det'' acting as a link between the noun ``ones'' and the determiner ``some''. When translated into the SF variant the dependency relation stands within the nominal group between the Head element (filled by word ``ones'') and the Quantifying Determiner element (filled by the word ``some''). As mentioned earlier all the elements in a unit are equal in the structure so the Head and Quantifying Determiner are siblings. So the items (words) filling those elements are also siblings. How then is the dependency relation established? 
 
 % going again on explaining the SFL dependecy
 %XXX 
@@ -737,7 +736,7 @@ Generalisation \ref{gen:correspondence3} provides the link between the projected
 %strange paragraph, avoid refering to unit anchors
 %The Head also is the element that acts as an anchor for the entire unit. In this sense the word ``ones'' realizes not only the Head function (sided with Determiner ``some'') but also anchors the entire unit. The relation between the group and it's elements is one of \textit{componence} (Definition \ref{def:componence}) described in Section \ref{sec:componence}. Yet in the role of unit anchor we cannot say that there is a componence relation between ``one'' and ``some'' because it is merely a proxy to the referent rather than the entire unit. So in this role ``one'' can be said to be standing in a parent-daughter dependency relation to ``some'' incorporating the filling and componence relations.
 
-% example of the relation sbeing unpacked
+% example of the relation being unpacked
 Lets look at a second example of the two relations ``advmod'' from ``small'' to ``very'' and ``amod'' from ``ones'' to ``small'' in Figure \ref{fig:small-wooden-dependecy}. The interesting case here is the item ``small'' which is the head (Apex) of the quality group. I it anchors the meaning of the whole group and the quality group fills the Modifier/Epithet element within the nominal group. What is not covered in previous example is that the Apex ``small'' not only is a representative of the entire group but it also suitable filler on its own for the Modifier element within nominal group. Using the similar translation mechanism as above, this means that, the incoming dependency needs to be unpacked into three levels: the element within the current group (Modifier), the unit class that element is filling (Quality Group) and finally the head of the filler group (Apex). In fact, to be absolutely correct there is one more level. The elements of a unit are expounded by lexical items, so a fourth relation to unpack is the expounding of the Apex by the word ``small''.
 
 %concluding
