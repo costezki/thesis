@@ -474,7 +474,7 @@ For example the structure of a \textit{major} clause needs to have a predicate o
 
 The pattern recognition plays an essential role in current parsing method for fleshing out the constituent backbone with systemic selections. In the parsing process the structural patterns are tested whether they \textit{match} (see Section \ref{sec:pattern-graph-matching}) anywhere in the constituency structure and if so then the matched nodes are enriched with the features proved in the pattern (described in Section \ref{sec:pattern-based-operations}). 
 
-The structural patterns in this work are expressed as \textit{graph patterns} (described in Section \ref{sec:pattern-graphs}). Note that I employ graph and not tree patterns because the tree patterns are too restrictive for the purpose of the current work. While most of the time they are hierarchically structured as a tree there are few patterns that involve sibling connections or nodes with more than one parent. In both cases the tree structure is broken. The graph approach allows a wide range of structures which also includes the trees. 
+The structural patterns in this work are expressed as \textit{graph patterns} (described in Section \ref{sec:pattern-graphs}). Note that I employ graph and not tree patterns because the tree patterns are too restrictive for the purpose of the current work. While most of the time they are hierarchically structured as a tree there are few patterns that involve sibling connections or nodes with more than one parent. In both cases the tree structure is broken. The graph approach allows a wide range of structural configurations including the trees. 
 
 The enrichment stage of the parsing process comprises of a series of graph pattern matching operations that in case of success leads to the enrichment of the constituency structure with the features given in the graph pattern. This mechanism is described in detail in the Section \ref{sec:enrichment-stage}. 
 
@@ -530,15 +530,11 @@ The two main system networks targeted in this are MOOD and TRANSITIVITY (both br
 
 \subsection{The Implementation Architecture}
 \label{sec:architecture}
-The current thesis is accompanied by a software implementation called Parsimonious Vole parser. It is written using Python programming language and is available as open source distribution (\url{https://bitbucket.org/lps/parsimonious-vole}).
+The current thesis is accompanied by a software implementation - the Parsimonious Vole parser. It is written in Python programming language and is available as open source distribution (\url{https://bitbucket.org/lps/parsimonious-vole}). This section provides an overview to the construction process.
 
-The parser follows a pipeline architecture depicted in Figure \ref{fig:pipeline-overview} where, starting from an input text, a rich systemic functional constituency structure is progressively built. This section provides an overview to the construction process. 
+The parser follows a pipeline architecture depicted in Figure \ref{fig:pipeline-overview} where, starting from an input text, a rich systemic functional constituency structure is progressively built. Figure \ref{fig:pipeline-overview} provides three types of boxes: the rounded rectangles represent the parsing steps, the green trapezoid boxes represent input and output data while the orange double framed trapezoid boxes represent additional resources involved in the parsing step. The parsing steps linearly flow from one to the next via green trapezoid boxes on the left-hand side, which represent input-output data in between the steps. On the right-hand side are positioned double edged orange trapezoids representing fixed resources needed by some operations. For example, the \textit{constituency graph creation} step takes a normalised dependency graph for input and produces a constituency graph as output.
 
-The figure provides three types of boxes. The rounded rectangles represent the parsing steps. 
-%The trapezoid bodes represent data of various kinds. 
-The parsing steps linearly flow from one to the next via green trapezoid boxes on the left-hand side, which represent input-output data data intermediating the processes. On the right-hand side are positioned double edged orange trapezoids representing fixed resources used as additional input for some steps. For example, the \textit{constituency graph creation} step takes a normalised dependency graph for input and produces a constituency graph as output.
-
-On the right-hand side a series of green vertical arrows are provided naming phases in parsing process (spanning one ore more process steps) where the first thee  i.e. Bootstrapping, Pre-processing and Graph Building accomplish construction of the constituency backbone (corresponding to the syntagmatic account described in Section \ref{sec:syntagmatic-account} above) and the last phase \textit{Graph Enrichment} (spanning three process steps) flashes out the backbone with features (described in Section \ref{sec:paradigmatic-account}). 
+On the right-hand side a series of green vertical arrows are provided naming phases in parsing process (spanning one ore more process steps) where the first one, \textit{Graph Building} (spanning the first three process steps), accomplish construction of the constituency backbone (corresponding to the syntagmatic account described in Section \ref{sec:syntagmatic-account} above) and the second phase \textit{Graph Enrichment} (spanning the last three process steps) flashes out the backbone with features (described in Section \ref{sec:paradigmatic-account}). 
 
 \begin{figure}[!ht]
     \begin{tikzpicture}[node distance=1.2em, scale=0.85, transform shape]
@@ -573,25 +569,25 @@ On the right-hand side a series of green vertical arrows are provided naming pha
     \draw[sequence,->] (correction.south) -- ++(0,-1.5em)  -| (norm-dep-graph.north);
     
     % resources
-    \node[persistent-data,anchor=center, below=14.43em of resource] (rule-table) {Rule Table}; % 12.425
+    \node[persistent-data,anchor=center, below=14.22em of resource] (rule-table) {Rule Table}; % 12.425
     \draw[sequence,->] (rule-table.west) --  (const-cr.east);
     
     % aLVL 4
     \node[data,anchor=center, below=24em of data] (const-gr) {Constituency Graph };
-    \node[task,anchor=center, below=23.5em of process] (const-gr-enr) {Constituency Graph \\ Enrichment};
+    \node[task,anchor=center, below=23.5em of process] (const-gr-enr) {Mood\\Enrichment};
     \draw[sequence,->] (const-gr) -- (const-gr-enr);
     \draw[sequence,->] (const-cr.south) -- ++(0,-1.5em)  -| (const-gr.north);
     
     %resources
     \node[persistent-data,anchor=center, below=21em of resource] (sys-net) {System Network};
     \node[persistent-data,anchor=center, below=23.5em of resource] (feat-dict) {Feature-rich \\ Dictionaries};
-    \node[persistent-data,anchor=center, below=27em of resource] (sys-feat-gm) {Systemic Feature \\ Graph Patterns};
+    \node[persistent-data,anchor=center, below=27em of resource] (sys-feat-gm) {Mood \\ Graph Patterns};
     \draw[sequence,->] (feat-dict.west) --  (const-gr-enr.east);
     \draw[sequence,->] (sys-net.west) -- ++(-.79em,0)  |- (const-gr-enr.east);
-    \draw[sequence,->] (sys-feat-gm.west) -- ++(-1.5em,0)  |- (const-gr-enr.east);
+    \draw[sequence,->] (sys-feat-gm.west) -- ++(-1.9em,0)  |- (const-gr-enr.east);
     
     % aLVL 5
-    \node[data,anchor=center, below=31.5em of data] (enriched-gr) {Feature Enriched \\ Constituency Graph };
+    \node[data,anchor=center, below=31.5em of data] (enriched-gr) {(Feature Enriched) \\ Constituency Graph };
     \node[task,anchor=center, below=31.5em of process] (null-cr) {Null Element \\ Creation};
     \draw[sequence,->] (enriched-gr) -- (null-cr);
     \draw[sequence,->] (const-gr-enr.south) -- ++(0,-1.5em)  -| (enriched-gr.north);
@@ -601,17 +597,17 @@ On the right-hand side a series of green vertical arrows are provided naming pha
     \draw[sequence,->] (null-gr) -- (null-cr);
     
     %aLVL 6
-    \node[data,anchor=center, below=38.5em of data] (null-enr-gr) {Null Enriched \\ Constituency Graph };
-    \node[task,anchor=center, below=38.5em of process] (sem-enr) {Semantic \\ Enrichment};
+    \node[data,anchor=center, below=38.5em of data] (null-enr-gr) {(Null Enriched) \\ Constituency Graph };
+    \node[task,anchor=center, below=38.5em of process] (sem-enr) {Transitivity \\ Enrichment};
     \draw[sequence,->] (null-enr-gr) -- (sem-enr);
     \draw[sequence,->] (null-cr.south) -- ++(0,-1.5em)  -| (null-enr-gr.north);
     
     %resources 
     \node[persistent-data,anchor=center, below=36em of resource] (sys-net1) {System Network};
     \node[persistent-data,anchor=center, below=38.5em of resource] (ptdb) {Process Type \\ Database};
-    \node[persistent-data,anchor=center, below=42em of resource] (pc-gp) {Process Configuration \\ Graph Patterns};
+    \node[persistent-data,anchor=center, below=42em of resource] (pc-gp) {Transitivity \\ Graph Patterns};
     \draw[sequence,->] (sys-net1.west) -- ++(-1.35em,0)  |- (sem-enr.east);
-    \draw[sequence,->] (pc-gp.west) -- ++(-1em,0)  |- (sem-enr.east);
+    \draw[sequence,->] (pc-gp.west) -- ++(-2.4em,0)  |- (sem-enr.east);
     \draw[sequence,->] (ptdb.west) -- (sem-enr.east);
     
     %aLVL 7
@@ -621,24 +617,27 @@ On the right-hand side a series of green vertical arrows are provided naming pha
     
     % vertical arrows
     
-    \node[flow-arrow, below=-2em of flow] (bootstrapping) {Bootstrapping};
-    \node[flow-arrow, below=7em of flow] (pre-processing) {Pre-processing};
-    \node[flow-arrow, below=15em of flow] (creation) {Graph \\ Building};
-    \node[flow-arrow, below=32.5em of flow, minimum width=28em] (enrichment) {(Increasingly Semantic) Graph Enrichment};
+%    \node[flow-arrow, below=-2em of flow] (bootstrapping) {Bootstrapping};
+%    \node[flow-arrow, below=7em of flow] (pre-processing) {Pre-processing};
+%    \node[flow-arrow, below=15em of flow] (creation) {Graph \\ Building};
+    \node[flow-arrow, below=7em of flow, minimum width=22em] (building) {Graph Building};
+    \node[flow-arrow, below=32.5em of flow, minimum width=26em] (enrichment) {(Increasingly Semantic) Graph Enrichment};
     \end{tikzpicture}
     \caption[]{The parsing process pipeline}
     \label{fig:pipeline-overview}
 \end{figure}
 
+One important feature of this implementation is its heavy reliance on graph pattern matching and other operations using graph patterns described in Chapter \ref{ch:data-structures}. 
 
-The parsing process starts with an input English text and ends with production of a Rich Constituency Graph. Input Text is first parsed with the Stanford dependency parser version 3.5 resulting in a Dependency Graph.
+The parsing process starts with an input English text and ends with production of a Rich Constituency Graph. Input Text is first parsed with the Stanford Dependency parser \citep{chen2014fast} version 3.5 (\url{https://nlp.stanford.edu/software/nndep.html}) producing a Dependency Graph.
 
-The dependency graphs often contain errors, however. Some of these errors are predictable, and so easy to identify and correct. Also, in addition, some linguistic phenomena are treated in a slightly different manner than that proposed in the current thesis. Therefore the dependency graph produced by the Stanford parser is Corrected and Normalised using pattern matching against collections of known errors and a set of normalization rules.
+The dependency graphs often contain errors. Some of these errors are predictable and so easy to identify and correct. Also, some linguistic phenomena are treated in a slightly different manner than that proposed in the current thesis. Therefore the dependency graph produced by the Stanford parser is \textit{Corrected and Normalised} using graph pattern matching against collections of known errors and a set of normalization rules encoded as graph patterns.
 
-Once normalised the dependency graph is ready to guide the \textit{building process} of the systemic functional constituency graph. Through a traversal of the dependency graph the constituency graph is constructed using a mapping rule set. The mappings indicate what operation to perform on the newly emerging graph given the visited dependency node and the incoming and outgoing dependency relations. 
-So the constituency graph is, in a way, a transformation of the dependency graph, and serves later as a syntactic backbone on which the subsequent enrichment phases are performed.
+Once normalised the dependency graph is ready to guide the \textit{building process} of the systemic functional constituency graph. Through a traversal of the dependency graph the constituency graph is parallelly constructed guided by a mapping \textit{Rule Table}. The mappings indicate what operation to perform on the newly emerging graph given the visited dependency node and its incoming and outgoing relations. Even if it a distinct structure, the constituency graph is, in a way, a transformation of the dependency graph. It constitutes the syntactic backbone on which the subsequent enrichment phases are performed.
 
-Next follow two phases where the syntactic backbone is \textit{enriched} with features, some of which are of a \textit{syntactic} and others of a \textit{semantic} nature. In between these enrichment phases there is a construction process which produces structural changes to the backbone adding some \textit{empty constituents} that play a role in semantic enrichment. The enrichment phases use additional resources such as \textit{system networks}, \textit{feature rich lexicons}, \textit{graph patterns} and \textit{semantic databases}. The \textit{null element creation} process also needs a collection of graph patterns for identifying where and what kind of null elements occur as motivated in Section \ref{sec:problem} and explained in detail in Chapter \ref{ch:gbt}. The final result of the process is a \textit{Rich Constituency Graph} of the original text comprising a substantial set of systemic feature selections associated with constituting units of structure. The next section provides an  
+Next follows the phase where each constituent node of the syntactic backbone is \textit{enriched} with features, some of which are of a \textit{syntactic} and others of a \textit{semantic} nature. In between these enrichment phases there is an additional construction process adding where needed \textit{empty constituents} that play an important role in semantic enrichment. The enrichment steps use additional resources such as \textit{system networks}, \textit{feature rich lexicons}, \textit{graph patterns} and a \textit{semantic database}. The \textit{null element creation} process also needs a collection of graph patterns for identifying where and what kind of null elements occur as motivated in Section \ref{sec:problem} and explained in detail in Chapter \ref{ch:gbt}. The final result of the process is a \textit{Rich Constituency Graph} of the original text comprising a substantial set of systemic feature selections associated with constituting units of structure. 
+
+The the detailed parser implementation choices and developed algorithms are presented in Chapters \ref{ch:parsing-algorithm} and \ref{ch:semantic-parsing}.
 
 \subsection{Research questions and contributions} % In a nutshell 
 This thesis addresses the following questions:

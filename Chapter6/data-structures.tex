@@ -11,25 +11,31 @@
 %{\tiny }
 %The parsing algorithm does not operate on free text but uses a dependency parser (in this case Stanford Dependency Parser \cite{}) bootstrapping the process with a DG backbone.
 
-The parsing algorithm operates mainly with operations on graphs, attribute-value matrices and ordered lists with logical operators. This chapter defines the main types of graphs, their structure and how they are used in the algorithm. It also covers the operations relevant to the parsing algorithm: \textit{conditional traversal and querying} of nodes and edges, \textit{graph matching},\textit{pattern-graph matching} and \textit{pattern-based node selection, insertion and update}.
+The parsing algorithm, whose pipeline architecture we have seen in Section \ref{sec:architecture}, operates mainly with operations on graphs, attribute-value matrices and ordered lists with logical operators. This chapter defines the main types of graphs, their structure and how they are used in the following chapters which detail on the parsing process. This chapter also covers the operations relevant to the parsing algorithm: \textit{conditional traversal and querying} of nodes and edges, \textit{graph matching}, \textit{pattern-graph matching} and \textit{pattern-based node selection, insertion and update}.
 
-While developing the Parsimonious Vole parser a set of representational and operational requirements arose. These requirements are as follows:
+While developing the Parsimonious Vole parser a set of representational requirements arose that can be summarised as follows:
+
 \begin{itemize}
-	\item arbitrary relations (i.e. typed and untyped edges)
+	\item graphic representation 
+    \item arbitrary relations (i.e. typed and untyped edges)
 	\item description rich (i.e. features of nodes and edges)
 	\item linear ordering and configurations (i.e. syntagmatic and compositional)
-	\item hierarchical tree-like structure (with a root node) and also orthogonal relations among siblings and non-siblings
+	\item hierarchical tree-like structure (with a root node) but also orthogonal relations among siblings and non-siblings
 	\item statements of absence of a node or edge (i.e. negative statements in pattern graphs)
-	\item disjunctive descriptions (needed for polysemy and uncertainty)
-	\item conjunctive descriptions (needed for multiple feature selections in recursive systems)
+	\item disjunctive descriptions (handling uncertainty)
+	\item conjunctive descriptions (handling multiple feature selections)
 	\item (conditional) pattern specifications (i.e. define patterns of graphs)
 	\item operational pattern specifications (i.e. a functional description to be executed in pattern graphs)
 \end{itemize}
 
-\section{Basic Definitions}
-The general approach to construct an SFG parse structure revolves around the graph pattern matching and graph traversal. In this section I present the instruments used for building such structures, starting from generic computer scientific definition of graphs and moving towards specific graph types covering also the feature structures and conditional sets. 
+The general approach to construct an SFG parse structure revolves around the graph pattern matching and graph traversal. In the following sections I present the instruments used for building such structures, starting from a generic computer science definition of graphs and moving towards specific graph types covering also the feature structures and conditional sets. 
 
-At this point you may ask why graphs and not trees since in the field of computational linguistics trees has been taken as the de facto data representation for parse structures. Firstly, the trees are a special kind of graphs and anything expressed as a graph could as well be expressed as a tree. Secondly, we gain a higher degree of expressiveness even if at the expense of computational complexity, a point to which we will come back latter in this chapter.  This expressiveness is needed when dealing with interconnection of various linguistic theories. 
+\section{On graphs}
+\label{sec:graphs}
+
+In the field of computational linguistics trees has been taken as the de facto data representation. In Section \ref{sec:paradigmatic-account} I have mentioned already that I employ graph and not tree structures. 
+
+Firstly, the trees are a special kind of graphs. Anything expressed as a tree is as well a tree. Secondly, we gain a higher degree of expressiveness even if at the expense of computational complexity, a point to which we will come back latter in Section \ref{sec:graph-matching}. This expressiveness is needed when dealing with interconnection of various linguistic theories which in practice is done by mapping the nodes of one tree structure onto the nodes of another one. In addition, the structures are not always trees. There are situations when a node has more than one parent or when a node is connected to its siblings which break the tree structure. 
 
 \begin{definition}[Graph]\label{def:graph}
 	A \textit{graph} $G=(V,E)$ is a data structure consisting of non-empty set $V$ of nodes and a set $E\subseteq V \times V$ of edges connecting nodes.
@@ -41,56 +47,131 @@ At this point you may ask why graphs and not trees since in the field of computa
 
 %A directed graph is a set of objects called nodes some of which are connected in pairs by directed links called edges. The nodes are feature structures or are objects described by a feature structure while the edges are represented as triples \textit{(x,y,f)} where \textit{x} and \textit{y} are the connected nodes and \textit{f} is the feature structure of the edge.
 
-\citet{Pollard1987} have formally described the useful concepts for grammatical representations of HPSG. Taking on board and extending the typed feature structure theory and extending it in several useful forms. Including definitions of hierarchy, feature structure recursion, logical evaluation and compositions and unification the key operation parsing feature structured grammars. In this thesis however I simplified feature structures to only a few concepts. This si due to mixing concept of \textit{graph} as structure carriers with the concept of \textit{feature structure} as mainly description carrier. This mix does not exist in \citep{Pollard1987} who use feature structure as both structure and description carriers. Nevertheless, besides a few instrumental concepts, I proceed defining feature structure as follows:
+In this thesis the graph nodes are considered to be \textit{feature structures} forming \textit{Feature Rich Graphs} (see Definition \ref{def:feature-rich-graph}). Before formally defining these graphs, I need to address first the notion of feature structure and a few kinds of sets. 
+
+In SFL the concept of \textit{feature} takes up an important role. Also features are said to form systems of choices that are structured in relation to one another and are suitable for describing linguistic objects and phenomena.
+
+\citet{Pollard1987} have formally described useful concepts for grammatical representations in the context of Head-Driven Phrase Structure Grammar (HPSG). He adopts the \textit{typed feature structure theory} and extends it in ingenious ways applicable in computational linguistics. Among others, he provides formal definitions for the concepts of \textit{feature structure}, \textit{hierarchy}, \textit{logical evaluation}, \textit{composition} and \textit{unification}, the latter, being key operations in parsing using feature structured grammars. 
+
+In this thesis, feature structures are important but only in a simplified version serving as graph node descriptions. The main reason is the difference in approach as the main parsing operations, here, are based on graph pattern matching (introduced in the sections below).
+
+In a broad computer science sense, including Pollard's definition, feature structures are equivalent to graph structures. So any feature structure can be expressed as a graph and any graph can be expressed as a feature structure. But in a narrow sense, as adopted in this thesis, it is useful to employ both concepts but each for a given purpose. The feature structure is reduced to an attribute-value matrix (see Definition \ref{def:fs}) and the graphs to a network of feature structure nodes (see Definition \ref{def:feature-rich-graph}) i.e. no atomic nodes.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{subfigure}[b]{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}[node distance=1.2em, scale=0.85, transform shape]
+        \node[pattern-node, anchor=center,] (n1) {Node 1 \\ $\begin{Bmatrix}
+            f_1: & v_1 \\
+            f_2: & v_2 \\
+            f_3: & v_3 \\
+            \end{Bmatrix}$};
+        \node[pattern-node, anchor=center, below=6em of n1] (n2) {Node 2 \\ $ \begin{Bmatrix}
+            f_5: & v_5 \\
+            f_6: & v_6 \\
+            f_7: & v_7 \\
+            \end{Bmatrix}$};
+        \draw[sequence,->] (n1) -- (n2);
+        \end{tikzpicture}
+        \caption{The graph with feature structure nodes}
+        \label{fig:example-graph-compact1}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}[node distance=1.2em, scale=0.85, transform shape]
+        \node[pattern-node, anchor=center,] (n1) {Node 1};
+        \node[pattern-node, anchor=center, below=2.7em of n1] (n2) {Node 2};
+        
+        \node[pattern-node, anchor=center, above=3em of n1,xshift = -3em ] (n1f1) {$v_1$};
+        \node[pattern-node, anchor=center, above=3em of n1,xshift = 0em ] (n1f2) {$v_2$};
+        \node[pattern-node, anchor=center, above=3em of n1,xshift = 3em] (n1f3) {$v_3$};
+        
+        \node[pattern-node, anchor=center, below=3em of n2,xshift = -3em] (n2f4) {$v_4$};
+        \node[pattern-node, anchor=center, below=3em of n2,xshift = 0em] (n2f5) {$v_5$};
+        \node[pattern-node, anchor=center, below=3em of n2,xshift = 3em] (n2f6) {$v_6$};
+        
+        
+        \draw[sequence,->] (n1) -- (n2);
+        \draw[sequence,->] (n1) -- (n1f1) node [midway, right=0em, ]{$f_1$};
+        \draw[sequence,->] (n1) -- (n1f2) node [midway, right=0em, ]{$f_2$};
+        \draw[sequence,->] (n1) -- (n1f3) node [midway, right=0em, ]{$f_3$};
+        
+        \draw[sequence,->] (n2) -- (n2f4) node [midway, right=0em, ]{$f_4$};
+        \draw[sequence,->] (n2) -- (n2f5) node [midway, right=0em, ]{$f_5$};
+        \draw[sequence,->] (n2) -- (n2f6) node [midway, right=0em, ]{$f_6$};
+        
+        \end{tikzpicture}
+        \caption{The graph with atomic nodes}
+        \label{fig:example-graph-compact2}
+    \end{subfigure}%
+    \caption{Graphs with atomic nodes and feature structure nodes}
+    \label{fig:example-graph-compact}
+\end{figure}
+
+The main reasons in this separation are efficiency and practicality. First, it is about handling the atomic values (strings or integers) and (ordered) arrays only as values of feature structures and never as graph nodes. Second, the graphs remain limited in size, close to the conceptualised linguistic structures, i.e. dependency or constituency. Otherwise, the graphs would grow in complexity (a) by at least one more round of nodes for each dependency or constituency node and (b) by adoption of an additional node classification.
+
+For example lets imagine a constituency graph fragment of two nodes \textit{Node 1} and \textit{Node 2} where each has three associated features as it can be seen in Figure \ref{fig:example-graph-compact1}. If we would insist to dispose of the feature structure within the node and express the features as atomic graph nodes then the result would be a graph structure such as the one in Figure \ref{fig:example-graph-compact2}.
 
 \begin{definition}[Feature Structure (FS)]\label{def:fs}
-	A \textit{feature structure} $F$ is a finite set of attribute-value pairs $f_{i} \in F$. A \textit{feature} $f_{i}=(a,v)$ is a mapping between an identifier $a$ (a symbol) and a value $v$ which is either a symbol, an ordered set or another feature structure. The function $att(f_{i})$ is a function returning the feature identifier $att(f_{i})=a$ and the function $val(f_{i})$ is a function returning the ascribed value of a feature $(f_{i})=v$
+	A \textit{feature structure} $F$ is a finite set of attribute-value pairs $f_{i} \in F$. A \textit{feature} $f_{i}=(a,v)$ is an association between an identifier $a$ (a symbol) and a value $v$ which is either a symbol, an ordered set or another feature structure. 
 \end{definition}
 
-\begin{definition}[Ordered Set]\label{def:set}
-	An \textit{ordered set} $S=\{o_1,o_2,...,o_n\}$ is a finite well defined collection of distinct objects $o_{i}$ arranged in a sequence such that $\forall o_{i-1},o_{i} \in S: o_{i-1}<o{i}$
+Please note that the values of feature structures may be other feature structures allowing, if needed, to construct hierarchical descriptions. But in the current implementation, most of the time the values of the feature structure are either atomic values or arrays. 
+
+For convenience I define two functions to access the identifier and value in a feature structure. The function $att(f_{i})$ returning the feature identifier $att(f_{i})=a$ and the function $val(f_{i})$ is a function returning the ascribed value of a feature $(f_{i})=v$. 
+
+Definition \ref{def:fs} stipulates that the value of a feature may be also a set (besides an atomic value). The sets used in this thesis need to carry additional properties required for their interpretation. Specifically, it is the order need to be addressed here and the capacity to specify that set elements stand in a certain logical relation one to another (e.g. conjunction, disjunction, negation, etc.). These two properties are covered in Definition \ref{def:set} and \ref{def:conj-set}.
+For convenience I will assume from now on that sets (see Definition \ref{def:set}) preserve order even when it is not really required.  
+
+\begin{definition}[Set]\label{def:set}
+	An (ordered) \textit{set} $S=\{o_1,o_2,...,o_n\}$ is a finite well defined collection of distinct objects $o_{i}$. A set is said to be ordered if the objects are arranged in a sequence such that $\forall o_{i-1},o_{i} \in S: o_{i-1}<o{i}$.
 \end{definition}
 
 \begin{definition}[Conjunction Set]\label{def:conj-set}
-	A \textit{Conjunction Set} $S_{conj}=(S,conj)$ is an ordered set $S$ whose interpretation is given by the logical operand $conj$ (also denoting the type of the set) such that $\forall o_{i},o_{j} \in S: conj(o_{i}, o_{j})$ holds.
+	A \textit{conjunction set} $S_{conj}=(S,conj)$ is a set $S$ whose interpretation is given by the logical operand $conj$ (also denoting the type of the set) such that $\forall o_{i},o_{j} \in S: conj(o_{i}, o_{j})$ holds.
 \end{definition}
 
-The conjunction sets used in current work are \textit{AND-set} ($S_{AND}$), \textit{OR-set} ($S_{OR}$), \textit{XOR-set} ($S_{XOR}$) and \textit{NAND-set} ($S_{NAND}$). The assigned logical operands play a role in the functional interpretation of conjunction sets.% such that for example a $S_{AND}$ set $T_1={a,b,c}$ is interpreted as the logical conjunction $a \wedge b \wedge c$. 
+The conjunction sets used in current work are \textit{AND-set} ($S_{AND}$), \textit{OR-set} ($S_{OR}$), \textit{XOR-set} ($S_{XOR}$) and \textit{NAND-set} ($S_{NAND}$). The assigned logical operands play a role in the functional interpretation of conjunction sets. % such that for example a $S_{AND}$ set $T_1={a,b,c}$ is interpreted as the logical conjunction $a \wedge b \wedge c$. 
 Formally these sets are defined as follows.
 
-\begin{definition}[AND-Set]\label{def:and-set}
-	$AND-Set$ (also called \textit{conjunctive set}) is a conjunction set $S_{AND}=\{a,b,c...\}$ that is interpreted as a logical conjunction of its elements $a \wedge b \wedge c \wedge ...$ 
+\begin{definition}[Conjunctive set]\label{def:and-set}
+  Conjunctive set (also called \textit{AND-set}) is a conjunction set $S_{AND}=\{a,b,c...\}$ that is interpreted as a logical conjunction of its elements $a \wedge b \wedge c \wedge ...$ 
 \end{definition}
 
-\begin{definition}[NAND-Set]\label{def:nand-set}
-	$AND-Set$ (also called \textit{negative conjunctive set}) is a conjunction set $S_{NAND}=\{a,b,c...\}$ that is interpreted as a negation of the logical conjunction of its elements $a \uparrow b \uparrow c \uparrow ...$ equivalent to $ \neg(a \wedge b \wedge c \wedge ...)$ 
+\begin{definition}[Negative conjunctive set]\label{def:nand-set}
+	Negative conjunctive set (also called NAND-set) is a conjunction set $S_{NAND}=\{a,b,c...\}$ that is interpreted as a negation of the logical conjunction of its elements $a \uparrow b \uparrow c \uparrow ...$ equivalent to $ \neg(a \wedge b \wedge c \wedge ...)$ 
 \end{definition}
 
-\begin{definition}[OR-Set]\label{def:or-set}
-	$OR-Set$ (also called \textit{disjunctive set}) is a conjunction set $S_{OR}=\{a,b,c...\}$ that is interpreted as a logical disjunction of its elements $a \vee b \vee c \vee ...$
+\begin{definition}[disjunctive set]\label{def:or-set}
+	Disjunctive set (also called OR-set) is a conjunction set $S_{OR}=\{a,b,c...\}$ that is interpreted as a logical disjunction of its elements $a \vee b \vee c \vee ...$
 \end{definition}
 
-\begin{definition}[XOR-Set]\label{def:xor-set}
-	$OR-Set$ (also called \textit{exclusive disjunctive set}) is a conjunction set $S_{XOR}=\{a,b,c...\}$ that is interpreted as a logical exclusive disjunction of its elements $a \bigoplus b \bigoplus c \bigoplus ...$ equivalent to $ (a \wedge \neg (b \wedge c \wedge ... )) \vee (b \wedge \neg (a \wedge c \wedge ...)) \vee (c \wedge \neg (a \wedge b \wedge ...)) $
+\begin{definition}[exclusive disjunctive set]\label{def:xor-set}
+	Exclusive disjunctive set (also called XOR-set) is a conjunction set $S_{XOR}=\{a,b,c...\}$ that is interpreted as a logical exclusive disjunction of its elements $a \bigoplus b \bigoplus c \bigoplus ...$ equivalent to $ (a \wedge \neg (b \wedge c \wedge ... )) \vee (b \wedge \neg (a \wedge c \wedge ...)) \vee (c \wedge \neg (a \wedge b \wedge ...)) $
 \end{definition}
 
 When conjunction sets are used as values in FSs then the type of logical operand dictates the interpretation of the FS. When the set type is $S_{AND}$ then all the set elements hold simultaneously as feature values. If it is a $S_{OR}$ then one or more of the set elements hold as values. If is $S_{XOR}$ then one and only one of set elements holds and finally if it is a $S_{NAND}$ set then none of elements hold as feature values.
 
-I use $\tau$ function defined $\tau:S \rightarrow \{S_{AND},S_{OR},S_{XOR},S_{NAND} \}$ to return the type of the conjunction set and $size$ function defined $size:S \rightarrow \mathbb{N}$ to return the number of elements in the set.
+The function $\tau(S)$, defined $\tau:S \rightarrow \{S_{AND},S_{OR},S_{XOR},S_{NAND} \}$, returns the type of the conjunction set and the function $size(S)$, defined $size:S \rightarrow \mathbb{N}$, returns the number of elements in the set.
+ 
+Now that all the necessary basic notions nave been formally defined I now define the feature rich graph and provide a couple of examples afterwards. 
  
 \begin{definition}[Feature Rich Graph (FRG)]\label{def:feature-rich-graph}
 	A \textit{feature rich graph} is a digraph whose nodes $V$ are feature structures and whose edges $(u,v,f) \in E$ are three valued tuples with $ u,v \in V$ and $f \in F$ an arbitrary feature structure.
 \end{definition}
 
-Further on, when I refer to a graph I will a feature rich digraph, unless otherwise stated. The parsing algorithm operates with three feature graph types: \textit{Dependency Graphs} (DG) (example figure \ref{fig:dep-graph}), \textit{Constituency Graphs} (CG) also called Mood Constituency Graphs (MCG) (example figure \ref{fig:mcg-graph}) and Pattern Graphs (PG) which can also be viewed as \textit{Query Graphs} (QG). 
+Further on, for convenience, when I refer to a graph I will refer to a feature rich digraph unless otherwise stated. The parsing algorithm operates with such graph and they are further distinguished, based on purpose as: \textit{Dependency Graphs} (DG) (example figure \ref{fig:dep-graph}), \textit{Constituency Graphs} (CG) (example figure \ref{fig:mcg-graph}) and Pattern Graphs (PG) also referred as \textit{Query Graphs} (QG).
+
+Please note that the edges are defined to carry feature structures. This capacity will not be employed, for example, in the case of constituency graphs; only minimally employed in the case of dependency graphs, where the dependency relation is specified; and fully employed in pattern graphs. Nonetheless, treating all of them as feature rich graphs simplifies the implementation.
 
 \begin{definition}[Dependency Graph]\label{def:dep-graph}
-	The \textit{dependency graph} is a feature rich digraph whose nodes $V$ correspond to words, morphemes or punctuation marks in the text and carry but not limited to the following features: \textit{word}, \textit{lemma}, part of speech (\textit{pos}) and when appropriate the named entity type (net); while the edges $E$ describe the dependency relation (\textit{rel}).
+	A \textit{dependency graph} is a feature rich digraph whose nodes $V$ correspond to words, morphemes or punctuation marks in the text and carry at least the following features: \textit{word}, \textit{lemma}, part of speech (\textit{pos}) and, when appropriate, the named entity type (\textit{net}); the edges $E$ describe the dependency relation (\textit{rel}).
 \end{definition}
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 \centering
-\begin{tikzpicture}[tree-style,level distance=7em,]
+\begin{tikzpicture}[tree-style,level distance=8em,]
 \node[pattern-node] {word:gave,\\lemma:give,\\pos:VBD}
  child {node[pattern-node] {word:He,\\lemma:he,\\pos:PRP} edge from parent node[left] {\{rel:nsubj\}} }
  child {node[pattern-node]{word:cakes,\\lemma:cake\\pos:NN} 
@@ -104,14 +185,15 @@ Further on, when I refer to a graph I will a feature rich digraph, unless otherw
 
 
 \begin{definition}[Constituency Graph]\label{def:constituency-graph}
-	The \textit{constituency graph} is a feature rich digraph whose nodes $V$ correspond to SFL \textit{units} and carry but not limited to the unit class and the function within the parent unit (except for the root node); while the edges $E$ carry mainly the constituency relation between parent and daughter nodes but also potentially other relation types. 
+	A \textit{constituency graph} is a feature rich digraph whose nodes $V$ correspond to SFL \textit{units} and carry the \textit{unit class} and the element function within the parent unit (except for the root node); while the edges $E$ reflect constituency relations between constituents. 
+    %carry mainly the constituency relation between parent and daughter nodes but also potentially other relation types. 
 \end{definition}
 
-The basic features of a constituent node are the \textit{unit class} and the function(s) it takes which is to say the \textit{element(s)} it fills in the parent unit (see theoretical aspects of SFL in Chapter \ref{ch:sfg}). The root node (usually a clause) is an exception and it does not act as a functional element because it does't have a parent unit. The leaf nodes carry the same features as the DG nodes plus the class feature which correspond to the traditional grammar part of speech. 
+The basic features of a constituent node are the \textit{unit class} and the function(s) it takes, which is to say the \textit{element(s)} it fills in the parent unit (as described in the discussion of theoretical aspects of SFL in Chapter \ref{ch:sfg}). The root node (usually a clause) is an exception and it does not act as a functional element because it does not have a parent unit. The leaf nodes carry the same features as the DG nodes plus the word class feature which correspond to the traditional part of speech tags. 
 
-Apart from the essential features of class and function, the CG nodes carry additional class specific features selected from the relevant system network. For example gender, number and animacy are specific to nominal unit classes such as nouns and nominal group; while tense and modality are specific mainly to clause class.
+Apart from the essential features of class and function, the CG nodes carry additional class specific features selected from the relevant system network. I describe the process of enriching CGs with features in the next chapter. Below, is an example CG that carries tense, modality and polarity on the clause node.
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 \centering
 \begin{tikzpicture}[tree-style,]
 \node (cla) [pattern-node] {class:clause, tense:past simple, voice:active, polarity:positive}
@@ -128,11 +210,24 @@ Apart from the essential features of class and function, the CG nodes carry addi
 \label{fig:mcg-graph}
 \end{figure}
 
-Regardless of the graph type, constituency or dependency, it is essential to express patters over those graphs in order to facilitate various operations. The PG (defined in \ref{def:graph-pattern}) are special kinds of graphs meant to represent small (repeatable) parts of parse graphs that stand for a certain grammatical feature. The patterning is described as both graph structure and feature presence (or absence) in node or edge.
-Such pattern graphs can be viewed as the conditional part of a query language if not the entire query statements (i.e. select, insert, update, delete operation descriptions). This kinds of graphs need last four requirements listed in the beginning of this section. 
+
+
+Regardless of the graph type, constituency or dependency, it is necessary for the parsing process to express patterns over those graphs in order to facilitate various operations. The PG (defined in \ref{def:graph-pattern}) are special kinds of graphs meant to represent small (repeatable) parts of parse graphs that stand for certain grammatical features. Because they play an important role in this work I dedicate the next section to their definition. 
+
+
+%TODO: continue
+\section{On Pattern Graphs}
+\label{sec:pattern-graphs}
+As already mentioned in the previous section we are dealing with a special case of graph isomorphism precisely because the graphs we consider are feature rich graphs. Specifically, besides the graph structure, the node and edge identity checking is a secondary check to consider.
+
+
+
+%todo:MOVE
+%begin copied from previous section
+The patterning is described as both graph structure and feature presence (or absence) in node or edge. Pattern graphs can also specify operations that shall be executed when the pattern is successfully matched (for example add a new feature on a given node). This kinds of graphs need last four requirements listed in the beginning of this section. 
 
 \begin{definition}[Pattern Graph]\label{def:graph-pattern}
-	A \textit{pattern graph} (PG) describes regularities in node-edge configuration and feature structure including descriptions of \textit{negated nodes or edges} (i.e. absence of), logical operators over feature sets (AND, OR, XOR and NAND) and operations once the pattern is identified in a target graph (select, insert, delete and update).
+    A \textit{pattern graph} (PG) describes regularities in node-edge configuration and feature structure including descriptions of \textit{negated nodes or edges} (i.e. absence of), logical operators over feature sets (AND, OR, XOR and NAND) and operations once the pattern is identified in a target graph (select, insert, delete and update).
 \end{definition}
 
 The feature structure of a PG are always \textit{underspecified} as compared to the dependency or constituency graph in the sense that irrelevant attribute-value 
@@ -140,9 +235,10 @@ pairs are omitted sometimes down to an empty FS. However often it is useful to s
 
 An example of PG is depicted in figure \ref{fig:gp1} in the Section \ref{sec:pattern-graph-matching}. It deals with pattern graph matching and other operations with in detail. But before that I will first briefly cover generic operations on graphs and the problem of graph matching also known in computer science as the \textit{graph isomorphism} problem.
 
-\section{More on Pattern Graphs}
-\label{sec:pattern-graphs}
-As already mentioned in the previous section we are dealing with a special case of graph isomorphism precisely because the graphs we consider are feature rich graphs. Specifically, besides the graph structure, the node and edge identity checking is a secondary check to consider.
+%end copied from previous section
+
+%todo rephrase, introduce, etc
+
 
 Before I dive into pattern graph matching and operations with pattern graphs I will first discuss two example of pattern graphs. Consider the case of present perfect continuous tense which traditional grammar defines as in Table \ref{tab:ppc-pattern} regardless of the element order. 
 

@@ -1457,16 +1457,18 @@ In this section was discussed in detail the problem of semantic and syntactic he
     It is close to terms and concepts of syntactic structure in traditional grammar (role and definition of Subject, Complement and other functional elements) and the . 
     
 \subsection{MOOD}
-    One of the first system networks presented in Introduction to Functional Grammar \citep{Halliday2013} is that of MOOD. 
+\label{sec:mood}
+%todo continue
+    One of the first system networks presented in the Introduction to Functional Grammar \citep{Halliday2013} is that of MOOD. 
     This system is introduced in the discussion of interpersonal metafunction of language. In this view a clause is conceptualised as message exchanged between dialogue interactants. A range of grammatical features from traditional grammar such as \textit{mood}, \textit{modality}, \textit{aspect}, \textit{mode}, \textit{polarity}, \textit{tense} etc. are covered, under different names, in this system network. 
     
     The terms in SFL literature sometimes are capitalised to distinguish system names, functions and features. Note that here the \textit{MOOD} (all capital) refers here to the name of the system network; the \textit{Mood} (first capital) is an element of clause structure formed of the Subject and Finite elements which, in fact, is not used in this work because of a general orientation towards Cardiff approach to structure; and the \textit{mood} (no capital) is a type of feature carried by finite clauses (e.g. imperative, indicative, interrogative etc.)
 
-    Figure \ref{fig:clause-mood} presents 
+    Figure \ref{fig:clause-mood} presents the MOOD system network employed in the current implementation of the Parsimonious Vole parser. This MOOD system is an adaptation of the one from \citet[162]{Halliday2013} and was created together with the test corpus mixing, for simplicity purposes, a set of traditional grammar features.  
     
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=\linewidth]{Figures/SFL-grammar/clause-mood.pdf}
+        \includegraphics[width=0.8\linewidth]{Figures/SFL-grammar/clause-mood.pdf}
         \caption{An adaptation of the MOOD system network \citep[162]{Halliday2013}}
         \label{fig:clause-mood}
     \end{figure}
@@ -1483,7 +1485,70 @@ In this section was discussed in detail the problem of semantic and syntactic he
       
       
 \subsection{TRANSITIVITY}
+\label{sec:transitivity}
 
+As explained in Section \ref{sec:functions-metafunctions} in SFL there are three metafunctions that are conflated with each other. This section briefly introduces the experiential metafunction and TRANSITIVITY as the main system that systematizes the experiential metafunction. 
+
+In this perspective, ``the clause construes a quantum of change in a flow of events as a \textit{figure}, or a configuration of a \textit{process}, \textit{participants} involved in it and any attendant \textit{circumstance}`` \citep[212]{Halliday2013}. 
+
+In traditional grammar the term \textit{transitivity} refers to the property of verbs according to which they are classified into transitive and intransitive. In SFL the term transitivity is primarily concerned with clauses. It is most insightful to refer to Halliday's TRANSITIVITY \citep{Halliday67-parts1+2,Halliday68-part3,Halliday68} that deals with Predicate, Subject, Complement, and Adjunct all of which are elements of the clause and are usually conflated with the Process, Participants and Circumstances. 
+
+Sydney grammar makes a distinction between two types of experience: ``inner'' as experience inside ourselves and ``outer'' as experience in the world around us. The prototypical outer experience is that of actions and events. The inner experience is more difficult to sort but it is a kind of reply of the outer, recording it, reflecting on it, reacting on it etc. The two grammatical categories realizing the these sorts of experience are the \textit{material} process and \textit{mental} process.
+
+In addition to material and mental there is a third kind of process used in identifying, classifying and relating various kinds of experience. The grammatical category realizing this type of links is the \textit{relational} process. 
+
+Then using the combinations of the three main processes above, Halliday defines \textit{behavioural}, \textit{verbal} and \textit{existential} processes. 
+
+Cardiff grammar employs similar process types, that of \textit{action}, \textit{relational}, \textit{mental} and \textit{influential}. In addition it links these process types to realms of experience: \textit{physical}, \textit{social interaction}, \textit{psychological} and \textit{abstract}.
+Figure \ref{fig:cardiff-realm-processtype} provides the schematic connection between realms of experience and various process types that can realise that kind of experience \citep[37]{Fawcett2009}. 
+
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}[]
+    \node (re) [font=\bf] {realm of experience};
+    \node (ph) [below=1em of re] {physical};
+    \node (si) [below=1em of ph] {social interaction};
+    \node (ps) [below=1em of si] {psychological};
+    \node (ab) [below=1em of ps] {physical};
+
+    \node (pt) [font=\bf, right=7em of re] {types of processes};
+    \node (ac) [below=1em of pt] {action};
+    \node (re) [below=1em of ac] {relational};
+    \node (me) [below=1em of re] {mental};
+    \node (in) [below=1em of me] {influential};        
+    
+    \draw [thick] (ph.east) -- (ac.west);
+    \draw [thick] (ph.east) -- (re.west);
+    \draw [thick] (ph.east) -- (in.west);
+    
+    \draw [thick] (si.east) -- (ac.west);
+    \draw [thick] (si.east) -- (re.west);
+    \draw [thick] (si.east) -- (in.west);
+    
+    \draw [thick] (ps.east) -- (me.west);
+    \draw [thick] (ps.east) -- (re.west);
+    \draw [thick] (ps.east) -- (in.west);
+    
+    \draw [thick] (ab.east) -- (re.west);
+
+    \end{tikzpicture}
+    \caption{The connections in Cardiff grammar between realms of experience and the process types}
+    \label{fig:cardiff-realm-processtype}
+\end{figure}
+
+%todo introduce Neale's work, and a few details about the processes, the participants 
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{Figures/SFL-grammar/Transitivity.pdf}
+    \caption{Cardiff grammar TRANSITIVITY}
+    \label{fig:cardiff-transitivity}
+\end{figure}
+
+%todo continue
+
+\subsection{Process Type Database}
+\label{sec:ptdb}
 
 \section{Discussion}
     This chapter has introduced the fundamentals of systemic functional linguistics and presented a consideration of Sydney and Cardiff theories of grammar to the task of parsing.

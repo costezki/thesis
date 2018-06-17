@@ -78,6 +78,37 @@ The generalization \ref{gen:11} reflects criteria for selecting the controller o
 
 In dependency grammar the adjunct clauses are also introduced via \textit{xcomp} and \textit{prepc} relations, so syntactically there is not distinction between the two and patterns from Figures \ref{fig:obj-control} and \ref{fig:subj-control} are applicable.
 
+%TODO introduce properly the discussion below about distinguishing the PRO and NP and about pre-marking the constituents with their potential to semantic roles
+
+%todo this is discussed in sec:np-traces
+Before discussing each approach I would like to state a technical detail. When the empty constituent is being created it requires two important details: (a) the antecedent constituent it is bound to and (b) the type of relationship to it's antecedent constituent or if none is available the type of empty element: t-trace or PRO. Now identifying the antecedent is quite easy and can be provided at the creation time but since the empty element type may not always be available then it may have to be marked as partially defined.
+
+The first solution is to create the empty subject constituents based only on syntactic criteria, ignoring for now element type (either PRO or \textit{t}-trace) and hence postponing it to semantic parsing phase. The advantage of doing so is a clear separation of syntactic and semantic analysis. The empty subject constituents are created in the places where they should be and so this leaves aside the semantic concern of how the thematic roles are distributed. The disadvantage is leaving the created constituents incomplete or under-defined. Moreover the thematic role distribution must be done within the clause limits but because of raising, this process must be broadened to a larger scope beyond clause boundaries. This of course is a dangerous approach as it might lead to unbounded dependencies and so unbounded complexity that needs to be addressed. 
+In the current work, however, the semantic roles are addressed within the clause borders following the principle of one main verb per clause, as will be explained later in the Chapter \ref{ch:semantic-parsing}, thus avoiding the above mentioned risk of unbounded complexity. 
+
+Since transitivity analysis is done based on pattern matching, the patterns rise in complexity as the scope is extended to two or more clauses thus excludes iteration over one clause at a time (which is desirable). 
+
+Otherwise, a second approach is to decide the element type before Transitivity analysis (semantic role labelling) and remove the burdened of complex patterns that go beyond the clause borders. Also, all syntactic decisions would be made before semantic analysis and the empty constituents would be created fully defined with the binder and their type but that means delegating semantically related decision to syntactic level (in a way peeking ahead in the process pipeline).
+
+The solution adopted here is mix of the two avoiding two issues: (a) increasing the complexity of patterns for transitivity analysis, (b) leaving undecided which constituents accept thematic role in the clause and which don't. 
+
+The process to distinguish the empty constituent type starts by (a)identifying the antecedent and the empty element (through matching the subject control pattern in Figure \ref{fig:subj-control}), (b) identifying the main verbs of higher and lower clauses and correspondingly the set of possible configurations for each clause(by inquiry to process type database(PTDB) described in the transitivity analysis Section \ref{sec:semantic-parsing}).
+
+If conditions from generalization \ref{gen:trace-detection} are met then the empty constituent is a subject controlled \textit{t}-trace. Now we need a set of simple rules to mark which constituents shall receive a thematic role. These rules are  presented in the generalization \ref{gen:thematic-marking} below.
+
+\begin{generalization}\label{gen:thematic-marking}
+    Constituents receiving thematic roles are marked with ``thematic-role'' label, those that do not receive a thematic role are marked with ``non-thematic-role'' and those that might receive thematic role with ``unknown-thematic-role''. So in each clause:
+    \begin{itemize}
+        \item the subject constituent is marked with ``thematic-role'' label unless (a) it is an expletive or (b) it is the antecedent of a \textit{t}-trace then marked ``non-thematic-role''
+        \item the complement constituent that is an nominal group (NP) or an embedded complement clause is marked with ''thematic-role`` label.
+        \item the  complement that is a prepositional group (PP) is marked with ``unknown-thematic-role''.
+        \item the complement that is a prepositional clause is marked with ``unknown-thematic-role'' label unless they are introduced via ``that'' and ``whether'' markers then it is marked with ''thematic-role`` label.
+        \item the adjunct constituents are marked with ``non-thematic-role''
+    \end{itemize}
+\end{generalization}
+
+%todo end copy to transitivity parsing. 
+
 According to generalization \ref{gen:9} the PRO is optionally controlled in subject non-finite clauses. Since it is not possible to bind PRO solely on syntactic grounds in the generalization \ref{gen:9} is proposed the arbitrary interpretation.
 
 \begin{figure}[H]
