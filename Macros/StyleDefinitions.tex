@@ -52,8 +52,10 @@
 		anchor=center
 	},
 	edge-style/.style   = {very thick, ->,>=stealth,rounded corners=3mm },
-	tree-style/.style = {edge from parent fork down,
-		edge from parent/.style={draw,rounded corners=3mm},
+	tree-style/.style = { %edge from parent fork down,
+%		child anchor=north,
+%        parent anchor=center,
+        edge from parent/.style={draw,rounded corners=3mm},
 		edge-style,
 		level 1/.style={sibling distance=10em},
 		level 2/.style={sibling distance=10em}, 
