@@ -30,7 +30,7 @@ While developing the Parsimonious Vole parser a set of representational requirem
 
 The general approach to construct an SFG parse structure revolves around the graph pattern matching and graph traversal. In the following sections I present the instruments used for building such structures, starting from a generic computer science definition of graphs and moving towards specific graph types covering also the feature structures and conditional sets. 
 
-\section{On graphs}
+\section{On sets, feature structures and graphs}
 \label{sec:graphs}
 
 In the field of computational linguistics trees has been taken as the de facto data representation. In Section \ref{sec:paradigmatic-account} I have mentioned already that I employ graph and not tree structures. 
@@ -114,10 +114,10 @@ The main reasons in this separation are efficiency and practicality. First, it i
 For example lets imagine a constituency graph fragment of two nodes \textit{Node 1} and \textit{Node 2} where each has three associated features as it can be seen in Figure \ref{fig:example-graph-compact1}. If we would insist to dispose of the feature structure within the node and express the features as atomic graph nodes then the result would be a graph structure such as the one in Figure \ref{fig:example-graph-compact2}.
 
 \begin{definition}[Feature Structure (FS)]\label{def:fs}
-	A \textit{feature structure} $F$ is a finite set of attribute-value pairs $f_{i} \in F$. A \textit{feature} $f_{i}=(a,v)$ is an association between an identifier $a$ (a symbol) and a value $v$ which is either a symbol, an ordered set or another feature structure. 
+	A \textit{feature structure} $F$ is a finite set of attribute-value pairs $f_{i} \in F$. A \textit{feature} $f_{i}=(a,v)$ is an association between an identifier $a$ (a symbol) and a value $v$ which is either a symbol, a number, a set or another feature structure. 
 \end{definition}
 
-Please note that the values of feature structures may be other feature structures allowing, if needed, to construct hierarchical descriptions. But in the current implementation, most of the time the values of the feature structure are either atomic values or arrays. 
+The values of feature structures may be other feature structures allowing, if needed, to construct hierarchical descriptions. In the current implementation, however, the values of the feature structure are restricted to atomic values or sets of values.
 
 For convenience I define two functions to access the identifier and value in a feature structure. The function $att(f_{i})$ returning the feature identifier $att(f_{i})=a$ and the function $val(f_{i})$ is a function returning the ascribed value of a feature $(f_{i})=v$. 
 
@@ -143,17 +143,17 @@ Formally these sets are defined as follows.
 	Negative conjunctive set (also called NAND-set) is a conjunction set $S_{NAND}=\{a,b,c...\}$ that is interpreted as a negation of the logical conjunction of its elements $a \uparrow b \uparrow c \uparrow ...$ equivalent to $ \neg(a \wedge b \wedge c \wedge ...)$ 
 \end{definition}
 
-\begin{definition}[disjunctive set]\label{def:or-set}
+\begin{definition}[Disjunctive set]\label{def:or-set}
 	Disjunctive set (also called OR-set) is a conjunction set $S_{OR}=\{a,b,c...\}$ that is interpreted as a logical disjunction of its elements $a \vee b \vee c \vee ...$
 \end{definition}
 
-\begin{definition}[exclusive disjunctive set]\label{def:xor-set}
+\begin{definition}[Exclusive disjunctive set]\label{def:xor-set}
 	Exclusive disjunctive set (also called XOR-set) is a conjunction set $S_{XOR}=\{a,b,c...\}$ that is interpreted as a logical exclusive disjunction of its elements $a \bigoplus b \bigoplus c \bigoplus ...$ equivalent to $ (a \wedge \neg (b \wedge c \wedge ... )) \vee (b \wedge \neg (a \wedge c \wedge ...)) \vee (c \wedge \neg (a \wedge b \wedge ...)) $
 \end{definition}
 
-When conjunction sets are used as values in FSs then the type of logical operand dictates the interpretation of the FS. When the set type is $S_{AND}$ then all the set elements hold simultaneously as feature values. If it is a $S_{OR}$ then one or more of the set elements hold as values. If is $S_{XOR}$ then one and only one of set elements holds and finally if it is a $S_{NAND}$ set then none of elements hold as feature values.
+When conjunction sets are used as values in FSs then the logical operand dictates the interpretation of the FS. When the set type is $S_{AND}$ then all the set elements hold simultaneously as feature values. If it is a $S_{OR}$ then one or more of the set elements hold as values. If is $S_{XOR}$ then one and only one of set elements holds and finally if it is a $S_{NAND}$ set then none of elements hold as feature values.
 
-The function $\tau(S)$, defined $\tau:S \rightarrow \{S_{AND},S_{OR},S_{XOR},S_{NAND} \}$, returns the type of the conjunction set and the function $size(S)$, defined $size:S \rightarrow \mathbb{N}$, returns the number of elements in the set.
+The function $\tau(S)$, defined $\tau:S \rightarrow \{S_{AND},S_{OR},S_{XOR},S_{NAND} \}$, returns the type of the conjunction set and the function $size(S)$, defined $size:S \rightarrow \mathbb{N}$, returns the number of elements in the set. The size function is also denoted as $|S|$.
  
 Now that all the necessary basic notions nave been formally defined I now define the feature rich graph and provide a couple of examples afterwards. 
  
@@ -212,13 +212,8 @@ Apart from the essential features of class and function, the CG nodes carry addi
 
 Next section describes what I call atomic queries and two types of special graph traversal: the conditional and the generative ones. 
 
-\section{Graph query and traversal}
-%There is a set of basic operations on graphs used for CG creation and for grammatical feature identification according to the literature of mood and transitivity \citep{Fawcett2008, Halliday2013} containing a range of methods for detecting and selecting features from system networks. To support those methodical specifications the graphs allow a number of operations. 
-
-\begin{definition}[Atomic Query]\label{def:query}
-    %Given a graph $G=(V,E)$ to query nodes or edges is to select a set of nodes or a set of edges that satisfy the query constraint condition on feature structure.
-    Querying $q_{V}(F,G)$ or $q_{E}(F,G)$ over the nodes $V$ or edges $E$ of a graph $G$ is an operation that returns a set of nodes or edges filtered by the conditional feature structure $F$.
-\end{definition}
+\section{Graph operations}
+From the general set of operations on graphs defined in graph theory \citep{bondy1976graph, west2001graph} two in particular are of importance fo the current work: \textit{query} graphs nodes and edges and graph \textit{traversal}. In addition to that when nodes are compared to each other, the algorithms have to determine whether they are equivalent or \textit{congruent} in a broader sense. Next I address these operations in detail.
 
 \tikzset{
     cir1/.style={
@@ -260,13 +255,34 @@ Next section describes what I call atomic queries and two types of special graph
     \label{fig:example-traversal1}
 \end{figure}
 
-For example in Figure \ref{fig:example-traversal1} a potential query is to return all the dashed nodes in which case returns the set of nodes \{3,5,7,8\}. In a given dependency graph, similar operation can be used to select all the determiner nodes. In that case we query the nodes with the condition that the part of speech has DT value i.e. \textit{pos=DT}. The same can be achieved by selecting all the edges connecting a noun to its determiner, then the query is formulated for all edges whose relation type is \textit{rel=det}.
+
+%Another important notion that needs to be addressed is the comparison of graph nodes to each other and deciding whether two of them are the ``same'' in some sense or \textit{congruent}. 
+%Latter in this chapter we will see that the important operations such as pattern matching depend on comparing nodes to derive whether they are ``the same''. 
+Lets start with node comparison. The simplest form of equivalence, in the labelled graphs such as the one in Figure \ref{fig:example-traversal1}, is the equality of label values. In this example there are no two nodes that are the same because each of them have a unique label. But if we extend the notion of ``sameness'' from the equality of value to some other condition (or rule) then the mathematical term that captures this concept best is that of \textit{congruence} defined in Definition \ref{def:congreunce}. Lets take for example a simple arithmetic rule such as division by 2 which distinguishes odd and even nodes. Under this rule, two nodes are congruent if both are either even or both are odd. In Figure \ref{fig:example-traversal1} the nodes \{2, 4, 6, 8\} are congruent to each other because they are even and conversely the nodes \{1, 3, 5, 7\} are congruent as well. Another example of congruence rule is the node type distinction into continuous line circles and dashed line circles. Under this rule, in Figure \ref{fig:example-traversal1}, the nodes \{3, 5, 7, 8\} are congruent because they are dashed and the rest are congruent because they are in continuous line circles. 
+
+\begin{definition}[Congruence]\label{def:congreunce}
+    A \textit{congruence relation} (or congruence), denoted $\equiv$, is an equivalence relation on a structure that is compatible with the structure. Every congruence relation has a corresponding \textit{quotient} rule (or condition) forming an \textit{equivalence class} (or congruence class) for the relation \citep[26-27]{hungerford1980algebra}.
+\end{definition}
+
+In the case of sets or feature structures the congruence quotient rule needs to be defined corresponding to the structure. An example rule for set congruency can be the threshold of 2 elements on size of the set. Given three sets A=\{0, 1, 2\}, B=\{1, 2\}, C=\{5\}, D=\{6\}, under the above quotient rule, $A \equiv B$ and $C \equiv D$ forming the equivalence classes \{A, B\} and \{C, D\}. In Section \ref{sec:graph-matching} I will return to congruence relation between feature structures and will provide specific (quotient) rules that define equivalence between sets and feature structures. 
+
+% set of basic operations on graphs, relevant to parsing algorithms described in this thesis, which will introduce in this section . 
+%for CG creation and for grammatical feature identification according to the literature of mood and transitivity \citep{Fawcett2008, Halliday2013} containing a range of methods for detecting and selecting features from system networks. To support those methodical specifications the graphs allow a number of operations. 
+
+Lets turn now to queries over the graph nodes and edges. The notion of a query, defied in Definition \ref{def:query}, is tightly linked to the notion of congruence. The query is an operation that selects all the nodes or entities corresponding to a congruence class given by a quotient rule (or constraint) on a graph structure. For example in Figure \ref{fig:example-traversal1} a potential query is to return the equivalence class of the dashed nodes \{3, 5, 7, 8\}. The query operation can be extended to the the graph edges. 
+%In a given dependency graph, similar operation can be used to select all the determiner nodes. In that case we query the nodes with the condition that the part of speech has DT value i.e. \textit{pos=DT}. The same can be achieved by selecting all the edges connecting a noun to its determiner, then the query is formulated for all edges whose relation type is \textit{rel=det}.
+
+\begin{definition}[Graph query]\label{def:query}
+    %Given a graph $G=(V,E)$ to query nodes or edges is to select a set of nodes or a set of edges that satisfy the query constraint condition on feature structure.
+    Given a graph $G(V,E)$ and a query structure $F$, querying $q_{V}(F,G)$ or $q_{E}(F,G)$ over the nodes $V$ or edges $E$ of a graph $G$ is an operation that returns a set of nodes or edges equivalent to the query structure, $ \forall v \in V,  v \equiv F$. 
+\end{definition}
+
+The \textit{graph traversal} defined in \ref{def:traversal} and especially its conditional and generative extensions defined in Definition \ref{def:conditional-traversal} and \ref{def:generative-traversal} are  important operations in this work. They are employed in the first phase of the algorithm, for copying the dependency graph as constituency graph described in Chapter \ref{ch:parsing-algorithm}. 
 
 \begin{definition}[Traversal]\label{def:traversal}
     Traversal $t(V_S,G)$ of a graph $G$ starting from node $V_S$ is a recursive operation that returns a set of sequentially visited nodes neighbouring each other in either \textit{breadth first} ($t_{BF}$) or \textit{width first} ($t_{WF}$) orders.
 \end{definition}
 
-The graph traversal defined in \ref{def:traversal} and especially its conditional and generative extensions defined in \ref{def:conditional-traversal} and \ref{def:generative-traversal} are very important operation in this work. 
 The graph traversal is employed either for searching for a node or an edge or finding a sub-graph that fulfils certain conditions on its nodes and edges if it is a conditional traversal. For example in the semantic enrichment phase (that will be described in Section \ref{sec:enrichment-stage}), to ensure that the semantic patterns are applied iteratively to each clause, from a multi-clause CG graphs are selected all clause sub-graphs without including the embedded (dependent) clauses. 
 
 %Using sub-graphs for performing the pattern matching, like in the case of semantic enrichment, decreases drastically the complexity of the graph isomorphism problem (described in Section \ref{sec:graph-matching}) thus increasing the overall performance. 
@@ -520,6 +536,9 @@ So far we have discussed about Constituency and Dependency graphs and, in last s
     A morphism $f:X \rightarrow Y$ is a structure preserving map from one object $X$ to the other $Y$ where the objects are complex structures such as sets, feature structures or graphs.
 \end{definition}
 
+%\begin{definition}[Homomorphism]\label{def:homomorphism}
+%\end{definition}
+
 %In this work, for \textit{identity morphism} I use interchangeably the terms \textit{identity checking function} or \textit{identity function}.
 
 %When the morphism can be applied in both direction then it is called an \textit{isomorphism}. 
@@ -540,14 +559,12 @@ The graph matching is known in computer science as (sub-)graph isomorphism testi
 %\end{definition}
 
 Graphs do not need to have the same number of nodes or edges. We say that a graph is smaller than another one, denoted $G \leq H$, when its number of nodes is less than that of the other graph. In this case the isomorphism is established to a sub-graph of $H$. 
-In this work pattern graphs are usually simpler and smaller than the (constituency or dependency) graph they are matched against. 
+The pattern graphs, employed in the current work, are usually simpler and smaller than the (constituency or dependency) graph they are matched against. 
 %In such cases the task is to identify whether the first, smaller graph, is isomorphic to a sub-graph of the second one. 
 In this case, the mapping function is relaxed from bijective (perfect mapping from first to second graph) to an injective one (each node from first has a correspondent in the second one).
 
-
-
 \begin{definition}[Sub-graph isomorphism]\label{def:sgisomorphism}
-       Given two feature rich graphs $G=(V_G,E_G)$ and $H=(V_H,E_H)$ and a congruence operator $\cong$, $G$ is sub-graph isomorphic to $G$ (denoted $G \subseteq H$) if there is an injective function $f:V_G \rightarrow V_H$ such that
+       Given two feature rich graphs $G=(V_G,E_G)$ and $H=(V_H,E_H)$, $G$ is sub-graph isomorphic to $G$ (denoted $G \subseteq_{\equiv} H$) if there is an injective function $f:V_G \rightarrow V_H$ such that
    \begin{itemize}
        \item $\forall v \in V_G, f(v) \in V_H$ and
        \item any two nodes adjacent in $G$, $(u,v) \in E_G$, are also adjacent in $H$, $(f(u), f(v)) \in E_H $
@@ -640,26 +657,18 @@ In Figure \ref{fig:example-matching1} is depicted a labelled graph that is isomo
     \label{fig:example-r-matching}
 \end{figure}
 
-
 Lets consider Figure \ref{fig:example-r-matching} where the graph nodes are feature structures instantiating features: f_1 and f_2. One way to approach isomorphism in this scenario is by the value of one feature, for example f_1. Then we can identify two sub-graph isomorphisms: \{1=a, 2=b, 3=c\} and \{1=b, 2=d, 3=e\}. This approach, besides additional specification what values to compare, i.e. f_1s, is the same as providing a sub-graph isomorphism on the labelled graphs from Figure \ref{fig:example-matching}. 
 
 In addition to the rule above, lets add a constraint that the isomorphism is not only a mapping between the feature values (numbers to letters) but also that the mapped values are identical (strict value equality). 
-If we consider the strict equality rule applied on f_1 feature, there is no isomorphism between the two graphs because first one uses numbers (1, 2, 3) and the second uses letters (a, b, c, d). Now if we turn to the values of f_2 and apply the same rule then there is one isomorphism possible \{paper=paper, rock=rock, scissors=scissors\}. The second one, even if it is a cycle, \{paper=paper, rock=scissors, scissors=rock\} is no longer acceptable because the ``scissors'' and ``rock'' switched places in the target graph and it would have been acceptable as a mapping, but not as strict value equality. Formally, the additional equality constraint can be expressed on the graph isomorphism $f$ (defined in Definition \ref{def:sgisomorphism}) as $u=f(u)$.
+If we consider the strict equality rule applied on f_1 feature, there is no isomorphism between the two graphs because first one uses numbers  \{1, 2, 3\} and the second uses letters\{a, b, c, d\}. Now if we turn to the values of f_2 and apply the same rule then there is one isomorphism possible \{paper=paper, rock=rock, scissors=scissors\}. The second one, even if it is a cycle, \{paper=paper, rock=scissors, scissors=rock\} is no longer acceptable because the ``scissors'' and ``rock'' switched places in the target graph and it would have been acceptable as a mapping, but not as strict value equality. Formally, the additional equality constraint can be expressed on the graph isomorphism $f$ (defined in Definition \ref{def:sgisomorphism}) as $u=f(u)$.
 
-This brings us to the idea that a \textit{congruence operator} (denoted $\cong$) needs to be defined for the feature rich (sub-)graph isomorphism. The \textit{feature congruence} (broadly defined in Definition \ref{def:feature-congreunce}) can be defined in terms of feature structures comparison in accordance with the goals of the particular task or satisfying certain set of conditions. Sometimes, in this thesis, I will refer to the congruence operator also as \textit{identity settling function}. 
-
-\begin{definition}[Congruence]\label{def:feature-congreunce}
-    Congruence is a comparison operator returning a truth value $\cong: 
-    FS_1 \times FS_2 \rightarrow \{true, false\}$ implementing the conditions under which $FS_1$ is considered equal to $FS_2$.
-\end{definition}
-
-Using the congruence instead of equality is a means to specify additional set of constraints in generating the graph isomorphism and is captured in Definition \ref{def:rsgisomorphism} below. Consequently the rich graph matching operation is testing for rich sub-graph isomorphism. 
+This brings us to the idea that a \textit{congruence} criteria (defined in Definition \ref{def:congreunce}) needs to be defined for the feature rich (sub-)graph isomorphism. The \textit{feature congruence} can be defined in terms of set and feature structure comparison in accordance with the goals of the particular task or satisfying certain set of conditions. Thus replacing equality with congruence criteria is method to specify the set of constraints in generating the graph isomorphism and this is captured in Definition \ref{def:rsgisomorphism} below. The rich graph matching operation can be also seen as a search for rich sub-graph isomorphism. 
 
 \begin{definition}[Rich sub-graph isomorphism]\label{def:rsgisomorphism}
-    Given two feature rich graphs $G=(V_G,E_G)$ and $H=(V_H,E_H)$ and a congruence operator $\cong$, $G$ is sub-graph isomorphic to $G$ (denoted $G \subseteq H$) if there is an injective function $f:V_G \rightarrow V_H$ such that
+    Given two feature rich graphs $G=(V_G,E_G)$ and $H=(V_H,E_H)$ and a congruence operator $\equiv$, $G$ is sub-graph isomorphic to $G$ if there is an injective function $f:V_G \rightarrow V_H$ such that
     \begin{itemize}
         \item $\forall v \in V_G, f(v) \in V_H$ and
-        \item $v \cong f(v)$, i.e. each node in $G$ is congruent with its correspondent in $H$ and
+        \item $v \equiv f(v)$, i.e. each node in $G$ is congruent with its correspondent in $H$ and
         \item any two nodes which are adjacent in $G$, $(u,v) \in E_G$, are also adjacent in $H$, $(f(u), f(v)) \in E_H $
     \end{itemize}
 \end{definition}
@@ -671,17 +680,26 @@ Using the congruence instead of equality is a means to specify additional set of
 %    satisfies the identity function $f_{V}(V_{i})=V_{j}$ 
 %\end{definition}
 
-%todo, introduce pattern graph matching
+The congruency rules (also referred in the implementation as \textit{identity} or \textit{equivalence functions}) used in this work will be provided in the Section \ref{sec:pattern-graph-matching} below. They are contextualised to the graph matching operation between pattern graphs and dependency and constituency graphs. 
 
-There are two types of congruence that are of relevance for the context of the current work. Also the primarily graph matching is tested between pattern graphs and dependency or constituency graphs. Next section, addresses this type of graph matching in more detail. 
-
-\section{Pattern Graph Matching}
+\section{Pattern graph matching}
 \label{sec:pattern-graph-matching}
-An extension and particular case of rich graph matching is the \textit{pattern graph matching} where $H$ (Definition \ref{def:rgmatching}) is a pattern graph (Definition \ref{def:graph-pattern}) and the identity checking function(s) are not strict but permissive to feature over-specification of node and edge feature structures. 
+A particular case of rich graph matching, of important to the current work, is the \textit{pattern graph matching} (Definition \ref{def:rgmatching}). Topically pattern graphs are matched against constituency and dependency graphs and all of them are feature rich graphs. This means that nodes are feature structures and thus the congruence rules shall be defined accordingly. I will define congruence conditions at the level of feature values and then at the level of feature structure as a whole. Then I will proceed with description of pattern graph matching. 
+%where $H$, a pattern graph (Definition \ref{def:graph-pattern}), and the congruency operator are not strict but permissive to feature over-specification of node and edge feature structures. 
 
-I will define now how the identity checking function (identity morphism) used for pattern graph matching. It operates on feature structure values, which can be either atomic types $simple$ of one of the conjunctive sets: $S_{AND}$, $S_{OR}$, $S_{XOR}$ and $S_{NAND}$. I use both set theoretic notations for inclusion $\subseteq$, intersection $\cup$ and element belonging to a set $\in$ and the logical notations for conjunction $\wedge$ and tautology $\top$. The unary function $T(x)$ returns the type of $x$ element. 
+According to the Definition \ref{def:fs} the values of feature can be either atomic values, denoted $atomic$, or one of the conjunctive sets: $S_{AND}$, $S_{OR}$, $S_{XOR}$ and $S_{NAND}$. For simplicity, the option of nested feature structures is excluded in the current work even though it is perfectly viable configuration. Consequently, the congruence operator definition will take into consideration the \textit{type} of the compared elements in addition to how they relate to each other. 
+Furthermore these definitions are \textit{not symmetric} or \textit{not commutative} because the operations involved are also not symmetric, e.g. set inclusion or set subsumption. This means that we cannot switch places of the compared elements or if we do then they will yield different results, $A \equiv B \neq B \equiv A $. Finally, these definitions create equivalence sets \textit{relative} to one of the compared elements and not absolute equivalence sets. For example the division by 2, is an absolute condition for two numeric elements to belong to the same equivalence class either of odd or that of even numbers. By contrast, if we consider set inclusion between two sets $A \subseteq B$ as a condition for set element equivalence then it generates two possible equivalence sets. First, all sets $X$ that are subsets of $B$, $\forall X, X \subseteq B$ and second, all sets Y that include $A$,  $ \forall Y, A \subseteq Y $. 
 
-When checking the identity of two feature values, three cases can be asserted: $x=y$ i.e. $x$ is definitely equal to $y$, $x\neq y$ i.e. $x$ is definitely different from $y$ and $x\sim y$ i.e. $x$ is maybe (or could be) equal to $y$. 
+%I will define now how the identity checking function (identity morphism) used for pattern graph matching. It operates on feature structure values, which can be either atomic types, denoted $atomic$, or one of the conjunctive sets: $S_{AND}$, $S_{OR}$, $S_{XOR}$ and $S_{NAND}$. 
+
+In the following definitions set theoretic notations are used for set inclusion $\subseteq$, intersection $\cup$ and set membership $\in$. In addition, I employ also the logical notations for conjunction 
+$\wedge$, disjunction $\vee$, negation $\neg$, exclusive disjunction $\bigoplus$ and tautology $\top$. 
+
+%todo continue here, present rule table instead of formulas
+
+The function $\tau(S)$, returning the type of the set, defined in Section \ref{sec:graphs}, is extended here to handle also atomic elements in addition to sets and is defined as follows $\tau:x \rightarrow \{atomic, S_{AND}, S_{OR}, S_{XOR}, S_{NAND} \}$
+
+When checking the equivalence of two feature values, three cases can be asserted: $x=y$ i.e. $x$ is definitely equal to $y$, $x\neq y$ i.e. $x$ is definitely different from $y$ and $x\sim y$ i.e. $x$ is maybe (or could be) equal to $y$. 
 
 I define below two identity morphisms: (a) \textit{permissive} $I_{permissive}$ (defined by Equation \ref{eq:permissive}) which includes the uncertain cases and (b) \textit{strict} $I_{strict}$ (defined by Equation \ref{eq:strict}) which excludes the uncertain cases. The main difference between the two morphism functions is whether on the right side (the instance graph) any uncertainty is accepted. This is to say any of the disjunctive sets $s_{OR}$ and $S_{XOR}$. 
 
@@ -772,7 +790,7 @@ I already have defined (somehow ahead) what is graph isomorphism; and that the g
 %\end{definition}
 
 %\begin{definition}[Identity Function]\label{def:identityt-function}
-%	For two entities $a$ and $b$ an \textit{identity function} $f_{I}(a,b)$ returns True if $a \equiv b$ or $a \cong b$ (read ``considered the same as'') and False otherwise.
+%	For two entities $a$ and $b$ an \textit{identity function} $f_{I}(a,b)$ returns True if $a \equiv b$ or $a \equiv b$ (read ``considered the same as'') and False otherwise.
 %\end{definition}
 
 So, the functions that compare whether two node or edge are the same in fact compare their feature structures and in fact the sameness is defined in accordance with the goals of the particular task. That's why identity checking function is provided as a parameter to the rich graph matching algorithm.
