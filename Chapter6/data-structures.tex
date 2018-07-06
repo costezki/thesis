@@ -114,12 +114,12 @@ The main reasons in this separation are efficiency and practicality. First, it i
 For example lets imagine a constituency graph fragment of two nodes \textit{Node 1} and \textit{Node 2} where each has three associated features as it can be seen in Figure \ref{fig:example-graph-compact1}. If we would insist to dispose of the feature structure within the node and express the features as atomic graph nodes then the result would be a graph structure such as the one in Figure \ref{fig:example-graph-compact2}.
 
 \begin{definition}[Feature Structure (FS)]\label{def:fs}
-	A \textit{feature structure} $F$ is a finite set of attribute-value pairs $f_{i} \in F$. A \textit{feature} $f_{i}=(a,v)$ is an association between an identifier $a$ (a symbol) and a value $v$ which is either a symbol, a number, a set or another feature structure. 
+	A \textit{feature structure} $F$ is a finite set of attribute-value tuples $f_{i} \in F$. A \textit{feature} $f=(a,v)$ is an association between an identifier $a$ (a symbol) and a value $v$ which is either an atomic value (symbol, number, string), a set or another feature structure. 
 \end{definition}
 
 The values of feature structures may be other feature structures allowing, if needed, to construct hierarchical descriptions. In the current implementation, however, the values of the feature structure are restricted to atomic values or sets of values.
 
-For convenience I define two functions to access the identifier and value in a feature structure. The function $att(f_{i})$ returning the feature identifier $att(f_{i})=a$ and the function $val(f_{i})$ is a function returning the ascribed value of a feature $(f_{i})=v$. 
+For convenience I define two functions to access the identifier and value in a feature structure. The function $name:F \rightarrow symbol$ returns the feature symbol (identifier) $name(f)=a$ and the function $val:F \rightarrow \{atomic, Set, FS\}$ is a function returning the ascribed value of a feature $val(f)=v$. 
 
 Definition \ref{def:fs} stipulates that the value of a feature may be also a set (besides an atomic value). The sets used in this thesis need to carry additional properties required for their interpretation. Specifically, it is the order need to be addressed here and the capacity to specify that set elements stand in a certain logical relation one to another (e.g. conjunction, disjunction, negation, etc.). These two properties are covered in Definition \ref{def:set} and \ref{def:conj-set}.
 For convenience I will assume from now on that sets (see Definition \ref{def:set}) preserve order even when it is not really required.  
@@ -185,13 +185,12 @@ Please note that the edges are defined to carry feature structures. This capacit
 
 
 \begin{definition}[Constituency Graph]\label{def:constituency-graph}
-	A \textit{constituency graph} is a feature rich digraph whose nodes $V$ correspond to SFL \textit{units} and carry the \textit{unit class} and the element function within the parent unit (except for the root node); while the edges $E$ reflect constituency relations between constituents. 
+	A \textit{constituency graph} is a feature rich digraph whose nodes $V$ correspond to SFL \textit{units} and carry the \textit{unit class} and the element function within the parent unit (except for the root node); while the edges $E$ represent constituency relations between constituents. 
     %carry mainly the constituency relation between parent and daughter nodes but also potentially other relation types. 
 \end{definition}
 
 The basic features of a constituent node are the \textit{unit class} and the function(s) it takes, which is to say the \textit{element(s)} it fills in the parent unit (as described in the discussion of theoretical aspects of SFL in Chapter \ref{ch:sfg}). The root node (usually a clause) is an exception and it does not act as a functional element because it does not have a parent unit. The leaf nodes carry the same features as the DG nodes plus the word class feature which correspond to the traditional part of speech tags. 
 
-Apart from the essential features of class and function, the CG nodes carry additional class specific features selected from the relevant system network. The features considered in this thesis are described in Chapter \ref{ch:the-grammar}. In addition, the leaf CG nodes contain the features of dependency graph nodes enumerated in Definition \ref{def:dep-graph}. The way CG is enriched with features is described in the next chapter. Below in Figure \ref{fig:mcg-graph}, is an example CG that carries tense, modality and polarity features on the clause node in addition to class and element function.
 
 \begin{figure}[!ht]
 \centering
@@ -210,10 +209,11 @@ Apart from the essential features of class and function, the CG nodes carry addi
 \label{fig:mcg-graph}
 \end{figure}
 
-Next section describes what I call atomic queries and two types of special graph traversal: the conditional and the generative ones. 
+Apart from the essential features of class and function, the CG nodes carry additional class specific features selected from the relevant system network. The features considered in this thesis are described in Chapter \ref{ch:the-grammar}. In addition, the leaf CG nodes contain the features of dependency graph nodes enumerated in Definition \ref{def:dep-graph}. The way CG is enriched with features is described in the next chapter. Below in Figure \ref{fig:mcg-graph}, is an example CG that carries tense, modality and polarity features on the clause node in addition to class and element function.
+%Next section describes simple graph queries and two types of special graph traversal: the conditional and the generative ones. 
 
-\section{Graph operations}
-From the general set of operations on graphs defined in graph theory \citep{bondy1976graph, west2001graph} two in particular are of importance fo the current work: \textit{query} graphs nodes and edges and graph \textit{traversal}. In addition to that when nodes are compared to each other, the algorithms have to determine whether they are equivalent or \textit{congruent} in a broader sense. Next I address these operations in detail.
+\section{Graph traversal}
+From the general set of operations on graphs defined in graph theory \citep{bondy1976graph, west2001graph} graph traversal in particular is of importance for the current work. It is used for the constituency graph creation step presented in the parsing pipeline from Figure \ref{fig:pipeline-overview} (in Section \ref{sec:architecture}). The constituency graph is created throughout the traversal of a dependency graph. Traversal is used in this thesis for dependency graphs only.  Next I address this operations in detail.
 
 \tikzset{
     cir1/.style={
@@ -258,24 +258,29 @@ From the general set of operations on graphs defined in graph theory \citep{bond
 
 %Another important notion that needs to be addressed is the comparison of graph nodes to each other and deciding whether two of them are the ``same'' in some sense or \textit{congruent}. 
 %Latter in this chapter we will see that the important operations such as pattern matching depend on comparing nodes to derive whether they are ``the same''. 
-Lets start with node comparison. The simplest form of equivalence, in the labelled graphs such as the one in Figure \ref{fig:example-traversal1}, is the equality of label values. In this example there are no two nodes that are the same because each of them have a unique label. But if we extend the notion of ``sameness'' from the equality of value to some other condition (or rule) then the mathematical term that captures this concept best is that of \textit{congruence} defined in Definition \ref{def:congreunce}. Lets take for example a simple arithmetic rule such as division by 2 which distinguishes odd and even nodes. Under this rule, two nodes are congruent if both are either even or both are odd. In Figure \ref{fig:example-traversal1} the nodes \{2, 4, 6, 8\} are congruent to each other because they are even and conversely the nodes \{1, 3, 5, 7\} are congruent as well. Another example of congruence rule is the node type distinction into continuous line circles and dashed line circles. Under this rule, in Figure \ref{fig:example-traversal1}, the nodes \{3, 5, 7, 8\} are congruent because they are dashed and the rest are congruent because they are in continuous line circles. 
 
-\begin{definition}[Congruence]\label{def:congreunce}
-    A \textit{congruence relation} (or congruence), denoted $\equiv$, is an equivalence relation on a structure that is compatible with the structure. Every congruence relation has a corresponding \textit{quotient} rule (or condition) forming an \textit{equivalence class} (or congruence class) for the relation \citep[26-27]{hungerford1980algebra}.
-\end{definition}
+%%%%
+%% todo remove congruence; good congruence; good
+%%%%
+%Lets start with node comparison. The simplest form of equivalence, in the labelled graphs such as the one in Figure \ref{fig:example-traversal1}, is the equality of label values. In this example there are no two nodes that are the same because each of them have a unique label. But if we extend the notion of ``sameness'' from the equality of value to some other condition (or rule) then the mathematical term that captures this concept best is that of \textit{congruence} defined in Definition \ref{def:congreunce}. Lets take for example a simple arithmetic rule such as division by 2 which distinguishes odd and even nodes. Under this rule, two nodes are congruent if both are either even or both are odd. In Figure \ref{fig:example-traversal1} the nodes \{2, 4, 6, 8\} are congruent to each other because they are even and conversely the nodes \{1, 3, 5, 7\} are congruent as well. Another example of congruence rule is the node type distinction into continuous line circles and dashed line circles. Under this rule, in Figure \ref{fig:example-traversal1}, the nodes \{3, 5, 7, 8\} are congruent because they are dashed and the rest are congruent because they are in continuous line circles. 
+%
+%\begin{definition}[Congruence]\label{def:congreunce}
+%    A \textit{congruence relation} (or congruence), denoted $\equiv$, is an equivalence relation on a structure that is compatible with the structure. Every congruence relation has a corresponding \textit{quotient} rule (or condition) forming an \textit{equivalence class} (or congruence class) for the relation \citep[26-27]{hungerford1980algebra}.
+%\end{definition}
+%
+%In the case of sets or feature structures the congruence quotient rule needs to be defined corresponding to the structure. An example rule for set congruency can be the threshold of 2 elements on size of the set. Given three sets A=\{0, 1, 2\}, B=\{1, 2\}, C=\{5\}, D=\{6\}, under the above quotient rule, $A \equiv B$ and $C \equiv D$ forming the equivalence classes \{A, B\} and \{C, D\}. In Section \ref{sec:graph-matching} I will return to congruence relation between feature structures and will provide specific (quotient) rules that define equivalence between sets and feature structures. 
 
-In the case of sets or feature structures the congruence quotient rule needs to be defined corresponding to the structure. An example rule for set congruency can be the threshold of 2 elements on size of the set. Given three sets A=\{0, 1, 2\}, B=\{1, 2\}, C=\{5\}, D=\{6\}, under the above quotient rule, $A \equiv B$ and $C \equiv D$ forming the equivalence classes \{A, B\} and \{C, D\}. In Section \ref{sec:graph-matching} I will return to congruence relation between feature structures and will provide specific (quotient) rules that define equivalence between sets and feature structures. 
+%%%%
+%% end of congruence; good congruence; good
+%%%%
 
-% set of basic operations on graphs, relevant to parsing algorithms described in this thesis, which will introduce in this section . 
-%for CG creation and for grammatical feature identification according to the literature of mood and transitivity \citep{Fawcett2008, Halliday2013} containing a range of methods for detecting and selecting features from system networks. To support those methodical specifications the graphs allow a number of operations. 
-
-Lets turn now to queries over the graph nodes and edges. The notion of a query, defied in Definition \ref{def:query}, is tightly linked to the notion of congruence. The query is an operation that selects all the nodes or entities corresponding to a congruence class given by a quotient rule (or constraint) on a graph structure. For example in Figure \ref{fig:example-traversal1} a potential query is to return the equivalence class of the dashed nodes \{3, 5, 7, 8\}. The query operation can be extended to the the graph edges. 
-%In a given dependency graph, similar operation can be used to select all the determiner nodes. In that case we query the nodes with the condition that the part of speech has DT value i.e. \textit{pos=DT}. The same can be achieved by selecting all the edges connecting a noun to its determiner, then the query is formulated for all edges whose relation type is \textit{rel=det}.
-
-\begin{definition}[Graph query]\label{def:query}
-    %Given a graph $G=(V,E)$ to query nodes or edges is to select a set of nodes or a set of edges that satisfy the query constraint condition on feature structure.
-    Given a graph $G(V,E)$ and a query structure $F$, querying $q_{V}(F,G)$ or $q_{E}(F,G)$ over the nodes $V$ or edges $E$ of a graph $G$ is an operation that returns a set of nodes or edges equivalent to the query structure, $ \forall v \in V,  v \equiv F$. 
-\end{definition}
+%Lets turn now to queries over the graph nodes and edges. The notion of a query, defied in Definition \ref{def:query}, is tightly linked to the notion of congruence. The query is an operation that selects all the nodes or entities corresponding to a congruence class given by a quotient rule (or constraint) on a graph structure. For example in Figure \ref{fig:example-traversal1} a potential query is to return the equivalence class of the dashed nodes \{3, 5, 7, 8\}. The query operation can be extended to the the graph edges. 
+%%In a given dependency graph, similar operation can be used to select all the determiner nodes. In that case we query the nodes with the condition that the part of speech has DT value i.e. \textit{pos=DT}. The same can be achieved by selecting all the edges connecting a noun to its determiner, then the query is formulated for all edges whose relation type is \textit{rel=det}.
+%
+%\begin{definition}[Graph query]\label{def:query}
+%    %Given a graph $G=(V,E)$ to query nodes or edges is to select a set of nodes or a set of edges that satisfy the query constraint condition on feature structure.
+%    Given a graph $G(V,E)$ and a query structure $F$, querying $q_{V}(F,G)$ or $q_{E}(F,G)$ over the nodes $V$ or edges $E$ of a graph $G$ is an operation that returns a set of nodes or edges equivalent to the query structure, $ \forall v \in V,  v \equiv F$. 
+%\end{definition}
 
 The \textit{graph traversal} defined in \ref{def:traversal} and especially its conditional and generative extensions defined in Definition \ref{def:conditional-traversal} and \ref{def:generative-traversal} are  important operations in this work. They are employed in the first phase of the algorithm, for copying the dependency graph as constituency graph described in Chapter \ref{ch:parsing-algorithm}. 
 
@@ -356,18 +361,21 @@ Next I provide an rough description of what happens when a generative traversal 
 
 Now that generative traversal is defined, by analogy, \textit{update}, \textit{insert} and \textit{delete} traversals can be defined on the source or target graph by using the same mechanism of \textit{operation matrices} mapping contexts of visited nodes and edges to update, insert and delete operations. In this work, however, these operations are not used and therefore omitted here.
 
-In Section \ref{sec:graphs} the last two definitions were for the constituency and dependency graphs. They are used in this thesis to represent grammatical analysis of of a sentence. Next we will look at a special type of graph which represents fragments of structure repeatable across multiple analysis. They represent generalisations or patterns that usually are associated with grammatical features or a set of features. These graphs are called pattern graphs and the next section is dedicated to them. 
+In Section \ref{sec:graphs} the last two definitions were for the constituency and dependency graphs. They are used in this thesis to represent grammatical analysis of of a sentence. Next we will look at a special type of graph which represents fragments of structure repeatable across multiple analysis. They represent generalisations or patterns that usually are associated with grammatical features or a set of features which I explain in Chapter \ref{ch:parsing-algorithm}. These graphs are called \textit{pattern graphs} and the next section is dedicated to them.  
 
 \section{Pattern graphs}
 \label{sec:pattern-graphs}
-Regardless of the type, constituency or dependency, the parsing process (which will be described in Chapter \ref{ch:parsing-algorithm}) relies heavily on identifying patterns in graphs. The patterning is described as both graph structure and feature presence (or absence) in the nodes or edges. The \textit{pattern graphs} (defined in \ref{def:graph-pattern}) are special kinds of graphs meant to represent small (repeatable) parts of parse graphs that, in the context of the current work, are used to identify grammatical features.
+Regardless of the type, constituency or dependency, the parsing process (which will be described in Chapter \ref{ch:parsing-algorithm}) relies on identifying patterns in graphs. The patterning is described as both graph structure and feature presence (or absence) in the nodes or edges. The \textit{pattern graphs} (defined in \ref{def:graph-pattern}) are special kinds of graphs meant to represent small (repeatable) parts of parse graphs that, in the context of the current work, are used to identify grammatical features. 
+
+The pattern graphs contrast with the \textit{parse} (or \textit{instance}) graphs which are either constituency or dependency graphs. The parse graphs express what is an actual analysis of a text, i.e. representing what is the case, whereas the pattern graph expresses a potential that could be the case in the instance graph. This way the pattern graphs have a prescriptive interpretation whereas the instance ones taken a factual interpretation. 
 
 %Pattern graphs can also specify operations that shall be executed when the pattern is successfully matched (for example add a new feature on a given node). This kinds of graphs need last four requirements listed in the beginning of this section.
 
 \begin{definition}[Pattern Graph]\label{def:graph-pattern}
-    A \textit{pattern graph} (PG) describes regularities in node-edge configuration and feature structure including descriptions of \textit{negated nodes or edges} (i.e. absence of), logical operators over feature sets (AND, OR, XOR and NAND) and operations once the pattern is identified in a target graph (select, insert, delete and update).
+    A \textit{pattern graph} (PG) is a feature rich graph for expressing regularities in the node and edge structure.
 \end{definition}
 
+%part of the definition: or edge configuration and feature structure including descriptions of \textit{negated nodes or edges} (i.e. absence of), logical operators over feature sets (AND, OR, XOR and NAND) and operations once the pattern is identified in a target graph (select, insert, delete and update).
 
 %The feature structure of a PG are always \textit{underspecified} as compared to the dependency or constituency graph in the sense that irrelevant attribute-value pairs are omitted sometimes down to an empty FS. However often it is useful to specify more than one value for the same feature as a list of disjunctive values allowing the pattern to cover larger set of possible cases. I will call these FS as being \textit{over-specified}. 
 
@@ -514,6 +522,7 @@ Another way to specify node order is through relative precedence, for which the 
 To continue the example of mood features, I illustrate in Figures \ref{fig:pg-declarative} and \ref{fig:pg-declarative2} the use of relative and absolute node ordering constraints for declarative mood; and in 
 Figure \ref{fig:pg-interrogative}, I depict the PG for the Yes/No interrogative mood. In both cases I use the relative node ordering.
 
+%todo: explain what negative nodes are
 
 %From the usability point of view there are few technicalities I shall emphasize. First, the precedence feature can be used on any node. When matched, the precedence declarations are collected from all nodes into a single set before being checked. However I recommend as a good practice to specify the order of nodes on the parent constituent. 
 %
@@ -522,7 +531,7 @@ Figure \ref{fig:pg-interrogative}, I depict the PG for the Yes/No interrogative 
 %Thirdly the ordering can be defined in absolute terms via position or in relative terms. Note that in the case of PGs the absolute ordering of nodes is interpreted relatively so PG in figure \ref{fig:pg-declarative} is identical to \ref{fig:pg-declarative2}.
 
 
-Patterns like the ones explained above can be created for a wide range of grammatical features. Once the grammatical feature is encoded as a pattern graph it can be identified in parse graphs (DG or CG) via \textit{graph pattern matching} operation. Moreover, once the pattern is identified it can act as a triggering condition to for various operation. For example an operation can be to inject the identified feature into the parse graph and this way enriching its content. Coming back to out tense example above, once the pattern \ref{fig:gp1} is identified then the clause can be marked with the \textit{tense} feature. In the next section I address in detail the pattern graph matching operation. 
+Patterns like the ones explained above can be created for a wide range of grammatical features. Once the grammatical feature is encoded as a pattern graph it can be identified in parse graphs (DG or CG) via \textit{graph pattern matching} operation described in Section \ref{sec:graph-matching}. Moreover, once the pattern is identified it can act as a triggering condition to for various operation. For example an operation can be to inject the identified feature into the parse graph and this way enriching its content. Coming back to out tense example above, once the pattern \ref{fig:gp1} is identified then the clause can be marked with the tense feature. In the next section I address in detail the graph matching operation and then show how it works using pattern graphs. 
 
 % skip:complicated, unclear, compressed
 %But such traversal operations cannot be easily defined. While traversal context may be sufficient for generative operations on a new structure, it is insufficient for executing affecting operations on the traversed graph. To overcome this limitation, instead of using traversal context I take a different approach: the \textit{pattern graphs}, defined in previous section combined with generic graph matching algorithm. This mechanism offers a similar algorithmic independence of mapping structural context to operation(s) triggered by it. 
@@ -530,18 +539,12 @@ Patterns like the ones explained above can be created for a wide range of gramma
 \section{Graph matching}
 \label{sec:graph-matching}
 
-So far we have discussed about Constituency and Dependency graphs and, in last section, about Pattern Graphs, which introduces the intuition that they are meant to be matched against or found in other graphs. I will address now what does it mean for two graphs to be the same, i.e. \textit{(structurally) isomorphic}, and what does it mean in the current work. In mathematics the structure-preserving mappings from one structure to another one of the same type is called \textit{morphism}. 
+So far we have discussed about constituency and dependency graphs and, in the last section, I introduced pattern graphs. The intuition behind pattern graphs is that they are meant to be matched against or found in other (instance) graphs. I will address now what does it mean for two graphs to be the same, i.e. \textit{(structurally) isomorphic}, and what does it mean in the current work. In mathematics the structure-preserving mappings from one structure to another one of the same type is called \textit{morphism}. 
 
 \begin{definition}[Morphism]\label{def:morphism}
     A morphism $f:X \rightarrow Y$ is a structure preserving map from one object $X$ to the other $Y$ where the objects are complex structures such as sets, feature structures or graphs.
 \end{definition}
 
-%\begin{definition}[Homomorphism]\label{def:homomorphism}
-%\end{definition}
-
-%In this work, for \textit{identity morphism} I use interchangeably the terms \textit{identity checking function} or \textit{identity function}.
-
-%When the morphism can be applied in both direction then it is called an \textit{isomorphism}. 
 
 \begin{definition}[Isomorphism]\label{def:isomorphism}
     The morphism $f:X \rightarrow Y$ is called \textit{isomorphism} if there exists an inverse morphism $g:Y \rightarrow X$ such that $f \circ g = id_{X}$ and $ g \circ f = id_{X}$.
@@ -549,6 +552,10 @@ So far we have discussed about Constituency and Dependency graphs and, in last s
 
 The graph matching is known in computer science as (sub-)graph isomorphism testing. Two graphs $G=(V_G,E_G)$ and $H=(V_H,E_H)$ are isomorphic if mapping the nodes of $G$ with the nodes of $H$, preserving the edge neighbourhood, results in graph $H$. 
 %The operation of testing the graph isomorphism is called graph matching. 
+
+\begin{definition}[Graph matching]\label{def:gmatching}
+    For two graphs $G$ and $H$, where $G \leq H$, \textit{graph matching} is the operation of finding an isomorphism between $G$ and $H$.
+\end{definition}
 
 \begin{definition}[Graph isomorphism]\label{def:gisomorphism}
     An isomorphism of graph $G=(V_G,E_G)$ and $H=(V_H,E_H)$ is a bijective function $f:V_G \rightarrow V_H$ such that if any two nodes  $u,v \in V_G$ from $G$ are adjacent $(u,v) \in E_G$ then $f(u), f(v)$ are adjacent in $H$ as well $(f(u), f(v)) \in E_H $.
@@ -564,16 +571,13 @@ The pattern graphs, employed in the current work, are usually simpler and smalle
 In this case, the mapping function is relaxed from bijective (perfect mapping from first to second graph) to an injective one (each node from first has a correspondent in the second one).
 
 \begin{definition}[Sub-graph isomorphism]\label{def:sgisomorphism}
-       Given two feature rich graphs $G=(V_G,E_G)$ and $H=(V_H,E_H)$, $G$ is sub-graph isomorphic to $G$ (denoted $G \subseteq_{\equiv} H$) if there is an injective function $f:V_G \rightarrow V_H$ such that
+       Given two feature rich graphs $G=(V_G,E_G)$ and $H=(V_H,E_H)$, $G$ is sub-graph isomorphic to $G$ (denoted $G \subseteq H$) if there is an injective function $f:V_G \rightarrow V_H$ such that
    \begin{itemize}
        \item $\forall v \in V_G, f(v) \in V_H$ and
        \item any two nodes adjacent in $G$, $(u,v) \in E_G$, are also adjacent in $H$, $(f(u), f(v)) \in E_H $
    \end{itemize}
 \end{definition}
 
-\begin{definition}[Graph matching]\label{def:gmatching}
-    For two given graphs $G$ and $H$, where $G \leq H$, \textit{graph matching} is the operation of testing whether $G$ is structurally isomorphic to $H$ or a sub-graph of $H$.
-\end{definition}
 
 \begin{figure}[!ht]
     \centering
@@ -657,22 +661,23 @@ In Figure \ref{fig:example-matching1} is depicted a labelled graph that is isomo
     \label{fig:example-r-matching}
 \end{figure}
 
-Lets consider Figure \ref{fig:example-r-matching} where the graph nodes are feature structures instantiating features: f_1 and f_2. One way to approach isomorphism in this scenario is by the value of one feature, for example f_1. Then we can identify two sub-graph isomorphisms: \{1=a, 2=b, 3=c\} and \{1=b, 2=d, 3=e\}. This approach, besides additional specification what values to compare, i.e. f_1s, is the same as providing a sub-graph isomorphism on the labelled graphs from Figure \ref{fig:example-matching}. 
+Lets look at Figure \ref{fig:example-r-matching} where the graph nodes are feature structures using features: f_1 and f_2. One way to approach isomorphism in this scenario is by the value of one feature, for example f_1. Then we can identify two sub-graph isomorphisms: \{1=a, 2=b, 3=c\} and \{1=b, 2=d, 3=e\}. This approach, besides additional specification what values to compare, i.e. f_1s, is the same as providing a sub-graph isomorphism on the labelled graphs from Figure \ref{fig:example-matching}. 
 
 In addition to the rule above, lets add a constraint that the isomorphism is not only a mapping between the feature values (numbers to letters) but also that the mapped values are identical (strict value equality). 
-If we consider the strict equality rule applied on f_1 feature, there is no isomorphism between the two graphs because first one uses numbers  \{1, 2, 3\} and the second uses letters\{a, b, c, d\}. Now if we turn to the values of f_2 and apply the same rule then there is one isomorphism possible \{paper=paper, rock=rock, scissors=scissors\}. The second one, even if it is a cycle, \{paper=paper, rock=scissors, scissors=rock\} is no longer acceptable because the ``scissors'' and ``rock'' switched places in the target graph and it would have been acceptable as a mapping, but not as strict value equality. Formally, the additional equality constraint can be expressed on the graph isomorphism $f$ (defined in Definition \ref{def:sgisomorphism}) as $u=f(u)$.
+If we consider the strict equality rule applied on f_1 feature, there is no isomorphism between the two graphs because first one uses numbers  \{1, 2, 3\} and the second uses letters\{a, b, c, d\}. Now if we turn to the values of f_2 and apply the same rule then there is one isomorphism possible \{paper=paper, rock=rock, scissors=scissors\}. The second one, even if it is a cycle, \{paper=paper, rock=scissors, scissors=rock\} is no longer acceptable because the ``scissors'' and ``rock'' switched places in the target graph and it would have been acceptable as a mapping, but not as strict value equality. Formally, the additional equality constraint can be expressed on the graph isomorphism $f$ as $u=f(u)$.
 
-This brings us to the idea that a \textit{congruence} criteria (defined in Definition \ref{def:congreunce}) needs to be defined for the feature rich (sub-)graph isomorphism. The \textit{feature congruence} can be defined in terms of set and feature structure comparison in accordance with the goals of the particular task or satisfying certain set of conditions. Thus replacing equality with congruence criteria is method to specify the set of constraints in generating the graph isomorphism and this is captured in Definition \ref{def:rsgisomorphism} below. The rich graph matching operation can be also seen as a search for rich sub-graph isomorphism. 
+This brings us to the idea that, in the feature rich (sub-)graph isomorphism, a \textit{matching} relation (denoted $\match$)for nodes needs to be considered. And as the FS constitute the graph nodes then the matching relations needs to be defined on the FS. We say that a feature structure may match once, several times or not at all another feature structure, $FS_1 \match FS_2$. This intuition is expressed in Definition \ref{def:fs-match}.
+The FS matching is in accordance with the goals of the particular task or satisfying a certain set of conditions. Thus replacing the label equality with matching criteria is the method to impose an additional set of constraints on the graph isomorphism and allow comparison of complex nodes such as those in feature rich graphs. This is expressed in Definition \ref{def:rsgisomorphism} below. 
+%The rich graph matching operation can be also seen as a search for rich sub-graph isomorphism. 
 
 \begin{definition}[Rich sub-graph isomorphism]\label{def:rsgisomorphism}
-    Given two feature rich graphs $G=(V_G,E_G)$ and $H=(V_H,E_H)$ and a congruence operator $\equiv$, $G$ is sub-graph isomorphic to $G$ if there is an injective function $f:V_G \rightarrow V_H$ such that
+    Given two feature rich graphs $G=(V_G,E_G)$ and $H=(V_H,E_H)$ and a matching relation $\match$, $G$ is sub-graph isomorphic to $H$ if there is an injective mapping $f:V_G \rightarrow V_H$ such that
     \begin{itemize}
-        \item $\forall v \in V_G, f(v) \in V_H$ and
-        \item $v \equiv f(v)$, i.e. each node in $G$ is congruent with its correspondent in $H$ and
-        \item any two nodes which are adjacent in $G$, $(u,v) \in E_G$, are also adjacent in $H$, $(f(u), f(v)) \in E_H $
+        \item each node in $V$ is mapped to exactly one node in $H$, $\forall v \in V_G, f(v) \in V_H$ and
+        \item each node in $G$ matches with its correspondent in $H$, $\forall v \in V_G, v \gtrdot f(v)$ and
+        \item any two nodes which are adjacent in $G$, are also adjacent in $H$, $\forall (u,v) \in E_G, \exists \big(f(u), f(v)\big) \in E_H $
     \end{itemize}
 \end{definition}
-
 
 %\begin{definition}[Rich Graph Matching]\label{def:rgmatching}
 %    For two feature rich graphs $G$ and $H$ where $H \leq G$ and an \textit{identity settling function} $idx_{V}$, the \textit{rich graph matching} is the function that finds a structural isomorphism between $H$ and $G_{1} \subseteq G$ provided that for all nodes $V_{i} \in H$ their \textit{morphism function} $V_{j} \in G_{1}$ 
@@ -680,230 +685,227 @@ This brings us to the idea that a \textit{congruence} criteria (defined in Defin
 %    satisfies the identity function $f_{V}(V_{i})=V_{j}$ 
 %\end{definition}
 
-The congruency rules (also referred in the implementation as \textit{identity} or \textit{equivalence functions}) used in this work will be provided in the Section \ref{sec:pattern-graph-matching} below. They are contextualised to the graph matching operation between pattern graphs and dependency and constituency graphs. 
-
-\section{Pattern graph matching}
-\label{sec:pattern-graph-matching}
-A particular case of rich graph matching, of important to the current work, is the \textit{pattern graph matching} (Definition \ref{def:rgmatching}). Topically pattern graphs are matched against constituency and dependency graphs and all of them are feature rich graphs. This means that nodes are feature structures and thus the congruence rules shall be defined accordingly. I will define congruence conditions at the level of feature values and then at the level of feature structure as a whole. Then I will proceed with description of pattern graph matching. 
-%where $H$, a pattern graph (Definition \ref{def:graph-pattern}), and the congruency operator are not strict but permissive to feature over-specification of node and edge feature structures. 
-
-According to the Definition \ref{def:fs} the values of feature can be either atomic values, denoted $atomic$, or one of the conjunctive sets: $S_{AND}$, $S_{OR}$, $S_{XOR}$ and $S_{NAND}$. For simplicity, the option of nested feature structures is excluded in the current work even though it is perfectly viable configuration. Consequently, the congruence operator definition will take into consideration the \textit{type} of the compared elements in addition to how they relate to each other. 
-Furthermore these definitions are \textit{not symmetric} or \textit{not commutative} because the operations involved are also not symmetric, e.g. set inclusion or set subsumption. This means that we cannot switch places of the compared elements or if we do then they will yield different results, $A \equiv B \neq B \equiv A $. Finally, these definitions create equivalence sets \textit{relative} to one of the compared elements and not absolute equivalence sets. For example the division by 2, is an absolute condition for two numeric elements to belong to the same equivalence class either of odd or that of even numbers. By contrast, if we consider set inclusion between two sets $A \subseteq B$ as a condition for set element equivalence then it generates two possible equivalence sets. First, all sets $X$ that are subsets of $B$, $\forall X, X \subseteq B$ and second, all sets Y that include $A$,  $ \forall Y, A \subseteq Y $. 
-
-%I will define now how the identity checking function (identity morphism) used for pattern graph matching. It operates on feature structure values, which can be either atomic types, denoted $atomic$, or one of the conjunctive sets: $S_{AND}$, $S_{OR}$, $S_{XOR}$ and $S_{NAND}$. 
-
-In the following definitions set theoretic notations are used for set inclusion $\subseteq$, intersection $\cup$ and set membership $\in$. In addition, I employ also the logical notations for conjunction 
-$\wedge$, disjunction $\vee$, negation $\neg$, exclusive disjunction $\bigoplus$ and tautology $\top$. 
-
-%todo continue here, present rule table instead of formulas
-
-The function $\tau(S)$, returning the type of the set, defined in Section \ref{sec:graphs}, is extended here to handle also atomic elements in addition to sets and is defined as follows $\tau:x \rightarrow \{atomic, S_{AND}, S_{OR}, S_{XOR}, S_{NAND} \}$
-
-When checking the equivalence of two feature values, three cases can be asserted: $x=y$ i.e. $x$ is definitely equal to $y$, $x\neq y$ i.e. $x$ is definitely different from $y$ and $x\sim y$ i.e. $x$ is maybe (or could be) equal to $y$. 
-
-I define below two identity morphisms: (a) \textit{permissive} $I_{permissive}$ (defined by Equation \ref{eq:permissive}) which includes the uncertain cases and (b) \textit{strict} $I_{strict}$ (defined by Equation \ref{eq:strict}) which excludes the uncertain cases. The main difference between the two morphism functions is whether on the right side (the instance graph) any uncertainty is accepted. This is to say any of the disjunctive sets $s_{OR}$ and $S_{XOR}$. 
-
-\begin{definition}[Strict Pattern Graph Matching]\label{def:strict-matching}
-	\textit{Strict pattern graph matching} is a rich graph matching where a morphism for the pattern graph $H$ is found in the target graph $G$ given that $H \leq G$ and that for any node $p \in H$ there is a node $r \in G$ satisfying the strict identity morphism $I_{strict}:p \rightarrow r$
-\end{definition}
-
-
-\begin{equation} \label{eq:strict}
-	I_{strict}:p \rightarrow r \models
-	\begin{cases}
-	p = r, & \text{if}\ T(p) = simple \wedge T(r) = simple \\
-	p \in r, & \text{if}\ T(p) = simple \wedge T(r) = S_{AND} \\
-	p \subseteq r, & \text{if}\ T(p) = S_{AND} \wedge T(r)= S_{AND} \\
-	p \cap r \neq \varnothing, & \text{if}\ T(p) = S_{OR} \wedge T(r) = S_{AND}\\
-	r \in p, & \text{if}\ T(p) = S_{OR} \wedge T(r) = simple \\
-	%p \cap r \neq \varnothing, & \text{if}\ T(p) = S_{XOR} \wedge T(r) \in \{S_{OR}, S_{XOR}\} \\
-	r \in p, & \text{if}\ T(p) = S_{XOR} \wedge T(r) = simple \\
-	p \cap r = \varnothing, & \text{if}\ T(p) = S_{NAND} \wedge T(r) \in \{S_{AND}, S_{OR}, S_{XOR}\} \\
-	r \notin p, & \text{if}\ T(p) = S_{NAND} \wedge T(r) = simple \\
-	\top, & \text{if}\ T(p) = S_{NAND} \wedge T(r) = S_{NAND}
-	\end{cases}
-\end{equation}
-
-\begin{definition}[Permissive Pattern Graph Matching]\label{def:permissive-matching}
-	\textit{Permissive pattern graph matching} is a rich graph matching where a morphism for the pattern graph $H$ is found in the target graph $G$ given that $H \leq G$ and that for any node $p \in H$ there is a node $r \in G$ satisfying the permissive identity morphism $I_{permissive}:p \rightarrow r$
-\end{definition}
-
-\begin{equation} \label{eq:permissive}
-	I_{permissive}:p \rightarrow r \models
-	\begin{cases}
-	p = r, & \text{if}\ T(p) = simple \wedge T(r) = simple \\
-	p \in r, & \text{if}\ T(p) = simple \wedge T(r) \in \{S_{AND}, S_{OR}, S_{XOR}\} \\
-	p \subseteq r, & \text{if}\ T(p) = S_{AND} \wedge T(r) = S_{AND} \\
-	p \cap r \neq \varnothing, & \text{if}\ T(p) = S_{OR} \wedge T(r) \in \{S_{AND}, S_{OR}, S_{XOR}\}\\
-	r \in p, & \text{if}\ T(p) = S_{OR} \wedge T(r) = simple \\
-	p \cap r \neq \varnothing, & \text{if}\ T(p) = S_{XOR} \wedge T(r) \in \{S_{OR}, S_{XOR}\} \\
-	r \in p, & \text{if}\ T(p) = S_{XOR} \wedge T(r) = simple \\
-	p \cap r = \varnothing, & \text{if}\ T(p) = S_{NAND} \wedge T(r) \in \{S_{AND}, S_{OR}, S_{XOR}\} \\
-	r \notin p, & \text{if}\ T(p) = S_{NAND} \wedge T(r) = simple \\
-	\top, & \text{if}\ T(p) = S_{NAND} \wedge T(r) = S_{NAND}
-	\end{cases}
-\end{equation}
-
-Of course these two are not the only identity morphisms that can be defined for the pattern matching. The implementation accepts any binary function that returns a truth value meaning that the two arguments shall be considered the same or not. Moreover the identity function can be provided for edges as well, but I skip it in the current thesis because I do not use. In the future it would be useful to define the edge morphism functions and identify the use cases that employ them.
-
-Now that I have defined how patterns are identified in the graphs, lets take a look at more advanced applications of it. In the next section I explain how the graph isomorphism can be enacted once they are identified. 
-
-\section{Graph matching complexity}
-The graph matching problem is known in computer science as \textit{graph isomorphism problem} which is an NP-complete problem. 
-A peculiar characteristic of such problems is that given a solution then it can be very quickly \textit{verified} in polynomial time but the time required to find a solution increases exponentially with the size of the problem. Therefore to prove whether or not such problems can be solved quickly is one of the main unsolved problems in computer science and the performance of of algorithms solving NP-complete problems is an important issue and requires careful investigation. 
-
-To the moment no algorithm exist to solve the graph isomorphism problem in polynomial time, however the latest available algorithms such as VF2 \cite{Cordella2001,Cordella2004} or QuickSI \cite{Shang2008} performs the task quickly when the addressed graphs are of limited size. 
-
-Next I present some estimate calculations and compare to benchmarking study of \citet{Lee2013}.
-
-The graphs used in benchmarking tests described by \citep{Lee2013} on AIDS dataset are composed of 2--215 nodes and 1--217 edges on which VF2 algorithm performs the isomorphism problem on average in 20--25 milliseconds for sub-graphs sizing between 4--24 edges. The NASA dataset (used in the same benchmarking study) which contains 36790 graphs sizing between 2--889 nodes and 1--888 edges the VF2 algorithm performs on average in 250 milliseconds for sub-graphs of 4 edges.
-
-To put it into the context we have to answer the questions: how big the sentence graphs are, what size are the patterns and what would be a rule of thumb estimation of performance?
-
-According to \citep{Koeva2012}, on average, an English sentence is composed of 12-20 words($n$) with about 1.6 clauses per sentence . % Koeva2012 Bulgarian-English parallel corpus stats
-The parse graph of an average English sentence is a tree or very close to a tree whose number of nodes is within the limits between $n+1$ and $2n-1$ for a $n$ number of leaf nodes (in our case the words). So for a sentence of 20 words the parse tree would be maximum 39 nodes.
-
-Lets assume the size of a sentence is ten times the average i.e. 200 words and a maximum estimate of 399 nodes in the parse tree. The patterns used in current work are 1--5 edges. Overall in the parsing algorithm, the graph matching is mostly applied at the clause level which on average in English is of 6~8 words yields an average maximum of 15 nodes per parse graph which is 0.38 of the average sentence and 0.01 of the unusually big sentence.
-As used in the current implementation and given relatively small graphs, the performance VF2 algorithm fits well within reasonable time limits.
-
-
-\section{Rich graph matching complexity}
-\label{sec:rich-graph-matching}
-In order to accommodate feature rich graphs (FRG), VF2 algorithm is extended to perform custom identity checks. In the original implementation two node $V_{1}$ and $V_{2}$ are said to be equal if the nodes are of simple data types (e.g. integer or string) and they carry the same value. In our case, feature structures are attached to edges and stand for graph nodes. And there are cases when two nodes, even if the have somehow different structures, to be considered the same. 
-
-%As already mentioned in the previous section we are dealing with a special case of graph isomorphism precisely because the graphs we consider are feature rich graphs. Specifically, besides the graph structure, the node and edge identity checking is a secondary check to consider.
-
-%Therefore identity of complex structures (such feature rich graphs) becomes a concept specific to a specific process. Of course \textit{strict identify} checking function is important, such as exact value check used in the example above, but we can derive more power from a nuanced check instead of a strict identity. 
+%The congruency rules (also referred in the implementation as \textit{identity} or \textit{equivalence functions}) used in this work will be provided in the Section \ref{sec:pattern-graph-matching} below. They are contextualised to the graph matching operation between pattern graphs and dependency and constituency graphs. 
 %
-%The functions that decide the identity of two objects (i.e. which is to say that they are the same) are called \textit{morphisms}.   
+%\section{Pattern graph matching}
+%\label{sec:pattern-graph-matching}
 
+A particular case of graph matching, of important to the current work, is the \textit{pattern graph matching} (Definition \ref{def:pgmatching}) which is an operation to identify patterns in the dependency or constituency  \textit{parse graphs} following the \textit{strict feature matching} on their nodes defined in Definition \ref{def:fs-match} below. 
 
-%\begin{definition}[Identity Morphism]\label{def:identity-morphism}
-%	for every object $X$, there exists a morphism $id_{X}:X \rightarrow X$, called \textit{identity morphism} on $X$, such that for every morphism $f:A \rightarrow B$ we have $id_{B} \circ f = f = f \circ id_{A}$
-%\end{definition}
-
-
-I already have defined (somehow ahead) what is graph isomorphism; and that the graph matching should always be an isomorphic function. However the nodes and edges shall be rather loosely identical or they shall only be considered identical but not necessarily be so. Therefore the node and edge morphism functions shall rather be \textit{asymmetric} or simply a morphisms without any assumptions of exact identity. Now I can define the rich graph matching as follows.  
-
-%\begin{definition}[Rich Graph Matching]\label{def:rgmatching}
-%	For two given graphs $G$ and $H$ where $H \leq G$ and two \textit{morphism functions} $f_{V}$ and $f_{E}$, the \textit{rich graph matching} is the function that finds a structural isomorphism between $H$ and $G_{1} \subseteq G$ provided that for all nodes $V_{i} \in H$ their \textit{morphism function} $V_{j} \in G_{1}$ satisfies the identity function $f_{V}(V_{i})=V_{j}$ 
-%\end{definition}
-
-%\begin{definition}[Identity Function]\label{def:identityt-function}
-%	For two entities $a$ and $b$ an \textit{identity function} $f_{I}(a,b)$ returns True if $a \equiv b$ or $a \equiv b$ (read ``considered the same as'') and False otherwise.
-%\end{definition}
-
-So, the functions that compare whether two node or edge are the same in fact compare their feature structures and in fact the sameness is defined in accordance with the goals of the particular task. That's why identity checking function is provided as a parameter to the rich graph matching algorithm.
-
-How is the node and edge identity checking done (or how are the morphism functions defined) is covered in the next section. What is important to mention here is the complexity of such nuanced checks since we have discussed the complexity of VF2 algorithm only on graphs where the edges and nodes are simple data structures. 
-
-The comparison of two FS is a PTIME problem that is efficiently solvable in polynomial time. Of course, this (slightly) increase the complexity of the matching process as a whole but still this lies well within the limits of practical computability. 
-
-The current implementation of VF2 algorithm includes the custom morphism functions for nodes and edges. So far I have not encountered performance issues with it. For the future however it would be of tremendous value to know exactly how much is the original VF2 algorithm burdened by such extra checks and what are the reasonable upper limits for the node size (i.e the complexity of the node feature structure). And perform some stress testing for the whole enterprise.  
-
-
-\section{Pattern-Based Operations}
-\label{sec:pattern-based-operations}
-The patterns are searched for in a graph always for a purpose. Graph isomorphism is only a precondition for another operation, be it a simple selection (i.e. non-affecting operation) or an affecting operation such as feature structure enrichment (on either nodes or edges), inserting or deleting a node or drawing a new connection between nodes. So it seems only natural that the end goal is embedded into the pattern, so that when it is identified, also the desired operation(s) is(are) triggered. I call such graph patterns \textit{affordance patterns} (Definition \ref{def:affordance-pattern}). Next I explain how to embed the operations into the graph pattern and how they are used in the algorithm. 
-
-The operational aspect of the pattern graph is specified in the node FS via three special features: \textit{id}, \textit{operation} and \textit{arg}. The \textit{id} feature (the same as for relative node ordering) is used to mark the node for further referencing as argument of an operation, the \textit{operation} feature names the function to be executed once the pattern is identified and the \textit{arg} feature specifies the function arguments if any required and they are tightly coupled with function implementation. So far the implemented operations are \textit{insert}, \textit{delete} and \textit{update}. But anyone that finds appropriate can extend it with any other operations that may be useful.
-
-\begin{definition}[Affordance Graph Pattern]\label{def:affordance-pattern}
-	An \textit{affordance graph pattern } is a graph pattern that, at least one node or edge, has \textit{operation} and \textit{arg} features.
+\begin{definition}[Pattern graph matching]\label{def:pgmatching}
+    Given a pattern graph $G$ and an instance (parse) graph $H$ (either dependency or constituency), \textit{pattern graph matching} is the operation of finding a rich sub-graph isomorphism from $G$ to $H$ such that each pattern node matches its corresponded instance node each $H$, $\forall v \in V_G, v \gtrdot f(v)$. 
 \end{definition}
 
-I say that the affordance patterns are enacted once they are tested for isomorphism in another graph and if one is found then all the defined operations are executed accordingly.
+%The pattern and parse graphs are feature rich graphs. This means that the nodes are feature structures. In the previous section the rich graph matching require definition of congruence rules and in this case it is between two feature structures. 
 
-\begin{definition}[Affordance Graph Enacting]\label{def:enacted-pattern}
-	For an affordance graph $H$ and a target graph $G$, \textit{affordance graph enacting} is a two step operation that first performs the permissive or strict pattern graph matching and if any isomorphism graph $G_{1} \subseteq G$ is identified and second for every node $p \in H$ with an operation features, executes that operation on the corresponding node $r \in G_{1}$ of the isomorphism.  
+As mentioned before, nodes of the parse and the pattern graphs are feature structures. I approach the matching between them in two steps: first, matching the feature names in Definition \ref{def:fs-match}, and second,  matching the feature values in Table \ref{tab:strict}. 
+In order to simplify and make explanations clear, I will further refer to the feature structures that constitute nodes in the pattern graphs as \textit{pattern feature structures} and the feature structures that constitute nodes in the instance graphs as \textit{instance feature structure}.
+
+\begin{definition}[Feature structure matching]\label{def:fs-match}
+    A pattern feature structure $V$ matches an instance feature structure $U$ if and only if every feature in $V$ has a corresponding feature $U$ and their values match; that is $ \forall f_V \in V, \exists f_U$ such that $name(f_V) = name(f_U)$ and $ val(f_V) \match val(f_U)$.
 \end{definition}
 
-\subsection{Pattern-Based Node Selection}
-It is often needed to select nodes from a graph that have certain properties and are placed in a particular configuration. This operation is very similar to the \textit{atomic graph query} defined in \ref{def:query}. The main difference is ability to specify that the node is a part of the a certain structural configuration which is not possible via the atomic query. 
+Next is defined matching of the feature values. According to the Definition \ref{def:fs}, the values of feature structures can be either atomic (numbers, strings, symbols, etc.), denoted $atomic$, or one of the conjunction sets: $S_{AND}$, $S_{OR}$, $S_{XOR}$ and $S_{NAND}$. For simplicity, the option of nested feature structures is excluded in the current work even though it is perfectly viable configuration. Consequently, the matching relation takes into consideration the \textit{type} of the compared elements in addition to how they relate to each other, including comparisons between set and atomic values. 
+Furthermore this relation is \textit{not symmetric} or \textit{not commutative} because the subsequent relations used in the definition are not symmetric (e.g. set inclusion or set subsumption). 
+This means that we cannot switch places of the compared elements or if we do then they will yield different results, $A \match B \neq B \match A $. 
+%Finally, these definitions create equivalence sets \textit{relative} to one of the compared elements and not absolute equivalence sets. For example the division by 2, is an absolute condition for two numeric elements to belong to the same equivalence class either of odd or that of even numbers. By contrast, if we consider set inclusion between two sets $A \subseteq B$ as a condition for set element equivalence then it generates two possible equivalence sets. First, all sets $X$ that are subsets of $B$, $\forall X, X \subseteq B$ and second, all sets Y that include $A$,  $ \forall Y, A \subseteq Y $. 
 
-For example let's say that we are interested in all nodes in a dependency graph that can take semantic roles specifically subjects, and complements of the clause. For the sake of simplicity example I exclude prepositional phrases and embedded clauses that sometimes can also take semantic roles. 
-The pattern identifying such nodes looks like the one in Figure \ref{fig:gp3}. It selects all the nodes that are connected via \textit{nsubj}, \textit{nsubjpass}, \textit{iobj}, \textit{dobj} and \textit{agent} edges to a VB node. 
+The function $\tau(S)$, defined in Section \ref{sec:graphs}, which returns the type of the feature value is extended here to handle also atomic data types in addition to sets and is defined as follows $\tau:x \rightarrow \{atomic, S_{AND}, S_{OR}, S_{XOR}, S_{NAND} \}$. The matching rules have to be defined for each possible pair of types returned by the function $\tau$ yielding 25 possibilities. Table \ref{tab:strict} provides matching relations for each pair of types. Each cell contains a boolean or comparison expression returning a truth value where the rows represent value types of the pattern features, denoted $\tau(v)$, and the columns represent value types of the instance features, denoted $\tau(u)$. Cells with a bottom sign $\bot$ mean that there can be no match between these types no matter the values. 
+%I use set theoretic notations such as set inclusion $\subseteq$, intersection $\cup$ and set membership $\in$. 
 
-\begin{figure}[hbtp]
-\centering
-\begin{tikzpicture}[]
-\node[pattern-node, anchor=center](vb1){pos:VB};
-\node[pattern-node, right of=vb1, anchor=center, node distance = 7cm] (aux1){operation:select};
-\path (vb1) edge[edge-style] node[anchor=center, align=center] {nsubj,nsubjpass,\\iobj,dobj,agent} (aux1);
-
-\end{tikzpicture}
-\caption{Graph pattern that selects all the nodes that can receive semantic roles}
-\label{fig:gp3}
-\end{figure}
-
-\subsection{Pattern-Based Node (FS) Update} 
-There are other cases when the FS of the nodes needs to be updated either by adding or altering a feature value. This can be achieved via \textit{pattern-based update} operation. For example, consider the example analysis \ref{tab:transitive1} and the task to assign \textit{Agent} feature to the subject node and \textit{Possessed} feature to the complement. PG depicted in figure \ref{fig:gp2} fulfils exactly this purpose.
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[tree-style, level 1/.style={sibling distance=15em},]
-\node[pattern-node]{element:clause}
-	child {node[pattern-node]{element:subject,\\operation:update,\\ arg1:\{participant:agent\}} edge from parent node[left] {}}
-	child {node[pattern-node]{element:complement,\\operation:update,\\ arg1:\{participant:affected\}} edge from parent node[right] {}};
-\end{tikzpicture}
-\caption{Graph pattern for inserting the agent and affected participant role features to subject and direct object nodes.}
-\label{fig:gp2}
-\end{figure}
-
-\begin{table}[ht]
-\centering
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\multicolumn{5}{|c|}{class:clause}                                                               \\ \hline
-element:subject & element: main verb & \multicolumn{2}{c|}{element:complement} & element:adjunct \\ \hline
-He              & gave               & the               & cake               & away.            \\ \hline
-\end{tabular}
-\caption{MCG with a transitive verb}
-\label{tab:transitive1}
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        \textit{$\tau(v)$\textbackslash $\tau(u)$} & \textit{atomic} & \textit{S_{AND}}                 & \textit{S_{OR}}              & \textit{S_{XOR}}             & \textit{S_{NAND}}            \\ \hline
+        \textit{atomic}             & $v=u$             & $v \in u$                         & $\bot$                          & $\bot$                          & $v \notin u$                   \\ \hline
+        \textit{S_{AND}}              & $\bot$               & $v \subseteq u$                     & $\bot$                          & $\bot$                          & $\bot$ \\ \hline
+        \textit{S_{OR}}               & $v \ni u$          & $ v \cap u \neq \varnothing $ &                        $v \supseteq u $              & $v \supseteq u $   & $\bot$ \\ \hline
+        \textit{S_{XOR}}              & $v \ni u$          & $\bot$                              & $\bot$                        & $v \supseteq u$             & $\bot$ \\ \hline
+        \textit{S_{NAND}}             & $v \not\ni u$      & $v \cap u = \varnothing$     & $v \cap u = \varnothing$ & $v \cap u = \varnothing$ & $ v \subseteq u $                          \\ \hline
+    \end{tabular}
+    \caption{Strict matching between pattern and instance feature values organised by value type}
+    \label{tab:strict}
 \end{table}
 
-%\begin{figure}[hbtp]
-%\centering
-%%\includegraphics[width=0.8\textwidth]{figures/data-structures/dep-gr-e2.png}
-%\begin{minipage}{0.47\linewidth}
-%\centering
-%\begin{dependency}[dep-style-narrow]
-%	\begin{deptext}[]
-%	PRP \& VBD \& DT \& NN \& RB \& . \\
-%	He \& gave \& the \& cake \& away \& . \\
-%	\end{deptext}
-%\deproot{2}{root}
-%\depedge{2}{1}{nsubj}
-%\depedge{2}{4}{dobj}
-%\depedge{2}{5}{advmod}
-%\depedge[]{4}{3}{det}
-%%\depedge[collage]{5}{6}{dobj}
-%\end{dependency}
-%\caption{Dependency parse for ``He gave the cake away.''}
-%\label{fig:ge1}
-%\end{minipage}
-%\quad
-%\begin{minipage}{0.47\linewidth}
-%\centering
-%%\includegraphics[width=0.8\textwidth]{figures/data-structures/dep-gr-e1.png}
-%\begin{dependency}[dep-style-narrow]
-%	\begin{deptext}[]
-%	PRP \& VBD \& PRP \& DT \& NN \& . \\
-%	He \& gave \& her \& a \& cake \& . \\
-%	\end{deptext}
-%\deproot{2}{root}
-%\depedge{2}{1}{nsubj}
-%\depedge{2}{3}{iobj}
-%\depedge{2}{5}{dobj}
-%\depedge{5}{4}{det}
-%%\depedge[collage]{5}{6}{dobj}
-%\end{dependency}
-%\caption{Dependency parse for ``He gave her a cake.''}
-%\label{fig:ge2}
-%\end{minipage}
-%\end{figure}
+For example, if both values are of atomic type then in order to match they have to equal. If the $\tau(v)$ is atomic and the $\tau(u)$ is an AND set then $v$ needs to be among the set of values constituting $u$; whereas if the $\tau(u)$ is an OR or XOR set then these values do not match, designated by the bottom sign $\bot$. The same reading applies to the rest of the table for each pair of value types. 
 
-Consider the very same pattern, but applied to a sentence in the Table \ref{tab:di-transitive1}. 
+A more permissive matching is defined in Table \ref{tab:permissive}. Here, on the instance feature values, the two types of disjunction (OR and XOR) and the negated conjunction (NAND) are interpreted as possibly matching and provided with the corresponding relation whereas in the previous definition these cases were completely excluded. The permissive match is rarely used in this work but it is nevertheless useful cases of instance graphs where the feature values could not be are assigned with a certainty but as a disjunction of either one or the other. 
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        \textit{$\tau(v)$\textbackslash $\tau(u)$} & \textit{atomic} & \textit{S_{AND}}                 & \textit{S_{OR}}              & \textit{S_{XOR}}             & \textit{S_{NAND}}            \\ \hline
+        \textit{atomic}             & $v=u$             & $v \in u$                         & $v \in u$                          & $v \in u$                          & $v \notin u$                   \\ \hline
+        \textit{S_{AND}}              & $\bot$               & $v \subseteq u$                     & $v \subseteq u$                          & $v \subseteq u$                          & $v \cap u = \varnothing$ \\ \hline
+        \textit{S_{OR}}               & $v \ni u$          & $ v \cap u \neq \varnothing $ &                        $v \supseteq u $              & $v \supseteq u $   & $v \backslash u \neq \varnothing$ \\ \hline
+        \textit{S_{XOR}}              & $v \ni u$          & $\bot$                              & $\bot$                        & $v \supseteq u$             & $ |v \backslash u| = 1$ \\ \hline
+        \textit{S_{NAND}}             & $v \not\ni u$      & $v \cap u = \varnothing$     & $v \cap u = \varnothing$ & $v \cap u = \varnothing$ & $ v \subseteq u $                          \\ \hline
+    \end{tabular}
+    \caption{Permissive matching between pattern and instance feature values organised by value type}
+    \label{tab:permissive}
+\end{table}
+
+
+%the old taxt no longer needed
+%
+%
+%When checking the equivalence of two feature values, three cases can be asserted: $x=y$ i.e. $x$ is definitely equal to $y$, $x\neq y$ i.e. $x$ is definitely different from $y$ and $x\sim y$ i.e. $x$ is maybe (or could be) equal to $y$. 
+%
+%I define below two identity morphisms: (a) \textit{permissive} $I_{permissive}$ (defined by Equation \ref{eq:permissive}) which includes the uncertain cases and (b) \textit{strict} $I_{strict}$ (defined by Equation \ref{eq:strict}) which excludes the uncertain cases. The main difference between the two morphism functions is whether on the right side (the instance graph) any uncertainty is accepted. This is to say any of the disjunctive sets $s_{OR}$ and $S_{XOR}$. 
+%
+%\begin{definition}[Strict Pattern Graph Matching]\label{def:strict-matching}
+%	\textit{Strict pattern graph matching} is a rich graph matching where a morphism for the pattern graph $H$ is found in the target graph $G$ given that $H \leq G$ and that for any node $p \in H$ there is a node $r \in G$ satisfying the strict identity morphism $I_{strict}:p \rightarrow r$
+%\end{definition}
+%
+%
+%\begin{equation} \label{eq:strict}
+%	I_{strict}:p \rightarrow r \models
+%	\begin{cases}
+%	p = r, & \text{if}\ T(p) = simple \wedge T(r) = simple \\
+%	p \in r, & \text{if}\ T(p) = simple \wedge T(r) = S_{AND} \\
+%	p \subseteq r, & \text{if}\ T(p) = S_{AND} \wedge T(r)= S_{AND} \\
+%	p \cap r \neq \varnothing, & \text{if}\ T(p) = S_{OR} \wedge T(r) = S_{AND}\\
+%	r \in p, & \text{if}\ T(p) = S_{OR} \wedge T(r) = simple \\
+%	%p \cap r \neq \varnothing, & \text{if}\ T(p) = S_{XOR} \wedge T(r) \in \{S_{OR}, S_{XOR}\} \\
+%	r \in p, & \text{if}\ T(p) = S_{XOR} \wedge T(r) = simple \\
+%	p \cap r = \varnothing, & \text{if}\ T(p) = S_{NAND} \wedge T(r) \in \{S_{AND}, S_{OR}, S_{XOR}\} \\
+%	r \notin p, & \text{if}\ T(p) = S_{NAND} \wedge T(r) = simple \\
+%	\top, & \text{if}\ T(p) = S_{NAND} \wedge T(r) = S_{NAND}
+%	\end{cases}
+%\end{equation}
+%
+%\begin{definition}[Permissive Pattern Graph Matching]\label{def:permissive-matching}
+%	\textit{Permissive pattern graph matching} is a rich graph matching where a morphism for the pattern graph $H$ is found in the target graph $G$ given that $H \leq G$ and that for any node $p \in H$ there is a node $r \in G$ satisfying the permissive identity morphism $I_{permissive}:p \rightarrow r$
+%\end{definition}
+%
+%\begin{equation} \label{eq:permissive}
+%	I_{permissive}:p \rightarrow r \models
+%	\begin{cases}
+%	p = r, & \text{if}\ T(p) = simple \wedge T(r) = simple \\
+%	p \in r, & \text{if}\ T(p) = simple \wedge T(r) \in \{S_{AND}, S_{OR}, S_{XOR}\} \\
+%	p \subseteq r, & \text{if}\ T(p) = S_{AND} \wedge T(r) = S_{AND} \\
+%	p \cap r \neq \varnothing, & \text{if}\ T(p) = S_{OR} \wedge T(r) \in \{S_{AND}, S_{OR}, S_{XOR}\}\\
+%	r \in p, & \text{if}\ T(p) = S_{OR} \wedge T(r) = simple \\
+%	p \cap r \neq \varnothing, & \text{if}\ T(p) = S_{XOR} \wedge T(r) \in \{S_{OR}, S_{XOR}\} \\
+%	r \in p, & \text{if}\ T(p) = S_{XOR} \wedge T(r) = simple \\
+%	p \cap r = \varnothing, & \text{if}\ T(p) = S_{NAND} \wedge T(r) \in \{S_{AND}, S_{OR}, S_{XOR}\} \\
+%	r \notin p, & \text{if}\ T(p) = S_{NAND} \wedge T(r) = simple \\
+%	\top, & \text{if}\ T(p) = S_{NAND} \wedge T(r) = S_{NAND}
+%	\end{cases}
+%\end{equation}
+
+Of course the matching rules proposed in Definition \ref{def:fs-match} and Table \ref{tab:strict} are not the only one that can be defined for the pattern matching. 
+%A more permissive forms are possible, for example checking subset set inclusion for OR and XOR sets which currently is excluded.   
+To handle this possible variation, in the parser implementation, the pattern matching function takes as parameter the matching relation, i.e. the identity function. The only constraints, on such a function, are to return a truth value and to take two parameters. The implementation also supports identity function for edges as well. In this work, all the pattern matching is performed entirely on constituent graphs (whose edges have no labels) and none on the dependency graphs (whose edges have labels), therefore I skip entirely the discussion about the edge matching in a sub-graph isomorphism. Nonetheless, the matching definitions above apply to matching edge features feature values too. 
+
+Now that pattern graph matching is explained, lets take a look next at how it is used to perform operation on instance graphs.
+
+\section{Pattern based operations}
+\label{sec:pattern-based-operations}
+
+The patterns are searched for in a graph always for a purpose. Graph isomorphism is only a precondition for another operation, be it a simple selection (i.e. non-affecting operation) or an affecting operation such as feature structure enrichment (on either nodes or edges), inserting or deleting a node or drawing a new connection between nodes. It seems only natural that the end goal is embedded into the pattern, so that when it is identified, also the desired operation(s) is(are) triggered. I call such graph patterns \textit{operational pattern graphs} (Definition \ref{def:operational-pattern}). Next I explain how to embed the operations into the graph pattern and how they are used in the algorithm. 
+
+\begin{definition}[Operational graph pattern]\label{def:operational-pattern}
+    An \textit{operative graph pattern} is a pattern graph that has least on one node \textit{operation} and \textit{arg} features.
+\end{definition}
+
+The operational aspect of the pattern graph is specified in the node FS via three special features: \textit{id}, \textit{operation} and \textit{arg}. The \textit{id} feature (the same as for relative node ordering) is used to mark the node for further referencing as an argument of an operation, the \textit{operation} feature names the function to be executed once the pattern is identified and the \textit{arg} feature specifies the function arguments if any required and they are tightly coupled with function implementation. If a node has the feature operation then it is called \textit{operational node}. Also, in the current implementation, the special features such as operation, arg, id, precede etc. are excluded from the pattern matching operation because they have functional role linked to the implementation and do not describe the linguistic properties of a graph node.
+
+So far the implemented operations are \textit{insert}, which is used for creation of empty nodes, \textit{delete}, which is used for corrections of predictable errors in dependency graphs and \textit{update} operation, which is the main mechanism behind graph enrichment. These operations are depicted in Figure \ref{fig:pipeline-overview} of the parser pipeline architecture from Section \ref{sec:architecture}.
+
+Operative patterns are enacted once they are matched to an instance graph. 
+An operative pattern graph $G$ is \textit{enacted} on an instance graph $H$, in two steps. First, the pattern graph is strictly matched to instance graph. If an isomorphism $f$ is found then, second, for every operational node $v \in G, \exists att(v)=operation$, the specified operation $op = val(v.operation)$ and the corresponding node of the instance graph $u \in H$, the operation is executed on the node of the instance graph $op(u)$. If the arg feature is provided then the operation is executed with that additional argument. 
+
+\subsection{Pattern based node update} 
+
+As mentioned above the pattern based node update is used for adding onto the constituency graph new features. Lets consider Example \ref{ex:transitivity1} whose constituency graph is provided in Figure \ref{fig:cg-transitive1} and the task to assign \textit{agent} feature to the subject node and \textit{affected-possessed} feature to the complement. This can be done using the pattern graph matching with a feature update operation indicated on subject and complement nodes. The PG depicted in Figure \ref{fig:pg-transitive1} fulfils this purpose because it matches constituency graph from Figure \ref{fig:cg-transitive1} and has the corresponding update operations indicated.
+
+\begin{exe}
+    \ex\label{ex:transitivity1} He gave the cake away.
+    \ex\label{ex:transitivity2} He gave her the cake.
+\end{exe}
+
+%\begin{table}[!ht]
+%    \centering
+%    \begin{tabular}{|c|c|c|c|c|}
+%        \hline
+%        \multicolumn{5}{|c|}{clause}                                                               \\ \hline
+%        subject & main verb & \multicolumn{2}{c|}{complement} & adjunct \\ \hline
+%        He              & gave               & the               & cake               & away.            \\ \hline
+%    \end{tabular}
+%    \caption{CG with a transitive verb}
+%    \label{tab:transitive1}
+%\end{table}
+
+%The constituency graph representation for the clause analysis from Table \ref{tab:transitive1} is depicted in Figure \ref{fig:cg-transitive1}. 
+
+\begin{figure}[!ht]
+    \centering
+    \scalebox{0.7}{
+    \begin{tikzpicture}[
+    tree-style, 
+%    edge-style,
+    level 1/.style={sibling distance=10em},
+    level 2/.style={sibling distance=8em},
+    level distance = 4em
+    ]
+    \node[pattern-node]{class: clause}
+    child {node[pattern-node]{element: subject\\word: He} }
+    child {node[pattern-node]{element: main verb\\word: gave} }
+    child {node[pattern-node]{element: complement\\class: nominal group}  {}
+        child {node[pattern-node]{element: deictic\\word: the} }
+        child {node[pattern-node]{element: thing\\word: cake} }
+    }
+    child {node[pattern-node]{element: adjunct\\word: away}  }
+    ;
+    \end{tikzpicture}
+}
+    \caption{Constituency graph corresponding to Example \ref{ex:transitivity1}}
+    \label{fig:cg-transitive1}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\scalebox{0.7}{
+\begin{tikzpicture}[tree-style, level 1/.style={sibling distance=14em}, level distance = 5em]
+\node[pattern-node]{element:clause}
+	child {node[pattern-node, xshift=1.5em]{element: subject\\operation: update\\arg1:\{participant: agent\}} }
+   	child {node[pattern-node]{element: main verb\\word: give\\operation: update\\arg1:\{process: possessive\}} }
+    child {node[pattern-node, xshift=1em]{element: complement\\operation: update\\arg1:\{participant: affected-possessed\}}};
+\end{tikzpicture}
+}
+\caption{A graph pattern for inserting agent and affected-possessed participant roles}
+\label{fig:pg-transitive1}
+\end{figure}
+\begin{figure}[!ht]
+    \centering
+    \scalebox{0.7}{
+        \begin{tikzpicture}[
+        tree-style, 
+        %    edge-style,
+        level 1/.style={sibling distance=12em},
+        level 2/.style={sibling distance=8em},
+        level distance = 5em
+        ]
+        \node[pattern-node]{class: clause}
+        child {node[pattern-node, xshift=2em]{element: subject\\\textit{participant: agent}\\word: He} }
+        child {node[pattern-node]{element: main verb\\\textit{process: possessive}\\word: gave} }
+        child {node[pattern-node]{element: complement\\\textit{participant: affected-possessed}\\class: nominal group}  {}
+            child {node[pattern-node]{element: deictic\\word: the} }
+            child {node[pattern-node]{element: thing\\word: cake} }
+        }
+        child {node[pattern-node]{element: adjunct\\word: away}  }
+        ;
+        \end{tikzpicture}
+    }
+    \caption{The resulting constituency graph enriched with participant roles}
+    \label{fig:cgg-transitive1}
+\end{figure}
+
+
+%todo continue here
+Consider the same pattern, but applied to a sentence in the Table \ref{tab:di-transitive1}. 
 The clause has two complements and they are by no means distinguished in the pattern graph. When such cases are encountered the PG yields two matches, (each with another complement) and the update operation is executed to both of the complements. To overcome such cases from happening PG allow defining \textit{negative nodes}, meaning that those are nodes that shall be missing in the target graph.
 
 For example to solve previous case I define the PG depicted in figure \ref{fig:gp4} whose second complement is a negative node and it is marked with dashed line. This pattern is matched only against clauses with exactly one complement leaving aside the di-transitive ones because of the second complement.
@@ -922,12 +924,14 @@ He              & gave               & her                & the               & 
 
 \begin{figure}[hbtp]
 \centering
+\scalebox{0.8}{
 \begin{tikzpicture}[tree-style, level 1/.style={sibling distance=12em},]
 \node[pattern-node, anchor=center](vb1){element:clause}
 	child {node[pattern-node,xshift=0em] {element:subject,\\operation:update,\\ arg1:\{participant:agent\}} edge from parent node[above] {}}
 	child {node[pattern-node,xshift=0em] {element:complement,\\operation:update,\\ arg1:\{participant:posessed\}} edge from parent node[below right] {}}
 	child {node[pattern-node-negative, xshift=0em] {element:complement} edge from parent node[above] {}};
 \end{tikzpicture}
+}
 \caption{PG for inserting agent and possessed participant roles to subject and complement nodes only if there is no second complement.}
 \label{fig:gp4}
 \end{figure}

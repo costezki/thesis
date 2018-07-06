@@ -11,7 +11,10 @@
 \newtheorem{remark}{Remark}
 
 
-%
+%match operator
+\DeclareMathOperator{\match}{\gtrdot}
+%\DeclareMathOperator{\matchedBy}{\lessdot}
+
 % Tkiz styling
 %
 \depstyle{dep-style}{edge style = {thick, RoyalBlue,}, label style = {thick, text=RoyalBlue, fill=white, draw=RoyalBlue, font=\footnotesize, }, text style = {column sep=0.5cm, row sep=1ex,}, edge unit distance = 0.7em}
@@ -55,6 +58,8 @@
 	tree-style/.style = { %edge from parent fork down,
 %		child anchor=north,
 %        parent anchor=center,
+        edge from parent path={(\tikzparentnode) -- (\tikzchildnode)},
+        growth parent anchor=south,
         edge from parent/.style={draw,rounded corners=3mm},
 		edge-style,
 		level 1/.style={sibling distance=10em},

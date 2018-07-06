@@ -1,0 +1,75 @@
+
+%TODO: consider in chapter about graph isomorphism or in evaluation chapter
+
+\section{Graph matching complexity}
+The graph matching problem is known in computer science as \textit{graph isomorphism problem} which is an NP-complete problem. 
+A peculiar characteristic of such problems is that given a solution then it can be very quickly \textit{verified} in polynomial time but the time required to find a solution increases exponentially with the size of the problem. Therefore to prove whether or not such problems can be solved quickly is one of the main unsolved problems in computer science and the performance of of algorithms solving NP-complete problems is an important issue and requires careful investigation. 
+
+To the moment no algorithm exist to solve the graph isomorphism problem in polynomial time, however the latest available algorithms such as VF2 \cite{Cordella2001,Cordella2004} or QuickSI \cite{Shang2008} performs the task quickly when the addressed graphs are of limited size. 
+
+Next I present some estimate calculations and compare to benchmarking study of \citet{Lee2013}.
+
+The graphs used in benchmarking tests described by \citep{Lee2013} on AIDS dataset are composed of 2--215 nodes and 1--217 edges on which VF2 algorithm performs the isomorphism problem on average in 20--25 milliseconds for sub-graphs sizing between 4--24 edges. The NASA dataset (used in the same benchmarking study) which contains 36790 graphs sizing between 2--889 nodes and 1--888 edges the VF2 algorithm performs on average in 250 milliseconds for sub-graphs of 4 edges.
+
+To put it into the context we have to answer the questions: how big the sentence graphs are, what size are the patterns and what would be a rule of thumb estimation of performance?
+
+According to \citep{Koeva2012}, on average, an English sentence is composed of 12-20 words($n$) with about 1.6 clauses per sentence . % Koeva2012 Bulgarian-English parallel corpus stats
+The parse graph of an average English sentence is a tree or very close to a tree whose number of nodes is within the limits between $n+1$ and $2n-1$ for a $n$ number of leaf nodes (in our case the words). So for a sentence of 20 words the parse tree would be maximum 39 nodes.
+
+Lets assume the size of a sentence is ten times the average i.e. 200 words and a maximum estimate of 399 nodes in the parse tree. The patterns used in current work are 1--5 edges. Overall in the parsing algorithm, the graph matching is mostly applied at the clause level which on average in English is of 6~8 words yields an average maximum of 15 nodes per parse graph which is 0.38 of the average sentence and 0.01 of the unusually big sentence.
+As used in the current implementation and given relatively small graphs, the performance VF2 algorithm fits well within reasonable time limits.
+
+
+\section{Rich graph matching complexity}
+\label{sec:rich-graph-matching}
+In order to accommodate feature rich graphs (FRG), VF2 algorithm is extended to perform custom identity checks. In the original implementation two node $V_{1}$ and $V_{2}$ are said to be equal if the nodes are of simple data types (e.g. integer or string) and they carry the same value. In our case, feature structures are attached to edges and stand for graph nodes. And there are cases when two nodes, even if the have somehow different structures, to be considered the same. 
+
+%As already mentioned in the previous section we are dealing with a special case of graph isomorphism precisely because the graphs we consider are feature rich graphs. Specifically, besides the graph structure, the node and edge identity checking is a secondary check to consider.
+
+%Therefore identity of complex structures (such feature rich graphs) becomes a concept specific to a specific process. Of course \textit{strict identify} checking function is important, such as exact value check used in the example above, but we can derive more power from a nuanced check instead of a strict identity. 
+%
+%The functions that decide the identity of two objects (i.e. which is to say that they are the same) are called \textit{morphisms}.   
+
+
+%\begin{definition}[Identity Morphism]\label{def:identity-morphism}
+%	for every object $X$, there exists a morphism $id_{X}:X \rightarrow X$, called \textit{identity morphism} on $X$, such that for every morphism $f:A \rightarrow B$ we have $id_{B} \circ f = f = f \circ id_{A}$
+%\end{definition}
+
+
+I already have defined (somehow ahead) what is graph isomorphism; and that the graph matching should always be an isomorphic function. However the nodes and edges shall be rather loosely identical or they shall only be considered identical but not necessarily be so. Therefore the node and edge morphism functions shall rather be \textit{asymmetric} or simply a morphisms without any assumptions of exact identity. Now I can define the rich graph matching as follows.  
+
+%\begin{definition}[Rich Graph Matching]\label{def:rgmatching}
+%	For two given graphs $G$ and $H$ where $H \leq G$ and two \textit{morphism functions} $f_{V}$ and $f_{E}$, the \textit{rich graph matching} is the function that finds a structural isomorphism between $H$ and $G_{1} \subseteq G$ provided that for all nodes $V_{i} \in H$ their \textit{morphism function} $V_{j} \in G_{1}$ satisfies the identity function $f_{V}(V_{i})=V_{j}$ 
+%\end{definition}
+
+%\begin{definition}[Identity Function]\label{def:identityt-function}
+%	For two entities $a$ and $b$ an \textit{identity function} $f_{I}(a,b)$ returns True if $a \equiv b$ or $a \equiv b$ (read ``considered the same as'') and False otherwise.
+%\end{definition}
+
+So, the functions that compare whether two node or edge are the same in fact compare their feature structures and in fact the sameness is defined in accordance with the goals of the particular task. That's why identity checking function is provided as a parameter to the rich graph matching algorithm.
+
+How is the node and edge identity checking done (or how are the morphism functions defined) is covered in the next section. What is important to mention here is the complexity of such nuanced checks since we have discussed the complexity of VF2 algorithm only on graphs where the edges and nodes are simple data structures. 
+
+The comparison of two FS is a PTIME problem that is efficiently solvable in polynomial time. Of course, this (slightly) increase the complexity of the matching process as a whole but still this lies well within the limits of practical computability. 
+
+The current implementation of VF2 algorithm includes the custom morphism functions for nodes and edges. So far I have not encountered performance issues with it. For the future however it would be of tremendous value to know exactly how much is the original VF2 algorithm burdened by such extra checks and what are the reasonable upper limits for the node size (i.e the complexity of the node feature structure). And perform some stress testing for the whole enterprise.  
+
+
+ 
+\subsection{Pattern-Based Node Selection}
+It is often needed to select nodes from a graph that have certain properties and are placed in a particular configuration. This operation differs from a simple graph selection (query) by the possibility to specify that the node is a part a certain structural configuration. 
+
+For example let's say that we are interested in all nodes in a dependency graph that can take semantic roles specifically subjects, and complements of the clause. For the sake of simplicity example I exclude prepositional phrases and embedded clauses that sometimes can also take semantic roles. 
+The pattern identifying such nodes looks like the one in Figure \ref{fig:gp3}. It selects all the nodes that are connected via \textit{nsubj}, \textit{nsubjpass}, \textit{iobj}, \textit{dobj} and \textit{agent} edges to a VB node. 
+
+\begin{figure}[hbtp]
+\centering
+\begin{tikzpicture}[]
+\node[pattern-node, anchor=center](vb1){pos:VB};
+\node[pattern-node, right of=vb1, anchor=center, node distance = 7cm] (aux1){operation:select};
+\path (vb1) edge[edge-style] node[anchor=center, align=center] {nsubj,nsubjpass,\\iobj,dobj,agent} (aux1);
+
+\end{tikzpicture}
+\caption{Graph pattern that selects all the nodes that can receive semantic roles}
+\label{fig:gp3}
+\end{figure}
