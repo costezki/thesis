@@ -1,14 +1,13 @@
-\chapter{State of the art review}
+\chapter{An overview of selected works on parsing with SFG}
 \label{ch:sota}
 
-\section{Previous works on parsing with Systemic Functional Grammars}
+%\section{Previous works on parsing with Systemic Functional Grammars}
 \label{sec:sota}
-There have been various attempts to parsing with SFGs. This section covers the most significant attempts to parse with a Systemic Functional Grammar. The firs attempt was made by Winograd \citep{Winograd1972} which was more than a parser, it was an interactive a natural language understanding system for manipulating geometric objects in a virtual world.
+There have been various attempts to parsing with SFGs. This chapter covers the most significant attempts to parse with a Systemic Functional Grammar. The firs attempt was made by Winograd \citep{Winograd1972} which was more than a parser, it was an interactive a natural language understanding system for manipulating geometric objects in a virtual world.
 
 Starting from early 1980s onwards, Kay, Kasper, O'Donell and Bateman tried to parse with Nigel Grammar \citep{Matthiessen1985}, a large and complex natural language generation (NLG) grammar for English used in Penman generation project. Other attempts by \citet{ODonoghue1991a}, \citet{Weerasinghe1994}, \citet{Souter1996}, \citet{Day2007} aim for corpus based probability driven parsing within the framework of COMMUNAL project starting from late 1980s.
 
-In a very different style, \citet{Honnibal2004a,Honnibal2007} constructed a system to convert Penn Treebank into a corresponding SFGBank. This managed to provide a good conversion from phrase structure trees into systemic functional representation covering sentence mood and Thematic constituency (a kind of analysis in SFL which is not considered in current work). Transitivity has not been covered there because of its inherently semantic nature but it is in the current work.
-
+In a very different style, \citet{Honnibal2004a,Honnibal2007} constructed a system to convert Penn Treebank into a corresponding SFGBank. This managed to provide a good conversion from phrase structure trees into systemic functional constituency trees covering sentence Mood and Theme structure. No systemic feature selections have been assigned to any of the constituents. Also not Transitivity account was provided in their attempts. The current work is following a similar approach of converting a parse structures and in addition providing a set of feature selections from system networks. Next are presented a few selected attempts to parse with SFGs. 
 
 \subsection{Winograd's SHRDLU}
 SHRDLU is an interactive program for understanding (if limited) natural language written by Terry Winograd at MIT between 1968-1970. It carried a simple dialogue about a world of geometric objects in a virtual world. The human could as the system to manipulate objects of different colours and shapes and the ask questions about what has been done or the new state of the world. 
@@ -19,7 +18,7 @@ Winograd combined the parsing and interpretation processes such that the semanti
 
 Having data embedded into the program procedures, as Winograd did, makes it non-scalable for example in accommodation of larger grammars and knowledge bodies and unmaintainable on the long term as it becomes increasingly difficult to make changes \citep{Weerasinghe1994}.
 
-\subsection{Kasper}
+\section{Kasper}
 Bob Kasper in 1985 being involved in Penman generation project embarked on the mission of testing if the Nigel grammar, then the largest available generation grammar, was suitable for natural language parsing. Being familiar with Functional Unification Grammar (FUG), a formalism developed by Kay and tested in parsing \citep{Kay1985} which caught on popularity in computational linguistics regardless of Kay's dissatisfaction with results, Kasper decided to re-represent Nigel grammar into FUG. 
 
 Faced with tremendous computational complexity, \citet{Kasper1988} decided to manually create the phrase-structure of the sentences with hand-written rules which were mapped onto a parallel systemic tree structure. Kasper in \citeyear{Kasper1988} was the first one to parse with a context-free backbone. He first parsed each sentence with a Phrase Structure Grammar (PSG), typical to Chomsky's Generative Transformational Linguistics \citet{Chomsky1957}. He created a set of rules for mapping the phrase structure (PS) into a parallel systemic tree like the one depicted in Figure \ref{fig:kasper-example}. When all possible systemic tree were created they were further enriched using information from Nigel Grammar \citep{Matthiessen1985}.
@@ -63,7 +62,7 @@ Once the context-free phrase-structure was created using bottom-up chart parser 
 
 Even though Kasper's system is represents the first attempt to parse with full Hallidayan grammar, it's importance is lowered, as \citet{ODonnell2005} point out, by the reliance on phrase structure grammar.
 
-\subsection{O'Donnell}
+\section{O'Donnell}
 Since 1990, Mick  O'Donnell experimented with several parsers for small Systemic grammars,  but found difficulty when scaling up to larger grammars. While working in EAD project, funded by Fujitsu, he recompiled a subset of Nigel grammar into two resources: the set of possible function bundles allowed by the grammar (along with the bundles  preselections) and a resource detailing which functions can follow a particular function \citep{ODonnell1993,ODonnell1994}.
 
 This parser was operating without a syntactic backbone directly from a reasonable scale SFG. However when scaled to the whole Nigel grammar the system became very slow because of the sheer size of the grammar and its inherent complexity introduced by multiple parallel classifications and functional combinations - a problem well described by \citet{Bateman2008}. Then O'Donnell wrote his own grammar of Mood that was more suitable for the parsing process and less complex than the recompiled Nigel.
@@ -77,7 +76,7 @@ O'Donnell deals away with the conflation except for the verbal group system netw
 
 In his paper \citep{ODonnell2005a} does not provide a parser evaluation so its accuracy is still unknown today. The lexicon that was created is claimed to deal with word semantic classes but it is strongly syntactically based assigning a single sense to nouns and verbs ignoring the peculiar aspect of language polysemy. Moreover it is not very clear the framework within which the semantic classes have been generated. 
 
-\subsection{O'Donoghue}
+\section{O'Donoghue}
 O'Donoghue proposes a corpus based approach to parsing using \textit{Vertical Strips} \citep{ODonoghue1991a}. They are defined as a vertical path of nodes in a parse tree starting from the root down to the lexical items but not including those. He extracted the set of vertical strips from a corpus called Prototype Grammar Corpus together with their frequencies and probability of occurrence.
 This approach differ from the traditional one with respect to the kind of generalization it is concerned and specifically, the traditional approached are oriented towards horizontal order while the vertical strip approach is concerned with vertical order in the parse tree. 
 
@@ -89,11 +88,26 @@ The corpus from which the vertical strips were extracted is 100,000 sentences la
 
 Actually, using a larger corpus could potentially lead to a combinatorial explosion in the step that looks for vertical strips. It would decrease the accuracy of the parse because of the higher number of possible trees per parse.
 
-\subsection{Honnibal}
+\section{Honnibal}
 Honnibal \citeyearpar{Honnibal2004a,Honnibal2007} describes how Penn Treebank can be converted into a SFG Treebank. Before assigning to parse tree nodes synthetic features such as mood, tense, voice and negation he first transforms the parse trees into a form that facilitates the feature extraction. 
 
 The scope of SFG corpus was limited to a few Mood and Textual systems leaving aside Transitivity because of its inherently lexico-semantic nature. He briefly describes how he structurally deals with verb groups, complexes and ellipses as functional structures are much flatter than those exhibited in the original Treebank. Then he describes how are identified metafunctional features of unit class, mood function, clause status, mood type, polarity, tense, voice and textual functions.
 
 The drawback of his approach is that the Python script performing the transformation does not derive any grammar but rather implements directly these transformations as functions falling into the same class of problems like Winograd's SHRDLU. By doing so the program is non-scalable for example in accommodation of larger grammars and knowledge bodies and unmaintainable on the long term as it becomes increasingly difficult to make changes. 
 
+\section{Discussion}
+In this chapter were presented several relevant attempts to parse with Systemic Functional Grammars. All of them needed to reduce the grammar size or use toy grammars in order to compute results in a reasonable amount of time. The main problem in using SFGs for parsing is that they are much more complex than post-Chomskian grammars: the grammar contains both semantic and syntagmatic aspects of language, the system networks represent large numbers of simultaneous combinations of features, and multiple layers of function structure are conflated together. 
 
+Some parsing approaches use a syntactic backbone which is then flashed out with SFG description. Other ones use a reduced set or a single layer of SFG representation the third ones use an annotated corpus as the source of a probabilistic grammar. Regardless of the approach each limits the SFG in a one way or another balancing the depth of description with language coverage: that is either deep description but a domain specific language or shallow description but broad language coverage. 
+
+Current approach is aligned with works of Honnibal, Kasper and and O'Donnell with respect to using a backbone structure and enriching it with syntactic and semantic features. Current method employs rules for graph traversal in order to build a parallel backbone constituency tree and rules for graph matching to enrich it with systemic features. 
+
+Parsing Transitivity system is a task similar to Semantic Role Labelling and requires large lexicogrammatical resource describing verb meanings in terms of their process type and participant roles. O'Donnell approaches it by providing possible process types directly to the verb by employing self constructed lexicon where each word has syntactic and semantic features. Current approach uses PTDB \citep{Neale2002}, which provides entire process configurations (semantic frames) for each verb sense and the feature assignment is simultaneous, if matched, to the entire configuration of process and its participants.
+
+One major advantage, as compared to Honnibal's approach is that the grammar and the program are carefully disconnected so that the code is maintainable and scalable with the respect to size of the grammar. 
+
+% Two approaches are in particular relevant to the current work: that of parsing with a syntactic backbone \citep{Kasper1988} and that of transforming the parse structures from one formalism into another one \citep{Honnibal2004a,Honnibal2007}. The former one is relevant because it offers a leverage in parsing task by using simpler grammars. The latter highlights the practicality to reuse work done with other formalisms by developing methods and rule of converting it into a target formalism, in our case SFG.
+
+Next chapter will introduce the structure of Systemic Functional Grammars and draw some parallels between Sydney and Cardiff schools. 
+
+ 

@@ -1,4 +1,5 @@
 \chapter{Introduction}
+\label{ch:introduction}
 
 \section{On Artificial Intelligence (AI) and Computational Linguistics}
 % copied from intro
@@ -31,8 +32,9 @@ In a world such ours, where technology is ubiquitous and pervasive in almost all
 
 Every time you ask Siri or Alexa for directions to the nearest Peruvian restaurant, how to cook Romanian beef stew or what is the dictionary definition for the word ``germane'', a complex chain of operations is activated that allows `her' to understand the question, search for the information you are looking for and respond in a human understandable language. Such tasks are possible only in the past few years thanks to advances in NLP. Until now we have been interacting with computers in a language they understand rather than us. Now they are learning our language. 
 
-\section{NLP for business}
-\label{sec:motivation-business}
+%\section{NLP for business}
+%\label{sec:motivation-business}
+
 NLP opens new and quite dramatic horizons for businesses. Navigating with limited resources stormy markets of competitors, customers and regulators and finding an optimal answer/action to a business question is not a trivial task. 
 Markets are influenced by the information exchange and being able to process massive amounts of text and extract meaning can help asses the status of an industry and play an essential role in crafting a strategy or a tactical action. 
 Relevant NLP tasks for gathering market intelligence are \textit{named entity recognition} (NER), \textit{event extraction} and \textit{sentence classification}. With these tasks alone one can build a database about companies, people, governments, places, events together with positive or negative statements about them and run versatile analytics to audit the state of affairs.
@@ -49,7 +51,7 @@ The above cases underline the increased need in NLP whereas the variation and ev
 \label{sec:framework}
 Any description or analysis involving language implies some theory of about its essential nature and how it works. A linguistic theory includes also goals of linguistics, assumptions about which methods are appropriate to approach those goals and assumptions about the relation between theory, description and applications \citep[3]{Fawcett2000}. 
 
-In his seminal paper ``Categories of the theory of grammar'' \citep{Halliday61-orig}, Halliday lays the foundations of \textit{Systemic Functional Linguistic} (SFL) following the works of his British teacher J. R. Firth, inspired by Louis Hjelmslev \citep{Hjelmslev53} from Copehagen School of linguistics and by a group of European linguists from Prague Linguistic Circle. This paper constitutes a response to the need for a \textit{general theory of language} that would be holistic enough to guide empirical research in the broad discipline of linguistic science:
+In his seminal paper ``Categories of the theory of grammar'' \citep{Halliday61-orig}, Halliday lays the foundations of \textit{Systemic Functional Linguistic} (SFL) following the works of his British teacher J. R. Firth, inspired by Louis Hjelmslev \citep{Hjelmslev53} from Copenhagen School of linguistics and by a group of European linguists from Prague Linguistic Circle. This paper constitutes a response to the need for a \textit{general theory of language} that would be holistic enough to guide empirical research in the broad discipline of linguistic science:
 \begin{quotation}
     \dots the need for a \textit{general} theory of description, as opposed to a \textit{universal} scheme of descriptive categories, has long been apparent, if often unformulated, in the description of all languages \citep[54; emphasis in original]{Halliday57}
     \dots
@@ -128,11 +130,11 @@ Next we can move on to assign constituent class and a grammatical function. Tabl
         &               & Deictic          & Thing           &                                     \\ \cline{3-4}
         &               & determiner       & noun            &                                     \\ \cline{3-4}
     \end{tabular}
-    \caption{Constituency analysis with unit classes and grammatical functions}
+    \caption{Constituency analysis with unit classes and grammatical functions (table view)}
     \label{tab:sfg-constituency-analisys}
 \end{table}
 
-Next each constituent can be assigned a set of relevant linguistic features. For example The subject ``He'' is a pronoun that has features known in traditional grammar: \textit{singular}, \textit{masculine}, and \textit{3^{rd} person}. These features are well differentiated in traditional grammar. For example \textit{singular} means \textit{non-plural}, \textit{masculine} means \textit{non-feminine} and \textit{3^{rd} person} means \textit{non-1^{st}} and \textit{non-2^{nd}}. These are closed classes meaning that there is no \textit{4^{th} person} or that there is no \textit{neutral} grammatical gender in English as other languages have. These features can be systematised (see Figure \ref{fig:traditional-pronoun}) as three systems of mutually exclusive choices that can be assigned to pronominal units. Note that the gender is enabled for 3^{rd} person singular pronouns which can be expressed as is the figure below representing a \textit{system network} (which is properly introduced in Chapter \ref{ch:sfg}).
+Next each constituent can be assigned a set of relevant linguistic features. For example The subject ``He'' is a pronoun that has features known in traditional grammar: \textit{singular}, \textit{masculine}, and \textit{3^{rd} person}. These features are well differentiated in traditional grammar. For example \textit{singular} means \textit{non-plural}, \textit{masculine} means \textit{non-feminine} and \textit{3^{rd} person} means \textit{non-1^{st}} and \textit{non-2^{nd}}. These are closed classes meaning that there is no \textit{4^{th} person} or that there is no \textit{neutral} grammatical gender in English as other languages have. These features can be systematised (see Figure \ref{fig:traditional-pronoun}) as three systems of mutually exclusive choices that can be assigned to pronominal units. Note that the gender is enabled for 3^{rd} person singular pronouns which can be expressed as is the figure below representing a \textit{system network} (explained in Chapter \ref{ch:sfg}).
 
 \begin{figure}[!ht]
     \centering      
@@ -227,7 +229,7 @@ There are more functions and features that can be assigned to the constituents i
     \draw[sequence,-,edge-style] (com.south) -- ++(0,-1em) -| (det.north);
     \draw[sequence,-,edge-style] (com.south) -- ++(0,-1em) -| (nou.north);	
     \end{tikzpicture}
-    \caption{Representation of Example \ref{ex:1} as feature rich constituency graph}
+    \caption{Representation of Example \ref{ex:1} as feature rich constituency tree}
     \label{fig:mcg-graph-example}
 \end{figure}
 
@@ -237,10 +239,11 @@ Next, Figure \ref{fig:mcg-graph-example} summarises everything discussed above i
 
 %Generating automatically feature rich constituency structure such as the one in Figure \ref{fig:mcg-graph-example} is the general aim in the current work.
 
-Next I describe what opportunities and limitations exist in automatically generating rich SFL analyses as until now it has not been possible to use these detailed analysis in computational contexts. This makes them unavailable for corpus work, for training data in machine learning and other end-user application scenarios provided as motivation in the Sections \ref{sec:motivation} and \ref{sec:motivation-business} above.
+Next I describe what opportunities and limitations exist in automatically generating rich SFL analyses as until now it has not been possible to use these detailed analysis in computational contexts. This makes them unavailable for corpus work, for training data in machine learning and other end-user application scenarios provided as motivation in the Sections \ref{sec:motivation} above.
 
-\section{The problem of parsing with SFGs}
+\section{Computing with SFG - a practical problem}
 \label{sec:problem}
+%the problem of parsing with SFGs
 
 %\todo[inline]{
 %    But, until now it has not been possible to use these
@@ -272,7 +275,7 @@ SFL since it has been established has been primarily concerned with the paradigm
 
 This may be surprising as the syntagmatic dimension is implicit and present everywhere in the SFL literature. For instance all example analyses in the \textit{Introduction to Functional Grammar} \citep{Halliday2013} are predominantly syntagmatic. Moreover, Robin Fawcett for decades promotes the motto \textit{no system network without realisation statements} \citep[9]{Fawcett88-good}. \citet{Bateman2008} presents in detail why there is a severe imbalance between syntagmatic and paradigmatic axes in SFL, how it came to be this way and how it is especially damaging to the task of automatic text analysis. Next I describe the main problems and hint at how potential solutions may look like (described Section \ref{sec:solution}). 
 
-\citet{ODonnell2005} offer a detailed description to the long history of SFL being applied in computational contexts yielding with productive outcomes on language theorising, description and processing. The transfer between SFL and computation typically involved a delay between the theoretical formulation and the computational instantiation of that formulation \citep[139]{BatemanMatthiessen88} \citep[19]{MatthiessenBateman91}. The theoretically formulated ideas contain hidden pitfalls that are revealed only upon explicit formulations required by in computation \citep[27]{Bateman2008}. 
+\citet{ODonnell2005} offer a detailed description to the long history of SFL being applied in computational contexts yielding with productive outcomes on language theorising, description and processing. The transfer between SFL and computation typically involved a delay between the theoretical formulation and the computational instantiation of that formulation \citep[139]{BatemanMatthiessen88} \citep[19]{MatthiessenBateman91}. The theoretically formulated ideas contain hidden pitfalls that are revealed only upon explicit formulations required by in computation \mbox{\citep[27]{Bateman2008}}. 
 
 The active exchange between the SFL theory and computation has been almost entirely oriented towards automatic \textit{natural language generation}. Such systems would use abstract semantic specifications and communicative goals to produce grammatically correct and well connected texts achieving those goals. This area has been shown to be successful in part due to decomposition of language along the paradigmatic axis using functionally motivated sets of choices between functionally motivated alternatives \citep{McDonald80}.
 
@@ -383,7 +386,7 @@ Now that the places of covert constituents are explicitly marked and the recover
     \resizebox{\textwidth}{!}{%
         \begin{tabular}{cccccc|c|c|c|c|c|}
             \hline
-            \multicolumn{1}{|c|}{\textit{She_i}}   & \multicolumn{1}{c|}{\textit{seemed}} & \multicolumn{1}{c|}{\textit{null_i}}   & \multicolumn{1}{c|}{\textit{to}} & \multicolumn{1}{c|}{\textit{worry}} & \textit{about} & \textit{null_i}    & \textit{missing} & \textit{the} & \textit{river} & \textit{boat.} \\ \hline
+            \multicolumn{1}{|c|}{\textit{She_i}}   & \multicolumn{1}{c|}{\textit{seemed}} & \multicolumn{1}{c|}{$\emptyset_i$}   & \multicolumn{1}{c|}{\textit{to}} & \multicolumn{1}{c|}{\textit{worry}} & \textit{about} & $\emptyset_i$ & \textit{missing} & \textit{the} & \textit{river} & \textit{boat.} \\ \hline
             \multicolumn{11}{|c|}{Attributive configuration}                                                                                                                                                                                                                         \\ \hline
             \multicolumn{1}{|c|}{Agent} & \multicolumn{1}{c|}{}       & \multicolumn{9}{c|}{Attribute}                                                                                                                                                                               \\ \cline{1-1} \cline{3-11} 
             & \multicolumn{1}{c|}{}       & \multicolumn{9}{c|}{Two Role Cognition configuration}                                                                                                                                                        \\ \cline{3-11} 
@@ -406,8 +409,10 @@ Considering the problems above how could the vast search space of grammars such 
 
 Some linguistic frameworks, other than SFL, have been shown to work well in computational contexts solving problems similar to the ones identified above. Instead of attempting to find novel solutions within the current framework an alternative approach, I argue in the next section, would be to establish cross-theoretical and inter-grammatical links to enable integration of the ready solutions.
 
-\section{On theoretical compatibility and reuse}
+\section{Theoretical motivation - on theoretical compatibility and reuse}
 \label{sec:reuse}
+%on theoretical compatibility and reuse
+
 % reuse motivation, context to parsing 
 In the past decades many significant progresses have been made in natural language parsing framed in one or another linguistic theory each adopting a distinct perspective and set of assumptions about language. The theoretical layout and the available resources influence directly what is implemented into the parser and each implementation approach encounters challenges that may or may not be common to other approaches in the same or other theories. 
 
@@ -425,14 +430,15 @@ In the last years \textit{Dependency Grammar} \citep{Tesniere2015} became quite 
 As the dependency parse structures provide information about functional dependencies between words and grants direct access to the predicate-argument relations and can be used off the shelf for real world applications. 
 This information alone makes the dependency grammar a suitable candidate to supplement the syntagmatic account missing in SFGs and provide some functional hooks for reducing complexity in parsing with SFGs. One of the goals in this work is to investigate to which degree the dependency grammar is structurally and functionally compatible with SFGs to undergo a cross theoretic transformation. This hypothesis is investigated at the theoretical level in Chapter \ref{ch:dependecy-grammar} and then indirectly evaluated empirically in Chapter \ref{ch:evaluation} based on Stanford Dependencies parser version 3.5 \citep{Marneffe2008a,Marneffe2008, Marneffe2014}. 
 
-The problem of accounting for the \textit{null elements}, mentioned above, is not addressed neither in SFL nor in Dependency Grammar. It is, however, in detail addressed in the Government and Binding Theory (GBT) \citep{Chomsky81,Haegeman1991} which is one of Chomsky's Transformational Grammars \citep{Chomsky1957}. One other goal in this thesis is to investigate to which degree GBT accounts of null elements can be reused as DG or SFG structures to undergo a cross-theoretic transformation enabling those accounts in DG or SFG contexts. In Chapter \ref{ch:gbt} I introduce GBT and investigate this hypothesis providing some of the cross-theoretic and inter-grammatical links to Dependency and SFL grammars that as we will see in Chapter \ref{ch:semantic-parsing} benefits the Transitivity analysis.
+The problem of accounting for the \textit{null elements}, mentioned above, is not addressed neither in SFL nor in Dependency Grammar. It is, however, in detail addressed in the Government and Binding Theory (GBT) \citep{Chomsky81,Haegeman1991} which is one of Chomsky's Transformational Grammars \citep{Chomsky1957}. One other goal in this thesis is to investigate to which degree GBT accounts of null elements can be reused as DG or SFG structures to undergo a cross-theoretic transformation enabling those accounts in DG or SFG contexts. Chapter \ref{ch:gbt} introduces GBT and investigate this hypothesis providing some of the cross-theoretic and inter-grammatical links to Dependency and SFL grammars that as we will see in Chapter \ref{ch:semantic-parsing} benefits the Transitivity analysis.
 
 %Chapter \ref{ch:dependecy-grappamr} and \ref{ch:gbt} besides introducing the Dependency grammar and correspondingly Government and Binding Theory show how these frameworks relate to each other and to which degree they are compatible to undergo a conversion process for the purpose of reuse.
 
-\section{Thesis Goals and Proposed Solution}
+\section{Aims and scope}
 \label{sec:solution}
+%Thesis Goals and Proposed Solution
 
-This thesis aims at a reliable modular method for parsing unrestricted English text into a feature rich constituency structure using Systemic Functional Grammar (SFG).
+This thesis aims at a modular method for parsing unrestricted English text into a Systemic Functional constituency structure using fragments of Systemic Functional Grammar (SFG) and dependency parse trees.
 
 As will be described in Chapter \ref{sec:sota}, some parsing approaches use a syntactic backbone which is then flashed out with an SFG description. Others use a reduced set or a single layer of SFG representation; and the third group use an annotated corpus as the source of a probabilistic grammar. Regardless of approach, each limits the SFG in one way or another, balancing the depth of description with language coverage: that is either \textit{deep description but a restricted language} or \textit{shallow description but broad language coverage} is attempted. The current thesis tilts towards the latter: while keeping the language coverage as broad as possible the aim is to provide, in the parse result, as many systemic features as possible.
 
@@ -528,9 +534,9 @@ The two main system networks targeted in this are MOOD and TRANSITIVITY (both br
 %    Chapter X does this for DG
 %    Chapter Y does this for GB.}
 
-\subsection{The Implementation Architecture}
+\subsection{Parsimonious Vole architecture}
 \label{sec:architecture}
-The current thesis is accompanied by a software implementation - the Parsimonious Vole parser. It is written in Python programming language and is available as open source distribution (\url{https://bitbucket.org/lps/parsimonious-vole}). This section provides an overview to the construction process.
+The current thesis is accompanied by a software implementation - the Parsimonious Vole parser. It is written in Python programming language and is available as open source distribution\footnote{\url{https://bitbucket.org/lps/parsimonious-vole}} . This section provides an overview to the construction process.
 
 The parser follows a pipeline architecture depicted in Figure \ref{fig:pipeline-overview} where, starting from an input text, a rich systemic functional constituency structure is progressively built. Figure \ref{fig:pipeline-overview} provides three types of boxes: the rounded rectangles represent the parsing steps, the green trapezoid boxes represent input and output data while the orange double framed trapezoid boxes represent additional resources involved in the parsing step. The parsing steps linearly flow from one to the next via green trapezoid boxes on the left-hand side, which represent input-output data in between the steps. On the right-hand side are positioned double edged orange trapezoids representing fixed resources needed by some operations. For example, the \textit{constituency graph creation} step takes a normalised dependency graph for input and produces a constituency graph as output.
 
@@ -629,7 +635,7 @@ On the right-hand side a series of green vertical arrows are provided naming pha
 
 One important feature of this implementation is its heavy reliance on graph pattern matching and other operations using graph patterns described in Chapter \ref{ch:data-structures}. 
 
-The parsing process starts with an input English text and ends with production of a Rich Constituency Graph. Input Text is first parsed with the Stanford Dependency parser \citep{chen2014fast} version 3.5 (\url{https://nlp.stanford.edu/software/nndep.html}) producing a Dependency Graph.
+The parsing process starts with an input English text and ends with production of a Rich Constituency Graph. Input Text is first parsed with the Stanford Dependency parser \citep{chen2014fast} version 3.5\footnote{\url{https://nlp.stanford.edu/software/nndep.html}} producing a Dependency Graph.
 
 The dependency graphs often contain errors. Some of these errors are predictable and so easy to identify and correct. Also, some linguistic phenomena are treated in a slightly different manner than that proposed in the current thesis. Therefore the dependency graph produced by the Stanford parser is \textit{Corrected and Normalised} using graph pattern matching against collections of known errors and a set of normalization rules encoded as graph patterns.
 
@@ -678,241 +684,41 @@ Also it brings the following theoretical and practical contributions:
     \item A small test corpus to evaluate the Parsimonious Vole parser.
 \end{itemize}
 
-\section{Provisional Thesis Structure}
-\todo[inline]{
-    1: introduction \\
-    2: SFG parsing problem (simple explanation) and SOTA \\
-    3: Architecture presentation, introducing challenges of every step and make future references, also the structure of the thesis. \\
-    4: SFL grammar \\
-    5: Dep Grammar \\
-    5: GBT (has to stay here somehow) \\
-%    6: the data structures + operations \\ no more data structures, dictribute where needed
-    7: the structure creation (introducing basic computer scientific definitions of data structures and other needs) (introducing the exact SFG grammar constituents) \\
-    8: the syntactic feature enrichment (introducing basic computer scientific definitions of data structures and other needs) (introducing exact Mood features) \\
+\section{Overview of the thesis}
+\label{sec:thesis-structure}
 
-    9: the semantic feature enrichment (introducing basic computer scientific definitions of data structures and other needs) (introducing exact Cardiff Transitivity features) \\
+Chapter \ref{ch:introduction} has provided an introductions to the work described in this thesis. It has indicated the are to which it seeks to contribute, and described the motivation of work from an applied and a theoretical perspective. In Chapter \ref{ch:sota} a list of selected works on parsing with SFG is presented and briefly discussed. 
+
+Chapter \ref{ch:sfg} provides and overview of the SFL theoretical foundations. There are two outstanding traditions in SFL each providing a theory of grammar. First is developed in Sydney by Halliday, Matthiessen, Hassan, Martin, Rose and others. The second is developed in Cardiff by Fawcett, Tucker, Tench and others. I present both schools in first two sections of the chapter and then, in the third section, I provide a comparative critical discussion on both theories of grammar motivating relaxation of the rank scale, approach to structure formation, unit classes and few other concepts relevant to current work. 
+
+In the following chapter I provide a description of the grammar implemented in the Parsimonious Vole which. It is a selection of unit classes from both Sydney and Cardiff Grammars following the theoretical motivation from the previous chapter. Here is also presented a selection of two system networks: MOOD and TRANSITIVITY that were selected to demonstrate how the current parsing method works. The former system network is tightly linked to the syntagmatic variations in the structure whereas the latter describes ideational choices of the semantic structures and, thus, is farther from the surface variations. In order to integrate this system network I use a lexical database of verb meanings called Process Type Database \citet{Neale2002}. 
 
 
-    10: Empirical Evaluation \\
-    11: Conclusions (what has been achieved and outlook) \\
-    
-}
+Chapter \ref{ch:dependecy-grammar} introduces the Dependency Grammar \citeyear{Tesniere59}, starting with it's origins and foundations, evolution into its modern form, its applications in computational contexts particularly highlighting the Stanford grammatical model and parser. The usage of dependency grammar and dependency parse graphs is motivated in \ref{sec:syntagmatic-account} as the primary input into the current parsing pipeline for creating the constituency structure. The last part of the chapter provides a cross theoretical bridge from the dependency grammar towards the systemic functional grammar integrated into the Parsimonious Vole implementation. 
+
+Next chapter starts with an introduction of Government and Binding Theory (GBT) explaining where the empty constituents occur in sentences. These constituents were motivated in \ref{sec:problem} and are a part of solution for parsing with TRANSITIVITY system network. The second section of the chapter provides an inventory of different null elements and the last section provides, just like in the previous chapter, a cross theoretical overview, this time from GBT phrase parse structures into Stanford dependency grammar.
+
+Chapter \ref{ch:data-structures} makes the transition towards the computer science by introducing sets, feature structures and graphs used to represent linguistic constructs already mentioned in the previous chapters. An important role, in the current work, play the pattern graphs and the operations enabled by using them presented in Sections \ref{sec:pattern-graphs} -- \ref{sec:pattern-based-operations}. I also system networks in a simplified form corresponding to how they are currently used followed by a brief discussion. 
+
+%todo, provide here description of the two chapters
+
+Chapter \ref{ch:evaluation} describes how the Parsimonious Vole parser was evaluated with a small evaluation set created for this parser. The chapter describes the evaluation settings and the results for syntactic and semantic parsing. Chapter \ref{ch:conclusions} concludes this work by providing a thesis summary overview, indications for practical applications of this work and future directions to follow. 
 
 
-%\section{References}
-%todo [JB] useful references in introduction
-%[Butler2003] Structure and Function 
-%[Hjelmslev1953] - Prolegomena-to-a-Theory-of-Language-by-Luis-Hjmeslev
-%[Elke Teich 1999 ] - Systemic Functional Grammar \& Natural Language Generation - Ch5
-
-
-%\begin{Verbatim}
+%\todo[inline]{
+%    1: introduction \\
+%    2: SFG parsing problem (simple explanation) and SOTA \\
+%    3: Architecture presentation, introducing challenges of every step and make future references, also the structure of the thesis. \\
+%    4: SFL grammar \\
+%    5: Dep Grammar \\
+%    5: GBT (has to stay here somehow) \\
+%%    6: the data structures + operations \\ no more data structures, dictribute where needed
+%    7: the structure creation (introducing basic computer scientific definitions of data structures and other needs) (introducing the exact SFG grammar constituents) \\
+%    8: the syntactic feature enrichment (introducing basic computer scientific definitions of data structures and other needs) (introducing exact Mood features) \\
+%
+%    9: the semantic feature enrichment (introducing basic computer scientific definitions of data structures and other needs) (introducing exact Cardiff Transitivity features) \\
 %
 %
-%% feedback Chapter 1 + 2
-%Dear Eugene,
-%
-%thanks for file; attached are the detailed comments and corrections and
-%suggestions for Chapters 1 + 2. I suggest some reorganisation of the
-%introduction and how the materials in the current chapter 2 are described, you will need to work through the comments to get the
-%sense of this. But, in short, I think an organisation along the
-%lines:
-%
-%Chapter 1: introduction, reasons and goals
-%Chapter 2: SFG
-%Chapter 3: State of the Art in approaches to Parsing with SFG and complexity
-%Chapter 4: DepGrammar
-%Chapter 5: GBT (perhaps, haven't read these yet)
-%
-%would get the thesis off to a better start. Also you need to think
-%about whether all the detail of the SFG variants is important enough
-%for your task. You will need to provide some more detail of the
-%organisation of the actual grammars as well in any case, as otherwise
-%you can't talk about Mood and Transitivity and the like. This is
-%all clarified in the comments. Alternatively you say very little about
-%these and introduce them when you get to the later chapters: that
-%might make sense; I'll see when I get that far. If one went that
-%road, it would mean not including comments about Mood and Transitivity
-%in the current chapter 2 though, which might be awkward.
-%
-%I'll proceed with the other chapters, but as you will see, you have
-%a fair bit to get going with in any case.
-%
-%I will not be able to work on the thesis after the end of March. 
-%
-%theses don't really work like that; so we'll see how far you get.
-%You (and I) don't want a repeat of the Daniel situation.
-%
-%Let me know if anything is unclear.
-%
-%Best,
-%John.
-%
-%%feedback Chapter 1 + 2
-%
-%Dear Eugene,
-%
-%Comments/corrections for chapters 3 + 4 attached.
-%
-%Now I'm getting more of a view of the thesis, I'd say that
-%at present, systemicists will get confused because they'd
-%wonder why alien things like GB and dependency grammar
-%appear, and formal/computational linguists would get
-%confused because they wouldn't be clear why one would
-%want to take something like SFL. This can be managed
-%fairly straightforwardly I suspect by setting up the
-%argument in the Introduction in a clear way, so that
-%everyone knows just why these things are coming together.
-%I'd suggest the following kind of outline for the
-%introduction to make that work, let me know if you
-%have any problems or questions about this as it
-%would seem (to me) to be a good way of making all
-%the bits fits together in a reasonably convincing
-%fashion. This would also help avoid a reoccurring problem
-%in your text at the moment, where you frequently want
-%to talk about things that you have not yet introduced - this
-%just makes the text confused and impossible to follow (many
-%examples of this are picked out explicitly in the comments).
-%
-%So...
-%
-%Structure the Intro to the thesis more like this:
-%
-%First, point to the increasing and increasingly recognized
-%need for deeper, richer semantic/pragmatic analyses across
-%a broad range of applications: corpora, human-machine
-%interaction, intelligent interfaces and assistance robotics,
-%whatever you can find with references supporting the
-%claim.
-%
-%Second, a large amount of description of this kind has
-%traditionally been done, and done a lot, in SFL. Here again
-%you need to find a good collection of example 'applications'
-%in SFL (not computational) where the deeper analysis
-%has been found useful and give references: education,
-%text/discourse analysis (critical), whatever plus references.
-%
-%But, until now it has not been possible to use these
-%detailed analysis in computational contexts: this makes
-%them unavailable for corpus work, for training data in
-%machine learning, etc. etc. (add as many points as occur
-%to you).
-%
-%There have been attempts to make this work (which you
-%will come back to and describe in Chapter X in detail), however,
-%but these have not worked. As you you say you will describe in detail
-%in Chapter X, there is however a strong diagnostic as to
-%just why these attempts have not been successful: i.e., the
-%lack of structural detail that SFG descriptions typically
-%provide. This is argued in general in Bateman (2008)
-%and Teich (1999) [and any other references you can find].
-%
-%You then give EXAMPLES of some difficult cases, where
-%you illustrate what an SFG analysis would like look and
-%you point out the lack of structural detail, informally
-%so that it can be understood directly without further
-%technical detail. Preferably bringing out some
-%cases where it is evident that there is no information,
-%e.g., about raising and control (Teich) and anything
-%else which would make interpretation difficult.
-%
-%Your proposed solution to this problem, and the goal of the thesis,
-%is therefore to add some more structural information to a
-%complete augmented SFG account by drawing on frameworks which
-%have demonstrated coverage of structural detail and which
-%also have supported computational instantiation. This will
-%be shown and evaluated in the thesis.
-%
-%So, the thesis goal and outline will be to (and you list them
-%explicitly like this too):
-%- characterise SFL in its two major variants
-%- characterise the previous attempts to parse with SFL and their problems
-%- set out two further linguistic frameworks which (a) have
-%strong accounts of structural relationships, (b) have shown
-%themselves supportive of computational instantiation, and (c) can
-%be shown to exhibit suggestive theoretical/descriptive
-%links with SFG: in particular, DG and GB.
-%
-%Chapter X does this for DG
-%Chapter Y does this for GB.
-%
-%- Following this, Chapter Y+1 brings these altogether in a single
-%architecture (can be short: material from the current introduction
-%about the system architecture goes here, or can be longer, if
-%you take the material about merging GB and DG and then with SFG
-%here too: this might be best).
-%
-%- rest of chapters go into details.
-%
-%- Chapter $-1 Evaluation
-%- Chapter $ What has been achieved and outlook.
-%
-%
-%I think this kind of explicit form in the Introduction of
-%the thesis would tell a convincing story that
-%would make the most of what you currently have and simply wrap
-%this in a structure that readers can follow and accept. Then
-%you strengthen the existing bits of text to explicitly draw
-%attention to these goals as you go so that the reader
-%remembers where they are and what you are trying to do (and why).
-%I think this is a fair bit of work still, but relatively
-%straightforward as it is more about imposing structure and
-%getting things in the right order. Definitely a thesis in
-%there struggling to get out! :-)
-%
-%Best,
-%John.
-%
-%%feedback Chapter 5
-%
-%Hi Eugen,
-%
-%here is chapter 5 commented. In this one, there are many more
-%comments about content that will need fixing up, so not just
-%style of presentation. Many of the problems though come, I suspect,
-%because you have not yet introduced the algorithm and pipeline
-%and its datastructures sufficiently that the reader has any
-%idea what your formalisations here are attempting to do. I think
-%many of them can just disappear, since you certainly won't
-%be able to use them anywhere. To define a data structure, you
-%don't need a full first-order theory, that is overkill. You
-%do not get any points for formalisation; you'd only get points
-%for appropriate, necessary and well motivated formalisation,
-%and many of the definitions in this chapter do not meet
-%this requirement. You only need as much formalism as necessary
-%to get the job done. And the job is the task that you need
-%to have described as the pipeline of the system: probably best
-%immediately after the discussion of GB. There are many
-%interesting decisions made in this chapter, but they are
-%just lost in the mass of probably hardly relevant detail.
-%So introducing the pipeline and its data structures first,
-%would give you a better way of picking out just that which
-%is a crucial contribution of your thesis, i.e., the stuff
-%that makes parsing work. Providing definitions of
-%morphisms between graphs does *not* do that; and it is
-%hardly your job and has been done more or less completely
-%before in appropriate formal texts in any case.
-%
-%In short, you need to provide the new architecture and pipeline
-%chapter and rewrite this one accordingly.
-%
-%Let me know when that has happened, as that will be the next
-%major version that it would be sensible for me to comment on
-%I think. The actual details of the parsing algorithm that
-%occurs in subsequent chapters will I hope be more straightforward,
-%once the groundwork is out of the way.
-%
-%Best,
-%John.
-%
-%---
-%Am 08.03.18 um 22:00 schrieb Eugen Costezki:
-%> I wanted to say that this chapter 5 represented a special kind of struggle  as I was tempted to define entire computer science.
-%
-%yes, I noticed! :-) Fortunately, you do not need to do this...
-%so simplifications are ahead!
-%
-%Best,
-%John
-%
-%\end{Verbatim}
+%    10: Empirical Evaluation \\
+%    11: Conclusions (what has been achieved and outlook) \\   
+%}

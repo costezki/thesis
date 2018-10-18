@@ -1,45 +1,10 @@
-\chapter{Mood parsing: the syntax}
+\chapter{Creating the systemic functional constituency structure}
 \label{ch:parsing-algorithm}
 
-%\section{Syntactic parsing}
-%    \subsection{Stage 1: Preprocessing} 
-%    \subsection{Stage 2: The Implemented System Networks}
-%    \subsection{CG generation}
-%    \subsection{CG enrichment} 
-%
-%\section{Semantic Parsing}
-%\subsection{generation of empty elements}
-%\subsection{PTDB}
-%\subsection{generation of patterns from PTDB}
-%\subsection{enrichment of CG graph from PTDB patetrns}
+The considered input into the parsing pipeline are Stanford dependency parse graphs. These graphs are then rewritten into systemic constituency graphs. The process by which this happens is the focus of the current chapter. Dependency graphs are sometimes erroneous or treat certain linguistic phenomena in an incompatible way with current approach. Therefore a preprocessing stage is needed to correct and canonicalise the dependency graphs which is covered in the first two sections of the chapter. Then in the last section I present in detail the process by which the systemic functional constituency parse graph is created. 
 
-%The parsing algorithm transforms DGs into rich SF constituency graphs.
-%
-%* pre-process
-%
-%* 1st Mapping - CG with multiple class assignments - top down approach
-%
-%%* Class Reduction - Revised internal structure and reduced class assignments - bottom up
-%
-%* Enrichment of units with systemic feature selections 
-%
-%* Null element creation
-%
-%* Transitivity parsing
-%
-%- Generating Transitivity patterns from PTDB
-%
-%- Enrichment with TR Patterns
-
-\section{Algorithm overview}
-
-
-\section{Preprocessing -- canonicalization of DGs}
+\section{Canonicalisation of dependency graphs}
 \label{sec:preprocessing1}
-The Stanford Parser applies various machine learning(ML) techniques to parsing. It's accuracy increased over time to $\approx92\%$ for unlabelled attachments and $\approx89\%$ for labeled ones (in the version 3.5.1). This section addresses known error classes of wrongly attached nodes or wrongly labelled edges and nodes. 
-
-As the Stanford parser evolved, some error classes changed from one version to another (v2.0.3 -- v3.2.0 -- 3.5.1). Also the set of dependency labels for English initially described in \citep{Marneffe2008, Marneffe2008a} changed to a cross-linguistic one (starting from v3.3.0) described in \citep{Marneffe2014}. 
-
 Beside stable errors, there are two other phenomena that are modified in the preprocessing phase: \textit{copula} and \textit{coordination}. They are not errors per se but simply an incompatibility between how Stanford parser represents them and how they need to be represented for processing by the current algorithm and grammar.
 
 In this section I describe a set of transformation operations on the dependency graph before it is transformed into systemic constituency graph. The role of preprocessing phase is bringing in line aspects of dependency parse to a form compatible with systemic constituency graph creation process by (a) correcting known errors in DG, (b) cutting down some DG edges to form a tree (c) changing Stanford parser's standard handling of copulas, coordination and few other phenomena. This is achieved via three transformation types: (a) \textit{relabelling of edge relations}, (b) relabelling node POS, and (c) reattachment of nodes to a different parent. 
@@ -49,7 +14,7 @@ Stanford parser employs an extra edge for each of the conjuncts such that there 
 
 Some common patterns occurring between noun, verb and adjective conjuncts are depicted below in figures \ref{fig:conj-noun-subj} - \ref{fig:conj-verb-subj}.
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 \centering
 \begin{minipage}[b]{0.45\textwidth}
 \centering
@@ -90,7 +55,7 @@ Some common patterns occurring between noun, verb and adjective conjuncts are de
 \end{minipage}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 \centering
 \begin{minipage}[b]{0.45\textwidth}
 \centering
@@ -145,13 +110,13 @@ Some common patterns occurring between noun, verb and adjective conjuncts are de
 \label{fig:conj-verb-subj}
 \end{figure}
 
-The main reason these extra edges need to be removed is to avoid double traversal of the same node via different paths (which will lead to creation of two constituents).  For example, if multiple subject relations occur in the DG then multiple subject are going to be instantiated in CG which is not intended in the grammar. Rather only one complex unit needs to be created with the subject role composed of two noun phrases (see discussion in the Section \ref{sec:coordination}). 
+The main reason these extra edges need to be removed is to avoid traversal of the same node via different paths. This, in the current algorithm, has as consequence execution multiple times of the same operation such as for example creation of multiple constituents from the same DG node, which of course is undesirable. For example, if multiple subject relations occur in the DG then multiple subject are going to be instantiated in CG which is not covered in the grammar. Rather only one complex unit needs to be created with the subject role composed of two noun phrases (see discussion of this case in the Section \ref{sec:coordination}). 
 
-The straight forward way to fix it this problem is removing functional edges to/from each conjunct except the first one. There are two generic patterns in figures \ref{fig:conj-inc-tight} and \ref{fig:conj-out-tight} correspondingly with incoming and outgoing edges that are transformed into the forms depicted in \ref{fig:conj-inc-loose} and \ref{fig:conj-out-loose}. 
+The way I fix this problem is by removing functional edges to/from each conjunct except the first one. There are two generic patterns in figures \ref{fig:conj-inc-tight} and \ref{fig:conj-out-tight} correspondingly with incoming and outgoing edges that are transformed into the forms depicted in \ref{fig:conj-inc-loose} and \ref{fig:conj-out-loose}. 
 
 I split the cases into two: patterns with incoming dependency edges and outgoing ones. First, see the pattern of conjuncts with \textit{incoming dependency} relations represented in Figure \ref{fig:conj-inc-tight} and exemplified in Figures \ref{fig:conj-noun-subj} - \ref{fig:conj-preps}. In SFG terms it corresponds to cases when the functional element of a parent constituent is filled by a complex unit below.
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 \begin{minipage}{0.45\linewidth}
 	\begin{tikzpicture}[]
 	\node[pattern-node, anchor=center] (e){X};
@@ -187,7 +152,7 @@ I split the cases into two: patterns with incoming dependency edges and outgoing
 
 The second is the pattern of conjuncts with \textit{outgoing dependency relations} depicted in Figure \ref{fig:conj-out-tight}. In SFG terms it correspond to cases when a unit is sharing an element with another conjunct unit. These are mainly the cases of conjuncted verbs or copulas and are further discussed in the Chapter \ref{ch:gbt} about null elements. In GBT terms, the second to last conjuncts may miss for example the subject constituent if the conjuncts are verbs or copulas as in Figures  \ref{fig:conj-copula-subj} - \ref{fig:conj-verb-subj}. 
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 \begin{minipage}{0.45\linewidth}
 	\begin{tikzpicture}[]
 	\node[pattern-node, anchor=center] (e){X};
@@ -229,7 +194,7 @@ Moreover, despite that a variety of verbs are recognised as copulative e.g. \tex
 
 This case is sometimes accompanied by two relations that create cycles in th DG. They are the \textit{xsubj}, the relation to a controlling subject and \textit{ref}, the relation to a referent. The two relations are removed and their resolution is transferred to the semantic analysis stage of the algorithm.
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 \centering
 \begin{minipage}[b]{0.45\textwidth}
 \centering
@@ -286,7 +251,7 @@ Second, all the outgoing connections from the copula complement are transferred 
 
 Figure \ref{fig:copula-initial} represents the generic pattern of copulas in Stanford DGs. The outgoing relations are distinguished between those in the filter as \textit{rel\_dep} and the rest simply as \textit{rel} while the incoming relations are not discriminated. Figure \ref{fig:copula-final} captures the final state of the transformation where the filtered outgoing relations stay attached to the complement node while the rest incoming and outgoing relations are moved to the verb.  
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 \begin{minipage}{0.45\linewidth}
 	\begin{tikzpicture}[]
 	\node[pattern-node, anchor=center] (cop){VB};
@@ -331,7 +296,7 @@ In case of conjuncted copulas like in the example in Figure \ref{fig:copula-conj
 The Figure \ref{fig:clausal-complement-jj} represents a dependency parse exemplifying a clausal complement with an adjectival predicate. In this analysis there is a main clause governed by the verb \textit{to paint} and the second one by the adjective \textit{white}. 
 In SFL Figure \ref{fig:clausal-complement-jj} receives a different analysis as it is represented in Table \ref{tab:adjectival-complement}.
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 	\centering
 	\begin{dependency}[dep-style]
 		\begin{deptext}[]
@@ -348,7 +313,7 @@ In SFL Figure \ref{fig:clausal-complement-jj} receives a different analysis as i
 	\label{fig:clausal-complement-jj}
 \end{figure} 
 
-\begin{table}[H]
+\begin{table}[!ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
@@ -368,7 +333,7 @@ Certainly, depending on the linguistic school, opinions may diverge on the synta
 
 To accommodate such cases the dependency graph is changed from pattern in Figure \ref{fig:xcomp-jj-init} to form in Figure \ref{fig:xcomp-jj-final}. The \textit{xcomp} relation is transformed into \textit{dobj} and the subject of the embedded clause (if any) becomes the direct object (\textit{dobj}) in the main clause.
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 	\begin{minipage}{0.45\linewidth}
 		\centering
 		\begin{tikzpicture}[]
@@ -397,8 +362,12 @@ To accommodate such cases the dependency graph is changed from pattern in Figure
 	\end{minipage}
 \end{figure}
 
-\section{Preprocessing -- error correction}
+\section{Correction of errors in dependency graphs}
 %TODO group errors by operation type
+The Stanford Parser applies various machine learning(ML) techniques to parsing. It's accuracy increased over time to $\approx92\%$ for unlabelled attachments and $\approx89\%$ for labelled ones (in the version 3.5.1). This section addresses known error classes of wrongly attached nodes or wrongly labelled edges and nodes. These errors have been discovered during the development of Parsimonious Vole parser and are corrected to increase the result accuracy. 
+
+As the Stanford parser evolved, some error classes changed from one version to another (v2.0.3 -- v3.2.0 -- 3.5.1). Also the set of dependency labels for English initially described in \citep{Marneffe2008, Marneffe2008a} changed to a cross-linguistic one (starting from v3.3.0) described in \citep{Marneffe2014}.
+
 As noted by \citet{Cer2010a} the most frequent errors are related to structures that are hard to attach i.e. prepositional phrases and relative clauses. During the implementation of current parser there had been discovered a set of errors, most frequent of which are described in this section and how are they treated. These errors are specific to Stanford Parser versions v2.0.3 -- 3.2.0. This section may constitute a valuable feedback for SDP error analysis. 
 
 \subsection{\textit{prep} relations from verb to free preposition}
@@ -435,7 +404,7 @@ The \textit{xcomp} relation stands for open clausal complements of either a verb
 
 To fix this I transform all the instances of \textit{xcomp} relation to \textit{ccomp} if the dependent verb has a local subject (nsubj) or a finite verb as depicted in Figures \ref{fig:xcomp-init} - \ref{fig:xcomp-final}.
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 \begin{minipage}{0.45\linewidth}
 \centering
 	\begin{tikzpicture}[]
@@ -539,7 +508,7 @@ In English base form of the verb often coincides with present simple form (non 3
 
 The algorithm checks the presence of the preposition \textit{to} (linked via \textit{aux} dependency relation) in front of the verb. If the preposition is present then the verb POS is changed to VB and reverse, if the auxiliary preposition is not present the verb POS is changed into VBP. 
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 \begin{minipage}{0.45\linewidth}
 \centering
 	\begin{tikzpicture}[]
@@ -876,18 +845,20 @@ The algorithm searched for the pattern depicted in Figure \ref{fig:aux-init} and
 
 \section{Creation of systemic constituency graph from dependency graph}
 \label{sec:creation-constituency-graph}
-This section describes how the systemic constituency structure is generated from the dependency graph. Even if at first sight they appear isomorphic, DGs and CGs differ in their structure. The CG is created in two phases as presented in the Algorithm \ref{alg:creation-of-cg}. The first phase generates an incomplete CG through a top-down breadth-first traversal of a DG. The second phase complements the first one ensuring creation of all CG constituents through a bottom-up DG traversal.
+This section describes how the systemic constituency structure is generated from the dependency graph. This is known in computer science as graph/tree rewriting. 
 
+In the prototype implementation no pre-existing algorithm has been used for graph rewriting but the focus was directed towards understanding the specificities of transforming from dependency into systemic constituency graphs. In the future work the algorithm can be replaced with the state of the art methods in graph rewriting. 
+ 
+The currently implemented process consists of DG traversal and execution of generative operations on a parallel structure, progressively building the CG. The choice of the generative operation is based on a rule table described in Section \ref{sec:rule-table} The DGs and CGs resemble each other but they are not isomorphic. The CG is created in two phases presented in the Algorithm \ref{alg:creation-of-cg}. The first phase, through a top-down breadth-first traversal of a DG, generates, using a rule-set, an incomplete CG that misses the heads and few other elements for each CG unit. Also no unit classes are specified, with except if that unit is a clause. The second phase, through a bottom-up DG traversal, complements the first one ensuring creation of all CG constituents, corresponding to missing unit elements and assigns the unit class. 
 
-
-\begin{algorithm}[H]
+\begin{algorithm}[!ht]
 	\Input{ \dg (the dependency graph), \rt }
 	\Output{ \cg (the constituency graph)}
 	\Begin{
-		create the bootstrap \cg by top-down traversal \;
+		create the partial \cg by top-down traversal \;
 		complete the \cg by bottom-up traversal \; 
 	}
-	\caption{Constituency graph creation}
+	\caption{Creation of the constituency graph}
 	\label{alg:creation-of-cg}
 \end{algorithm}
 
@@ -896,21 +867,19 @@ Before presenting the two stages of creation I will first reiterate over the dif
 %dependecy difference - justification for 1st phase skipping heads
 \subsection{Dependency nature and implication on head creation}
 \label{sec:dep-implications}
-As explained in Section \ref{sec:dependecy-relations-sfl}, the nature of dependency relations is different in dependency graphs and in systemic functional constituency graphs. 
+In Section \ref{sec:dependecy-relations-sfl} is explained the different dependency relation nature in dependency graphs and in systemic functional constituency graphs. The DG uses a \textit{parent-daughter dependency} while in Constituency Graphs there is a \textit{sibling dependency}. This difference implies that, when mapped into CG, a DG node, stands for both a unit and that unit's head. In other words a DG node corresponds to two functions and unit classes at different rank scales. For example the root verb in DG corresponds to the clause node and the lexical item which fills the Main Verb of the clause. 
 
-The DG uses a \textit{parent-daughter dependency} while in Constituency Graphs there is a \textit{sibling dependency}. This difference implies that, when mapped into CG, a DG node, stands for both a unit and that unit's head. In other words a DG node corresponds to two functions at different rank scales.For example the root verb in DG corresponds to the clause node and the lexical item which fills the Main Verb of the clause. 
+The two functions at different rank scales is the main reason why the creation algorithm is separated into two phases with a traversal top-down and another bottom up. In current approach, the top-down perspective considers the DG node functioning in the upper rank. The result of the top-down phase is a constituency graph without head (and sometimes few other) elements/nodes.
 
-In current approach, the top-down perspective considers the DG node as representing the upper most rank. The bottom-up perspective considers the DG nodes as representing the lower most rank. Thus the generation algorithm first traverses the graph in a top-down order and generating the units as appropriate and then bottom up in order to create their heads.
-
-The result of the top-down phase is a constituency graph without head nodes. Therefore the bottom-up phase is performed by traversing th constituency graph and not on the dependency graph. The traversal task is to locally resolve which dependency nodes form the syntactic head. The local resolution is possible because of the tight coupling between the dependecy and constituency graphs established in the top-down phase. It is explained in the section below.
+The bottom-up perspective considers the DG nodes functioning in the lower rank and aims at creating the remaining nodes, mainly heads. The bottom-up phase is performed by traversing the constituency graph and not on the dependency graph. As the dependency nature in CG is among siblings, the traversal task seeks to spot and locally resolve the missing elements. The local resolution is performed based on the syntagmatic unit structure with the aid of the tight coupling between the dependency and constituency graphs that is explained in the section below.
 
 \subsection{Tight coupling of dependency and constituency graphs}
 \label{sec:tight-coupling}
-At the creation stage, the CG is tightly coupled with the original DG. This allows navigating easily from one graph to the other one via references stored within the nodes of each of them. I say that a graph node is \textit{aware} of it's ascription in another graph if it carries information to which nodes it is linked within the second graph.
+At the creation stage, the CG is tightly coupled with the original DG. It means that each CG node has associated a corresponding DG node in DG together with the set of immediate child nodes. This coupling allows navigating easily from one graph to the other one via stored references. We say that a graph node is \textit{aware} of its ascription in another graph if it carries information to which nodes it is linked within the second graph.
 
 %The DG nodes carry a stack of CG nodes resembling the rank scale order of units to which it belongs. 
 
-Through a stack of CG nodes, the DG nodes are made aware of which CG nodes and in which order they subsume them (Figure \ref{fig:aware-dg}). On the other hand, the CG nodes are also made aware through a list of DG nodes, over which DG nodes do they span (Figure \ref{fig:aware-mcg}). This way the positioning information is available bidirectionally about CG an DG structures.
+Through a stack of CG nodes, the DG nodes are made aware of which CG nodes and in which order they subsume them (Figure \ref{fig:aware-dg}). On the other hand, the CG nodes are also made aware through a list of DG nodes, over which DG nodes do they span (Figure \ref{fig:aware-cg}). This way the positioning information is available bidirectionally about CG an DG structures.
 
 \begin{figure}[!ht]
 	\begin{minipage}{0.45\linewidth}
@@ -936,87 +905,97 @@ Through a stack of CG nodes, the DG nodes are made aware of which CG nodes and i
 		child {node[pattern-node,text width=5em, below =4em of cl.east, anchor=east] {mainVerb1\\(\textit{smiled})}};
 		\end{tikzpicture}
 		\caption{Dependency aware CG nodes}
-		\label{fig:aware-mcg}
+		\label{fig:aware-cg}
 	\end{minipage}
 \end{figure}
 
-The Figure \ref{fig:aware-dg} depicts a dependency graph. Each node has a stack of ids corresponding to constituents in the CG (Figure \ref{fig:aware-mcg}). Conversely, in Figure \ref{fig:aware-mcg}, depicts a constituency graph where the constituent nodes carry a set of tokens corresponding to DG nodes. This way the DG in Figure \ref{fig:aware-dg} and the CG in \ref{fig:aware-mcg} are aware of each other. 
+The Figure \ref{fig:aware-dg} depicts a dependency graph. Each node has a stack of ids corresponding to constituents in the CG (Figure \ref{fig:aware-cg}). Conversely, in Figure \ref{fig:aware-cg}, depicts a constituency graph where the constituent nodes carry a set of tokens corresponding to DG nodes. This way the DG in Figure \ref{fig:aware-dg} and the CG in \ref{fig:aware-cg} are aware of each other. 
 
-The node awareness has two interesting properties worth exploring. First, the DG nodes receive a vertical constituency strip. Each strip is a direct path from the root to the bottom of the constituency graph where the word of the DG is found. These strips are the very same ones explored in the parsing method explored by \citet{Day2007}.    
-Second, the CG nodes receive a horizontal span over DG nodes enabling exploration of elements linear order. These two properties could eventually be explored in future work to inform or verify the correctness of the constituency graph.
+This node awareness has two interesting properties worth exploring. First, the DG nodes receive a vertical constituency strip. Each strip is a direct path from the root to the bottom of the constituency graph where the word of the DG is found. These strips are the very same ones explored in the parsing method explored by \citet{Day2007}.    
+Second, the CG nodes receive a horizontal span over DG nodes enabling exploration of elements linear order. These two properties could eventually be explored in future work to inform or verify the correctness of the constituency graph. In the present work the application of the node awareness is limited to the complete construction of the CG.
 
 % graphs are created according to rule tables
-\subsection{Mapping Rule Tables}
-\label{sec:mapping-rule-table}
+\subsection{Rule tables}
+\label{sec:rule-table}
 
-Constituency Graphs are created through a top-down breadth-first walk of dependency graph. During the traversal each visited edge triggers execution of a \textit{creational operation} on the growing CG on the side. To know what operation to execute a rule table is used where the edge type, head and tail nodes are mapped to a creational operation and eventually a parameter (specifying the element type if a constituent is to be created).
+Constituency Graphs are created through a top-down breadth-first walk of dependency graph. During the top-down breadth-first walk of DG each visited node triggers execution of a \textit{generative operation} on the growing CG on the side. To know what operation to execute a rule table is used where the edge, head and tail nodes are mapped to a generative operation and eventually a parameter (specifying the element type if a constituent is to be created).
 
-A simplified example of the rule table is presented in Table \ref{tab:rule-table}. It can be regarded as an attribute value matrix or a Python dictionary where the left column titled: key, contains a unique \textit{dependency graph context} serving as a rule trigger; while the left side column named: value, contains the operation to be executed within the given context. 
-
-Current implementation uses three operation types: (a) \textit{creating a new constituent} under a given  one (b) \textit{creating a new sibling} to the given one (c) \textit{extend} a constituent with more dependency nodes. 
-
-The parameter is used only for the operations (a) and (b) and specifies which element the new constituent is filling as described in Section \ref{sec:sydney-theory-of-grammar} and \ref{sec:cardiff-theory-grammar}. Most of the time there is only one element provided but in the case of prepositional phrases and clauses it is impossible to specify purely on syntactic basis the exact functional role and thus multiple options are provided (Adjunct or Complement) and then in lather parsing phases, which account for the verb semantics, these options ideally are reduced to one.  
+A simplified example of the rule table is presented in Table \ref{tab:rule-table}. It can be regarded as an attribute value matrix (implemented as a Python dictionary) where the left column, the \textit{key}, contains a unique \textit{dependency graph context} serving as a rule trigger; while the left side column, the \textit{value}, contains the operation to be executed within the given context. 
 
 %TODO refer to teh full rule tables in Appendix
-%\begin{table}[!ht]
-%\centering
-%\begin{tabular}{|l|l|l|l|}
-%\hline
-%  & \textbf{Key} & \textbf{Operation}       & \textbf{Parameter}  \\ \hline
-%1 & nsubj        & new\_constituent         & Subject             \\ \hline
-%2 & csubj        & new\_clause\_constituent & Subject             \\ \hline
-%3 & prepc        & new\_clause\_constituent & Complement, Adjunct \\ \hline
-%4 & VB-prep-NN   & new\_constituent         & Complement, Adjunct \\ \hline
-%5 & NN-prep-NN   & new\_constituent         & Qualifier           \\ \hline
-%6 & VB-advmod-WR & new\_constituent         & Complement          \\ \hline
-%7 & VB-advmod-RB & new\_constituent         & Adjunct             \\ \hline
-%8 & mwe          & extend\_current          &                     \\ \hline
-%9 & nn           & extend\_current          &                     \\ \hline
-%\end{tabular}
-%\caption{Rule table example mapping (specific or generic) dependency context to constructive operation}
-%\label{tab:rule-table}
-%\end{table}
-%
-
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|l|c|l|l|}
 		\hline
 		\multirow{2}{*}{} & \multirow{2}{*}{\textbf{Key}} & \multicolumn{2}{c|}{\textbf{Value}}                                                                 \\ \cline{3-4} 
 		&                               & \multicolumn{1}{c|}{\textit{\textbf{Operation}}} & \multicolumn{1}{c|}{\textit{\textbf{Parameter}}} \\ \hline
-		1                 & nsubj                         & new\_constituent                                 & Subject                                          \\ \hline
-		2                 & csubj                         & new\_clause\_constituent                         & Subject                                          \\ \hline
-		3                 & prepc                         & new\_clause\_constituent                         & Complement, Adjunct                              \\ \hline
-		4                 & VB-prep-NN                    & new\_constituent                                 & Complement, Adjunct                              \\ \hline
-		5                 & NN-prep-NN                    & new\_constituent                                 & Qualifier                                        \\ \hline
-		6                 & VB-advmod-WR                  & new\_constituent                                 & Complement                                       \\ \hline
-		7                 & VB-advmod-RB                  & new\_constituent                                 & Adjunct                                          \\ \hline
-		8                 & mwe                           & extend\_current                                  &                                                  \\ \hline
-		9                 & nn                            & extend\_current                                  &                                                  \\ \hline
+		1                 & nsubj                         & new constituent                                 & Subject                                          \\ \hline
+		2                 & csubj                         & new constituent                         & Subject \& clause                                          \\ \hline
+		3                 & prepc                         & new constituent                         & Complement, Adjunct \& clause                             \\ \hline
+		4                 & VB-prep-NN                    & new constituent                                 & Complement, Adjunct                              \\ \hline
+		5                 & NN-prep-NN                    & new constituent                                 & Qualifier                                        \\ \hline
+		6                 & VB-advmod-WR                  & new constituent                                 & Complement                                       \\ \hline
+		7                 & VB-advmod-RB                  & new constituent                                 & Adjunct                                          \\ \hline
+		8                 & mwe                           & extend current                                  &                                                  \\ \hline
+		9                 & nn                            & extend current                                  &                                                  \\ \hline
 	\end{tabular}
-	\caption{Rule table example mapping (specific or generic) dependency context to constructive operation}
+	\caption{Example of rule table mapping specific and generic dependency context to generative operations}
 	\label{tab:rule-table}
 \end{table}
 
-There are two types of keys in the rule table: the \textit{generic} ones where the key consist of the (non-extended) dependency relation and the \textit{specific} ones surrounded by the POSes of head and tail edge nodes taking the form \mbox{\textit{Tail--relation--Head}}. For example \textit{nsubj} relation (on row 1) always leads to creation of a Subject nominal constituent regardless if it is headed by a noun, pronoun or adjective. Since all individual cases lead to the same outcome it suffices to map the dependency relation to the creation of a new constituent with Subject role ignoring the POS context of head and tail nodes. The same holds for \textit{prepc} relation (on the table row 3) as it always leads to creation of subordinate clause constituent with Complement or Adjunct roles. So the generic relations can be viewed as equal to the form \mbox{\textit{Any--relation--Any}} only that the nodes are omitted due to redundancy.
+Current implementation uses three operation types: (a) \textit{creating a new constituent} under a given  one (b) \textit{creating a new sibling} to the given one (c) \textit{extend} a constituent with more dependency nodes. 
 
-In the case of \textit{prep} relation (on the rows 4 and 5) the story is different. Its interpretation is highly dependent on its context given by the parent/tail and child/head nodes. If it is connecting a verb and a noun then the constituent prepositional phrase takes the role of either Complement or Adjunct in the clause. But if the prep relation is from a noun to another noun, then it is a prepositional phrase with Qualifier function in the nominal group.
+The parameter is used only for the operations (a) and (b) and specifies which element the new constituent is filling as described in Section \ref{sec:sydney-theory-of-grammar} and \ref{sec:cardiff-theory-grammar}. Most of the time there is only one element provided but in the case of prepositional phrases and clauses it is impossible to specify purely on syntactic basis the exact functional role and thus multiple options are provided (Adjunct or Complement) and then in lather parsing phases, when the verb semantic configurations are verified, these options are reduced to one.  
 
-Some dependency relation are not mapped to operation of creating a new but rather extend the existing constituent with all nodes succeeding current one in the DG. These operation is used for two reasons: either (a) the constituent truly consists of more than one word, for example the cases of multi word expressions (e.g. ice-cream) marked via \textit{mwe} relation (table-row 8) or (b) the relation (with or without it's POS context) is insufficiently informative for instantiating a constituent node and is postponed for the second phase of the CG creation.
+There are two types of keys in the rule table: the \textit{generic} ones where the key consist of the (non-extended) dependency relation and the \textit{specific} ones surrounded by the POSes of head and tail edge nodes taking the form \mbox{\textit{Tail--relation--Head}}. For example \textit{nsubj} relation (row 1) always leads to creation of a Subject nominal constituent regardless if it is headed by a noun, pronoun or adjective. Since all individual cases lead to the same outcome it suffices to map the dependency relation to the creation of a new constituent with Subject role ignoring the POS context of head and tail nodes. The same holds for \textit{prepc} relation (row 3) as it always leads to creation of subordinate clause constituent with Complement or Adjunct roles. So the generic relations can be viewed as equal to the form \mbox{\textit{Any--relation--Any}} only that the nodes are omitted due to redundancy.
+
+In the case of \textit{prep} relation (rows 4 and 5) the story is different. Its interpretation is highly dependent on its context given by the parent/tail and child/head nodes. If it is connecting a verb and a noun then the constituent prepositional phrase takes the role of either Complement or Adjunct in the clause. But if the prep relation is from a noun to another noun, then it is a prepositional phrase with Qualifier function in the nominal group.
+
+Some dependency relation are not mapped to operation of creating a new but rather extend the existing constituent with all nodes succeeding current one in the DG. These operation is used for two reasons: either (a) the constituent truly consists of more than one word, for example the cases of multi word expressions (e.g. ice-cream) marked via \textit{mwe} relation (row 8) or (b) the relation (with or without it's POS context) is insufficiently informative for instantiating a constituent node and is postponed for the second phase of the CG creation.
 
 Note that the contextualised relations are ``slightly'' generalised by reducing POS to first two letters which can be up to four letters long. For example nouns generically are marked as NN but they may be further specified as NNP, NNPS and NNS or verbs (VB) may be marked as VBD, VBG, VBN, VBP, and VBZ depending on their form. 
 
-Next I explain the top-down traversal phase which is the core essence of the constituency graph creation. 
+Now that I covered the rule table structure I briefly present the algorithm for making rule selections based on simple or contextualised keys.  
+
+\begin{algorithm}[!ht]
+    \Input{ \rt, \edge}
+    \Output{ \rrule}
+    \Begin{
+        %	\tcp{simple key is the first segment of DG relation}
+        \simpleKey $\leftarrow$ the simplified label on the \edge   \;
+        \headPos $\leftarrow$ the POS of the \edge head node \;
+        \tailPos $\leftarrow$ the POS of the \edge tail node \;
+        %	\tcp{specific/contextualised key is the simple key surrounded by the edge 
+        %					nodes part of speech trimmed to their first two characters}
+        \ctxKey $\leftarrow$ concatenate (\tailPos + \simpleKey + \headPos) \;
+        \If{\ctxKey index \KwTo \rt}
+        {
+            \rrule $\leftarrow$ value for \ctxKey from \rt \;
+        }
+        \ElseIf {\simpleKey index \KwTo \rt}
+        {
+            \rrule $\leftarrow$ value for \simpleKey from \rt \;
+        }
+        \Else
+        {
+            \rrule $\leftarrow$ None \;
+        }
+        \Return{\rrule}
+    }
+    \caption{Operation selection in the rule table based on the edge type}
+    \label{alg:look-up}
+\end{algorithm}
+
+The Algorithm \ref{alg:look-up} is based on two dictionary lookups: one for specific key (contextualised by the edge relation and its nodes) and another one for generic key based on the edge relation alone. The \rt is conceived as a Python dictionary with string keys and and two-tuple containing the \operation and the \elementType parameter. If the key is found (either specific or generic) in the \rt then the operation and parameter are returned otherwise None is returned. 
+
+Next I explain the top-down traversal phase which is the cornerstone of the constituency graph creation. 
 
 \subsection{Top down traversal phase}
 \label{sec:first-phase}
-
-The goal of this first phase is to bootstrap a partial constituency graph starting from a given dependency graph and a table with mapping rules. The CG is created as ap parallel structure through the process of breadth-first traversal on DG edges as described in Algorithm \ref{alg:phase-one}.
+The goal of this first phase is to bootstrap a partial constituency graph starting from a given dependency graph and a rule table. The CG is created as a parallel graph structure through the process of breadth-first traversal on DG edges as described in Algorithm \ref{alg:phase-one}. The rewriting of the DG graph into a partial CG is performed as follows. DG nodes, starting from the root, are traversed top-down breadth first order and for each visited node apply the creation or extension operation as provided in the rule table. 
 
 % phase one
-\begin{algorithm}[H]
+\begin{algorithm}[!ht]
 	\Input{ \dg (the dependency graph), \rt }
 	\Output{ \cg (the constituency graph)}
 	\Begin{
@@ -1024,65 +1003,31 @@ The goal of this first phase is to bootstrap a partial constituency graph starti
 		make the \cg root node aware of the \dg root node\;
 		\For{ \edge \KwTo list of \dg edges in BFS order}
 		{
-			\rrule $\leftarrow$ find the suitable rule for the current edge in the \rt \label{line:choose-oper} \;
-			\operation $\leftarrow$ get operation from the rule \;
-			\elementType $\leftarrow$ if any get the parameter from the rule \label{line:param} \;
-			\tcp{as \cg and \dg nodes are aware of each other we can navigate between them}
-			\stack $\leftarrow$ the constituency stack from the tail node of the current \dg edge \;
-			\cgPointer $\leftarrow$ the top node from the \stack \;
+			\rrule $\leftarrow$ find in \rt the rule for current edge context \label{line:choose-oper} \;
+			\operation $\leftarrow$ get operation from the rule table\;
+			\elementType $\leftarrow$ get the parameter from the rule table\label{line:param} \;
+			%\tcp{\cg and \dg nodes are aware of each and we can navigate between them}
+			\stack $\leftarrow$ get the constituency stack from the tail node of the current \dg edge \;
+			\cgPointer $\leftarrow$ get the CG node from the \stack \;
 			\Children $\leftarrow$ all child nodes for the current dg edge \label{line:children}\;
 			\tcp{ constructing or extending the \cg with a new node}
 			execute the \operation on \cg given \elementType, \cgPointer and \Children \label{line:execute-oper}\;
 		}
 		\Return{\cg} \;
 	}
-	\caption{Top-down CG creation}
+	\caption{Partial constituency graph creation by top down traversal}
 	\label{alg:phase-one}
 \end{algorithm}
 
-First the CG is instantiated and an empty root node is created within the CG. Also, the root node is made aware of the root node in DG via the mechanism described in Section \ref{sec:tight-coupling}.
-
-Then the DG is traversed on its the edges in BFS order starting from the root node. As each DG edge is visited an operation is chosen based on the edge type and nodes POS along with computation of an additional set of parameters Lines \ref{line:param} - \ref{line:children}; after which the creative operation is executed with the established parameters: dependency successors (\Children), a constituent node parenting the newly created one (\cgPointer), \elementType which is chosen from the rule-table together with the \operation. Note that the head nodes are not created in current but the next phase. 
-
-The Line \ref{line:choose-oper} of the algorithm is responsible for looking up and selecting the \operation from the \rt as described in Algorithm \ref{alg:look-up}. It is based on two lookups based on the rule indexes: one contextualised to the edge relation and its nodes and another one generic based on the edge relation alone.
-
-The \rt is conceived as a Python dictionary with string keys and and two-tuple containing the \operation and the \elementType parameter. If the key is found (either specific or generic) in the \rt then the operation and parameter are returned otherwise None is returned. 
-
-\begin{algorithm}[H]
-\Input{ \rt, \edge}
-\Output{ \rrule}
-\Begin{
-%	\tcp{simple key is the first segment of DG relation}
-	\simpleKey $\leftarrow$ the simplified dependency relation of the \edge   \;
-	\headPos $\leftarrow$ the POS of the \edge head node \;
-	\tailPos $\leftarrow$ the POS of the \edge tail node \;
-%	\tcp{specific/contextualised key is the simple key surrounded by the edge 
-%					nodes part of speech trimmed to their first two characters}
-	\ctxKey $\leftarrow$ \tailPos + \simpleKey + \headPos \;
-	\If{\ctxKey index \KwTo \rt}
-		{
-			\rrule $\leftarrow$ rule indexed with \ctxKey from \rt \;
-		}
-	\ElseIf {\simpleKey index \KwTo \rt}
-		{
-			\rrule $\leftarrow$ rule indexed with \simpleKey from \rt \;
-		}
-	\Else
-		{
-			\rrule $\leftarrow$ None \;
-		}
-	\Return{\rrule}
-	}
-	\caption{Operation selection in the mapping rule table based on the edge type}
-	\label{alg:look-up}
-\end{algorithm}
-
-In Python function are first class objects allowing objects to be called (executed) if they are of callable typed. This duality allows storing the functions directly in the \rt and then, upon lookup they are returned as objects but because they are also callable these objects are executed with the expected set of parameters based on their function aspect. The possible operation have been already explained in Section \ref{sec:mapping-rule-table}: \textit{extend current} and \textit{new (sibling) constituent}. Next I present the pseudo-code for each of them. Note that these operations do not return anything because their effect is on the input \cg and \dg. 
+First the CG is instantiated and an empty root node is created within. Also, the root node is made aware of the root node in DG as described in Section \ref{sec:tight-coupling}. Then the DG is traversed in breadth first order (BFS) starting from the root node and as each DG edge is visited an operation is chosen based on the edge type and POS of the connected nodes (Lines \ref{line:param} - \ref{line:children}). The Line \ref{line:choose-oper} of the algorithm is responsible for looking up and selecting the \operation from the \rt as described in Algorithm \ref{alg:look-up}.
+Then the creative operation is executed with the established parameters: dependency successors (\Children), a constituent node parenting the newly created one (\cgPointer), \elementType which is chosen from the rule-table together with the \operation. %Note that the head nodes are not created in current but the next phase. 
+ 
+In Python function are first class objects allowing objects to be called (executed) if they are of callable typed. This duality allows storing the functions directly in the \rt and then, upon lookup they are returned as objects but because they are also callable these objects are executed with the expected set of parameters based on their function aspect. The possible operation have been already explained in Section \ref{sec:rule-table}: \textit{extend current} and \textit{new (sibling) constituent}. Next I present the pseudo-code for each of the operations. Note that these operations do not return anything because their effect is on the input \cg and \dg. 
 
 % extend oper
-\paragraph{Extend constituent.} Algorithm \ref{alg:extend-current} outlines the functionality for extending current \cgPointer. It does two main things. It increases the span of an already existing CG node over more DG nodes concomitantly making them aware of each other. 
+\paragraph{Extend constituent.} Algorithm \ref{alg:extend-current} outlines the functionality for extending current \cgPointer. It does two main things. It increases the span of an already existing CG node over more DG nodes and makes them, concomitantly, aware of each other. 
 
-\begin{algorithm}[H]
+\begin{algorithm}[!ht]
 \Input { \cgPointer, \Children, \elementType, \edge, \dg, \cg}
 \Begin{
 	\tcp{handling special relations \textit{prep} and \textit{conj}}
@@ -1105,11 +1050,11 @@ In Python function are first class objects allowing objects to be called (execut
 	\label{alg:extend-current}
 \end{algorithm}
 
-If, however, the \edge relation is a conjunction or a preposition then the children list is extended with the free nodes that stand for the preposition or conjunction in place and eventually neighbouring punctuation marks (line \ref{line:free-node}). 
+If, however, the \edge relation is a conjunction or a preposition then the children list is extended with the free nodes that stand for the preposition or conjunction in place and eventually neighbouring punctuation marks (line \ref{line:free-node}). %The reason why preposition or conjunction nodes are free in DG si because Stanford scheme integrates them as edge labels, described in Sections \ref{sec:collapsed-cc-output}.
 
 This exceptional treatment is due to the fact that \textit{prep} and \textit{conj} relations are always specialised by the preposition or conjunction in place. For details on this aspect of Stanford Dependency Grammar please refer to Section \ref{sec:collapsed-cc-output}.
 
-\begin{figure}
+\begin{figure}[!ht]
 \centering
 \begin{minipage}[b]{0.45\textwidth}
 \centering
@@ -1138,22 +1083,22 @@ This exceptional treatment is due to the fact that \textit{prep} and \textit{con
 \label{fig:challenging-free-nodes}
 \end{figure}
 
-Figure \ref{fig:challenging-free-nodes} exemplifies easy (on the left) and more difficult cases (on the right) of free node occurrence. The challenge in the second figure comes from the fact that there may be two suitable free nodes for the edge \textit{went-prep\_on-camel}. Another challenge type in resolving free nodes is when the preposition is a multi word construction. 
+Figure \ref{fig:challenging-free-nodes} exemplifies easy (on the left) and more difficult cases (on the right) of free node occurrence. The challenge in the second figure comes from the fact that there may be two suitable free nodes for the edge \textit{went-\mbox{prep\_on}-camel}. Another challenge type in resolving free nodes is when the preposition is a multi word construction. 
 
 Once all the free DG nodes are found, a new \cg node is created with \textit{Marker} \elementType spanning over them (line \ref{line:new-marker}). Then the free nodes are included into the list of \Children and all together are made aware of the current \cgPointer and vice versa. 
 
 % Create new
-\paragraph{Create new constituent.} The Algorithm \ref{alg:create-new} is a function that extends CG with a newly created constituent object (line \ref{line:add-to-graph}). The new constituent is created as a child of a pointed CG node with the \elementType extracted from the \rt together with the \operation. Once the \cg node is created, it is extended with the \Children nodes as described in Algorithm \ref{alg:extend-current} above.
+\paragraph{Create new constituent.} The Algorithm \ref{alg:create-new} is a operation that inserts into CG a new node/constituent (line \ref{line:add-to-graph}). The new constituent is created as a child of a pointed CG node with the \elementType extracted from the \rt together with the \operation. Once the \cg node is created, it is extended with the \Children nodes as described in Algorithm \ref{alg:extend-current} above.
 
 Note that only the functional element is assigned to the freshly created constituent. It's class is added in the second phase of the creation algorithm. This is due to the fact that a function can be filled by units of several classes. The bottom up traversal provides a holistic view on the constituency of each unit giving the possibility to assign a class accordingly. For details see the Chapter \ref{ch:sfg}.
 
-\begin{algorithm}[H]
+\begin{algorithm}[!ht]
 \Input { \cgPointer, \Children, \elementType, \edge, \dg, \cg}
 \Begin{
 	\node $\leftarrow$ new Constituent \;
-	\node type $\leftarrow$ \elementType \;
+	type(\node) $\leftarrow$ \elementType \;
 	%\node parent $\leftarrow$ \cgPointer \;
-	add to \cg the edge (\cgPointer, \node) \label{line:add-to-graph} \;
+	add to \cg new edge (\cgPointer, \node) \label{line:add-to-graph} \;
 	\tcp{invoking the Algorithm \ref{alg:extend-current}}
 	extend \cgPointer with \Children of \edge \;
 	}
@@ -1163,7 +1108,7 @@ Note that only the functional element is assigned to the freshly created constit
 
 A variation of the \textit{create new} is \textit{create sibling}  outlined in the Algorithm \ref{alg:create-new-sibling}. It sets the newly created constituent as a sibling of the current one and not as a child. This will make the new constituent a child of current \cgPointer's parent.
 
-\begin{algorithm}[H]
+\begin{algorithm}[!ht]
 	\Input { \cgPointer, \Children, \elementType, \edge, \dg, \cg}
 	\Begin{
 		\cgPointer $\leftarrow$ get the parent of \cgPointer \;
@@ -1176,10 +1121,8 @@ A variation of the \textit{create new} is \textit{create sibling}  outlined in t
 % create sibling 
 
 \subsection{Bottom up traversal phase}
-Chapter \ref{ch:sfg} explains that each constituent must specify the unit class and the element it is filling within parent unit. The first phase of the algorithm achieves creating most of the constituents and assigns each unit functional elements derived from the dependency graph. 
-
-The constituency graph misses, however, the unit classes and the syntactic head nodes. The second phase complements the first one by fulfilling two goals: (a) creation of constituents skipped in the first phase and (b) class assignment to the constituent units.
-\begin{figure}[H]
+Chapter \ref{ch:sfg} explains that each constituent must specify the unit class and the element it is filling within parent unit. The first phase of the algorithm achieves creating most of the constituents and assigns each unit functional elements derived from the dependency graph. The constituency graph misses, however, the unit classes and the syntactic head nodes. The second phase complements the first one by fulfilling two goals: (a) creation of constituents skipped in the first phase and (b) class assignment to the constituent units.
+\begin{figure}[!ht]
 	\centering
 	\begin{dependency}[dep-style]
 		\begin{deptext}[]
@@ -1198,10 +1141,11 @@ The constituency graph misses, however, the unit classes and the syntactic head 
 	\label{fig:dep-example1}
 \end{figure}
 
-The Figure \ref{fig:post-1st-phase-mcg} depicts and example CG generated in the 1^{st} phase with dotted lines representing places of the missing constituents. 
+The Figure \ref{fig:post-1st-phase-cg} depicts and example CG generated in the 1^{st} phase with dotted lines representing places of the missing constituents. 
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 	\centering
+    \scalebox{0.8}{
 	\begin{tikzpicture}[]
 	\node[pattern-node, anchor=center, text width=27em] (cl){Clause\\(\textit{He could have tried to unlock the door.})}
 		child { node[pattern-node, text width=5em, below =4em of cl.west, anchor = west] (s){Subject\\(\textit{He})} }
@@ -1222,15 +1166,16 @@ The Figure \ref{fig:post-1st-phase-mcg} depicts and example CG generated in the 
 	\draw[dashed] (cor5) -- (cor6);
 	
 	\end{tikzpicture}
+    }
 	\caption{Constituency graph after the top down traversal missing the head nodes}
-	\label{fig:post-1st-phase-mcg}
+	\label{fig:post-1st-phase-cg}
 \end{figure}
 
-The missing constituents are the syntactic heads for all units. The clause, besides the Main Verb, also misses the Finite, Auxiliary elements. Determining these functions strongly depends on the place within a unit and syntagmatic order in which units occur. As the first phase is performed as graph traversal, the order dimension is not available so they have to be created in the second phase. 
+The missing constituents are the syntactic heads for all units. The clause, besides the Main Verb element which si the syntactic head of the unit, also misses the Finite, Auxiliary elements. Determining these functions strongly depends on the place within a unit and syntagmatic order in which units occur. %As the first phase is performed as graph traversal, the order dimension is not available so they have to be created in the second phase. 
 
-The class membership of constituent units is decided based on three informations available within each constituent: (a) part o speech of the head dependency node (b) element type of the constituent and (c) presence or absence of child constituents and their element types. The corresponding constraints are listed in Table \ref{tab:class-constitions}. The first column carries the unit class (to be assigned), the second and third columns enumerate part of speech and element types that constituents might fill. The Second and third column enumerations are exclusive disjunction sets (S_{XOR}) because only one may be selected at a time while the list in last column is an open disjunction (S_{OR}) because any of child elements may be present. The last column is an enumeration of what child constituents might the current one have. The \textit{n/a} means that information is unavailable. 
+The class membership of constituent units is decided based on three informations available within each constituent: (a) part o speech of the head dependency node (b) element type of the constituent and (c) presence or absence of child constituents and their element types. The corresponding constraints are listed in Table \ref{tab:class-constitions}. The first column carries the unit class (to be assigned), the second and third columns enumerate part of speech and element types that constituents might fill. The Second and third column enumerations are exclusive disjunctive sets (S_{XOR}) because only one may be selected at a time while the list in last column is an open disjunction (S_{OR}) because any of child elements may be present. The last column is an enumeration of what child constituents might the current one have. The \textit{n/a} means that information is unavailable. 
 
-\begin{table}[H]
+\begin{table}[!ht]
 \centering
 \begin{tabulary}{\textwidth}{|L|L|L|L|}
 \hline
@@ -1245,174 +1190,79 @@ Adverbial Group     & RB*, WRB & Adjunct & Modifier, n/a \\ \hline
 \label{tab:class-constitions}
 \end{table}
 
-The Algorithm \ref{alg:phase-two} traverses the CG bottom-up (not the DG) with \textit{post-order depth-first} order (line \ref{line:iterate-leafs}) during which every visited constituent node is assigned a unit class and missing child constituents are created.
+The Algorithm \ref{alg:phase-two} traverses the CG (not the DG) bottom-up with \textit{post-order depth-first} order (line \ref{line:iterate-leafs}) in order to assign to every visited constituent node a unit class and create the missing child constituents.
 
-Because the CG and DG are tight coupled which means that each CG node spans over a set of DG nodes then traversing CG is equal to traversing groups of DG nodes at each step. This creates a focused mini context suitable for resolving the unit class and missing elements. 
+\begin{algorithm}[!ht]
+    \Input {\cg, \dg}
+    \Begin{
+        \For {\label{line:iterate-leafs}\node \KwTo list of \cg nodes in DFS post-order}
+        {
+            \headPos $\leftarrow$ get POS of the corresponding \dg node \;
+            \elementType $\leftarrow$ get assigned function from \node \;
+            \Children $\leftarrow$ get \node children \;
+            \tcp{assigning classes}
+            class $\leftarrow$ find class based on \headPos, \elementType and \Children \label{line:start-class-assignment}\;
+            assign \node the class \label{line:end-class-assignment}\;
+            %			\If {\label{line:start-class-assignment}\headPos \KwTo main verb POSs}
+            %				{
+            %					assign \node \textit{Clause} class \;
+            %				}
+            %			\ElseIf {\headPos \KwTo nominal POSs $\wedge$ \elementType \KwTo prepositional element types $\wedge$ Marker \KwTo \Children}
+            %				{
+            %					assign \node \textit{Prepositional Group} class \;
+            %				}
+            %			\ElseIf {\headPos \KwTo nominal POSs $\wedge$ \elementType \KwTo nominal elemement types}
+            %				{
+            %					assign \node \textit{Nominal Group} class \;
+            %				}
+            %			\ElseIf {\headPos \KwTo adverbial POSs $\wedge$ \elementType \KwTo adverbial element type}
+            %				{
+            %					assign \node \textit{Adverbial Group} class \;
+            %				}
+            %			\ElseIf {\headPos \KwTo adjectival POSs $\wedge$ \elementType \KwTo adjectival element type}
+            %				{
+            %					assign \node \textit{Adjectival Group} class \label{line:end-class-assignment} \;
+            %				}
+            
+            \tcp{creating the rest of the units}
+            \If{\label{line:is-cg-leaf} \node is not a leaf}
+            {
+                \label{line:create-remaining-element-node} create the remaining elements under the \node \;
+                %					\eIf{\node is a Clause}
+                %						{	
+                %							\label{line:create-clause-nodes} create the clause elements for \node \;
+                %						}
+                %						{
+                %							\label{line:create-head-node} create the head for the \node \; 
+                %						}
+            }
+        }
+    }
+    \caption{Creating the head units and assigning classes}
+    \label{alg:phase-two}
+\end{algorithm}
 
-When assigning unit class the following informations are considered: (a) part of speech of the head DG node that triggered node creation in the first phase (\headPos), (b) the assigned element type (\elementType) and (c) element type of each direct child (\Children of \node). Lines \ref{line:start-class-assignment} to \ref{line:end-class-assignment} assign classes according to conditions stated in Table \ref{tab:class-constitions}. 
+As mentioned above in Section \ref{sec:tight-coupling}, CG and DG are tight coupled which means that each CG node spans over a set of DG nodes. In this stage, traversal over the CG nodes is equal to traversing groups of DG nodes at each step. This creates focused mini context suitable for resolving the unit class and the missing elements out of the DG chunks. 
 
-Clause classes are assigned to units started by a non-modal verb. This rule corresponds to the one main verb per clause principle discussed in Section \ref{sec:verbal-grpoup-and-clause-division}. This approach however does not take into consideration elliptic clauses and they need additional resolution. This short coming should be considered in the future by an additional \textit{ellipsis resolution mechanism}, similar to the one for \textit{null elements} described in Chapter \ref{ch:gbt}.
+When assigning unit class the following informations are considered: (a) part of speech of the head DG node that triggered node creation in the first phase (\headPos), (b) the assigned element type (\elementType) and (c) element type of each direct child (\Children of \node). Lines \ref{line:start-class-assignment} to \ref{line:end-class-assignment} assign classes according to conditions provided in Table \ref{tab:class-constitions}. 
+
+The CG nodes corresponding to non-modal verb DG nodes are assigned clause class. This rule corresponds to the one main verb per clause principle discussed in Section \ref{sec:verbal-grpoup-and-clause-division}. This approach however does not take into consideration elliptic clauses and they need additional resolution that is considered for the future works and can be overcome by an \textit{ellipsis resolution mechanism}, similar to the one for \textit{null elements} described in Chapter \ref{ch:gbt}.
 
 The second part of algorithm creates head nodes for every non leaf constituent and in case the node is a clause then it also creates the clause elements such as: Finite, Auxiliary, Main Verb, Negator and Extension.
 
-\begin{algorithm}[!ht]
-\Input {\cg, \dg}
-\Begin{
-	\For {\label{line:iterate-leafs}\node \KwTo list of \cg nodes in DFS post-order}
-		{
-			\headPos $\leftarrow$ POS of the \dg entry node of \node \;
-			\elementType $\leftarrow$ currently assigned element of \node \;
-			\Children $\leftarrow$ get assigned elements to the children of \node \;
-			\tcp{assigning classes}
-			\If {\label{line:start-class-assignment}\headPos \KwTo main verb POSs}
-				{
-					assign \node \textit{Clause} class \;
-				}
-			\ElseIf {\headPos \KwTo nominal POSs $\wedge$ \elementType \KwTo prepositional element types $\wedge$ Marker \KwTo \Children}
-				{
-					assign \node \textit{Prepositional Group} class \;
-				}
-			\ElseIf {\headPos \KwTo nominal POSs $\wedge$ \elementType \KwTo nominal elemement types}
-				{
-					assign \node \textit{Nominal Group} class \;
-				}
-			\ElseIf {\headPos \KwTo adverbial POSs $\wedge$ \elementType \KwTo adverbial element type}
-				{
-					assign \node \textit{Adverbial Group} class \;
-				}
-			\ElseIf {\headPos \KwTo adjectival POSs $\wedge$ \elementType \KwTo adjectival element type}
-				{
-					assign \node \textit{Adjectival Group} class \label{line:end-class-assignment} \;
-				}
-			\tcp{creating the rest of the units}
-			\If{\label{line:is-mcg-leaf} \node is not a leaf}
-				{
-					\eIf{\node is a Clause}
-						{	
-							\label{line:create-clause-nodes} create the Clause elements for current \node \;
-						}
-						{
-							\label{line:create-head-node} create the head for the current \node \; 
-						}
-				}
-		}
-	}
-\caption{Creating the head units and assigning classes}
-\label{alg:phase-two}
-\end{algorithm}
-
-After the second stage, all the sentence token must be covered by CG nodes. Moreover the CG nodes build up to a constituency graph that at this stage is always a tree. Provided the class and element type the nodes are ready to be enriched with choices from systemic networks described in the next section. 
-
-\section{Feature enrichment process}
-\label{sec:enrichment-stage}
-In this stage the CG nodes are assigned features from system networks. This is achieved by visiting each CG node in a bottom-up order and based on the node class and/or element function (also refereed to as triggers) the relevant system networks are being activated and executed. The relevancy criteria is established by system's precondition set. Each network has one or a set of selector functions associated to it and when the network is activated then the selector function is executed returning the systemic choices based on the visited node context in the CG graph and features (if any already assigned).
-
-Table \ref{tab:systemic-selection-activations} associates a list of triggers to a list of systemic networks. Table \ref{tab:system-to-function-mapping} associates systems with the choice making functions. Most of the selection criteria have been first implemented as hard-coded Python functions and latter transformed into the Graph patterns with update operations (see Section \ref{sec:pattern-based-operations} describing pattern based operations).
-
-Next I describe the enrichment algorithm and then treat some of the selection functions for some of the system networks. 
-
-\begin{algorithm}[!ht]
-\Input {\cg, \dg}
-\Begin {
-	\For{\node \KwTo list of  \cg nodes in DFS postorder}
-	{
-		\For{\network \KwTo activated networks for the \node} 
-		{
-			\function $\leftarrow$ the selector function associated to the \network \;
-			\elementType $\leftarrow$ if any get the \function parameter \;
-			\label{line:selector-function}\choices $\leftarrow$  execution result of \function for \node, \cg and \elementType \;
-			\label{line:enrich-function}add the \choices to the \node \;
-		}
-	}
-}
-\caption{Enriching CG with systemic features implemented as custom methods}
-\label{alg:enrich-mcg}
-\end{algorithm}
-
-The Algorithm \ref{alg:enrich-mcg} shows how to enrich CG nodes with systemic choices using hard-coded selector functions (in the future, these hard coded selector functions will be replaced by verifying realization statements). The outer loop is a bottom-up iteration over the CG nodes in depth first (DFS) post-order. The inner loop iterates over the networks activated by the focus \node. Then a lookup in the Table \ref{tab:system-to-function-mapping} returns the function for choosing features from the system network and eventually a parameter (if the function requires it). This technique, involving a mapping table from SN to functions, is similar to the one in CG creation phase (Algorithm \ref{alg:phase-one}). The line \ref{line:selector-function} executes the selection function returning a set of choices. Then the last line assigns the choices to the \node in focus.
-
-\begin{table}[H]
-\centering
-\begin{tabulary}{\textwidth}{|L|L|}
-\hline
-\textit{Key} & \textit{System Activation Order}                                                \\ \hline
-clause       & POLARITY,VOICE, AGENCY, MOOD TYPE, INDICATIVE TYPE, DEICTICITY, TENSE, MODALITY \\ \hline
-nominal      & PERSON, ANIMACY, GENDER, NUMBER                                                 \\ \hline
-deictic      & DETERMINATION                                                   				\\ 
-\hline
-pre-deictic  & DETERMINATION                                                                   \\ \hline
-thing        & PERSON, ANIMACY, GENDER, NUMBER                                                 \\ \hline
-possessor    & PERSON, ANIMACY, GENDER, NUMBER                                                 \\ \hline
-\end{tabulary}
-\caption{System activation table depending on unit class or element type}
-\label{tab:systemic-selection-activations}
-\end{table}
-
-Currently implemented networks are outlined in Table \ref{tab:systemic-selection-activations} as associations to the node class or function. The left column represents activation triggers and the right column represents an ordered list of systems.
-
-\begin{table}[H]
-\centering
-\begin{tabulary}{\textwidth}{|L|L|L|}
-\hline
-\textit{System Name} & \textit{Python Function}   & \textit{Additional Parameter} \\ \hline
-POLARITY             & check\_polarity     &                               \\ \hline
-VOICE                & check\_voice        &                               \\ \hline
-AGENCY               & check\_agency       &                               \\ \hline
-MOOD TYPE            & mood\_type          &                               \\ \hline
-DEICTICITY           & check\_deicticity   &                               \\ \hline
-TENSE                & check\_tense        &                               \\ \hline
-MODALITY             & check\_modality     &                               \\ \hline
-DETERMINATION        & dictionnary\_lookup & determination\_dict           \\ \hline
-PERSON               & dictionnary\_lookup & person\_dict                  \\ \hline
-ANIMACY              & dictionnary\_lookup & animacy\_dict                 \\ \hline
-GENDER               & dictionnary\_lookup & gender\_dict                  \\ \hline
-NUMBER               & check\_number       &                               \\ \hline
-MOOD ADJUNCT TYPE    & dictionary\_lookup & mood\_adjunct\_dict           \\ \hline
-\end{tabulary}
-\caption{Mapping systemic networks to selection functions}
-\label{tab:system-to-function-mapping}
-\end{table}
-
-%Once the system is activated its selector function (Table \ref{tab:system-to-function-mapping}) returns the set of choices.
-
-\begin{algorithm}[!ht]
-	\Input {\cg, \dg}
-	\Begin {
-		\For{\node \KwTo list of  \cg nodes in DFS postorder}
-		{
-			\For{\network \KwTo activated networks for the \node} 
-			{
-				\function $\leftarrow$ the selector function associated to the \network \;
-				\elementType $\leftarrow$ if any get the \function parameter \;
-				\label{line:selector-function-dl}\choices $\leftarrow$  execution result of \function for \node, \cg and \elementType \;
-				\label{line:enrich-function-dl}add the \choices to the \node \;
-			}
-		}
-	}
-	\caption{Dictionary lookup selector function}
-	\label{alg:dictionary-loockup}
-\end{algorithm}
-
-The \textit{dictionary\_lookup} function is a type of \textit{naive backwards induction} (Algorithm \ref{alg:backward-induction-naive}). It checks whether the word(s) of the \textit{mcg\_node} are in a dictionary with preselected features. It is the only function that requires a parameter which is the lookup dictionary. An example of dictionary is presented in the Table \ref{tab:lookup-dict-example}
-
-\begin{table}[!ht]
-	\centering
-	\begin{tabular}{|l|l|}
-		\hline
-		\textit{Lexical item} & \textit{Feature}               \\ \hline
-		a                     & partial-non-selective-singular \\ \hline
-		all                   & positive-plural                \\ \hline
-		either                & partial-singular               \\ \hline
-		that                  & non-plural                     \\ \hline
-	\end{tabular}
-	\caption{Dictionary example for the DEICTICITY system network}
-	\label{tab:lookup-dict-example}
-\end{table}
+After the second stage, all the DG nodes must be covered by CG nodes. Moreover the CG nodes build up to a constituency graph that at this stage is always a tree. Provided the class and element type the nodes are ready to be enriched with choices from systemic networks described in the next chapter. 
 
 \section{Discussion}
-\todo[inline]{* replace hard coded selector functions with constraint checking }
+In this Chapter is described in detail a set of transformations on DGs from Stanford parser and a tree rewriting algorithm. The DG transformations are there to correct known errors in Stanford parser version 3.5.1 and to adjust treatment of certain linguistic features such as copulas, conjunction and others. The final section of the chapter describes how the DG is rewritten into a CG using create and extend operations upon graph traversal and tight coupleing between the CG and DG nodes.
 
-\todo[inline]{ assign feature with a certain probability and allow assignments of mutually exclusive features; this would require the next step of more general constraint checking employing many more other sources such as semantic, phonetics, situation etc.  }
+There are state of the art algorithms for graph rewriting with proven efficiency. The current work does not intend to be neither generic nor efficient rewriting algorithm but rather explore the process by which a DG can be rewritten into a SFL CG. In the future, to increase the speed performance, the current algorithm would have to be rewritten using for example a graph programming language or a graph rewriting formalism building. 
 
-\todo[inline]{use of logical notations (OR, XOR, AND sets)} 
+Now that it has been described how to construct the the systemic functional constituency graph, the backbone, we can turn our attention to fleshing out this backbone with systemic features selected from system networks. Or, as we will see, preselected and bundled into graph patterns in order to be attached in batches once the graph pattern has been matched. 
+
+%todo, write the conclussions
+%todo, * replace hard coded selector functions with constraint checking 
+
+%todo, assign feature with a certain probability and allow assignments of mutually exclusive features; this would require the next step of more general constraint checking employing many more other sources such as semantic, phonetics, situation etc.  
+
+%todo, use of logical notations (OR, XOR, AND sets)
 

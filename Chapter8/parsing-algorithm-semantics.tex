@@ -1,19 +1,128 @@
-\chapter{Transitivity parsing: the semantics}
+\chapter{Enrichment of the constituency graph with systemic features}
 \label{ch:semantic-parsing}
 
-Semantic Role Labeling (SRL) is a well established task in the mainstream computational linguistics. Transitivity analysis is the SFL counterpart for SRL and constitutes the focus of this chapter. 
+%todo, rewrite this intro, for broader ferature enrichment, currently it is for SRL mainly
+Semantic Role labelling (SRL) is a well established task in the mainstream computational linguistics. Transitivity analysis is the SFL counterpart for SRL and constitutes the focus of this chapter. 
 
 The general approach is to first account for covert syntactic constituents and after assign process types and participant roles according to a given resource. In current case the account for empty constituents is implemented as described in Government and Binding Theory (GBT) \citep{Haegeman1991} and the employed verb database is called Process Type Database (PTDB) \citep{Neale2002}. 
 
 Compared to SRL task, where the majority of implementations use probabilistic models trained on an annotated corpus, I employ a static data base based on which I assign a set of configurations that may be the case, or what are the possibilities, rather than the best single guess. For this reason I use the preparatory step of identifying covert constituents (i.e. Null Elements) which reduces the number of possible assignments taking the analysis close to the goal of a single ``correct'' configuration.
 
-\section{Creation of Empty Elements}
+\section{Enrichment with MOOD features}
+%todo, adapt the freshly copied content
+\label{sec:enrichment-stage}
+In this stage the CG nodes are assigned features from system networks. This is achieved by visiting each CG node in a bottom-up order and based on the node class and/or element function (also refereed to as triggers) the relevant system networks are being activated and executed. The relevancy criteria is established by system's precondition set. Each network has one or a set of selector functions associated to it and when the network is activated then the selector function is executed returning the systemic choices based on the visited node context in the CG graph and features (if any already assigned).
+
+Table \ref{tab:systemic-selection-activations} associates a list of triggers to a list of systemic networks. Table \ref{tab:system-to-function-mapping} associates systems with the choice making functions. Most of the selection criteria have been first implemented as hard-coded Python functions and latter transformed into the Graph patterns with update operations (see Section \ref{sec:pattern-based-operations} describing pattern based operations).
+
+Next I describe the enrichment algorithm and then treat some of the selection functions for some of the system networks. 
+
+\begin{algorithm}[!ht]
+    \Input {\cg, \dg}
+    \Begin {
+        \For{\node \KwTo list of  \cg nodes in DFS postorder}
+        {
+            \For{\network \KwTo activated networks for the \node} 
+            {
+                \function $\leftarrow$ the selector function associated to the \network \;
+                \elementType $\leftarrow$ if any get the \function parameter \;
+                \label{line:selector-function}\choices $\leftarrow$  execution result of \function for \node, \cg and \elementType \;
+                \label{line:enrich-function}add the \choices to the \node \;
+            }
+        }
+    }
+    \caption{Enriching CG with systemic features implemented as custom methods}
+    \label{alg:enrich-cg}
+\end{algorithm}
+
+The Algorithm \ref{alg:enrich-cg} shows how to enrich CG nodes with systemic choices using hard-coded selector functions (in the future, these hard coded selector functions will be replaced by verifying realization statements). The outer loop is a bottom-up iteration over the CG nodes in depth first (DFS) post-order. The inner loop iterates over the networks activated by the focus \node. Then a lookup in the Table \ref{tab:system-to-function-mapping} returns the function for choosing features from the system network and eventually a parameter (if the function requires it). This technique, involving a mapping table from SN to functions, is similar to the one in CG creation phase (Algorithm \ref{alg:phase-one}). The line \ref{line:selector-function} executes the selection function returning a set of choices. Then the last line assigns the choices to the \node in focus.
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabulary}{\textwidth}{|L|L|}
+        \hline
+        \textit{Key} & \textit{System Activation Order}                                                \\ \hline
+        clause       & POLARITY,VOICE, AGENCY, MOOD TYPE, INDICATIVE TYPE, DEICTICITY, TENSE, MODALITY \\ \hline
+        nominal      & PERSON, ANIMACY, GENDER, NUMBER                                                 \\ \hline
+        deictic      & DETERMINATION                                                   				\\ 
+        \hline
+        pre-deictic  & DETERMINATION                                                                   \\ \hline
+        thing        & PERSON, ANIMACY, GENDER, NUMBER                                                 \\ \hline
+        possessor    & PERSON, ANIMACY, GENDER, NUMBER                                                 \\ \hline
+    \end{tabulary}
+    \caption{System activation table depending on unit class or element type}
+    \label{tab:systemic-selection-activations}
+\end{table}
+
+Currently implemented networks are outlined in Table \ref{tab:systemic-selection-activations} as associations to the node class or function. The left column represents activation triggers and the right column represents an ordered list of systems.
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabulary}{\textwidth}{|L|L|L|}
+        \hline
+        \textit{System Name} & \textit{Python Function}   & \textit{Additional Parameter} \\ \hline
+        POLARITY             & check\_polarity     &                               \\ \hline
+        VOICE                & check\_voice        &                               \\ \hline
+        AGENCY               & check\_agency       &                               \\ \hline
+        MOOD TYPE            & mood\_type          &                               \\ \hline
+        DEICTICITY           & check\_deicticity   &                               \\ \hline
+        TENSE                & check\_tense        &                               \\ \hline
+        MODALITY             & check\_modality     &                               \\ \hline
+        DETERMINATION        & dictionnary\_lookup & determination\_dict           \\ \hline
+        PERSON               & dictionnary\_lookup & person\_dict                  \\ \hline
+        ANIMACY              & dictionnary\_lookup & animacy\_dict                 \\ \hline
+        GENDER               & dictionnary\_lookup & gender\_dict                  \\ \hline
+        NUMBER               & check\_number       &                               \\ \hline
+        MOOD ADJUNCT TYPE    & dictionary\_lookup & mood\_adjunct\_dict           \\ \hline
+    \end{tabulary}
+    \caption{Mapping systemic networks to selection functions}
+    \label{tab:system-to-function-mapping}
+\end{table}
+
+%Once the system is activated its selector function (Table \ref{tab:system-to-function-mapping}) returns the set of choices.
+
+\begin{algorithm}[!ht]
+    \Input {\cg, \dg}
+    \Begin {
+        \For{\node \KwTo list of  \cg nodes in DFS postorder}
+        {
+            \For{\network \KwTo activated networks for the \node} 
+            {
+                \function $\leftarrow$ the selector function associated to the \network \;
+                \elementType $\leftarrow$ if any get the \function parameter \;
+                \label{line:selector-function-dl}\choices $\leftarrow$  execution result of \function for \node, \cg and \elementType \;
+                \label{line:enrich-function-dl}add the \choices to the \node \;
+            }
+        }
+    }
+    \caption{Dictionary lookup selector function}
+    \label{alg:dictionary-loockup}
+\end{algorithm}
+
+The \textit{dictionary\_lookup} function is a type of \textit{naive backwards induction} (Algorithm \ref{alg:backward-induction-naive}). It checks whether the word(s) of the \textit{cg\_node} are in a dictionary with preselected features. It is the only function that requires a parameter which is the lookup dictionary. An example of dictionary is presented in the Table \ref{tab:lookup-dict-example}
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textit{Lexical item} & \textit{Feature}               \\ \hline
+        a                     & partial-non-selective-singular \\ \hline
+        all                   & positive-plural                \\ \hline
+        either                & partial-singular               \\ \hline
+        that                  & non-plural                     \\ \hline
+    \end{tabular}
+    \caption{Dictionary example for the DEICTICITY system network}
+    \label{tab:lookup-dict-example}
+\end{table}
+
+
+\section{Creation of the empty elements}
 \label{sec:creation-empty-elements}
 Sometimes a semantic participant is not mentioned (is elided) in a clause. It happens for one of two reasons: the participant mentions are contextually implicit and usually located outside the clause borders. So when they are implicit the resolution is contextual and required discourse structure awareness. This task is out of the current scope and constitutes a research field on its own. 
 
 However, when the participants are missing because they are syntactically recoverable in the sentence then they are inferred from the structure and reference nodes are created for the missing elements. This phenomena are described in GB theory specifically the \textit{Control and Binding} of empty elements \citep{Haegeman1991} which has been introduced in Section \ref{sec:null-elements-gbt}. The \textit{reference constituents} are important for increasing the completeness of semantic analysis by making the participants and their afferent label explicit.
 
-This stage is particularly important for semantic role labeling because usually the missing elements are participant roles (theta roles) shaping the semantic configuration. The most frequent are the cases of \textit{control} where the understood subject of a clause is in the parent clause like in examples \ref{ex:ctrl1} \ref{ex:ctrl3} where \textit{Subj} is a pronominal subject placeholder.
+This stage is particularly important for semantic role labelling because usually the missing elements are participant roles (theta roles) shaping the semantic configuration. The most frequent are the cases of \textit{control} where the understood subject of a clause is in the parent clause like in examples \ref{ex:ctrl1} \ref{ex:ctrl3} where \textit{Subj} is a pronominal subject placeholder.
 \begin{exe}
 	\ex\label{ex:ctrl1}Piotr is considering whether [\textit{Subj} to abandon the investigation].
 	\ex\label{ex:ctrl2}Susan promised us [\textit{Subj} to help].
@@ -231,14 +340,13 @@ Creating constituents corresponding to Wh-traces involved a slightly larger numb
 
 After the null elements are created the constituency graph is ready for the semantic enrichment stage semantic configuration are assigned to each clause. It is described in the next section.
 
-\section{Semantic enrichment stage}
+\section{Enrichment with TRANSITIVITY features}
 \label{sec:semantic-parsing}
-
-In this section is explained how the parser assigns Transitivity configurations to the constituency graph. Transitivity roughly corresponds to what is known in computational linguistics as semantic analysis of text or \textit{semantic role labeling}. In this task the clause is assigned a semantic frame called configuration in which predicate functions as the process and the participants take frame dependent roles (or functions). The nodes that do not receive any participant role are the adjuncts which act as circumstances.
+In this section is explained how the parser assigns Transitivity configurations to the constituency graph. Transitivity roughly corresponds to what is known in computational linguistics as semantic analysis of text or \textit{semantic role labelling}. In this task the clause is assigned a semantic frame called configuration in which predicate functions as the process and the participants take frame dependent roles (or functions). The nodes that do not receive any participant role are the adjuncts which act as circumstances.
 
 Because the proposed task goes beyond the syntactic structure it needs to rely on additional external semantic resources. One such resource is the Process Type Database(PTDB) created by \citet{Neale2002}. It is a table which listing possible configurations of semantic roles for each verb sense for over five thousands most popular verbs in English. This resource is then integrated into the current parser pipeline to automatically assignment semantic configurations and participant soles. How this is done is covered in the 
 
-In the following I will explain the the practical steps of generating Transitivity but not before introducing the PTDB. Then I explain how the automation of the semantic role labeling is performed and why it is important to identify and create references to empty elements. 
+In the following I will explain the the practical steps of generating Transitivity but not before introducing the PTDB. Then I explain how the automation of the semantic role labelling is performed and why it is important to identify and create references to empty elements. 
 %end chapter introduction
 
 \subsection{The Process Type Database}
@@ -562,12 +670,12 @@ The Transitivity parsing results in multiple process configurations being assign
 
 \section{Discussion}
 
-This chapter describes how the semantic role labeling from Transitivity system network is performed on top of the constituency graph. 
+This chapter describes how the semantic role labelling from Transitivity system network is performed on top of the constituency graph. 
 
 First null elements are identified and filled with proxy constituents. This process ensures higher accuracy of semantic role assignments from the configuration patterns in the second step. 
 
 The configuration patterns have been generated from the PTDB - a verb database accounting for Transitivity patterns in Cardiff grammar. In order to generate these patterns the PTDB had to be first cleaned up, unified and aligned to the present Transitivity system. Then for each configuration were generated a set of possible patterns varying based on mood, voice, process type and participants. 
 
-Finally the semantic role labeling step employs the same pattern based enrichment mechanism as the one used in Section \ref{sec:enrichment-stage}
+Finally the semantic role labelling step employs the same pattern based enrichment mechanism as the one used in Section \ref{sec:enrichment-stage}
 
 The Algorithms can be improved a great deal by externalization of constraints and conditions. Some of them however are too complex to check to be completely removed but in the next iterations the tendency should definitely be towards higher abstraction and separating the grammatic constraint as realization rules from the code. 

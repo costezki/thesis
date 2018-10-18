@@ -28,6 +28,7 @@ Example \ref{ex:demo-trans2} is slightly more complex and illustrates the main m
 
 %TODO: perhaps argue more for the need of having in the structure of something that is not visible; 
 %TODO: perhaps use the configuration definitions as an argument, that there are mandatory arguments and optional ones, and sometimes the mandatory ones are not found in the clause and that has to be somehow handled. 
+%TODO Neale thesis page 17 a nice transition
 
 \begin{table}[!ht]
     \centering
@@ -50,9 +51,9 @@ The GBT approach explains grammatical phenomena using \textit{phrase structures}
 \section{Introduction to GBT}
 \label{sec:phrase-structure}
 
-This section is set as introduction to the fundamental concepts from Government and Binding Theory. It belongs to the family of Transformational grammars (TG) or transformational-generative grammars (TGG). It is part of the theory of generative grammar that considers grammar to be a system of rules that generate exactly those combinations of words which form grammatical sentences in a given language \citep{Chomsky65}. TG involves the use of defined operations called transformations to produce new sentences from existing ones.
+This section is set as introduction to the fundamental concepts from Government and Binding Theory. It belongs to the family of Transformational grammars (TG) or transformational-generative grammars (TGG). It is part of the theory of generative grammar that considers grammar to be a system of rules that generate exactly those combinations of words which form grammatical sentences in a given language \mbox{\citep{Chomsky65}}. TG involves the use of defined operations called transformations to produce new sentences from existing ones.
 
-Chomsky developed a formal theory of grammar \citep{Chomsky56} where transformations manipulated not just the surface strings, but the parse tree associated with them, making transformational grammar a system of tree automata \citep{Stockwell1973}.
+Chomsky developed a formal theory of grammar \citep{Chomsky56} where transformations manipulated not just the surface strings, but the parse tree associated with them, making transformational grammar a system of tree automata \mbox{\citep{Stockwell1973}}.
 
 A transformational-generative (or simply transformational) grammar thus involved two types of productive rules: \textit{phrase structure rules}, such as ``S -> NP VP'' (meaning that a sentence may consist of a noun phrase followed by a verb phrase) etc., which could be used to generate grammatical sentences with associated parse trees (phrase markers, or P markers); and \textit{transformational rules}, such as rules for converting statements to questions or active to passive voice, which acted on the phrase markers to produce further grammatically correct sentences \citep[59-66]{Bach1966}. This notion of transformation proved adequate for subsequent versions including the ``extended'', ``revised extended'' and Government-Binding (GB) versions of generative grammar, but may no longer be sufficient for the latest ``minimalist'' grammar \citep{Chomsky93}. It require a formal definition that goes beyond the tree manipulation. For the purpose of the current work, however, the GBT employing the idea of transformations is perfectly suitable. I selected it because of clear and extensive descriptions of the mechanisms for identification of \textit{null elements} (also known as \textit{empty categories}) and how to provide them with an interpretation. 
 
@@ -296,8 +297,7 @@ GBT recognises four main types of empty categories: \textit{NP-trace}, \textit{W
 
 In Table \ref{tab:null-types}, [+a] refers to the anaphoric feature, meaning that the particular element must be bound within its governing category whereas [+p] refers to the pronominal feature which shows that the empty category is taking the place of an overt pronoun.
 
-%todo, is this definition well positioned here? 
-
+%is this definition well positioned here? 
 \begin{definition}[Empty Category Principle (ECP)]\label{def:ecp}
     % solution taken from https://tex.stackexchange.com/questions/307141/itemizing-theorem-body
     \leavevmode
@@ -312,8 +312,6 @@ In Table \ref{tab:null-types}, [+a] refers to the anaphoric feature, meaning tha
         \item A antecedent-governs B if and only if A governs B and A is coindexed with B \citep[442]{Haegeman1991}.
     \end{itemize}
 \end{definition}
-
-%todo some more dineitions mby?
 
 
 Next I describe in detail each empty category and the properties of corresponding overt noun type. 
@@ -668,7 +666,7 @@ The last subordinate type concerned with the PRO element is the subject clause s
 
 \subsection{NP-traces}
 \label{sec:np-traces}
-%todo, say that here we would need more than dependecy grammar, and a bit of PTDB 
+%say that here we would need more than dependecy grammar, and a bit of PTDB 
 % % % % % % % % % % % % % % % % %
 Syntactically, NP raising can occur only when there is a complement clause by moving the subject of a lower clause into a position of a higher clause. The subject of the higher clause c-commands the subject of the lower clause. This is exactly the same syntactic configuration as in the case of PRO subjects (explained in Section \ref{sec:pro-mcg}). In dependency grammar the complement clause without own subject called \textit{open clausal complement} and is introduced via \textit{xcomp} relation.
 
@@ -822,10 +820,6 @@ For clarity the Wh-group in Definition \ref{def:wh-group}. Note that Wh-group is
 \begin{definition}[Wh-group]\label{def:wh-group}
     \textit{Wh-group} is a nominal, prepositional or adverbial group that contains Wh-word either as head or as modifier. 
 \end{definition}
-
-%todo end of SFG account example disucssion?
-
-%todo move systematisation from wh-traces
 
 \begin{table}[!ht]
     \begin{tabulary}{\textwidth}{|C|C|C|C|}
@@ -999,7 +993,7 @@ Relative clauses in dependency graphs are introduced by \textit{rcmod} and \text
 
 The Zero Wh-word behaves exactly like the \textit{PRO element} in the case of non finite complement clauses discussed in Section \ref{sec:pro-mcg}. It receives thematic roles in both the higher clause and in the lower clause and is not a part of a chain like the cases of NP/Wh-movement.
 
-\section{Conclusion}
+\section{Discussion}
 This chapter has treated the identification of the \textit{null elements} in syntactic structures as this was identified as one of the major places where a mismatch between SFG and the structural requirements for Transitivity analysis. Section \ref{sec:null-elements-gbt} presented how GBT theory handles null elements and then Section \ref{sec:placing-null-elements} showed how the same principles translate into Stanford dependency graphs involving also, for guidance, a few references to SFL constituency structure.
 
 This chapter also contributes to establishing cross-theoretical connections that are among primary objectives of the current thesis. Specifically it provides translations of necessary principles and generalizations from GB theory into the context of dependency grammar. These results will be used directly in the parser implementation described in Section \ref{sec:creation-empty-elements}.

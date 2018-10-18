@@ -73,3 +73,156 @@ The pattern identifying such nodes looks like the one in Figure \ref{fig:gp3}. I
 \caption{Graph pattern that selects all the nodes that can receive semantic roles}
 \label{fig:gp3}
 \end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% System network execution bullshit
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Systemic Network Execution}
+\label{sec:system-network-execution}
+Every node from a constituency graph is enriched with feature selections grammatically characterising it. This is an important stage in the parsing algorithm discussed in Section \ref{sec:enrichment-stage}. The enrichment stage is in fact system network instantiation and ascription of complete selection paths to each constituent node . 
+
+\textit{Executing} a system network is an incremental process that builds selection paths by making choices in the system networks. There are two ways to \textit{instantiate} (or execute) a system network: either by \textit{forward activation} or \textit{backward induction} processes which both imply a different order of network traversal. 
+
+When it comes to traversing system networks and making choices there is a specific mechanism responsible for this instantiation process. The \textit{choice makers} are selector functions associated to (some) systems. Selector functions implement realization statements corresponding to a system $S_{i}$ and represents the instantiation mechanism turning the generic set of alternative choices into a concrete choice for a specific context.
+
+Each node in a constituency graph carries features whose names and values are constrained to the set of systems defined in the grammar. In this sense, systems represent constraint definitions for what features may be used and what values those features can take. The algorithm has to evaluate these constraints in order to select the set of relevant features for a given constituent. Traversing system by system within the systemic network, with a known previously selected set of features and a given syntagmatic structure a selector function is executed to make the systemic choice. 
+
+\begin{definition}[Selector Function]\label{def:selection-function}
+	A \textit{selector function} ${\sigma_{ctx}:S \rightarrow R}$ is defined from a system S to a feature structure $R$ within a given context $ctx$ where:
+	\begin{enumerate}
+		\item the context $ctx=(G,fn)$ is a binary tuple of a constituency graph $G$ and a focus node $fn \in G$ belonging to it
+		\item \textit{preselection feature set} (PFS) is the already assigned set of features to the focus node $pfs = featureSet(fn)$ 
+		\item $size(R) \in \{0,1\}$ meaning that there is either no choice made and an empty feature structure is returned or there is a choice made and a feature structure is returned with one feature bearing values from the system choice set
+	\end{enumerate}
+	subject to the following condition:
+	\begin{enumerate}
+		\item if $size(R)=1$ then for the only $f_{i} \in R $ it holds that $att(f_{i})=name(S) \ \wedge \ val(f_{i}) \subset choices(S) \ \wedge \ val(f_{i}) \neq \varnothing $
+	\end{enumerate}
+\end{definition}
+
+If the PFS is an \textit{OR set} then it requires that any of the features (at least one) must be in a Selection Path (Definition \ref{def:selection-path}). If the PFS is an \textit{AND set} then it requires that all of the features must be in a Selection Path.
+
+
+\subsection{Forward Activation}
+Forward activation is a process that enables systems to be executed (chosen from by selection function) only after choices from an older system has been already added to a selection path. In other words the selection path is constructed from older to younger systems/features.
+
+We say that a system $S_y$ \textit{activates} another system $S_o$ if and only if\\ ${\forall S_o, S_y: S_o < S_y, precondition(S_y) \cap choices(S_o) \neq \varnothing}$. Activation process is the process that ensures advancement from an older to a younger system. This implies checking and ensuring entry condition is satisfied and executing the selection function. If the entry condition of the younger system is simple then the choice in the old system suffices, however if the entry condition is a complex conjunction, then first the older sibling systems have to be selected from before entering the younger one. 
+
+\SetKwFunction{forward}{forward\_activate}
+
+\SetKwData{sp}{sp}
+\SetKwData{sn}{sn}
+\SetKwData{node}{node}
+\SetKwData{cg}{cg}
+\SetKwData{asys}{system}
+\SetKwData{cs}{choice set}
+
+\begin{algorithm}
+\Input{ \sp (current selection path), \sn (system network), \node (constituent), \cg (constituency graph) }
+	\Fn{\forward{\sp, \sn, \node, \cg}}{{
+		\For{\asys \KwTo \sn systems activated by the last \sp feature}
+			{
+				get \cs by executing \asys selection function (given \asys, \node, \cg)\;
+				append \sp by the \cs \;
+			}
+		\If{\sp has changed}
+			{
+				\forward(updated \sp, \sn, \node, \cg) \;
+			}
+	}
+}
+\caption{Forward Activation Algorithm}
+\label{alg:forward-activation}
+\end{algorithm}
+
+Algorithm \ref{alg:forward-activation} outlines how the forward activation is executed recursively. The systems that are active at a particular moment of the depend on the configuration of the \textit{selection\_path}. \textit{activated\_systems} function returns a set of systems from the system network whose preconditions are satisfied and their choices are not in the selection path (or the system has not yet been executed) $\forall S \in SN : precondition(S) \subset selection\_path,\\ choice\_set(S) \cap selection\_path = \varnothing$.
+
+For each activated system, its selector function is executed returning a selection set. The result selection is is used to extend the the selection\_path thus potentially fulfilling preconditions of younger systems. If the path has been changed then the same procedure is applied recursively to the updated path until no more changes are done to the selection\_path. 
+
+\subsection{Backwards Induction}
+Backwards induction is a process opposite to forward activation. If a system is executed yielding a selection set then the preconditions of this system are induced as valid selections in the older systems defining those precondition features, and so on until a system is reached with no preconditions. 
+
+\SetKwFunction{backwardsnaive}{backwards\_induction\_naive}
+\SetKwFunction{backwardschecked}{backwards\_induction\_verified}
+
+\begin{algorithm}
+\Input{ \sp (current selection path), \sn (system network), \node (constituent), \cg (constituency graph) }
+	
+\Fn{\backwardsnaive{\sp, \sn, \node, \cg}}{
+	
+	\For{\asys \KwTo \sn systems preconditioning selection \sp features}
+	{
+		get \cs by executing \asys selection function (given \asys, \node, \cg)\;
+		
+	 	\For{induced\_system \KwTo dependecy\_chain(act\_sys,sn) }
+	 	{choice\_set.add( precondition\_set(induced\_sys) )\;}
+	 	selection\_path += create\_selection\_path\_from(choice\_set)\;
+	}
+	\Return{selection\_path}
+}
+\caption{Naive Backwards induction}
+\label{alg:backward-induction-naive}
+\end{algorithm}
+
+The naive approach to is represented in Algorithm \ref{alg:backward-induction-naive} which executes the selection functions of leaf systems and the yielded selections induce choices in the older systems through the precondition chain down to the oldest systems of the network. 
+
+So for example if SYNTACTIC-TYPE system in Figure \ref{fig:polarity1} is executed and yields \textit{verbal-marker} feature then the Algorithm \ref{alg:backward-induction-naive} will add to the selection path the chain $negative\rightarrow interpersonal\rightarrow syntactic\rightarrow verbal-marker$.
+
+This approach works very well in classification networks or networks covering a concise vocabulary such as determiners or pronouns. Such network has selection functions on the leaf systems only. However if in the middle of the selection path there are systems with selection functions then the there may exist a conflict between what is induced through precondition of younger systems and what is yielded by the selection function. 
+
+In fact confronting the preconditions with selection function is a good technique to verify whether the SN is well constructed. Following the previous example let's imagine that INTERPERSONAL-TYPE system has it's own selection function and it yields the \textit{morphological} feature same time when the \textit{verbal-marker} is selected  in the SYNTACTIC-TYPE. Since the precondition of the latter system is the selection of \textit{syntactic} feature, then we have a mismatch in either the way systems are constructed and the precondition of the latter system needs to be changed or the selection function is poorly implemented in the former system. 
+
+The Algorithm \ref{alg:backward-induction-verified} implements the verification of whether the induced features match those from the selection function.
+
+\begin{algorithm}
+\Fn{\backwardschecked{list\_of\_leafs, sn, constituent, mcg}}{
+	\For{act\_sys \KwTo list\_of\_leafs}
+	{
+		choice\_set = execute\_selection\_function(act\_sys)\;
+		\If {choice\_set $\neq \varnothing$ }{
+			induced\_system\_set = find\_dependent(act\_sys,sn)\;
+		}
+	 	\For{induced\_sys \KwTo induced\_system\_set}
+	 	{
+	 		ind\_choice\_set = selection\_function(induced\_sys)\;
+	 		minimal\_valid\_set = precondition\_set(induced\_sys) $\cap$ choice\_set(act\_sys)\;
+	 		\eIf{minimal\_valid\_set $\subseteq$ ind\_choice\_set}
+	 		{
+		 		selection\_path += create\_selection\_path\_from(choice\_set)\;
+	 		}{
+	 		 \Raise{Execption: The precondition set different from selection function result}
+	 		}
+	 	}
+	 	\backwardschecked{induced\_system\_set, sn, constituent, mcg}
+	}
+	\Return{selection\_path}
+}
+\caption{Backwards Induction with verification mechanism}
+\label{alg:backward-induction-verified}
+\end{algorithm}
+
+It is a recursive algorithm that executes a system $S_1$, and also the systems $S_2 .. S_n$ which $S_1$ depends on an then verifies if $ \forall S_i \in dependent\_systems(S_1): precondition\_set(S_1) \cap choice\_set(S_i) \subseteq selection\_function(S_i)$
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Figures/SFL-grammar/polarity-system.pdf}
+\caption{Polarity System}
+\label{fig:polarity1}
+\end{figure}
+
+Take for instance the POLARITY system in Figure \ref{fig:polarity1}. Its default selection is \textit{positive} feature unless there is a negative marker. So we must asses NEGATIVE-TYPE system to resolve POLARITY system. But NEGATIVE-TYPE also must be postponed because we do not know if there is a negative marker unless we run tests for each marker type (i.e. presence of a ``no'' particle, negative subject or adjunct etc.). So we postpone selection decision and activate further the INTERPERSONAL-TYPE and TEXTUAL-TYPE systems and base the assessment on the selections yielded by the latter two systems. The same story is with INTERPERSONAL-TYPE which can make selections based on what SYNTACTIC-TYPE system yields. If SYNTACTIC-TYPE and TEXTUAL-TYPE systems yield no selection then we return recursively to INTERPERSONAL-TYPE and to NEGATIVE-TYPE and yield no selection in those systems as well. However if, for instance, \textit{verbal-marker} is detected in the clause then the \textit{syntactic} feature is yielded by the INTERPERSONAL-TYPE and \textit{interpersonal} by the NEGATIVE-TYPE and thus \textit{negative} is yielded by the POLARITY-TYPE. 
+
+Moreover the negative markers can be of various types and more than one can occur simultaneously without any interdependence between them so the algorithm needs to check presence of every type of negative marker i.e. verbal, nominal adverbial, conjunctive and continuative markers. 
+
+That being said the intermediary systems and features i.e. interpersonal, textual, syntactic, morphological are there for the classification purpose only and do not carry any particular algorithmic value making the network from Figure \ref{fig:polarity1} reducible to the one in Figure \ref{fig:polarity1-condensed}. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{Figures/SFL-grammar/polarity-condensed.pdf}
+\caption{Condensed Polarity System}
+\label{fig:polarity1-condensed}
+\end{figure}
+
+Execution of system networks is subject to constituent \textit{enrichment phase} of the parsing algorithm. Reducing the POLARITY network to the one in Figure \ref{fig:polarity1-condensed} would lead to loss of information which may be relevant for choice-making in other systems (e.g. MODALITY) so it is useful to expand the selection set with dependent features to achieve feature rich constituents.
