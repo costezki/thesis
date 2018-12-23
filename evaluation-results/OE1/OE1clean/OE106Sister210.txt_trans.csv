@@ -1,0 +1,401 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.21766561514195584
+,Recall,0.5227272727272727
+,F1,0.3073496659242762
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+3,0.0,"41, 62","41, 62",0,this message of yours,this message of yours,range,range
+6,4.0,"79, 89","79, 85",4,vibing wit,vibing,main,main
+1,3.0,"29, 30","26, 30",3,I,"-
+I",agent,agent
+2,1.0,"36, 39","36, 40",1,rea,read,main,main
+86,7.0,"221, 222","221, 229",7,i,is never,main,main
+24,4.0,"327, 339","327, 335",4,snapping bac,snapping,main,main
+19,1.0,"267, 268","267, 269",1,i,is,main,main
+105,4.123105625617661,"324, 355","320, 356",5,be snapping back at her all day,and be snapping back at her all day.,action,action
+18,9.055385138137417,"257, 265","248, 266",10,my siste,home and my sister,carrier,carrier
+101,9.0,"257, 294","248, 294",9,my sister is out running or something,home and my sister is out running or something,locational,locational
+101,9.0,"257, 294","248, 294",9,my sister is out running or something,home and my sister is out running or something,relational,relational
+102,1.0,"303, 305","303, 306",1,ge,get,main,main
+16,1.0,"243, 246","243, 247",1,com,come,main,main
+25,10.0,"341, 346","341, 356",10,at he,at her all day.,affected,affected
+125,0.0,"417, 418","417, 418",0,I,I,agent,agent
+33,4.0,"407, 415","407, 411",4,feel lik,feel,main,main
+28,0.0,"374, 377","374, 377",0,she,she,carrier,carrier
+127,5.0990195135927845,"427, 433","422, 434",6,sittin,been sitting,main,main
+71,1.0,"378, 379","377, 379",1,s,'s,main,main
+27,1.0,"360, 364","360, 365",1,gues,guess,main,main
+84,8.06225774829855,"374, 399","366, 400",9,she's out burning calorie,because she's out burning calories,locational,locational
+84,8.06225774829855,"374, 399","366, 400",9,she's out burning calorie,because she's out burning calories,relational,relational
+39,5.0,"467, 478","467, 473",5,talked abou,talked,main,main
+41,1.0,"485, 501","485, 502",1,with my therapis,with my therapist,affected-cognizant,affected-cognizant
+43,1.0,"552, 558","552, 559",1,subsid,subside,main,main
+46,39.01281840626232,"584, 615","583, 654",40," don't ""move on"" to other peopl","I don't ""move on"" to other people because my sis is smaller than me so.",phenomenon,phenomenon
+51,1.0,"632, 633","632, 634",1,i,is,main,main
+114,39.01281840626232,"584, 615","583, 654",40," don't ""move on"" to other peopl","I don't ""move on"" to other people because my sis is smaller than me so.",directional,directional
+44,2.0,"575, 576","573, 576",2,I,", I",cognizant,cognizant
+70,0.0,"583, 584","583, 584",0,I,I,agent-carrier,agent-carrier
+113,1.0,"601, 615","601, 616",1,to other peopl,to other people,destination,destination
+48,8.06225774829855,"625, 653","617, 654",9,my sis is smaller than me so,because my sis is smaller than me so.,attributive,attributive
+48,8.06225774829855,"625, 653","617, 654",9,my sis is smaller than me so,because my sis is smaller than me so.,relational,relational
+47,40.52159917870962,"576, 615","565, 654",50," guess I don't ""move on"" to other peopl","But yeah, I guess I don't ""move on"" to other people because my sis is smaller than me so.",mental,mental
+47,40.52159917870962,"576, 615","565, 654",50," guess I don't ""move on"" to other peopl","But yeah, I guess I don't ""move on"" to other people because my sis is smaller than me so.",two-role-cognition,two-role-cognition
+53,8.06225774829855,"635, 649","643, 650",9,smaller than m,than me,attribute,attribute
+45,1.0,"577, 581","577, 582",1,gues,guess,main,main
+50,1.0,"625, 630","625, 631",1,my si,my sis,carrier,carrier
+109,26.1725046566048,"768, 781","765, 807",29,exercises mor,or exercises more I get so angry and rude.,action,action
+54,0.0,"656, 657","656, 657",0,I,I,emoter,emoter
+37,6.082762530298219,"702, 726","708, 727",7, used to always be to he,to always be to her,relational,relational
+49,113.00442469213318,"657, 694","656, 807",114, want to be the same loving big siste,I want to be the same loving big sister that I used to always be to her but when she doesn't overeat like me or exercises more I get so angry and rude.,mental,mental
+63,4.123105625617661,"749, 755","745, 756",5,overea,n't overeat,main,main
+66,1.0,"785, 787","785, 788",1,ge,get,main,main
+56,113.0,"663, 694","663, 807",113,to be the same loving big siste,to be the same loving big sister that I used to always be to her but when she doesn't overeat like me or exercises more I get so angry and rude.,phenomenon,phenomenon
+64,1.0,"768, 776","768, 777",1,exercise,exercises,main,main
+55,1.0,"658, 661","658, 662",1,wan,want,main,main
+31,19.026297590440446,"809, 852","828, 853",20,"Have you been able to ""fix"" these responses","to ""fix"" these responses?",action,action
+73,1.0,"837, 852","837, 853",1,these responses,these responses?,affected,affected
+77,1.0,"870, 893","870, 894",1,to get a handle on them,to get a handle on them.,phenomenon,phenomenon
+76,1.0,"865, 868","865, 869",1,lik,like,main,main
+74,0.0,"854, 855","854, 855",0,I,I,emoter,emoter
+111,1.0,"854, 893","854, 894",1,I'd really like to get a handle on them,I'd really like to get a handle on them.,mental,mental
+116,1.0,"929, 932","929, 933",1,kno,know,main,main
+79,20.0,"917, 977","917, 957",20,I'd let you know you're really not alone with those feelings,I'd let you know you're really not alone,phenomenon,phenomenon
+118,21.540659228538015,"917, 977","925, 957",28,I'd let you know you're really not alone with those feelings,you know you're really not alone,mental,mental
+52,0.0,"917, 918","917, 918",0,I,I,agent,agent
+78,1.0,"909, 915","909, 916",1,though,thought,main,main
+117,20.0,"934, 977","934, 957",20,you're really not alone with those feelings,you're really not alone,phenomenon,phenomenon
+115,1.0,"925, 927","925, 928",1,yo,you,affected-cognizant,affected-cognizant
+80,13.038404810405298,"909, 977","896, 978",14,thought I'd let you know you're really not alone with those feelings,"Anyway, just thought I'd let you know you're really not alone with those feelings.",mental,mental
+80,13.038404810405298,"909, 977","896, 978",14,thought I'd let you know you're really not alone with those feelings,"Anyway, just thought I'd let you know you're really not alone with those feelings.",two-role-cognition,two-role-cognition
+88,1.0,"989, 992","989, 993",1,hav,have,main,main
+119,1.0,"1039, 1040","1039, 1041",1,i,is,main,main
+120,4.123105625617661,"1042, 1056","1046, 1057",5,all about food,about food.,attribute,attribute
+121,1.0,"1030, 1056","1030, 1057",1,this day is all about food,this day is all about food.,attributive,attributive
+121,1.0,"1030, 1056","1030, 1057",1,this day is all about food,this day is all about food.,relational,relational
+91,1.0,"1024, 1028","1024, 1029",1,suck,sucks,main,main
+95,1.0,"1030, 1037","1030, 1038",1,this da,this day,carrier,carrier
+,
+,Manual mismatching all parsed (False Negative)
+96,"30, 62", just read this message of yours,action
+7,"68, 130",I'm REALLY vibing with the watching what other people eat part,mental
+4,"68, 69",I,emoter
+8,"91, 130",the watching what other people eat part,phenomenon
+9,"133, 134",I,carrier
+97,"134, 159", get SO SO SO angry/ mood,relational
+97,"134, 159", get SO SO SO angry/ mood,attributive
+10,"135, 137",ge,main
+11,"139, 159",SO SO SO angry/ mood,attribute
+99,"166, 211",my sister and my mom don't eat as much as I d,action
+12,"166, 185",my sister and my mo,agent
+14,"193, 195",ea,main
+122,"208, 209",I,agent
+124,"209, 211", d,action
+93,"215, 228",which is neve,relational
+93,"215, 228",which is neve,attributive
+85,"215, 219",whic,carrier
+92,"224, 228",neve,attribute
+15,"241, 242",I,carrier
+100,"242, 251", come hom,relational
+100,"242, 251", come hom,directional
+17,"248, 251",hom,destination
+20,"270, 272",ou,location
+21,"296, 297",I,carrier
+103,"297, 316", will get soooo mad,relational
+103,"297, 316", will get soooo mad,attributive
+23,"307, 316",soooo mad,attribute
+26,"358, 359",I,cognizant
+94,"359, 399", guess because she's out burning calorie,mental
+94,"359, 399", guess because she's out burning calorie,two-role-cognition
+29,"374, 399",she's out burning calorie,phenomenon
+83,"380, 382",ou,location
+32,"405, 406",I,cognizant
+35,"406, 452", feel like I've been sitting on my butt eating,mental
+35,"406, 452", feel like I've been sitting on my butt eating,two-role-cognition
+34,"417, 452",I've been sitting on my butt eating,phenomenon
+128,"417, 452",I've been sitting on my butt eating,action
+38,"465, 466",I,agent
+36,"466, 515", talked about this with my therapist the other da,mental
+36,"466, 515", talked about this with my therapist the other da,three-role-cognition
+40,"480, 483",thi,phenomenon
+107,"532, 558",these feelings will subsid,action
+42,"532, 545",these feeling,affected
+114,"584, 615"," don't ""move on"" to other peopl",relational
+112,"591, 599","""move on",main
+57,"701, 702",I,carrier
+37,"702, 726", used to always be to he,attributive
+59,"718, 719",b,main
+108,"737, 763",she doesn't overeat like m,action
+61,"737, 739",sh,agent
+65,"783, 784",I,carrier
+110,"784, 806", get so angry and rude,relational
+110,"784, 806", get so angry and rude,attributive
+67,"789, 806",so angry and rude,attribute
+69,"814, 816",yo,agent
+72,"831, 835","""fix",main
+118,"917, 977",I'd let you know you're really not alone with those feelings,three-role-cognition
+81,"980, 1012",Everyone have a great Turkey Day,relational
+81,"980, 1012",Everyone have a great Turkey Day,possessive
+87,"980, 987",Everyon,carrier
+89,"995, 1012", great Turkey Day,possessed
+82,"1016, 1028",it just suck,action
+90,"1016, 1017",i,agent
+,
+,Parsed mismatching all manual (False Positives)
+41,"41, 62",this message of yours,phenomenon
+41,"41, 62",this message of yours,created-phenomenon
+68,"68, 69",I,affected-carrier
+68,"68, 69",I,agent-carrier
+68,"68, 69",I,carrier
+64,"64, 78",and I'm REALLY,process
+64,"64, 78",and I'm REALLY,attributive
+64,"64, 78",and I'm REALLY,locational
+64,"64, 78",and I'm REALLY,relational
+72,"72, 78",REALLY,attribute
+72,"72, 78",REALLY,location
+26,"26, 63","-
+I just read this message of yours,",process
+26,"26, 63","-
+I just read this message of yours,",mental
+26,"26, 63","-
+I just read this message of yours,",two-role-perception
+26,"26, 63","-
+I just read this message of yours,",three-role-cognition
+26,"26, 63","-
+I just read this message of yours,",two-role-action
+69,"69, 71",'m,main
+122,"122, 125",eat,main
+26,"26, 30","-
+I",agent-cognizant
+26,"26, 30","-
+I",agent-carrier
+26,"26, 30","-
+I",agent-perceiver
+26,"26, 30","-
+I",perceiver
+148,"148, 153",angry,main
+313,"313, 316",mad,main
+234,"234, 319","And if I come home and my sister is out running or something, I will get soooo mad...",process
+234,"234, 319","And if I come home and my sister is out running or something, I will get soooo mad...",mental
+234,"234, 319","And if I come home and my sister is out running or something, I will get soooo mad...",causative
+234,"234, 319","And if I come home and my sister is out running or something, I will get soooo mad...",two-role-cognition
+320,"320, 356",and be snapping back at her all day.,process
+320,"320, 356",and be snapping back at her all day.,two-role-action
+320,"320, 356",and be snapping back at her all day.,one-role-action
+248,"248, 266",home and my sister,affected-emoter
+248,"248, 266",home and my sister,agent
+248,"248, 266",home and my sister,affected-path
+248,"248, 266",home and my sister,affected-perceiver
+248,"248, 266",home and my sister,affected-cognizant
+248,"248, 266",home and my sister,affected-carrier
+248,"248, 266",home and my sister,affected-destination
+248,"248, 266",home and my sister,affected
+248,"248, 266",home and my sister,agent-carrier
+248,"248, 266",home and my sister,affected-possessed
+248,"248, 266",home and my sister,agent-perceiver
+248,"248, 266",home and my sister,affected-source
+248,"248, 266",home and my sister,perceiver
+294,"294, 297",", I",agent
+294,"294, 297",", I",cognizant
+294,"294, 297",", I",agent-cognizant
+294,"294, 297",", I",affected-cognizant
+294,"294, 297",", I",affected
+294,"294, 297",", I",agent-carrier
+294,"294, 297",", I",agent-perceiver
+307,"307, 316",soooo mad,phenomenon
+307,"307, 316",soooo mad,created-phenomenon
+307,"307, 316",soooo mad,created
+248,"248, 294",home and my sister is out running or something,process
+248,"248, 294",home and my sister is out running or something,action
+248,"248, 294",home and my sister is out running or something,one-role-action
+341,"341, 356",at her all day.,affected-emoter
+341,"341, 356",at her all day.,affected-path
+341,"341, 356",at her all day.,affected-perceiver
+341,"341, 356",at her all day.,affected-cognizant
+341,"341, 356",at her all day.,affected-carrier
+341,"341, 356",at her all day.,affected-destination
+341,"341, 356",at her all day.,affected-possessed
+341,"341, 356",at her all day.,affected-source
+412,"412, 453",like I've been sitting on my butt eating.,process
+412,"412, 453",like I've been sitting on my butt eating.,locational
+412,"412, 453",like I've been sitting on my butt eating.,relational
+435,"435, 453",on my butt eating.,location
+417,"417, 418",I,agent-perceiver
+417,"417, 418",I,perceiver
+374,"374, 377",she,affected-emoter
+374,"374, 377",she,agent
+374,"374, 377",she,affected-path
+374,"374, 377",she,affected-perceiver
+374,"374, 377",she,affected-cognizant
+374,"374, 377",she,affected-carrier
+374,"374, 377",she,affected-destination
+374,"374, 377",she,affected
+374,"374, 377",she,agent-carrier
+374,"374, 377",she,affected-possessed
+374,"374, 377",she,agent-perceiver
+374,"374, 377",she,affected-source
+374,"374, 377",she,perceiver
+366,"366, 400",because she's out burning calories,process
+366,"366, 400",because she's out burning calories,action
+366,"366, 400",because she's out burning calories,one-role-action
+522,"522, 531",hopefully,main
+485,"485, 502",with my therapist,affected-emoter
+485,"485, 502",with my therapist,affected-path
+485,"485, 502",with my therapist,affected-perceiver
+485,"485, 502",with my therapist,affected-carrier
+485,"485, 502",with my therapist,affected-destination
+485,"485, 502",with my therapist,affected
+485,"485, 502",with my therapist,affected-possessed
+485,"485, 502",with my therapist,affected-source
+503,"503, 516",the other day,agent
+503,"503, 516",the other day,agent-cognizant
+503,"503, 516",the other day,agent-carrier
+503,"503, 516",the other day,agent-perceiver
+480,"480, 516",this with my therapist the other day,process
+480,"480, 516",this with my therapist the other day,two-role-action
+480,"480, 516",this with my therapist the other day,action
+651,"651, 654",so.,attribute
+651,"651, 654",so.,location
+583,"583, 654","I don't ""move on"" to other people because my sis is smaller than me so.",created-phenomenon
+583,"583, 654","I don't ""move on"" to other people because my sis is smaller than me so.",process
+583,"583, 654","I don't ""move on"" to other people because my sis is smaller than me so.",continuing
+583,"583, 654","I don't ""move on"" to other people because my sis is smaller than me so.",two-role-action
+583,"583, 654","I don't ""move on"" to other people because my sis is smaller than me so.",action
+583,"583, 654","I don't ""move on"" to other people because my sis is smaller than me so.",one-role-action
+573,"573, 576",", I",agent
+573,"573, 576",", I",agent-cognizant
+573,"573, 576",", I",affected-cognizant
+587,"587, 590",n't,main
+583,"583, 584",I,affected-emoter
+583,"583, 584",I,agent
+583,"583, 584",I,affected-path
+583,"583, 584",I,affected-perceiver
+583,"583, 584",I,agent-cognizant
+583,"583, 584",I,affected-cognizant
+583,"583, 584",I,affected-carrier
+583,"583, 584",I,affected-destination
+583,"583, 584",I,affected
+583,"583, 584",I,affected-possessed
+583,"583, 584",I,agent-perceiver
+583,"583, 584",I,affected-source
+583,"583, 584",I,carrier
+583,"583, 584",I,perceiver
+601,"601, 616",to other people,affected-emoter
+601,"601, 616",to other people,affected-path
+601,"601, 616",to other people,affected-perceiver
+601,"601, 616",to other people,affected-cognizant
+601,"601, 616",to other people,affected-carrier
+601,"601, 616",to other people,affected-destination
+601,"601, 616",to other people,affected
+601,"601, 616",to other people,affected-possessed
+601,"601, 616",to other people,affected-source
+617,"617, 654",because my sis is smaller than me so.,process
+617,"617, 654",because my sis is smaller than me so.,locational
+565,"565, 654","But yeah, I guess I don't ""move on"" to other people because my sis is smaller than me so.",process
+625,"625, 631",my sis,affected-carrier
+625,"625, 631",my sis,agent-carrier
+765,"765, 807",or exercises more I get so angry and rude.,process
+765,"765, 807",or exercises more I get so angry and rude.,two-role-action
+663,"663, 668",to be,main
+721,"721, 727",to her,destination
+721,"721, 727",to her,affected-destination
+656,"656, 657",I,affected-emoter
+778,"778, 807",more I get so angry and rude.,range
+792,"792, 797",angry,main
+708,"708, 727",to always be to her,process
+708,"708, 727",to always be to her,directional
+708,"708, 710",to,main
+703,"703, 707",used,main
+656,"656, 807",I want to be the same loving big sister that I used to always be to her but when she doesn't overeat like me or exercises more I get so angry and rude.,process
+656,"656, 807",I want to be the same loving big sister that I used to always be to her but when she doesn't overeat like me or exercises more I get so angry and rude.,desiderative
+663,"663, 807",to be the same loving big sister that I used to always be to her but when she doesn't overeat like me or exercises more I get so angry and rude.,created-phenomenon
+828,"828, 853","to ""fix"" these responses?",process
+828,"828, 853","to ""fix"" these responses?",two-role-action
+818,"818, 822",been,main
+828,"828, 830",to,main
+837,"837, 853",these responses?,affected-emoter
+837,"837, 853",these responses?,affected-path
+837,"837, 853",these responses?,affected-perceiver
+837,"837, 853",these responses?,affected-cognizant
+837,"837, 853",these responses?,affected-carrier
+837,"837, 853",these responses?,affected-destination
+837,"837, 853",these responses?,affected-possessed
+837,"837, 853",these responses?,affected-source
+870,"870, 894",to get a handle on them.,created-phenomenon
+870,"870, 894",to get a handle on them.,process
+870,"870, 894",to get a handle on them.,matching
+870,"870, 894",to get a handle on them.,directional
+870,"870, 894",to get a handle on them.,relational
+870,"870, 894",to get a handle on them.,possessive
+886,"886, 894",on them.,destination
+886,"886, 894",on them.,affected-destination
+886,"886, 894",on them.,affected-possessed
+886,"886, 894",on them.,possessed
+854,"854, 855",I,affected-emoter
+854,"854, 894",I'd really like to get a handle on them.,process
+854,"854, 894",I'd really like to get a handle on them.,emotive
+854,"854, 894",I'd really like to get a handle on them.,desiderative
+870,"870, 876",to get,main
+877,"877, 885",a handle,destination
+877,"877, 885",a handle,affected-destination
+877,"877, 885",a handle,affected-possessed
+877,"877, 885",a handle,matchee
+877,"877, 885",a handle,possessed
+917,"917, 957",I'd let you know you're really not alone,created-phenomenon
+925,"925, 957",you know you're really not alone,process
+937,"937, 940",'re,main
+925,"925, 957",you know you're really not alone,created-phenomenon
+925,"925, 957",you know you're really not alone,created
+921,"921, 924",let,main
+917,"917, 918",I,agent-cognizant
+917,"917, 918",I,agent-carrier
+917,"917, 918",I,agent-perceiver
+917,"917, 957",I'd let you know you're really not alone,process
+917,"917, 957",I'd let you know you're really not alone,permissive
+917,"917, 957",I'd let you know you're really not alone,influential
+963,"963, 978",those feelings.,phenomenon
+963,"963, 978",those feelings.,attribute
+963,"963, 978",those feelings.,created-phenomenon
+963,"963, 978",those feelings.,location
+963,"963, 978",those feelings.,matchee
+963,"963, 978",those feelings.,range
+934,"934, 957",you're really not alone,process
+934,"934, 957",you're really not alone,attributive
+934,"934, 957",you're really not alone,matching
+934,"934, 957",you're really not alone,locational
+934,"934, 957",you're really not alone,two-role-cognition
+934,"934, 957",you're really not alone,two-role-action
+934,"934, 937",you,agent
+934,"934, 937",you,cognizant
+934,"934, 937",you,agent-cognizant
+934,"934, 937",you,affected-cognizant
+934,"934, 937",you,affected-carrier
+934,"934, 937",you,affected
+934,"934, 937",you,agent-carrier
+934,"934, 937",you,agent-perceiver
+934,"934, 937",you,carrier
+934,"934, 937",you,perceiver
+934,"934, 957",you're really not alone,created-phenomenon
+925,"925, 928",you,cognizant
+925,"925, 928",you,agent-cognizant
+896,"896, 978","Anyway, just thought I'd let you know you're really not alone with those feelings.",process
+980,"980, 1012",Everyone have a great Turkey Day,process
+980,"980, 1012",Everyone have a great Turkey Day,action
+980,"980, 1012",Everyone have a great Turkey Day,one-role-action
+1042,"1042, 1045",all,affected-path
+1042,"1042, 1045",all,path
+1030,"1030, 1057",this day is all about food.,process
+1030,"1030, 1057",this day is all about food.,directional
+1030,"1030, 1038",this day,agent
+1030,"1030, 1038",this day,affected-carrier
+1030,"1030, 1038",this day,agent-carrier
+1030,"1030, 1038",this day,agent-perceiver
+1030,"1030, 1038",this day,perceiver
+980,"980, 988",Everyone,agent
+980,"980, 988",Everyone,agent-cognizant
+980,"980, 988",Everyone,agent-carrier
+980,"980, 988",Everyone,agent-perceiver
+925,"925, 957",you know you're really not alone,phenomenon
+934,"934, 957",you're really not alone,mental
+925,"925, 957",you know you're really not alone,two-role-cognition
+1042,"1042, 1045",all,attribute

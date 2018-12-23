@@ -1,0 +1,183 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.7261146496815286
+,Recall,0.8837209302325582
+,F1,0.7972027972027971
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+3,5.0,"33, 45","38, 45",5,glad to hear,to hear,main,main
+61,5.0990195135927845,"51, 124","46, 125",6,there was someone wanting to educate other people about men and their EDs,that there was someone wanting to educate other people about men and their EDs.,participant-role,participant-role
+89,5.0990195135927845,"51, 124","46, 125",6,there was someone wanting to educate other people about men and their EDs,that there was someone wanting to educate other people about men and their EDs.,configuration,configuration
+5,1.0,"61, 124","61, 125",1,someone wanting to educate other people about men and their EDs,someone wanting to educate other people about men and their EDs.,participant-role,participant-role
+1,0.0,"27, 28","27, 28",0,I,I,participant-role,participant-role
+4,0.0,"57, 60","57, 60",0,was,was,main,main
+88,1.0,"27, 124","27, 125",1,I was glad to hear that there was someone wanting to educate other people about men and their EDs,I was glad to hear that there was someone wanting to educate other people about men and their EDs.,configuration,configuration
+90,9.0,"135, 171","126, 171",9,many types of people suffer from EDs,Although many types of people suffer from EDs,configuration,configuration
+9,5.0,"156, 167","156, 162",5,suffer from,suffer,main,main
+8,0.0,"135, 155","135, 155",0,many types of people,many types of people,participant-role,participant-role
+10,5.0,"168, 171","163, 171",5,EDs,from EDs,participant-role,participant-role
+12,1.0,"182, 228","182, 229",1,a stigma attached to men with eating disorders,a stigma attached to men with eating disorders.,participant-role,participant-role
+91,18.027756377319946,"173, 228","191, 229",19,there is a stigma attached to men with eating disorders,attached to men with eating disorders.,configuration,configuration
+11,0.0,"179, 181","179, 181",0,is,is,main,main
+94,40.01249804748511,"270, 315","230, 316",41,I live in Bemidji ( Bah-Midge-EEE ) Minnesota,"My name is Jason, I am 23 years old and I live in Bemidji ( Bah-Midge-EEE ) Minnesota.",configuration,configuration
+18,2.0,"248, 249","246, 249",2,I,", I",participant-role,participant-role
+20,9.0,"253, 265","262, 265",9,23 years old,old,participant-role,participant-role
+16,0.0,"238, 240","238, 240",0,is,is,main,main
+21,0.0,"270, 271","270, 271",0,I,I,participant-role,participant-role
+15,0.0,"230, 237","230, 237",0,My name,My name,participant-role,participant-role
+23,1.0,"277, 315","277, 316",1,in Bemidji ( Bah-Midge-EEE ) Minnesota,in Bemidji ( Bah-Midge-EEE ) Minnesota.,participant-role,participant-role
+114,15.033296378372908,"373, 391","388, 392",16,about 15 years old,old.,participant-role,participant-role
+95,1.0,"317, 391","317, 392",1,My battles with bulimia and anorexia started when I was about 15 years old,My battles with bulimia and anorexia started when I was about 15 years old.,configuration,configuration
+115,5.0990195135927845,"367, 391","362, 392",6,I was about 15 years old,when I was about 15 years old.,configuration,configuration
+25,0.0,"354, 361","354, 361",0,started,started,main,main
+24,0.0,"317, 353","317, 353",0,My battles with bulimia and anorexia,My battles with bulimia and anorexia,participant-role,participant-role
+112,0.0,"367, 368","367, 368",0,I,I,participant-role,participant-role
+113,0.0,"369, 372","369, 372",0,was,was,main,main
+27,0.0,"393, 394","393, 394",0,I,I,participant-role,participant-role
+14,0.0,"416, 420","416, 420",0,made,made,main,main
+29,4.0,"402, 406","398, 406",4,tell,not tell,main,main
+30,0.0,"407, 410","407, 410",0,you,you,participant-role,participant-role
+110,0.0,"411, 438","411, 438",0,what made me start doing it,what made me start doing it,configuration,configuration
+97,5.0990195135927845,"443, 489","438, 490",6,it was a combination of many different factors,", as it was a combination of many different factors.",configuration,configuration
+32,0.0,"443, 445","443, 445",0,it,it,participant-role,participant-role
+13,0.0,"411, 415","411, 415",0,what,what,participant-role,participant-role
+31,18.027756377319946,"411, 438","421, 423",25,what made me start doing it,me,participant-role,participant-role
+34,1.0,"450, 489","450, 490",1,a combination of many different factors,a combination of many different factors.,participant-role,participant-role
+26,0.0,"421, 438","421, 438",0,me start doing it,me start doing it,participant-role,participant-role
+96,28.0,"393, 438","421, 438",28,I cannot tell you what made me start doing it,me start doing it,configuration,configuration
+33,0.0,"446, 449","446, 449",0,was,was,main,main
+39,0.0,"508, 530","508, 530",0,to the dangerous level,to the dangerous level,participant-role,participant-role
+111,0.0,"505, 507","505, 507",0,it,it,participant-role,participant-role
+38,1.0,"491, 553","491, 554",1,I didn't take it to the dangerous level until about a year ago,I didn't take it to the dangerous level until about a year ago.,configuration,configuration
+37,4.0,"500, 504","496, 504",4,take,n't take,main,main
+35,0.0,"491, 492","491, 492",0,I,I,participant-role,participant-role
+45,1.0,"597, 620","597, 621",1,a compulsive over-eater,a compulsive over-eater.,participant-role,participant-role
+41,0.0,"568, 575","568, 575",0,weighed,weighed,main,main
+98,35.0,"555, 586","555, 621",35,A year ago I weighed 230 pounds,"A year ago I weighed 230 pounds, as I was a compulsive over-eater.",configuration,configuration
+99,5.0990195135927845,"591, 620","586, 621",6,I was a compulsive over-eater,", as I was a compulsive over-eater.",configuration,configuration
+42,0.0,"576, 586","576, 586",0,230 pounds,230 pounds,participant-role,participant-role
+40,0.0,"566, 567","566, 567",0,I,I,participant-role,participant-role
+44,0.0,"593, 596","593, 596",0,was,was,main,main
+43,0.0,"591, 592","591, 592",0,I,I,participant-role,participant-role
+49,0.0,"639, 647","639, 647",0,any food,any food,participant-role,participant-role
+46,0.0,"622, 623","622, 623",0,I,I,participant-role,participant-role
+101,58.034472514187634,"661, 754","659, 696",60,"purging anything from a potato chip, to two pizzas, a half gallon of milk, and a box of Oreos",", purging anything from a potato chip",configuration,configuration
+50,0.0,"661, 668","661, 668",0,purging,purging,main,main
+48,4.0,"634, 638","630, 638",4,keep,not keep,main,main
+51,58.69412236331676,"669, 754","678, 696",67,"anything from a potato chip, to two pizzas, a half gallon of milk, and a box of Oreos",from a potato chip,participant-role,participant-role
+53,0.0,"811, 816","811, 816",0,range,range,main,main
+102,0.0,"756, 804","756, 804",0,The longest I went without eating between binges,The longest I went without eating between binges,participant-role,participant-role
+121,0.0,"768, 804","768, 804",0,I went without eating between binges,I went without eating between binges,configuration,configuration
+120,7.0,"783, 804","790, 804",7,eating between binges,between binges,participant-role,participant-role
+119,8.0,"770, 782","770, 774",8,went without,went,main,main
+118,0.0,"768, 769","768, 769",0,I,I,participant-role,participant-role
+117,1.0,"831, 840","831, 841",1,to a week,to a week.,participant-role,participant-role
+54,0.0,"817, 830","817, 830",0,from two days,from two days,participant-role,participant-role
+103,45.0,"756, 840","783, 804",63,The longest I went without eating between binges would range from two days to a week,eating between binges,configuration,configuration
+59,0.0,"891, 895","891, 895",0,made,made,main,main
+60,1.0,"896, 926","896, 927",1,me go to outpatient ED therapy,me go to outpatient ED therapy.,participant-role,participant-role
+105,7.0710678118654755,"880, 926","873, 927",8,my friends made me go to outpatient ED therapy,", when my friends made me go to outpatient ED therapy.",configuration,configuration
+55,0.0,"842, 858","842, 858",0,My lowest weight,My lowest weight,participant-role,participant-role
+58,0.0,"880, 890","880, 890",0,my friends,my friends,participant-role,participant-role
+62,0.0,"928, 929","928, 929",0,I,I,participant-role,participant-role
+67,0.0,"1007, 1014","1007, 1014",0,helping,helping,main,main
+65,0.0,"976, 1002","976, 1002",0,my therapist and dietician,my therapist and dietician,participant-role,participant-role
+68,0.0,"1015, 1017","1015, 1017",0,me,me,participant-role,participant-role
+64,0.0,"937, 970","937, 970",0,at an EXTREMELY uncomfortable 160,at an EXTREMELY uncomfortable 160,participant-role,participant-role
+63,0.0,"930, 932","930, 932",0,am,am,main,main
+106,1.0,"928, 970","928, 971",1,I am now at an EXTREMELY uncomfortable 160,"I am now at an EXTREMELY uncomfortable 160,",configuration,configuration
+107,4.0,"976, 1067","972, 1067",4,my therapist and dietician are helping me in being comfortable with my body size and shape.,but my therapist and dietician are helping me in being comfortable with my body size and shape.,configuration,configuration
+72,1.0,"1068, 1141","1068, 1142",1,I think the one thing people need to understand is that EDs never go away,I think the one thing people need to understand is that EDs never go away.,configuration,configuration
+125,23.0,"1076, 1141","1076, 1118",23,the one thing people need to understand is that EDs never go away,the one thing people need to understand is,configuration,configuration
+70,0.0,"1070, 1075","1070, 1075",0,think,think,main,main
+123,0.0,"1116, 1118","1116, 1118",0,is,is,main,main
+75,3.0,"1076, 1115","1076, 1118",3,the one thing people need to understand,the one thing people need to understand is,participant-role,participant-role
+69,0.0,"1068, 1069","1068, 1069",0,I,I,participant-role,participant-role
+74,1.0,"1143, 1198","1143, 1199",1,I will always think of myself as repulsive and enormous,"I will always think of myself as repulsive and enormous,",configuration,configuration
+126,0.0,"1143, 1144","1143, 1144",0,I,I,participant-role,participant-role
+81,1.0,"1210, 1270","1210, 1271",1,how I deal with those thoughts that make the true difference,how I deal with those thoughts that make the true difference.,participant-role,participant-role
+134,1.0,"1241, 1270","1241, 1271",1,that make the true difference,that make the true difference.,configuration,configuration
+127,0.0,"1214, 1215","1214, 1215",0,I,I,participant-role,participant-role
+80,0.0,"1207, 1209","1207, 1209",0,is,is,main,main
+128,5.0,"1216, 1225","1216, 1220",5,deal with,deal,main,main
+78,0.0,"1204, 1206","1204, 1206",0,it,it,participant-role,participant-role
+132,0.0,"1246, 1250","1246, 1250",0,make,make,main,main
+131,0.0,"1241, 1245","1241, 1245",0,that,that,participant-role,participant-role
+133,1.0,"1251, 1270","1251, 1271",1,the true difference,the true difference.,participant-role,participant-role
+79,4.123105625617661,"1204, 1270","1200, 1271",5,it is how I deal with those thoughts that make the true difference,but it is how I deal with those thoughts that make the true difference.,configuration,configuration
+77,3.0,"1157, 1165","1157, 1162",3,think of,think,main,main
+73,7.0,"1166, 1198","1173, 1198",7,myself as repulsive and enormous,as repulsive and enormous,participant-role,participant-role
+82,0.0,"1272, 1273","1272, 1273",0,I,I,participant-role,participant-role
+108,38.0,"1272, 1316","1272, 1354",38,I hope this helps you in whatever way it can,"I hope this helps you in whatever way it can, and thanks for the help and respect.",configuration,configuration
+83,0.0,"1274, 1278","1274, 1278",0,hope,hope,main,main
+87,9.0,"1371, 1391","1371, 1382",9,more people like you,more people,participant-role,participant-role
+86,0.0,"1365, 1370","1365, 1370",0,needs,needs,main,main
+85,0.0,"1355, 1364","1355, 1364",0,The world,The world,participant-role,participant-role
+109,1.0,"1355, 1391","1355, 1392",1,The world needs more people like you,The world needs more people like you.,configuration,configuration
+6,70.21395872616783,"51, 56","38, 125",82,there,to hear that there was someone wanting to educate other people about men and their EDs.,participant-role,participant-role
+17,70.0,"241, 246","241, 316",70,Jason,"Jason, I am 23 years old and I live in Bemidji ( Bah-Midge-EEE ) Minnesota.",participant-role,participant-role
+71,34.713109915419565,"1076, 1141","1102, 1118",49,the one thing people need to understand is that EDs never go away,to understand is,participant-role,participant-role
+129,31.400636936215164,"1226, 1240","1221, 1271",36,those thoughts,with those thoughts that make the true difference.,participant-role,participant-role
+130,31.25699921617557,"1214, 1240","1210, 1271",35,I deal with those thoughts,how I deal with those thoughts that make the true difference.,configuration,configuration
+,
+,Manual mismatching all parsed (False Negative)
+7,"173, 178",there,participant-role
+92,"230, 246",My name is Jason,configuration
+93,"248, 265",I am 23 years old,configuration
+19,"250, 252",am,main
+22,"272, 276",live,main
+100,"622, 659",I would not keep any food down at all,configuration
+104,"842, 873",My lowest weight was 135 pounds,configuration
+56,"859, 862",was,main
+57,"863, 873",135 pounds,participant-role
+124,"1119, 1141",that EDs never go away,participant-role
+138,"1279, 1316",this helps you in whatever way it can,configuration
+84,"1279, 1316",this helps you in whatever way it can,participant-role
+135,"1279, 1283",this,participant-role
+136,"1284, 1289",helps,main
+137,"1290, 1293",you,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+29,"29, 32",was,main
+77,"77, 125",to educate other people about men and their EDs.,configuration
+88,"88, 100",other people,participant-role
+33,"33, 37",glad,participant-role
+69,"69, 76",wanting,main
+77,"77, 87",to educate,main
+101,"101, 125",about men and their EDs.,participant-role
+191,"191, 199",attached,main
+424,"424, 429",start,main
+430,"430, 435",doing,main
+783,"783, 789",eating,main
+873,"873, 879",", when",participant-role
+899,"899, 901",go,main
+896,"896, 898",me,participant-role
+1018,"1018, 1067",in being comfortable with my body size and shape.,participant-role
+1021,"1021, 1026",being,main
+1039,"1039, 1067",with my body size and shape.,participant-role
+1027,"1027, 1038",comfortable,participant-role
+1116,"1116, 1118",is,configuration
+1102,"1102, 1115",to understand,main
+1102,"1102, 1118",to understand is,configuration
+1097,"1097, 1101",need,main
+1210,"1210, 1213",how,participant-role
+1383,"1383, 1392",like you.,participant-role
+1395,"1395, 1399",Take,main
+1395,"1395, 1405",Take Care.,configuration
+1400,"1400, 1405",Care.,participant-role
+69,"69, 125",wanting to educate other people about men and their EDs.,configuration
+77,"77, 125",to educate other people about men and their EDs.,participant-role
+38,"38, 125",to hear that there was someone wanting to educate other people about men and their EDs.,configuration
+200,"200, 229",to men with eating disorders.,participant-role
+126,"126, 229","Although many types of people suffer from EDs, there is a stigma attached to men with eating disorders.",configuration
+436,"436, 438",it,participant-role
+430,"430, 438",doing it,participant-role
+430,"430, 438",doing it,configuration
+669,"669, 677",anything,participant-role
+775,"775, 804",without eating between binges,participant-role
+902,"902, 927",to outpatient ED therapy.,participant-role
+896,"896, 927",me go to outpatient ED therapy.,configuration
+1021,"1021, 1067",being comfortable with my body size and shape.,configuration
+1116,"1116, 1118",is,participant-role
+1163,"1163, 1172",of myself,participant-role
+1076,"1076, 1096",the one thing people,participant-role

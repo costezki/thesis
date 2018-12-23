@@ -1,0 +1,243 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.7757009345794392
+,Recall,0.9021739130434783
+,F1,0.8341708542713568
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+6,30.0,"66, 73","48, 97",42,married,"I am thirty-four, married, and have two children.",configuration,configuration
+5,27.294688127912362,"66, 73","53, 97",37,married,"thirty-four, married, and have two children.",participant-role,participant-role
+9,1.0,"84, 96","84, 97",1,two children,two children.,participant-role,participant-role
+1,0.0,"48, 49","48, 49",0,I,I,participant-role,participant-role
+2,0.0,"50, 52","50, 52",0,am,am,main,main
+11,0.0,"100, 104","100, 104",0,have,have,main,main
+10,0.0,"98, 99","98, 99",0,I,I,participant-role,participant-role
+13,1.0,"98, 142","98, 143",1,I have a loving husband and a beautiful home,I have a loving husband and a beautiful home.,configuration,configuration
+12,1.0,"105, 142","105, 143",1,a loving husband and a beautiful home,a loving husband and a beautiful home.,participant-role,participant-role
+24,5.0990195135927845,"164, 201","159, 202",6,there is this guy that I want so much,that there is this guy that I want so much.,participant-role,participant-role
+150,1.0,"182, 201","182, 202",1,that I want so much,that I want so much.,configuration,configuration
+148,0.0,"187, 188","187, 188",0,I,I,participant-role,participant-role
+146,0.0,"173, 181","173, 181",0,this guy,this guy,participant-role,participant-role
+147,16.0,"182, 186","182, 202",16,that,that I want so much.,participant-role,participant-role
+145,0.0,"170, 172","170, 172",0,is,is,main,main
+25,1.0,"144, 201","144, 202",1,The problem is that there is this guy that I want so much,The problem is that there is this guy that I want so much.,configuration,configuration
+23,0.0,"156, 158","156, 158",0,is,is,main,main
+22,0.0,"144, 155","144, 155",0,The problem,The problem,participant-role,participant-role
+149,0.0,"189, 193","189, 193",0,want,want,main,main
+154,5.0,"220, 230","220, 225",5,slept with,slept,main,main
+28,39.81205847478876,"239, 259","203, 276",53,about nine years ago,The first time I slept with him was about nine years ago after my husband,participant-role,participant-role
+29,22.67156809750927,"203, 259","218, 276",32,The first time I slept with him was about nine years ago,I slept with him was about nine years ago after my husband,configuration,configuration
+153,0.0,"218, 219","218, 219",0,I,I,participant-role,participant-role
+155,0.0,"231, 234","231, 234",0,him,him,participant-role,participant-role
+156,57.0,"203, 234","203, 291",57,The first time I slept with him,The first time I slept with him was about nine years ago after my husband had an affair.,configuration,configuration
+32,1.0,"281, 290","281, 291",1,an affair,an affair.,participant-role,participant-role
+31,0.0,"277, 280","277, 280",0,had,had,main,main
+27,0.0,"235, 238","235, 238",0,was,was,main,main
+33,42.37924020083418,"266, 290","226, 276",37,my husband had an affair,with him was about nine years ago after my husband,configuration,configuration
+30,6.0,"266, 276","260, 276",6,my husband,after my husband,participant-role,participant-role
+36,4.123105625617661,"312, 329","316, 330",5,all about revenge,about revenge.,participant-role,participant-role
+34,2.0,"305, 307","303, 307",2,it,", it",participant-role,participant-role
+37,1.0,"292, 329","292, 330",1,"At the time, it was all about revenge","At the time, it was all about revenge.",configuration,configuration
+35,0.0,"308, 311","308, 311",0,was,was,main,main
+38,2.0,"349, 360","347, 360",2,the revenge,", the revenge",participant-role,participant-role
+39,0.0,"361, 363","361, 363",0,is,is,main,main
+43,24.0,"331, 368","331, 392",24,"Nine years later, the revenge is over","Nine years later, the revenge is over, but the affair is not.",configuration,configuration
+41,0.0,"374, 384","374, 384",0,the affair,the affair,participant-role,participant-role
+158,0.0,"435, 437","435, 437",0,we,we,participant-role,participant-role
+161,5.0,"424, 452","419, 452",5,every time we see each other,that every time we see each other,configuration,configuration
+50,0.0,"457, 460","457, 460",0,are,are,main,main
+49,2.0,"454, 456","452, 456",2,we,", we",participant-role,participant-role
+51,9.055385138137417,"461, 480","470, 481",10,all over each other,each other.,participant-role,participant-role
+160,0.0,"442, 452","442, 452",0,each other,each other,participant-role,participant-role
+52,31.016124838541646,"424, 480","393, 481",32,"every time we see each other, we are all over each other","We have so much chemistry that every time we see each other, we are all over each other.",configuration,configuration
+45,0.0,"393, 395","393, 395",0,We,We,participant-role,participant-role
+159,0.0,"438, 441","438, 441",0,see,see,main,main
+47,34.92849839314596,"401, 418","393, 452",42,so much chemistry,We have so much chemistry that every time we see each other,participant-role,participant-role
+56,1.0,"482, 502","482, 503",1,He is amazing in bed,He is amazing in bed.,configuration,configuration
+54,0.0,"485, 487","485, 487",0,is,is,main,main
+53,0.0,"482, 484","482, 484",0,He,He,participant-role,participant-role
+55,7.0,"488, 502","488, 495",7,amazing in bed,amazing,participant-role,participant-role
+57,0.0,"504, 506","504, 506",0,We,We,participant-role,participant-role
+65,3.0,"575, 582","575, 579",3,stay up,stay,main,main
+162,0.0,"589, 591","589, 591",0,it,it,participant-role,participant-role
+64,28.0,"559, 570","559, 598",28,the sun set,the sun set and stay up until it rises.,participant-role,participant-role
+16,0.0,"559, 566","559, 566",0,the sun,the sun,participant-role,participant-role
+66,4.123105625617661,"575, 597","571, 598",5,stay up until it rises,and stay up until it rises.,configuration,configuration
+20,28.0,"550, 570","550, 598",28,We watch the sun set,We watch the sun set and stay up until it rises.,configuration,configuration
+17,0.0,"567, 570","567, 570",0,set,set,main,main
+18,0.0,"559, 570","559, 570",0,the sun set,the sun set,configuration,configuration
+163,0.0,"592, 597","592, 597",0,rises,rises,main,main
+164,6.082762530298219,"589, 597","583, 598",7,it rises,until it rises.,configuration,configuration
+62,0.0,"550, 552","550, 552",0,We,We,participant-role,participant-role
+63,0.0,"553, 558","553, 558",0,watch,watch,main,main
+67,0.0,"599, 601","599, 601",0,We,We,participant-role,participant-role
+69,1.0,"599, 682","599, 683",1,"We make love on the beach, in the boat, on the dock, and just about anywhere we can","We make love on the beach, in the boat, on the dock, and just about anywhere we can.",configuration,configuration
+68,5.0,"602, 611","602, 606",5,make love,make,main,main
+73,4.123105625617661,"688, 726","684, 727",5,our relationship is not only about sex,But our relationship is not only about sex.,configuration,configuration
+72,6.082762530298219,"717, 726","723, 727",7,about sex,sex.,participant-role,participant-role
+70,0.0,"688, 704","688, 704",0,our relationship,our relationship,participant-role,participant-role
+71,4.0,"705, 707","705, 711",4,is,is not,main,main
+75,6.082762530298219,"742, 752","736, 753",7,everything,about everything.,participant-role,participant-role
+76,6.0,"731, 741","731, 735",6,talk about,talk,main,main
+14,1.0,"728, 752","728, 753",1,We talk about everything,We talk about everything.,configuration,configuration
+74,0.0,"728, 730","728, 730",0,We,We,participant-role,participant-role
+83,6.0,"795, 799","789, 799",6,plan,never plan,main,main
+80,0.0,"766, 769","766, 769",0,him,him,participant-role,participant-role
+81,1.0,"754, 780","754, 781",1,I don't see him very often,"I don't see him very often,",configuration,configuration
+77,0.0,"754, 755","754, 755",0,I,I,participant-role,participant-role
+85,4.123105625617661,"786, 812","782, 813",5,we never plan our meetings,and we never plan our meetings.,configuration,configuration
+82,0.0,"786, 788","786, 788",0,we,we,participant-role,participant-role
+84,1.0,"800, 812","800, 813",1,our meetings,our meetings.,participant-role,participant-role
+79,4.0,"762, 765","758, 765",4,see,n't see,main,main
+86,0.0,"814, 815","814, 815",0,I,I,participant-role,participant-role
+87,5.830951894845301,"831, 839","828, 834",7,run into,to run,main,main
+88,5.0,"840, 843","835, 843",5,him,into him,participant-role,participant-role
+89,1.0,"814, 883","814, 884",1,"I just happen to run into him a few times a year, sometimes even less","I just happen to run into him a few times a year, sometimes even less.",configuration,configuration
+170,0.0,"889, 918","889, 918",0,whenever we do see each other,whenever we do see each other,configuration,configuration
+166,0.0,"898, 900","898, 900",0,we,we,participant-role,participant-role
+169,0.0,"908, 918","908, 918",0,each other,each other,participant-role,participant-role
+168,0.0,"904, 907","904, 907",0,see,see,main,main
+97,10.770329614269007,"929, 942","925, 932",10,get enough of,n't get,main,main
+95,2.0,"920, 922","918, 922",2,we,", we",participant-role,participant-role
+98,1.0,"943, 945","943, 946",1,it,it.,participant-role,participant-role
+177,5.0990195135927845,"1002, 1005","997, 1006",6,him,into him.,participant-role,participant-role
+172,0.0,"969, 971","969, 971",0,is,is,main,main
+178,5.0990195135927845,"982, 1005","977, 1006",6,I keep running into him,that I keep running into him.,configuration,configuration
+174,30.4138126514911,"966, 976","961, 1006",35,it is fate,like it is fate that I keep running into him.,configuration,configuration
+103,30.0,"947, 976","947, 1006",30,I almost feel like it is fate,I almost feel like it is fate that I keep running into him.,configuration,configuration
+171,0.0,"966, 968","966, 968",0,it,it,participant-role,participant-role
+173,0.0,"972, 976","972, 976",0,fate,fate,participant-role,participant-role
+101,5.0,"956, 965","956, 960",5,feel like,feel,main,main
+100,0.0,"947, 948","947, 948",0,I,I,participant-role,participant-role
+21,5.0,"989, 1001","989, 996",5,running into,running,main,main
+175,0.0,"982, 983","982, 983",0,I,I,participant-role,participant-role
+114,1.0,"1079, 1089","1079, 1090",1,each other,each other.,participant-role,participant-role
+105,0.0,"1010, 1014","1010, 1014",0,live,live,main,main
+111,0.0,"1046, 1070","1046, 1070",0,whenever I go back there,whenever I go back there,configuration,configuration
+102,0.0,"1055, 1056","1055, 1056",0,I,I,participant-role,participant-role
+112,0.0,"1071, 1073","1071, 1073",0,we,we,participant-role,participant-role
+15,29.017236257093817,"1071, 1089","1042, 1090",30,we find each other,but whenever I go back there we find each other.,configuration,configuration
+104,0.0,"1007, 1009","1007, 1009",0,We,We,participant-role,participant-role
+113,0.0,"1074, 1078","1074, 1078",0,find,find,main,main
+106,10.0,"1015, 1040","1025, 1040",10,two hours from each other,from each other,participant-role,participant-role
+180,5.0,"1057, 1064","1057, 1059",5,go back,go,main,main
+107,1.0,"1007, 1040","1007, 1041",1,We live two hours from each other,"We live two hours from each other,",configuration,configuration
+185,7.0710678118654755,"1138, 1150","1143, 1145",10,like he does,he,participant-role,participant-role
+187,0.0,"1163, 1164","1163, 1164",0,I,I,participant-role,participant-role
+190,1.0,"1177, 1181","1177, 1182",1,this,this.,participant-role,participant-role
+115,0.0,"1101, 1102","1101, 1102",0,I,I,participant-role,participant-role
+94,1.0,"1091, 1181","1091, 1182",1,"Sometimes I feel that if my husband treated me like he does, that maybe I wouldn't do this","Sometimes I feel that if my husband treated me like he does, that maybe I wouldn't do this.",configuration,configuration
+191,13.038404810405298,"1163, 1181","1150, 1182",14,I wouldn't do this,", that maybe I wouldn't do this.",configuration,configuration
+182,0.0,"1116, 1126","1116, 1126",0,my husband,my husband,participant-role,participant-role
+117,8.06225774829855,"1116, 1181","1108, 1182",9,"my husband treated me like he does, that maybe I wouldn't do this","that if my husband treated me like he does, that maybe I wouldn't do this.",participant-role,participant-role
+116,0.0,"1103, 1107","1103, 1107",0,feel,feel,main,main
+183,0.0,"1127, 1134","1127, 1134",0,treated,treated,main,main
+189,4.0,"1174, 1176","1170, 1176",4,do,n't do,main,main
+184,0.0,"1135, 1137","1135, 1137",0,me,me,participant-role,participant-role
+121,4.0,"1200, 1205","1196, 1205",4,think,n't think,main,main
+123,9.055385138137417,"1192, 1222","1183, 1223",10,I don't think that is the case,"However, I don't think that is the case.",configuration,configuration
+195,1.0,"1206, 1222","1206, 1223",1,that is the case,that is the case.,configuration,configuration
+194,1.0,"1214, 1222","1214, 1223",1,the case,the case.,participant-role,participant-role
+119,2.0,"1192, 1193","1190, 1193",2,I,", I",participant-role,participant-role
+122,1.0,"1206, 1222","1206, 1223",1,that is the case,that is the case.,participant-role,participant-role
+193,0.0,"1211, 1213","1211, 1213",0,is,is,main,main
+127,9.055385138137417,"1274, 1308","1283, 1309",10,he makes me feel good about myself,me feel good about myself.,configuration,configuration
+126,1.0,"1283, 1308","1283, 1309",1,me feel good about myself,me feel good about myself.,participant-role,participant-role
+125,0.0,"1277, 1282","1277, 1282",0,makes,makes,main,main
+197,0.0,"1231, 1233","1231, 1233",0,am,am,main,main
+199,19.6468827043885,"1229, 1272","1224, 1253",24,"I am with this guy, even for just one night","When I am with this guy, even",configuration,configuration
+124,2.0,"1274, 1276","1272, 1276",2,he,", he",participant-role,participant-role
+196,0.0,"1229, 1230","1229, 1230",0,I,I,participant-role,participant-role
+198,0.0,"1234, 1247","1234, 1247",0,with this guy,with this guy,participant-role,participant-role
+200,0.0,"1361, 1362","1361, 1362",0,I,I,participant-role,participant-role
+131,31.0,"1310, 1340","1310, 1371",31,"I feel young, sexy and amazing","I feel young, sexy and amazing until the next time I see him.",configuration,configuration
+202,1.0,"1367, 1370","1367, 1371",1,him,him.,participant-role,participant-role
+203,14.035668847618199,"1347, 1370","1361, 1371",15,the next time I see him,I see him.,configuration,configuration
+130,0.0,"1317, 1340","1317, 1340",0,"young, sexy and amazing","young, sexy and amazing",participant-role,participant-role
+201,0.0,"1363, 1366","1363, 1366",0,see,see,main,main
+128,0.0,"1310, 1311","1310, 1311",0,I,I,participant-role,participant-role
+129,0.0,"1312, 1316","1312, 1316",0,feel,feel,main,main
+139,4.123105625617661,"1419, 1432","1415, 1433",5,he started it,"but he started it,",configuration,configuration
+132,10.0,"1374, 1388","1374, 1378",10,feel awful for,feel,main,main
+135,1.0,"1372, 1413","1372, 1414",1,I feel awful for doing this to my husband,"I feel awful for doing this to my husband,",configuration,configuration
+142,4.0,"1446, 1450","1442, 1450",4,stop,n't stop,main,main
+134,4.0,"1389, 1413","1385, 1413",4,doing this to my husband,for doing this to my husband,participant-role,participant-role
+137,0.0,"1422, 1429","1422, 1429",0,started,started,main,main
+138,0.0,"1430, 1432","1430, 1432",0,it,it,participant-role,participant-role
+133,0.0,"1372, 1373","1372, 1373",0,I,I,participant-role,participant-role
+136,0.0,"1419, 1421","1419, 1421",0,he,he,participant-role,participant-role
+140,0.0,"1438, 1439","1438, 1439",0,I,I,participant-role,participant-role
+118,21.587033144922902,"164, 181","159, 202",26,there is this guy,that there is this guy that I want so much.,configuration,configuration
+40,24.0,"364, 368","364, 392",24,over,"over, but the affair is not.",participant-role,participant-role
+48,34.0,"393, 418","393, 452",34,We have so much chemistry,We have so much chemistry that every time we see each other,configuration,configuration
+186,32.984845004941285,"1116, 1150","1108, 1182",40,my husband treated me like he does,"that if my husband treated me like he does, that maybe I wouldn't do this.",configuration,configuration
+,
+,Manual mismatching all parsed (False Negative)
+4,"48, 64",I am thirty-four,configuration
+3,"53, 64",thirty-four,participant-role
+7,"79, 96",have two children,configuration
+8,"79, 83",have,main
+144,"164, 169",there,participant-role
+26,"203, 234",The first time I slept with him,participant-role
+44,"374, 391",the affair is not,configuration
+42,"385, 387",is,main
+46,"396, 400",have,main
+59,"504, 512",We laugh,configuration
+58,"507, 512",laugh,main
+61,"517, 548",get along like the perfect pair,configuration
+60,"517, 526",get along,main
+99,"920, 945",we can't get enough of it,configuration
+179,"966, 976",it is fate,participant-role
+181,"1065, 1070",there,participant-role
+192,"1206, 1210",that,participant-role
+143,"1438, 1450",I can't stop,configuration
+,
+,Parsed mismatching all manual (False Positives)
+30,"30, 45",what's started.,participant-role
+30,"30, 45",what's started.,configuration
+37,"37, 44",started,main
+30,"30, 34",what,participant-role
+21,"21, 29",n't stop,main
+312,"312, 315",all,participant-role
+295,"295, 303",the time,participant-role
+424,"424, 434",every time,participant-role
+409,"409, 418",chemistry,main
+419,"419, 452",that every time we see each other,participant-role
+527,"527, 549",like the perfect pair.,participant-role
+626,"626, 637",in the boat,participant-role
+676,"676, 678",we,participant-role
+612,"612, 624",on the beach,participant-role
+639,"639, 650",on the dock,participant-role
+607,"607, 611",love,participant-role
+844,"844, 884","a few times a year, sometimes even less.",participant-role
+821,"821, 827",happen,main
+889,"889, 897",whenever,participant-role
+984,"984, 988",keep,main
+989,"989, 1006",running into him.,participant-role
+1046,"1046, 1054",whenever,participant-role
+1015,"1015, 1024",two hours,participant-role
+1143,"1143, 1182","he does, that maybe I wouldn't do this.",participant-role
+1150,"1150, 1182",", that maybe I wouldn't do this.",participant-role
+1138,"1138, 1142",like,main
+1146,"1146, 1150",does,main
+1224,"1224, 1228",When,participant-role
+1286,"1286, 1290",feel,main
+1296,"1296, 1309",about myself.,participant-role
+1224,"1224, 1309","When I am with this guy, even for just one night, he makes me feel good about myself.",configuration
+1283,"1283, 1285",me,participant-role
+1341,"1341, 1371",until the next time I see him.,participant-role
+1389,"1389, 1394",doing,main
+1395,"1395, 1399",this,participant-role
+1379,"1379, 1413",awful for doing this to my husband,participant-role
+1389,"1389, 1413",doing this to my husband,configuration
+1400,"1400, 1413",to my husband,participant-role
+496,"496, 503",in bed.,participant-role
+559,"559, 598",the sun set and stay up until it rises.,configuration
+828,"828, 884","to run into him a few times a year, sometimes even less.",participant-role
+828,"828, 884","to run into him a few times a year, sometimes even less.",configuration
+989,"989, 1006",running into him.,configuration
+977,"977, 1006",that I keep running into him.,participant-role
+1143,"1143, 1182","he does, that maybe I wouldn't do this.",configuration
+1135,"1135, 1182","me like he does, that maybe I wouldn't do this.",participant-role
+1291,"1291, 1295",good,participant-role
+1135,"1135, 1182","me like he does, that maybe I wouldn't do this.",configuration

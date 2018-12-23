@@ -1,0 +1,2048 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.21088053841839596
+,Recall,0.5968253968253968
+,F1,0.3116452548694571
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+15,58.215118311311535,"119, 125","114, 183",63,a wife,with a wife who drinks every day and every night after she gets home.,affected,affected
+11,8.0,"79, 83","79, 91",8,been,been married,main,main
+21,5.0,"173, 182","173, 177",5,gets home,gets,main,main
+19,23.706539182259394,"126, 162","137, 183",31,who drinks every day and every night,every day and every night after she gets home.,action,action
+20,0.0,"169, 172","169, 172",0,she,she,agent,agent
+18,0.0,"130, 136","130, 136",0,drinks,drinks,main,main
+14,5.0,"109, 118","109, 113",5,live with,live,main,main
+33,5.0990195135927845,"285, 364","280, 365",6,she gravitates to others in her circle for support that she has no real problem,that she gravitates to others in her circle for support that she has no real problem.,phenomenon,phenomenon
+40,1.0,"349, 364","349, 365",1,no real problem,no real problem.,possessed,possessed
+32,0.0,"274, 279","274, 279",0,seems,seems,main,main
+39,0.0,"345, 348","345, 348",0,has,has,main,main
+36,3.0,"289, 302","289, 299",3,gravitates to,gravitates,main,main
+38,0.0,"341, 344","341, 344",0,she,she,carrier,carrier
+27,0.0,"234, 244","234, 244",0,confronted,confronted,main,main
+34,4.123105625617661,"271, 364","267, 365",5,it seems that she gravitates to others in her circle for support that she has no real problem,and it seems that she gravitates to others in her circle for support that she has no real problem.,mental,mental
+34,4.123105625617661,"271, 364","267, 365",5,it seems that she gravitates to others in her circle for support that she has no real problem,and it seems that she gravitates to others in her circle for support that she has no real problem.,two-role-cognition,two-role-cognition
+550,5.0990195135927845,"341, 364","336, 365",6,she has no real problem,that she has no real problem.,relational,relational
+550,5.0990195135927845,"341, 364","336, 365",6,she has no real problem,that she has no real problem.,possessive,possessive
+41,0.0,"366, 369","366, 369",0,She,She,agent,agent
+46,1.0,"378, 379","377, 379",1,s,'s,main,main
+44,1.0,"366, 395","366, 396",1,She says it's only my problem,She says it's only my problem.,mental,mental
+44,1.0,"366, 395","366, 396",1,She says it's only my problem,She says it's only my problem.,three-role-cognition,three-role-cognition
+45,0.0,"375, 377","375, 377",0,it,it,carrier,carrier
+48,1.0,"375, 395","375, 396",1,it's only my problem,it's only my problem.,relational,relational
+42,0.0,"370, 374","370, 374",0,says,says,main,main
+43,1.0,"375, 395","375, 396",1,it's only my problem,it's only my problem.,phenomenon,phenomenon
+54,0.0,"423, 430","423, 430",0,advised,advised,main,main
+50,0.0,"399, 405","399, 405",0,called,called,main,main
+59,5.0,"466, 475","466, 470",5,feel like,feel,main,main
+63,0.0,"480, 486","480, 486",0,drinks,drinks,main,main
+65,58.215118311311535,"476, 494","471, 552",63,she drinks so much,like she drinks so much because she has lost interest in me and our relationship?,action,action
+62,0.0,"476, 479","476, 479",0,she,she,agent,agent
+75,0.0,"580, 584","580, 584",0,want,want,main,main
+72,4.0,"563, 571","563, 567",4,care for,care,main,main
+80,0.0,"653, 675","653, 675",0,cold and often distant,cold and often distant,phenomenon,phenomenon
+79,0.0,"647, 652","647, 652",0,seems,seems,main,main
+77,55.072679252057455,"580, 641","553, 689",75,want her to be more loving to me and cut down on the drinking,"Because I care for her and want her to be more loving to me and cut down on the drinking, she seems cold and often distant to me lately.",mental,mental
+87,20.0,"690, 735","690, 715",20,"On Saturdays, she asks me what I have planned","On Saturdays, she asks me",mental,mental
+87,20.0,"690, 735","690, 715",20,"On Saturdays, she asks me what I have planned","On Saturdays, she asks me",three-role-cognition,three-role-cognition
+89,4.0,"748, 751","744, 751",4,ask,n't ask,main,main
+100,0.0,"766, 768","766, 768",0,do,do,main,main
+95,0.0,"728, 735","728, 735",0,planned,planned,main,main
+85,0.0,"713, 715","713, 715",0,me,me,affected-cognizant,affected-cognizant
+86,15.0,"716, 735","716, 720",15,what I have planned,what,phenomenon,phenomenon
+92,0.0,"716, 720","716, 720",0,what,what,created-phenomenon,created-phenomenon
+98,0.0,"757, 759","757, 759",0,we,we,agent,agent
+84,0.0,"708, 712","708, 712",0,asks,asks,main,main
+90,1.0,"752, 777","752, 778",1,what we could do together,what we could do together.,phenomenon,phenomenon
+83,2.0,"704, 707","702, 707",2,she,", she",agent,agent
+91,4.123105625617661,"740, 777","736, 778",5,doesn't ask what we could do together,and doesn't ask what we could do together.,mental,mental
+91,4.123105625617661,"740, 777","736, 778",5,doesn't ask what we could do together,and doesn't ask what we could do together.,three-role-cognition,three-role-cognition
+93,0.0,"721, 722","721, 722",0,I,I,agent,agent
+106,0.0,"807, 811","807, 811",0,goes,goes,main,main
+111,11.045361017187261,"848, 894","859, 895",12,go to work for a few hours and then to the gym,for a few hours and then to the gym.,directional,directional
+111,11.045361017187261,"848, 894","859, 895",12,go to work for a few hours and then to the gym,for a few hours and then to the gym.,relational,relational
+103,0.0,"783, 788","783, 788",0,makes,makes,main,main
+104,0.0,"789, 802","789, 802",0,her own plans,her own plans,phenomenon,phenomenon
+109,0.0,"848, 850","848, 850",0,go,go,main,main
+116,0.0,"951, 953","951, 953",0,me,me,affected-perceiver,affected-perceiver
+114,15.132745950421556,"906, 934","904, 919",17,she gets home about 4: 30 pm,", she gets home",action,action
+124,7.0710678118654755,"998, 1037","991, 1038",8,I am pissed that she ditched me all day,", that I am pissed that she ditched me all day.",mental,mental
+115,0.0,"944, 950","944, 950",0,greets,greets,main,main
+113,5.0,"910, 919","910, 914",5,gets home,gets,main,main
+123,24.020824298928627,"1015, 1037","991, 1038",25,she ditched me all day,", that I am pissed that she ditched me all day.",phenomenon,phenomenon
+122,0.0,"1003, 1009","1003, 1009",0,pissed,pissed,main,main
+112,2.0,"906, 909","904, 909",2,she,", she",agent,agent
+553,0.0,"1019, 1026","1019, 1026",0,ditched,ditched,main,main
+126,0.0,"1044, 1046","1044, 1046",0,is,is,main,main
+125,0.0,"1039, 1043","1039, 1043",0,This,This,carrier,carrier
+127,1.0,"1047, 1068","1047, 1069",1,a frequent occurrence,a frequent occurrence.,attribute,attribute
+128,1.0,"1039, 1068","1039, 1069",1,This is a frequent occurrence,This is a frequent occurrence.,attributive,attributive
+128,1.0,"1039, 1068","1039, 1069",1,This is a frequent occurrence,This is a frequent occurrence.,relational,relational
+518,25.019992006393608,"1149, 1202","1124, 1203",26,wants to do other things without me from time to time,that she has friends and wants to do other things without me from time to time.,phenomenon,phenomenon
+136,0.0,"1091, 1095","1091, 1095",0,pout,pout,main,main
+134,0.0,"1133, 1136","1133, 1136",0,has,has,main,main
+142,68.60029154456998,"1105, 1144","1070, 1203",94,I just can't stand that she has friends,She says that then I pout and that I just can't stand that she has friends and wants to do other things without me from time to time.,mental,mental
+132,108.0,"1070, 1095","1070, 1203",108,She says that then I pout,She says that then I pout and that I just can't stand that she has friends and wants to do other things without me from time to time.,three-role-cognition,three-role-cognition
+133,0.0,"1129, 1132","1129, 1132",0,she,she,carrier,carrier
+138,0.0,"1105, 1106","1105, 1106",0,I,I,emoter,emoter
+140,4.0,"1118, 1123","1114, 1123",4,stand,n't stand,main,main
+141,8.0,"1129, 1144","1137, 1144",8,she has friends,friends,phenomenon,phenomenon
+516,0.0,"1137, 1144","1137, 1144",0,friends,friends,possessed,possessed
+517,5.0,"1129, 1144","1124, 1144",5,she has friends,that she has friends,relational,relational
+517,5.0,"1129, 1144","1124, 1144",5,she has friends,that she has friends,possessive,possessive
+563,79.00632886041473,"1158, 1202","1079, 1203",80,do other things without me from time to time,that then I pout and that I just can't stand that she has friends and wants to do other things without me from time to time.,phenomenon,phenomenon
+130,0.0,"1074, 1078","1074, 1078",0,says,says,main,main
+562,3.0,"1149, 1157","1149, 1154",3,wants to,wants,main,main
+129,0.0,"1070, 1073","1070, 1073",0,She,She,agent,agent
+157,0.0,"1313, 1317","1313, 1317",0,have,have,main,main
+145,1.0,"1213, 1341","1213, 1342",1,we need to be more like her parents and do their own separate things and then get back together and have something to talk about,we need to be more like her parents and do their own separate things and then get back together and have something to talk about.,phenomenon,phenomenon
+143,0.0,"1204, 1207","1204, 1207",0,She,She,agent,agent
+151,94.33981132056604,"1213, 1248","1221, 1342",97,we need to be more like her parents,to be more like her parents and do their own separate things and then get back together and have something to talk about.,attributive,attributive
+159,92.00543462209176,"1313, 1341","1221, 1342",93,have something to talk about,to be more like her parents and do their own separate things and then get back together and have something to talk about.,relational,relational
+149,3.0,"1224, 1226","1221, 1226",3,be,to be,main,main
+146,1.0,"1204, 1341","1204, 1342",1,She says we need to be more like her parents and do their own separate things and then get back together and have something to talk about,She says we need to be more like her parents and do their own separate things and then get back together and have something to talk about.,mental,mental
+146,1.0,"1204, 1341","1204, 1342",1,She says we need to be more like her parents and do their own separate things and then get back together and have something to talk about,She says we need to be more like her parents and do their own separate things and then get back together and have something to talk about.,three-role-cognition,three-role-cognition
+150,5.0,"1227, 1248","1232, 1248",5,more like her parents,like her parents,attribute,attribute
+144,0.0,"1208, 1212","1208, 1212",0,says,says,main,main
+161,0.0,"1354, 1359","1354, 1359",0,calls,calls,main,main
+165,0.0,"1403, 1405","1403, 1405",0,is,is,main,main
+166,1.0,"1406, 1408","1406, 1409",1,39,39!,attribute,attribute
+164,0.0,"1399, 1402","1399, 1402",0,she,she,carrier,carrier
+167,4.123105625617661,"1399, 1408","1395, 1409",5,she is 39,and she is 39!,attributive,attributive
+167,4.123105625617661,"1399, 1408","1395, 1409",5,she is 39,and she is 39!,relational,relational
+174,0.0,"1453, 1460","1453, 1460",0,with me,with me,location,location
+169,0.0,"1424, 1427","1424, 1427",0,met,met,main,main
+170,5.0,"1415, 1427","1410, 1427",5,we first met,When we first met,action,action
+177,0.0,"1481, 1484","1481, 1484",0,saw,saw,main,main
+175,18.0,"1429, 1473","1447, 1473",18,she literally had to be with me all the time,to be with me all the time,locational,locational
+175,18.0,"1429, 1473","1447, 1473",18,she literally had to be with me all the time,to be with me all the time,relational,relational
+176,0.0,"1478, 1480","1478, 1480",0,we,we,agent,agent
+173,3.0,"1450, 1452","1447, 1452",3,be,to be,main,main
+178,0.0,"1485, 1495","1485, 1495",0,each other,each other,affected,affected
+168,0.0,"1415, 1417","1415, 1417",0,we,we,agent,agent
+195,0.0,"1632, 1636","1632, 1636",0,quit,quit,main,main
+185,0.0,"1670, 1675","1670, 1675",0,calls,calls,main,main
+182,50.24937810560445,"1527, 1660","1522, 1710",55,"I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone","that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",phenomenon,phenomenon
+181,0.0,"1518, 1521","1518, 1521",0,say,say,main,main
+192,0.0,"1573, 1577","1573, 1577",0,stop,stop,main,main
+183,50.0,"1507, 1660","1507, 1710",50,"My friends say that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone","My friends say that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",mental,mental
+183,50.0,"1507, 1660","1507, 1710",50,"My friends say that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone","My friends say that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",three-role-cognition,three-role-cognition
+189,3.0,"1537, 1541","1534, 1541",3,quit,to quit,main,main
+180,0.0,"1507, 1517","1507, 1517",0,My friends,My friends,agent,agent
+196,10.0,"1637, 1660","1647, 1660",10,answering my cell phone,my cell phone,phenomenon,phenomenon
+199,0.0,"1723, 1727","1723, 1727",0,quit,quit,main,main
+209,6.0,"1806, 1809","1800, 1809",6,her,about her,phenomenon,phenomenon
+203,0.0,"1782, 1786","1782, 1786",0,says,says,main,main
+206,0.0,"1787, 1788","1787, 1788",0,I,I,emoter,emoter
+204,1.0,"1787, 1817","1787, 1818",1,I don't care about her anymore,I don't care about her anymore.,phenomenon,phenomenon
+208,7.211102550927978,"1795, 1805","1791, 1799",9,care about,n't care,main,main
+202,0.0,"1778, 1781","1778, 1781",0,she,she,agent,agent
+205,4.123105625617661,"1778, 1817","1774, 1818",5,she says I don't care about her anymore,Now she says I don't care about her anymore.,mental,mental
+205,4.123105625617661,"1778, 1817","1774, 1818",5,she says I don't care about her anymore,Now she says I don't care about her anymore.,three-role-cognition,three-role-cognition
+211,2.0,"1831, 1832","1829, 1832",2,I,", I",agent,agent
+217,10.770329614269007,"1867, 1901","1863, 1891",14,she really has a problem with this,and she really has a problem,relational,relational
+217,10.770329614269007,"1867, 1901","1863, 1891",14,she really has a problem with this,and she really has a problem,possessive,possessive
+214,0.0,"1867, 1870","1867, 1870",0,she,she,carrier,carrier
+216,0.0,"1882, 1891","1882, 1891",0,a problem,a problem,possessed,possessed
+215,0.0,"1878, 1881","1878, 1881",0,has,has,main,main
+213,12.0,"1831, 1862","1819, 1862",12,I work at home 90 % of the time,"By the way, I work at home 90 % of the time",action,action
+218,0.0,"1906, 1911","1906, 1911",0,wants,wants,main,main
+212,0.0,"1833, 1837","1833, 1837",0,work,work,main,main
+221,0.0,"1947, 1948","1947, 1948",0,I,I,carrier,carrier
+222,0.0,"1949, 1951","1949, 1951",0,am,am,main,main
+229,4.123105625617661,"2027, 2028","2026, 2032",5,s,'s not,main,main
+238,0.0,"2118, 2125","2118, 2125",0,receive,receive,main,main
+236,7.0,"2094, 2114","2087, 2114",7,I do leave the house,", when I do leave the house",relational,relational
+234,0.0,"2099, 2104","2099, 2104",0,leave,leave,main,main
+239,10.0,"2126, 2143","2126, 2153",10,a series of calls,a series of calls from her.,possessed,possessed
+240,35.014282800023196,"2116, 2152","2081, 2153",36,I receive a series of calls from her,"Anyway, when I do leave the house, I receive a series of calls from her.",possessive,possessive
+237,2.0,"2116, 2117","2114, 2117",2,I,", I",affected-carrier,affected-carrier
+232,0.0,"2094, 2095","2094, 2095",0,I,I,agent-carrier,agent-carrier
+243,4.0,"2162, 2172","2162, 2168",4,having fun,having,main,main
+244,29.0,"2154, 2172","2154, 2201",29,Are you having fun,"Are you having fun, blah, blah... 3 or 4 calls.",action,action
+242,0.0,"2158, 2161","2158, 2161",0,you,you,agent,agent
+265,4.123105625617661,"2316, 2331","2312, 2332",5,what am I doing,and what am I doing.,action,action
+264,0.0,"2326, 2331","2326, 2331",0,doing,doing,main,main
+246,0.0,"2214, 2219","2214, 2219",0,leave,leave,main,main
+249,0.0,"2242, 2246","2242, 2246",0,call,call,main,main
+569,0.0,"2304, 2310","2304, 2310",0,I left,I left,action,action
+247,0.0,"2202, 2219","2202, 2219",0,Sometimes I leave,Sometimes I leave,action,action
+259,0.0,"2304, 2310","2304, 2310",0,I left,I left,phenomenon,phenomenon
+260,5.0,"2290, 2310","2285, 2310",5,the kids said I left,that the kids said I left,mental,mental
+260,5.0,"2290, 2310","2285, 2310",5,the kids said I left,that the kids said I left,three-role-cognition,three-role-cognition
+568,0.0,"2306, 2310","2306, 2310",0,left,left,main,main
+567,0.0,"2304, 2305","2304, 2305",0,I,I,agent,agent
+254,0.0,"2267, 2274","2267, 2274",0,calling,calling,main,main
+245,0.0,"2212, 2213","2212, 2213",0,I,I,agent,agent
+258,0.0,"2299, 2303","2299, 2303",0,said,said,main,main
+263,0.0,"2324, 2325","2324, 2325",0,I,I,agent,agent
+257,0.0,"2290, 2298","2290, 2298",0,the kids,the kids,agent,agent
+268,0.0,"2341, 2342","2341, 2342",0,I,I,agent,agent
+269,0.0,"2343, 2345","2343, 2345",0,do,do,main,main
+270,1.0,"2333, 2375","2333, 2376",1,What do I do to turn this situation around,What do I do to turn this situation around?,action,action
+272,1.0,"2385, 2386","2384, 2386",1,m,'m,main,main
+271,0.0,"2383, 2384","2383, 2384",0,I,I,carrier,carrier
+275,0.0,"2421, 2439","2421, 2439",0,My boyfriend and I,My boyfriend and I,carrier,carrier
+282,56.293871780150276,"2476, 2510","2421, 2498",62,both of whom I ( we! ) really love,"My boyfriend and I are involved with a married couple, both of whom I ( we! )",mental,mental
+280,36.87817782917155,"2489, 2498","2453, 2490",33,I ( we! ),"with a married couple, both of whom I",emoter,emoter
+284,5.0,"2521, 2539","2521, 2534",5,spending time with,spending time,phenomenon,phenomenon
+283,0.0,"2515, 2520","2515, 2520",0,enjoy,enjoy,main,main
+281,0.0,"2506, 2510","2506, 2510",0,love,love,main,main
+285,6.082762530298219,"2515, 2539","2521, 2540",7,enjoy spending time with,spending time with.,mental,mental
+287,0.0,"2546, 2548","2546, 2548",0,is,is,main,main
+292,3.0,"2595, 2597","2592, 2597",3,be,to be,main,main
+301,1.0,"2613, 2644","2613, 2645",1,I am tentative about it at best,I am tentative about it at best.,attributive,attributive
+301,1.0,"2613, 2644","2613, 2645",1,I am tentative about it at best,I am tentative about it at best.,relational,relational
+299,0.0,"2615, 2617","2615, 2617",0,am,am,main,main
+295,0.0,"2609, 2612","2609, 2612",0,say,say,main,main
+298,0.0,"2613, 2614","2613, 2614",0,I,I,carrier,carrier
+300,9.0,"2618, 2636","2618, 2627",9,tentative about it,tentative,attribute,attribute
+296,1.0,"2613, 2644","2613, 2645",1,I am tentative about it at best,I am tentative about it at best.,phenomenon,phenomenon
+297,4.123105625617661,"2609, 2644","2605, 2645",5,say I am tentative about it at best,and say I am tentative about it at best.,mental,mental
+297,4.123105625617661,"2609, 2644","2605, 2645",5,say I am tentative about it at best,and say I am tentative about it at best.,three-role-cognition,three-role-cognition
+305,23.0,"2674, 2734","2674, 2757",23,"a bit of an up and down ( and yes, on and off ) relationship","a bit of an up and down ( and yes, on and off ) relationship for the past two years",possessed,possessed
+306,0.0,"2646, 2757","2646, 2757",0,"My boyfriend and I have had a bit of an up and down ( and yes, on and off ) relationship for the past two years","My boyfriend and I have had a bit of an up and down ( and yes, on and off ) relationship for the past two years",relational,relational
+306,0.0,"2646, 2757","2646, 2757",0,"My boyfriend and I have had a bit of an up and down ( and yes, on and off ) relationship for the past two years","My boyfriend and I have had a bit of an up and down ( and yes, on and off ) relationship for the past two years",possessive,possessive
+307,2.0,"2759, 2789","2757, 2789",2,our main distancing difference,; our main distancing difference,carrier,carrier
+308,0.0,"2790, 2795","2790, 2795",0,being,being,main,main
+302,0.0,"2646, 2664","2646, 2664",0,My boyfriend and I,My boyfriend and I,carrier,carrier
+304,0.0,"2670, 2673","2670, 2673",0,had,had,main,main
+312,0.0,"2853, 2855","2853, 2855",0,is,is,main,main
+317,22.0,"2935, 2951","2935, 2973",22,a bit unsettling,a bit unsettling at times emotionally.,attribute,attribute
+318,35.014282800023196,"2876, 2972","2841, 2973",36,"for me, because of a chaotic past, it is ( unfortunately ) a bit unsettling at times emotionally","This desire is very strong in him; for me, because of a chaotic past, it is ( unfortunately ) a bit unsettling at times emotionally.",attributive,attributive
+318,35.014282800023196,"2876, 2972","2841, 2973",36,"for me, because of a chaotic past, it is ( unfortunately ) a bit unsettling at times emotionally","This desire is very strong in him; for me, because of a chaotic past, it is ( unfortunately ) a bit unsettling at times emotionally.",relational,relational
+311,0.0,"2841, 2852","2841, 2852",0,This desire,This desire,carrier,carrier
+328,0.0,"3077, 3083","3077, 3083",0,become,become,main,main
+324,0.0,"3037, 3038","3037, 3038",0,I,I,carrier,carrier
+325,0.0,"3039, 3043","3039, 3043",0,have,have,main,main
+326,49.0,"3044, 3048","3044, 3097",49,time,time to think through things and become more logical.,possessed,possessed
+323,76.94153624668537,"3010, 3029","2974, 3097",104,masquerade as truth,"My fears sprout without warning and masquerade as truth, until I have time to think through things and become more logical.",action,action
+327,26.248809496813376,"3037, 3072","3029, 3097",33,I have time to think through things,", until I have time to think through things and become more logical.",relational,relational
+327,26.248809496813376,"3037, 3072","3029, 3097",33,I have time to think through things,", until I have time to think through things and become more logical.",possessive,possessive
+320,0.0,"2983, 2989","2983, 2989",0,sprout,sprout,main,main
+322,0.0,"3010, 3020","3010, 3020",0,masquerade,masquerade,main,main
+345,0.0,"3226, 3228","3226, 3228",0,we,we,carrier,carrier
+332,0.0,"3101, 3104","3101, 3104",0,are,are,main,main
+335,0.0,"3148, 3150","3148, 3150",0,we,we,agent,agent
+346,0.0,"3229, 3235","3229, 3235",0,remain,remain,main,main
+333,0.0,"3127, 3142","3127, 3142",0,in an agreement,in an agreement,location,location
+337,3.0,"3155, 3162","3155, 3159",3,open up,open,main,main
+347,0.0,"3236, 3257","3236, 3257",0,each other's priority,each other's priority,attribute,attribute
+344,21.0,"3181, 3213","3202, 3213",21,who might be willing to share it,to share it,relational,relational
+352,73.00684899377592,"3286, 3344","3213, 3345",74,"we are both present for these ""extracurricular"" activities",", as long as we remain each other's priority emotionally, and as long as we are both present for these ""extracurricular"" activities.",attributive,attributive
+352,73.00684899377592,"3286, 3344","3213, 3345",74,"we are both present for these ""extracurricular"" activities",", as long as we remain each other's priority emotionally, and as long as we are both present for these ""extracurricular"" activities.",relational,relational
+331,0.0,"3098, 3100","3098, 3100",0,We,We,carrier,carrier
+348,148.86235252742716,"3226, 3269","3098, 3345",204,we remain each other's priority emotionally,"We are currently and happily in an agreement that we can open up our bed to others who might be willing to share it, as long as we remain each other's priority emotionally, and as long as we are both present for these ""extracurricular"" activities.",attributive,attributive
+334,203.0,"3098, 3142","3098, 3345",203,We are currently and happily in an agreement,"We are currently and happily in an agreement that we can open up our bed to others who might be willing to share it, as long as we remain each other's priority emotionally, and as long as we are both present for these ""extracurricular"" activities.",locational,locational
+348,148.86235252742716,"3226, 3269","3098, 3345",204,we remain each other's priority emotionally,"We are currently and happily in an agreement that we can open up our bed to others who might be willing to share it, as long as we remain each other's priority emotionally, and as long as we are both present for these ""extracurricular"" activities.",relational,relational
+339,172.40939649566667,"3148, 3180","3098, 3345",215,we can open up our bed to others,"We are currently and happily in an agreement that we can open up our bed to others who might be willing to share it, as long as we remain each other's priority emotionally, and as long as we are both present for these ""extracurricular"" activities.",action,action
+350,0.0,"3289, 3292","3289, 3292",0,are,are,main,main
+342,0.0,"3191, 3193","3191, 3193",0,be,be,main,main
+338,0.0,"3163, 3170","3163, 3170",0,our bed,our bed,affected,affected
+357,0.0,"3386, 3394","3386, 3394",0,monogamy,monogamy,carrier,carrier
+355,17.0,"3351, 3380","3368, 3380",17,conscious enough to recognize,to recognize,main,main
+361,40.311288741492746,"3386, 3449","3381, 3409",45,monogamy does not equal or guarantee happiness or even fidelity,that monogamy does not equal,attributive,attributive
+361,40.311288741492746,"3386, 3449","3381, 3409",45,monogamy does not equal or guarantee happiness or even fidelity,that monogamy does not equal,relational,relational
+359,4.0,"3404, 3409","3400, 3409",4,equal,not equal,main,main
+360,17.0,"3423, 3449","3423, 3432",17,happiness or even fidelity,happiness,attribute,attribute
+362,0.0,"3451, 3452","3451, 3452",0,I,I,carrier,carrier
+365,107.0,"3451, 3494","3451, 3601",107,I am also bisexual and adventurous sexually,"I am also bisexual and adventurous sexually, and love the idea of having both the capacity and the freedom to care for more than one person at a time.",attributive,attributive
+365,107.0,"3451, 3494","3451, 3601",107,I am also bisexual and adventurous sexually,"I am also bisexual and adventurous sexually, and love the idea of having both the capacity and the freedom to care for more than one person at a time.",relational,relational
+363,0.0,"3453, 3455","3453, 3455",0,am,am,main,main
+364,107.11675872616759,"3461, 3494","3456, 3601",112,bisexual and adventurous sexually,"also bisexual and adventurous sexually, and love the idea of having both the capacity and the freedom to care for more than one person at a time.",attribute,attribute
+367,19.026297590440446,"3505, 3600","3524, 3601",20,the idea of having both the capacity and the freedom to care for more than one person at a time,both the capacity and the freedom to care for more than one person at a time.,phenomenon,phenomenon
+388,2.8284271247461903,"3806, 3842","3804, 3844",4,which is in truth not all that often,( which is in truth not all that often ),attributive,attributive
+388,2.8284271247461903,"3806, 3842","3804, 3844",4,which is in truth not all that often,( which is in truth not all that often ),relational,relational
+394,0.0,"3892, 3896","3892, 3896",0,have,have,main,main
+375,0.0,"3658, 3666","3658, 3666",0,jealousy,jealousy,phenomenon,phenomenon
+370,0.0,"3631, 3633","3631, 3633",0,is,is,main,main
+386,0.0,"3812, 3814","3812, 3814",0,is,is,main,main
+374,0.0,"3647, 3657","3647, 3657",0,experience,experience,main,main
+574,30.0,"3690, 3741","3690, 3711",30,my boyfriend tells me he's talked to his girlfriend,my boyfriend tells me,mental,mental
+371,76.15773105863909,"3639, 3741","3709, 3711",100,I still experience jealousy pretty much every time my boyfriend tells me he's talked to his girlfriend,me,phenomenon,phenomenon
+383,123.76186811776881,"3796, 3803","3762, 3922",153,to meet,anxiety and fear when we all plan to meet ( which is in truth not all that often ) ; and most troubling is that I still sometimes have doubts about my boyfriend,created-phenomenon,created-phenomenon
+378,0.0,"3751, 3761","3751, 3761",0,experience,experience,main,main
+376,23.53720459187964,"3639, 3666","3634, 3689",28,I still experience jealousy,that I still experience jealousy pretty much every time,mental,mental
+380,144.01388821915754,"3743, 3778","3741, 3922",146,I still experience anxiety and fear,; I still experience anxiety and fear when we all plan to meet ( which is in truth not all that often ) ; and most troubling is that I still sometimes have doubts about my boyfriend,mental,mental
+571,0.0,"3703, 3708","3703, 3708",0,tells,tells,main,main
+390,0.0,"3866, 3868","3866, 3868",0,is,is,main,main
+382,0.0,"3791, 3795","3791, 3795",0,plan,plan,main,main
+570,0.0,"3690, 3702","3690, 3702",0,my boyfriend,my boyfriend,agent,agent
+385,0.0,"3806, 3811","3806, 3811",0,which,which,carrier,carrier
+391,75.58438992278762,"3874, 3994","3897, 3922",95,"I still sometimes have doubts about my boyfriend and ( though rare, they can be intense ) negative reactions towards him",doubts about my boyfriend,phenomenon,phenomenon
+395,72.0,"3897, 3994","3897, 3922",72,"doubts about my boyfriend and ( though rare, they can be intense ) negative reactions towards him",doubts about my boyfriend,possessed,possessed
+396,72.17340230306452,"3874, 3994","3869, 3922",77,"I still sometimes have doubts about my boyfriend and ( though rare, they can be intense ) negative reactions towards him",that I still sometimes have doubts about my boyfriend,relational,relational
+396,72.17340230306452,"3874, 3994","3869, 3922",77,"I still sometimes have doubts about my boyfriend and ( though rare, they can be intense ) negative reactions towards him",that I still sometimes have doubts about my boyfriend,possessive,possessive
+398,0.0,"4007, 4016","4007, 4016",0,expresses,expresses,main,main
+393,0.0,"3874, 3875","3874, 3875",0,I,I,carrier,carrier
+413,0.0,"4198, 4204","4198, 4204",0,strike,strike,main,main
+402,0.0,"4078, 4080","4078, 4080",0,is,is,main,main
+414,14.0,"4205, 4207","4205, 4221",14,me,me the wrong way,affected,affected
+404,0.0,"4096, 4097","4096, 4097",0,I,I,agent,agent
+425,0.0,"4270, 4272","4270, 4272",0,me,me,affected,affected
+417,0.0,"4228, 4234","4228, 4234",0,equate,equate,main,main
+424,0.0,"4262, 4269","4262, 4269",0,leaving,leaving,main,main
+406,0.0,"4101, 4109","4101, 4109",0,thinking,thinking,main,main
+415,16.0,"4193, 4221","4177, 4221",16,they strike me the wrong way,"then at others, they strike me the wrong way",action,action
+426,6.082762530298219,"4257, 4289","4251, 4290",7,He's leaving me for someone else,"with ""He's leaving me for someone else.",action,action
+422,1.0,"4257, 4259","4256, 4259",1,He,"""He",agent,agent
+407,15.0,"4096, 4119","4081, 4119",15,I am thinking logically,that sometimes I am thinking logically,action,action
+409,0.0,"4128, 4132","4128, 4132",0,hear,hear,main,main
+430,3.0,"4291, 4315","4291, 4318",3,I knew this would happen,"I knew this would happen"" .",mental,mental
+430,3.0,"4291, 4315","4291, 4318",3,I knew this would happen,"I knew this would happen"" .",two-role-cognition,two-role-cognition
+428,0.0,"4293, 4297","4293, 4297",0,knew,knew,main,main
+427,0.0,"4291, 4292","4291, 4292",0,I,I,cognizant,cognizant
+429,1.0,"4298, 4315","4298, 4316",1,this would happen,"this would happen""",phenomenon,phenomenon
+437,0.0,"4388, 4397","4388, 4397",0,reassured,reassured,main,main
+442,0.0,"4412, 4414","4412, 4414",0,me,me,phenomenon,phenomenon
+441,0.0,"4406, 4411","4406, 4411",0,LOVES,LOVES,main,main
+431,0.0,"4319, 4332","4319, 4332",0,This reaction,This reaction,carrier,carrier
+432,0.0,"4333, 4335","4333, 4335",0,is,is,main,main
+440,0.0,"4403, 4405","4403, 4405",0,he,he,emoter,emoter
+444,0.0,"4420, 4425","4420, 4425",0,wants,wants,main,main
+443,5.0990195135927845,"4403, 4414","4398, 4415",6,he LOVES me,"that he LOVES me,",mental,mental
+433,12.0,"4336, 4370","4348, 4370",12,in spite of numerous conversations,numerous conversations,attribute,attribute
+434,84.0,"4319, 4370","4319, 4454",84,This reaction is in spite of numerous conversations,"This reaction is in spite of numerous conversations during which I'm reassured that he LOVES me, but wants to PLAY with others WITH me.",attributive,attributive
+434,84.0,"4319, 4370","4319, 4454",84,This reaction is in spite of numerous conversations,"This reaction is in spite of numerous conversations during which I'm reassured that he LOVES me, but wants to PLAY with others WITH me.",relational,relational
+476,51.15662224971465,"4757, 4882","4753, 4831",55,"I don't know where else to ask these questions and receive an answer other than ""What? Polyamory? Are you crazy? Leave him! """,and I don't know where else to ask these questions and receive an answer other,mental,mental
+476,51.15662224971465,"4757, 4882","4753, 4831",55,"I don't know where else to ask these questions and receive an answer other than ""What? Polyamory? Are you crazy? Leave him! """,and I don't know where else to ask these questions and receive an answer other,two-role-cognition,two-role-cognition
+470,7.0,"4705, 4749","4698, 4749",7,to be honest and to get some honest feedback,a need to be honest and to get some honest feedback,phenomenon,phenomenon
+475,51.0,"4770, 4882","4770, 4831",51,"where else to ask these questions and receive an answer other than ""What? Polyamory? Are you crazy? Leave him! """,where else to ask these questions and receive an answer other,phenomenon,phenomenon
+469,7.0,"4693, 4704","4693, 4697",7,have a need,have,main,main
+466,0.0,"4634, 4685","4634, 4685",0,I may catch some flack for my attitude and thoughts,I may catch some flack for my attitude and thoughts,phenomenon,phenomenon
+577,11.0,"4640, 4656","4640, 4645",11,catch some flack,catch,main,main
+449,3.0,"4471, 4477","4468, 4477",3,battle,to battle,main,main
+465,0.0,"4626, 4633","4626, 4633",0,realize,realize,main,main
+447,0.0,"4455, 4456","4455, 4456",0,I,I,agent,agent
+575,0.0,"4634, 4635","4634, 4635",0,I,I,affected,affected
+460,0.0,"4585, 4586","4585, 4586",0,I,I,carrier,carrier
+461,0.0,"4587, 4589","4587, 4589",0,am,am,main,main
+463,5.0,"4585, 4620","4580, 4620",5,"I am with her husband, my boyfriend","when I am with her husband, my boyfriend",locational,locational
+464,4.0,"4624, 4625","4620, 4625",4,I,... I,cognizant,cognizant
+467,4.123105625617661,"4624, 4685","4620, 4686",5,I realize I may catch some flack for my attitude and thoughts,"... I realize I may catch some flack for my attitude and thoughts,",mental,mental
+467,4.123105625617661,"4624, 4685","4620, 4686",5,I realize I may catch some flack for my attitude and thoughts,"... I realize I may catch some flack for my attitude and thoughts,",two-role-cognition,two-role-cognition
+457,0.0,"4549, 4553","4549, 4553",0,feel,feel,main,main
+453,0.0,"4493, 4496","4493, 4496",0,see,see,main,main
+454,40.311288741492746,"4497, 4537","4468, 4509",32,my boyfriend and his girlfriend together,to battle my mind when I see my boyfriend,phenomenon,phenomenon
+474,4.0,"4765, 4769","4761, 4769",4,know,n't know,main,main
+479,1.0,"4863, 4868","4863, 4869",1,crazy,crazy?,attribute,attribute
+478,0.0,"4859, 4862","4859, 4862",0,you,you,carrier,carrier
+480,1.0,"4855, 4868","4855, 4869",1,Are you crazy,Are you crazy?,attributive,attributive
+480,1.0,"4855, 4868","4855, 4869",1,Are you crazy,Are you crazy?,relational,relational
+477,0.0,"4855, 4858","4855, 4858",0,Are,Are,main,main
+482,1.0,"4876, 4879","4876, 4880",1,him,him!,affected,affected
+481,0.0,"4870, 4875","4870, 4875",0,Leave,Leave,main,main
+483,3.0,"4870, 4879","4870, 4882",3,Leave him,"Leave him! """,action,action
+582,19.026297590440446,"4902, 4919","4883, 4920",20,what I want to do,Because that's not what I want to do.,mental,mental
+485,4.123105625617661,"4896, 4897","4895, 4901",5,s,'s not,main,main
+579,0.0,"4907, 4908","4907, 4908",0,I,I,emoter,emoter
+580,3.0,"4909, 4916","4909, 4913",3,want to,want,main,main
+581,3.1622776601683795,"4917, 4919","4914, 4920",4,do,to do.,phenomenon,phenomenon
+500,0.0,"4998, 5002","4998, 5002",0,know,know,main,main
+502,4.123105625617661,"4995, 5035","4991, 5036",5,we know we really love each other deeply,and we know we really love each other deeply.,mental,mental
+502,4.123105625617661,"4995, 5035","4991, 5036",5,we know we really love each other deeply,and we know we really love each other deeply.,two-role-cognition,two-role-cognition
+559,0.0,"5018, 5028","5018, 5028",0,each other,each other,phenomenon,phenomenon
+501,1.0,"5003, 5035","5003, 5036",1,we really love each other deeply,we really love each other deeply.,phenomenon,phenomenon
+495,0.0,"4980, 4984","4980, 4984",0,done,done,main,main
+499,0.0,"4995, 4997","4995, 4997",0,we,we,cognizant,cognizant
+558,0.0,"5013, 5017","5013, 5017",0,love,love,main,main
+557,0.0,"5003, 5005","5003, 5005",0,we,we,emoter,emoter
+560,1.0,"5003, 5035","5003, 5036",1,we really love each other deeply,we really love each other deeply.,mental,mental
+496,0.0,"4985, 4990","4985, 4990",0,a lot,a lot,range,range
+498,2.0,"4960, 4975","4958, 4975",2,we've both seen,", we've both seen",two-role-perception,two-role-perception
+494,0.0,"4971, 4975","4971, 4975",0,seen,seen,main,main
+489,0.0,"4940, 4943","4940, 4943",0,are,are,main,main
+506,17.0,"5037, 5077","5037, 5094",17,I want to spend my life with this person,"I want to spend my life with this person, and he with me.",mental,mental
+503,0.0,"5037, 5038","5037, 5038",0,I,I,emoter,emoter
+505,0.0,"5044, 5077","5044, 5077",0,to spend my life with this person,to spend my life with this person,phenomenon,phenomenon
+504,0.0,"5039, 5043","5039, 5043",0,want,want,main,main
+515,3.0,"5095, 5202","5095, 5205",3,He has shown me a committed willingness to listen to my heart and understand how I struggle with this issue,He has shown me a committed willingness to listen to my heart and understand how I struggle with this issue...,three-role-cognition,three-role-cognition
+514,3.0,"5111, 5202","5108, 5202",3,a committed willingness to listen to my heart and understand how I struggle with this issue,me a committed willingness to listen to my heart and understand how I struggle with this issue,phenomenon,phenomenon
+513,92.0,"5108, 5110","5108, 5202",92,me,me a committed willingness to listen to my heart and understand how I struggle with this issue,affected-cognizant,affected-cognizant
+587,0.0,"5291, 5292","5291, 5292",0,I,I,carrier,carrier
+512,0.0,"5102, 5107","5102, 5107",0,shown,shown,main,main
+585,20.0,"5192, 5202","5172, 5202",20,this issue,how I struggle with this issue,phenomenon,phenomenon
+520,0.0,"5212, 5216","5212, 5216",0,want,want,main,main
+533,8.0,"5453, 5466","5453, 5458",8,doing my best,doing,main,main
+586,19.0,"5176, 5202","5157, 5202",19,I struggle with this issue,and understand how I struggle with this issue,mental,mental
+530,65.0,"5404, 5509","5467, 5493",79,"these seemingly instinctual reactions, that I am doing my best to take responsibility for, are bothersome",to take responsibility for,relational,relational
+534,24.0,"5443, 5493","5467, 5493",24,that I am doing my best to take responsibility for,to take responsibility for,action,action
+584,5.0,"5178, 5191","5178, 5186",5,struggle with,struggle,main,main
+522,33.0,"5210, 5268","5243, 5268",33,I want to do the same for him by understanding this desire,understanding this desire,mental,mental
+525,94.0,"5291, 5396","5385, 5396",94,"I am there in so many ways, even sharing the desire to be open and free and capable of loving more people",more people,phenomenon,phenomenon
+510,0.0,"5095, 5097","5095, 5097",0,He,He,agent,agent
+528,0.0,"5495, 5498","5495, 5498",0,are,are,main,main
+524,0.0,"5281, 5285","5281, 5285",0,feel,feel,main,main
+526,106.0,"5272, 5396","5378, 5396",106,"I really feel that I am there in so many ways, even sharing the desire to be open and free and capable of loving more people",loving more people,mental,mental
+543,0.0,"5577, 5579","5577, 5579",0,me,me,affected-carrier,affected-carrier
+541,0.0,"5567, 5570","5567, 5570",0,you,you,agent,agent
+537,8.0,"5527, 5539","5527, 5531",8,been through,been,main,main
+542,0.0,"5571, 5576","5571, 5576",0,offer,offer,main,main
+544,1.0,"5580, 5593","5580, 5594",1,some guidance,some guidance?,possessed,possessed
+16,58.137767414994535,"109, 125","105, 183",62,live with a wife,and live with a wife who drinks every day and every night after she gets home.,action,action
+193,104.69479452198185,"1578, 1615","1534, 1710",139,doing everything for her all the time,"to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",phenomenon,phenomenon
+379,144.0,"3762, 3778","3762, 3922",144,anxiety and fear,anxiety and fear when we all plan to meet ( which is in truth not all that often ) ; and most troubling is that I still sometimes have doubts about my boyfriend,phenomenon,phenomenon
+,
+,Manual mismatching all parsed (False Negative)
+4,"19, 41",Are you ready for this,relational
+4,"19, 41",Are you ready for this,attributive
+1,"19, 22",Are,main
+2,"23, 26",you,carrier
+3,"27, 41",ready for this,attribute
+8,"45, 70",I am emotionally confused,relational
+8,"45, 70",I am emotionally confused,attributive
+5,"45, 46",I,carrier
+6,"47, 49",am,main
+7,"50, 70",emotionally confused,attribute
+13,"72, 104",I have been married for 16 years,relational
+13,"72, 104",I have been married for 16 years,attributive
+9,"72, 73",I,carrier
+12,"84, 91",married,attribute
+17,"126, 129",who,agent
+22,"169, 182",she gets home,action
+24,"184, 225",Usually 2 beers and 2 big glasses of wine,action
+23,"192, 225",2 beers and 2 big glasses of wine,affected
+30,"227, 266",I have confronted her with the drinking,mental
+30,"227, 266",I have confronted her with the drinking,three-role-cognition
+25,"227, 228",I,agent
+28,"245, 248",her,affected-cognizant
+29,"249, 266",with the drinking,phenomenon
+551,"285, 335",she gravitates to others in her circle for support,relational
+551,"285, 335",she gravitates to others in her circle for support,directional
+35,"285, 288",she,agent-carrier
+37,"303, 323",others in her circle,destination
+48,"375, 395",it's only my problem,attributive
+47,"385, 395",my problem,attribute
+52,"397, 413",I called Al-Anon,action
+49,"397, 398",I,agent
+51,"406, 413",Al-Anon,affected
+57,"418, 462",they advised me not to react to the drinking,mental
+57,"418, 462",they advised me not to react to the drinking,three-role-cognition
+53,"418, 422",they,agent
+55,"431, 433",me,affected-cognizant
+56,"434, 462",not to react to the drinking,phenomenon
+61,"464, 551",I feel like she drinks so much because she has lost interest in me and our relationship,mental
+61,"464, 551",I feel like she drinks so much because she has lost interest in me and our relationship,two-role-cognition
+58,"464, 465",I,cognizant
+60,"476, 551",she drinks so much because she has lost interest in me and our relationship,phenomenon
+64,"487, 494",so much,affected
+70,"503, 551",she has lost interest in me and our relationship,mental
+70,"503, 551",she has lost interest in me and our relationship,two-role-cognition
+66,"503, 506",she,cognizant
+68,"511, 527",lost interest in,main
+69,"528, 551",me and our relationship,phenomenon
+74,"561, 575",I care for her,mental
+71,"561, 562",I,emoter
+73,"572, 575",her,phenomenon
+76,"585, 641",her to be more loving to me and cut down on the drinking,phenomenon
+82,"643, 688",she seems cold and often distant to me lately,mental
+82,"643, 688",she seems cold and often distant to me lately,three-role-cognition
+78,"643, 646",she,agent
+81,"676, 681",to me,affected-cognizant
+96,"716, 735",what I have planned,influential
+101,"752, 777",what we could do together,action
+97,"752, 756",what,created
+105,"779, 802",She makes her own plans,mental
+105,"779, 802",She makes her own plans,two-role-cognition
+102,"779, 782",She,cognizant
+108,"807, 840","goes to get a tan, her nails done",relational
+108,"807, 840","goes to get a tan, her nails done",directional
+107,"812, 840","to get a tan, her nails done",destination
+110,"851, 894",to work for a few hours and then to the gym,destination
+119,"944, 970",greets me with... hi honey,mental
+119,"944, 970",greets me with... hi honey,three-role-perception
+118,"962, 970",hi honey,phenomenon
+120,"998, 999",I,emoter
+555,"1015, 1037",she ditched me all day,action
+552,"1015, 1018",she,agent
+554,"1027, 1029",me,affected
+132,"1070, 1095",She says that then I pout,mental
+131,"1084, 1095",then I pout,phenomenon
+137,"1089, 1095",I pout,action
+135,"1089, 1090",I,agent
+561,"1149, 1202",wants to do other things without me from time to time,mental
+564,"1149, 1202",wants to do other things without me from time to time,mental
+151,"1213, 1248",we need to be more like her parents,relational
+147,"1213, 1215",we,carrier
+154,"1253, 1281",do their own separate things,action
+152,"1253, 1255",do,main
+153,"1256, 1281",their own separate things,created
+155,"1291, 1308",get back together,main
+156,"1291, 1308",get back together,action
+159,"1313, 1341",have something to talk about,possessive
+158,"1318, 1341",something to talk about,possessed
+163,"1343, 1394",Her father calls her to check in with her every day,action
+160,"1343, 1353",Her father,agent
+162,"1360, 1363",her,affected
+171,"1429, 1432",she,carrier
+179,"1478, 1505",we saw each other every day,action
+191,"1527, 1568",I need to quit calling her during the day,influential
+187,"1527, 1528",I,agent
+190,"1542, 1568",calling her during the day,phenomenon
+194,"1573, 1615",stop doing everything for her all the time,influential
+197,"1632, 1660",quit answering my cell phone,influential
+186,"1666, 1709",she calls to check on me throughout the day,action
+184,"1666, 1669",she,agent
+201,"1711, 1772",I literally quit dialling her at work about 2 or 3 months ago,influential
+198,"1711, 1712",I,agent
+200,"1728, 1748",dialling her at work,phenomenon
+210,"1787, 1817",I don't care about her anymore,mental
+220,"1906, 1945",wants me to go do stuff with my friends,mental
+219,"1912, 1945",me to go do stuff with my friends,phenomenon
+224,"1947, 1979",I am a top producer with my firm,relational
+224,"1947, 1979",I am a top producer with my firm,attributive
+223,"1952, 1966",a top producer,attribute
+227,"1984, 2019",make almost 200000 dollars per year,action
+225,"1984, 1988",make,main
+226,"1989, 2019",almost 200000 dollars per year,created
+231,"2024, 2063",it's not like I sit at home watching TV,event-relating
+228,"2024, 2026",it,carrier
+230,"2038, 2063",I sit at home watching TV,phenomenon
+566,"2067, 2079",play all day,phenomenon
+565,"2067, 2079",play all day,event-relating
+236,"2094, 2114",I do leave the house,directional
+235,"2105, 2114",the house,source
+240,"2116, 2152",I receive a series of calls from her,relational
+251,"2224, 2250",the teen age kids call her,action
+248,"2224, 2241",the teen age kids,agent
+250,"2247, 2250",her,affected
+256,"2260, 2277",she is calling me,action
+252,"2260, 2263",she,agent
+255,"2275, 2277",me,affected
+261,"2316, 2320",what,created
+266,"2333, 2337",What,created
+274,"2383, 2415",I'm a bit frustrated with myself,relational
+274,"2383, 2415",I'm a bit frustrated with myself,attributive
+273,"2387, 2403",a bit frustrated,attribute
+278,"2421, 2474",My boyfriend and I are involved with a married couple,relational
+278,"2421, 2474",My boyfriend and I are involved with a married couple,attributive
+276,"2440, 2443",are,main
+277,"2444, 2474",involved with a married couple,attribute
+279,"2476, 2488",both of whom,phenomenon
+289,"2541, 2580",This is my first venture into polyamory,relational
+289,"2541, 2580",This is my first venture into polyamory,attributive
+286,"2541, 2545",This,carrier
+288,"2549, 2580",my first venture into polyamory,attribute
+294,"2585, 2604",I have to be honest,relational
+294,"2585, 2604",I have to be honest,attributive
+290,"2585, 2586",I,carrier
+293,"2598, 2604",honest,attribute
+310,"2759, 2839",our main distancing difference being whether or not to have an open relationship,event-relating
+309,"2796, 2839",whether or not to have an open relationship,phenomenon
+314,"2841, 2874",This desire is very strong in him,relational
+314,"2841, 2874",This desire is very strong in him,attributive
+313,"2856, 2867",very strong,attribute
+315,"2911, 2913",it,carrier
+316,"2914, 2916",is,main
+321,"2974, 3005",My fears sprout without warning,action
+319,"2974, 2982",My fears,agent
+330,"3077, 3096",become more logical,relational
+330,"3077, 3096",become more logical,attributive
+329,"3084, 3096",more logical,attribute
+334,"3098, 3142",We are currently and happily in an agreement,relational
+344,"3181, 3213",who might be willing to share it,attributive
+340,"3181, 3184",who,carrier
+343,"3194, 3213",willing to share it,attribute
+349,"3286, 3288",we,carrier
+351,"3298, 3305",present,attribute
+356,"3346, 3449",I am conscious enough to recognize that monogamy does not equal or guarantee happiness or even fidelity,mental
+356,"3346, 3449",I am conscious enough to recognize that monogamy does not equal or guarantee happiness or even fidelity,two-role-cognition
+353,"3346, 3347",I,cognizant
+556,"3386, 3449",monogamy does not equal or guarantee happiness or even fidelity,phenomenon
+368,"3500, 3600",love the idea of having both the capacity and the freedom to care for more than one person at a time,mental
+366,"3500, 3504",love,main
+372,"3602, 3741",My frustration and confusion is that I still experience jealousy pretty much every time my boyfriend tells me he's talked to his girlfriend,event-relating
+369,"3602, 3630",My frustration and confusion,carrier
+373,"3639, 3640",I,emoter
+574,"3690, 3741",my boyfriend tells me he's talked to his girlfriend,three-role-cognition
+572,"3709, 3711",me,affected-cognizant
+573,"3712, 3741",he's talked to his girlfriend,phenomenon
+377,"3743, 3744",I,emoter
+384,"3784, 3803",we all plan to meet,influential
+381,"3784, 3790",we all,agent
+387,"3824, 3842",not all that often,attribute
+392,"3851, 3994","most troubling is that I still sometimes have doubts about my boyfriend and ( though rare, they can be intense ) negative reactions towards him",event-relating
+389,"3851, 3865",most troubling,carrier
+400,"4004, 4047",he expresses his attraction for someone new,mental
+400,"4004, 4047",he expresses his attraction for someone new,three-role-cognition
+397,"4004, 4006",he,agent
+399,"4017, 4047",his attraction for someone new,phenomenon
+403,"4049, 4080",The confusion for both of us is,relational
+403,"4049, 4080",The confusion for both of us is,attributive
+401,"4049, 4077",The confusion for both of us,carrier
+411,"4124, 4171",can hear these things with a welcoming attitude,mental
+411,"4124, 4171",can hear these things with a welcoming attitude,two-role-perception
+410,"4133, 4145",these things,phenomenon
+412,"4193, 4197",they,agent
+421,"4226, 4316","I equate the information with ""He's leaving me for someone else. I knew this would happen""",mental
+421,"4226, 4316","I equate the information with ""He's leaving me for someone else. I knew this would happen""",three-role-cognition
+416,"4226, 4227",I,affected-cognizant
+418,"4235, 4250",the information,phenomenon
+420,"4256, 4316","""He's leaving me for someone else. I knew this would happen""",matchee
+439,"4371, 4453","during which I'm reassured that he LOVES me, but wants to PLAY with others WITH me",mental
+439,"4371, 4453","during which I'm reassured that he LOVES me, but wants to PLAY with others WITH me",three-role-cognition
+435,"4384, 4385",I,affected-cognizant
+438,"4403, 4453","he LOVES me, but wants to PLAY with others WITH me",phenomenon
+446,"4420, 4453",wants to PLAY with others WITH me,mental
+445,"4426, 4453",to PLAY with others WITH me,phenomenon
+451,"4455, 4485",I still have to battle my mind,action
+450,"4478, 4485",my mind,affected
+455,"4491, 4537",I see my boyfriend and his girlfriend together,mental
+455,"4491, 4537",I see my boyfriend and his girlfriend together,two-role-perception
+452,"4491, 4492",I,perceiver
+459,"4541, 4579",I still feel a bit uncomfortable / shy,relational
+459,"4541, 4579",I still feel a bit uncomfortable / shy,attributive
+456,"4541, 4542",I,carrier
+458,"4554, 4579",a bit uncomfortable / shy,attribute
+463,"4585, 4620","I am with her husband, my boyfriend",relational
+462,"4590, 4620","with her husband, my boyfriend",location
+578,"4634, 4685",I may catch some flack for my attitude and thoughts,action
+471,"4691, 4749",I have a need to be honest and to get some honest feedback,mental
+468,"4691, 4692",I,emoter
+472,"4757, 4758",I,cognizant
+487,"4891, 4919",that's not what I want to do,event-relating
+484,"4891, 4895",that,carrier
+486,"4902, 4919",what I want to do,phenomenon
+491,"4921, 4958",My boyfriend and I are both around 40,relational
+491,"4921, 4958",My boyfriend and I are both around 40,attributive
+488,"4921, 4939",My boyfriend and I,carrier
+490,"4949, 4958",around 40,attribute
+498,"4960, 4975",we've both seen,mental
+492,"4960, 4962",we,perceiver
+497,"4980, 4990",done a lot,action
+509,"5083, 5093",he with me,mental
+507,"5083, 5085",he,emoter
+508,"5086, 5093",with me,phenomenon
+515,"5095, 5202",He has shown me a committed willingness to listen to my heart and understand how I struggle with this issue,mental
+583,"5176, 5177",I,emoter
+519,"5210, 5211",I,emoter
+521,"5217, 5239",to do the same for him,phenomenon
+526,"5272, 5396","I really feel that I am there in so many ways, even sharing the desire to be open and free and capable of loving more people",two-role-cognition
+523,"5272, 5273",I,cognizant
+590,"5291, 5301",I am there,relational
+590,"5291, 5301",I am there,locational
+588,"5293, 5295",am,main
+589,"5296, 5301",there,location
+530,"5404, 5509","these seemingly instinctual reactions, that I am doing my best to take responsibility for, are bothersome",attributive
+527,"5404, 5493","these seemingly instinctual reactions, that I am doing my best to take responsibility for",carrier
+531,"5448, 5449",I,agent
+529,"5499, 5509",bothersome,attribute
+539,"5511, 5557",Has anyone else been through a similar journey,relational
+539,"5511, 5557",Has anyone else been through a similar journey,directional
+536,"5515, 5526",anyone else,carrier
+538,"5540, 5557",a similar journey,path
+545,"5563, 5593",can you offer me some guidance,relational
+545,"5563, 5593",can you offer me some guidance,possessive
+549,"5595, 5622",It is very much appreciated,relational
+549,"5595, 5622",It is very much appreciated,attributive
+546,"5595, 5597",It,carrier
+547,"5598, 5600",is,main
+548,"5601, 5622",very much appreciated,attribute
+,
+,Parsed mismatching all manual (False Positives)
+27,"27, 32",ready,main
+62,"62, 70",confused,main
+114,"114, 183",with a wife who drinks every day and every night after she gets home.,affected-emoter
+114,"114, 183",with a wife who drinks every day and every night after she gets home.,affected-path
+114,"114, 183",with a wife who drinks every day and every night after she gets home.,affected-perceiver
+114,"114, 183",with a wife who drinks every day and every night after she gets home.,affected-cognizant
+114,"114, 183",with a wife who drinks every day and every night after she gets home.,affected-carrier
+114,"114, 183",with a wife who drinks every day and every night after she gets home.,affected-destination
+114,"114, 183",with a wife who drinks every day and every night after she gets home.,affected-possessed
+114,"114, 183",with a wife who drinks every day and every night after she gets home.,affected-source
+178,"178, 183",home.,phenomenon
+178,"178, 183",home.,attribute
+178,"178, 183",home.,affected-emoter
+178,"178, 183",home.,created-phenomenon
+178,"178, 183",home.,affected-path
+178,"178, 183",home.,affected-perceiver
+178,"178, 183",home.,destination
+178,"178, 183",home.,affected-cognizant
+178,"178, 183",home.,affected-carrier
+178,"178, 183",home.,affected-destination
+178,"178, 183",home.,affected
+178,"178, 183",home.,affected-possessed
+178,"178, 183",home.,affected-source
+178,"178, 183",home.,created
+178,"178, 183",home.,possessed
+105,"105, 183",and live with a wife who drinks every day and every night after she gets home.,process
+105,"105, 183",and live with a wife who drinks every day and every night after she gets home.,two-role-action
+72,"72, 104",I have been married for 16 years,process
+72,"72, 104",I have been married for 16 years,two-role-action
+72,"72, 104",I have been married for 16 years,action
+137,"137, 183",every day and every night after she gets home.,process
+137,"137, 183",every day and every night after she gets home.,attributive
+137,"137, 183",every day and every night after she gets home.,mental
+137,"137, 183",every day and every night after she gets home.,directional
+137,"137, 183",every day and every night after she gets home.,causative
+137,"137, 183",every day and every night after she gets home.,possessive
+137,"137, 183",every day and every night after she gets home.,two-role-cognition
+137,"137, 183",every day and every night after she gets home.,two-role-action
+169,"169, 172",she,cognizant
+169,"169, 172",she,agent-cognizant
+169,"169, 172",she,affected-cognizant
+169,"169, 172",she,affected-carrier
+169,"169, 172",she,affected
+169,"169, 172",she,agent-carrier
+169,"169, 172",she,agent-perceiver
+169,"169, 172",she,carrier
+169,"169, 172",she,perceiver
+92,"92, 104",for 16 years,affected-emoter
+92,"92, 104",for 16 years,affected-path
+92,"92, 104",for 16 years,affected-perceiver
+92,"92, 104",for 16 years,affected-cognizant
+92,"92, 104",for 16 years,affected-carrier
+92,"92, 104",for 16 years,affected-destination
+92,"92, 104",for 16 years,affected
+92,"92, 104",for 16 years,affected-possessed
+92,"92, 104",for 16 years,affected-source
+72,"72, 73",I,agent
+72,"72, 73",I,agent-cognizant
+72,"72, 73",I,agent-carrier
+72,"72, 73",I,agent-perceiver
+184,"184, 191",Usually,main
+280,"280, 365",that she gravitates to others in her circle for support that she has no real problem.,created-phenomenon
+349,"349, 365",no real problem.,phenomenon
+349,"349, 365",no real problem.,affected-emoter
+349,"349, 365",no real problem.,created-phenomenon
+349,"349, 365",no real problem.,affected-path
+349,"349, 365",no real problem.,affected-perceiver
+349,"349, 365",no real problem.,affected-cognizant
+349,"349, 365",no real problem.,affected-carrier
+349,"349, 365",no real problem.,affected-destination
+349,"349, 365",no real problem.,affected
+349,"349, 365",no real problem.,affected-possessed
+349,"349, 365",no real problem.,affected-source
+349,"349, 365",no real problem.,created
+341,"341, 344",she,agent
+341,"341, 344",she,agent-cognizant
+341,"341, 344",she,affected-carrier
+341,"341, 344",she,affected
+341,"341, 344",she,agent-carrier
+341,"341, 344",she,agent-perceiver
+341,"341, 344",she,perceiver
+267,"267, 365",and it seems that she gravitates to others in her circle for support that she has no real problem.,process
+336,"336, 365",that she has no real problem.,process
+336,"336, 365",that she has no real problem.,causative
+336,"336, 365",that she has no real problem.,two-role-action
+336,"336, 365",that she has no real problem.,action
+366,"366, 369",She,cognizant
+366,"366, 369",She,agent-cognizant
+366,"366, 369",She,affected-cognizant
+366,"366, 369",She,agent-carrier
+366,"366, 369",She,agent-perceiver
+366,"366, 369",She,perceiver
+366,"366, 396",She says it's only my problem.,process
+366,"366, 396",She says it's only my problem.,two-role-cognition
+366,"366, 396",She says it's only my problem.,two-role-perception
+385,"385, 396",my problem.,location
+375,"375, 377",it,affected-carrier
+375,"375, 377",it,agent-carrier
+375,"375, 396",it's only my problem.,process
+375,"375, 396",it's only my problem.,locational
+375,"375, 396",it's only my problem.,created-phenomenon
+434,"434, 446",not to react,main
+471,"471, 552",like she drinks so much because she has lost interest in me and our relationship?,process
+471,"471, 552",like she drinks so much because she has lost interest in me and our relationship?,two-role-action
+476,"476, 479",she,agent-cognizant
+476,"476, 479",she,agent-carrier
+476,"476, 479",she,agent-perceiver
+561,"561, 562",I,agent
+561,"561, 562",I,agent-cognizant
+561,"561, 562",I,agent-carrier
+561,"561, 562",I,agent-perceiver
+568,"568, 575",for her,affected-emoter
+568,"568, 575",for her,affected-path
+568,"568, 575",for her,affected-perceiver
+568,"568, 575",for her,affected-cognizant
+568,"568, 575",for her,affected-carrier
+568,"568, 575",for her,affected-destination
+568,"568, 575",for her,affected
+568,"568, 575",for her,affected-possessed
+568,"568, 575",for her,affected-source
+607,"607, 612",to me,destination
+607,"607, 612",to me,affected-destination
+617,"617, 620",cut,main
+553,"553, 575",Because I care for her,process
+553,"553, 575",Because I care for her,two-role-action
+553,"553, 575",Because I care for her,action
+595,"595, 606",more loving,destination
+595,"595, 606",more loving,affected-destination
+585,"585, 612",her to be more loving to me,process
+585,"585, 612",her to be more loving to me,directional
+585,"585, 612",her to be more loving to me,relational
+589,"589, 594",to be,main
+585,"585, 588",her,agent
+585,"585, 588",her,agent-perceiver
+585,"585, 588",her,perceiver
+676,"676, 681",to me,attribute
+653,"653, 675",cold and often distant,attribute
+653,"653, 675",cold and often distant,created-phenomenon
+613,"613, 641",and cut down on the drinking,process
+613,"613, 641",and cut down on the drinking,two-role-action
+613,"613, 641",and cut down on the drinking,action
+626,"626, 641",on the drinking,affected-emoter
+626,"626, 641",on the drinking,affected-path
+626,"626, 641",on the drinking,affected-perceiver
+626,"626, 641",on the drinking,affected-cognizant
+626,"626, 641",on the drinking,affected-carrier
+626,"626, 641",on the drinking,affected-destination
+626,"626, 641",on the drinking,affected
+626,"626, 641",on the drinking,affected-possessed
+626,"626, 641",on the drinking,affected-source
+641,"641, 646",", she",cognizant
+641,"641, 646",", she",agent-cognizant
+641,"641, 646",", she",affected-cognizant
+641,"641, 646",", she",affected-carrier
+641,"641, 646",", she",agent-carrier
+641,"641, 646",", she",carrier
+553,"553, 689","Because I care for her and want her to be more loving to me and cut down on the drinking, she seems cold and often distant to me lately.",process
+553,"553, 689","Because I care for her and want her to be more loving to me and cut down on the drinking, she seems cold and often distant to me lately.",attributive
+553,"553, 689","Because I care for her and want her to be more loving to me and cut down on the drinking, she seems cold and often distant to me lately.",two-role-cognition
+690,"690, 715","On Saturdays, she asks me",process
+713,"713, 715",me,phenomenon
+713,"713, 715",me,created-phenomenon
+713,"713, 715",me,cognizant
+713,"713, 715",me,affected
+716,"716, 720",what,created
+716,"716, 720",what,range
+757,"757, 759",we,agent-cognizant
+757,"757, 759",we,agent-carrier
+757,"757, 759",we,agent-perceiver
+752,"752, 756",what,manner
+752,"752, 756",what,range
+752,"752, 778",what we could do together.,created-phenomenon
+702,"702, 707",", she",agent-cognizant
+702,"702, 707",", she",agent-carrier
+702,"702, 707",", she",agent-perceiver
+736,"736, 778",and doesn't ask what we could do together.,process
+721,"721, 722",I,cognizant
+721,"721, 722",I,agent-cognizant
+721,"721, 722",I,agent-carrier
+721,"721, 722",I,agent-perceiver
+716,"716, 735",what I have planned,process
+716,"716, 735",what I have planned,mental
+716,"716, 735",what I have planned,two-role-cognition
+716,"716, 735",what I have planned,two-role-action
+716,"716, 735",what I have planned,action
+819,"819, 858","a tan, her nails done, maybe go to work",phenomenon
+819,"819, 858","a tan, her nails done, maybe go to work",created-phenomenon
+819,"819, 858","a tan, her nails done, maybe go to work",created
+812,"812, 858","to get a tan, her nails done, maybe go to work",process
+812,"812, 858","to get a tan, her nails done, maybe go to work",causative
+812,"812, 858","to get a tan, her nails done, maybe go to work",influential
+859,"859, 895",for a few hours and then to the gym.,process
+859,"859, 895",for a few hours and then to the gym.,attributive
+859,"859, 895",for a few hours and then to the gym.,causative
+859,"859, 895",for a few hours and then to the gym.,possessive
+859,"859, 895",for a few hours and then to the gym.,two-role-action
+859,"859, 895",for a few hours and then to the gym.,influential
+836,"836, 840",done,main
+851,"851, 858",to work,main
+789,"789, 802",her own plans,attribute
+789,"789, 802",her own plans,created-phenomenon
+789,"789, 802",her own plans,destination
+789,"789, 802",her own plans,affected-destination
+789,"789, 802",her own plans,affected-possessed
+789,"789, 802",her own plans,created
+789,"789, 802",her own plans,possessed
+779,"779, 782",She,agent
+779,"779, 782",She,agent-cognizant
+779,"779, 782",She,affected-carrier
+779,"779, 782",She,agent-carrier
+779,"779, 782",She,agent-perceiver
+779,"779, 782",She,carrier
+779,"779, 782",She,perceiver
+851,"851, 858",to work,process
+851,"851, 858",to work,action
+851,"851, 858",to work,one-role-action
+812,"812, 818",to get,main
+951,"951, 953",me,affected-emoter
+951,"951, 953",me,affected-path
+951,"951, 953",me,affected-cognizant
+951,"951, 953",me,affected-carrier
+951,"951, 953",me,affected-destination
+951,"951, 953",me,affected
+951,"951, 953",me,affected-possessed
+951,"951, 953",me,affected-source
+935,"935, 991","and then greets me with... hi honey, and needless to say",process
+935,"935, 991","and then greets me with... hi honey, and needless to say",two-role-action
+935,"935, 991","and then greets me with... hi honey, and needless to say",action
+904,"904, 919",", she gets home",process
+904,"904, 919",", she gets home",directional
+904,"904, 919",", she gets home",relational
+904,"904, 919",", she gets home",two-role-action
+900,"900, 904",said,main
+991,"991, 1038",", that I am pissed that she ditched me all day.",process
+991,"991, 1038",", that I am pissed that she ditched me all day.",three-role-cognition
+926,"926, 934",4: 30 pm,affected-emoter
+926,"926, 934",4: 30 pm,affected-path
+926,"926, 934",4: 30 pm,affected-perceiver
+926,"926, 934",4: 30 pm,source
+926,"926, 934",4: 30 pm,affected-cognizant
+926,"926, 934",4: 30 pm,affected-carrier
+926,"926, 934",4: 30 pm,affected-destination
+926,"926, 934",4: 30 pm,affected
+926,"926, 934",4: 30 pm,affected-possessed
+926,"926, 934",4: 30 pm,affected-source
+926,"926, 934",4: 30 pm,carrier
+954,"954, 991","with... hi honey, and needless to say",affected-emoter
+954,"954, 991","with... hi honey, and needless to say",affected-path
+954,"954, 991","with... hi honey, and needless to say",affected-perceiver
+954,"954, 991","with... hi honey, and needless to say",affected-cognizant
+954,"954, 991","with... hi honey, and needless to say",affected-carrier
+954,"954, 991","with... hi honey, and needless to say",affected-destination
+954,"954, 991","with... hi honey, and needless to say",affected
+954,"954, 991","with... hi honey, and needless to say",affected-possessed
+954,"954, 991","with... hi honey, and needless to say",affected-source
+985,"985, 991",to say,main
+991,"991, 1038",", that I am pissed that she ditched me all day.",created-phenomenon
+904,"904, 909",", she",agent-cognizant
+904,"904, 909",", she",agent-carrier
+904,"904, 909",", she",agent-perceiver
+904,"904, 909",", she",perceiver
+896,"896, 899",All,agent
+896,"896, 899",All,agent-cognizant
+896,"896, 899",All,agent-carrier
+896,"896, 899",All,agent-perceiver
+1039,"1039, 1043",This,affected-carrier
+1039,"1039, 1043",This,agent-carrier
+1047,"1047, 1069",a frequent occurrence.,location
+1039,"1039, 1069",This is a frequent occurrence.,process
+1039,"1039, 1069",This is a frequent occurrence.,locational
+1161,"1161, 1173",other things,affected-possessed
+1161,"1161, 1173",other things,possessed
+1185,"1185, 1194",from time,affected-possessed
+1185,"1185, 1194",from time,possessed
+1124,"1124, 1203",that she has friends and wants to do other things without me from time to time.,created-phenomenon
+1070,"1070, 1203",She says that then I pout and that I just can't stand that she has friends and wants to do other things without me from time to time.,process
+1070,"1070, 1203",She says that then I pout and that I just can't stand that she has friends and wants to do other things without me from time to time.,two-role-cognition
+1070,"1070, 1203",She says that then I pout and that I just can't stand that she has friends and wants to do other things without me from time to time.,two-role-perception
+1129,"1129, 1132",she,agent
+1129,"1129, 1132",she,agent-cognizant
+1129,"1129, 1132",she,affected-carrier
+1129,"1129, 1132",she,affected
+1129,"1129, 1132",she,agent-carrier
+1129,"1129, 1132",she,agent-perceiver
+1129,"1129, 1132",she,perceiver
+1105,"1105, 1106",I,affected-emoter
+1195,"1195, 1203",to time.,affected-possessed
+1195,"1195, 1203",to time.,possessed
+1137,"1137, 1144",friends,affected-emoter
+1137,"1137, 1144",friends,created-phenomenon
+1137,"1137, 1144",friends,affected-path
+1137,"1137, 1144",friends,affected-perceiver
+1137,"1137, 1144",friends,affected-cognizant
+1137,"1137, 1144",friends,affected-carrier
+1137,"1137, 1144",friends,affected-destination
+1137,"1137, 1144",friends,affected
+1137,"1137, 1144",friends,affected-possessed
+1137,"1137, 1144",friends,affected-source
+1137,"1137, 1144",friends,created
+1124,"1124, 1144",that she has friends,process
+1124,"1124, 1144",that she has friends,causative
+1124,"1124, 1144",that she has friends,two-role-action
+1124,"1124, 1144",that she has friends,action
+1155,"1155, 1203",to do other things without me from time to time.,process
+1155,"1155, 1203",to do other things without me from time to time.,relational
+1155,"1155, 1203",to do other things without me from time to time.,possessive
+1079,"1079, 1203",that then I pout and that I just can't stand that she has friends and wants to do other things without me from time to time.,created-phenomenon
+1174,"1174, 1184",without me,affected-possessed
+1174,"1174, 1184",without me,possessed
+1070,"1070, 1073",She,cognizant
+1070,"1070, 1073",She,agent-cognizant
+1070,"1070, 1073",She,affected-cognizant
+1070,"1070, 1073",She,agent-carrier
+1070,"1070, 1073",She,agent-perceiver
+1070,"1070, 1073",She,perceiver
+1221,"1221, 1342",to be more like her parents and do their own separate things and then get back together and have something to talk about.,created-phenomenon
+1213,"1213, 1342",we need to be more like her parents and do their own separate things and then get back together and have something to talk about.,created-phenomenon
+1328,"1328, 1335",to talk,main
+1204,"1204, 1207",She,cognizant
+1204,"1204, 1207",She,agent-cognizant
+1204,"1204, 1207",She,affected-cognizant
+1204,"1204, 1207",She,agent-carrier
+1204,"1204, 1207",She,agent-perceiver
+1204,"1204, 1207",She,perceiver
+1221,"1221, 1342",to be more like her parents and do their own separate things and then get back together and have something to talk about.,process
+1213,"1213, 1342",we need to be more like her parents and do their own separate things and then get back together and have something to talk about.,process
+1213,"1213, 1342",we need to be more like her parents and do their own separate things and then get back together and have something to talk about.,desiderative
+1204,"1204, 1342",She says we need to be more like her parents and do their own separate things and then get back together and have something to talk about.,process
+1204,"1204, 1342",She says we need to be more like her parents and do their own separate things and then get back together and have something to talk about.,two-role-cognition
+1204,"1204, 1342",She says we need to be more like her parents and do their own separate things and then get back together and have something to talk about.,two-role-perception
+1216,"1216, 1220",need,main
+1213,"1213, 1215",we,affected-emoter
+1213,"1213, 1215",we,emoter
+1376,"1376, 1394",with her every day,phenomenon
+1376,"1376, 1394",with her every day,created-phenomenon
+1376,"1376, 1394",with her every day,created
+1406,"1406, 1409",39!,location
+1360,"1360, 1363",her,agent
+1360,"1360, 1363",her,agent-cognizant
+1360,"1360, 1363",her,agent-carrier
+1360,"1360, 1363",her,agent-perceiver
+1399,"1399, 1402",she,affected-carrier
+1399,"1399, 1402",she,agent-carrier
+1364,"1364, 1372",to check,main
+1360,"1360, 1394",her to check in with her every day,process
+1360,"1360, 1394",her to check in with her every day,influential
+1360,"1360, 1394",her to check in with her every day,preventive
+1395,"1395, 1409",and she is 39!,process
+1395,"1395, 1409",and she is 39!,locational
+1410,"1410, 1414",When,affected-emoter
+1410,"1410, 1414",When,affected-path
+1410,"1410, 1414",When,affected-perceiver
+1410,"1410, 1414",When,affected-cognizant
+1410,"1410, 1414",When,affected-carrier
+1410,"1410, 1414",When,affected-destination
+1410,"1410, 1414",When,affected
+1410,"1410, 1414",When,affected-possessed
+1410,"1410, 1414",When,matchee
+1410,"1410, 1414",When,affected-source
+1410,"1410, 1414",When,range
+1474,"1474, 1506",and we saw each other every day.,process
+1474,"1474, 1506",and we saw each other every day.,matching
+1474,"1474, 1506",and we saw each other every day.,causative
+1474,"1474, 1506",and we saw each other every day.,relational
+1474,"1474, 1506",and we saw each other every day.,two-role-cognition
+1474,"1474, 1506",and we saw each other every day.,two-role-perception
+1474,"1474, 1506",and we saw each other every day.,two-role-action
+1447,"1447, 1473",to be with me all the time,phenomenon
+1447,"1447, 1473",to be with me all the time,created-phenomenon
+1447,"1447, 1473",to be with me all the time,created
+1453,"1453, 1460",with me,matchee
+1410,"1410, 1427",When we first met,process
+1410,"1410, 1427",When we first met,matching
+1410,"1410, 1427",When we first met,relational
+1410,"1410, 1427",When we first met,two-role-action
+1443,"1443, 1446",had,main
+1427,"1427, 1432",", she",agent
+1427,"1427, 1432",", she",agent-cognizant
+1427,"1427, 1432",", she",agent-carrier
+1427,"1427, 1432",", she",agent-perceiver
+1447,"1447, 1473",to be with me all the time,process
+1447,"1447, 1473",to be with me all the time,matching
+1478,"1478, 1480",we,cognizant
+1478,"1478, 1480",we,affected-perceiver
+1478,"1478, 1480",we,agent-cognizant
+1478,"1478, 1480",we,affected-cognizant
+1478,"1478, 1480",we,affected
+1478,"1478, 1480",we,agent-carrier
+1478,"1478, 1480",we,agent-perceiver
+1478,"1478, 1480",we,perceiver
+1410,"1410, 1473","When we first met, she literally had to be with me all the time",process
+1410,"1410, 1473","When we first met, she literally had to be with me all the time",causative
+1410,"1410, 1473","When we first met, she literally had to be with me all the time",influential
+1485,"1485, 1495",each other,phenomenon
+1485,"1485, 1495",each other,affected-emoter
+1485,"1485, 1495",each other,created-phenomenon
+1485,"1485, 1495",each other,affected-path
+1485,"1485, 1495",each other,affected-perceiver
+1485,"1485, 1495",each other,affected-cognizant
+1485,"1485, 1495",each other,affected-carrier
+1485,"1485, 1495",each other,affected-destination
+1485,"1485, 1495",each other,affected-possessed
+1485,"1485, 1495",each other,matchee
+1485,"1485, 1495",each other,affected-source
+1485,"1485, 1495",each other,created
+1485,"1485, 1495",each other,range
+1415,"1415, 1417",we,agent-cognizant
+1415,"1415, 1417",we,affected-carrier
+1415,"1415, 1417",we,agent-carrier
+1415,"1415, 1417",we,agent-perceiver
+1415,"1415, 1417",we,carrier
+1578,"1578, 1583",doing,main
+1554,"1554, 1568",during the day,attribute
+1534,"1534, 1710","to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",created-phenomenon
+1529,"1529, 1533",need,main
+1578,"1578, 1602",doing everything for her,process
+1578,"1578, 1602",doing everything for her,two-role-action
+1578,"1578, 1602",doing everything for her,action
+1527,"1527, 1528",I,affected-emoter
+1527,"1527, 1528",I,emoter
+1522,"1522, 1710","that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",created-phenomenon
+1676,"1676, 1684",to check,main
+1691,"1691, 1710",throughout the day.,phenomenon
+1691,"1691, 1710",throughout the day.,created-phenomenon
+1691,"1691, 1710",throughout the day.,created
+1584,"1584, 1594",everything,affected-emoter
+1584,"1584, 1594",everything,affected-path
+1584,"1584, 1594",everything,affected-perceiver
+1584,"1584, 1594",everything,affected-cognizant
+1584,"1584, 1594",everything,affected-carrier
+1584,"1584, 1594",everything,affected-destination
+1584,"1584, 1594",everything,affected
+1584,"1584, 1594",everything,affected-possessed
+1584,"1584, 1594",everything,affected-source
+1542,"1542, 1549",calling,main
+1522,"1522, 1710","that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",process
+1522,"1522, 1710","that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",desiderative
+1637,"1637, 1660",answering my cell phone,process
+1637,"1637, 1660",answering my cell phone,two-role-action
+1637,"1637, 1660",answering my cell phone,action
+1676,"1676, 1710",to check on me throughout the day.,process
+1676,"1676, 1710",to check on me throughout the day.,influential
+1676,"1676, 1710",to check on me throughout the day.,preventive
+1637,"1637, 1646",answering,main
+1685,"1685, 1690",on me,phenomenon
+1685,"1685, 1690",on me,created-phenomenon
+1685,"1685, 1690",on me,created
+1595,"1595, 1602",for her,affected-emoter
+1595,"1595, 1602",for her,affected-path
+1595,"1595, 1602",for her,affected-perceiver
+1595,"1595, 1602",for her,affected-cognizant
+1595,"1595, 1602",for her,affected-carrier
+1595,"1595, 1602",for her,affected-destination
+1595,"1595, 1602",for her,affected
+1595,"1595, 1602",for her,affected-possessed
+1595,"1595, 1602",for her,affected-source
+1550,"1550, 1553",her,affected-carrier
+1550,"1550, 1553",her,affected
+1550,"1550, 1553",her,carrier
+1542,"1542, 1568",calling her during the day,process
+1542,"1542, 1568",calling her during the day,attributive
+1542,"1542, 1568",calling her during the day,relational
+1507,"1507, 1710","My friends say that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",process
+1507,"1507, 1710","My friends say that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",two-role-cognition
+1507,"1507, 1710","My friends say that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",two-role-perception
+1507,"1507, 1517",My friends,cognizant
+1507,"1507, 1517",My friends,agent-cognizant
+1507,"1507, 1517",My friends,affected-cognizant
+1507,"1507, 1517",My friends,agent-carrier
+1507,"1507, 1517",My friends,agent-perceiver
+1507,"1507, 1517",My friends,perceiver
+1647,"1647, 1660",my cell phone,created-phenomenon
+1647,"1647, 1660",my cell phone,range
+1728,"1728, 1736",dialling,main
+1800,"1800, 1809",about her,created-phenomenon
+1787,"1787, 1818",I don't care about her anymore.,process
+1787,"1787, 1818",I don't care about her anymore.,emotive
+1787,"1787, 1818",I don't care about her anymore.,desiderative
+1787,"1787, 1818",I don't care about her anymore.,action
+1787,"1787, 1818",I don't care about her anymore.,one-role-action
+1787,"1787, 1788",I,affected-emoter
+1787,"1787, 1788",I,agent
+1787,"1787, 1788",I,agent-cognizant
+1787,"1787, 1788",I,agent-carrier
+1787,"1787, 1788",I,agent-perceiver
+1787,"1787, 1818",I don't care about her anymore.,created-phenomenon
+1778,"1778, 1781",she,cognizant
+1778,"1778, 1781",she,agent-cognizant
+1778,"1778, 1781",she,affected-cognizant
+1778,"1778, 1781",she,agent-carrier
+1778,"1778, 1781",she,agent-perceiver
+1778,"1778, 1781",she,perceiver
+1774,"1774, 1818",Now she says I don't care about her anymore.,process
+1774,"1774, 1818",Now she says I don't care about her anymore.,two-role-cognition
+1774,"1774, 1818",Now she says I don't care about her anymore.,two-role-perception
+1915,"1915, 1920",to go,main
+1829,"1829, 1832",", I",agent-cognizant
+1829,"1829, 1832",", I",agent-carrier
+1829,"1829, 1832",", I",agent-perceiver
+1863,"1863, 1891",and she really has a problem,process
+1863,"1863, 1891",and she really has a problem,causative
+1863,"1863, 1891",and she really has a problem,two-role-action
+1863,"1863, 1891",and she really has a problem,action
+1867,"1867, 1870",she,agent
+1867,"1867, 1870",she,agent-cognizant
+1867,"1867, 1870",she,affected-carrier
+1867,"1867, 1870",she,affected
+1867,"1867, 1870",she,agent-carrier
+1867,"1867, 1870",she,agent-perceiver
+1867,"1867, 1870",she,perceiver
+1882,"1882, 1891",a problem,phenomenon
+1882,"1882, 1891",a problem,affected-emoter
+1882,"1882, 1891",a problem,created-phenomenon
+1882,"1882, 1891",a problem,affected-path
+1882,"1882, 1891",a problem,affected-perceiver
+1882,"1882, 1891",a problem,affected-cognizant
+1882,"1882, 1891",a problem,affected-carrier
+1882,"1882, 1891",a problem,affected-destination
+1882,"1882, 1891",a problem,affected
+1882,"1882, 1891",a problem,affected-possessed
+1882,"1882, 1891",a problem,affected-source
+1882,"1882, 1891",a problem,created
+1921,"1921, 1923",do,main
+1819,"1819, 1862","By the way, I work at home 90 % of the time",process
+1819,"1819, 1862","By the way, I work at home 90 % of the time",two-role-action
+1822,"1822, 1829",the way,range
+2061,"2061, 2080",TV or play all day.,range
+1947,"1947, 1948",I,agent
+1947,"1947, 1948",I,cognizant
+1947,"1947, 1948",I,agent-cognizant
+1947,"1947, 1948",I,affected-cognizant
+1947,"1947, 1948",I,affected-carrier
+1947,"1947, 1948",I,agent-carrier
+1947,"1947, 1948",I,agent-perceiver
+1947,"1947, 1948",I,perceiver
+2033,"2033, 2080",like I sit at home watching TV or play all day.,process
+2033,"2033, 2080",like I sit at home watching TV or play all day.,locational
+2033,"2033, 2080",like I sit at home watching TV or play all day.,relational
+2033,"2033, 2080",like I sit at home watching TV or play all day.,one-role-action
+2044,"2044, 2080",at home watching TV or play all day.,location
+2052,"2052, 2060",watching,main
+2038,"2038, 2039",I,agent
+2038,"2038, 2039",I,agent-cognizant
+2038,"2038, 2039",I,affected-carrier
+2038,"2038, 2039",I,agent-carrier
+2038,"2038, 2039",I,agent-perceiver
+2038,"2038, 2039",I,carrier
+2038,"2038, 2039",I,perceiver
+1947,"1947, 2023","I am a top producer with my firm and make almost 200000 dollars per year, so",process
+1947,"1947, 2023","I am a top producer with my firm and make almost 200000 dollars per year, so",matching
+1947,"1947, 2023","I am a top producer with my firm and make almost 200000 dollars per year, so",mental
+1947,"1947, 2023","I am a top producer with my firm and make almost 200000 dollars per year, so",locational
+1947,"1947, 2023","I am a top producer with my firm and make almost 200000 dollars per year, so",directional
+1947,"1947, 2023","I am a top producer with my firm and make almost 200000 dollars per year, so",two-role-cognition
+2040,"2040, 2043",sit,main
+2052,"2052, 2080",watching TV or play all day.,process
+2052,"2052, 2080",watching TV or play all day.,two-role-action
+2052,"2052, 2080",watching TV or play all day.,action
+1952,"1952, 2023","a top producer with my firm and make almost 200000 dollars per year, so",phenomenon
+1952,"1952, 2023","a top producer with my firm and make almost 200000 dollars per year, so",created-phenomenon
+1952,"1952, 2023","a top producer with my firm and make almost 200000 dollars per year, so",destination
+1952,"1952, 2023","a top producer with my firm and make almost 200000 dollars per year, so",location
+1952,"1952, 2023","a top producer with my firm and make almost 200000 dollars per year, so",affected-destination
+1952,"1952, 2023","a top producer with my firm and make almost 200000 dollars per year, so",matchee
+2087,"2087, 2093",", when",attribute
+2087,"2087, 2093",", when",location
+2087,"2087, 2093",", when",affected-carrier
+2087,"2087, 2093",", when",affected
+2087,"2087, 2093",", when",affected-possessed
+2087,"2087, 2093",", when",possessed
+2087,"2087, 2093",", when",carrier
+2087,"2087, 2114",", when I do leave the house",process
+2087,"2087, 2114",", when I do leave the house",attributive
+2087,"2087, 2114",", when I do leave the house",locational
+2087,"2087, 2114",", when I do leave the house",possessive
+2105,"2105, 2114",the house,attribute
+2105,"2105, 2114",the house,location
+2105,"2105, 2114",the house,affected-carrier
+2105,"2105, 2114",the house,affected
+2105,"2105, 2114",the house,affected-possessed
+2105,"2105, 2114",the house,possessed
+2105,"2105, 2114",the house,carrier
+2126,"2126, 2153",a series of calls from her.,phenomenon
+2126,"2126, 2153",a series of calls from her.,affected-emoter
+2126,"2126, 2153",a series of calls from her.,created-phenomenon
+2126,"2126, 2153",a series of calls from her.,affected-path
+2126,"2126, 2153",a series of calls from her.,affected-perceiver
+2126,"2126, 2153",a series of calls from her.,affected-cognizant
+2126,"2126, 2153",a series of calls from her.,affected-carrier
+2126,"2126, 2153",a series of calls from her.,affected-destination
+2126,"2126, 2153",a series of calls from her.,affected
+2126,"2126, 2153",a series of calls from her.,affected-possessed
+2126,"2126, 2153",a series of calls from her.,affected-source
+2081,"2081, 2153","Anyway, when I do leave the house, I receive a series of calls from her.",process
+2081,"2081, 2153","Anyway, when I do leave the house, I receive a series of calls from her.",three-role-cognition
+2081,"2081, 2153","Anyway, when I do leave the house, I receive a series of calls from her.",two-role-action
+2081,"2081, 2153","Anyway, when I do leave the house, I receive a series of calls from her.",action
+2114,"2114, 2117",", I",agent
+2114,"2114, 2117",", I",cognizant
+2114,"2114, 2117",", I",agent-cognizant
+2114,"2114, 2117",", I",affected-cognizant
+2114,"2114, 2117",", I",affected
+2114,"2114, 2117",", I",agent-carrier
+2114,"2114, 2117",", I",agent-perceiver
+2114,"2114, 2117",", I",carrier
+2114,"2114, 2117",", I",perceiver
+2094,"2094, 2095",I,agent
+2094,"2094, 2095",I,agent-cognizant
+2094,"2094, 2095",I,agent-perceiver
+2169,"2169, 2201","fun, blah, blah... 3 or 4 calls.",phenomenon
+2169,"2169, 2201","fun, blah, blah... 3 or 4 calls.",affected-emoter
+2169,"2169, 2201","fun, blah, blah... 3 or 4 calls.",created-phenomenon
+2169,"2169, 2201","fun, blah, blah... 3 or 4 calls.",affected-path
+2169,"2169, 2201","fun, blah, blah... 3 or 4 calls.",affected-perceiver
+2169,"2169, 2201","fun, blah, blah... 3 or 4 calls.",affected-cognizant
+2169,"2169, 2201","fun, blah, blah... 3 or 4 calls.",affected-carrier
+2169,"2169, 2201","fun, blah, blah... 3 or 4 calls.",affected-destination
+2169,"2169, 2201","fun, blah, blah... 3 or 4 calls.",affected
+2169,"2169, 2201","fun, blah, blah... 3 or 4 calls.",affected-possessed
+2169,"2169, 2201","fun, blah, blah... 3 or 4 calls.",affected-source
+2169,"2169, 2201","fun, blah, blah... 3 or 4 calls.",created
+2169,"2169, 2201","fun, blah, blah... 3 or 4 calls.",possessed
+2154,"2154, 2201","Are you having fun, blah, blah... 3 or 4 calls.",process
+2154,"2154, 2201","Are you having fun, blah, blah... 3 or 4 calls.",causative
+2154,"2154, 2201","Are you having fun, blah, blah... 3 or 4 calls.",relational
+2154,"2154, 2201","Are you having fun, blah, blah... 3 or 4 calls.",possessive
+2154,"2154, 2201","Are you having fun, blah, blah... 3 or 4 calls.",two-role-action
+2158,"2158, 2161",you,agent-cognizant
+2158,"2158, 2161",you,affected-carrier
+2158,"2158, 2161",you,affected
+2158,"2158, 2161",you,agent-carrier
+2158,"2158, 2161",you,agent-perceiver
+2158,"2158, 2161",you,carrier
+2158,"2158, 2161",you,perceiver
+2312,"2312, 2332",and what am I doing.,process
+2312,"2312, 2332",and what am I doing.,two-role-action
+2285,"2285, 2310",that the kids said I left,created-phenomenon
+2304,"2304, 2310",I left,process
+2304,"2304, 2310",I left,one-role-action
+2278,"2278, 2284",to say,main
+2202,"2202, 2219",Sometimes I leave,process
+2202,"2202, 2219",Sometimes I leave,one-role-action
+2275,"2275, 2310",me to say that the kids said I left,process
+2275,"2275, 2310",me to say that the kids said I left,two-role-cognition
+2275,"2275, 2310",me to say that the kids said I left,two-role-perception
+2304,"2304, 2310",I left,created-phenomenon
+2285,"2285, 2310",that the kids said I left,process
+2285,"2285, 2310",that the kids said I left,two-role-cognition
+2285,"2285, 2310",that the kids said I left,two-role-perception
+2304,"2304, 2305",I,agent-cognizant
+2304,"2304, 2305",I,agent-carrier
+2304,"2304, 2305",I,agent-perceiver
+2212,"2212, 2213",I,agent-cognizant
+2212,"2212, 2213",I,agent-carrier
+2212,"2212, 2213",I,agent-perceiver
+2316,"2316, 2320",what,manner
+2316,"2316, 2320",what,range
+2324,"2324, 2325",I,agent-cognizant
+2324,"2324, 2325",I,agent-carrier
+2324,"2324, 2325",I,agent-perceiver
+2275,"2275, 2277",me,agent
+2275,"2275, 2277",me,cognizant
+2275,"2275, 2277",me,agent-cognizant
+2275,"2275, 2277",me,affected-cognizant
+2275,"2275, 2277",me,agent-carrier
+2275,"2275, 2277",me,agent-perceiver
+2275,"2275, 2277",me,perceiver
+2290,"2290, 2298",the kids,cognizant
+2290,"2290, 2298",the kids,agent-cognizant
+2290,"2290, 2298",the kids,affected-cognizant
+2290,"2290, 2298",the kids,agent-carrier
+2290,"2290, 2298",the kids,agent-perceiver
+2290,"2290, 2298",the kids,perceiver
+2341,"2341, 2342",I,agent-cognizant
+2341,"2341, 2342",I,agent-carrier
+2341,"2341, 2342",I,agent-perceiver
+2346,"2346, 2353",to turn,main
+2333,"2333, 2337",What,manner
+2333,"2333, 2337",What,range
+2346,"2346, 2376",to turn this situation around?,process
+2346,"2346, 2376",to turn this situation around?,directional
+2346,"2346, 2376",to turn this situation around?,relational
+2346,"2346, 2376",to turn this situation around?,two-role-action
+2333,"2333, 2376",What do I do to turn this situation around?,process
+2333,"2333, 2376",What do I do to turn this situation around?,two-role-action
+2354,"2354, 2368",this situation,affected-emoter
+2354,"2354, 2368",this situation,affected-path
+2354,"2354, 2368",this situation,affected-perceiver
+2354,"2354, 2368",this situation,destination
+2354,"2354, 2368",this situation,affected-cognizant
+2354,"2354, 2368",this situation,affected-carrier
+2354,"2354, 2368",this situation,affected-destination
+2354,"2354, 2368",this situation,affected
+2354,"2354, 2368",this situation,affected-possessed
+2354,"2354, 2368",this situation,affected-source
+2354,"2354, 2368",this situation,range
+2404,"2404, 2416",with myself.,matchee
+2383,"2383, 2416",I'm a bit frustrated with myself.,process
+2383,"2383, 2416",I'm a bit frustrated with myself.,matching
+2383,"2383, 2416",I'm a bit frustrated with myself.,mental
+2383,"2383, 2416",I'm a bit frustrated with myself.,locational
+2383,"2383, 2416",I'm a bit frustrated with myself.,two-role-cognition
+2393,"2393, 2403",frustrated,phenomenon
+2393,"2393, 2403",frustrated,created-phenomenon
+2393,"2393, 2403",frustrated,location
+2393,"2393, 2403",frustrated,matchee
+2383,"2383, 2384",I,agent
+2383,"2383, 2384",I,cognizant
+2383,"2383, 2384",I,agent-cognizant
+2383,"2383, 2384",I,affected-cognizant
+2383,"2383, 2384",I,affected-carrier
+2383,"2383, 2384",I,agent-carrier
+2383,"2383, 2384",I,agent-perceiver
+2383,"2383, 2384",I,perceiver
+2421,"2421, 2439",My boyfriend and I,phenomenon
+2421,"2421, 2439",My boyfriend and I,created-phenomenon
+2421,"2421, 2439",My boyfriend and I,affected-carrier
+2421,"2421, 2439",My boyfriend and I,agent-carrier
+2421,"2421, 2498","My boyfriend and I are involved with a married couple, both of whom I ( we! )",process
+2421,"2421, 2498","My boyfriend and I are involved with a married couple, both of whom I ( we! )",possessive
+2421,"2421, 2498","My boyfriend and I are involved with a married couple, both of whom I ( we! )",emotive
+2444,"2444, 2452",involved,main
+2453,"2453, 2490","with a married couple, both of whom I",affected-emoter
+2453,"2453, 2490","with a married couple, both of whom I",affected-possessed
+2453,"2453, 2490","with a married couple, both of whom I",possessed
+2521,"2521, 2534",spending time,created-phenomenon
+2521,"2521, 2540",spending time with.,process
+2521,"2521, 2540",spending time with.,emotive
+2613,"2613, 2645",I am tentative about it at best.,process
+2613,"2613, 2645",I am tentative about it at best.,directional
+2613,"2613, 2614",I,agent
+2613,"2613, 2614",I,affected-carrier
+2613,"2613, 2614",I,agent-carrier
+2613,"2613, 2614",I,agent-perceiver
+2613,"2613, 2614",I,perceiver
+2618,"2618, 2627",tentative,affected-path
+2618,"2618, 2627",tentative,path
+2613,"2613, 2645",I am tentative about it at best.,created-phenomenon
+2605,"2605, 2645",and say I am tentative about it at best.,process
+2605,"2605, 2645",and say I am tentative about it at best.,two-role-cognition
+2605,"2605, 2645",and say I am tentative about it at best.,two-role-perception
+2628,"2628, 2645",about it at best.,attribute
+2674,"2674, 2757","a bit of an up and down ( and yes, on and off ) relationship for the past two years",affected
+2674,"2674, 2757","a bit of an up and down ( and yes, on and off ) relationship for the past two years",affected-possessed
+2646,"2646, 2757","My boyfriend and I have had a bit of an up and down ( and yes, on and off ) relationship for the past two years",process
+2757,"2757, 2789",; our main distancing difference,affected-carrier
+2757,"2757, 2789",; our main distancing difference,agent-carrier
+2646,"2646, 2664",My boyfriend and I,affected-carrier
+2646,"2646, 2664",My boyfriend and I,agent-carrier
+2757,"2757, 2840",; our main distancing difference being whether or not to have an open relationship.,process
+2757,"2757, 2840",; our main distancing difference being whether or not to have an open relationship.,attributive
+2757,"2757, 2840",; our main distancing difference being whether or not to have an open relationship.,locational
+2757,"2757, 2840",; our main distancing difference being whether or not to have an open relationship.,relational
+2819,"2819, 2840",an open relationship.,attribute
+2819,"2819, 2840",an open relationship.,location
+2895,"2895, 2934","a chaotic past, it is ( unfortunately )",attribute
+2895,"2895, 2934","a chaotic past, it is ( unfortunately )",location
+2895,"2895, 2934","a chaotic past, it is ( unfortunately )",range
+2935,"2935, 2973",a bit unsettling at times emotionally.,location
+2935,"2935, 2973",a bit unsettling at times emotionally.,range
+2841,"2841, 2973","This desire is very strong in him; for me, because of a chaotic past, it is ( unfortunately ) a bit unsettling at times emotionally.",process
+2841,"2841, 2973","This desire is very strong in him; for me, because of a chaotic past, it is ( unfortunately ) a bit unsettling at times emotionally.",locational
+2841,"2841, 2973","This desire is very strong in him; for me, because of a chaotic past, it is ( unfortunately ) a bit unsettling at times emotionally.",two-role-action
+2841,"2841, 2973","This desire is very strong in him; for me, because of a chaotic past, it is ( unfortunately ) a bit unsettling at times emotionally.",action
+2841,"2841, 2852",This desire,agent
+2841,"2841, 2852",This desire,agent-cognizant
+2841,"2841, 2852",This desire,affected-carrier
+2841,"2841, 2852",This desire,affected
+2841,"2841, 2852",This desire,agent-carrier
+2841,"2841, 2852",This desire,agent-perceiver
+2841,"2841, 2852",This desire,perceiver
+3037,"3037, 3038",I,agent
+3037,"3037, 3038",I,agent-cognizant
+3037,"3037, 3038",I,affected-carrier
+3037,"3037, 3038",I,affected
+3037,"3037, 3038",I,agent-carrier
+3037,"3037, 3038",I,agent-perceiver
+3037,"3037, 3038",I,perceiver
+3044,"3044, 3097",time to think through things and become more logical.,phenomenon
+3044,"3044, 3097",time to think through things and become more logical.,affected-emoter
+3044,"3044, 3097",time to think through things and become more logical.,created-phenomenon
+3044,"3044, 3097",time to think through things and become more logical.,affected-path
+3044,"3044, 3097",time to think through things and become more logical.,affected-perceiver
+3044,"3044, 3097",time to think through things and become more logical.,affected-cognizant
+3044,"3044, 3097",time to think through things and become more logical.,affected-carrier
+3044,"3044, 3097",time to think through things and become more logical.,affected-destination
+3044,"3044, 3097",time to think through things and become more logical.,affected
+3044,"3044, 3097",time to think through things and become more logical.,affected-possessed
+3044,"3044, 3097",time to think through things and become more logical.,affected-source
+3044,"3044, 3097",time to think through things and become more logical.,created
+3049,"3049, 3072",to think through things,process
+3049,"3049, 3072",to think through things,action
+3049,"3049, 3072",to think through things,one-role-action
+3049,"3049, 3057",to think,main
+2974,"2974, 3097","My fears sprout without warning and masquerade as truth, until I have time to think through things and become more logical.",process
+2974,"2974, 3097","My fears sprout without warning and masquerade as truth, until I have time to think through things and become more logical.",one-role-action
+3029,"3029, 3097",", until I have time to think through things and become more logical.",process
+3029,"3029, 3097",", until I have time to think through things and become more logical.",causative
+3029,"3029, 3097",", until I have time to think through things and become more logical.",two-role-action
+3029,"3029, 3097",", until I have time to think through things and become more logical.",action
+2974,"2974, 2982",My fears,affected-emoter
+2974,"2974, 2982",My fears,affected-path
+2974,"2974, 2982",My fears,affected-perceiver
+2974,"2974, 2982",My fears,affected-cognizant
+2974,"2974, 2982",My fears,affected-carrier
+2974,"2974, 2982",My fears,affected-destination
+2974,"2974, 2982",My fears,affected
+2974,"2974, 2982",My fears,affected-possessed
+2974,"2974, 2982",My fears,affected-source
+2998,"2998, 3005",warning,main
+3211,"3211, 3213",it,affected-emoter
+3211,"3211, 3213",it,affected-path
+3211,"3211, 3213",it,affected-perceiver
+3211,"3211, 3213",it,affected-cognizant
+3211,"3211, 3213",it,affected-carrier
+3211,"3211, 3213",it,affected-destination
+3211,"3211, 3213",it,affected
+3211,"3211, 3213",it,affected-possessed
+3211,"3211, 3213",it,affected-source
+3211,"3211, 3213",it,possessed
+3258,"3258, 3282","emotionally, and as long",range
+3226,"3226, 3228",we,agent
+3226,"3226, 3228",we,affected-carrier
+3226,"3226, 3228",we,affected
+3226,"3226, 3228",we,agent-perceiver
+3226,"3226, 3228",we,perceiver
+3258,"3258, 3345","emotionally, and as long as we are both present for these ""extracurricular"" activities.",process
+3258,"3258, 3345","emotionally, and as long as we are both present for these ""extracurricular"" activities.",two-role-action
+3258,"3258, 3345","emotionally, and as long as we are both present for these ""extracurricular"" activities.",action
+3148,"3148, 3150",we,agent-cognizant
+3148,"3148, 3150",we,agent-carrier
+3148,"3148, 3150",we,agent-perceiver
+3127,"3127, 3142",in an agreement,attribute
+3127,"3127, 3142",in an agreement,range
+3236,"3236, 3257",each other's priority,location
+3202,"3202, 3213",to share it,process
+3202,"3202, 3213",to share it,possessive
+3202,"3202, 3213",to share it,two-role-action
+3213,"3213, 3345",", as long as we remain each other's priority emotionally, and as long as we are both present for these ""extracurricular"" activities.",process
+3213,"3213, 3345",", as long as we remain each other's priority emotionally, and as long as we are both present for these ""extracurricular"" activities.",locational
+3098,"3098, 3100",We,agent
+3098,"3098, 3100",We,agent-cognizant
+3098,"3098, 3100",We,affected-carrier
+3098,"3098, 3100",We,affected
+3098,"3098, 3100",We,agent-carrier
+3098,"3098, 3100",We,agent-perceiver
+3098,"3098, 3100",We,perceiver
+3098,"3098, 3345","We are currently and happily in an agreement that we can open up our bed to others who might be willing to share it, as long as we remain each other's priority emotionally, and as long as we are both present for these ""extracurricular"" activities.",process
+3098,"3098, 3345","We are currently and happily in an agreement that we can open up our bed to others who might be willing to share it, as long as we remain each other's priority emotionally, and as long as we are both present for these ""extracurricular"" activities.",two-role-action
+3202,"3202, 3210",to share,main
+3171,"3171, 3213",to others who might be willing to share it,affected-emoter
+3171,"3171, 3213",to others who might be willing to share it,created-phenomenon
+3171,"3171, 3213",to others who might be willing to share it,affected-path
+3171,"3171, 3213",to others who might be willing to share it,affected-perceiver
+3171,"3171, 3213",to others who might be willing to share it,affected-cognizant
+3171,"3171, 3213",to others who might be willing to share it,affected-carrier
+3171,"3171, 3213",to others who might be willing to share it,affected-destination
+3171,"3171, 3213",to others who might be willing to share it,affected
+3171,"3171, 3213",to others who might be willing to share it,affected-possessed
+3171,"3171, 3213",to others who might be willing to share it,affected-source
+3171,"3171, 3213",to others who might be willing to share it,created
+3286,"3286, 3288",we,agent
+3286,"3286, 3288",we,agent-cognizant
+3286,"3286, 3288",we,agent-carrier
+3286,"3286, 3288",we,agent-perceiver
+3163,"3163, 3170",our bed,affected-emoter
+3163,"3163, 3170",our bed,created-phenomenon
+3163,"3163, 3170",our bed,affected-path
+3163,"3163, 3170",our bed,affected-perceiver
+3163,"3163, 3170",our bed,affected-cognizant
+3163,"3163, 3170",our bed,affected-carrier
+3163,"3163, 3170",our bed,affected-destination
+3163,"3163, 3170",our bed,affected-possessed
+3163,"3163, 3170",our bed,affected-source
+3163,"3163, 3170",our bed,created
+3413,"3413, 3422",guarantee,main
+3386,"3386, 3394",monogamy,affected-carrier
+3386,"3386, 3394",monogamy,agent-carrier
+3348,"3348, 3350",am,main
+3381,"3381, 3409",that monogamy does not equal,process
+3451,"3451, 3452",I,affected-carrier
+3451,"3451, 3452",I,agent-carrier
+3517,"3517, 3601",having both the capacity and the freedom to care for more than one person at a time.,process
+3517,"3517, 3601",having both the capacity and the freedom to care for more than one person at a time.,causative
+3517,"3517, 3601",having both the capacity and the freedom to care for more than one person at a time.,influential
+3451,"3451, 3601","I am also bisexual and adventurous sexually, and love the idea of having both the capacity and the freedom to care for more than one person at a time.",process
+3451,"3451, 3601","I am also bisexual and adventurous sexually, and love the idea of having both the capacity and the freedom to care for more than one person at a time.",locational
+3591,"3591, 3601",at a time.,affected-emoter
+3591,"3591, 3601",at a time.,affected-path
+3591,"3591, 3601",at a time.,affected-perceiver
+3591,"3591, 3601",at a time.,affected-cognizant
+3591,"3591, 3601",at a time.,affected-carrier
+3591,"3591, 3601",at a time.,affected-destination
+3591,"3591, 3601",at a time.,affected
+3591,"3591, 3601",at a time.,affected-possessed
+3591,"3591, 3601",at a time.,affected-source
+3517,"3517, 3523",having,main
+3566,"3566, 3590",for more than one person,affected-emoter
+3566,"3566, 3590",for more than one person,affected-path
+3566,"3566, 3590",for more than one person,affected-perceiver
+3566,"3566, 3590",for more than one person,affected-cognizant
+3566,"3566, 3590",for more than one person,affected-carrier
+3566,"3566, 3590",for more than one person,affected-destination
+3566,"3566, 3590",for more than one person,affected
+3566,"3566, 3590",for more than one person,affected-possessed
+3566,"3566, 3590",for more than one person,affected-source
+3524,"3524, 3601",both the capacity and the freedom to care for more than one person at a time.,process
+3524,"3524, 3601",both the capacity and the freedom to care for more than one person at a time.,two-role-action
+3524,"3524, 3601",both the capacity and the freedom to care for more than one person at a time.,action
+3456,"3456, 3601","also bisexual and adventurous sexually, and love the idea of having both the capacity and the freedom to care for more than one person at a time.",location
+3558,"3558, 3565",to care,main
+3524,"3524, 3557",both the capacity and the freedom,agent
+3524,"3524, 3557",both the capacity and the freedom,agent-cognizant
+3524,"3524, 3557",both the capacity and the freedom,agent-carrier
+3524,"3524, 3557",both the capacity and the freedom,agent-perceiver
+3524,"3524, 3601",both the capacity and the freedom to care for more than one person at a time.,created-phenomenon
+3524,"3524, 3601",both the capacity and the freedom to care for more than one person at a time.,created
+3639,"3639, 3640",I,affected-perceiver
+3639,"3639, 3640",I,agent-perceiver
+3639,"3639, 3640",I,perceiver
+3804,"3804, 3844",( which is in truth not all that often ),process
+3804,"3804, 3844",( which is in truth not all that often ),locational
+3804,"3804, 3844",( which is in truth not all that often ),two-role-action
+3804,"3804, 3844",( which is in truth not all that often ),action
+3804,"3804, 3844",( which is in truth not all that often ),one-role-action
+3815,"3815, 3823",in truth,attribute
+3815,"3815, 3823",in truth,location
+3815,"3815, 3823",in truth,range
+3658,"3658, 3666",jealousy,created-phenomenon
+3951,"3951, 3953",be,main
+3690,"3690, 3711",my boyfriend tells me,process
+3690,"3690, 3711",my boyfriend tells me,two-role-perception
+3954,"3954, 3961",intense,attribute
+3954,"3954, 3961",intense,affected-emoter
+3954,"3954, 3961",intense,affected-path
+3954,"3954, 3961",intense,affected-perceiver
+3954,"3954, 3961",intense,destination
+3954,"3954, 3961",intense,location
+3954,"3954, 3961",intense,affected-cognizant
+3954,"3954, 3961",intense,affected-carrier
+3954,"3954, 3961",intense,affected-destination
+3954,"3954, 3961",intense,affected
+3954,"3954, 3961",intense,affected-possessed
+3954,"3954, 3961",intense,affected-source
+3954,"3954, 3961",intense,range
+3717,"3717, 3723",talked,main
+3709,"3709, 3711",me,created-phenomenon
+3724,"3724, 3741",to his girlfriend,affected-emoter
+3724,"3724, 3741",to his girlfriend,affected-path
+3724,"3724, 3741",to his girlfriend,affected-perceiver
+3724,"3724, 3741",to his girlfriend,affected-cognizant
+3724,"3724, 3741",to his girlfriend,affected-carrier
+3724,"3724, 3741",to his girlfriend,affected-destination
+3724,"3724, 3741",to his girlfriend,affected
+3724,"3724, 3741",to his girlfriend,affected-possessed
+3724,"3724, 3741",to his girlfriend,affected-source
+3634,"3634, 3689",that I still experience jealousy pretty much every time,process
+3634,"3634, 3689",that I still experience jealousy pretty much every time,two-role-perception
+3741,"3741, 3922",; I still experience anxiety and fear when we all plan to meet ( which is in truth not all that often ) ; and most troubling is that I still sometimes have doubts about my boyfriend,process
+3741,"3741, 3922",; I still experience anxiety and fear when we all plan to meet ( which is in truth not all that often ) ; and most troubling is that I still sometimes have doubts about my boyfriend,two-role-perception
+3712,"3712, 3741",he's talked to his girlfriend,process
+3712,"3712, 3741",he's talked to his girlfriend,two-role-action
+3712,"3712, 3741",he's talked to his girlfriend,action
+3690,"3690, 3702",my boyfriend,agent-perceiver
+3690,"3690, 3702",my boyfriend,perceiver
+3712,"3712, 3714",he,agent
+3712,"3712, 3714",he,agent-cognizant
+3712,"3712, 3714",he,agent-carrier
+3712,"3712, 3714",he,agent-perceiver
+3806,"3806, 3811",which,agent
+3806,"3806, 3811",which,agent-cognizant
+3806,"3806, 3811",which,affected-carrier
+3806,"3806, 3811",which,affected
+3806,"3806, 3811",which,agent-carrier
+3806,"3806, 3811",which,agent-perceiver
+3806,"3806, 3811",which,perceiver
+3796,"3796, 3803",to meet,process
+3796,"3796, 3803",to meet,two-role-action
+3796,"3796, 3803",to meet,action
+3796,"3796, 3803",to meet,one-role-action
+3741,"3741, 3744",; I,affected-perceiver
+3741,"3741, 3744",; I,agent-perceiver
+3741,"3741, 3744",; I,perceiver
+3897,"3897, 3922",doubts about my boyfriend,affected-emoter
+3897,"3897, 3922",doubts about my boyfriend,created-phenomenon
+3897,"3897, 3922",doubts about my boyfriend,affected-path
+3897,"3897, 3922",doubts about my boyfriend,affected-perceiver
+3897,"3897, 3922",doubts about my boyfriend,affected-cognizant
+3897,"3897, 3922",doubts about my boyfriend,affected-carrier
+3897,"3897, 3922",doubts about my boyfriend,affected-destination
+3897,"3897, 3922",doubts about my boyfriend,affected
+3897,"3897, 3922",doubts about my boyfriend,affected-possessed
+3897,"3897, 3922",doubts about my boyfriend,affected-source
+3897,"3897, 3922",doubts about my boyfriend,created
+3869,"3869, 3922",that I still sometimes have doubts about my boyfriend,process
+3869,"3869, 3922",that I still sometimes have doubts about my boyfriend,causative
+3869,"3869, 3922",that I still sometimes have doubts about my boyfriend,two-role-action
+3869,"3869, 3922",that I still sometimes have doubts about my boyfriend,action
+3796,"3796, 3803",to meet,main
+3940,"3940, 3946",", they",agent
+3940,"3940, 3946",", they",agent-cognizant
+3940,"3940, 3946",", they",affected-carrier
+3940,"3940, 3946",", they",affected
+3940,"3940, 3946",", they",agent-carrier
+3940,"3940, 3946",", they",agent-perceiver
+3940,"3940, 3946",", they",carrier
+3940,"3940, 3946",", they",perceiver
+3874,"3874, 3875",I,agent
+3874,"3874, 3875",I,agent-cognizant
+3874,"3874, 3875",I,affected-carrier
+3874,"3874, 3875",I,affected
+3874,"3874, 3875",I,agent-carrier
+3874,"3874, 3875",I,agent-perceiver
+3874,"3874, 3875",I,perceiver
+4182,"4182, 4191",at others,affected-emoter
+4182,"4182, 4191",at others,affected-path
+4182,"4182, 4191",at others,affected-perceiver
+4182,"4182, 4191",at others,affected-cognizant
+4182,"4182, 4191",at others,affected-carrier
+4182,"4182, 4191",at others,affected-destination
+4182,"4182, 4191",at others,affected
+4182,"4182, 4191",at others,affected-possessed
+4182,"4182, 4191",at others,affected-source
+4205,"4205, 4221",me the wrong way,affected-emoter
+4205,"4205, 4221",me the wrong way,affected-path
+4205,"4205, 4221",me the wrong way,affected-perceiver
+4205,"4205, 4221",me the wrong way,affected-cognizant
+4205,"4205, 4221",me the wrong way,affected-carrier
+4205,"4205, 4221",me the wrong way,affected-destination
+4205,"4205, 4221",me the wrong way,affected-possessed
+4205,"4205, 4221",me the wrong way,affected-source
+4273,"4273, 4290",for someone else.,attribute
+4273,"4273, 4290",for someone else.,affected-emoter
+4273,"4273, 4290",for someone else.,affected-path
+4273,"4273, 4290",for someone else.,affected-perceiver
+4273,"4273, 4290",for someone else.,affected-cognizant
+4273,"4273, 4290",for someone else.,affected-carrier
+4273,"4273, 4290",for someone else.,affected-destination
+4273,"4273, 4290",for someone else.,affected
+4273,"4273, 4290",for someone else.,affected-possessed
+4273,"4273, 4290",for someone else.,affected-source
+4273,"4273, 4290",for someone else.,possessed
+4096,"4096, 4097",I,agent-cognizant
+4096,"4096, 4097",I,agent-carrier
+4096,"4096, 4097",I,agent-perceiver
+4270,"4270, 4272",me,affected-emoter
+4270,"4270, 4272",me,affected-path
+4270,"4270, 4272",me,affected-perceiver
+4270,"4270, 4272",me,source
+4270,"4270, 4272",me,location
+4270,"4270, 4272",me,affected-cognizant
+4270,"4270, 4272",me,affected-carrier
+4270,"4270, 4272",me,affected-destination
+4270,"4270, 4272",me,affected-possessed
+4270,"4270, 4272",me,affected-source
+4270,"4270, 4272",me,carrier
+4177,"4177, 4221","then at others, they strike me the wrong way",process
+4177,"4177, 4221","then at others, they strike me the wrong way",two-role-action
+4177,"4177, 4221","then at others, they strike me the wrong way",one-role-action
+4251,"4251, 4290","with ""He's leaving me for someone else.",process
+4251,"4251, 4290","with ""He's leaving me for someone else.",attributive
+4251,"4251, 4290","with ""He's leaving me for someone else.",locational
+4251,"4251, 4290","with ""He's leaving me for someone else.",directional
+4251,"4251, 4290","with ""He's leaving me for someone else.",possessive
+4251,"4251, 4290","with ""He's leaving me for someone else.",two-role-action
+4256,"4256, 4259","""He",agent-cognizant
+4256,"4256, 4259","""He",agent-carrier
+4256,"4256, 4259","""He",agent-perceiver
+4256,"4256, 4259","""He",perceiver
+4081,"4081, 4119",that sometimes I am thinking logically,process
+4081,"4081, 4119",that sometimes I am thinking logically,one-role-action
+4291,"4291, 4318","I knew this would happen"" .",process
+4309,"4309, 4315",happen,main
+4298,"4298, 4302",this,affected-emoter
+4298,"4298, 4302",this,affected-path
+4298,"4298, 4302",this,affected-perceiver
+4298,"4298, 4302",this,affected-cognizant
+4298,"4298, 4302",this,affected-carrier
+4298,"4298, 4302",this,affected-destination
+4298,"4298, 4302",this,affected
+4298,"4298, 4302",this,affected-possessed
+4298,"4298, 4302",this,affected-source
+4291,"4291, 4292",I,agent-cognizant
+4291,"4291, 4292",I,affected-cognizant
+4298,"4298, 4316","this would happen""",created-phenomenon
+4412,"4412, 4414",me,created-phenomenon
+4319,"4319, 4332",This reaction,affected-carrier
+4319,"4319, 4332",This reaction,agent-carrier
+4403,"4403, 4405",he,affected-emoter
+4398,"4398, 4415","that he LOVES me,",process
+4398,"4398, 4415","that he LOVES me,",emotive
+4348,"4348, 4370",numerous conversations,location
+4319,"4319, 4454","This reaction is in spite of numerous conversations during which I'm reassured that he LOVES me, but wants to PLAY with others WITH me.",process
+4319,"4319, 4454","This reaction is in spite of numerous conversations during which I'm reassured that he LOVES me, but wants to PLAY with others WITH me.",locational
+4753,"4753, 4831",and I don't know where else to ask these questions and receive an answer other,process
+4816,"4816, 4831",an answer other,affected-emoter
+4816,"4816, 4831",an answer other,affected-path
+4816,"4816, 4831",an answer other,affected-perceiver
+4816,"4816, 4831",an answer other,affected-cognizant
+4816,"4816, 4831",an answer other,affected-carrier
+4816,"4816, 4831",an answer other,affected-destination
+4816,"4816, 4831",an answer other,affected
+4816,"4816, 4831",an answer other,affected-possessed
+4816,"4816, 4831",an answer other,affected-source
+4816,"4816, 4831",an answer other,possessed
+4804,"4804, 4831",and receive an answer other,process
+4804,"4804, 4831",and receive an answer other,possessive
+4804,"4804, 4831",and receive an answer other,two-role-action
+4804,"4804, 4831",and receive an answer other,action
+4698,"4698, 4749",a need to be honest and to get some honest feedback,created-phenomenon
+4698,"4698, 4749",a need to be honest and to get some honest feedback,created
+4770,"4770, 4831",where else to ask these questions and receive an answer other,created-phenomenon
+4554,"4554, 4573",a bit uncomfortable,phenomenon
+4554,"4554, 4573",a bit uncomfortable,created-phenomenon
+4576,"4576, 4579",shy,main
+4497,"4497, 4509",my boyfriend,destination
+4497,"4497, 4509",my boyfriend,affected-carrier
+4497,"4497, 4509",my boyfriend,affected-destination
+4497,"4497, 4509",my boyfriend,affected
+4497,"4497, 4509",my boyfriend,carrier
+4463,"4463, 4467",have,main
+4634,"4634, 4685",I may catch some flack for my attitude and thoughts,created-phenomenon
+4455,"4455, 4456",I,agent-cognizant
+4455,"4455, 4456",I,agent-carrier
+4455,"4455, 4456",I,agent-perceiver
+4486,"4486, 4490",when,destination
+4486,"4486, 4490",when,affected-carrier
+4486,"4486, 4490",when,affected-destination
+4486,"4486, 4490",when,affected
+4486,"4486, 4490",when,carrier
+4634,"4634, 4635",I,agent
+4634,"4634, 4635",I,affected-carrier
+4634,"4634, 4635",I,agent-perceiver
+4634,"4634, 4635",I,carrier
+4634,"4634, 4635",I,perceiver
+4585,"4585, 4586",I,agent
+4585,"4585, 4586",I,cognizant
+4585,"4585, 4586",I,agent-cognizant
+4585,"4585, 4586",I,affected-cognizant
+4585,"4585, 4586",I,affected-carrier
+4585,"4585, 4586",I,agent-carrier
+4585,"4585, 4586",I,agent-perceiver
+4585,"4585, 4586",I,perceiver
+4580,"4580, 4620","when I am with her husband, my boyfriend",process
+4580,"4580, 4620","when I am with her husband, my boyfriend",matching
+4580,"4580, 4620","when I am with her husband, my boyfriend",mental
+4580,"4580, 4620","when I am with her husband, my boyfriend",two-role-cognition
+4620,"4620, 4625",... I,affected-cognizant
+4620,"4620, 4625",... I,affected
+4808,"4808, 4815",receive,main
+4537,"4537, 4542",... I,affected-emoter
+4537,"4537, 4542",... I,agent
+4537,"4537, 4542",... I,affected-perceiver
+4537,"4537, 4542",... I,agent-perceiver
+4537,"4537, 4542",... I,emoter
+4537,"4537, 4542",... I,perceiver
+4687,"4687, 4749",but I have a need to be honest and to get some honest feedback,process
+4687,"4687, 4749",but I have a need to be honest and to get some honest feedback,causative
+4687,"4687, 4749",but I have a need to be honest and to get some honest feedback,influential
+4781,"4781, 4787",to ask,main
+4590,"4590, 4620","with her husband, my boyfriend",matchee
+4537,"4537, 4573",... I still feel a bit uncomfortable,process
+4537,"4537, 4573",... I still feel a bit uncomfortable,mental
+4537,"4537, 4573",... I still feel a bit uncomfortable,two-role-perception
+4537,"4537, 4573",... I still feel a bit uncomfortable,emotive
+4620,"4620, 4686","... I realize I may catch some flack for my attitude and thoughts,",process
+4560,"4560, 4573",uncomfortable,main
+4580,"4580, 4584",when,phenomenon
+4580,"4580, 4584",when,created-phenomenon
+4580,"4580, 4584",when,location
+4580,"4580, 4584",when,matchee
+4705,"4705, 4710",to be,main
+4646,"4646, 4685",some flack for my attitude and thoughts,affected
+4646,"4646, 4685",some flack for my attitude and thoughts,affected-possessed
+4646,"4646, 4685",some flack for my attitude and thoughts,possessed
+4468,"4468, 4509",to battle my mind when I see my boyfriend,created-phenomenon
+4468,"4468, 4509",to battle my mind when I see my boyfriend,created
+4486,"4486, 4509",when I see my boyfriend,process
+4486,"4486, 4509",when I see my boyfriend,directional
+4486,"4486, 4509",when I see my boyfriend,relational
+4455,"4455, 4537",I still have to battle my mind when I see my boyfriend and his girlfriend together,process
+4455,"4455, 4537",I still have to battle my mind when I see my boyfriend and his girlfriend together,causative
+4455,"4455, 4537",I still have to battle my mind when I see my boyfriend and his girlfriend together,influential
+4491,"4491, 4492",I,agent
+4491,"4491, 4492",I,agent-cognizant
+4491,"4491, 4492",I,agent-carrier
+4491,"4491, 4492",I,agent-perceiver
+4863,"4863, 4869",crazy?,location
+4859,"4859, 4862",you,affected-carrier
+4859,"4859, 4862",you,agent-carrier
+4855,"4855, 4869",Are you crazy?,process
+4855,"4855, 4869",Are you crazy?,locational
+4876,"4876, 4880",him!,affected-emoter
+4876,"4876, 4880",him!,affected-path
+4876,"4876, 4880",him!,affected-perceiver
+4876,"4876, 4880",him!,source
+4876,"4876, 4880",him!,location
+4876,"4876, 4880",him!,affected-cognizant
+4876,"4876, 4880",him!,affected-carrier
+4876,"4876, 4880",him!,affected-destination
+4876,"4876, 4880",him!,affected-possessed
+4876,"4876, 4880",him!,affected-source
+4870,"4870, 4882","Leave him! """,process
+4870,"4870, 4882","Leave him! """,locational
+4870,"4870, 4882","Leave him! """,directional
+4870,"4870, 4882","Leave him! """,two-role-action
+4891,"4891, 4895",that,agent
+4891,"4891, 4895",that,agent-cognizant
+4891,"4891, 4895",that,agent-carrier
+4891,"4891, 4895",that,agent-perceiver
+4883,"4883, 4920",Because that's not what I want to do.,process
+4883,"4883, 4920",Because that's not what I want to do.,desiderative
+4902,"4902, 4906",what,affected-emoter
+4902,"4902, 4906",what,affected-path
+4902,"4902, 4906",what,affected-perceiver
+4902,"4902, 4906",what,affected-cognizant
+4902,"4902, 4906",what,affected-carrier
+4902,"4902, 4906",what,affected-destination
+4902,"4902, 4906",what,affected
+4902,"4902, 4906",what,affected-possessed
+4902,"4902, 4906",what,affected-source
+4902,"4902, 4906",what,range
+4883,"4883, 4906",Because that's not what,process
+4883,"4883, 4906",Because that's not what,two-role-action
+4883,"4883, 4906",Because that's not what,action
+4907,"4907, 4908",I,affected-emoter
+4914,"4914, 4920",to do.,created-phenomenon
+4991,"4991, 5036",and we know we really love each other deeply.,process
+5018,"5018, 5028",each other,created-phenomenon
+5003,"5003, 5036",we really love each other deeply.,created-phenomenon
+4995,"4995, 4997",we,agent-cognizant
+4995,"4995, 4997",we,affected-cognizant
+4921,"4921, 4939",My boyfriend and I,agent
+4921,"4921, 4939",My boyfriend and I,agent-cognizant
+4921,"4921, 4939",My boyfriend and I,agent-carrier
+4921,"4921, 4939",My boyfriend and I,agent-perceiver
+5003,"5003, 5005",we,affected-emoter
+5003,"5003, 5036",we really love each other deeply.,process
+5003,"5003, 5036",we really love each other deeply.,emotive
+4921,"4921, 4958",My boyfriend and I are both around 40,process
+4921,"4921, 4958",My boyfriend and I are both around 40,action
+4921,"4921, 4958",My boyfriend and I are both around 40,one-role-action
+4985,"4985, 4990",a lot,phenomenon
+4985,"4985, 4990",a lot,affected-emoter
+4985,"4985, 4990",a lot,created-phenomenon
+4985,"4985, 4990",a lot,affected-path
+4985,"4985, 4990",a lot,affected-perceiver
+4985,"4985, 4990",a lot,affected-cognizant
+4985,"4985, 4990",a lot,affected-carrier
+4985,"4985, 4990",a lot,affected-destination
+4985,"4985, 4990",a lot,affected
+4985,"4985, 4990",a lot,affected-possessed
+4985,"4985, 4990",a lot,matchee
+4985,"4985, 4990",a lot,affected-source
+4985,"4985, 4990",a lot,created
+4958,"4958, 4975",", we've both seen",process
+4958,"4958, 4975",", we've both seen",matching
+4958,"4958, 4975",", we've both seen",causative
+4958,"4958, 4975",", we've both seen",relational
+4958,"4958, 4975",", we've both seen",two-role-cognition
+4958,"4958, 4975",", we've both seen",two-role-action
+5061,"5061, 5077",with this person,affected-possessed
+5061,"5061, 5077",with this person,possessed
+5044,"5044, 5077",to spend my life with this person,process
+5044,"5044, 5077",to spend my life with this person,relational
+5044,"5044, 5077",to spend my life with this person,possessive
+5037,"5037, 5094","I want to spend my life with this person, and he with me.",process
+5037,"5037, 5094","I want to spend my life with this person, and he with me.",desiderative
+5037,"5037, 5038",I,affected-emoter
+5044,"5044, 5077",to spend my life with this person,created-phenomenon
+5044,"5044, 5052",to spend,main
+5053,"5053, 5060",my life,affected-possessed
+5053,"5053, 5060",my life,possessed
+5095,"5095, 5205",He has shown me a committed willingness to listen to my heart and understand how I struggle with this issue...,process
+5095,"5095, 5205",He has shown me a committed willingness to listen to my heart and understand how I struggle with this issue...,three-role-perception
+5095,"5095, 5205",He has shown me a committed willingness to listen to my heart and understand how I struggle with this issue...,two-role-action
+5095,"5095, 5205",He has shown me a committed willingness to listen to my heart and understand how I struggle with this issue...,action
+5217,"5217, 5268",to do the same for him by understanding this desire,process
+5217,"5217, 5268",to do the same for him by understanding this desire,attributive
+5217,"5217, 5268",to do the same for him by understanding this desire,two-role-action
+5217,"5217, 5268",to do the same for him by understanding this desire,action
+5217,"5217, 5222",to do,main
+5343,"5343, 5348",to be,main
+5108,"5108, 5202",me a committed willingness to listen to my heart and understand how I struggle with this issue,affected-emoter
+5108,"5108, 5202",me a committed willingness to listen to my heart and understand how I struggle with this issue,created-phenomenon
+5108,"5108, 5202",me a committed willingness to listen to my heart and understand how I struggle with this issue,affected-path
+5108,"5108, 5202",me a committed willingness to listen to my heart and understand how I struggle with this issue,affected-perceiver
+5108,"5108, 5202",me a committed willingness to listen to my heart and understand how I struggle with this issue,affected-carrier
+5108,"5108, 5202",me a committed willingness to listen to my heart and understand how I struggle with this issue,affected-destination
+5108,"5108, 5202",me a committed willingness to listen to my heart and understand how I struggle with this issue,affected
+5108,"5108, 5202",me a committed willingness to listen to my heart and understand how I struggle with this issue,affected-possessed
+5108,"5108, 5202",me a committed willingness to listen to my heart and understand how I struggle with this issue,affected-source
+5108,"5108, 5202",me a committed willingness to listen to my heart and understand how I struggle with this issue,range
+5291,"5291, 5292",I,agent
+5291,"5291, 5292",I,agent-cognizant
+5291,"5291, 5292",I,affected-carrier
+5291,"5291, 5292",I,agent-carrier
+5291,"5291, 5292",I,agent-perceiver
+5358,"5358, 5374",free and capable,attribute
+5232,"5232, 5239",for him,attribute
+5232,"5232, 5239",for him,affected-emoter
+5232,"5232, 5239",for him,affected-path
+5232,"5232, 5239",for him,affected-perceiver
+5232,"5232, 5239",for him,affected-cognizant
+5232,"5232, 5239",for him,affected-carrier
+5232,"5232, 5239",for him,affected-destination
+5232,"5232, 5239",for him,affected
+5232,"5232, 5239",for him,affected-possessed
+5232,"5232, 5239",for him,affected-source
+5172,"5172, 5202",how I struggle with this issue,created-phenomenon
+5223,"5223, 5231",the same,attribute
+5223,"5223, 5231",the same,affected-emoter
+5223,"5223, 5231",the same,affected-path
+5223,"5223, 5231",the same,affected-perceiver
+5223,"5223, 5231",the same,affected-cognizant
+5223,"5223, 5231",the same,affected-carrier
+5223,"5223, 5231",the same,affected-destination
+5223,"5223, 5231",the same,affected
+5223,"5223, 5231",the same,affected-possessed
+5223,"5223, 5231",the same,affected-source
+5358,"5358, 5396",free and capable of loving more people,process
+5358,"5358, 5396",free and capable of loving more people,attributive
+5358,"5358, 5396",free and capable of loving more people,relational
+5157,"5157, 5202",and understand how I struggle with this issue,process
+5157,"5157, 5202",and understand how I struggle with this issue,two-role-cognition
+5243,"5243, 5256",understanding,main
+5358,"5358, 5396",free and capable of loving more people,affected-emoter
+5358,"5358, 5396",free and capable of loving more people,affected-path
+5358,"5358, 5396",free and capable of loving more people,affected-perceiver
+5358,"5358, 5396",free and capable of loving more people,affected-cognizant
+5358,"5358, 5396",free and capable of loving more people,affected-carrier
+5358,"5358, 5396",free and capable of loving more people,affected-destination
+5358,"5358, 5396",free and capable of loving more people,affected
+5358,"5358, 5396",free and capable of loving more people,affected-possessed
+5358,"5358, 5396",free and capable of loving more people,affected-source
+5358,"5358, 5396",free and capable of loving more people,possessed
+5135,"5135, 5144",to listen,main
+5378,"5378, 5384",loving,main
+5467,"5467, 5474",to take,main
+5467,"5467, 5493",to take responsibility for,process
+5467,"5467, 5493",to take responsibility for,locational
+5467,"5467, 5493",to take responsibility for,possessive
+5467,"5467, 5493",to take responsibility for,two-role-action
+5305,"5305, 5353","so many ways, even sharing the desire to be open",process
+5305,"5305, 5353","so many ways, even sharing the desire to be open",relational
+5305,"5305, 5353","so many ways, even sharing the desire to be open",possessive
+5305,"5305, 5353","so many ways, even sharing the desire to be open",two-role-action
+5243,"5243, 5268",understanding this desire,process
+5243,"5243, 5268",understanding this desire,two-role-cognition
+5385,"5385, 5396",more people,created-phenomenon
+5095,"5095, 5097",He,agent-cognizant
+5095,"5095, 5097",He,agent-carrier
+5095,"5095, 5097",He,agent-perceiver
+5257,"5257, 5268",this desire,phenomenon
+5257,"5257, 5268",this desire,created-phenomenon
+5324,"5324, 5331",sharing,main
+5161,"5161, 5171",understand,main
+5378,"5378, 5396",loving more people,process
+5378,"5378, 5396",loving more people,emotive
+5475,"5475, 5489",responsibility,affected-emoter
+5475,"5475, 5489",responsibility,affected-path
+5475,"5475, 5489",responsibility,affected-perceiver
+5475,"5475, 5489",responsibility,location
+5475,"5475, 5489",responsibility,affected-cognizant
+5475,"5475, 5489",responsibility,affected-carrier
+5475,"5475, 5489",responsibility,affected-destination
+5475,"5475, 5489",responsibility,affected
+5475,"5475, 5489",responsibility,affected-possessed
+5475,"5475, 5489",responsibility,affected-source
+5475,"5475, 5489",responsibility,possessed
+5475,"5475, 5489",responsibility,range
+5577,"5577, 5579",me,cognizant
+5577,"5577, 5579",me,affected-cognizant
+5577,"5577, 5579",me,affected
+5577,"5577, 5579",me,carrier
+5515,"5515, 5521",anyone,agent
+5515,"5515, 5521",anyone,agent-cognizant
+5515,"5515, 5521",anyone,agent-carrier
+5515,"5515, 5521",anyone,agent-perceiver
+5567,"5567, 5570",you,agent-cognizant
+5567,"5567, 5570",you,agent-carrier
+5567,"5567, 5570",you,agent-perceiver
+5532,"5532, 5557",through a similar journey,affected-emoter
+5532,"5532, 5557",through a similar journey,affected-path
+5532,"5532, 5557",through a similar journey,affected-perceiver
+5532,"5532, 5557",through a similar journey,affected-cognizant
+5532,"5532, 5557",through a similar journey,affected-carrier
+5532,"5532, 5557",through a similar journey,affected-destination
+5532,"5532, 5557",through a similar journey,affected
+5532,"5532, 5557",through a similar journey,affected-possessed
+5532,"5532, 5557",through a similar journey,affected-source
+5511,"5511, 5558","Has anyone else been through a similar journey,",process
+5511,"5511, 5558","Has anyone else been through a similar journey,",two-role-action
+5511,"5511, 5558","Has anyone else been through a similar journey,",action
+5580,"5580, 5594",some guidance?,phenomenon
+5580,"5580, 5594",some guidance?,created-phenomenon
+5580,"5580, 5594",some guidance?,affected-possessed
+5611,"5611, 5622",appreciated,main
+1155,"1155, 1160",to do,main
+1221,"1221, 1342",to be more like her parents and do their own separate things and then get back together and have something to talk about.,phenomenon
+1213,"1213, 1342",we need to be more like her parents and do their own separate things and then get back together and have something to talk about.,mental
+1522,"1522, 1710","that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",mental
+1637,"1637, 1660",answering my cell phone,three-role-cognition
+2285,"2285, 2310",that the kids said I left,phenomenon
+2275,"2275, 2310",me to say that the kids said I left,mental
+2275,"2275, 2310",me to say that the kids said I left,three-role-cognition
+4914,"4914, 4919",to do,main

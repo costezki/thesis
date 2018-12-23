@@ -1,0 +1,563 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.25732217573221755
+,Recall,0.6243654822335025
+,F1,0.36444444444444446
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+9,15.0,"86, 114","86, 99",15,some problems in my marriage,some problems,phenomenon,phenomenon
+4,5.0,"42, 49","37, 49",5,lurking,been lurking,main,main
+11,8.06225774829855,"69, 114","61, 115",9,I'm experiencing some problems in my marriage,because I'm experiencing some problems in my marriage.,mental,mental
+11,8.06225774829855,"69, 114","61, 115",9,I'm experiencing some problems in my marriage,because I'm experiencing some problems in my marriage.,two-role-perception,two-role-perception
+6,0.0,"69, 70","69, 70",0,I,I,agent-perceiver,agent-perceiver
+8,0.0,"73, 85","73, 85",0,experiencing,experiencing,main,main
+15,1.0,"116, 148","116, 149",1,Here's a quick bit of background,Here's a quick bit of background.,attributive,attributive
+15,1.0,"116, 148","116, 149",1,Here's a quick bit of background,Here's a quick bit of background.,relational,relational
+12,0.0,"116, 120","116, 120",0,Here,Here,carrier,carrier
+14,1.0,"123, 148","123, 149",1,a quick bit of background,a quick bit of background.,attribute,attribute
+13,1.0,"121, 122","120, 122",1,s,'s,main,main
+18,0.0,"154, 167","154, 167",0,a married man,a married man,attribute,attribute
+17,1.0,"152, 153","151, 153",1,m,'m,main,main
+21,19.026297590440446,"169, 193","150, 194",20,been married for 7 years,"I'm a married man, been married for 7 years.",attributive,attributive
+21,19.026297590440446,"169, 193","150, 194",20,been married for 7 years,"I'm a married man, been married for 7 years.",relational,relational
+16,0.0,"150, 151","150, 151",0,I,I,carrier,carrier
+19,8.0,"169, 173","169, 181",8,been,been married,main,main
+31,25.495097567963924,"255, 296","274, 313",35,friendship getting in the way of marriage,"in the way of marriage, and vice-versa.",affected,affected
+30,5.0,"244, 254","244, 249",5,deals with,deals,main,main
+32,31.016124838541646,"235, 312","266, 313",32,"My issue deals with friendship getting in the way of marriage, and vice-versa","getting in the way of marriage, and vice-versa.",action,action
+35,0.0,"326, 333","326, 333",0,younger,younger,attribute,attribute
+38,0.0,"359, 363","359, 363",0,been,been,main,main
+40,6.0,"320, 333","314, 333",6,I was younger,Since I was younger,attributive,attributive
+40,6.0,"320, 333","314, 333",6,I was younger,Since I was younger,relational,relational
+33,0.0,"320, 321","320, 321",0,I,I,carrier,carrier
+34,0.0,"322, 325","322, 325",0,was,was,main,main
+36,2.0,"335, 353","333, 353",2,most of my friends,", most of my friends",carrier,carrier
+41,21.02379604162864,"335, 370","314, 371",22,most of my friends have been female,"Since I was younger, most of my friends have been female.",attributive,attributive
+41,21.02379604162864,"335, 370","314, 371",22,most of my friends have been female,"Since I was younger, most of my friends have been female.",relational,relational
+39,1.0,"364, 370","364, 371",1,female,female.,attribute,attribute
+49,25.317977802344327,"395, 438","391, 413",29,has had no problem with this until recently,and has had no problem,relational,relational
+49,25.317977802344327,"395, 438","391, 413",29,has had no problem with this until recently,and has had no problem,possessive,possessive
+44,0.0,"385, 389","385, 389",0,this,this,phenomenon,phenomenon
+47,0.0,"399, 402","399, 402",0,had,had,main,main
+43,0.0,"380, 384","380, 384",0,knew,knew,main,main
+48,10.0,"403, 423","403, 413",10,no problem with this,no problem,possessed,possessed
+45,1.0,"372, 389","372, 390",1,My wife knew this,"My wife knew this,",mental,mental
+45,1.0,"372, 389","372, 390",1,My wife knew this,"My wife knew this,",two-role-cognition,two-role-cognition
+42,0.0,"372, 379","372, 379",0,My wife,My wife,cognizant,cognizant
+52,0.0,"452, 465","452, 465",0,been visiting,been visiting,main,main
+59,17.029386365926403,"496, 525","513, 526",18,who also happens to be female,to be female.,attributive,attributive
+59,17.029386365926403,"496, 525","513, 526",18,who also happens to be female,to be female.,relational,relational
+58,1.0,"519, 525","519, 526",1,female,female.,attribute,attribute
+53,32.0,"466, 494","466, 526",32,a mutual friend of 6 + years,"a mutual friend of 6 + years, who also happens to be female.",affected,affected
+50,0.0,"447, 448","447, 448",0,I,I,agent,agent
+56,0.0,"513, 518","513, 518",0,to be,to be,main,main
+62,6.0,"548, 566","554, 566",6,going to her house,to her house,attribute,attribute
+68,11.0,"578, 597","567, 597",11,the kids are asleep,well after the kids are asleep,attributive,attributive
+68,11.0,"578, 597","567, 597",11,the kids are asleep,well after the kids are asleep,relational,relational
+67,37.44329045369811,"527, 566","548, 597",38,My visits consist of going to her house,going to her house well after the kids are asleep,attributive,attributive
+67,37.44329045369811,"527, 566","548, 597",38,My visits consist of going to her house,going to her house well after the kids are asleep,relational,relational
+65,0.0,"591, 597","591, 597",0,asleep,asleep,attribute,attribute
+64,0.0,"587, 590","587, 590",0,are,are,main,main
+61,3.0,"537, 547","537, 544",3,consist of,consist,main,main
+75,0.0,"668, 671","668, 671",0,are,are,main,main
+77,13.0,"685, 692","672, 692",13,present,other people present,attribute,attribute
+70,0.0,"623, 633","623, 633",0,The visits,The visits,carrier,carrier
+71,0.0,"634, 637","634, 637",0,are,are,main,main
+73,6.0,"623, 655","623, 661",6,The visits are strictly platonic,"The visits are strictly platonic, plus",relational,relational
+78,1.0,"662, 703","662, 704",1,there are other people present every time,there are other people present every time.,locational,locational
+78,1.0,"662, 703","662, 704",1,there are other people present every time,there are other people present every time.,relational,relational
+85,4.0,"749, 753","745, 753",4,have,not have,main,main
+81,30.0,"724, 768","754, 768",30,a married man should not have female friends,female friends,phenomenon,phenomenon
+86,0.0,"754, 768","754, 768",0,female friends,female friends,possessed,possessed
+80,0.0,"713, 718","713, 718",0,feels,feels,main,main
+82,34.0,"705, 768","705, 802",34,My wife feels that a married man should not have female friends,"My wife feels that a married man should not have female friends, unless they are married as well.",mental,mental
+83,0.0,"724, 737","724, 737",0,a married man,a married man,carrier,carrier
+93,0.0,"807, 811","807, 811",0,says,says,main,main
+96,0.0,"822, 826","822, 826",0,wish,wish,main,main
+92,0.0,"803, 806","803, 806",0,She,She,agent,agent
+3,8.06225774829855,"820, 930","812, 931",9,"I wish to continue seeing this friend or any other female friend, she must also be present or we must separate","that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate.",phenomenon,phenomenon
+97,0.0,"827, 884","827, 884",0,to continue seeing this friend or any other female friend,to continue seeing this friend or any other female friend,phenomenon,phenomenon
+98,3.0,"820, 884","817, 884",3,I wish to continue seeing this friend or any other female friend,if I wish to continue seeing this friend or any other female friend,mental,mental
+102,21.0,"903, 910","903, 931",21,present,present or we must separate.,attribute,attribute
+94,1.0,"803, 930","803, 931",1,"She says that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate","She says that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate.",mental,mental
+94,1.0,"803, 930","803, 931",1,"She says that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate","She says that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate.",three-role-cognition,three-role-cognition
+99,2.0,"886, 889","884, 889",2,she,", she",carrier,carrier
+101,0.0,"900, 902","900, 902",0,be,be,main,main
+95,0.0,"820, 821","820, 821",0,I,I,emoter,emoter
+115,18.027756377319946,"976, 1016","994, 1017",19,every other night I am home with my wife,I am home with my wife.,relational,relational
+113,0.0,"996, 998","996, 998",0,am,am,main,main
+126,89.8443097808648,"1044, 1067","1018, 1153",112,we usually watch movies,"When I visit this friend, we usually watch movies which my wife does not like, or discuss religion which bores the heck out of my wife.",two-role-perception,two-role-perception
+130,89.96110270555825,"1100, 1116","1018, 1153",119,discuss religion,"When I visit this friend, we usually watch movies which my wife does not like, or discuss religion which bores the heck out of my wife.",action,action
+129,51.478150704935004,"1108, 1116","1061, 1137",68,religion,"movies which my wife does not like, or discuss religion which bores the heck",range,range
+121,0.0,"1055, 1060","1055, 1060",0,watch,watch,main,main
+117,0.0,"1025, 1030","1025, 1030",0,visit,visit,main,main
+26,0.0,"1068, 1073","1068, 1073",0,which,which,phenomenon,phenomenon
+125,4.0,"1091, 1095","1087, 1095",4,like,not like,main,main
+66,16.0,"1123, 1144","1123, 1128",16,bores the heck out of,bores,main,main
+127,1.0,"1068, 1095","1068, 1096",1,which my wife does not like,"which my wife does not like,",mental,mental
+120,2.0,"1044, 1046","1042, 1046",2,we,", we",agent-perceiver,agent-perceiver
+128,0.0,"1100, 1107","1100, 1107",0,discuss,discuss,main,main
+123,0.0,"1074, 1081","1074, 1081",0,my wife,my wife,emoter,emoter
+146,1.0,"1259, 1285","1259, 1286",1,I am not seeking an affair,I am not seeking an affair.,phenomenon,phenomenon
+136,0.0,"1165, 1167","1165, 1167",0,is,is,main,main
+147,5.0990195135927845,"1248, 1285","1243, 1286",6,she trusts I am not seeking an affair,that she trusts I am not seeking an affair.,mental,mental
+143,33.015148038438355,"1226, 1285","1259, 1286",34,my wife stresses that she trusts I am not seeking an affair,I am not seeking an affair.,mental,mental
+147,11.045361017187261,"1248, 1285","1259, 1286",12,she trusts I am not seeking an affair,I am not seeking an affair.,two-role-cognition,two-role-cognition
+133,32.0,"1162, 1208","1194, 1208",32,it is reasonable for me to have female friends,female friends,phenomenon,phenomenon
+145,0.0,"1252, 1258","1252, 1258",0,trusts,trusts,main,main
+142,28.0178514522438,"1248, 1285","1276, 1286",29,she trusts I am not seeking an affair,an affair.,phenomenon,phenomenon
+134,78.0,"1154, 1208","1154, 1286",78,I think it is reasonable for me to have female friends,"I think it is reasonable for me to have female friends, especially when my wife stresses that she trusts I am not seeking an affair.",mental,mental
+134,78.0,"1154, 1208","1154, 1286",78,I think it is reasonable for me to have female friends,"I think it is reasonable for me to have female friends, especially when my wife stresses that she trusts I am not seeking an affair.",two-role-cognition,two-role-cognition
+132,0.0,"1156, 1161","1156, 1161",0,think,think,main,main
+131,0.0,"1154, 1155","1154, 1155",0,I,I,cognizant,cognizant
+139,24.0,"1162, 1208","1186, 1208",24,it is reasonable for me to have female friends,to have female friends,relational,relational
+141,0.0,"1234, 1242","1234, 1242",0,stresses,stresses,main,main
+155,31.400636936215164,"1306, 1322","1287, 1347",44,am I out of line,"What so you think, am I out of line, is she, or are we both?",attributive,attributive
+155,31.400636936215164,"1306, 1322","1287, 1347",44,am I out of line,"What so you think, am I out of line, is she, or are we both?",relational,relational
+154,25.96150997149434,"1311, 1322","1318, 1347",25,out of line,"line, is she, or are we both?",attribute,attribute
+153,0.0,"1306, 1308","1306, 1308",0,am,am,main,main
+150,0.0,"1299, 1304","1299, 1304",0,think,think,main,main
+162,0.0,"1349, 1350","1349, 1350",0,I,I,emoter,emoter
+174,0.0,"1437, 1441","1437, 1441",0,both,both,possessed,possessed
+168,0.0,"1349, 1398","1349, 1398",0,I want to keep my marriage as well as friendships,I want to keep my marriage as well as friendships,mental,mental
+170,4.123105625617661,"1403, 1449","1399, 1450",5,it doesn't appear that I can have both anymore,but it doesn't appear that I can have both anymore.,mental,mental
+173,0.0,"1432, 1436","1432, 1436",0,have,have,main,main
+163,0.0,"1351, 1355","1351, 1355",0,want,want,main,main
+167,4.0,"1414, 1420","1410, 1420",4,appear,n't appear,main,main
+171,0.0,"1426, 1427","1426, 1427",0,I,I,carrier,carrier
+164,23.0,"1356, 1398","1356, 1375",23,to keep my marriage as well as friendships,to keep my marriage,phenomenon,phenomenon
+169,5.0990195135927845,"1426, 1449","1421, 1450",6,I can have both anymore,that I can have both anymore.,phenomenon,phenomenon
+122,70.0,"1061, 1067","1061, 1137",70,movies,"movies which my wife does not like, or discuss religion which bores the heck",phenomenon,phenomenon
+,
+,Manual mismatching all parsed (False Negative)
+10,"32, 60",I've been lurking here a bit,relational
+10,"32, 60",I've been lurking here a bit,locational
+1,"32, 33",I,agent-carrier
+5,"50, 54",here,location
+22,"150, 167",I'm a married man,relational
+22,"150, 167",I'm a married man,attributive
+20,"174, 181",married,attribute
+27,"195, 233","I have three children, aged 6, 4 and 2",relational
+27,"195, 233","I have three children, aged 6, 4 and 2",possessive
+23,"195, 196",I,carrier
+24,"197, 201",have,main
+25,"202, 233","three children, aged 6, 4 and 2",possessed
+29,"235, 243",My issue,agent
+57,"440, 494",Lately I've been visiting a mutual friend of 6 + years,action
+54,"496, 499",who,carrier
+60,"527, 536",My visits,carrier
+63,"578, 586",the kids,agent
+177,"602, 621",staying rather late,attribute
+178,"602, 621",staying rather late,relational
+178,"602, 621",staying rather late,attributive
+73,"623, 655",The visits are strictly platonic,attributive
+72,"638, 655",strictly platonic,attribute
+76,"672, 684",other people,carrier
+82,"705, 768",My wife feels that a married man should not have female friends,two-role-cognition
+79,"705, 712",My wife,cognizant
+87,"724, 768",a married man should not have female friends,relational
+87,"724, 768",a married man should not have female friends,possessive
+91,"777, 801",they are married as well,relational
+91,"777, 801",they are married as well,attributive
+88,"777, 781",they,carrier
+89,"782, 785",are,main
+90,"786, 793",married,attribute
+103,"886, 910",she must also be present,relational
+103,"886, 910",she must also be present,attributive
+107,"914, 930",we must separate,action
+104,"914, 916",we,agent
+106,"922, 930",separate,main
+111,"932, 974",My visits are limited to about once a week,relational
+111,"932, 974",My visits are limited to about once a week,attributive
+108,"932, 941",My visits,carrier
+109,"942, 945",are,main
+110,"946, 974",limited to about once a week,attribute
+115,"976, 1016",every other night I am home with my wife,locational
+112,"994, 995",I,carrier
+114,"999, 1016",home with my wife,location
+119,"1023, 1042",I visit this friend,action
+116,"1023, 1024",I,agent
+118,"1031, 1042",this friend,affected
+126,"1044, 1067",we usually watch movies,mental
+176,"1117, 1152",which bores the heck out of my wife,action
+28,"1117, 1122",which,agent
+69,"1145, 1152",my wife,affected
+139,"1162, 1208",it is reasonable for me to have female friends,attributive
+137,"1168, 1185",reasonable for me,attribute
+138,"1186, 1208",to have female friends,carrier
+143,"1226, 1285",my wife stresses that she trusts I am not seeking an affair,three-role-cognition
+140,"1226, 1233",my wife,agent
+144,"1248, 1251",she,cognizant
+151,"1287, 1304",What so you think,mental
+151,"1287, 1304",What so you think,two-role-cognition
+148,"1287, 1291",What,phenomenon
+149,"1295, 1298",you,cognizant
+152,"1309, 1310",I,carrier
+158,"1324, 1330",is she,relational
+158,"1324, 1330",is she,attributive
+156,"1324, 1326",is,main
+157,"1327, 1330",she,carrier
+161,"1335, 1346",are we both,relational
+161,"1335, 1346",are we both,attributive
+159,"1335, 1338",are,main
+160,"1339, 1346",we both,carrier
+170,"1403, 1449",it doesn't appear that I can have both anymore,three-role-cognition
+175,"1426, 1441",I can have both,relational
+175,"1426, 1441",I can have both,possessive
+,
+,Parsed mismatching all manual (False Positives)
+20,"20, 22",Hi,main
+86,"86, 99",some problems,created-phenomenon
+61,"61, 115",because I'm experiencing some problems in my marriage.,process
+69,"69, 70",I,affected-perceiver
+69,"69, 70",I,perceiver
+116,"116, 149",Here's a quick bit of background.,process
+116,"116, 149",Here's a quick bit of background.,locational
+116,"116, 149",Here's a quick bit of background.,directional
+116,"116, 120",Here,agent
+116,"116, 120",Here,affected-carrier
+116,"116, 120",Here,agent-carrier
+116,"116, 120",Here,agent-perceiver
+116,"116, 120",Here,perceiver
+123,"123, 149",a quick bit of background.,destination
+123,"123, 149",a quick bit of background.,location
+123,"123, 149",a quick bit of background.,affected-destination
+182,"182, 194",for 7 years.,affected-emoter
+182,"182, 194",for 7 years.,affected-path
+182,"182, 194",for 7 years.,affected-perceiver
+182,"182, 194",for 7 years.,affected-cognizant
+182,"182, 194",for 7 years.,affected-carrier
+182,"182, 194",for 7 years.,affected-destination
+182,"182, 194",for 7 years.,affected
+182,"182, 194",for 7 years.,affected-possessed
+182,"182, 194",for 7 years.,affected-source
+154,"154, 167",a married man,location
+167,"167, 194",", been married for 7 years.",process
+167,"167, 194",", been married for 7 years.",two-role-action
+167,"167, 194",", been married for 7 years.",action
+150,"150, 194","I'm a married man, been married for 7 years.",process
+150,"150, 194","I'm a married man, been married for 7 years.",locational
+150,"150, 151",I,affected-carrier
+150,"150, 151",I,agent-carrier
+218,"218, 222",aged,main
+274,"274, 313","in the way of marriage, and vice-versa.",destination
+274,"274, 313","in the way of marriage, and vice-versa.",affected-carrier
+274,"274, 313","in the way of marriage, and vice-versa.",affected-destination
+274,"274, 313","in the way of marriage, and vice-versa.",affected-possessed
+274,"274, 313","in the way of marriage, and vice-versa.",possessed
+274,"274, 313","in the way of marriage, and vice-versa.",range
+274,"274, 313","in the way of marriage, and vice-versa.",carrier
+266,"266, 313","getting in the way of marriage, and vice-versa.",process
+266,"266, 313","getting in the way of marriage, and vice-versa.",directional
+266,"266, 313","getting in the way of marriage, and vice-versa.",relational
+266,"266, 313","getting in the way of marriage, and vice-versa.",possessive
+266,"266, 313","getting in the way of marriage, and vice-versa.",two-role-action
+266,"266, 273",getting,main
+314,"314, 333",Since I was younger,process
+320,"320, 321",I,affected-carrier
+320,"320, 321",I,agent-carrier
+333,"333, 353",", most of my friends",affected-carrier
+333,"333, 353",", most of my friends",agent-carrier
+314,"314, 371","Since I was younger, most of my friends have been female.",process
+314,"314, 371","Since I was younger, most of my friends have been female.",locational
+364,"364, 371",female.,location
+391,"391, 413",and has had no problem,process
+391,"391, 413",and has had no problem,causative
+391,"391, 413",and has had no problem,two-role-action
+391,"391, 413",and has had no problem,action
+385,"385, 389",this,created-phenomenon
+403,"403, 413",no problem,phenomenon
+403,"403, 413",no problem,affected-emoter
+403,"403, 413",no problem,created-phenomenon
+403,"403, 413",no problem,affected-path
+403,"403, 413",no problem,affected-perceiver
+403,"403, 413",no problem,affected-cognizant
+403,"403, 413",no problem,affected-carrier
+403,"403, 413",no problem,affected-destination
+403,"403, 413",no problem,affected
+403,"403, 413",no problem,affected-possessed
+403,"403, 413",no problem,affected-source
+403,"403, 413",no problem,created
+372,"372, 390","My wife knew this,",process
+372,"372, 379",My wife,agent-cognizant
+372,"372, 379",My wife,affected-cognizant
+513,"513, 526",to be female.,process
+513,"513, 526",to be female.,locational
+519,"519, 526",female.,location
+440,"440, 526","Lately I've been visiting a mutual friend of 6 + years, who also happens to be female.",process
+440,"440, 526","Lately I've been visiting a mutual friend of 6 + years, who also happens to be female.",directional
+440,"440, 526","Lately I've been visiting a mutual friend of 6 + years, who also happens to be female.",relational
+440,"440, 526","Lately I've been visiting a mutual friend of 6 + years, who also happens to be female.",two-role-action
+466,"466, 526","a mutual friend of 6 + years, who also happens to be female.",affected-emoter
+466,"466, 526","a mutual friend of 6 + years, who also happens to be female.",affected-path
+466,"466, 526","a mutual friend of 6 + years, who also happens to be female.",affected-perceiver
+466,"466, 526","a mutual friend of 6 + years, who also happens to be female.",destination
+466,"466, 526","a mutual friend of 6 + years, who also happens to be female.",affected-cognizant
+466,"466, 526","a mutual friend of 6 + years, who also happens to be female.",affected-carrier
+466,"466, 526","a mutual friend of 6 + years, who also happens to be female.",affected-destination
+466,"466, 526","a mutual friend of 6 + years, who also happens to be female.",affected-possessed
+466,"466, 526","a mutual friend of 6 + years, who also happens to be female.",affected-source
+447,"447, 448",I,agent-cognizant
+447,"447, 448",I,agent-carrier
+447,"447, 448",I,agent-perceiver
+447,"447, 448",I,perceiver
+505,"505, 512",happens,main
+554,"554, 566",to her house,destination
+554,"554, 566",to her house,affected-destination
+554,"554, 566",to her house,matchee
+567,"567, 597",well after the kids are asleep,process
+567,"567, 597",well after the kids are asleep,locational
+548,"548, 597",going to her house well after the kids are asleep,process
+548,"548, 597",going to her house well after the kids are asleep,matching
+548,"548, 597",going to her house well after the kids are asleep,directional
+548,"548, 597",going to her house well after the kids are asleep,action
+548,"548, 597",going to her house well after the kids are asleep,one-role-action
+591,"591, 597",asleep,location
+602,"602, 609",staying,main
+548,"548, 553",going,main
+578,"578, 586",the kids,affected-carrier
+578,"578, 586",the kids,agent-carrier
+578,"578, 586",the kids,carrier
+672,"672, 692",other people present,location
+623,"623, 633",The visits,agent
+623,"623, 633",The visits,agent-cognizant
+623,"623, 633",The visits,affected-carrier
+623,"623, 633",The visits,agent-carrier
+623,"623, 633",The visits,agent-perceiver
+623,"623, 633",The visits,perceiver
+693,"693, 704",every time.,affected-carrier
+693,"693, 704",every time.,agent-carrier
+693,"693, 704",every time.,carrier
+623,"623, 661","The visits are strictly platonic, plus",process
+623,"623, 661","The visits are strictly platonic, plus",locational
+623,"623, 661","The visits are strictly platonic, plus",directional
+623,"623, 661","The visits are strictly platonic, plus",two-role-action
+638,"638, 661","strictly platonic, plus",affected-emoter
+638,"638, 661","strictly platonic, plus",affected-path
+638,"638, 661","strictly platonic, plus",affected-perceiver
+638,"638, 661","strictly platonic, plus",destination
+638,"638, 661","strictly platonic, plus",location
+638,"638, 661","strictly platonic, plus",affected-cognizant
+638,"638, 661","strictly platonic, plus",affected-carrier
+638,"638, 661","strictly platonic, plus",affected-destination
+638,"638, 661","strictly platonic, plus",affected
+638,"638, 661","strictly platonic, plus",affected-possessed
+638,"638, 661","strictly platonic, plus",affected-source
+638,"638, 661","strictly platonic, plus",range
+662,"662, 704",there are other people present every time.,process
+662,"662, 704",there are other people present every time.,attributive
+786,"786, 793",married,main
+719,"719, 802","that a married man should not have female friends, unless they are married as well.",created-phenomenon
+754,"754, 768",female friends,affected-emoter
+754,"754, 768",female friends,created-phenomenon
+754,"754, 768",female friends,affected-path
+754,"754, 768",female friends,affected-perceiver
+754,"754, 768",female friends,affected-cognizant
+754,"754, 768",female friends,affected-carrier
+754,"754, 768",female friends,affected-destination
+754,"754, 768",female friends,affected
+754,"754, 768",female friends,affected-possessed
+754,"754, 768",female friends,affected-source
+754,"754, 768",female friends,created
+705,"705, 712",My wife,affected-emoter
+705,"705, 712",My wife,agent
+705,"705, 712",My wife,affected-perceiver
+705,"705, 712",My wife,agent-perceiver
+705,"705, 712",My wife,emoter
+705,"705, 712",My wife,perceiver
+705,"705, 802","My wife feels that a married man should not have female friends, unless they are married as well.",process
+705,"705, 802","My wife feels that a married man should not have female friends, unless they are married as well.",two-role-perception
+705,"705, 802","My wife feels that a married man should not have female friends, unless they are married as well.",emotive
+724,"724, 737",a married man,agent
+724,"724, 737",a married man,agent-cognizant
+724,"724, 737",a married man,affected-carrier
+724,"724, 737",a married man,affected
+724,"724, 737",a married man,agent-carrier
+724,"724, 737",a married man,agent-perceiver
+724,"724, 737",a married man,perceiver
+846,"846, 884",this friend or any other female friend,affected-emoter
+846,"846, 884",this friend or any other female friend,created-phenomenon
+846,"846, 884",this friend or any other female friend,affected-path
+846,"846, 884",this friend or any other female friend,affected-perceiver
+846,"846, 884",this friend or any other female friend,affected-cognizant
+846,"846, 884",this friend or any other female friend,affected-carrier
+846,"846, 884",this friend or any other female friend,affected-destination
+846,"846, 884",this friend or any other female friend,affected
+846,"846, 884",this friend or any other female friend,affected-possessed
+846,"846, 884",this friend or any other female friend,matchee
+846,"846, 884",this friend or any other female friend,affected-source
+846,"846, 884",this friend or any other female friend,created
+846,"846, 884",this friend or any other female friend,range
+803,"803, 806",She,cognizant
+803,"803, 806",She,agent-cognizant
+803,"803, 806",She,affected-cognizant
+803,"803, 806",She,agent-carrier
+803,"803, 806",She,agent-perceiver
+803,"803, 806",She,perceiver
+812,"812, 931","that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate.",created-phenomenon
+827,"827, 838",to continue,main
+827,"827, 884",to continue seeing this friend or any other female friend,created-phenomenon
+827,"827, 884",to continue seeing this friend or any other female friend,process
+827,"827, 884",to continue seeing this friend or any other female friend,continuing
+817,"817, 884",if I wish to continue seeing this friend or any other female friend,process
+817,"817, 884",if I wish to continue seeing this friend or any other female friend,two-role-cognition
+817,"817, 884",if I wish to continue seeing this friend or any other female friend,desiderative
+903,"903, 931",present or we must separate.,location
+803,"803, 931","She says that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate.",process
+803,"803, 931","She says that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate.",two-role-cognition
+803,"803, 931","She says that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate.",two-role-perception
+839,"839, 884",seeing this friend or any other female friend,phenomenon
+839,"839, 884",seeing this friend or any other female friend,created-phenomenon
+839,"839, 884",seeing this friend or any other female friend,process
+839,"839, 884",seeing this friend or any other female friend,matching
+839,"839, 884",seeing this friend or any other female friend,causative
+839,"839, 884",seeing this friend or any other female friend,relational
+839,"839, 884",seeing this friend or any other female friend,two-role-cognition
+839,"839, 884",seeing this friend or any other female friend,two-role-perception
+839,"839, 884",seeing this friend or any other female friend,two-role-action
+884,"884, 889",", she",affected-carrier
+884,"884, 889",", she",agent-carrier
+839,"839, 845",seeing,main
+820,"820, 821",I,affected-emoter
+820,"820, 821",I,agent
+820,"820, 821",I,cognizant
+820,"820, 821",I,agent-cognizant
+932,"932, 941",My visits,agent
+932,"932, 941",My visits,agent-cognizant
+932,"932, 941",My visits,agent-carrier
+932,"932, 941",My visits,agent-perceiver
+1004,"1004, 1017",with my wife.,matchee
+994,"994, 1017",I am home with my wife.,process
+994,"994, 1017",I am home with my wife.,matching
+974,"974, 1017",", every other night I am home with my wife.",affected-emoter
+974,"974, 1017",", every other night I am home with my wife.",affected-path
+974,"974, 1017",", every other night I am home with my wife.",affected-perceiver
+974,"974, 1017",", every other night I am home with my wife.",affected-cognizant
+974,"974, 1017",", every other night I am home with my wife.",affected-carrier
+974,"974, 1017",", every other night I am home with my wife.",affected-destination
+974,"974, 1017",", every other night I am home with my wife.",affected
+974,"974, 1017",", every other night I am home with my wife.",affected-possessed
+974,"974, 1017",", every other night I am home with my wife.",affected-source
+946,"946, 953",limited,main
+932,"932, 1017","My visits are limited to about once a week, every other night I am home with my wife.",process
+932,"932, 1017","My visits are limited to about once a week, every other night I am home with my wife.",two-role-action
+932,"932, 1017","My visits are limited to about once a week, every other night I am home with my wife.",action
+994,"994, 995",I,agent
+994,"994, 995",I,agent-perceiver
+994,"994, 995",I,perceiver
+1018,"1018, 1153","When I visit this friend, we usually watch movies which my wife does not like, or discuss religion which bores the heck out of my wife.",process
+1018,"1018, 1153","When I visit this friend, we usually watch movies which my wife does not like, or discuss religion which bores the heck out of my wife.",two-role-action
+1061,"1061, 1137","movies which my wife does not like, or discuss religion which bores the heck",created-phenomenon
+1068,"1068, 1073",which,created-phenomenon
+1068,"1068, 1096","which my wife does not like,",process
+1068,"1068, 1096","which my wife does not like,",emotive
+1068,"1068, 1096","which my wife does not like,",desiderative
+1042,"1042, 1046",", we",agent
+1042,"1042, 1046",", we",agent-cognizant
+1042,"1042, 1046",", we",agent-carrier
+1042,"1042, 1046",", we",perceiver
+1074,"1074, 1081",my wife,affected-emoter
+1259,"1259, 1286",I am not seeking an affair.,created-phenomenon
+1259,"1259, 1260",I,agent
+1259,"1259, 1260",I,cognizant
+1259,"1259, 1260",I,agent-cognizant
+1243,"1243, 1286",that she trusts I am not seeking an affair.,process
+1243,"1243, 1286",that she trusts I am not seeking an affair.,emotive
+1259,"1259, 1286",I am not seeking an affair.,process
+1194,"1194, 1208",female friends,affected-emoter
+1194,"1194, 1208",female friends,created-phenomenon
+1194,"1194, 1208",female friends,affected-path
+1194,"1194, 1208",female friends,affected-perceiver
+1194,"1194, 1208",female friends,affected-cognizant
+1194,"1194, 1208",female friends,affected-carrier
+1194,"1194, 1208",female friends,affected-destination
+1194,"1194, 1208",female friends,affected
+1194,"1194, 1208",female friends,affected-possessed
+1194,"1194, 1208",female friends,affected-source
+1194,"1194, 1208",female friends,created
+1194,"1194, 1208",female friends,possessed
+1248,"1248, 1251",she,affected-emoter
+1248,"1248, 1251",she,emoter
+1264,"1264, 1275",not seeking,main
+1276,"1276, 1286",an affair.,created-phenomenon
+1154,"1154, 1286","I think it is reasonable for me to have female friends, especially when my wife stresses that she trusts I am not seeking an affair.",process
+1186,"1186, 1193",to have,main
+1154,"1154, 1155",I,agent
+1154,"1154, 1155",I,agent-cognizant
+1154,"1154, 1155",I,affected-cognizant
+1154,"1154, 1155",I,affected
+1162,"1162, 1286","it is reasonable for me to have female friends, especially when my wife stresses that she trusts I am not seeking an affair.",phenomenon
+1162,"1162, 1286","it is reasonable for me to have female friends, especially when my wife stresses that she trusts I am not seeking an affair.",created-phenomenon
+1186,"1186, 1208",to have female friends,process
+1186,"1186, 1208",to have female friends,causative
+1186,"1186, 1208",to have female friends,possessive
+1186,"1186, 1208",to have female friends,two-role-action
+1186,"1186, 1208",to have female friends,action
+1287,"1287, 1347","What so you think, am I out of line, is she, or are we both?",process
+1287,"1287, 1347","What so you think, am I out of line, is she, or are we both?",locational
+1287,"1287, 1347","What so you think, am I out of line, is she, or are we both?",possessive
+1287,"1287, 1347","What so you think, am I out of line, is she, or are we both?",two-role-action
+1287,"1287, 1347","What so you think, am I out of line, is she, or are we both?",action
+1318,"1318, 1347","line, is she, or are we both?",location
+1318,"1318, 1347","line, is she, or are we both?",affected-possessed
+1318,"1318, 1347","line, is she, or are we both?",possessed
+1318,"1318, 1347","line, is she, or are we both?",range
+1295,"1295, 1298",you,agent
+1295,"1295, 1298",you,agent-cognizant
+1295,"1295, 1298",you,agent-carrier
+1295,"1295, 1298",you,agent-perceiver
+1292,"1292, 1304",so you think,process
+1292,"1292, 1304",so you think,action
+1292,"1292, 1304",so you think,one-role-action
+1287,"1287, 1291",What,agent
+1287,"1287, 1291",What,agent-cognizant
+1287,"1287, 1291",What,affected-carrier
+1287,"1287, 1291",What,affected
+1287,"1287, 1291",What,agent-carrier
+1287,"1287, 1291",What,agent-perceiver
+1287,"1287, 1291",What,carrier
+1287,"1287, 1291",What,perceiver
+1349,"1349, 1350",I,affected-emoter
+1437,"1437, 1441",both,affected-emoter
+1437,"1437, 1441",both,created-phenomenon
+1437,"1437, 1441",both,affected-path
+1437,"1437, 1441",both,affected-perceiver
+1437,"1437, 1441",both,affected-cognizant
+1437,"1437, 1441",both,affected-carrier
+1437,"1437, 1441",both,affected-destination
+1437,"1437, 1441",both,affected
+1437,"1437, 1441",both,affected-possessed
+1437,"1437, 1441",both,affected-source
+1437,"1437, 1441",both,created
+1349,"1349, 1398",I want to keep my marriage as well as friendships,process
+1349,"1349, 1398",I want to keep my marriage as well as friendships,desiderative
+1399,"1399, 1450",but it doesn't appear that I can have both anymore.,process
+1399,"1399, 1450",but it doesn't appear that I can have both anymore.,two-role-cognition
+1364,"1364, 1375",my marriage,attribute
+1364,"1364, 1375",my marriage,created-phenomenon
+1364,"1364, 1375",my marriage,destination
+1364,"1364, 1375",my marriage,affected-destination
+1364,"1364, 1375",my marriage,affected-possessed
+1364,"1364, 1375",my marriage,possessed
+1356,"1356, 1363",to keep,main
+1426,"1426, 1427",I,agent
+1426,"1426, 1427",I,agent-cognizant
+1426,"1426, 1427",I,affected-carrier
+1426,"1426, 1427",I,affected
+1426,"1426, 1427",I,agent-carrier
+1426,"1426, 1427",I,agent-perceiver
+1426,"1426, 1427",I,perceiver
+1356,"1356, 1375",to keep my marriage,created-phenomenon
+1356,"1356, 1375",to keep my marriage,process
+1356,"1356, 1375",to keep my marriage,attributive
+1356,"1356, 1375",to keep my marriage,directional
+1356,"1356, 1375",to keep my marriage,possessive
+1356,"1356, 1375",to keep my marriage,continuing
+1356,"1356, 1375",to keep my marriage,influential
+1421,"1421, 1450",that I can have both anymore.,created-phenomenon
+719,"719, 802","that a married man should not have female friends, unless they are married as well.",phenomenon
+846,"846, 884",this friend or any other female friend,phenomenon
+827,"827, 884",to continue seeing this friend or any other female friend,mental
+827,"827, 884",to continue seeing this friend or any other female friend,three-role-cognition
+1364,"1364, 1375",my marriage,phenomenon
+1437,"1437, 1441",both,phenomenon

@@ -1,0 +1,205 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.7142857142857143
+,Recall,0.9154929577464789
+,F1,0.8024691358024693
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+4,0.0,"44, 45","44, 45",0,I,I,participant-role,participant-role
+10,22.561028345356956,"44, 94","39, 72",27,I've been hanging on so well since my brother left,that I've been hanging on so well,configuration,configuration
+6,5.830951894845301,"54, 64","49, 61",8,hanging on,been hanging,main,main
+159,22.561028345356956,"44, 94","39, 72",27,I've been hanging on so well since my brother left,that I've been hanging on so well,participant-role,participant-role
+1,0.0,"17, 18","17, 18",0,I,I,participant-role,participant-role
+9,1.0,"17, 94","17, 95",1,I'm sooo happy to say that I've been hanging on so well since my brother left,I'm sooo happy to say that I've been hanging on so well since my brother left.,configuration,configuration
+3,11.0,"21, 38","32, 38",11,sooo happy to say,to say,main,main
+16,53.0,"96, 168","96, 221",53,I've been keeping it at 600 or below every day without even wanting more,I've been keeping it at 600 or below every day without even wanting more ( unless it's an extra apple damn sugar cravings ) .,configuration,configuration
+13,0.0,"106, 113","106, 113",0,keeping,keeping,main,main
+11,0.0,"96, 97","96, 97",0,I,I,participant-role,participant-role
+21,0.0,"226, 227","226, 227",0,I,I,participant-role,participant-role
+22,0.0,"228, 235","228, 235",0,weighed,weighed,main,main
+24,4.123105625617661,"226, 248","222, 249",5,I weighed myself today,And I weighed myself today!,configuration,configuration
+23,0.0,"236, 242","236, 242",0,myself,myself,participant-role,participant-role
+26,0.0,"272, 280","272, 280",0,8 pounds,8 pounds,participant-role,participant-role
+29,1.0,"272, 295","272, 296",1,8 pounds gone in a week,8 pounds gone in a week.,configuration,configuration
+27,0.0,"281, 285","281, 285",0,gone,gone,main,main
+25,0.0,"320, 348","320, 348",0,water weight and muscle loss,water weight and muscle loss,participant-role,participant-role
+35,1.0,"367, 371","367, 372",1,loss,loss!,participant-role,participant-role
+36,5.0,"297, 348","297, 353",5,I think a lot of it is water weight and muscle loss,"I think a lot of it is water weight and muscle loss, but",configuration,configuration
+30,0.0,"297, 298","297, 298",0,I,I,participant-role,participant-role
+8,0.0,"317, 319","317, 319",0,is,is,main,main
+33,2.0,"359, 363","357, 363",2,loss,", loss",participant-role,participant-role
+31,0.0,"299, 304","299, 304",0,think,think,main,main
+7,0.0,"305, 316","305, 316",0,a lot of it,a lot of it,participant-role,participant-role
+34,0.0,"364, 366","364, 366",0,is,is,main,main
+37,5.0990195135927845,"359, 371","354, 372",6,loss is loss,"hey, loss is loss!",configuration,configuration
+28,0.0,"305, 348","305, 348",0,a lot of it is water weight and muscle loss,a lot of it is water weight and muscle loss,configuration,configuration
+32,0.0,"305, 348","305, 348",0,a lot of it is water weight and muscle loss,a lot of it is water weight and muscle loss,participant-role,participant-role
+41,0.0,"394, 395","394, 395",0,I,I,participant-role,participant-role
+40,0.0,"378, 384","378, 384",0,so odd,so odd,participant-role,participant-role
+39,1.0,"376, 377","375, 377",1,s,'s,main,main
+139,4.0,"389, 393","385, 393",4,full,how full,participant-role,participant-role
+42,1.0,"373, 419","373, 420",1,"It's so odd how full I've been feeling, though","It's so odd how full I've been feeling, though.",configuration,configuration
+140,9.848857801796104,"389, 411","385, 420",13,full I've been feeling,"how full I've been feeling, though.",configuration,configuration
+138,5.0,"404, 411","399, 411",5,feeling,been feeling,main,main
+38,0.0,"373, 375","373, 375",0,It,It,participant-role,participant-role
+47,1.0,"421, 500","421, 501",1,I don't understand how easily restricting is coming back to me this time around,I don't understand how easily restricting is coming back to me this time around.,configuration,configuration
+141,0.0,"451, 462","451, 462",0,restricting,restricting,participant-role,participant-role
+43,0.0,"421, 422","421, 422",0,I,I,participant-role,participant-role
+143,5.0,"466, 477","466, 472",5,coming back,coming,main,main
+45,4.0,"429, 439","425, 439",4,understand,n't understand,main,main
+46,1.0,"440, 500","440, 501",1,how easily restricting is coming back to me this time around,how easily restricting is coming back to me this time around.,participant-role,participant-role
+145,11.045361017187261,"451, 500","440, 501",12,restricting is coming back to me this time around,how easily restricting is coming back to me this time around.,configuration,configuration
+144,0.0,"478, 483","478, 483",0,to me,to me,participant-role,participant-role
+57,0.0,"623, 625","623, 625",0,is,is,main,main
+55,27.784887978899608,"564, 570","550, 594",38,around,little stress around ( except about finals ),participant-role,participant-role
+117,15.0,"516, 537","531, 537",15,school's about to end,to end,configuration,configuration
+119,4.123105625617661,"601, 647","597, 648",5,school-related stress is my main binge-trigger,and school-related stress is my main binge-trigger.,configuration,configuration
+58,1.0,"626, 647","626, 648",1,my main binge-trigger,my main binge-trigger.,participant-role,participant-role
+56,0.0,"601, 622","601, 622",0,school-related stress,school-related stress,participant-role,participant-role
+51,3.0,"534, 537","531, 537",3,end,to end,main,main
+48,0.0,"516, 522","516, 522",0,school,school,participant-role,participant-role
+60,0.0,"655, 660","655, 660",0,think,think,main,main
+147,0.0,"695, 702","695, 702",0,keeping,keeping,main,main
+66,1.0,"763, 764","762, 764",1,s,'s,main,main
+122,0.0,"760, 790","760, 790",0,it's almost completely protein,it's almost completely protein,configuration,configuration
+50,7.0,"661, 691","668, 691",7,eating a can of tuna every day,a can of tuna every day,participant-role,participant-role
+69,0.0,"804, 811","804, 811",0,my body,my body,participant-role,participant-role
+63,1.0,"743, 744","742, 744",1,s,'s,main,main
+121,2.8284271247461903,"728, 757","726, 759",4,even though it's sooo low-cal,( even though it's sooo low-cal ),configuration,configuration
+65,0.0,"760, 762","760, 762",0,it,it,participant-role,participant-role
+62,0.0,"740, 742","740, 742",0,it,it,participant-role,participant-role
+148,6.0,"703, 711","703, 705",6,me going,me,participant-role,participant-role
+70,8.06225774829855,"812, 817","804, 818",9,happy,my body happy.,participant-role,participant-role
+67,7.0,"772, 790","765, 790",7,completely protein,almost completely protein,participant-role,participant-role
+120,76.48529270389177,"653, 716","668, 791",90,"I think eating a can of tuna every day is keeping me going, too","a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein,",configuration,configuration
+68,0.0,"796, 803","796, 803",0,keeping,keeping,main,main
+64,0.0,"745, 757","745, 757",0,sooo low-cal,sooo low-cal,participant-role,participant-role
+59,0.0,"653, 654","653, 654",0,I,I,participant-role,participant-role
+61,102.0,"661, 716","661, 818",102,"eating a can of tuna every day is keeping me going, too","eating a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",participant-role,participant-role
+123,4.123105625617661,"796, 817","792, 818",5,keeping my body happy,and keeping my body happy.,configuration,configuration
+153,8.0,"845, 867","845, 859",8,"enough veggies, though",enough veggies,participant-role,participant-role
+73,4.0,"827, 832","823, 832",4,think,n't think,main,main
+154,8.0,"833, 867","833, 859",8,"I'm getting enough veggies, though",I'm getting enough veggies,configuration,configuration
+150,0.0,"833, 834","833, 834",0,I,I,participant-role,participant-role
+71,0.0,"819, 820","819, 820",0,I,I,participant-role,participant-role
+152,0.0,"837, 844","837, 844",0,getting,getting,main,main
+74,8.0,"833, 867","833, 859",8,"I'm getting enough veggies, though",I'm getting enough veggies,participant-role,participant-role
+124,1.0,"819, 867","819, 868",1,"I don't think I'm getting enough veggies, though","I don't think I'm getting enough veggies, though.",configuration,configuration
+77,10.0,"884, 901","884, 911",10,a salad for lunch,a salad for lunch at school,participant-role,participant-role
+81,0.0,"942, 946","942, 946",0,open,open,participant-role,participant-role
+125,0.0,"869, 911","869, 911",0,I usually have a salad for lunch at school,I usually have a salad for lunch at school,configuration,configuration
+80,4.0,"937, 941","933, 941",4,been,n't been,main,main
+75,0.0,"869, 870","869, 870",0,I,I,participant-role,participant-role
+78,0.0,"916, 929","916, 929",0,the salad bar,the salad bar,participant-role,participant-role
+76,0.0,"879, 883","879, 883",0,have,have,main,main
+126,43.18564576337837,"916, 962","912, 1005",47,the salad bar hasn't been open for some reason,but the salad bar hasn't been open for some reason ( having me resort to an apple instead ) .,configuration,configuration
+128,2.0,"1046, 1051","1044, 1051",2,which,", which",participant-role,participant-role
+85,0.0,"1052, 1053","1052, 1053",0,I,I,participant-role,participant-role
+127,33.54101966249684,"1014, 1044","1008, 1077",39,the loss was a good motivation,"Well, the loss was a good motivation, which I've been needing lately.",configuration,configuration
+87,5.0,"1062, 1069","1057, 1069",5,needing,been needing,main,main
+83,0.0,"1023, 1026","1023, 1026",0,was,was,main,main
+129,2.23606797749979,"1046, 1076","1044, 1077",3,which I've been needing lately,", which I've been needing lately.",configuration,configuration
+82,2.0,"1014, 1022","1012, 1022",2,the loss,", the loss",participant-role,participant-role
+92,0.0,"1125, 1126","1125, 1126",0,I,I,participant-role,participant-role
+91,4.0,"1095, 1098","1091, 1098",4,110,for 110,participant-role,participant-role
+131,2.23606797749979,"1119, 1144","1117, 1145",3,which I think is possible,", which I think is possible.",configuration,configuration
+90,4.0,"1082, 1094","1082, 1090",4,shooting for,shooting,main,main
+94,1.0,"1133, 1144","1133, 1145",1,is possible,is possible.,participant-role,participant-role
+93,0.0,"1127, 1132","1127, 1132",0,think,think,main,main
+130,28.0,"1078, 1117","1078, 1145",28,I'm shooting for 110 by the end of June,"I'm shooting for 110 by the end of June, which I think is possible.",configuration,configuration
+88,0.0,"1078, 1079","1078, 1079",0,I,I,participant-role,participant-role
+132,1.0,"1146, 1262","1146, 1263",1,I don't want to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him,I don't want to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,configuration,configuration
+133,1.0,"1201, 1262","1201, 1263",1,I've lost another 30 pounds since the last time I've seen him,I've lost another 30 pounds since the last time I've seen him.,configuration,configuration
+98,1.0,"1159, 1262","1159, 1263",1,to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him,to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,participant-role,participant-role
+97,4.0,"1154, 1158","1150, 1158",4,want,n't want,main,main
+101,0.0,"1206, 1210","1206, 1210",0,lost,lost,main,main
+95,0.0,"1146, 1147","1146, 1147",0,I,I,participant-role,participant-role
+99,0.0,"1201, 1202","1201, 1202",0,I,I,participant-role,participant-role
+102,35.0,"1211, 1228","1211, 1263",35,another 30 pounds,another 30 pounds since the last time I've seen him.,participant-role,participant-role
+134,1.0,"1272, 1317","1272, 1318",1,I was wondering if anyone here gets back pain,I was wondering if anyone here gets back pain?,configuration,configuration
+104,0.0,"1272, 1273","1272, 1273",0,I,I,participant-role,participant-role
+160,3.1622776601683795,"1291, 1317","1288, 1318",4,anyone here gets back pain,if anyone here gets back pain?,configuration,configuration
+156,5.0990195135927845,"1308, 1317","1313, 1318",6,back pain,pain?,participant-role,participant-role
+106,0.0,"1278, 1287","1278, 1287",0,wondering,wondering,main,main
+103,5.0,"1291, 1302","1291, 1297",5,anyone here,anyone,participant-role,participant-role
+155,0.0,"1303, 1307","1303, 1307",0,gets,gets,main,main
+158,18.027756377319946,"1371, 1381","1353, 1382",19,I lay down,", especially when I lay down.",configuration,configuration
+110,4.0,"1331, 1338","1327, 1338",4,stopped,n't stopped,main,main
+111,29.0,"1339, 1353","1339, 1382",29,aching in days,"aching in days, especially when I lay down.",participant-role,participant-role
+108,0.0,"1319, 1323","1319, 1323",0,Mine,Mine,participant-role,participant-role
+135,1.0,"1319, 1381","1319, 1382",1,"Mine hasn't stopped aching in days, especially when I lay down","Mine hasn't stopped aching in days, especially when I lay down.",configuration,configuration
+157,5.0,"1373, 1381","1373, 1376",5,lay down,lay,main,main
+112,0.0,"1371, 1372","1371, 1372",0,I,I,participant-role,participant-role
+116,0.0,"1404, 1414","1404, 1414",0,be lacking,be lacking,main,main
+113,0.0,"1383, 1395","1383, 1395",0,Any vitamins,Any vitamins,participant-role,participant-role
+114,0.0,"1396, 1397","1396, 1397",0,I,I,participant-role,participant-role
+149,89.47066558375433,"661, 711","703, 790",63,eating a can of tuna every day is keeping me going,"me going, too, because ( even though it's sooo low-cal ) it's almost completely protein",configuration,configuration
+84,33.0,"1027, 1044","1027, 1077",33,a good motivation,"a good motivation, which I've been needing lately.",participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+14,"114, 116",it,participant-role
+15,"117, 132",at 600 or below,participant-role
+20,"178, 197",it's an extra apple,configuration
+17,"178, 180",it,participant-role
+18,"181, 182",s,main
+19,"183, 217",an extra apple damn sugar cravings,participant-role
+118,"542, 570",there's little stress around,configuration
+52,"542, 547",there,participant-role
+53,"548, 549",s,main
+54,"550, 563",little stress,participant-role
+107,"1291, 1317",anyone here gets back pain,participant-role
+136,"1383, 1414",Any vitamins I could be lacking,configuration
+,
+,Parsed mismatching all manual (False Positives)
+18,"18, 20",'m,main
+90,"90, 94",left,main
+21,"21, 31",sooo happy,participant-role
+32,"32, 72",to say that I've been hanging on so well,participant-role
+286,"286, 296",in a week.,participant-role
+385,"385, 420","how full I've been feeling, though.",participant-role
+580,"580, 592",about finals,participant-role
+531,"531, 537",to end,participant-role
+716,"716, 790",", because ( even though it's sooo low-cal ) it's almost completely protein",configuration
+706,"706, 711",going,main
+812,"812, 817",happy,main
+661,"661, 667",eating,main
+982,"982, 993",to an apple,participant-role
+975,"975, 981",resort,main
+972,"972, 1001",me resort to an apple instead,configuration
+972,"972, 974",me,participant-role
+947,"947, 1005",for some reason ( having me resort to an apple instead ) .,participant-role
+972,"972, 1001",me resort to an apple instead,participant-role
+965,"965, 971",having,main
+963,"963, 1005",( having me resort to an apple instead ) .,configuration
+1133,"1133, 1145",is possible.,configuration
+1117,"1117, 1124",", which",participant-role
+1133,"1133, 1135",is,main
+1194,"1194, 1200",to say,main
+1249,"1249, 1263",I've seen him.,configuration
+1159,"1159, 1263",to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,configuration
+1249,"1249, 1250",I,participant-role
+1194,"1194, 1263",to say I've lost another 30 pounds since the last time I've seen him.,configuration
+1194,"1194, 1263",to say I've lost another 30 pounds since the last time I've seen him.,participant-role
+1189,"1189, 1193",able,participant-role
+1254,"1254, 1258",seen,main
+1159,"1159, 1167",to visit,main
+1183,"1183, 1188",being,main
+1175,"1175, 1263",without being able to say I've lost another 30 pounds since the last time I've seen him.,participant-role
+1353,"1353, 1370",", especially when",participant-role
+1339,"1339, 1345",aching,main
+32,"32, 72",to say that I've been hanging on so well,configuration
+79,"79, 89",my brother,participant-role
+73,"73, 95",since my brother left.,configuration
+649,"649, 818","And I think eating a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",configuration
+668,"668, 818","a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",participant-role
+668,"668, 818","a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",configuration
+804,"804, 818",my body happy.,configuration
+1099,"1099, 1145","by the end of June, which I think is possible.",participant-role
+1136,"1136, 1145",possible.,participant-role
+1259,"1259, 1263",him.,participant-role
+1183,"1183, 1263",being able to say I've lost another 30 pounds since the last time I've seen him.,configuration
+1168,"1168, 1174",my dad,participant-role
+1201,"1201, 1263",I've lost another 30 pounds since the last time I've seen him.,participant-role
+1339,"1339, 1382","aching in days, especially when I lay down.",configuration
+1346,"1346, 1382","in days, especially when I lay down.",participant-role
+661,"661, 818","eating a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",configuration

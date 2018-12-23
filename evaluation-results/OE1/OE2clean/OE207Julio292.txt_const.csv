@@ -1,0 +1,237 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.6869158878504673
+,Recall,0.9245283018867925
+,F1,0.7882037533512065
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+136,0.0,"81, 84","81, 84",0,saw,saw,main,main
+4,3.0,"60, 70","57, 70",3,this woman,by this woman,participant-role,participant-role
+137,0.0,"85, 90","85, 90",0,my ad,my ad,participant-role,participant-role
+3,3.0,"47, 59","47, 56",3,contacted by,contacted,main,main
+135,0.0,"77, 80","77, 80",0,she,she,participant-role,participant-role
+138,6.082762530298219,"77, 118","71, 119",7,she saw my ad on an online personals site,after she saw my ad on an online personals site.,configuration,configuration
+1,0.0,"41, 42","41, 42",0,I,I,participant-role,participant-role
+9,0.0,"120, 122","120, 122",0,We,We,participant-role,participant-role
+10,1.0,"120, 159","120, 160",1,We hit it off good right from the start,We hit it off good right from the start.,configuration,configuration
+8,12.0,"123, 138","123, 126",12,hit it off good,hit,main,main
+13,0.0,"170, 172","170, 172",0,IM,IM,main,main
+11,0.0,"161, 163","161, 163",0,We,We,participant-role,participant-role
+16,13.0,"188, 206","188, 193",13,speak on the phone,speak,main,main
+14,0.0,"173, 183","173, 183",0,each other,each other,participant-role,participant-role
+18,4.123105625617661,"188, 229","184, 230",5,speak on the phone over the next few days,and speak on the phone over the next few days.,configuration,configuration
+19,0.0,"231, 237","231, 237",0,Things,Things,participant-role,participant-role
+24,0.0,"274, 281","274, 281",0,invited,invited,main,main
+22,11.045361017187261,"231, 262","242, 263",12,Things got progressively hotter,"progressively hotter,",configuration,configuration
+27,4.123105625617661,"268, 324","264, 325",5,I was invited to come over to her place the next weekend,and I was invited to come over to her place the next weekend.,configuration,configuration
+20,0.0,"238, 241","238, 241",0,got,got,main,main
+26,0.0,"268, 269","268, 269",0,I,I,participant-role,participant-role
+31,0.0,"359, 379","359, 379",0,from total strangers,from total strangers,participant-role,participant-role
+30,0.0,"354, 358","354, 358",0,went,went,main,main
+33,5.0990195135927845,"331, 412","326, 413",6,"in one week's time, we went from total strangers to spending the weekend together","Yes, in one week's time, we went from total strangers to spending the weekend together.",configuration,configuration
+29,2.0,"351, 353","349, 353",2,we,", we",participant-role,participant-role
+32,1.0,"380, 412","380, 413",1,to spending the weekend together,to spending the weekend together.,participant-role,participant-role
+42,4.123105625617661,"447, 544","443, 545",5,from her photos and conversations I just knew I wouldn't be disappointed when we met face-to-face,but from her photos and conversations I just knew I wouldn't be disappointed when we met face-to-face.,configuration,configuration
+146,5.0990195135927845,"525, 544","520, 545",6,we met face-to-face,when we met face-to-face.,configuration,configuration
+41,1.0,"493, 544","493, 545",1,I wouldn't be disappointed when we met face-to-face,I wouldn't be disappointed when we met face-to-face.,participant-role,participant-role
+143,26.0,"493, 519","493, 545",26,I wouldn't be disappointed,I wouldn't be disappointed when we met face-to-face.,configuration,configuration
+37,1.0,"414, 441","414, 442",1,She lived ninety miles away,"She lived ninety miles away,",configuration,configuration
+35,0.0,"418, 423","418, 423",0,lived,lived,main,main
+141,13.601470508735444,"504, 506","500, 519",17,be,n't be disappointed,main,main
+145,0.0,"528, 531","528, 531",0,met,met,main,main
+139,0.0,"493, 494","493, 494",0,I,I,participant-role,participant-role
+40,0.0,"488, 492","488, 492",0,knew,knew,main,main
+34,0.0,"414, 417","414, 417",0,She,She,participant-role,participant-role
+39,0.0,"481, 482","481, 482",0,I,I,participant-role,participant-role
+144,0.0,"525, 527","525, 527",0,we,we,participant-role,participant-role
+157,0.0,"620, 623","620, 623",0,she,she,participant-role,participant-role
+7,0.0,"553, 560","553, 560",0,arrived,arrived,main,main
+5,0.0,"551, 552","551, 552",0,I,I,participant-role,participant-role
+28,0.0,"578, 581","578, 581",0,she,she,participant-role,participant-role
+38,0.0,"582, 588","582, 588",0,opened,opened,main,main
+23,5.0,"551, 573","546, 573",5,I arrived at her place,When I arrived at her place,configuration,configuration
+17,0.0,"561, 573","561, 573",0,at her place,at her place,participant-role,participant-role
+47,1.0,"613, 659","613, 660",1,to see she was more attractive than her photos,to see she was more attractive than her photos!,participant-role,participant-role
+158,0.0,"624, 627","624, 627",0,was,was,main,main
+44,2.0,"599, 600","597, 600",2,I,", I",participant-role,participant-role
+147,4.0,"578, 597","574, 597",4,she opened the door,and she opened the door,configuration,configuration
+160,1.0,"620, 659","620, 660",1,she was more attractive than her photos,she was more attractive than her photos!,configuration,configuration
+43,0.0,"589, 597","589, 597",0,the door,the door,participant-role,participant-role
+159,8.06225774829855,"628, 659","620, 660",9,more attractive than her photos,she was more attractive than her photos!,participant-role,participant-role
+52,6.082762530298219,"667, 826","661, 827",7,"we had a great time barbequing, going through a bottle of wine, slow dancing in the kitchen, and sharing some passionate kisses with a little groping thrown in","Well, we had a great time barbequing, going through a bottle of wine, slow dancing in the kitchen, and sharing some passionate kisses with a little groping thrown in.",configuration,configuration
+50,13.0,"670, 686","670, 673",13,had a great time,had,main,main
+51,2.0,"667, 669","665, 669",2,we,", we",participant-role,participant-role
+56,1.0,"828, 857","828, 858",1,We were both very comfortable,We were both very comfortable.,configuration,configuration
+53,0.0,"828, 830","828, 830",0,We,We,participant-role,participant-role
+54,0.0,"831, 835","831, 835",0,were,were,main,main
+55,1.0,"841, 857","841, 858",1,very comfortable,very comfortable.,participant-role,participant-role
+57,0.0,"859, 861","859, 861",0,We,We,participant-role,participant-role
+58,5.0,"862, 872","862, 867",5,wound down,wound,main,main
+62,1.0,"897, 908","897, 909",1,to her room,to her room.,participant-role,participant-role
+61,0.0,"892, 896","892, 896",0,went,went,main,main
+63,4.123105625617661,"892, 908","888, 909",5,went to her room,and went to her room.,configuration,configuration
+60,0.0,"859, 887","859, 887",0,We wound down about midnight,We wound down about midnight,configuration,configuration
+164,16.0,"931, 951","931, 935",16,some of the best sex,some,participant-role,participant-role
+65,0.0,"913, 922","913, 922",0,proceeded,proceeded,main,main
+66,0.0,"910, 912","910, 912",0,We,We,participant-role,participant-role
+163,0.0,"963, 971","963, 971",0,remember,remember,main,main
+64,1.0,"923, 978","923, 979",1,to have some of the best sex I can ever remember having,to have some of the best sex I can ever remember having.,participant-role,participant-role
+165,8.06225774829855,"931, 978","923, 979",9,some of the best sex I can ever remember having,to have some of the best sex I can ever remember having.,configuration,configuration
+67,1.0,"910, 978","910, 979",1,We proceeded to have some of the best sex I can ever remember having,We proceeded to have some of the best sex I can ever remember having.,configuration,configuration
+161,0.0,"952, 953","952, 953",0,I,I,participant-role,participant-role
+70,1.0,"987, 996","987, 997",1,delicious,delicious.,participant-role,participant-role
+69,0.0,"983, 986","983, 986",0,was,was,main,main
+68,0.0,"980, 982","980, 982",0,It,It,participant-role,participant-role
+71,1.0,"980, 996","980, 997",1,It was delicious,It was delicious.,configuration,configuration
+75,6.0,"998, 1024","998, 1030",6,The morning after was nice,"The morning after was nice, too.",configuration,configuration
+74,6.0,"1020, 1024","1020, 1030",6,nice,"nice, too.",participant-role,participant-role
+72,6.0,"998, 1015","998, 1009",6,The morning after,The morning,participant-role,participant-role
+73,0.0,"1016, 1019","1016, 1019",0,was,was,main,main
+85,0.0,"1094, 1101","1094, 1101",0,thanked,thanked,main,main
+89,0.0,"1132, 1137","1132, 1137",0,split,split,main,main
+83,0.0,"1076, 1092","1076, 1092",0,my mug of coffee,my mug of coffee,participant-role,participant-role
+84,2.0,"1067, 1092","1065, 1092",2,finished my mug of coffee,", finished my mug of coffee",configuration,configuration
+77,0.0,"1033, 1037","1033, 1037",0,made,made,main,main
+80,16.0,"1046, 1065","1046, 1049",16,had some small talk,had,main,main
+81,2.0,"1046, 1065","1044, 1065",2,had some small talk,", had some small talk",configuration,configuration
+79,0.0,"1031, 1044","1031, 1044",0,I made coffee,I made coffee,configuration,configuration
+82,0.0,"1067, 1075","1067, 1075",0,finished,finished,main,main
+86,0.0,"1102, 1105","1102, 1105",0,her,her,participant-role,participant-role
+78,0.0,"1038, 1044","1038, 1044",0,coffee,coffee,participant-role,participant-role
+90,4.123105625617661,"1132, 1137","1128, 1138",5,split,and split.,configuration,configuration
+87,0.0,"1106, 1126","1106, 1126",0,for a wonderful time,for a wonderful time,participant-role,participant-role
+76,0.0,"1031, 1032","1031, 1032",0,I,I,participant-role,participant-role
+88,2.0,"1094, 1126","1092, 1126",2,thanked her for a wonderful time,", thanked her for a wonderful time",configuration,configuration
+92,1.0,"1149, 1150","1148, 1150",1,s,'s,main,main
+93,1.0,"1151, 1160","1151, 1161",1,the thing,the thing.,participant-role,participant-role
+94,5.0990195135927845,"1144, 1160","1139, 1161",6,here's the thing,"Now, here's the thing.",configuration,configuration
+97,4.0,"1173, 1179","1169, 1179",4,spoken,n't spoken,main,main
+98,0.0,"1180, 1185","1180, 1185",0,to me,to me,participant-role,participant-role
+95,0.0,"1162, 1165","1162, 1165",0,She,She,participant-role,participant-role
+100,1.0,"1162, 1191","1162, 1192",1,She hasn't spoken to me since,"She hasn't spoken to me since,",configuration,configuration
+101,0.0,"1197, 1198","1197, 1198",0,I,I,participant-role,participant-role
+104,4.123105625617661,"1197, 1207","1193, 1208",5,I'm bugged,and I'm bugged.,configuration,configuration
+49,2.0,"1249, 1252","1247, 1252",2,she,", she",participant-role,participant-role
+108,1.0,"1209, 1297","1209, 1298",1,"All I know is that for whatever reason, she's not interested in any more contact with me","All I know is that for whatever reason, she's not interested in any more contact with me.",configuration,configuration
+169,4.0,"1209, 1219","1213, 1219",4,All I know,I know,configuration,configuration
+149,17.029386365926403,"1249, 1297","1232, 1298",18,she's not interested in any more contact with me,"whatever reason, she's not interested in any more contact with me.",configuration,configuration
+106,0.0,"1220, 1222","1220, 1222",0,is,is,main,main
+105,0.0,"1209, 1219","1209, 1219",0,All I know,All I know,participant-role,participant-role
+107,4.123105625617661,"1228, 1297","1232, 1298",5,"for whatever reason, she's not interested in any more contact with me","whatever reason, she's not interested in any more contact with me.",participant-role,participant-role
+166,0.0,"1213, 1214","1213, 1214",0,I,I,participant-role,participant-role
+167,0.0,"1215, 1219","1215, 1219",0,know,know,main,main
+148,3.1622776601683795,"1273, 1297","1270, 1298",4,any more contact with me,in any more contact with me.,participant-role,participant-role
+109,0.0,"1299, 1300","1299, 1300",0,I,I,participant-role,participant-role
+112,1.0,"1299, 1311","1299, 1312",1,I'm confused,I'm confused.,configuration,configuration
+115,5.0,"1313, 1320","1313, 1315",5,We both,We,participant-role,participant-role
+113,0.0,"1321, 1327","1321, 1327",0,agreed,agreed,main,main
+116,0.0,"1403, 1405","1403, 1405",0,we,we,participant-role,participant-role
+152,5.0,"1357, 1397","1352, 1397",5,making love with someone you cared about,like making love with someone you cared about,participant-role,participant-role
+151,5.0,"1348, 1356","1348, 1351",5,was like,was,main,main
+150,0.0,"1333, 1347","1333, 1347",0,the sex we had,the sex we had,participant-role,participant-role
+153,5.0990195135927845,"1333, 1397","1328, 1398",6,the sex we had was like making love with someone you cared about,that the sex we had was like making love with someone you cared about;,configuration,configuration
+119,4.123105625617661,"1403, 1441","1399, 1442",5,we had a great time during the evening,and we had a great time during the evening.,configuration,configuration
+114,36.0,"1333, 1397","1369, 1397",36,the sex we had was like making love with someone you cared about,with someone you cared about,participant-role,participant-role
+117,13.0,"1406, 1422","1406, 1409",13,had a great time,had,main,main
+125,14.035668847618199,"1443, 1472","1457, 1473",15,This all left me wanting more,me wanting more.,configuration,configuration
+122,0.0,"1452, 1456","1452, 1456",0,left,left,main,main
+121,4.0,"1443, 1451","1443, 1447",4,This all,This,participant-role,participant-role
+124,11.045361017187261,"1457, 1472","1468, 1473",12,me wanting more,more.,participant-role,participant-role
+128,5.0990195135927845,"1486, 1512","1481, 1513",6,a junkie hurting for a fix,like a junkie hurting for a fix.,participant-role,participant-role
+129,1.0,"1474, 1512","1474, 1513",1,I feel like a junkie hurting for a fix,I feel like a junkie hurting for a fix.,configuration,configuration
+127,5.0,"1476, 1485","1476, 1480",5,feel like,feel,main,main
+126,0.0,"1474, 1475","1474, 1475",0,I,I,participant-role,participant-role
+130,0.0,"1514, 1515","1514, 1515",0,I,I,participant-role,participant-role
+156,1.0,"1538, 1567","1538, 1568",1,what is making her so distant,what is making her so distant.,configuration,configuration
+118,0.0,"1538, 1542","1538, 1542",0,what,what,participant-role,participant-role
+132,4.0,"1527, 1537","1523, 1537",4,understand,n't understand,main,main
+155,1.0,"1553, 1567","1553, 1568",1,her so distant,her so distant.,participant-role,participant-role
+134,39.01281840626232,"1514, 1567","1553, 1568",40,I just can't understand what is making her so distant,her so distant.,configuration,configuration
+154,0.0,"1546, 1552","1546, 1552",0,making,making,main,main
+133,1.0,"1538, 1567","1538, 1568",1,what is making her so distant,what is making her so distant.,participant-role,participant-role
+6,49.0,"41, 70","41, 119",49,I was contacted by this woman,I was contacted by this woman after she saw my ad on an online personals site.,configuration,configuration
+48,14.035668847618199,"599, 659","613, 660",15,I was pleased to see she was more attractive than her photos,to see she was more attractive than her photos!,configuration,configuration
+120,44.0,"1313, 1397","1357, 1397",44,We both agreed that the sex we had was like making love with someone you cared about,making love with someone you cared about,configuration,configuration
+,
+,Manual mismatching all parsed (False Negative)
+15,"161, 183",We would IM each other,configuration
+21,"242, 262",progressively hotter,participant-role
+36,"424, 441",ninety miles away,participant-role
+142,"507, 519",disappointed,participant-role
+46,"605, 612",pleased,main
+91,"1144, 1148",here,participant-role
+102,"1199, 1200",m,main
+103,"1201, 1207",bugged,participant-role
+168,"1209, 1212",All,participant-role
+99,"1259, 1272",interested in,main
+110,"1301, 1302",m,main
+111,"1303, 1311",confused,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+91,"91, 119",on an online personals site.,participant-role
+130,"130, 144",off good right,participant-role
+127,"127, 129",it,participant-role
+145,"145, 160",from the start.,participant-role
+194,"194, 230",on the phone over the next few days.,participant-role
+282,"282, 289",to come,main
+256,"256, 262",hotter,main
+295,"295, 307",to her place,participant-role
+238,"238, 241",got,configuration
+282,"282, 325",to come over to her place the next weekend.,participant-role
+334,"334, 349",one week's time,participant-role
+383,"383, 391",spending,main
+383,"383, 413",spending the weekend together.,configuration
+520,"520, 524",when,participant-role
+613,"613, 619",to see,main
+601,"601, 604",was,main
+605,"605, 612",pleased,participant-role
+546,"546, 550",When,participant-role
+644,"644, 660",than her photos!,participant-role
+795,"795, 827",with a little groping thrown in.,participant-role
+699,"699, 704",going,main
+772,"772, 794",some passionate kisses,participant-role
+687,"687, 697",barbequing,main
+817,"817, 827",thrown in.,configuration
+817,"817, 823",thrown,main
+760,"760, 827",and sharing some passionate kisses with a little groping thrown in.,configuration
+674,"674, 827","a great time barbequing, going through a bottle of wine, slow dancing in the kitchen, and sharing some passionate kisses with a little groping thrown in.",participant-role
+764,"764, 771",sharing,main
+705,"705, 758","through a bottle of wine, slow dancing in the kitchen",participant-role
+873,"873, 887",about midnight,participant-role
+923,"923, 930",to have,main
+936,"936, 979",of the best sex I can ever remember having.,participant-role
+1050,"1050, 1065",some small talk,participant-role
+1201,"1201, 1207",bugged,main
+1252,"1252, 1258",'s not,main
+1232,"1232, 1247",whatever reason,participant-role
+1303,"1303, 1311",confused,main
+1357,"1357, 1363",making,main
+1386,"1386, 1391",cared,main
+1341,"1341, 1347",we had,configuration
+1382,"1382, 1397",you cared about,configuration
+1410,"1410, 1442",a great time during the evening.,participant-role
+1328,"1328, 1442",that the sex we had was like making love with someone you cared about; and we had a great time during the evening.,configuration
+1344,"1344, 1347",had,main
+1460,"1460, 1467",wanting,main
+1495,"1495, 1502",hurting,main
+1503,"1503, 1513",for a fix.,participant-role
+1560,"1560, 1567",distant,main
+282,"282, 325",to come over to her place the next weekend.,configuration
+392,"392, 403",the weekend,participant-role
+546,"546, 597",When I arrived at her place and she opened the door,configuration
+628,"628, 643",more attractive,participant-role
+687,"687, 697",barbequing,configuration
+697,"697, 758",", going through a bottle of wine, slow dancing in the kitchen",configuration
+972,"972, 979",having.,participant-role
+952,"952, 979",I can ever remember having.,configuration
+1259,"1259, 1269",interested,participant-role
+1364,"1364, 1368",love,participant-role
+1382,"1382, 1385",you,participant-role
+1341,"1341, 1343",we,participant-role
+1328,"1328, 1442",that the sex we had was like making love with someone you cared about; and we had a great time during the evening.,participant-role
+1443,"1443, 1456",This all left,configuration
+1457,"1457, 1459",me,participant-role
+1495,"1495, 1513",hurting for a fix.,configuration
+1553,"1553, 1556",her,participant-role
+546,"546, 660","When I arrived at her place and she opened the door, I was pleased to see she was more attractive than her photos!",configuration
+1313,"1313, 1442",We both agreed that the sex we had was like making love with someone you cared about; and we had a great time during the evening.,configuration

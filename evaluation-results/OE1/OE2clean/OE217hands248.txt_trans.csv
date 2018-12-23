@@ -1,0 +1,478 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.24574209245742093
+,Recall,0.643312101910828
+,F1,0.3556338028169014
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+3,0.0,"29, 34","29, 34",0,spark,spark,main,main
+8,0.0,"112, 116","112, 116",0,like,like,main,main
+9,1.0,"117, 140","117, 141",1,to hold hands in public,to hold hands in public!,phenomenon,phenomenon
+10,1.0,"67, 140","67, 141",1,My husband of 5 years does not ( never has ) like to hold hands in public,My husband of 5 years does not ( never has ) like to hold hands in public!,mental,mental
+6,23.0,"67, 88","67, 111",23,My husband of 5 years,My husband of 5 years does not ( never has ),emoter,emoter
+17,3.0,"168, 175","168, 172",3,used to,used,main,main
+21,0.0,"200, 206","200, 206",0,wonder,wonder,main,main
+25,0.0,"235, 239","235, 239",0,feel,feel,main,main
+30,8.94427190999916,"258, 271","254, 263",12,reach out for,n't reach,main,main
+36,1.0,"305, 326","305, 327",1,this direct rejection,this direct rejection.,phenomenon,phenomenon
+37,11.045361017187261,"292, 326","281, 327",12,I don't want this direct rejection,anymore as I don't want this direct rejection.,mental,mental
+35,4.0,"300, 304","296, 304",4,want,n't want,main,main
+33,0.0,"292, 293","292, 293",0,I,I,emoter,emoter
+40,0.0,"335, 339","335, 339",0,told,told,main,main
+41,0.0,"340, 342","340, 342",0,me,me,affected-cognizant,affected-cognizant
+42,5.0990195135927845,"348, 395","343, 396",6,"people know we are together, no need to show it","that people know we are together, no need to show it.",phenomenon,phenomenon
+45,0.0,"355, 359","355, 359",0,know,know,main,main
+43,1.0,"328, 395","328, 396",1,"He has told me that people know we are together, no need to show it","He has told me that people know we are together, no need to show it.",mental,mental
+43,1.0,"328, 395","328, 396",1,"He has told me that people know we are together, no need to show it","He has told me that people know we are together, no need to show it.",three-role-cognition,three-role-cognition
+44,0.0,"348, 354","348, 354",0,people,people,cognizant,cognizant
+47,21.587033144922902,"348, 375","343, 396",26,people know we are together,"that people know we are together, no need to show it.",mental,mental
+47,21.587033144922902,"348, 375","343, 396",26,people know we are together,"that people know we are together, no need to show it.",two-role-cognition,two-role-cognition
+38,0.0,"328, 330","328, 330",0,He,He,agent,agent
+52,0.0,"405, 407","405, 407",0,he,he,agent,agent
+53,0.0,"408, 414","408, 414",0,trying,trying,main,main
+54,1.0,"415, 421","415, 422",1,to say,to say?,phenomenon,phenomenon
+59,0.0,"442, 448","442, 448",0,upsets,upsets,main,main
+56,0.0,"452, 454","452, 454",0,is,is,main,main
+70,0.0,"558, 563","558, 563",0,given,given,main,main
+65,4.0,"473, 477","469, 477",4,want,n't want,main,main
+72,19.0,"567, 585","567, 604",19,a little something,a little something for my birthday or,possessed,possessed
+66,0.0,"478, 497","478, 497",0,to sound as a child,to sound as a child,phenomenon,phenomenon
+71,0.0,"564, 566","564, 566",0,me,me,affected-carrier,affected-carrier
+69,0.0,"555, 557","555, 557",0,he,he,agent,agent
+67,1.0,"465, 497","465, 498",1,I don't want to sound as a child,"I don't want to sound as a child,",mental,mental
+73,41.43669871020132,"503, 618","542, 604",53,never once in the 6 years we have been together has he given me a little something for my birthday or for Christmas,together has he given me a little something for my birthday or,relational,relational
+73,41.43669871020132,"503, 618","542, 604",53,never once in the 6 years we have been together has he given me a little something for my birthday or for Christmas,together has he given me a little something for my birthday or,possessive,possessive
+63,0.0,"465, 466","465, 466",0,I,I,emoter,emoter
+93,1.0,"712, 714","712, 715",1,me,me.,affected,affected
+92,0.0,"703, 711","703, 711",0,surprise,surprise,main,main
+86,0.0,"683, 684","683, 684",0,I,I,emoter,emoter
+79,0.0,"629, 633","629, 633",0,feel,feel,main,main
+87,0.0,"685, 689","685, 689",0,hope,hope,main,main
+89,4.123105625617661,"672, 714","668, 715",5,every year I hope that he will surprise me,and every year I hope that he will surprise me.,mental,mental
+94,5.0990195135927845,"695, 714","690, 715",6,he will surprise me,that he will surprise me.,action,action
+84,57.14017850864661,"665, 667","634, 715",79,it,so very sad when I think about it and every year I hope that he will surprise me.,phenomenon,phenomenon
+90,0.0,"695, 697","695, 697",0,he,he,agent,agent
+88,5.0990195135927845,"695, 714","690, 715",6,he will surprise me,that he will surprise me.,phenomenon,phenomenon
+99,0.0,"758, 760","758, 760",0,he,he,agent,agent
+96,0.0,"727, 731","727, 731",0,know,know,main,main
+95,0.0,"720, 721","720, 721",0,I,I,cognizant,cognizant
+101,4.0,"772, 774","768, 774",4,do,n't do,main,main
+98,4.123105625617661,"720, 777","716, 778",5,I also know deep inside my heart that he just won't do it,But I also know deep inside my heart that he just won't do it.,mental,mental
+98,4.123105625617661,"720, 777","716, 778",5,I also know deep inside my heart that he just won't do it,But I also know deep inside my heart that he just won't do it.,two-role-cognition,two-role-cognition
+97,5.0990195135927845,"758, 777","753, 778",6,he just won't do it,that he just won't do it.,phenomenon,phenomenon
+116,1.0,"854, 882","854, 883",1,to hold on to this tradition,to hold on to this tradition.,phenomenon,phenomenon
+113,2.0,"816, 842","814, 842",2,it's part of my upbringing,", it's part of my upbringing",attributive,attributive
+113,2.0,"816, 842","814, 842",2,it's part of my upbringing,", it's part of my upbringing",relational,relational
+115,0.0,"849, 853","849, 853",0,want,want,main,main
+112,0.0,"821, 842","821, 842",0,part of my upbringing,part of my upbringing,attribute,attribute
+117,4.123105625617661,"847, 882","843, 883",5,I want to hold on to this tradition,and I want to hold on to this tradition.,mental,mental
+109,0.0,"779, 814","779, 814",0,I have never not given him anything,I have never not given him anything,relational,relational
+109,0.0,"779, 814","779, 814",0,I have never not given him anything,I have never not given him anything,possessive,possessive
+107,0.0,"802, 805","802, 805",0,him,him,affected-carrier,affected-carrier
+114,0.0,"847, 848","847, 848",0,I,I,emoter,emoter
+110,2.0,"816, 818","814, 818",2,it,", it",carrier,carrier
+108,0.0,"806, 814","806, 814",0,anything,anything,possessed,possessed
+104,0.0,"779, 780","779, 780",0,I,I,agent,agent
+111,1.0,"819, 820","818, 820",1,s,'s,main,main
+106,4.0,"796, 801","792, 801",4,given,not given,main,main
+122,1.0,"884, 927","884, 928",1,I have tried to address this issue with him,"I have tried to address this issue with him,",influential,influential
+118,0.0,"884, 885","884, 885",0,I,I,agent,agent
+124,0.0,"935, 939","935, 939",0,find,find,main,main
+120,0.0,"891, 896","891, 896",0,tried,tried,main,main
+121,0.0,"897, 927","897, 927",0,to address this issue with him,to address this issue with him,phenomenon,phenomenon
+131,32.01562118716424,"961, 1000","929, 1001",33,I don't want to sound needy or childish,but I find it difficult because I don't want to sound needy or childish.,mental,mental
+126,49.16299421312742,"933, 952","929, 1001",53,I find it difficult,but I find it difficult because I don't want to sound needy or childish.,two-role-cognition,two-role-cognition
+130,34.0147027033899,"974, 1000","940, 1001",35,to sound needy or childish,it difficult because I don't want to sound needy or childish.,phenomenon,phenomenon
+129,0.0,"969, 973","969, 973",0,want,want,main,main
+123,0.0,"933, 934","933, 934",0,I,I,cognizant,cognizant
+150,15.0,"1157, 1178","1157, 1163",15,to try and understand,to try,phenomenon,phenomenon
+141,4.0,"1092, 1094","1092, 1098",4,is,is not,main,main
+138,5.0,"1080, 1112","1075, 1112",5,the sparkle is not there anymore,that the sparkle is not there anymore,phenomenon,phenomenon
+143,5.0,"1080, 1112","1075, 1112",5,the sparkle is not there anymore,that the sparkle is not there anymore,locational,locational
+143,5.0,"1080, 1112","1075, 1112",5,the sparkle is not there anymore,that the sparkle is not there anymore,relational,relational
+137,0.0,"1070, 1074","1070, 1074",0,feel,feel,main,main
+133,0.0,"1008, 1011","1008, 1011",0,are,are,main,main
+151,15.132745950421556,"1152, 1178","1150, 1163",17,want to try and understand,", want to try",mental,mental
+142,0.0,"1099, 1104","1099, 1104",0,there,there,location,location
+139,4.0,"1061, 1112","1057, 1112",4,I really feel that the sparkle is not there anymore,and I really feel that the sparkle is not there anymore,mental,mental
+135,26.0,"1002, 1056","1028, 1056",26,There are a lot of things going on in our relationship,going on in our relationship,relational,relational
+74,0.0,"1205, 1209","1205, 1209",0,does,does,main,main
+140,0.0,"1080, 1091","1080, 1091",0,the sparkle,the sparkle,carrier,carrier
+149,0.0,"1152, 1156","1152, 1156",0,want,want,main,main
+146,4.0,"1126, 1130","1122, 1130",4,want,n't want,main,main
+144,0.0,"1118, 1119","1118, 1119",0,I,I,emoter,emoter
+153,0.0,"1186, 1190","1186, 1190",0,does,does,main,main
+147,69.0,"1131, 1141","1131, 1210",69,to give up,"to give up just yet, want to try and understand why he does the things he does.",phenomenon,phenomenon
+46,21.0,"360, 375","360, 396",21,we are together,"we are together, no need to show it.",phenomenon,phenomenon
+85,57.14017850864661,"651, 667","620, 715",79,I think about it,I always feel so very sad when I think about it and every year I hope that he will surprise me.,mental,mental
+148,60.13318551349163,"1118, 1150","1114, 1210",64,I don't want to give up just yet,"but I don't want to give up just yet, want to try and understand why he does the things he does.",mental,mental
+,
+,Manual mismatching all parsed (False Negative)
+5,"17, 57",Can someone spark a light to my question,action
+2,"21, 28",someone,agent
+4,"35, 42",a light,created
+14,"142, 159",I am ok with that,relational
+14,"142, 159",I am ok with that,attributive
+11,"142, 143",I,carrier
+12,"144, 146",am,main
+13,"147, 159",ok with that,attribute
+19,"163, 178",I am used to it,mental
+19,"163, 178",I am used to it,two-role-cognition
+15,"163, 164",I,cognizant
+18,"176, 178",it,phenomenon
+23,"184, 210",now and again I wonder why,mental
+23,"184, 210",now and again I wonder why,two-role-cognition
+20,"198, 199",I,cognizant
+22,"207, 210",why,phenomenon
+27,"216, 248",sometimes I really feel rejected,relational
+27,"216, 248",sometimes I really feel rejected,attributive
+24,"226, 227",I,carrier
+26,"240, 248",rejected,attribute
+32,"250, 288",I don't reach out for his hand anymore,action
+28,"250, 251",I,agent
+31,"272, 280",his hand,range
+50,"397, 421",What is he trying to say,influential
+62,"423, 463",Another thing that upsets me is presents,relational
+62,"423, 463",Another thing that upsets me is presents,attributive
+55,"423, 451",Another thing that upsets me,attribute
+61,"437, 451",that upsets me,mental
+58,"437, 441",that,phenomenon
+60,"449, 451",me,emoter
+57,"455, 463",presents,carrier
+77,"529, 550",we have been together,action
+48,"529, 531",we,agent
+76,"537, 550",been together,main
+81,"620, 645",I always feel so very sad,relational
+81,"620, 645",I always feel so very sad,attributive
+78,"620, 621",I,carrier
+80,"634, 645",so very sad,attribute
+85,"651, 667",I think about it,two-role-cognition
+82,"651, 652",I,cognizant
+83,"653, 664",think about,main
+103,"758, 777",he just won't do it,influential
+102,"775, 777",it,phenomenon
+126,"933, 952",I find it difficult,mental
+125,"940, 952",it difficult,phenomenon
+127,"961, 962",I,emoter
+135,"1002, 1056",There are a lot of things going on in our relationship,attributive
+132,"1002, 1007",There,carrier
+134,"1012, 1036",a lot of things going on,attribute
+139,"1061, 1112",I really feel that the sparkle is not there anymore,two-role-cognition
+136,"1061, 1062",I,cognizant
+155,"1183, 1209",he does the things he does,action
+152,"1183, 1185",he,agent
+154,"1191, 1209",the things he does,created
+156,"1202, 1209",he does,action
+49,"1202, 1204",he,agent
+,
+,Parsed mismatching all manual (False Positives)
+117,"117, 141",to hold hands in public!,process
+117,"117, 141",to hold hands in public!,two-role-action
+117,"117, 141",to hold hands in public!,action
+131,"131, 141",in public!,affected-emoter
+131,"131, 141",in public!,affected-path
+131,"131, 141",in public!,affected-perceiver
+131,"131, 141",in public!,affected-cognizant
+131,"131, 141",in public!,affected-carrier
+131,"131, 141",in public!,affected-destination
+131,"131, 141",in public!,affected
+131,"131, 141",in public!,affected-possessed
+131,"131, 141",in public!,affected-source
+117,"117, 141",to hold hands in public!,created-phenomenon
+125,"125, 130",hands,affected-emoter
+125,"125, 130",hands,affected-path
+125,"125, 130",hands,affected-perceiver
+125,"125, 130",hands,affected-cognizant
+125,"125, 130",hands,affected-carrier
+125,"125, 130",hands,affected-destination
+125,"125, 130",hands,affected
+125,"125, 130",hands,affected-possessed
+125,"125, 130",hands,affected-source
+67,"67, 141",My husband of 5 years does not ( never has ) like to hold hands in public!,process
+67,"67, 141",My husband of 5 years does not ( never has ) like to hold hands in public!,emotive
+67,"67, 141",My husband of 5 years does not ( never has ) like to hold hands in public!,desiderative
+89,"89, 97",does not,main
+67,"67, 111",My husband of 5 years does not ( never has ),affected-emoter
+117,"117, 124",to hold,main
+98,"98, 111",( never has ),process
+98,"98, 111",( never has ),action
+98,"98, 111",( never has ),one-role-action
+106,"106, 109",has,main
+173,"173, 178",to it,affected-emoter
+173,"173, 178",to it,affected-path
+173,"173, 178",to it,affected-perceiver
+173,"173, 178",to it,affected-cognizant
+173,"173, 178",to it,affected-carrier
+173,"173, 178",to it,affected-destination
+173,"173, 178",to it,affected
+173,"173, 178",to it,affected-possessed
+173,"173, 178",to it,affected-source
+163,"163, 164",I,agent
+163,"163, 164",I,agent-cognizant
+163,"163, 164",I,agent-carrier
+163,"163, 164",I,agent-perceiver
+160,"160, 178",as I am used to it,process
+160,"160, 178",as I am used to it,two-role-action
+160,"160, 178",as I am used to it,action
+147,"147, 149",ok,main
+240,"240, 248",rejected,main
+305,"305, 327",this direct rejection.,created-phenomenon
+281,"281, 327",anymore as I don't want this direct rejection.,process
+281,"281, 327",anymore as I don't want this direct rejection.,desiderative
+292,"292, 293",I,affected-emoter
+360,"360, 396","we are together, no need to show it.",created-phenomenon
+340,"340, 342",me,cognizant
+340,"340, 342",me,affected
+340,"340, 342",me,matchee
+393,"393, 396",it.,phenomenon
+393,"393, 396",it.,affected-emoter
+393,"393, 396",it.,created-phenomenon
+393,"393, 396",it.,affected-path
+393,"393, 396",it.,affected-perceiver
+393,"393, 396",it.,affected-cognizant
+393,"393, 396",it.,affected-carrier
+393,"393, 396",it.,affected-destination
+393,"393, 396",it.,affected
+393,"393, 396",it.,affected-possessed
+393,"393, 396",it.,affected-source
+393,"393, 396",it.,range
+343,"343, 396","that people know we are together, no need to show it.",created-phenomenon
+360,"360, 396","we are together, no need to show it.",process
+360,"360, 396","we are together, no need to show it.",directional
+360,"360, 396","we are together, no need to show it.",relational
+328,"328, 396","He has told me that people know we are together, no need to show it.",process
+363,"363, 366",are,main
+348,"348, 354",people,agent-cognizant
+348,"348, 354",people,affected-cognizant
+343,"343, 396","that people know we are together, no need to show it.",process
+375,"375, 384",", no need",destination
+375,"375, 384",", no need",affected-destination
+385,"385, 396",to show it.,process
+385,"385, 396",to show it.,three-role-perception
+385,"385, 396",to show it.,three-role-cognition
+385,"385, 396",to show it.,two-role-action
+385,"385, 396",to show it.,action
+328,"328, 330",He,cognizant
+328,"328, 330",He,agent-cognizant
+328,"328, 330",He,agent-carrier
+328,"328, 330",He,agent-perceiver
+360,"360, 362",we,agent
+360,"360, 362",we,agent-perceiver
+360,"360, 362",we,perceiver
+385,"385, 392",to show,main
+397,"397, 401",What,phenomenon
+397,"397, 401",What,affected-emoter
+397,"397, 401",What,created-phenomenon
+397,"397, 401",What,affected-path
+397,"397, 401",What,affected-perceiver
+397,"397, 401",What,affected-cognizant
+397,"397, 401",What,affected-carrier
+397,"397, 401",What,affected-destination
+397,"397, 401",What,affected
+397,"397, 401",What,affected-possessed
+397,"397, 401",What,affected-source
+405,"405, 407",he,agent-cognizant
+405,"405, 407",he,agent-carrier
+405,"405, 407",he,agent-perceiver
+415,"415, 422",to say?,created-phenomenon
+397,"397, 422",What is he trying to say?,process
+397,"397, 422",What is he trying to say?,tentative
+397,"397, 422",What is he trying to say?,two-role-action
+397,"397, 422",What is he trying to say?,action
+415,"415, 421",to say,main
+455,"455, 463",presents,main
+529,"529, 531",we,affected-carrier
+529,"529, 531",we,agent-carrier
+529,"529, 531",we,carrier
+567,"567, 604",a little something for my birthday or,affected-possessed
+478,"478, 497",to sound as a child,created-phenomenon
+564,"564, 566",me,affected
+564,"564, 566",me,carrier
+478,"478, 497",to sound as a child,process
+478,"478, 497",to sound as a child,attributive
+478,"478, 497",to sound as a child,relational
+478,"478, 497",to sound as a child,one-role-action
+478,"478, 486",to sound,main
+487,"487, 497",as a child,attribute
+517,"517, 541",the 6 years we have been,process
+517,"517, 541",the 6 years we have been,attributive
+517,"517, 541",the 6 years we have been,locational
+555,"555, 557",he,agent-cognizant
+555,"555, 557",he,agent-carrier
+555,"555, 557",he,agent-perceiver
+465,"465, 498","I don't want to sound as a child,",process
+465,"465, 498","I don't want to sound as a child,",desiderative
+542,"542, 604",together has he given me a little something for my birthday or,process
+465,"465, 466",I,affected-emoter
+503,"503, 508",never,main
+712,"712, 715",me.,affected-emoter
+712,"712, 715",me.,affected-path
+712,"712, 715",me.,affected-perceiver
+712,"712, 715",me.,affected-cognizant
+712,"712, 715",me.,affected-carrier
+712,"712, 715",me.,affected-destination
+712,"712, 715",me.,affected-possessed
+712,"712, 715",me.,affected-source
+712,"712, 715",me.,emoter
+620,"620, 715",I always feel so very sad when I think about it and every year I hope that he will surprise me.,process
+620,"620, 715",I always feel so very sad when I think about it and every year I hope that he will surprise me.,two-role-perception
+620,"620, 715",I always feel so very sad when I think about it and every year I hope that he will surprise me.,emotive
+683,"683, 684",I,affected-emoter
+668,"668, 715",and every year I hope that he will surprise me.,process
+668,"668, 715",and every year I hope that he will surprise me.,desiderative
+690,"690, 715",that he will surprise me.,process
+690,"690, 715",that he will surprise me.,emotive
+690,"690, 715",that he will surprise me.,two-role-action
+634,"634, 715",so very sad when I think about it and every year I hope that he will surprise me.,created-phenomenon
+695,"695, 697",he,created-phenomenon
+695,"695, 697",he,agent-cognizant
+695,"695, 697",he,agent-carrier
+695,"695, 697",he,agent-perceiver
+690,"690, 715",that he will surprise me.,created-phenomenon
+620,"620, 621",I,affected-emoter
+620,"620, 621",I,agent
+620,"620, 621",I,affected-perceiver
+620,"620, 621",I,agent-perceiver
+620,"620, 621",I,emoter
+620,"620, 621",I,perceiver
+753,"753, 778",that he just won't do it.,process
+753,"753, 778",that he just won't do it.,two-role-action
+753,"753, 778",that he just won't do it.,action
+758,"758, 760",he,agent-cognizant
+758,"758, 760",he,agent-carrier
+758,"758, 760",he,agent-perceiver
+720,"720, 721",I,agent-cognizant
+720,"720, 721",I,affected-cognizant
+716,"716, 778",But I also know deep inside my heart that he just won't do it.,process
+775,"775, 778",it.,manner
+775,"775, 778",it.,range
+753,"753, 778",that he just won't do it.,created-phenomenon
+854,"854, 883",to hold on to this tradition.,created-phenomenon
+814,"814, 842",", it's part of my upbringing",process
+814,"814, 842",", it's part of my upbringing",locational
+814,"814, 842",", it's part of my upbringing",two-role-action
+814,"814, 842",", it's part of my upbringing",action
+821,"821, 842",part of my upbringing,location
+821,"821, 842",part of my upbringing,range
+854,"854, 883",to hold on to this tradition.,process
+854,"854, 883",to hold on to this tradition.,action
+854,"854, 883",to hold on to this tradition.,one-role-action
+843,"843, 883",and I want to hold on to this tradition.,process
+843,"843, 883",and I want to hold on to this tradition.,desiderative
+779,"779, 814",I have never not given him anything,process
+854,"854, 861",to hold,main
+802,"802, 805",him,affected
+802,"802, 805",him,carrier
+847,"847, 848",I,affected-emoter
+814,"814, 818",", it",agent
+814,"814, 818",", it",agent-cognizant
+814,"814, 818",", it",affected-carrier
+814,"814, 818",", it",affected
+814,"814, 818",", it",agent-carrier
+814,"814, 818",", it",agent-perceiver
+814,"814, 818",", it",perceiver
+806,"806, 814",anything,affected-possessed
+779,"779, 780",I,agent-cognizant
+779,"779, 780",I,agent-carrier
+779,"779, 780",I,agent-perceiver
+974,"974, 1001",to sound needy or childish.,process
+974,"974, 1001",to sound needy or childish.,attributive
+974,"974, 1001",to sound needy or childish.,relational
+974,"974, 1001",to sound needy or childish.,two-role-action
+897,"897, 927",to address this issue with him,process
+897,"897, 927",to address this issue with him,attributive
+897,"897, 927",to address this issue with him,relational
+897,"897, 927",to address this issue with him,two-role-action
+897,"897, 927",to address this issue with him,action
+897,"897, 907",to address,main
+884,"884, 928","I have tried to address this issue with him,",process
+884,"884, 928","I have tried to address this issue with him,",tentative
+963,"963, 966",don,main
+974,"974, 982",to sound,main
+884,"884, 885",I,agent-cognizant
+884,"884, 885",I,agent-carrier
+884,"884, 885",I,agent-perceiver
+897,"897, 927",to address this issue with him,created-phenomenon
+929,"929, 1001",but I find it difficult because I don't want to sound needy or childish.,process
+929,"929, 1001",but I find it difficult because I don't want to sound needy or childish.,two-role-perception
+940,"940, 1001",it difficult because I don't want to sound needy or childish.,created-phenomenon
+983,"983, 1001",needy or childish.,attribute
+983,"983, 1001",needy or childish.,range
+933,"933, 934",I,affected-perceiver
+933,"933, 934",I,agent-cognizant
+933,"933, 934",I,affected-cognizant
+933,"933, 934",I,affected
+933,"933, 934",I,agent-perceiver
+933,"933, 934",I,perceiver
+908,"908, 918",this issue,affected-emoter
+908,"908, 918",this issue,affected-path
+908,"908, 918",this issue,affected-perceiver
+908,"908, 918",this issue,affected-cognizant
+908,"908, 918",this issue,affected-carrier
+908,"908, 918",this issue,affected-destination
+908,"908, 918",this issue,affected
+908,"908, 918",this issue,affected-possessed
+908,"908, 918",this issue,affected-source
+908,"908, 918",this issue,range
+908,"908, 918",this issue,carrier
+919,"919, 927",with him,attribute
+919,"919, 927",with him,affected-emoter
+919,"919, 927",with him,affected-path
+919,"919, 927",with him,affected-perceiver
+919,"919, 927",with him,affected-cognizant
+919,"919, 927",with him,affected-carrier
+919,"919, 927",with him,affected-destination
+919,"919, 927",with him,affected
+919,"919, 927",with him,affected-possessed
+919,"919, 927",with him,affected-source
+1131,"1131, 1138",to give,main
+1157,"1157, 1163",to try,created-phenomenon
+1168,"1168, 1178",understand,main
+1075,"1075, 1112",that the sparkle is not there anymore,created-phenomenon
+1075,"1075, 1112",that the sparkle is not there anymore,process
+1075,"1075, 1112",that the sparkle is not there anymore,attributive
+1114,"1114, 1210","but I don't want to give up just yet, want to try and understand why he does the things he does.",process
+1114,"1114, 1210","but I don't want to give up just yet, want to try and understand why he does the things he does.",desiderative
+1150,"1150, 1163",", want to try",process
+1150,"1150, 1163",", want to try",desiderative
+1099,"1099, 1104",there,attribute
+1157,"1157, 1163",to try,main
+1057,"1057, 1112",and I really feel that the sparkle is not there anymore,process
+1057,"1057, 1112",and I really feel that the sparkle is not there anymore,two-role-perception
+1057,"1057, 1112",and I really feel that the sparkle is not there anymore,emotive
+1028,"1028, 1056",going on in our relationship,process
+1028,"1028, 1056",going on in our relationship,locational
+1028,"1028, 1056",going on in our relationship,directional
+1028,"1028, 1056",going on in our relationship,two-role-action
+1028,"1028, 1056",going on in our relationship,action
+1080,"1080, 1091",the sparkle,affected-carrier
+1080,"1080, 1091",the sparkle,agent-carrier
+1131,"1131, 1150",to give up just yet,process
+1131,"1131, 1150",to give up just yet,two-role-action
+1131,"1131, 1150",to give up just yet,action
+1142,"1142, 1150",just yet,affected-emoter
+1142,"1142, 1150",just yet,affected-path
+1142,"1142, 1150",just yet,affected-perceiver
+1142,"1142, 1150",just yet,affected-cognizant
+1142,"1142, 1150",just yet,affected-carrier
+1142,"1142, 1150",just yet,affected-destination
+1142,"1142, 1150",just yet,affected
+1142,"1142, 1150",just yet,affected-possessed
+1142,"1142, 1150",just yet,affected-source
+1142,"1142, 1150",just yet,range
+1118,"1118, 1119",I,affected-emoter
+1028,"1028, 1033",going,main
+1061,"1061, 1062",I,affected-emoter
+1061,"1061, 1062",I,agent
+1061,"1061, 1062",I,affected-perceiver
+1061,"1061, 1062",I,agent-perceiver
+1061,"1061, 1062",I,emoter
+1061,"1061, 1062",I,perceiver
+1131,"1131, 1210","to give up just yet, want to try and understand why he does the things he does.",created-phenomenon
+1037,"1037, 1056",in our relationship,destination
+1037,"1037, 1056",in our relationship,location
+1037,"1037, 1056",in our relationship,affected-destination
+1037,"1037, 1056",in our relationship,range
+1213,"1213, 1218",Thank,main
+517,"517, 541",the 6 years we have been,relational
+695,"695, 697",he,phenomenon

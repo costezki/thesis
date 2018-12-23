@@ -1,0 +1,233 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.6536585365853659
+,Recall,0.8874172185430463
+,F1,0.7528089887640449
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+1,2.0,"25, 26","23, 26",2,I,", I",participant-role,participant-role
+3,0.0,"29, 35","29, 35",0,having,having,main,main
+5,10.04987562112089,"25, 51","15, 52",11,I'm having a sad day today,"Hi there, I'm having a sad day today.",configuration,configuration
+11,2.0,"121, 123","119, 123",2,he,", he",participant-role,participant-role
+19,0.0,"210, 214","210, 214",0,says,says,main,main
+157,11.180339887498949,"71, 93","81, 88",15,I'd spend my life with,my life,participant-role,participant-role
+6,22.80350850198276,"53, 93","71, 107",32,The man I thought I'd spend my life with,I'd spend my life with is moving out,participant-role,participant-role
+16,0.0,"176, 185","176, 185",0,arranging,arranging,main,main
+36,0.0,"61, 62","61, 62",0,I,I,participant-role,participant-role
+152,5.0,"225, 227","225, 232",5,be,be gone,main,main
+8,7.0,"97, 110","97, 103",7,moving out of,moving,main,main
+13,7.0,"128, 149","128, 142",7,all his things packed,all his things,participant-role,participant-role
+18,4.0,"173, 208","169, 208",4,is arranging viewings on properties,and is arranging viewings on properties,configuration,configuration
+20,1.0,"215, 255","215, 256",1,he should be gone by the end of the week,he should be gone by the end of the week.,participant-role,participant-role
+21,5.0990195135927845,"210, 255","215, 256",6,says he should be gone by the end of the week,he should be gone by the end of the week.,configuration,configuration
+14,2.0,"121, 168","119, 168",2,he has all his things packed in the living room,", he has all his things packed in the living room",configuration,configuration
+17,9.0,"186, 208","195, 208",9,viewings on properties,on properties,participant-role,participant-role
+156,0.0,"63, 70","63, 70",0,thought,thought,main,main
+10,0.0,"53, 119","53, 119",0,The man I thought I'd spend my life with is moving out of our home,The man I thought I'd spend my life with is moving out of our home,configuration,configuration
+150,0.0,"215, 217","215, 217",0,he,he,participant-role,participant-role
+22,0.0,"257, 258","257, 258",0,I,I,participant-role,participant-role
+42,0.0,"421, 428","421, 428",0,believe,believe,main,main
+40,8.0,"397, 405","389, 405",8,anything,through anything,participant-role,participant-role
+31,0.0,"346, 348","346, 348",0,he,he,participant-role,participant-role
+39,11.0,"381, 396","381, 385",11,make it through,make,main,main
+43,0.0,"429, 431","429, 431",0,me,me,participant-role,participant-role
+26,1.0,"257, 330","257, 331",1,"I'm trying to be brave about it, businesslike, calm, wishing him the best","I'm trying to be brave about it, businesslike, calm, wishing him the best,",configuration,configuration
+46,2.0,"433, 435","431, 435",2,we,", we",participant-role,participant-role
+27,0.0,"336, 337","336, 337",0,I,I,participant-role,participant-role
+34,10.0,"346, 362","346, 352",10,"he was ""the one""",he was,configuration,configuration
+35,29.5296461204668,"372, 414","386, 388",40,we could make it through anything together,it,participant-role,participant-role
+32,0.0,"349, 352","349, 352",0,was,was,main,main
+41,50.24937810560445,"372, 414","367, 464",55,we could make it through anything together,"that we could make it through anything together ( and believe me, we've made it through a lot ) .",configuration,configuration
+45,7.211102550927978,"421, 460","415, 464",10,"believe me, we've made it through a lot","( and believe me, we've made it through a lot ) .",configuration,configuration
+24,0.0,"261, 267","261, 267",0,trying,trying,main,main
+37,0.0,"372, 374","372, 374",0,we,we,participant-role,participant-role
+28,0.0,"338, 345","338, 345",0,thought,thought,main,main
+29,10.0,"346, 362","346, 352",10,"he was ""the one""",he was,participant-role,participant-role
+49,8.0,"455, 460","447, 460",8,a lot,through a lot,participant-role,participant-role
+44,4.0,"433, 460","429, 460",4,we've made it through a lot,"me, we've made it through a lot",participant-role,participant-role
+25,10.816653826391969,"268, 288","274, 279",15,to be brave about it,brave,participant-role,participant-role
+55,0.0,"559, 561","559, 561",0,it,it,participant-role,participant-role
+58,10.04987562112089,"559, 578","549, 579",11,it were that simple,", if only it were that simple!",configuration,configuration
+160,3.0,"471, 478","471, 475",3,want to,want,main,main
+54,17.46424919657298,"465, 548","469, 531",21,All I want to do is fall into his arms and beg him to stay and let's be happy again,I want to do is fall into his arms and beg him to stay and let,configuration,configuration
+159,0.0,"469, 470","469, 470",0,I,I,participant-role,participant-role
+52,17.26267650163207,"485, 548","482, 531",20,fall into his arms and beg him to stay and let's be happy again,is fall into his arms and beg him to stay and let,participant-role,participant-role
+162,51.19570294468082,"465, 481","476, 531",44,All I want to do,to do is fall into his arms and beg him to stay and let,configuration,configuration
+161,50.08991914547278,"479, 481","476, 531",53,do,to do is fall into his arms and beg him to stay and let,participant-role,participant-role
+56,0.0,"562, 566","562, 566",0,were,were,main,main
+57,1.0,"567, 578","567, 579",1,that simple,that simple!,participant-role,participant-role
+59,0.0,"580, 582","580, 582",0,We,We,participant-role,participant-role
+62,0.0,"603, 640","603, 640",0,we still love and care for each other,we still love and care for each other,participant-role,participant-role
+63,0.0,"580, 640","580, 640",0,We have both said that we still love and care for each other,We have both said that we still love and care for each other,configuration,configuration
+72,8.06225774829855,"648, 657","647, 649",9,s evident,'s,main,main
+73,1.0,"658, 723","658, 724",1,we're caught in a downward spiral and can't reach the top anymore,we're caught in a downward spiral and can't reach the top anymore.,participant-role,participant-role
+65,0.0,"612, 616","612, 616",0,love,love,main,main
+71,4.123105625617661,"645, 723","641, 724",5,it's evident we're caught in a downward spiral and can't reach the top anymore,but it's evident we're caught in a downward spiral and can't reach the top anymore.,configuration,configuration
+75,3.0,"661, 670","664, 670",3,re caught,caught,main,main
+76,0.0,"671, 691","671, 691",0,in a downward spiral,in a downward spiral,participant-role,participant-role
+67,4.0,"621, 629","621, 625",4,care for,care,main,main
+70,0.0,"645, 647","645, 647",0,it,it,participant-role,participant-role
+68,4.0,"630, 640","626, 640",4,each other,for each other,participant-role,participant-role
+64,0.0,"603, 605","603, 605",0,we,we,participant-role,participant-role
+69,15.524174696260024,"621, 640","617, 625",15,care for each other,and care,configuration,configuration
+77,0.0,"658, 691","658, 691",0,we're caught in a downward spiral,we're caught in a downward spiral,configuration,configuration
+66,0.0,"603, 616","603, 616",0,we still love,we still love,configuration,configuration
+79,8.94427190999916,"702, 715","698, 707",11,reach the top,n't reach,main,main
+61,0.0,"593, 597","593, 597",0,said,said,main,main
+74,0.0,"658, 660","658, 660",0,we,we,participant-role,participant-role
+100,0.0,"909, 916","909, 916",0,salvage,salvage,main,main
+171,0.0,"771, 787","771, 787",0,I possibly could,I possibly could,configuration,configuration
+85,17.0,"819, 848","836, 848",17,he would give it one more try,one more try,participant-role,participant-role
+112,7.0710678118654755,"967, 987","974, 988",8,I have to let him go,to let him go.,configuration,configuration
+95,3.0,"819, 848","816, 848",3,he would give it one more try,if he would give it one more try,configuration,configuration
+97,67.1863081289633,"855, 889","788, 894",72,go away together for a week or two,"whether before he moves out if he would give it one more try, even go away together for a week or two just",configuration,configuration
+88,4.0,"806, 815","806, 811",4,moves out,moves,main,main
+102,3.0,"902, 921","899, 921",3,"we can salvage ""us""","if we can salvage ""us""",configuration,configuration
+86,88.20430828479978,"725, 848","731, 936",94,I did ask him in the most loving and calm way I possibly could whether before he moves out if he would give it one more try,"ask him in the most loving and calm way I possibly could whether before he moves out if he would give it one more try, even go away together for a week or two just see if we can salvage ""us"" but he won't /",configuration,configuration
+84,0.0,"735, 738","735, 738",0,him,him,participant-role,participant-role
+107,0.0,"967, 968","967, 968",0,I,I,participant-role,participant-role
+109,3.0,"977, 980","974, 980",3,let,to let,main,main
+81,0.0,"725, 726","725, 726",0,I,I,participant-role,participant-role
+166,0.0,"926, 928","926, 928",0,he,he,participant-role,participant-role
+169,0.0,"771, 772","771, 772",0,I,I,participant-role,participant-role
+89,33.734255586866,"803, 815","796, 848",40,he moves out,before he moves out if he would give it one more try,configuration,configuration
+110,0.0,"981, 984","981, 984",0,him,him,participant-role,participant-role
+92,0.0,"828, 832","828, 832",0,give,give,main,main
+90,0.0,"819, 821","819, 821",0,he,he,participant-role,participant-role
+165,5.0,"890, 921","895, 921",5,"just see if we can salvage ""us""","see if we can salvage ""us""",configuration,configuration
+96,5.0,"855, 862","855, 857",5,go away,go,main,main
+103,2.0,"944, 946","942, 946",2,he,", he",participant-role,participant-role
+93,0.0,"833, 835","833, 835",0,it,it,participant-role,participant-role
+83,0.0,"731, 734","731, 734",0,ask,ask,main,main
+98,0.0,"902, 904","902, 904",0,we,we,participant-role,participant-role
+87,0.0,"803, 805","803, 805",0,he,he,participant-role,participant-role
+141,14.0,"1176, 1192","1176, 1178",14,me doing so here,me,participant-role,participant-role
+120,0.0,"1052, 1057","1052, 1057",0,brave,brave,participant-role,participant-role
+133,0.0,"1119, 1146","1119, 1146",0,I had to express it somehow,I had to express it somehow,configuration,configuration
+126,2.0,"1107, 1108","1105, 1108",2,I,", I",participant-role,participant-role
+125,4.0,"1078, 1105","1074, 1105",4,I'm really crumbling inside,but I'm really crumbling inside,configuration,configuration
+127,0.0,"1114, 1118","1114, 1118",0,felt,felt,main,main
+129,0.0,"1119, 1120","1119, 1120",0,I,I,participant-role,participant-role
+134,0.0,"1154, 1155","1154, 1155",0,I,I,participant-role,participant-role
+117,0.0,"1035, 1036","1035, 1036",0,I,I,participant-role,participant-role
+135,0.0,"1156, 1160","1156, 1160",0,hope,hope,main,main
+140,4.0,"1171, 1175","1167, 1175",4,mind,n't mind,main,main
+138,0.0,"1161, 1164","1161, 1164",0,you,you,participant-role,participant-role
+155,18.0,"1107, 1146","1125, 1146",18,I just felt I had to express it somehow,to express it somehow,configuration,configuration
+131,3.0,"1128, 1135","1125, 1135",3,express,to express,main,main
+137,1.0,"1154, 1192","1154, 1193",1,I hope you don't mind me doing so here,I hope you don't mind me doing so here!,configuration,configuration
+136,1.0,"1161, 1192","1161, 1193",1,you don't mind me doing so here,you don't mind me doing so here!,participant-role,participant-role
+142,1.0,"1161, 1192","1161, 1193",1,you don't mind me doing so here,you don't mind me doing so here!,configuration,configuration
+122,0.0,"1078, 1079","1078, 1079",0,I,I,participant-role,participant-role
+124,0.0,"1089, 1098","1089, 1098",0,crumbling,crumbling,main,main
+119,3.0,"1049, 1051","1046, 1051",3,be,to be,main,main
+121,16.76305461424021,"1035, 1073","1030, 1057",21,I'm having to be brave in front of him,", as I'm having to be brave",configuration,configuration
+128,0.0,"1119, 1146","1119, 1146",0,I had to express it somehow,I had to express it somehow,participant-role,participant-role
+132,0.0,"1136, 1138","1136, 1138",0,it,it,participant-role,participant-role
+143,2.0,"1212, 1213","1210, 1213",2,I,", I",participant-role,participant-role
+144,0.0,"1214, 1218","1214, 1218",0,have,have,main,main
+148,1.0,"1262, 1289","1262, 1290",1,to not be a big snotty mess,to not be a big snotty mess!,participant-role,participant-role
+149,3.1622776601683795,"1241, 1289","1238, 1290",4,very much struggling to not be a big snotty mess,so very much struggling to not be a big snotty mess!,configuration,configuration
+147,0.0,"1251, 1261","1251, 1261",0,struggling,struggling,main,main
+9,58.0,"111, 119","53, 119",58,our home,The man I thought I'd spend my life with is moving out of our home,participant-role,participant-role
+158,16.1245154965971,"53, 93","61, 107",22,The man I thought I'd spend my life with,I thought I'd spend my life with is moving out,configuration,configuration
+51,50.0,"465, 481","465, 531",50,All I want to do,All I want to do is fall into his arms and beg him to stay and let,participant-role,participant-role
+80,38.01315561749642,"696, 723","658, 724",39,can't reach the top anymore,we're caught in a downward spiral and can't reach the top anymore.,configuration,configuration
+168,138.13037319865606,"926, 942","788, 936",134,he won't / can't,"whether before he moves out if he would give it one more try, even go away together for a week or two just see if we can salvage ""us"" but he won't /",configuration,configuration
+163,113.54734695271397,"895, 898","788, 936",145,see,"whether before he moves out if he would give it one more try, even go away together for a week or two just see if we can salvage ""us"" but he won't /",participant-role,participant-role
+145,53.0,"1219, 1237","1219, 1290",53,a rather nasty flu,a rather nasty flu so very much struggling to not be a big snotty mess!,participant-role,participant-role
+146,55.97320787662612,"1212, 1237","1194, 1290",71,I have a rather nasty flu,"On top of it all, I have a rather nasty flu so very much struggling to not be a big snotty mess!",configuration,configuration
+106,219.0,"944, 959","725, 959",219,he's moving out,"I did ask him in the most loving and calm way I possibly could whether before he moves out if he would give it one more try, even go away together for a week or two just see if we can salvage ""us"" but he won't / can't, he's moving out",configuration,configuration
+164,171.6566340110396,"902, 921","731, 936",186,"we can salvage ""us""","ask him in the most loving and calm way I possibly could whether before he moves out if he would give it one more try, even go away together for a week or two just see if we can salvage ""us"" but he won't /",participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+4,"36, 45",a sad day,participant-role
+12,"124, 127",has,main
+154,"215, 232",he should be gone,configuration
+153,"228, 232",gone,participant-role
+30,"336, 362","I thought he was ""the one""",configuration
+33,"353, 362","""the one""",participant-role
+50,"433, 460",we've made it through a lot,configuration
+48,"439, 454",made it through,main
+53,"482, 484",is,main
+101,"917, 921","""us""",participant-role
+167,"929, 942",won't / can't,main
+105,"947, 948",s,main
+104,"949, 959",moving out,main
+116,"989, 1014",Five years amount to this,configuration
+113,"989, 999",Five years,participant-role
+114,"1000, 1009",amount to,main
+115,"1010, 1014",this,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+15,"15, 23",Hi there,configuration
+15,"15, 17",Hi,main
+15,"15, 23",Hi there,participant-role
+143,"143, 149",packed,main
+150,"150, 168",in the living room,participant-role
+75,"75, 80",spend,main
+310,"310, 317",wishing,main
+268,"268, 273",to be,main
+318,"318, 330",him the best,configuration
+286,"286, 330","it, businesslike, calm, wishing him the best",configuration
+367,"367, 371",that,participant-role
+318,"318, 321",him,participant-role
+318,"318, 330",him the best,participant-role
+326,"326, 330",best,main
+268,"268, 330","to be brave about it, businesslike, calm, wishing him the best",configuration
+268,"268, 330","to be brave about it, businesslike, calm, wishing him the best",participant-role
+516,"516, 523",to stay,main
+485,"485, 489",fall,main
+534,"534, 536",be,main
+476,"476, 481",to do,main
+504,"504, 531",and beg him to stay and let,configuration
+482,"482, 531",is fall into his arms and beg him to stay and let,configuration
+537,"537, 548",happy again,participant-role
+512,"512, 515",him,participant-role
+512,"512, 531",him to stay and let,participant-role
+512,"512, 531",him to stay and let,configuration
+508,"508, 511",beg,main
+465,"465, 579","All I want to do is fall into his arms and beg him to stay and let's be happy again , if only it were that simple!",configuration
+528,"528, 531",let,main
+512,"512, 523",him to stay,configuration
+524,"524, 531",and let,configuration
+490,"490, 503",into his arms,participant-role
+583,"583, 587",have,main
+650,"650, 657",evident,participant-role
+708,"708, 715",the top,participant-role
+969,"969, 973",have,main
+872,"872, 889",for a week or two,participant-role
+960,"960, 988",and so I have to let him go.,configuration
+974,"974, 988",to let him go.,participant-role
+895,"895, 898",see,main
+727,"727, 730",did,main
+985,"985, 987",go,main
+1070,"1070, 1073",him,participant-role
+1039,"1039, 1045",having,main
+1121,"1121, 1124",had,main
+1070,"1070, 1105",him but I'm really crumbling inside,participant-role
+1179,"1179, 1184",doing,main
+1262,"1262, 1271",to not be,main
+1204,"1204, 1210",it all,participant-role
+71,"71, 72",I,participant-role
+89,"89, 107",with is moving out,configuration
+233,"233, 256",by the end of the week.,participant-role
+186,"186, 194",viewings,participant-role
+280,"280, 330","about it, businesslike, calm, wishing him the best",participant-role
+367,"367, 464","that we could make it through anything together ( and believe me, we've made it through a lot ) .",participant-role
+444,"444, 446",it,participant-role
+286,"286, 308","it, businesslike, calm",participant-role
+482,"482, 503",is fall into his arms,configuration
+603,"603, 640",we still love and care for each other,configuration
+981,"981, 988",him go.,configuration
+739,"739, 787",in the most loving and calm way I possibly could,participant-role
+981,"981, 988",him go.,participant-role
+1161,"1161, 1175",you don't mind,configuration
+1176,"1176, 1193",me doing so here!,configuration
+1024,"1024, 1153","Anyway, as I'm having to be brave in front of him but I'm really crumbling inside, I just felt I had to express it somehow and so",configuration
+1074,"1074, 1105",but I'm really crumbling inside,participant-role
+1070,"1070, 1105",him but I'm really crumbling inside,configuration
+1125,"1125, 1146",to express it somehow,participant-role
+1272,"1272, 1290",a big snotty mess!,participant-role
+1262,"1262, 1290",to not be a big snotty mess!,configuration
+71,"71, 107",I'd spend my life with is moving out,configuration

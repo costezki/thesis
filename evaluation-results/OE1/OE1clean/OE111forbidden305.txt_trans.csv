@@ -1,0 +1,555 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.17758985200845667
+,Recall,0.5637583892617449
+,F1,0.27009646302250806
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+91,13.038404810405298,"34, 55","21, 56",14,I'm new to this group,"Hello all, 
+I'm new to this group.",relational,relational
+2,1.0,"36, 37","35, 37",1,m,'m,main,main
+4,0.0,"58, 59","58, 59",0,I,I,cognizant,cognizant
+5,0.0,"60, 67","60, 67",0,believe,believe,main,main
+132,0.0,"68, 69","68, 69",0,I,I,agent,agent
+134,0.0,"73, 82","73, 82",0,developed,developed,main,main
+7,2.0,"133, 134","131, 134",2,I,", I",cognizant,cognizant
+136,0.0,"68, 130","68, 130",0,I've developed somewhat of an eating disorder ( binge eating ),I've developed somewhat of an eating disorder ( binge eating ),action,action
+92,0.0,"58, 130","58, 130",0,I believe I've developed somewhat of an eating disorder ( binge eating ),I believe I've developed somewhat of an eating disorder ( binge eating ),mental,mental
+92,0.0,"58, 130","58, 130",0,I believe I've developed somewhat of an eating disorder ( binge eating ),I believe I've developed somewhat of an eating disorder ( binge eating ),two-role-cognition,two-role-cognition
+8,0.0,"135, 140","135, 140",0,guess,guess,main,main
+6,0.0,"68, 130","68, 130",0,I've developed somewhat of an eating disorder ( binge eating ),I've developed somewhat of an eating disorder ( binge eating ),phenomenon,phenomenon
+19,0.0,"355, 358","355, 358",0,had,had,main,main
+18,25.0,"284, 312","284, 337",25,overeating from time to time,overeating from time to time ( especially ice cream ),phenomenon,phenomenon
+138,0.0,"384, 391","384, 391",0,believe,believe,main,main
+17,0.0,"273, 283","273, 283",0,remembered,remembered,main,main
+139,20.248456731316587,"342, 381","359, 392",28,never really had a binge eating problem,a binge eating problem I believe.,phenomenon,phenomenon
+20,11.0,"359, 381","359, 392",11,a binge eating problem,a binge eating problem I believe.,possessed,possessed
+96,0.0,"227, 337","227, 337",0,"For the longest time, prior to 2 years ago, I remembered overeating from time to time ( especially ice cream )","For the longest time, prior to 2 years ago, I remembered overeating from time to time ( especially ice cream )",mental,mental
+97,17.029386365926403,"342, 381","355, 392",24,never really had a binge eating problem,had a binge eating problem I believe.,relational,relational
+97,17.029386365926403,"342, 381","355, 392",24,never really had a binge eating problem,had a binge eating problem I believe.,possessive,possessive
+98,65.0,"394, 431","394, 496",65,"Though 2 years ago, I started running","Though 2 years ago, I started running, because I wanted to get rid of my gut and lose a bit of weight.",influential,influential
+28,25.019992006393608,"475, 495","450, 496",26,lose a bit of weight,to get rid of my gut and lose a bit of weight.,phenomenon,phenomenon
+21,2.0,"414, 415","412, 415",2,I,", I",agent,agent
+25,0.0,"443, 449","443, 449",0,wanted,wanted,main,main
+24,0.0,"441, 442","441, 442",0,I,I,emoter,emoter
+23,0.0,"424, 431","424, 431",0,running,running,phenomenon,phenomenon
+22,0.0,"416, 423","416, 423",0,started,started,main,main
+99,27.85677655436824,"441, 470","431, 496",36,I wanted to get rid of my gut,", because I wanted to get rid of my gut and lose a bit of weight.",mental,mental
+31,22.0,"512, 529","512, 551",22,running regularly,running regularly and watching my diet.,phenomenon,phenomenon
+106,9.055385138137417,"534, 550","543, 551",10,watching my diet,my diet.,phenomenon,phenomenon
+30,0.0,"504, 511","504, 511",0,started,started,main,main
+101,22.360679774997898,"502, 529","498, 551",26,I started running regularly,"So, I started running regularly and watching my diet.",influential,influential
+29,2.0,"502, 503","500, 503",2,I,", I",agent,agent
+34,3.0,"555, 563","555, 560",3,ended up,ended,main,main
+102,1.0,"553, 586","553, 587",1,I ended up losing about 25-30 lbs,I ended up losing about 25-30 lbs.,influential,influential
+35,1.0,"564, 586","564, 587",1,losing about 25-30 lbs,losing about 25-30 lbs.,created-phenomenon,created-phenomenon
+103,1.0,"589, 634","589, 635",1,I know I'm pretty much at an ideal weight now,I know I'm pretty much at an ideal weight now.,mental,mental
+103,1.0,"589, 634","589, 635",1,I know I'm pretty much at an ideal weight now,I know I'm pretty much at an ideal weight now.,two-role-cognition,two-role-cognition
+36,0.0,"589, 590","589, 590",0,I,I,cognizant,cognizant
+38,1.0,"596, 634","596, 635",1,I'm pretty much at an ideal weight now,I'm pretty much at an ideal weight now.,phenomenon,phenomenon
+121,1.0,"598, 599","597, 599",1,m,'m,main,main
+37,0.0,"591, 595","591, 595",0,know,know,main,main
+105,35.0,"679, 717","644, 717",35,paying more close attention to my diet,", ever since I started running and paying more close attention to my diet",influential,influential
+42,12.0,"679, 717","667, 717",12,paying more close attention to my diet,running and paying more close attention to my diet,phenomenon,phenomenon
+40,0.0,"659, 666","659, 666",0,started,started,main,main
+39,0.0,"657, 658","657, 658",0,I,I,agent,agent
+45,0.0,"733, 739","733, 739",0,become,become,main,main
+46,0.0,"782, 783","782, 783",0,I,I,cognizant,cognizant
+128,0.0,"804, 808","804, 808",0,that,that,agent,agent
+48,63.0,"792, 835","792, 898",63,it was this that really started the problem,"it was this that really started the problem ( more so, the obsessive calorie counting than the running ) .",phenomenon,phenomenon
+131,63.0,"804, 835","804, 898",63,that really started the problem,"that really started the problem ( more so, the obsessive calorie counting than the running ) .",action,action
+130,63.0,"824, 835","824, 898",63,the problem,"the problem ( more so, the obsessive calorie counting than the running ) .",created,created
+47,0.0,"784, 791","784, 791",0,believe,believe,main,main
+109,63.0,"782, 835","782, 898",63,I believe it was this that really started the problem,"I believe it was this that really started the problem ( more so, the obsessive calorie counting than the running ) .",mental,mental
+109,63.0,"782, 835","782, 898",63,I believe it was this that really started the problem,"I believe it was this that really started the problem ( more so, the obsessive calorie counting than the running ) .",two-role-cognition,two-role-cognition
+125,0.0,"795, 798","795, 798",0,was,was,main,main
+129,0.0,"816, 823","816, 823",0,started,started,main,main
+51,5.0,"919, 926","919, 921",5,go fine,go,main,main
+60,18.0,"1109, 1183","1109, 1165",18,a little bit of a sweet food like ice cream or something along those lines,a little bit of a sweet food like ice cream or something,phenomenon,phenomenon
+54,2.0,"1068, 1069","1066, 1069",2,I,", I",agent,agent
+56,6.0,"1080, 1087","1074, 1087",6,control,never control,main,main
+59,0.0,"1105, 1108","1105, 1108",0,try,try,main,main
+112,35.608987629529715,"1019, 1094","1041, 1066",50,"at the end of the week, usually starting Friday, I can never control myself",", usually starting Friday",action,action
+62,3.0,"1188, 1194","1188, 1191",3,end up,end,main,main
+64,31.76476034853718,"1223, 1263","1195, 1248",40,eating a whole 1/2 gallon in one evening,"going overboard, often just eating a whole 1/2 gallon",phenomenon,phenomenon
+115,26.019223662515376,"1212, 1263","1186, 1264",27,often just eating a whole 1/2 gallon in one evening,"I end up going overboard, often just eating a whole 1/2 gallon in one evening.",influential,influential
+66,0.0,"1271, 1273","1271, 1273",0,is,is,main,main
+70,0.0,"1294, 1300","1294, 1300",0,gotten,gotten,main,main
+73,1.0,"1334, 1335","1333, 1335",1,m,'m,main,main
+77,7.810249675906654,"1391, 1411","1396, 1405",11,very concerned about,concerned,main,main
+118,2.0,"1332, 1379","1332, 1381",2,"I'm by no means overweight, ( 5'6 and 132 lbs )","I'm by no means overweight, ( 5'6 and 132 lbs ) ,",relational,relational
+122,70.00714249274856,"1431, 1584","1501, 1585",71,"It's like I can go from eating very healthy and eating the right foods, then go to the opposite extreme eating everything in sight that's not good for me",", then go to the opposite extreme eating everything in sight that's not good for me.",attributive,attributive
+79,7.0710678118654755,"1508, 1584","1501, 1585",8,go to the opposite extreme eating everything in sight that's not good for me,", then go to the opposite extreme eating everything in sight that's not good for me.",directional,directional
+79,7.0710678118654755,"1508, 1584","1501, 1585",8,go to the opposite extreme eating everything in sight that's not good for me,", then go to the opposite extreme eating everything in sight that's not good for me.",relational,relational
+82,0.0,"1447, 1449","1447, 1449",0,go,go,main,main
+85,0.0,"1508, 1510","1508, 1510",0,go,go,main,main
+83,1.0,"1434, 1435","1433, 1435",1,s,'s,main,main
+80,0.0,"1441, 1442","1441, 1442",0,I,I,agent-carrier,agent-carrier
+111,75.0066663703967,"1436, 1584","1511, 1585",76,"like I can go from eating very healthy and eating the right foods, then go to the opposite extreme eating everything in sight that's not good for me",to the opposite extreme eating everything in sight that's not good for me.,attribute,attribute
+84,1.0,"1511, 1584","1511, 1585",1,to the opposite extreme eating everything in sight that's not good for me,to the opposite extreme eating everything in sight that's not good for me.,destination,destination
+88,0.0,"1601, 1606","1601, 1606",0,begin,begin,main,main
+93,75.0066663703967,"133, 165","58, 166",76,I guess over the last year or so,"I believe I've developed somewhat of an eating disorder ( binge eating ) , I guess over the last year or so.",mental,mental
+93,75.0066663703967,"133, 165","58, 166",76,I guess over the last year or so,"I believe I've developed somewhat of an eating disorder ( binge eating ) , I guess over the last year or so.",two-role-cognition,two-role-cognition
+,
+,Manual mismatching all parsed (False Negative)
+91,"34, 55",I'm new to this group,attributive
+1,"34, 35",I,carrier
+3,"38, 55",new to this group,attribute
+135,"83, 130",somewhat of an eating disorder ( binge eating ),created
+94,"168, 224",I'm not quite sure or not if it's a major problem or not,mental
+94,"168, 224",I'm not quite sure or not if it's a major problem or not,two-role-cognition
+10,"168, 169",I,cognizant
+12,"182, 186",sure,attribute
+9,"197, 224",it's a major problem or not,phenomenon
+95,"197, 217",it's a major problem,relational
+95,"197, 217",it's a major problem,attributive
+13,"197, 199",it,carrier
+14,"200, 201",s,main
+15,"202, 217",a major problem,attribute
+16,"271, 272",I,emoter
+140,"342, 391",never really had a binge eating problem I believe,mental
+140,"342, 391",never really had a binge eating problem I believe,two-role-cognition
+137,"382, 383",I,cognizant
+26,"450, 470",to get rid of my gut,phenomenon
+100,"475, 495",lose a bit of weight,mental
+32,"534, 550",watching my diet,influential
+33,"553, 554",I,affected
+123,"596, 630",I'm pretty much at an ideal weight,relational
+123,"596, 630",I'm pretty much at an ideal weight,attributive
+120,"596, 597",I,carrier
+27,"612, 630",at an ideal weight,attribute
+104,"646, 674",ever since I started running,influential
+41,"667, 674",running,phenomenon
+108,"719, 779",I have almost become obsessed with calorie counting and such,relational
+108,"719, 779",I have almost become obsessed with calorie counting and such,attributive
+43,"719, 720",I,affected-carrier
+107,"740, 779",obsessed with calorie counting and such,attribute
+127,"792, 803",it was this,relational
+127,"792, 803",it was this,attributive
+124,"792, 794",it,carrier
+126,"799, 803",this,attribute
+110,"900, 1008","Now, usually I can go fine for a week or a little less eating ""healthy"" and not eating the ""forbidden"" foods",mental
+49,"913, 914",I,agent
+57,"1088, 1094",myself,affected
+113,"1098, 1183",I even try a little bit of a sweet food like ice cream or something along those lines,mental
+113,"1098, 1183",I even try a little bit of a sweet food like ice cream or something along those lines,two-role-perception
+58,"1098, 1099",I,perceiver
+114,"1186, 1210",I end up going overboard,influential
+61,"1186, 1187",I,affected
+63,"1195, 1210",going overboard,phenomenon
+116,"1266, 1329",This is something that I've gotten a bit concerned about lately,relational
+116,"1266, 1329",This is something that I've gotten a bit concerned about lately,attributive
+65,"1266, 1270",This,carrier
+67,"1274, 1329",something that I've gotten a bit concerned about lately,attribute
+117,"1289, 1329",I've gotten a bit concerned about lately,relational
+117,"1289, 1329",I've gotten a bit concerned about lately,attributive
+68,"1289, 1290",I,carrier
+71,"1301, 1322",a bit concerned about,attribute
+118,"1332, 1379","I'm by no means overweight, ( 5'6 and 132 lbs )",attributive
+72,"1332, 1333",I,carrier
+74,"1348, 1379","overweight, ( 5'6 and 132 lbs )",attribute
+119,"1386, 1428",I am very concerned about my eating habits,mental
+75,"1386, 1387",I,emoter
+52,"1412, 1428",my eating habits,phenomenon
+122,"1431, 1584","It's like I can go from eating very healthy and eating the right foods, then go to the opposite extreme eating everything in sight that's not good for me",relational
+78,"1441, 1501",I can go from eating very healthy and eating the right foods,relational
+78,"1441, 1501",I can go from eating very healthy and eating the right foods,directional
+90,"1591, 1639",do I even begin to deal with something like this,influential
+87,"1594, 1595",I,agent
+89,"1607, 1639",to deal with something like this,phenomenon
+,
+,Parsed mismatching all manual (False Positives)
+21,"21, 56","Hello all, 
+I'm new to this group.",process
+21,"21, 56","Hello all, 
+I'm new to this group.",directional
+21,"21, 31","Hello all,",destination
+21,"21, 31","Hello all,",affected-destination
+30,"30, 35",", 
+I",agent
+30,"30, 35",", 
+I",agent-perceiver
+30,"30, 35",", 
+I",perceiver
+42,"42, 56",to this group.,destination
+42,"42, 56",to this group.,affected-destination
+58,"58, 59",I,affected-emoter
+58,"58, 59",I,agent-cognizant
+58,"58, 59",I,affected-cognizant
+58,"58, 59",I,emoter
+68,"68, 69",I,affected-emoter
+68,"68, 69",I,affected-path
+68,"68, 69",I,affected-perceiver
+68,"68, 69",I,agent-cognizant
+68,"68, 69",I,affected-cognizant
+68,"68, 69",I,affected-carrier
+68,"68, 69",I,affected-destination
+68,"68, 69",I,affected
+68,"68, 69",I,agent-carrier
+68,"68, 69",I,affected-possessed
+68,"68, 69",I,agent-perceiver
+68,"68, 69",I,affected-source
+68,"68, 69",I,carrier
+131,"131, 134",", I",agent
+131,"131, 134",", I",agent-cognizant
+131,"131, 134",", I",affected-cognizant
+58,"58, 166","I believe I've developed somewhat of an eating disorder ( binge eating ) , I guess over the last year or so.",process
+68,"68, 130",I've developed somewhat of an eating disorder ( binge eating ),process
+68,"68, 130",I've developed somewhat of an eating disorder ( binge eating ),relational
+68,"68, 130",I've developed somewhat of an eating disorder ( binge eating ),possessive
+68,"68, 130",I've developed somewhat of an eating disorder ( binge eating ),two-role-action
+68,"68, 130",I've developed somewhat of an eating disorder ( binge eating ),one-role-action
+58,"58, 130",I believe I've developed somewhat of an eating disorder ( binge eating ),process
+58,"58, 130",I believe I've developed somewhat of an eating disorder ( binge eating ),emotive
+68,"68, 130",I've developed somewhat of an eating disorder ( binge eating ),created-phenomenon
+58,"58, 130",I believe I've developed somewhat of an eating disorder ( binge eating ),phenomenon
+58,"58, 130",I believe I've developed somewhat of an eating disorder ( binge eating ),created-phenomenon
+92,"92, 130",of an eating disorder ( binge eating ),affected-emoter
+92,"92, 130",of an eating disorder ( binge eating ),affected-path
+92,"92, 130",of an eating disorder ( binge eating ),affected-perceiver
+92,"92, 130",of an eating disorder ( binge eating ),affected-cognizant
+92,"92, 130",of an eating disorder ( binge eating ),affected-carrier
+92,"92, 130",of an eating disorder ( binge eating ),affected-destination
+92,"92, 130",of an eating disorder ( binge eating ),affected
+92,"92, 130",of an eating disorder ( binge eating ),affected-possessed
+92,"92, 130",of an eating disorder ( binge eating ),affected-source
+92,"92, 130",of an eating disorder ( binge eating ),possessed
+169,"169, 171",'m,main
+284,"284, 337",overeating from time to time ( especially ice cream ),created-phenomenon
+231,"231, 247",the longest time,phenomenon
+231,"231, 247",the longest time,created-phenomenon
+284,"284, 294",overeating,main
+359,"359, 392",a binge eating problem I believe.,affected-emoter
+359,"359, 392",a binge eating problem I believe.,created-phenomenon
+359,"359, 392",a binge eating problem I believe.,affected-path
+359,"359, 392",a binge eating problem I believe.,affected-perceiver
+359,"359, 392",a binge eating problem I believe.,affected-cognizant
+359,"359, 392",a binge eating problem I believe.,affected-carrier
+359,"359, 392",a binge eating problem I believe.,affected-destination
+359,"359, 392",a binge eating problem I believe.,affected
+359,"359, 392",a binge eating problem I believe.,affected-possessed
+359,"359, 392",a binge eating problem I believe.,affected-source
+359,"359, 392",a binge eating problem I believe.,created
+227,"227, 337","For the longest time, prior to 2 years ago, I remembered overeating from time to time ( especially ice cream )",process
+227,"227, 337","For the longest time, prior to 2 years ago, I remembered overeating from time to time ( especially ice cream )",two-role-cognition
+269,"269, 272",", I",agent
+269,"269, 272",", I",cognizant
+269,"269, 272",", I",agent-cognizant
+269,"269, 272",", I",affected-cognizant
+269,"269, 272",", I",affected
+355,"355, 392",had a binge eating problem I believe.,process
+355,"355, 392",had a binge eating problem I believe.,causative
+355,"355, 392",had a binge eating problem I believe.,two-role-action
+355,"355, 392",had a binge eating problem I believe.,action
+424,"424, 431",running,process
+424,"424, 431",running,action
+424,"424, 431",running,one-role-action
+394,"394, 496","Though 2 years ago, I started running, because I wanted to get rid of my gut and lose a bit of weight.",process
+394,"394, 496","Though 2 years ago, I started running, because I wanted to get rid of my gut and lose a bit of weight.",starting
+450,"450, 496",to get rid of my gut and lose a bit of weight.,created-phenomenon
+412,"412, 415",", I",affected-emoter
+412,"412, 415",", I",affected-path
+412,"412, 415",", I",affected-perceiver
+412,"412, 415",", I",agent-cognizant
+412,"412, 415",", I",affected-cognizant
+412,"412, 415",", I",affected-carrier
+412,"412, 415",", I",affected-destination
+412,"412, 415",", I",affected
+412,"412, 415",", I",agent-carrier
+412,"412, 415",", I",affected-possessed
+412,"412, 415",", I",agent-perceiver
+412,"412, 415",", I",affected-source
+441,"441, 442",I,affected-emoter
+424,"424, 431",running,created-phenomenon
+424,"424, 431",running,created
+424,"424, 431",running,main
+431,"431, 496",", because I wanted to get rid of my gut and lose a bit of weight.",process
+431,"431, 496",", because I wanted to get rid of my gut and lose a bit of weight.",desiderative
+512,"512, 551",running regularly and watching my diet.,created-phenomenon
+512,"512, 551",running regularly and watching my diet.,created
+512,"512, 519",running,main
+543,"543, 551",my diet.,created-phenomenon
+543,"543, 551",my diet.,range
+534,"534, 542",watching,main
+498,"498, 551","So, I started running regularly and watching my diet.",process
+498,"498, 551","So, I started running regularly and watching my diet.",starting
+500,"500, 503",", I",affected-emoter
+500,"500, 503",", I",affected-path
+500,"500, 503",", I",affected-perceiver
+500,"500, 503",", I",agent-cognizant
+500,"500, 503",", I",affected-cognizant
+500,"500, 503",", I",affected-carrier
+500,"500, 503",", I",affected-destination
+500,"500, 503",", I",affected
+500,"500, 503",", I",agent-carrier
+500,"500, 503",", I",affected-possessed
+500,"500, 503",", I",agent-perceiver
+500,"500, 503",", I",affected-source
+512,"512, 529",running regularly,process
+512,"512, 529",running regularly,action
+512,"512, 529",running regularly,one-role-action
+530,"530, 551",and watching my diet.,process
+530,"530, 551",and watching my diet.,two-role-perception
+530,"530, 551",and watching my diet.,two-role-action
+530,"530, 551",and watching my diet.,action
+564,"564, 570",losing,main
+553,"553, 554",I,agent
+553,"553, 554",I,agent-cognizant
+553,"553, 554",I,agent-carrier
+553,"553, 554",I,agent-perceiver
+571,"571, 587",about 25-30 lbs.,affected-possessed
+571,"571, 587",about 25-30 lbs.,possessed
+553,"553, 587",I ended up losing about 25-30 lbs.,process
+553,"553, 587",I ended up losing about 25-30 lbs.,ceasing
+564,"564, 587",losing about 25-30 lbs.,phenomenon
+564,"564, 587",losing about 25-30 lbs.,process
+564,"564, 587",losing about 25-30 lbs.,relational
+564,"564, 587",losing about 25-30 lbs.,possessive
+612,"612, 630",at an ideal weight,affected-emoter
+612,"612, 630",at an ideal weight,affected-path
+612,"612, 630",at an ideal weight,affected-perceiver
+612,"612, 630",at an ideal weight,affected-cognizant
+612,"612, 630",at an ideal weight,affected-carrier
+612,"612, 630",at an ideal weight,affected-destination
+612,"612, 630",at an ideal weight,affected
+612,"612, 630",at an ideal weight,affected-possessed
+612,"612, 630",at an ideal weight,affected-source
+596,"596, 635",I'm pretty much at an ideal weight now.,process
+596,"596, 635",I'm pretty much at an ideal weight now.,two-role-action
+596,"596, 635",I'm pretty much at an ideal weight now.,action
+589,"589, 635",I know I'm pretty much at an ideal weight now.,process
+589,"589, 590",I,agent-cognizant
+589,"589, 590",I,affected-cognizant
+600,"600, 611",pretty much,affected-emoter
+600,"600, 611",pretty much,affected-path
+600,"600, 611",pretty much,affected-perceiver
+600,"600, 611",pretty much,affected-cognizant
+600,"600, 611",pretty much,affected-carrier
+600,"600, 611",pretty much,affected-destination
+600,"600, 611",pretty much,affected
+600,"600, 611",pretty much,affected-possessed
+600,"600, 611",pretty much,affected-source
+600,"600, 611",pretty much,range
+596,"596, 635",I'm pretty much at an ideal weight now.,created-phenomenon
+596,"596, 597",I,agent
+596,"596, 597",I,agent-cognizant
+596,"596, 597",I,agent-carrier
+596,"596, 597",I,agent-perceiver
+644,"644, 717",", ever since I started running and paying more close attention to my diet",process
+644,"644, 717",", ever since I started running and paying more close attention to my diet",starting
+679,"679, 685",paying,main
+686,"686, 706",more close attention,attribute
+686,"686, 706",more close attention,destination
+686,"686, 706",more close attention,affected-destination
+686,"686, 706",more close attention,affected-possessed
+686,"686, 706",more close attention,possessed
+686,"686, 706",more close attention,range
+667,"667, 674",running,main
+740,"740, 748",obsessed,main
+667,"667, 717",running and paying more close attention to my diet,created-phenomenon
+667,"667, 717",running and paying more close attention to my diet,created
+686,"686, 717",more close attention to my diet,process
+686,"686, 717",more close attention to my diet,attributive
+686,"686, 717",more close attention to my diet,directional
+686,"686, 717",more close attention to my diet,possessive
+686,"686, 717",more close attention to my diet,two-role-action
+686,"686, 717",more close attention to my diet,action
+657,"657, 658",I,affected-emoter
+657,"657, 658",I,affected-path
+657,"657, 658",I,affected-perceiver
+657,"657, 658",I,agent-cognizant
+657,"657, 658",I,affected-cognizant
+657,"657, 658",I,affected-carrier
+657,"657, 658",I,affected-destination
+657,"657, 658",I,affected
+657,"657, 658",I,agent-carrier
+657,"657, 658",I,affected-possessed
+657,"657, 658",I,agent-perceiver
+657,"657, 658",I,affected-source
+707,"707, 717",to my diet,attribute
+707,"707, 717",to my diet,destination
+707,"707, 717",to my diet,affected-destination
+707,"707, 717",to my diet,affected-possessed
+707,"707, 717",to my diet,possessed
+782,"782, 783",I,affected-emoter
+782,"782, 783",I,agent-cognizant
+782,"782, 783",I,affected-cognizant
+782,"782, 783",I,emoter
+878,"878, 894",than the running,attribute
+804,"804, 808",that,affected-emoter
+804,"804, 808",that,affected-path
+804,"804, 808",that,affected-perceiver
+804,"804, 808",that,agent-cognizant
+804,"804, 808",that,affected-cognizant
+804,"804, 808",that,affected-carrier
+804,"804, 808",that,affected-destination
+804,"804, 808",that,affected
+804,"804, 808",that,agent-carrier
+804,"804, 808",that,affected-possessed
+804,"804, 808",that,agent-perceiver
+804,"804, 808",that,affected-source
+792,"792, 898","it was this that really started the problem ( more so, the obsessive calorie counting than the running ) .",created-phenomenon
+792,"792, 794",it,agent
+792,"792, 794",it,agent-cognizant
+792,"792, 794",it,agent-carrier
+792,"792, 794",it,agent-perceiver
+792,"792, 898","it was this that really started the problem ( more so, the obsessive calorie counting than the running ) .",process
+792,"792, 898","it was this that really started the problem ( more so, the obsessive calorie counting than the running ) .",two-role-action
+869,"869, 894",counting than the running,process
+869,"869, 894",counting than the running,attributive
+869,"869, 894",counting than the running,relational
+804,"804, 898","that really started the problem ( more so, the obsessive calorie counting than the running ) .",process
+804,"804, 898","that really started the problem ( more so, the obsessive calorie counting than the running ) .",two-role-action
+804,"804, 898","that really started the problem ( more so, the obsessive calorie counting than the running ) .",starting
+869,"869, 877",counting,main
+824,"824, 898","the problem ( more so, the obsessive calorie counting than the running ) .",phenomenon
+824,"824, 898","the problem ( more so, the obsessive calorie counting than the running ) .",created-phenomenon
+782,"782, 898","I believe it was this that really started the problem ( more so, the obsessive calorie counting than the running ) .",process
+782,"782, 898","I believe it was this that really started the problem ( more so, the obsessive calorie counting than the running ) .",emotive
+799,"799, 898","this that really started the problem ( more so, the obsessive calorie counting than the running ) .",affected-emoter
+799,"799, 898","this that really started the problem ( more so, the obsessive calorie counting than the running ) .",affected-path
+799,"799, 898","this that really started the problem ( more so, the obsessive calorie counting than the running ) .",affected-perceiver
+799,"799, 898","this that really started the problem ( more so, the obsessive calorie counting than the running ) .",affected-cognizant
+799,"799, 898","this that really started the problem ( more so, the obsessive calorie counting than the running ) .",affected-carrier
+799,"799, 898","this that really started the problem ( more so, the obsessive calorie counting than the running ) .",affected-destination
+799,"799, 898","this that really started the problem ( more so, the obsessive calorie counting than the running ) .",affected
+799,"799, 898","this that really started the problem ( more so, the obsessive calorie counting than the running ) .",affected-possessed
+799,"799, 898","this that really started the problem ( more so, the obsessive calorie counting than the running ) .",affected-source
+799,"799, 898","this that really started the problem ( more so, the obsessive calorie counting than the running ) .",range
+976,"976, 986",not eating,main
+955,"955, 971","eating ""healthy""",process
+955,"955, 971","eating ""healthy""",two-role-action
+955,"955, 971","eating ""healthy""",action
+987,"987, 1009","the ""forbidden"" foods.",affected-emoter
+987,"987, 1009","the ""forbidden"" foods.",affected-path
+987,"987, 1009","the ""forbidden"" foods.",affected-perceiver
+987,"987, 1009","the ""forbidden"" foods.",affected-cognizant
+987,"987, 1009","the ""forbidden"" foods.",affected-carrier
+987,"987, 1009","the ""forbidden"" foods.",affected-destination
+987,"987, 1009","the ""forbidden"" foods.",affected
+987,"987, 1009","the ""forbidden"" foods.",affected-possessed
+987,"987, 1009","the ""forbidden"" foods.",affected-source
+955,"955, 961",eating,main
+962,"962, 971","""healthy""",affected-emoter
+962,"962, 971","""healthy""",affected-path
+962,"962, 971","""healthy""",affected-perceiver
+962,"962, 971","""healthy""",affected-cognizant
+962,"962, 971","""healthy""",affected-carrier
+962,"962, 971","""healthy""",affected-destination
+962,"962, 971","""healthy""",affected
+962,"962, 971","""healthy""",affected-possessed
+962,"962, 971","""healthy""",affected-source
+972,"972, 1009","and not eating the ""forbidden"" foods.",process
+972,"972, 1009","and not eating the ""forbidden"" foods.",two-role-action
+972,"972, 1009","and not eating the ""forbidden"" foods.",action
+1051,"1051, 1059",starting,main
+1098,"1098, 1099",I,agent
+1098,"1098, 1099",I,agent-cognizant
+1098,"1098, 1099",I,agent-carrier
+1098,"1098, 1099",I,agent-perceiver
+1109,"1109, 1165",a little bit of a sweet food like ice cream or something,affected-emoter
+1109,"1109, 1165",a little bit of a sweet food like ice cream or something,created-phenomenon
+1109,"1109, 1165",a little bit of a sweet food like ice cream or something,affected-path
+1109,"1109, 1165",a little bit of a sweet food like ice cream or something,affected-perceiver
+1109,"1109, 1165",a little bit of a sweet food like ice cream or something,affected-cognizant
+1109,"1109, 1165",a little bit of a sweet food like ice cream or something,affected-carrier
+1109,"1109, 1165",a little bit of a sweet food like ice cream or something,affected-destination
+1109,"1109, 1165",a little bit of a sweet food like ice cream or something,affected
+1109,"1109, 1165",a little bit of a sweet food like ice cream or something,affected-possessed
+1109,"1109, 1165",a little bit of a sweet food like ice cream or something,affected-source
+1022,"1022, 1066","the end of the week, usually starting Friday",range
+1088,"1088, 1094",myself,range
+1095,"1095, 1184",if I even try a little bit of a sweet food like ice cream or something along those lines.,process
+1095,"1095, 1184",if I even try a little bit of a sweet food like ice cream or something along those lines.,tentative
+1095,"1095, 1184",if I even try a little bit of a sweet food like ice cream or something along those lines.,two-role-action
+1095,"1095, 1184",if I even try a little bit of a sweet food like ice cream or something along those lines.,action
+1066,"1066, 1069",", I",agent-cognizant
+1066,"1066, 1069",", I",agent-carrier
+1066,"1066, 1069",", I",agent-perceiver
+1166,"1166, 1184",along those lines.,affected-emoter
+1166,"1166, 1184",along those lines.,affected-path
+1166,"1166, 1184",along those lines.,affected-perceiver
+1166,"1166, 1184",along those lines.,affected-cognizant
+1166,"1166, 1184",along those lines.,affected-carrier
+1166,"1166, 1184",along those lines.,affected-destination
+1166,"1166, 1184",along those lines.,affected
+1166,"1166, 1184",along those lines.,affected-possessed
+1166,"1166, 1184",along those lines.,affected-source
+1041,"1041, 1066",", usually starting Friday",process
+1041,"1041, 1066",", usually starting Friday",one-role-action
+1195,"1195, 1248","going overboard, often just eating a whole 1/2 gallon",created-phenomenon
+1186,"1186, 1187",I,agent
+1186,"1186, 1187",I,agent-cognizant
+1186,"1186, 1187",I,agent-carrier
+1186,"1186, 1187",I,agent-perceiver
+1223,"1223, 1229",eating,main
+1186,"1186, 1264","I end up going overboard, often just eating a whole 1/2 gallon in one evening.",process
+1186,"1186, 1264","I end up going overboard, often just eating a whole 1/2 gallon in one evening.",ceasing
+1195,"1195, 1200",going,main
+1406,"1406, 1429",about my eating habits.,attribute
+1382,"1382, 1429",but I am very concerned about my eating habits.,process
+1382,"1382, 1429",but I am very concerned about my eating habits.,attributive
+1382,"1382, 1429",but I am very concerned about my eating habits.,relational
+1332,"1332, 1333",I,agent
+1332,"1332, 1333",I,agent-perceiver
+1332,"1332, 1333",I,perceiver
+1386,"1386, 1387",I,affected-carrier
+1386,"1386, 1387",I,agent-carrier
+1386,"1386, 1387",I,carrier
+1332,"1332, 1381","I'm by no means overweight, ( 5'6 and 132 lbs ) ,",process
+1332,"1332, 1381","I'm by no means overweight, ( 5'6 and 132 lbs ) ,",locational
+1501,"1501, 1585",", then go to the opposite extreme eating everything in sight that's not good for me.",process
+1501,"1501, 1585",", then go to the opposite extreme eating everything in sight that's not good for me.",action
+1501,"1501, 1585",", then go to the opposite extreme eating everything in sight that's not good for me.",one-role-action
+1455,"1455, 1461",eating,main
+1566,"1566, 1572",'s not,main
+1455,"1455, 1474",eating very healthy,process
+1455,"1455, 1474",eating very healthy,two-role-action
+1455,"1455, 1474",eating very healthy,action
+1486,"1486, 1501",the right foods,affected-emoter
+1486,"1486, 1501",the right foods,affected-path
+1486,"1486, 1501",the right foods,affected-perceiver
+1486,"1486, 1501",the right foods,affected-cognizant
+1486,"1486, 1501",the right foods,affected-carrier
+1486,"1486, 1501",the right foods,affected-destination
+1486,"1486, 1501",the right foods,affected
+1486,"1486, 1501",the right foods,affected-possessed
+1486,"1486, 1501",the right foods,affected-source
+1462,"1462, 1474",very healthy,affected-emoter
+1462,"1462, 1474",very healthy,affected-path
+1462,"1462, 1474",very healthy,affected-perceiver
+1462,"1462, 1474",very healthy,affected-cognizant
+1462,"1462, 1474",very healthy,affected-carrier
+1462,"1462, 1474",very healthy,affected-destination
+1462,"1462, 1474",very healthy,affected
+1462,"1462, 1474",very healthy,affected-possessed
+1462,"1462, 1474",very healthy,affected-source
+1573,"1573, 1577",good,range
+1562,"1562, 1585",that's not good for me.,process
+1562,"1562, 1585",that's not good for me.,two-role-action
+1562,"1562, 1585",that's not good for me.,action
+1562,"1562, 1566",that,agent
+1562,"1562, 1566",that,agent-cognizant
+1562,"1562, 1566",that,agent-carrier
+1562,"1562, 1566",that,agent-perceiver
+1479,"1479, 1485",eating,main
+1475,"1475, 1501",and eating the right foods,process
+1475,"1475, 1501",and eating the right foods,two-role-action
+1475,"1475, 1501",and eating the right foods,action
+1441,"1441, 1442",I,affected-emoter
+1441,"1441, 1442",I,agent
+1441,"1441, 1442",I,affected-path
+1441,"1441, 1442",I,affected-perceiver
+1441,"1441, 1442",I,agent-cognizant
+1441,"1441, 1442",I,affected-cognizant
+1441,"1441, 1442",I,affected-carrier
+1441,"1441, 1442",I,affected-destination
+1441,"1441, 1442",I,affected
+1441,"1441, 1442",I,affected-possessed
+1441,"1441, 1442",I,agent-perceiver
+1441,"1441, 1442",I,affected-source
+1441,"1441, 1442",I,carrier
+1441,"1441, 1442",I,perceiver
+1511,"1511, 1585",to the opposite extreme eating everything in sight that's not good for me.,affected-destination
+1607,"1607, 1614",to deal,main
+792,"792, 898","it was this that really started the problem ( more so, the obsessive calorie counting than the running ) .",action

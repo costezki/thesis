@@ -1,0 +1,416 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.26608187134502925
+,Recall,0.5909090909090909
+,F1,0.3669354838709678
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+4,4.123105625617661,"20, 27","16, 28",5,I'm new,"Hi, I'm new.",attributive,attributive
+4,4.123105625617661,"20, 27","16, 28",5,I'm new,"Hi, I'm new.",relational,relational
+2,1.0,"22, 23","21, 23",1,m,'m,main,main
+1,2.0,"20, 21","18, 21",2,I,", I",carrier,carrier
+8,25.0,"45, 88","70, 88",25,I am qualified as having an eating disorder,an eating disorder,phenomenon,phenomenon
+138,18.0,"45, 88","63, 88",18,I am qualified as having an eating disorder,having an eating disorder,relational,relational
+138,76.68767828015137,"45, 88","29, 163",91,I am qualified as having an eating disorder,"I'm not sure if I am qualified as having an eating disorder, but I am certainly obsessed with food and my weight and my big fat belly.",attributive,attributive
+20,0.0,"175, 193","175, 193",0,a bout of anorexia,a bout of anorexia,possessed,possessed
+17,0.0,"170, 174","170, 174",0,have,have,main,main
+22,0.0,"213, 217","213, 217",0,that,that,carrier,carrier
+23,0.0,"218, 220","218, 220",0,is,is,main,main
+15,6.082762530298219,"164, 207","170, 208",7,I did have a bout of anorexia as a teenager,"have a bout of anorexia as a teenager,",relational,relational
+15,6.082762530298219,"164, 207","170, 208",7,I did have a bout of anorexia as a teenager,"have a bout of anorexia as a teenager,",possessive,possessive
+21,4.123105625617661,"213, 239","209, 240",5,that is no longer the case,but that is no longer the case.,relational,relational
+130,0.0,"307, 310","307, 310",0,was,was,main,main
+31,62.0,"241, 252","241, 314",62,I am now 32,I am now 32 and am still having these obsessions as I did since I was 13.,attributive,attributive
+32,29.68164415931166,"257, 289","241, 314",41,am still having these obsessions,I am now 32 and am still having these obsessions as I did since I was 13.,relational,relational
+125,0.0,"241, 242","241, 242",0,I,I,carrier,carrier
+131,1.0,"311, 313","311, 314",1,13,13.,attribute,attribute
+34,6.082762530298219,"305, 313","299, 314",7,I was 13,since I was 13.,attributive,attributive
+34,6.082762530298219,"305, 313","299, 314",7,I was 13,since I was 13.,relational,relational
+127,0.0,"243, 245","243, 245",0,am,am,main,main
+129,0.0,"305, 306","305, 306",0,I,I,carrier,carrier
+40,0.0,"315, 316","315, 316",0,I,I,agent,agent
+48,63.0317380372777,"357, 370","315, 417",89,use laxatives,"I exercise 1 and 1/2 to 2 hours a day and use laxatives, but not overuse, just the recommended dosage.",action,action
+45,0.0,"317, 325","317, 325",0,exercise,exercise,main,main
+50,3.0,"433, 441","433, 438",3,throw up,throw,main,main
+51,1.0,"442, 449","442, 450",1,my food,"my food,",affected,affected
+53,21.0,"418, 449","418, 470",21,I occasionally throw up my food,"I occasionally throw up my food, but not that often.",action,action
+49,0.0,"418, 419","418, 419",0,I,I,agent,agent
+57,1.0,"471, 492","471, 493",1,I also use diet pills,I also use diet pills.,action,action
+56,1.0,"482, 492","482, 493",1,diet pills,diet pills.,affected,affected
+54,0.0,"471, 472","471, 472",0,I,I,agent,agent
+55,0.0,"478, 481","478, 481",0,use,use,main,main
+24,0.0,"506, 513","506, 513",0,measure,measure,main,main
+59,0.0,"496, 501","496, 501",0,weigh,weigh,main,main
+73,18.027756377319946,"611, 654","629, 655",19,I am at home with the food most of the time,the food most of the time.,relational,relational
+64,0.0,"544, 546","544, 546",0,am,am,main,main
+68,0.0,"592, 597","592, 597",0,leave,leave,main,main
+70,0.0,"611, 612","611, 612",0,I,I,carrier,carrier
+73,43.139309220245984,"611, 654","581, 623",30,I am at home with the food most of the time,and rarely leave the house so I am at home,locational,locational
+134,19.4164878389476,"592, 607","581, 623",27,leave the house,and rarely leave the house so I am at home,directional,directional
+71,0.0,"613, 615","613, 615",0,am,am,main,main
+69,0.0,"598, 607","598, 607",0,the house,the house,source,source
+78,25.0,"713, 720","713, 745",25,to cook,to cook so we always have plenty,phenomenon,phenomenon
+85,25.317977802344327,"706, 720","702, 745",29,I love to cook,and I love to cook so we always have plenty,mental,mental
+84,0.0,"708, 712","708, 712",0,love,love,main,main
+81,17.204650534085253,"739, 753","749, 767",15,plenty of food,food in the house.,possessed,possessed
+75,3.0,"667, 677","667, 674",3,insists on,insists,main,main
+77,0.0,"706, 707","706, 707",0,I,I,emoter,emoter
+79,0.0,"724, 726","724, 726",0,we,we,carrier,carrier
+86,21.213203435596427,"724, 766","721, 745",24,we always have plenty of food in the house,so we always have plenty,relational,relational
+86,21.213203435596427,"724, 766","721, 745",24,we always have plenty of food in the house,so we always have plenty,possessive,possessive
+80,0.0,"734, 738","734, 738",0,have,have,main,main
+90,1.0,"768, 804","768, 805",1,My problem is with compulsive eating,My problem is with compulsive eating.,relational,relational
+88,0.0,"779, 781","779, 781",0,is,is,main,main
+93,0.0,"812, 827","812, 827",0,to limit myself,to limit myself,phenomenon,phenomenon
+44,0.0,"919, 920","919, 920",0,I,I,agent,agent
+92,0.0,"808, 811","808, 811",0,try,try,main,main
+94,1.0,"806, 827","806, 828",1,I try to limit myself,"I try to limit myself,",influential,influential
+99,4.0,"902, 913","902, 909",4,waiting for,waiting,main,main
+97,0.0,"838, 847","838, 847",0,so hungry,so hungry,attribute,attribute
+96,0.0,"835, 837","835, 837",0,am,am,main,main
+91,0.0,"806, 807","806, 807",0,I,I,agent,agent
+102,72.11102550927978,"833, 863","829, 935",76,I am so hungry all of the time,"but I am so hungry all of the time and always thinking of food, and just waiting for when I can eat again.",attributive,attributive
+102,72.11102550927978,"833, 863","829, 935",76,I am so hungry all of the time,"but I am so hungry all of the time and always thinking of food, and just waiting for when I can eat again.",relational,relational
+95,0.0,"833, 834","833, 834",0,I,I,carrier,carrier
+133,0.0,"925, 928","925, 928",0,eat,eat,main,main
+107,0.0,"939, 941","939, 941",0,is,is,main,main
+109,1.0,"936, 954","936, 955",1,It is like torture,It is like torture.,attributive,attributive
+109,1.0,"936, 954","936, 955",1,It is like torture,It is like torture.,relational,relational
+108,1.0,"942, 954","942, 955",1,like torture,like torture.,attribute,attribute
+106,0.0,"936, 938","936, 938",0,It,It,carrier,carrier
+101,3.0,"990, 998","987, 998",3,restrict,to restrict,main,main
+111,0.0,"958, 962","958, 962",0,want,want,main,main
+100,0.0,"956, 975","956, 975",0,I want food so much,I want food so much,mental,mental
+114,0.0,"980, 981","980, 981",0,I,I,agent,agent
+112,0.0,"963, 967","963, 967",0,food,food,phenomenon,phenomenon
+110,0.0,"956, 957","956, 957",0,I,I,emoter,emoter
+141,0.0,"1082, 1084","1082, 1084",0,is,is,main,main
+143,3.1622776601683795,"1076, 1094","1073, 1095",4,there is a problem,if there is a problem.,locational,locational
+143,3.1622776601683795,"1076, 1094","1073, 1095",4,there is a problem,if there is a problem.,relational,relational
+142,1.0,"1085, 1094","1085, 1095",1,a problem,a problem.,carrier,carrier
+123,4.0,"1068, 1072","1064, 1072",4,know,n't know,main,main
+119,0.0,"1009, 1011","1009, 1011",0,am,am,main,main
+28,0.0,"1104, 1107","1104, 1107",0,you,you,cognizant,cognizant
+30,0.0,"1096, 1100","1096, 1100",0,What,What,phenomenon,phenomenon
+26,1.0,"1096, 1113","1096, 1114",1,What do you think,What do you think?,mental,mental
+26,1.0,"1096, 1113","1096, 1114",1,What do you think,What do you think?,two-role-cognition,two-role-cognition
+29,0.0,"1108, 1113","1108, 1113",0,think,think,main,main
+128,62.0,"250, 252","250, 314",62,32,32 and am still having these obsessions as I did since I was 13.,attribute,attribute
+,
+,Manual mismatching all parsed (False Negative)
+3,"24, 27",new,attribute
+9,"29, 88",I'm not sure if I am qualified as having an eating disorder,mental
+9,"29, 88",I'm not sure if I am qualified as having an eating disorder,two-role-cognition
+5,"29, 30",I,cognizant
+7,"37, 41",sure,main
+113,"45, 46",I,carrier
+136,"47, 49",am,main
+137,"50, 88",qualified as having an eating disorder,attribute
+14,"94, 162",I am certainly obsessed with food and my weight and my big fat belly,mental
+10,"94, 95",I,emoter
+12,"109, 122",obsessed with,main
+13,"123, 162",food and my weight and my big fat belly,phenomenon
+16,"164, 165",I,carrier
+21,"213, 239",that is no longer the case,attributive
+25,"231, 239",the case,attribute
+31,"241, 252",I am now 32,relational
+32,"257, 289",am still having these obsessions,possessive
+38,"266, 272",having,main
+39,"273, 289",these obsessions,possessed
+33,"293, 298",I did,relational
+33,"293, 298",I did,possessive
+36,"293, 294",I,carrier
+47,"315, 352",I exercise 1 and 1/2 to 2 hours a day,action
+46,"357, 360",use,main
+42,"361, 370",laxatives,affected
+132,"380, 416","overuse, just the recommended dosage",action
+43,"380, 387",overuse,main
+19,"494, 501",I weigh,action
+58,"494, 495",I,agent
+41,"506, 540",measure myself several times a day,action
+60,"514, 520",myself,affected
+61,"542, 564",I am also mentally ill,relational
+61,"542, 564",I am also mentally ill,attributive
+63,"542, 543",I,carrier
+65,"552, 564",mentally ill,attribute
+62,"569, 580",cannot work,action
+67,"576, 580",work,main
+134,"592, 607",leave the house,relational
+135,"616, 623",at home,location
+83,"656, 701",My husband insists on having snacks available,mental
+74,"656, 666",My husband,emoter
+76,"678, 701",having snacks available,phenomenon
+90,"768, 804",My problem is with compulsive eating,attributive
+87,"768, 778",My problem,carrier
+89,"782, 804",with compulsive eating,attribute
+104,"868, 891",always thinking of food,mental
+104,"868, 891",always thinking of food,two-role-cognition
+98,"875, 886",thinking of,main
+103,"887, 891",food,phenomenon
+82,"902, 934",waiting for when I can eat again,mental
+72,"914, 934",when I can eat again,phenomenon
+139,"919, 934",I can eat again,action
+117,"980, 1005",I have to restrict myself,action
+116,"999, 1005",myself,affected
+126,"1007, 1055",I am at the high end of the healthy weight range,relational
+126,"1007, 1055",I am at the high end of the healthy weight range,locational
+118,"1007, 1008",I,affected-carrier
+120,"1012, 1055",at the high end of the healthy weight range,location
+124,"1060, 1094",I don't know if there is a problem,mental
+124,"1060, 1094",I don't know if there is a problem,two-role-cognition
+121,"1060, 1061",I,cognizant
+122,"1076, 1094",there is a problem,phenomenon
+140,"1076, 1081",there,location
+,
+,Parsed mismatching all manual (False Positives)
+16,"16, 19","Hi,",attribute
+16,"16, 19","Hi,",location
+16,"16, 28","Hi, I'm new.",process
+16,"16, 28","Hi, I'm new.",locational
+18,"18, 21",", I",affected-carrier
+18,"18, 21",", I",agent-carrier
+63,"63, 69",having,main
+29,"29, 30",I,affected-carrier
+29,"29, 30",I,agent-carrier
+29,"29, 30",I,carrier
+30,"30, 36",'m not,main
+70,"70, 88",an eating disorder,affected-emoter
+70,"70, 88",an eating disorder,created-phenomenon
+70,"70, 88",an eating disorder,affected-path
+70,"70, 88",an eating disorder,affected-perceiver
+70,"70, 88",an eating disorder,affected-cognizant
+70,"70, 88",an eating disorder,affected-carrier
+70,"70, 88",an eating disorder,affected-destination
+70,"70, 88",an eating disorder,affected
+70,"70, 88",an eating disorder,affected-possessed
+70,"70, 88",an eating disorder,affected-source
+70,"70, 88",an eating disorder,created
+70,"70, 88",an eating disorder,possessed
+63,"63, 88",having an eating disorder,process
+63,"63, 88",having an eating disorder,causative
+63,"63, 88",having an eating disorder,possessive
+63,"63, 88",having an eating disorder,two-role-action
+63,"63, 88",having an eating disorder,action
+88,"88, 163",", but I am certainly obsessed with food and my weight and my big fat belly.",attribute
+88,"88, 163",", but I am certainly obsessed with food and my weight and my big fat belly.",location
+29,"29, 163","I'm not sure if I am qualified as having an eating disorder, but I am certainly obsessed with food and my weight and my big fat belly.",process
+29,"29, 163","I'm not sure if I am qualified as having an eating disorder, but I am certainly obsessed with food and my weight and my big fat belly.",locational
+29,"29, 163","I'm not sure if I am qualified as having an eating disorder, but I am certainly obsessed with food and my weight and my big fat belly.",relational
+50,"50, 59",qualified,main
+175,"175, 193",a bout of anorexia,phenomenon
+175,"175, 193",a bout of anorexia,affected-emoter
+175,"175, 193",a bout of anorexia,created-phenomenon
+175,"175, 193",a bout of anorexia,affected-path
+175,"175, 193",a bout of anorexia,affected-perceiver
+175,"175, 193",a bout of anorexia,affected-cognizant
+175,"175, 193",a bout of anorexia,affected-carrier
+175,"175, 193",a bout of anorexia,affected-destination
+175,"175, 193",a bout of anorexia,affected
+175,"175, 193",a bout of anorexia,affected-possessed
+175,"175, 193",a bout of anorexia,affected-source
+175,"175, 193",a bout of anorexia,created
+175,"175, 193",a bout of anorexia,carrier
+213,"213, 217",that,affected-carrier
+213,"213, 217",that,agent-carrier
+170,"170, 208","have a bout of anorexia as a teenager,",process
+170,"170, 208","have a bout of anorexia as a teenager,",causative
+170,"170, 208","have a bout of anorexia as a teenager,",two-role-action
+170,"170, 208","have a bout of anorexia as a teenager,",action
+194,"194, 207",as a teenager,phenomenon
+194,"194, 207",as a teenager,affected-emoter
+194,"194, 207",as a teenager,created-phenomenon
+194,"194, 207",as a teenager,affected-path
+194,"194, 207",as a teenager,affected-perceiver
+194,"194, 207",as a teenager,affected-cognizant
+194,"194, 207",as a teenager,affected-carrier
+194,"194, 207",as a teenager,affected-destination
+194,"194, 207",as a teenager,affected
+194,"194, 207",as a teenager,affected-possessed
+194,"194, 207",as a teenager,affected-source
+194,"194, 207",as a teenager,created
+194,"194, 207",as a teenager,possessed
+231,"231, 240",the case.,location
+209,"209, 240",but that is no longer the case.,process
+209,"209, 240",but that is no longer the case.,locational
+166,"166, 169",did,main
+250,"250, 314",32 and am still having these obsessions as I did since I was 13.,location
+241,"241, 314",I am now 32 and am still having these obsessions as I did since I was 13.,process
+241,"241, 314",I am now 32 and am still having these obsessions as I did since I was 13.,locational
+241,"241, 242",I,affected-carrier
+241,"241, 242",I,agent-carrier
+311,"311, 314",13.,location
+295,"295, 298",did,main
+299,"299, 314",since I was 13.,process
+299,"299, 314",since I was 13.,locational
+305,"305, 306",I,affected-carrier
+305,"305, 306",I,agent-carrier
+315,"315, 316",I,agent-cognizant
+315,"315, 316",I,agent-carrier
+315,"315, 316",I,agent-perceiver
+315,"315, 417","I exercise 1 and 1/2 to 2 hours a day and use laxatives, but not overuse, just the recommended dosage.",process
+315,"315, 417","I exercise 1 and 1/2 to 2 hours a day and use laxatives, but not overuse, just the recommended dosage.",two-role-action
+326,"326, 371","1 and 1/2 to 2 hours a day and use laxatives,",range
+442,"442, 450","my food,",affected-emoter
+442,"442, 450","my food,",created-phenomenon
+442,"442, 450","my food,",affected-path
+442,"442, 450","my food,",affected-perceiver
+442,"442, 450","my food,",affected-cognizant
+442,"442, 450","my food,",affected-carrier
+442,"442, 450","my food,",affected-destination
+442,"442, 450","my food,",affected-possessed
+442,"442, 450","my food,",affected-source
+442,"442, 450","my food,",created
+442,"442, 450","my food,",carrier
+418,"418, 470","I occasionally throw up my food, but not that often.",process
+418,"418, 470","I occasionally throw up my food, but not that often.",directional
+418,"418, 470","I occasionally throw up my food, but not that often.",relational
+418,"418, 470","I occasionally throw up my food, but not that often.",two-role-action
+418,"418, 419",I,agent-cognizant
+418,"418, 419",I,agent-carrier
+418,"418, 419",I,agent-perceiver
+471,"471, 493",I also use diet pills.,process
+471,"471, 493",I also use diet pills.,two-role-action
+482,"482, 493",diet pills.,affected-emoter
+482,"482, 493",diet pills.,affected-path
+482,"482, 493",diet pills.,affected-perceiver
+482,"482, 493",diet pills.,affected-cognizant
+482,"482, 493",diet pills.,affected-carrier
+482,"482, 493",diet pills.,affected-destination
+482,"482, 493",diet pills.,affected-possessed
+482,"482, 493",diet pills.,affected-source
+471,"471, 472",I,agent-cognizant
+471,"471, 472",I,agent-carrier
+471,"471, 472",I,agent-perceiver
+629,"629, 655",the food most of the time.,process
+629,"629, 655",the food most of the time.,attributive
+611,"611, 612",I,affected-carrier
+611,"611, 612",I,agent-carrier
+581,"581, 623",and rarely leave the house so I am at home,process
+581,"581, 623",and rarely leave the house so I am at home,two-role-action
+581,"581, 623",and rarely leave the house so I am at home,action
+598,"598, 607",the house,affected-emoter
+598,"598, 607",the house,affected-path
+598,"598, 607",the house,affected-perceiver
+598,"598, 607",the house,location
+598,"598, 607",the house,affected-cognizant
+598,"598, 607",the house,affected-carrier
+598,"598, 607",the house,affected-destination
+598,"598, 607",the house,affected
+598,"598, 607",the house,affected-possessed
+598,"598, 607",the house,affected-source
+629,"629, 642",the food most,attribute
+643,"643, 655",of the time.,attribute
+713,"713, 745",to cook so we always have plenty,created-phenomenon
+713,"713, 745",to cook so we always have plenty,process
+713,"713, 745",to cook so we always have plenty,action
+713,"713, 745",to cook so we always have plenty,one-role-action
+702,"702, 745",and I love to cook so we always have plenty,process
+702,"702, 745",and I love to cook so we always have plenty,emotive
+749,"749, 767",food in the house.,phenomenon
+749,"749, 767",food in the house.,affected-emoter
+749,"749, 767",food in the house.,created-phenomenon
+749,"749, 767",food in the house.,affected-path
+749,"749, 767",food in the house.,affected-perceiver
+749,"749, 767",food in the house.,affected-cognizant
+749,"749, 767",food in the house.,affected-carrier
+749,"749, 767",food in the house.,affected-destination
+749,"749, 767",food in the house.,affected
+749,"749, 767",food in the house.,affected-possessed
+749,"749, 767",food in the house.,affected-source
+749,"749, 767",food in the house.,created
+706,"706, 707",I,affected-emoter
+724,"724, 726",we,agent
+724,"724, 726",we,agent-cognizant
+724,"724, 726",we,affected-carrier
+724,"724, 726",we,affected
+724,"724, 726",we,agent-carrier
+724,"724, 726",we,agent-perceiver
+724,"724, 726",we,perceiver
+713,"713, 720",to cook,main
+721,"721, 745",so we always have plenty,process
+721,"721, 745",so we always have plenty,causative
+721,"721, 745",so we always have plenty,two-role-action
+721,"721, 745",so we always have plenty,action
+678,"678, 691",having snacks,main
+768,"768, 778",My problem,agent
+768,"768, 778",My problem,agent-perceiver
+768,"768, 778",My problem,perceiver
+782,"782, 805",with compulsive eating.,matchee
+768,"768, 805",My problem is with compulsive eating.,process
+768,"768, 805",My problem is with compulsive eating.,matching
+812,"812, 827",to limit myself,created-phenomenon
+821,"821, 827",myself,affected-emoter
+821,"821, 827",myself,affected-path
+821,"821, 827",myself,affected-perceiver
+821,"821, 827",myself,affected-cognizant
+821,"821, 827",myself,affected-carrier
+821,"821, 827",myself,affected-destination
+821,"821, 827",myself,affected
+821,"821, 827",myself,affected-possessed
+821,"821, 827",myself,affected-source
+919,"919, 920",I,agent-cognizant
+919,"919, 920",I,agent-carrier
+919,"919, 920",I,agent-perceiver
+806,"806, 828","I try to limit myself,",process
+806,"806, 828","I try to limit myself,",tentative
+812,"812, 820",to limit,main
+812,"812, 827",to limit myself,process
+812,"812, 827",to limit myself,two-role-action
+812,"812, 827",to limit myself,action
+914,"914, 918",when,affected-emoter
+914,"914, 918",when,affected-path
+914,"914, 918",when,affected-perceiver
+914,"914, 918",when,affected-cognizant
+914,"914, 918",when,affected-carrier
+914,"914, 918",when,affected-destination
+914,"914, 918",when,affected
+914,"914, 918",when,affected-possessed
+914,"914, 918",when,affected-source
+806,"806, 807",I,agent-cognizant
+806,"806, 807",I,agent-carrier
+806,"806, 807",I,agent-perceiver
+829,"829, 935","but I am so hungry all of the time and always thinking of food, and just waiting for when I can eat again.",process
+833,"833, 834",I,affected-carrier
+833,"833, 834",I,agent-carrier
+936,"936, 955",It is like torture.,process
+936,"936, 938",It,affected-carrier
+936,"936, 938",It,agent-carrier
+987,"987, 1006",to restrict myself.,phenomenon
+987,"987, 1006",to restrict myself.,created-phenomenon
+987,"987, 1006",to restrict myself.,created
+956,"956, 975",I want food so much,process
+956,"956, 975",I want food so much,desiderative
+982,"982, 986",have,main
+980,"980, 981",I,agent-cognizant
+980,"980, 981",I,agent-carrier
+980,"980, 981",I,agent-perceiver
+963,"963, 967",food,created-phenomenon
+976,"976, 1006",and I have to restrict myself.,process
+976,"976, 1006",and I have to restrict myself.,causative
+976,"976, 1006",and I have to restrict myself.,influential
+956,"956, 957",I,affected-emoter
+1012,"1012, 1055",at the high end of the healthy weight range,affected-emoter
+1012,"1012, 1055",at the high end of the healthy weight range,affected-path
+1012,"1012, 1055",at the high end of the healthy weight range,affected-perceiver
+1012,"1012, 1055",at the high end of the healthy weight range,affected-cognizant
+1012,"1012, 1055",at the high end of the healthy weight range,affected-carrier
+1012,"1012, 1055",at the high end of the healthy weight range,affected-destination
+1012,"1012, 1055",at the high end of the healthy weight range,affected
+1012,"1012, 1055",at the high end of the healthy weight range,affected-possessed
+1012,"1012, 1055",at the high end of the healthy weight range,affected-source
+1007,"1007, 1008",I,agent
+1007,"1007, 1008",I,agent-cognizant
+1007,"1007, 1008",I,agent-carrier
+1007,"1007, 1008",I,agent-perceiver
+1007,"1007, 1059","I am at the high end of the healthy weight range, so",process
+1007,"1007, 1059","I am at the high end of the healthy weight range, so",two-role-action
+1007,"1007, 1059","I am at the high end of the healthy weight range, so",action
+1073,"1073, 1095",if there is a problem.,process
+1085,"1085, 1095",a problem.,affected-carrier
+1085,"1085, 1095",a problem.,agent-carrier
+1104,"1104, 1107",you,agent
+1104,"1104, 1107",you,agent-cognizant
+1104,"1104, 1107",you,affected-cognizant
+1104,"1104, 1107",you,affected
+1096,"1096, 1100",What,created-phenomenon
+1096,"1096, 1114",What do you think?,process

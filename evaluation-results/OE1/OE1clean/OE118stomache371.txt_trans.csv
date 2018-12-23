@@ -1,0 +1,892 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.2175032175032175
+,Recall,0.6190476190476191
+,F1,0.3219047619047619
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+6,26.248809496813376,"42, 65","25, 85",37,part of the Yahoo group,29 and have been part of the Yahoo group for about 6 months.,attribute,attribute
+1,0.0,"20, 21","20, 21",0,I,I,carrier,carrier
+2,0.0,"22, 24","22, 24",0,am,am,main,main
+165,12.041594578792296,"32, 84","20, 85",13,have been part of the Yahoo group for about 6 months,I am 29 and have been part of the Yahoo group for about 6 months.,attributive,attributive
+165,12.041594578792296,"32, 84","20, 85",13,have been part of the Yahoo group for about 6 months,I am 29 and have been part of the Yahoo group for about 6 months.,relational,relational
+9,0.0,"93, 102","93, 102",0,your post,your post,range,range
+251,0.0,"137, 140","137, 140",0,you,you,agent,agent
+254,1.0,"132, 151","132, 152",1,what you are saying,what you are saying.,mental,mental
+12,25.019992006393608,"107, 151","132, 152",26,understand many parts of what you are saying,what you are saying.,two-role-cognition,two-role-cognition
+254,1.0,"132, 151","132, 152",1,what you are saying,what you are saying.,three-role-cognition,three-role-cognition
+7,0.0,"86, 87","86, 87",0,I,I,agent,agent
+10,0.0,"107, 117","107, 117",0,understand,understand,main,main
+253,0.0,"145, 151","145, 151",0,saying,saying,main,main
+197,0.0,"132, 136","132, 136",0,what,what,phenomenon,phenomenon
+8,0.0,"88, 92","88, 92",0,read,read,main,main
+18,0.0,"160, 165","160, 165",0,lived,lived,main,main
+13,1.0,"153, 196","153, 197",1,I have lived most of my twenties overweight,I have lived most of my twenties overweight.,relational,relational
+16,0.0,"153, 154","153, 154",0,I,I,carrier,carrier
+231,0.0,"265, 266","265, 266",0,I,I,carrier,carrier
+24,2.0,"283, 284","281, 284",2,I,", I",agent-cognizant,agent-cognizant
+25,0.0,"285, 292","285, 292",0,decided,decided,main,main
+232,0.0,"267, 270","267, 270",0,was,was,main,main
+14,29.0,"198, 281","198, 310",29,After a 4-year-relationship with someone who reminded me every day I was overweight,"After a 4-year-relationship with someone who reminded me every day I was overweight, I decided to get on a diet.",mental,mental
+15,85.00588214941364,"283, 309","198, 310",86,I decided to get on a diet,"After a 4-year-relationship with someone who reminded me every day I was overweight, I decided to get on a diet.",two-role-cognition,two-role-cognition
+26,1.0,"293, 309","293, 310",1,to get on a diet,to get on a diet.,phenomenon,phenomenon
+21,0.0,"243, 251","243, 251",0,reminded,reminded,main,main
+23,61.0,"265, 281","204, 281",61,I was overweight,a 4-year-relationship with someone who reminded me every day I was overweight,phenomenon,phenomenon
+22,55.072679252057455,"252, 254","204, 281",75,me,a 4-year-relationship with someone who reminded me every day I was overweight,affected-cognizant,affected-cognizant
+28,0.0,"314, 321","314, 321",0,started,started,main,main
+27,0.0,"311, 313","311, 313",0,It,It,agent,agent
+167,1.0,"311, 339","311, 340",1,It started innocently enough,It started innocently enough.,action,action
+168,1.0,"341, 385","341, 386",1,Someone I knew lost 150 pounds on the Atkins,Someone I knew lost 150 pounds on the Atkins.,possessive,possessive
+31,0.0,"356, 360","356, 360",0,lost,lost,main,main
+32,0.0,"361, 371","361, 371",0,150 pounds,150 pounds,affected-possessed,affected-possessed
+30,0.0,"341, 355","341, 355",0,Someone I knew,Someone I knew,affected-carrier,affected-carrier
+169,1.0,"387, 457","387, 458",1,I have read that for many it starts with a simple diet that goes wrong,I have read that for many it starts with a simple diet that goes wrong.,mental,mental
+37,0.0,"416, 422","416, 422",0,starts,starts,main,main
+35,0.0,"394, 398","394, 398",0,read,read,main,main
+36,0.0,"413, 415","413, 415",0,it,it,created-phenomenon,created-phenomenon
+38,5.0990195135927845,"404, 457","399, 458",6,for many it starts with a simple diet that goes wrong,that for many it starts with a simple diet that goes wrong.,action,action
+29,5.0990195135927845,"404, 457","399, 458",6,for many it starts with a simple diet that goes wrong,that for many it starts with a simple diet that goes wrong.,phenomenon,phenomenon
+33,0.0,"387, 388","387, 388",0,I,I,agent-perceiver,agent-perceiver
+44,6.082762530298219,"472, 481","466, 482",7,80 pounds,about 80 pounds.,affected-possessed,affected-possessed
+42,0.0,"459, 460","459, 460",0,I,I,affected-carrier,affected-carrier
+172,1.0,"459, 481","459, 482",1,I lost about 80 pounds,I lost about 80 pounds.,possessive,possessive
+43,0.0,"461, 465","461, 465",0,lost,lost,main,main
+46,0.0,"490, 503","490, 503",0,congratulated,congratulated,main,main
+49,0.0,"515, 524","515, 524",0,plateaued,plateaued,main,main
+53,1.0,"548, 561","548, 562",1,another pound,another pound.,affected-possessed,affected-possessed
+50,0.0,"526, 527","526, 527",0,I,I,agent-carrier,agent-carrier
+52,4.0,"543, 547","539, 547",4,lose,not lose,main,main
+170,0.0,"578, 588","578, 588",0,I was fine,I was fine,attributive,attributive
+170,0.0,"578, 588","578, 588",0,I was fine,I was fine,relational,relational
+40,0.0,"580, 583","580, 583",0,was,was,main,main
+54,0.0,"563, 569","563, 569",0,People,People,agent,agent
+60,4.0,"604, 608","600, 608",4,want,not want,main,main
+39,0.0,"578, 579","578, 579",0,I,I,carrier,carrier
+177,4.123105625617661,"594, 619","590, 620",5,I did not want to be fine,but I did not want to be fine.,mental,mental
+176,11.0,"563, 588","563, 577",11,People told me I was fine,People told me,mental,mental
+41,0.0,"584, 588","584, 588",0,fine,fine,attribute,attribute
+58,0.0,"594, 595","594, 595",0,I,I,emoter,emoter
+61,1.0,"609, 619","609, 620",1,to be fine,to be fine.,phenomenon,phenomenon
+55,0.0,"570, 574","570, 574",0,told,told,main,main
+63,0.0,"623, 627","623, 627",0,knew,knew,main,main
+204,21.0,"649, 674","628, 674",21,I still had bulges of fat,that without clothes I still had bulges of fat,relational,relational
+204,21.0,"649, 674","628, 674",21,I still had bulges of fat,that without clothes I still had bulges of fat,possessive,possessive
+64,5.0,"633, 674","628, 674",5,without clothes I still had bulges of fat,that without clothes I still had bulges of fat,phenomenon,phenomenon
+202,0.0,"657, 660","657, 660",0,had,had,main,main
+65,0.0,"679, 681","679, 681",0,it,it,agent,agent
+66,0.0,"682, 690","682, 690",0,bothered,bothered,main,main
+67,1.0,"691, 693","691, 694",1,me,me.,affected,affected
+178,0.0,"621, 674","621, 674",0,I knew that without clothes I still had bulges of fat,I knew that without clothes I still had bulges of fat,mental,mental
+178,0.0,"621, 674","621, 674",0,I knew that without clothes I still had bulges of fat,I knew that without clothes I still had bulges of fat,two-role-cognition,two-role-cognition
+203,0.0,"661, 674","661, 674",0,bulges of fat,bulges of fat,possessed,possessed
+62,0.0,"621, 622","621, 622",0,I,I,cognizant,cognizant
+179,4.123105625617661,"679, 693","675, 694",5,it bothered me,and it bothered me.,action,action
+201,0.0,"649, 650","649, 650",0,I,I,carrier,carrier
+69,0.0,"710, 717","710, 717",0,started,started,main,main
+235,0.0,"700, 702","700, 702",0,is,is,main,main
+77,0.0,"769, 785","769, 785",0,I felt were safe,I felt were safe,mental,mental
+76,0.0,"776, 785","776, 785",0,were safe,were safe,phenomenon,phenomenon
+180,23.0,"745, 785","745, 808",23,I started picking foods I felt were safe,I started picking foods I felt were safe and then purging them.,influential,influential
+72,0.0,"745, 746","745, 746",0,I,I,agent,agent
+73,0.0,"747, 754","747, 754",0,started,started,main,main
+75,0.0,"795, 802","795, 802",0,purging,purging,main,main
+74,23.0,"755, 785","755, 808",23,picking foods I felt were safe,picking foods I felt were safe and then purging them.,phenomenon,phenomenon
+206,0.0,"771, 775","771, 775",0,felt,felt,main,main
+209,0.0,"820, 823","820, 823",0,was,was,main,main
+80,0.0,"847, 850","847, 850",0,get,get,main,main
+183,27.202941017470888,"832, 871","840, 897",34,some of it did get into my blood stream,it did get into my blood stream at least it was low carb.,directional,directional
+187,24.020824298928627,"966, 1001","990, 1002",25,all the programs seemed to be women,to be women.,attributive,attributive
+187,24.020824298928627,"966, 1001","990, 1002",25,all the programs seemed to be women,to be women.,relational,relational
+94,1.0,"996, 1001","996, 1002",1,women,women.,attribute,attribute
+238,3.0,"993, 995","990, 995",3,be,to be,main,main
+87,0.0,"910, 914","910, 914",0,been,been,main,main
+188,1.0,"1003, 1097","1003, 1098",1,I did not want to go to a support group surrounded by women sharing thoughts of chocolate cake,I did not want to go to a support group surrounded by women sharing thoughts of chocolate cake.,mental,mental
+97,4.0,"1013, 1017","1009, 1017",4,want,not want,main,main
+98,1.0,"1018, 1097","1018, 1098",1,to go to a support group surrounded by women sharing thoughts of chocolate cake,to go to a support group surrounded by women sharing thoughts of chocolate cake.,phenomenon,phenomenon
+95,0.0,"1003, 1004","1003, 1004",0,I,I,emoter,emoter
+103,0.0,"1099, 1133","1099, 1133",0,I told a few friends I was bulimic,I told a few friends I was bulimic,mental,mental
+100,0.0,"1101, 1105","1101, 1105",0,told,told,main,main
+106,1.0,"1152, 1177","1152, 1178",1,two interesting reactions,two interesting reactions.,phenomenon,phenomenon
+239,0.0,"1120, 1121","1120, 1121",0,I,I,carrier,carrier
+104,0.0,"1138, 1139","1138, 1139",0,I,I,perceiver,perceiver
+240,0.0,"1122, 1125","1122, 1125",0,was,was,main,main
+241,0.0,"1126, 1133","1126, 1133",0,bulimic,bulimic,attribute,attribute
+105,0.0,"1140, 1151","1140, 1151",0,experienced,experienced,main,main
+102,14.0,"1120, 1133","1106, 1133",14,I was bulimic,a few friends I was bulimic,phenomenon,phenomenon
+242,0.0,"1120, 1133","1120, 1133",0,I was bulimic,I was bulimic,attributive,attributive
+242,0.0,"1120, 1133","1120, 1133",0,I was bulimic,I was bulimic,relational,relational
+189,4.123105625617661,"1138, 1177","1134, 1178",5,I experienced two interesting reactions,and I experienced two interesting reactions.,mental,mental
+189,4.123105625617661,"1138, 1177","1134, 1178",5,I experienced two interesting reactions,and I experienced two interesting reactions.,two-role-perception,two-role-perception
+99,0.0,"1099, 1100","1099, 1100",0,I,I,agent,agent
+192,26.30589287593181,"1223, 1259","1197, 1263",30,starving yourself doesn't seem silly,I was being silly ( funny starving yourself doesn't seem silly ) .,relational,relational
+115,0.0,"1254, 1259","1254, 1259",0,silly,silly,attribute,attribute
+214,0.0,"1209, 1214","1209, 1214",0,silly,silly,attribute,attribute
+213,0.0,"1203, 1208","1203, 1208",0,being,being,main,main
+112,9.0,"1223, 1240","1232, 1240",9,starving yourself,yourself,carrier,carrier
+114,4.0,"1249, 1253","1245, 1253",4,seem,n't seem,main,main
+108,0.0,"1189, 1193","1189, 1193",0,told,told,main,main
+192,9.0,"1223, 1259","1232, 1259",9,starving yourself doesn't seem silly,yourself doesn't seem silly,attributive,attributive
+211,0.0,"1197, 1198","1197, 1198",0,I,I,carrier,carrier
+121,0.0,"1316, 1318","1316, 1318",0,am,am,main,main
+117,0.0,"1275, 1282","1275, 1282",0,started,started,main,main
+219,0.0,"1391, 1412","1391, 1412",0,I have a bulimic past,I have a bulimic past,relational,relational
+219,0.0,"1391, 1412","1391, 1412",0,I have a bulimic past,I have a bulimic past,possessive,possessive
+223,1.0,"1434, 1460","1434, 1461",1,I have a sensitive stomach,I have a sensitive stomach.,relational,relational
+223,1.0,"1434, 1460","1434, 1461",1,I have a sensitive stomach,I have a sensitive stomach.,possessive,possessive
+220,0.0,"1434, 1435","1434, 1435",0,I,I,carrier,carrier
+128,7.0710678118654755,"1434, 1460","1441, 1461",8,I have a sensitive stomach,a sensitive stomach.,phenomenon,phenomenon
+222,1.0,"1441, 1460","1441, 1461",1,a sensitive stomach,a sensitive stomach.,possessed,possessed
+125,7.0,"1391, 1412","1398, 1412",7,I have a bulimic past,a bulimic past,phenomenon,phenomenon
+218,0.0,"1398, 1412","1398, 1412",0,a bulimic past,a bulimic past,possessed,possessed
+216,0.0,"1391, 1392","1391, 1392",0,I,I,carrier,carrier
+217,0.0,"1393, 1397","1393, 1397",0,have,have,main,main
+127,0.0,"1428, 1433","1428, 1433",0,think,think,main,main
+221,0.0,"1436, 1440","1436, 1440",0,have,have,main,main
+124,0.0,"1386, 1390","1386, 1390",0,know,know,main,main
+131,1.0,"1469, 1502","1469, 1503",1,I may have done damage to my body,I may have done damage to my body.,phenomenon,phenomenon
+227,11.180339887498949,"1480, 1494","1475, 1484",10,done damage to,have done,main,main
+196,1.0,"1462, 1502","1462, 1503",1,I know I may have done damage to my body,I know I may have done damage to my body.,mental,mental
+196,1.0,"1462, 1502","1462, 1503",1,I know I may have done damage to my body,I know I may have done damage to my body.,two-role-cognition,two-role-cognition
+130,0.0,"1464, 1468","1464, 1468",0,know,know,main,main
+224,0.0,"1469, 1470","1469, 1470",0,I,I,agent,agent
+129,0.0,"1462, 1463","1462, 1463",0,I,I,cognizant,cognizant
+243,0.0,"1546, 1550","1546, 1550",0,want,want,main,main
+136,0.0,"1528, 1532","1528, 1532",0,food,food,affected-carrier,affected-carrier
+245,5.0990195135927845,"1544, 1553","1539, 1554",6,I want to,when I want to.,mental,mental
+135,4.0,"1523, 1527","1519, 1527",4,keep,n't keep,main,main
+132,0.0,"1533, 1538","1533, 1538",0,in me,in me,location,location
+133,0.0,"1515, 1516","1515, 1516",0,I,I,agent,agent
+228,0.0,"1544, 1545","1544, 1545",0,I,I,emoter,emoter
+142,0.0,"1605, 1611","1605, 1611",0,become,become,main,main
+140,0.0,"1583, 1589","1583, 1589",0,scared,scared,main,main
+198,0.0,"1623, 1648","1623, 1648",0,I understand how you feel,I understand how you feel,mental,mental
+198,0.0,"1623, 1648","1623, 1648",0,I understand how you feel,I understand how you feel,two-role-cognition,two-role-cognition
+249,0.0,"1636, 1648","1636, 1648",0,how you feel,how you feel,attributive,attributive
+154,4.0,"1718, 1722","1714, 1722",4,want,not want,main,main
+246,0.0,"1636, 1639","1636, 1639",0,how,how,attribute,attribute
+146,0.0,"1623, 1624","1623, 1624",0,I,I,cognizant,cognizant
+147,0.0,"1625, 1635","1625, 1635",0,understand,understand,main,main
+248,0.0,"1644, 1648","1644, 1648",0,feel,feel,main,main
+150,5.0,"1667, 1679","1667, 1674",5,suffers from,suffers,main,main
+247,0.0,"1640, 1643","1640, 1643",0,you,you,carrier,carrier
+148,0.0,"1636, 1648","1636, 1648",0,how you feel,how you feel,phenomenon,phenomenon
+157,1.0,"1740, 1741","1739, 1741",1,s,'s,main,main
+163,1.0,"1862, 1883","1862, 1884",1,This really does suck,This really does suck.,action,action
+159,0.0,"1862, 1866","1862, 1866",0,This,This,agent,agent
+191,45.617978911828175,"1217, 1222","1197, 1263",61,funny,I was being silly ( funny starving yourself doesn't seem silly ) .,attributive,attributive
+,
+,Manual mismatching all parsed (False Negative)
+164,"20, 27",I am 29,relational
+164,"20, 27",I am 29,attributive
+3,"25, 27",29,attribute
+5,"37, 41",been,main
+166,"86, 102",I read your post,action
+12,"107, 151",understand many parts of what you are saying,mental
+11,"118, 151",many parts of what you are saying,phenomenon
+13,"153, 196",I have lived most of my twenties overweight,attributive
+19,"186, 196",overweight,attribute
+14,"198, 281",After a 4-year-relationship with someone who reminded me every day I was overweight,three-role-cognition
+20,"239, 242",who,agent
+234,"265, 281",I was overweight,relational
+234,"265, 281",I was overweight,attributive
+233,"271, 281",overweight,attribute
+15,"283, 309",I decided to get on a diet,mental
+168,"341, 385",Someone I knew lost 150 pounds on the Atkins,relational
+169,"387, 457",I have read that for many it starts with a simple diet that goes wrong,three-role-perception
+172,"459, 481",I lost about 80 pounds,relational
+173,"483, 506",People congratulated me,action
+45,"483, 489",People,agent
+47,"504, 506",me,affected
+174,"513, 524",I plateaued,action
+48,"513, 514",I,agent
+175,"526, 561",I just could not lose another pound,relational
+175,"526, 561",I just could not lose another pound,possessive
+176,"563, 588",People told me I was fine,three-role-cognition
+56,"575, 577",me,affected-cognizant
+57,"578, 588",I was fine,phenomenon
+237,"695, 743",Here is when I started to go down the wrong path,event-relating
+171,"695, 699",Here,carrier
+236,"703, 743",when I started to go down the wrong path,phenomenon
+71,"708, 743",I started to go down the wrong path,influential
+68,"708, 709",I,agent
+70,"718, 743",to go down the wrong path,phenomenon
+77,"769, 785",I felt were safe,two-role-cognition
+205,"769, 770",I,cognizant
+182,"795, 807",purging them,action
+181,"803, 807",them,affected
+210,"809, 896",My thought was even if some of it did get into my blood stream at least it was low carb,event-relating
+208,"809, 819",My thought,carrier
+207,"824, 896",even if some of it did get into my blood stream at least it was low carb,phenomenon
+183,"832, 871",some of it did get into my blood stream,relational
+78,"832, 842",some of it,affected-carrier
+81,"851, 871",into my blood stream,destination
+184,"881, 896",it was low carb,relational
+184,"881, 896",it was low carb,attributive
+82,"881, 883",it,carrier
+83,"884, 887",was,main
+84,"888, 896",low carb,attribute
+185,"898, 928",Purging has been a big problem,relational
+185,"898, 928",Purging has been a big problem,attributive
+85,"898, 905",Purging,carrier
+88,"915, 928",a big problem,attribute
+186,"938, 964",I started to look for help,influential
+89,"938, 939",I,agent
+90,"940, 947",started,main
+91,"948, 964",to look for help,phenomenon
+92,"966, 982",all the programs,carrier
+103,"1099, 1133",I told a few friends I was bulimic,three-role-cognition
+101,"1106, 1119",a few friends,affected-cognizant
+190,"1179, 1214",Many just told me I was being silly,mental
+190,"1179, 1214",Many just told me I was being silly,three-role-cognition
+107,"1179, 1183",Many,agent
+109,"1194, 1196",me,affected-cognizant
+110,"1197, 1214",I was being silly,phenomenon
+215,"1197, 1214",I was being silly,relational
+215,"1197, 1214",I was being silly,attributive
+111,"1217, 1222",funny,attribute
+191,"1217, 1222",funny,relational
+119,"1268, 1305",others started to watch me to closely,influential
+116,"1268, 1274",others,agent
+118,"1283, 1305",to watch me to closely,phenomenon
+193,"1310, 1379",now I am a master at hiding my habits even from both of my room mates,relational
+193,"1310, 1379",now I am a master at hiding my habits even from both of my room mates,attributive
+120,"1314, 1315",I,carrier
+122,"1319, 1379",a master at hiding my habits even from both of my room mates,attribute
+194,"1381, 1412",They know I have a bulimic past,mental
+194,"1381, 1412",They know I have a bulimic past,two-role-cognition
+123,"1381, 1385",They,cognizant
+195,"1418, 1460",they just think I have a sensitive stomach,mental
+195,"1418, 1460",they just think I have a sensitive stomach,two-role-cognition
+126,"1418, 1422",they,cognizant
+230,"1469, 1502",I may have done damage to my body,action
+229,"1495, 1502",my body,affected
+137,"1504, 1553",Many times I can't keep food in me when I want to,relational
+137,"1504, 1553",Many times I can't keep food in me when I want to,locational
+244,"1551, 1553",to,phenomenon
+144,"1577, 1600",I get scared to give up,mental
+138,"1577, 1578",I,emoter
+141,"1590, 1600",to give up,phenomenon
+145,"1605, 1621",become fat again,relational
+145,"1605, 1621",become fat again,attributive
+143,"1612, 1615",fat,attribute
+249,"1636, 1648",how you feel,relational
+199,"1655, 1684",part of you suffers from this,mental
+149,"1655, 1666",part of you,emoter
+151,"1680, 1684",this,phenomenon
+200,"1689, 1735",another part of you does not want to change it,mental
+152,"1689, 1708",another part of you,emoter
+155,"1723, 1735",to change it,phenomenon
+162,"1737, 1860",It's almost like its better to live with the problem than to face the consequences of changing your behaviour and your life,event-relating
+156,"1737, 1739",It,carrier
+158,"1754, 1860",its better to live with the problem than to face the consequences of changing your behaviour and your life,phenomenon
+161,"1879, 1883",suck,main
+,
+,Parsed mismatching all manual (False Positives)
+25,"25, 85",29 and have been part of the Yahoo group for about 6 months.,location
+20,"20, 21",I,affected-carrier
+20,"20, 21",I,agent-carrier
+20,"20, 85",I am 29 and have been part of the Yahoo group for about 6 months.,process
+20,"20, 85",I am 29 and have been part of the Yahoo group for about 6 months.,locational
+93,"93, 102",your post,phenomenon
+93,"93, 102",your post,created-phenomenon
+137,"137, 140",you,cognizant
+137,"137, 140",you,agent-cognizant
+137,"137, 140",you,affected-cognizant
+137,"137, 140",you,agent-carrier
+137,"137, 140",you,agent-perceiver
+137,"137, 140",you,perceiver
+132,"132, 152",what you are saying.,process
+132,"132, 152",what you are saying.,two-role-perception
+132,"132, 152",what you are saying.,two-role-action
+132,"132, 152",what you are saying.,action
+86,"86, 87",I,agent-cognizant
+86,"86, 87",I,agent-carrier
+86,"86, 87",I,agent-perceiver
+86,"86, 87",I,perceiver
+132,"132, 136",what,created-phenomenon
+132,"132, 136",what,range
+86,"86, 102",I read your post,process
+86,"86, 102",I read your post,mental
+86,"86, 102",I read your post,two-role-perception
+86,"86, 102",I read your post,three-role-cognition
+86,"86, 102",I read your post,two-role-action
+166,"166, 197",most of my twenties overweight.,location
+153,"153, 197",I have lived most of my twenties overweight.,process
+153,"153, 197",I have lived most of my twenties overweight.,locational
+153,"153, 154",I,affected-carrier
+153,"153, 154",I,agent-carrier
+265,"265, 266",I,affected-emoter
+265,"265, 266",I,agent
+265,"265, 266",I,affected-path
+265,"265, 266",I,affected-perceiver
+265,"265, 266",I,affected-cognizant
+265,"265, 266",I,affected-carrier
+265,"265, 266",I,affected-destination
+265,"265, 266",I,affected
+265,"265, 266",I,agent-carrier
+265,"265, 266",I,affected-possessed
+265,"265, 266",I,agent-perceiver
+265,"265, 266",I,affected-source
+265,"265, 266",I,perceiver
+281,"281, 284",", I",agent
+281,"281, 284",", I",cognizant
+281,"281, 284",", I",agent-carrier
+281,"281, 284",", I",agent-perceiver
+300,"300, 310",on a diet.,destination
+300,"300, 310",on a diet.,affected-destination
+300,"300, 310",on a diet.,affected-possessed
+300,"300, 310",on a diet.,possessed
+198,"198, 310","After a 4-year-relationship with someone who reminded me every day I was overweight, I decided to get on a diet.",process
+198,"198, 310","After a 4-year-relationship with someone who reminded me every day I was overweight, I decided to get on a diet.",two-role-action
+293,"293, 310",to get on a diet.,created-phenomenon
+265,"265, 270",I was,process
+265,"265, 270",I was,locational
+265,"265, 270",I was,action
+265,"265, 270",I was,one-role-action
+293,"293, 310",to get on a diet.,process
+293,"293, 310",to get on a diet.,directional
+293,"293, 310",to get on a diet.,possessive
+293,"293, 310",to get on a diet.,action
+293,"293, 310",to get on a diet.,one-role-action
+293,"293, 299",to get,main
+204,"204, 281",a 4-year-relationship with someone who reminded me every day I was overweight,affected-emoter
+204,"204, 281",a 4-year-relationship with someone who reminded me every day I was overweight,created-phenomenon
+204,"204, 281",a 4-year-relationship with someone who reminded me every day I was overweight,affected-path
+204,"204, 281",a 4-year-relationship with someone who reminded me every day I was overweight,affected-perceiver
+204,"204, 281",a 4-year-relationship with someone who reminded me every day I was overweight,affected-carrier
+204,"204, 281",a 4-year-relationship with someone who reminded me every day I was overweight,affected-destination
+204,"204, 281",a 4-year-relationship with someone who reminded me every day I was overweight,affected
+204,"204, 281",a 4-year-relationship with someone who reminded me every day I was overweight,affected-possessed
+204,"204, 281",a 4-year-relationship with someone who reminded me every day I was overweight,affected-source
+311,"311, 313",It,affected-emoter
+311,"311, 313",It,affected-path
+311,"311, 313",It,affected-perceiver
+311,"311, 313",It,agent-cognizant
+311,"311, 313",It,affected-cognizant
+311,"311, 313",It,affected-carrier
+311,"311, 313",It,affected-destination
+311,"311, 313",It,affected
+311,"311, 313",It,agent-carrier
+311,"311, 313",It,affected-possessed
+311,"311, 313",It,agent-perceiver
+311,"311, 313",It,affected-source
+322,"322, 340",innocently enough.,phenomenon
+322,"322, 340",innocently enough.,created-phenomenon
+322,"322, 340",innocently enough.,created
+311,"311, 340",It started innocently enough.,process
+311,"311, 340",It started innocently enough.,two-role-action
+311,"311, 340",It started innocently enough.,starting
+341,"341, 386",Someone I knew lost 150 pounds on the Atkins.,process
+341,"341, 386",Someone I knew lost 150 pounds on the Atkins.,two-role-action
+341,"341, 386",Someone I knew lost 150 pounds on the Atkins.,action
+372,"372, 386",on the Atkins.,affected-possessed
+372,"372, 386",on the Atkins.,possessed
+372,"372, 386",on the Atkins.,range
+361,"361, 371",150 pounds,possessed
+361,"361, 371",150 pounds,range
+351,"351, 355",knew,main
+341,"341, 355",Someone I knew,agent
+341,"341, 355",Someone I knew,agent-cognizant
+341,"341, 355",Someone I knew,affected
+341,"341, 355",Someone I knew,agent-carrier
+341,"341, 355",Someone I knew,agent-perceiver
+341,"341, 355",Someone I knew,carrier
+452,"452, 458",wrong.,created-phenomenon
+452,"452, 458",wrong.,destination
+452,"452, 458",wrong.,location
+452,"452, 458",wrong.,affected-destination
+452,"452, 458",wrong.,affected-possessed
+452,"452, 458",wrong.,possessed
+452,"452, 458",wrong.,range
+387,"387, 458",I have read that for many it starts with a simple diet that goes wrong.,process
+387,"387, 458",I have read that for many it starts with a simple diet that goes wrong.,two-role-perception
+387,"387, 458",I have read that for many it starts with a simple diet that goes wrong.,three-role-cognition
+404,"404, 412",for many,created-phenomenon
+404,"404, 412",for many,created
+442,"442, 458",that goes wrong.,process
+442,"442, 458",that goes wrong.,locational
+442,"442, 458",that goes wrong.,directional
+442,"442, 458",that goes wrong.,possessive
+442,"442, 458",that goes wrong.,continuing
+442,"442, 458",that goes wrong.,two-role-action
+413,"413, 415",it,affected-emoter
+413,"413, 415",it,agent
+413,"413, 415",it,affected-path
+413,"413, 415",it,affected-perceiver
+413,"413, 415",it,agent-cognizant
+413,"413, 415",it,affected-cognizant
+413,"413, 415",it,affected-carrier
+413,"413, 415",it,affected-destination
+413,"413, 415",it,affected
+413,"413, 415",it,agent-carrier
+413,"413, 415",it,affected-possessed
+413,"413, 415",it,agent-perceiver
+413,"413, 415",it,affected-source
+413,"413, 415",it,created
+399,"399, 458",that for many it starts with a simple diet that goes wrong.,process
+399,"399, 458",that for many it starts with a simple diet that goes wrong.,two-role-action
+399,"399, 458",that for many it starts with a simple diet that goes wrong.,one-role-action
+399,"399, 458",that for many it starts with a simple diet that goes wrong.,starting
+399,"399, 458",that for many it starts with a simple diet that goes wrong.,created-phenomenon
+447,"447, 451",goes,main
+423,"423, 458",with a simple diet that goes wrong.,phenomenon
+423,"423, 458",with a simple diet that goes wrong.,created-phenomenon
+423,"423, 458",with a simple diet that goes wrong.,created
+442,"442, 446",that,affected-emoter
+442,"442, 446",that,agent
+442,"442, 446",that,affected-path
+442,"442, 446",that,affected-perceiver
+442,"442, 446",that,agent-cognizant
+442,"442, 446",that,affected-cognizant
+442,"442, 446",that,affected-carrier
+442,"442, 446",that,affected-destination
+442,"442, 446",that,affected
+442,"442, 446",that,agent-carrier
+442,"442, 446",that,affected-possessed
+442,"442, 446",that,agent-perceiver
+442,"442, 446",that,affected-source
+442,"442, 446",that,carrier
+442,"442, 446",that,perceiver
+387,"387, 388",I,agent
+387,"387, 388",I,agent-cognizant
+387,"387, 388",I,agent-carrier
+387,"387, 388",I,perceiver
+466,"466, 482",about 80 pounds.,possessed
+466,"466, 482",about 80 pounds.,range
+459,"459, 460",I,agent
+459,"459, 460",I,agent-cognizant
+459,"459, 460",I,affected
+459,"459, 460",I,agent-carrier
+459,"459, 460",I,agent-perceiver
+459,"459, 460",I,carrier
+459,"459, 482",I lost about 80 pounds.,process
+459,"459, 482",I lost about 80 pounds.,two-role-action
+459,"459, 482",I lost about 80 pounds.,action
+483,"483, 507",People congratulated me.,process
+483,"483, 507",People congratulated me.,mental
+483,"483, 507",People congratulated me.,emotive
+483,"483, 489",People,affected-emoter
+483,"483, 489",People,emoter
+504,"504, 507",me.,phenomenon
+504,"504, 507",me.,created-phenomenon
+548,"548, 562",another pound.,possessed
+548,"548, 562",another pound.,range
+526,"526, 527",I,agent
+526,"526, 527",I,agent-cognizant
+526,"526, 527",I,affected-carrier
+526,"526, 527",I,affected
+526,"526, 527",I,agent-perceiver
+526,"526, 527",I,carrier
+578,"578, 588",I was fine,process
+578,"578, 588",I was fine,locational
+578,"578, 588",I was fine,two-role-action
+578,"578, 588",I was fine,action
+563,"563, 569",People,agent-perceiver
+563,"563, 569",People,perceiver
+615,"615, 620",fine.,attribute
+615,"615, 620",fine.,location
+615,"615, 620",fine.,range
+578,"578, 579",I,agent
+578,"578, 579",I,agent-cognizant
+578,"578, 579",I,affected-carrier
+578,"578, 579",I,affected
+578,"578, 579",I,agent-carrier
+578,"578, 579",I,agent-perceiver
+578,"578, 579",I,perceiver
+590,"590, 620",but I did not want to be fine.,process
+590,"590, 620",but I did not want to be fine.,desiderative
+563,"563, 577",People told me,process
+563,"563, 577",People told me,two-role-perception
+609,"609, 614",to be,main
+584,"584, 588",fine,location
+584,"584, 588",fine,range
+594,"594, 595",I,affected-emoter
+609,"609, 620",to be fine.,process
+609,"609, 620",to be fine.,attributive
+609,"609, 620",to be fine.,locational
+609,"609, 620",to be fine.,relational
+609,"609, 620",to be fine.,two-role-action
+609,"609, 620",to be fine.,action
+575,"575, 577",me,phenomenon
+575,"575, 577",me,created-phenomenon
+609,"609, 620",to be fine.,created-phenomenon
+628,"628, 674",that without clothes I still had bulges of fat,process
+628,"628, 674",that without clothes I still had bulges of fat,causative
+628,"628, 674",that without clothes I still had bulges of fat,two-role-action
+628,"628, 674",that without clothes I still had bulges of fat,action
+628,"628, 674",that without clothes I still had bulges of fat,created-phenomenon
+633,"633, 648",without clothes,phenomenon
+633,"633, 648",without clothes,affected-emoter
+633,"633, 648",without clothes,created-phenomenon
+633,"633, 648",without clothes,affected-path
+633,"633, 648",without clothes,affected-perceiver
+633,"633, 648",without clothes,affected-cognizant
+633,"633, 648",without clothes,affected-carrier
+633,"633, 648",without clothes,affected-destination
+633,"633, 648",without clothes,affected
+633,"633, 648",without clothes,affected-possessed
+633,"633, 648",without clothes,affected-source
+633,"633, 648",without clothes,created
+633,"633, 648",without clothes,possessed
+679,"679, 681",it,agent-cognizant
+679,"679, 681",it,agent-carrier
+679,"679, 681",it,agent-perceiver
+691,"691, 694",me.,affected-emoter
+691,"691, 694",me.,affected-path
+691,"691, 694",me.,affected-perceiver
+691,"691, 694",me.,affected-cognizant
+691,"691, 694",me.,affected-carrier
+691,"691, 694",me.,affected-destination
+691,"691, 694",me.,affected-possessed
+691,"691, 694",me.,affected-source
+621,"621, 674",I knew that without clothes I still had bulges of fat,process
+661,"661, 674",bulges of fat,phenomenon
+661,"661, 674",bulges of fat,affected-emoter
+661,"661, 674",bulges of fat,created-phenomenon
+661,"661, 674",bulges of fat,affected-path
+661,"661, 674",bulges of fat,affected-perceiver
+661,"661, 674",bulges of fat,affected-cognizant
+661,"661, 674",bulges of fat,affected-carrier
+661,"661, 674",bulges of fat,affected-destination
+661,"661, 674",bulges of fat,affected
+661,"661, 674",bulges of fat,affected-possessed
+661,"661, 674",bulges of fat,affected-source
+661,"661, 674",bulges of fat,created
+661,"661, 674",bulges of fat,carrier
+621,"621, 622",I,agent-cognizant
+621,"621, 622",I,affected-cognizant
+675,"675, 694",and it bothered me.,process
+675,"675, 694",and it bothered me.,two-role-action
+649,"649, 650",I,agent
+649,"649, 650",I,agent-cognizant
+649,"649, 650",I,affected-carrier
+649,"649, 650",I,affected
+649,"649, 650",I,agent-carrier
+649,"649, 650",I,agent-perceiver
+649,"649, 650",I,perceiver
+729,"729, 744",the wrong path.,destination
+729,"729, 744",the wrong path.,affected-destination
+718,"718, 723",to go,main
+718,"718, 744",to go down the wrong path.,process
+718,"718, 744",to go down the wrong path.,directional
+718,"718, 744",to go down the wrong path.,relational
+755,"755, 785",picking foods I felt were safe,process
+755,"755, 785",picking foods I felt were safe,possessive
+755,"755, 785",picking foods I felt were safe,two-role-action
+755,"755, 785",picking foods I felt were safe,action
+769,"769, 785",I felt were safe,process
+769,"769, 785",I felt were safe,two-role-perception
+769,"769, 785",I felt were safe,emotive
+776,"776, 785",were safe,created-phenomenon
+745,"745, 808",I started picking foods I felt were safe and then purging them.,process
+745,"745, 808",I started picking foods I felt were safe and then purging them.,starting
+763,"763, 785",foods I felt were safe,affected-emoter
+763,"763, 785",foods I felt were safe,affected-path
+763,"763, 785",foods I felt were safe,affected-perceiver
+763,"763, 785",foods I felt were safe,affected-cognizant
+763,"763, 785",foods I felt were safe,affected-carrier
+763,"763, 785",foods I felt were safe,affected-destination
+763,"763, 785",foods I felt were safe,affected
+763,"763, 785",foods I felt were safe,affected-possessed
+763,"763, 785",foods I felt were safe,affected-source
+763,"763, 785",foods I felt were safe,possessed
+745,"745, 746",I,affected-emoter
+745,"745, 746",I,affected-path
+745,"745, 746",I,affected-perceiver
+745,"745, 746",I,agent-cognizant
+745,"745, 746",I,affected-cognizant
+745,"745, 746",I,affected-carrier
+745,"745, 746",I,affected-destination
+745,"745, 746",I,affected
+745,"745, 746",I,agent-carrier
+745,"745, 746",I,affected-possessed
+745,"745, 746",I,agent-perceiver
+745,"745, 746",I,affected-source
+769,"769, 770",I,affected-emoter
+769,"769, 770",I,agent
+769,"769, 770",I,affected-perceiver
+769,"769, 770",I,agent-perceiver
+769,"769, 770",I,emoter
+769,"769, 770",I,perceiver
+755,"755, 808",picking foods I felt were safe and then purging them.,created-phenomenon
+755,"755, 808",picking foods I felt were safe and then purging them.,created
+776,"776, 780",were,main
+755,"755, 762",picking,main
+832,"832, 836",some,agent
+832,"832, 836",some,agent-cognizant
+832,"832, 836",some,agent-carrier
+832,"832, 836",some,agent-perceiver
+832,"832, 836",some,perceiver
+888,"888, 897",low carb.,destination
+888,"888, 897",low carb.,affected-destination
+888,"888, 897",low carb.,range
+840,"840, 897",it did get into my blood stream at least it was low carb.,process
+840,"840, 897",it did get into my blood stream at least it was low carb.,two-role-action
+840,"840, 897",it did get into my blood stream at least it was low carb.,action
+898,"898, 905",Purging,main
+990,"990, 1002",to be women.,process
+990,"990, 1002",to be women.,locational
+948,"948, 955",to look,main
+983,"983, 989",seemed,main
+996,"996, 1002",women.,location
+1018,"1018, 1098",to go to a support group surrounded by women sharing thoughts of chocolate cake.,process
+1018,"1018, 1098",to go to a support group surrounded by women sharing thoughts of chocolate cake.,attributive
+1018,"1018, 1098",to go to a support group surrounded by women sharing thoughts of chocolate cake.,matching
+1018,"1018, 1098",to go to a support group surrounded by women sharing thoughts of chocolate cake.,directional
+1018,"1018, 1098",to go to a support group surrounded by women sharing thoughts of chocolate cake.,relational
+1018,"1018, 1098",to go to a support group surrounded by women sharing thoughts of chocolate cake.,action
+1018,"1018, 1098",to go to a support group surrounded by women sharing thoughts of chocolate cake.,one-role-action
+1054,"1054, 1098",by women sharing thoughts of chocolate cake.,agent
+1054,"1054, 1098",by women sharing thoughts of chocolate cake.,agent-perceiver
+1054,"1054, 1098",by women sharing thoughts of chocolate cake.,perceiver
+1024,"1024, 1098",to a support group surrounded by women sharing thoughts of chocolate cake.,attribute
+1024,"1024, 1098",to a support group surrounded by women sharing thoughts of chocolate cake.,destination
+1024,"1024, 1098",to a support group surrounded by women sharing thoughts of chocolate cake.,affected-destination
+1024,"1024, 1098",to a support group surrounded by women sharing thoughts of chocolate cake.,matchee
+1003,"1003, 1098",I did not want to go to a support group surrounded by women sharing thoughts of chocolate cake.,process
+1003,"1003, 1098",I did not want to go to a support group surrounded by women sharing thoughts of chocolate cake.,desiderative
+1063,"1063, 1098",sharing thoughts of chocolate cake.,process
+1063,"1063, 1098",sharing thoughts of chocolate cake.,relational
+1063,"1063, 1098",sharing thoughts of chocolate cake.,possessive
+1063,"1063, 1098",sharing thoughts of chocolate cake.,two-role-action
+1063,"1063, 1070",sharing,main
+1071,"1071, 1098",thoughts of chocolate cake.,affected-emoter
+1071,"1071, 1098",thoughts of chocolate cake.,affected-path
+1071,"1071, 1098",thoughts of chocolate cake.,affected-perceiver
+1071,"1071, 1098",thoughts of chocolate cake.,affected-cognizant
+1071,"1071, 1098",thoughts of chocolate cake.,affected-carrier
+1071,"1071, 1098",thoughts of chocolate cake.,affected-destination
+1071,"1071, 1098",thoughts of chocolate cake.,affected
+1071,"1071, 1098",thoughts of chocolate cake.,affected-possessed
+1071,"1071, 1098",thoughts of chocolate cake.,affected-source
+1071,"1071, 1098",thoughts of chocolate cake.,possessed
+1018,"1018, 1098",to go to a support group surrounded by women sharing thoughts of chocolate cake.,created-phenomenon
+1043,"1043, 1098",surrounded by women sharing thoughts of chocolate cake.,process
+1043,"1043, 1098",surrounded by women sharing thoughts of chocolate cake.,locational
+1043,"1043, 1098",surrounded by women sharing thoughts of chocolate cake.,relational
+1043,"1043, 1053",surrounded,main
+1018,"1018, 1023",to go,main
+1003,"1003, 1004",I,affected-emoter
+1099,"1099, 1133",I told a few friends I was bulimic,process
+1099,"1099, 1133",I told a few friends I was bulimic,two-role-perception
+1152,"1152, 1178",two interesting reactions.,created-phenomenon
+1120,"1120, 1121",I,affected-carrier
+1120,"1120, 1121",I,agent-carrier
+1138,"1138, 1139",I,affected-perceiver
+1138,"1138, 1139",I,agent-perceiver
+1126,"1126, 1133",bulimic,location
+1106,"1106, 1133",a few friends I was bulimic,created-phenomenon
+1120,"1120, 1133",I was bulimic,process
+1120,"1120, 1133",I was bulimic,locational
+1134,"1134, 1178",and I experienced two interesting reactions.,process
+1099,"1099, 1100",I,agent-perceiver
+1099,"1099, 1100",I,perceiver
+1197,"1197, 1263",I was being silly ( funny starving yourself doesn't seem silly ) .,process
+1197,"1197, 1263",I was being silly ( funny starving yourself doesn't seem silly ) .,locational
+1254,"1254, 1259",silly,phenomenon
+1254,"1254, 1259",silly,created-phenomenon
+1209,"1209, 1214",silly,location
+1232,"1232, 1240",yourself,cognizant
+1232,"1232, 1240",yourself,agent-cognizant
+1232,"1232, 1240",yourself,affected-cognizant
+1232,"1232, 1240",yourself,affected-carrier
+1232,"1232, 1240",yourself,agent-carrier
+1232,"1232, 1259",yourself doesn't seem silly,process
+1232,"1232, 1259",yourself doesn't seem silly,mental
+1232,"1232, 1259",yourself doesn't seem silly,two-role-cognition
+1197,"1197, 1198",I,affected-carrier
+1197,"1197, 1198",I,agent-carrier
+1331,"1331, 1337",hiding,main
+1283,"1283, 1305",to watch me to closely,process
+1283,"1283, 1305",to watch me to closely,two-role-action
+1283,"1283, 1305",to watch me to closely,action
+1310,"1310, 1352",now I am a master at hiding my habits even,process
+1310,"1310, 1352",now I am a master at hiding my habits even,two-role-action
+1310,"1310, 1352",now I am a master at hiding my habits even,action
+1283,"1283, 1291",to watch,main
+1292,"1292, 1294",me,range
+1314,"1314, 1315",I,agent
+1314,"1314, 1315",I,agent-cognizant
+1314,"1314, 1315",I,agent-carrier
+1314,"1314, 1315",I,agent-perceiver
+1358,"1358, 1380",both of my room mates.,process
+1358,"1358, 1380",both of my room mates.,two-role-action
+1358,"1358, 1380",both of my room mates.,action
+1363,"1363, 1380",of my room mates.,affected-emoter
+1363,"1363, 1380",of my room mates.,affected-path
+1363,"1363, 1380",of my room mates.,affected-perceiver
+1363,"1363, 1380",of my room mates.,affected-cognizant
+1363,"1363, 1380",of my room mates.,affected-carrier
+1363,"1363, 1380",of my room mates.,affected-destination
+1363,"1363, 1380",of my room mates.,affected
+1363,"1363, 1380",of my room mates.,affected-possessed
+1363,"1363, 1380",of my room mates.,affected-source
+1319,"1319, 1327",a master,affected-emoter
+1319,"1319, 1327",a master,affected-path
+1319,"1319, 1327",a master,affected-perceiver
+1319,"1319, 1327",a master,affected-cognizant
+1319,"1319, 1327",a master,affected-carrier
+1319,"1319, 1327",a master,affected-destination
+1319,"1319, 1327",a master,affected
+1319,"1319, 1327",a master,affected-possessed
+1319,"1319, 1327",a master,affected-source
+1319,"1319, 1327",a master,range
+1338,"1338, 1347",my habits,affected-emoter
+1338,"1338, 1347",my habits,affected-path
+1338,"1338, 1347",my habits,affected-perceiver
+1338,"1338, 1347",my habits,affected-cognizant
+1338,"1338, 1347",my habits,affected-carrier
+1338,"1338, 1347",my habits,affected-destination
+1338,"1338, 1347",my habits,affected
+1338,"1338, 1347",my habits,affected-possessed
+1338,"1338, 1347",my habits,affected-source
+1391,"1391, 1412",I have a bulimic past,process
+1391,"1391, 1412",I have a bulimic past,causative
+1391,"1391, 1412",I have a bulimic past,two-role-action
+1391,"1391, 1412",I have a bulimic past,action
+1434,"1434, 1461",I have a sensitive stomach.,process
+1434,"1434, 1461",I have a sensitive stomach.,causative
+1434,"1434, 1461",I have a sensitive stomach.,two-role-action
+1434,"1434, 1461",I have a sensitive stomach.,action
+1434,"1434, 1435",I,agent
+1434,"1434, 1435",I,agent-cognizant
+1434,"1434, 1435",I,affected-carrier
+1434,"1434, 1435",I,affected
+1434,"1434, 1435",I,agent-carrier
+1434,"1434, 1435",I,agent-perceiver
+1434,"1434, 1435",I,perceiver
+1441,"1441, 1461",a sensitive stomach.,affected-emoter
+1441,"1441, 1461",a sensitive stomach.,created-phenomenon
+1441,"1441, 1461",a sensitive stomach.,affected-path
+1441,"1441, 1461",a sensitive stomach.,affected-perceiver
+1441,"1441, 1461",a sensitive stomach.,affected-cognizant
+1441,"1441, 1461",a sensitive stomach.,affected-carrier
+1441,"1441, 1461",a sensitive stomach.,affected-destination
+1441,"1441, 1461",a sensitive stomach.,affected
+1441,"1441, 1461",a sensitive stomach.,affected-possessed
+1441,"1441, 1461",a sensitive stomach.,affected-source
+1441,"1441, 1461",a sensitive stomach.,created
+1398,"1398, 1412",a bulimic past,affected-emoter
+1398,"1398, 1412",a bulimic past,created-phenomenon
+1398,"1398, 1412",a bulimic past,affected-path
+1398,"1398, 1412",a bulimic past,affected-perceiver
+1398,"1398, 1412",a bulimic past,affected-cognizant
+1398,"1398, 1412",a bulimic past,affected-carrier
+1398,"1398, 1412",a bulimic past,affected-destination
+1398,"1398, 1412",a bulimic past,affected
+1398,"1398, 1412",a bulimic past,affected-possessed
+1398,"1398, 1412",a bulimic past,affected-source
+1398,"1398, 1412",a bulimic past,created
+1391,"1391, 1392",I,agent
+1391,"1391, 1392",I,agent-cognizant
+1391,"1391, 1392",I,affected-carrier
+1391,"1391, 1392",I,affected
+1391,"1391, 1392",I,agent-carrier
+1391,"1391, 1392",I,agent-perceiver
+1391,"1391, 1392",I,perceiver
+1469,"1469, 1503",I may have done damage to my body.,created-phenomenon
+1462,"1462, 1503",I know I may have done damage to my body.,process
+1492,"1492, 1503",to my body.,manner
+1469,"1469, 1470",I,agent-cognizant
+1469,"1469, 1470",I,agent-carrier
+1469,"1469, 1470",I,agent-perceiver
+1462,"1462, 1463",I,agent-cognizant
+1462,"1462, 1463",I,affected-cognizant
+1485,"1485, 1491",damage,manner
+1485,"1485, 1491",damage,range
+1539,"1539, 1543",when,phenomenon
+1539,"1539, 1543",when,created-phenomenon
+1528,"1528, 1532",food,location
+1528,"1528, 1532",food,affected
+1528,"1528, 1532",food,carrier
+1539,"1539, 1554",when I want to.,process
+1539,"1539, 1554",when I want to.,desiderative
+1504,"1504, 1514",Many times,location
+1504,"1504, 1514",Many times,affected-carrier
+1504,"1504, 1514",Many times,affected
+1504,"1504, 1514",Many times,carrier
+1515,"1515, 1516",I,agent-cognizant
+1515,"1515, 1516",I,agent-carrier
+1515,"1515, 1516",I,agent-perceiver
+1544,"1544, 1545",I,affected-emoter
+1590,"1590, 1597",to give,main
+1579,"1579, 1582",get,main
+1623,"1623, 1648",I understand how you feel,process
+1636,"1636, 1648",how you feel,process
+1636,"1636, 1648",how you feel,mental
+1636,"1636, 1648",how you feel,two-role-perception
+1636,"1636, 1648",how you feel,emotive
+1636,"1636, 1639",how,created-phenomenon
+1623,"1623, 1624",I,affected-cognizant
+1623,"1623, 1624",I,affected
+1723,"1723, 1736",to change it.,process
+1723,"1723, 1736",to change it.,matching
+1723,"1723, 1736",to change it.,two-role-action
+1723,"1723, 1736",to change it.,action
+1640,"1640, 1643",you,affected-emoter
+1640,"1640, 1643",you,agent
+1640,"1640, 1643",you,affected-perceiver
+1640,"1640, 1643",you,affected-carrier
+1640,"1640, 1643",you,agent-carrier
+1640,"1640, 1643",you,agent-perceiver
+1640,"1640, 1643",you,emoter
+1640,"1640, 1643",you,perceiver
+1733,"1733, 1736",it.,affected-emoter
+1733,"1733, 1736",it.,affected-path
+1733,"1733, 1736",it.,affected-perceiver
+1733,"1733, 1736",it.,affected-cognizant
+1733,"1733, 1736",it.,affected-carrier
+1733,"1733, 1736",it.,affected-destination
+1733,"1733, 1736",it.,affected
+1733,"1733, 1736",it.,affected-possessed
+1733,"1733, 1736",it.,matchee
+1733,"1733, 1736",it.,affected-source
+1636,"1636, 1648",how you feel,created-phenomenon
+1723,"1723, 1732",to change,main
+1773,"1773, 1789",with the problem,affected-emoter
+1773,"1773, 1789",with the problem,affected-path
+1773,"1773, 1789",with the problem,affected-perceiver
+1773,"1773, 1789",with the problem,affected-cognizant
+1773,"1773, 1789",with the problem,affected-carrier
+1773,"1773, 1789",with the problem,affected-destination
+1773,"1773, 1789",with the problem,affected
+1773,"1773, 1789",with the problem,affected-possessed
+1773,"1773, 1789",with the problem,affected-source
+1795,"1795, 1861",to face the consequences of changing your behaviour and your life.,process
+1795,"1795, 1861",to face the consequences of changing your behaviour and your life.,two-role-action
+1795,"1795, 1861",to face the consequences of changing your behaviour and your life.,action
+1765,"1765, 1772",to live,main
+1832,"1832, 1846",your behaviour,affected-emoter
+1832,"1832, 1846",your behaviour,affected-path
+1832,"1832, 1846",your behaviour,affected-perceiver
+1832,"1832, 1846",your behaviour,affected-cognizant
+1832,"1832, 1846",your behaviour,affected-carrier
+1832,"1832, 1846",your behaviour,affected-destination
+1832,"1832, 1846",your behaviour,affected
+1832,"1832, 1846",your behaviour,affected-possessed
+1832,"1832, 1846",your behaviour,affected-source
+1823,"1823, 1846",changing your behaviour,process
+1823,"1823, 1846",changing your behaviour,two-role-action
+1823,"1823, 1846",changing your behaviour,action
+1803,"1803, 1846",the consequences of changing your behaviour,affected-emoter
+1803,"1803, 1846",the consequences of changing your behaviour,affected-path
+1803,"1803, 1846",the consequences of changing your behaviour,affected-perceiver
+1803,"1803, 1846",the consequences of changing your behaviour,affected-cognizant
+1803,"1803, 1846",the consequences of changing your behaviour,affected-carrier
+1803,"1803, 1846",the consequences of changing your behaviour,affected-destination
+1803,"1803, 1846",the consequences of changing your behaviour,affected
+1803,"1803, 1846",the consequences of changing your behaviour,affected-possessed
+1803,"1803, 1846",the consequences of changing your behaviour,affected-source
+1823,"1823, 1831",changing,main
+1879,"1879, 1884",suck.,manner
+1879,"1879, 1884",suck.,range
+1862,"1862, 1884",This really does suck.,process
+1862,"1862, 1884",This really does suck.,two-role-action
+1874,"1874, 1878",does,main
+1862,"1862, 1866",This,agent-cognizant
+1862,"1862, 1866",This,agent-carrier
+1862,"1862, 1866",This,agent-perceiver
+452,"452, 458",wrong.,phenomenon
+442,"442, 458",that goes wrong.,action
+404,"404, 412",for many,phenomenon
+1636,"1636, 1639",how,phenomenon

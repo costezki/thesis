@@ -1,0 +1,234 @@
+\chapter{A selection of graph patterns}
+\label{ch:graph-patterns-some}
+
+    \begin{figure}[!ht]
+    \centering
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering
+        \begin{tikzpicture}[tree-style,level distance=3em,]
+        \node[pattern-node] {cl:clause\\op:update\\
+            arg:\{POLARITY:negative\}}
+        child {node[pattern-node] {el:negator} edge from parent node[right] {} }
+        ;
+        \end{tikzpicture}
+        \caption{Negative polarity}
+        \label{fig:neg-pattern51}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering
+        \begin{tikzpicture}[tree-style,level distance=3em,]
+        \node[pattern-node] {cl:clause\\op:update\\
+            arg:\{POLARITY:positive\}}
+        child {node[pattern-node-negative] {el:negator} edge from parent node[right] {} }
+        ;
+        \end{tikzpicture}
+        \caption{Negative polarity}
+        \label{fig:neg-pattern61}
+    \end{subfigure}
+    \caption{Polarity detection graph patterns}
+    \label{fig:polarity-pattern71}
+\end{figure}
+
+ \begin{figure}[!ht]
+    \centering
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering
+        \begin{tikzpicture}[tree-style,level distance=4em,level 1/.style={sibling distance=9em},]
+        \node[pattern-node] {cl:clause\\op:update\\
+            arg:\{VOICE:passive\}}
+        child {node[pattern-node] {in-rel:$_{OR}$[auxpass, nsubjpass,\\csubjpass, agent]} edge from parent node[right] {} }
+        ;
+        \end{tikzpicture}
+        \caption{Passive voice}
+        \label{fig:voice-pattern51}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering
+        \begin{tikzpicture}[tree-style,level distance=4em,level 1/.style={sibling distance=9em},]
+        \node[pattern-node] {cl:clause\\op:update\\
+            arg:\{VOICE:active\}}
+        child {node[pattern-node-negative] {in-rel:$_{OR}$[auxpass, nsubjpass,\\csubjpass, agent]} edge from parent node[right] {} }
+        ;
+        \end{tikzpicture}
+        \caption{Active voice}
+        \label{fig:voice-pattern61}
+    \end{subfigure}
+    \caption{Voice detection graph patterns}
+    \label{fig:voice-pattern71}
+\end{figure}
+
+Tense
+simple
+
+    \begin{figure}[!ht]
+        \centering
+        \begin{subfigure}[t]{0.47\textwidth}
+            \centering
+            \begin{tikzpicture}[tree-style,level distance=3em,]
+            \node[pattern-node] {pos:VBD, cl:clause, op:update\\
+                arg:\{TIME:past,\\PROGRESSIVITY:non-progressive,\\PERFECTIVITY:non-perfect\}}
+            child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+            ;
+            \end{tikzpicture}
+            \caption{Simple past tense pattern}
+            \label{fig:past-tense-pattern11}
+        \end{subfigure}
+        \begin{subfigure}[t]{0.47\textwidth}
+            \centering
+            \begin{tikzpicture}[tree-style,level distance=3em,]
+            \node[pattern-node] {pos:VBD, cl:clause, op:update\\
+                arg:\{TIME:present,\\PROGRESSIVITY:non-progressive,\\PERFECTIVITY:non-perfect\}}
+            child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+            ;
+            \end{tikzpicture}
+            \caption{Simple present tense pattern}
+            \label{fig:present-tense-pattern11}
+        \end{subfigure}
+        \begin{subfigure}[t]{0.47\textwidth}
+            \centering
+            \begin{tikzpicture}[tree-style,level distance=3em,level 1/.style={sibling distance=7em},]
+            \node[pattern-node] {pos:VBD, , cl:clause, op:update\\
+                arg:\{TIME:future,\\PROGRESSIVITY:non-progressive,\\PERFECTIVITY:non-perfect\}}
+            child {node[pattern-node] {lemma:will} edge from parent node[right] {} }
+            child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+            ;
+            \end{tikzpicture}
+            \caption{Simple future tense pattern}
+            \label{fig:future-tense-pattern11}
+        \end{subfigure}
+        \caption{Simple past, present and future tense patterns}
+        \label{fig:simple-tense-pattern11}
+    \end{figure}
+
+Tense
+progressive
+
+\begin{figure}[!ht]
+    \centering
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering
+        \begin{tikzpicture}[tree-style,level distance=3em,level 1/.style={sibling distance=7em},]
+        \node[pattern-node] {pos:VBG, [...]}
+        child {node[pattern-node] {lemma:be\\pos:VBD} edge from parent node[right] {} }
+        child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+        ;
+        \end{tikzpicture}
+        \caption{Past continuous tense pattern}
+        \label{fig:past-progressive-tense-pattern1}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering
+        \begin{tikzpicture}[tree-style,level distance=3em,level 1/.style={sibling distance=9em},]
+        \node[pattern-node] {pos:VBG, [...]}
+        child {node[pattern-node] {lemma:be\\pos:$_{OR}$[VBZ,VBP]} edge from parent node[right] {} }
+        child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+        ;
+        \end{tikzpicture}
+        \caption{Present continuous tense pattern}
+        \label{fig:present-progressive-tense-pattern1}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.8\textwidth}
+        \centering
+        \begin{tikzpicture}[tree-style,level distance=3em,level 1/.style={sibling distance=9em},]
+        \node[pattern-node] {pos:VBG, [...]}
+        child {node[pattern-node] {lemma:will} edge from parent node[right] {} }
+        child {node[pattern-node] {lemma:be\\pos:$_{OR}$[VB,VBP]} edge from parent node[right] {} }
+        child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+        ;
+        \end{tikzpicture}
+        \caption{Future continuous tense pattern}
+        \label{fig:future-progressive-tense-pattern1}
+    \end{subfigure}
+    \caption{Past, present and future continuous tense patterns}
+    \label{fig:progressive-tense-pattern1}
+\end{figure}
+
+
+Tense
+perfect
+
+\begin{figure}[!ht]
+    \centering
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering
+        \begin{tikzpicture}[tree-style,level distance=3em,level 1/.style={sibling distance=9em},]
+        \node[pattern-node] {pos:VBN, [...]}
+        child {node[pattern-node] {lemma:have\\pos:$_{OR}$[VBD,VBN]} edge from parent node[right] {} }
+        child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+        ;
+        \end{tikzpicture}
+        \caption{Past perfect tense pattern}
+        \label{fig:past-perfect-tense-pattern1}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering
+        \begin{tikzpicture}[tree-style,level distance=3em,level 1/.style={sibling distance=9em},]
+        \node[pattern-node] {pos:VBN, [...]}
+        child {node[pattern-node] {lemma:have\\pos:$_{OR}$[VBZ,VBP]} edge from parent node[right] {} }
+        child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+        ;
+        \end{tikzpicture}
+        \caption{Present perfect tense pattern}
+        \label{fig:present-perfect-tense-pattern1}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.8\textwidth}
+        \centering
+        \begin{tikzpicture}[tree-style,level distance=3em,level 1/.style={sibling distance=9em},]
+        \node[pattern-node] {pos:VBN, [...]}
+        child {node[pattern-node] {lemma:will} edge from parent node[right] {} }
+        child {node[pattern-node] {lemma:have\\pos:$_{OR}$[VB,VBP]} edge from parent node[right] {} }
+        child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+        ;
+        \end{tikzpicture}
+        \caption{Future perfect tense pattern}
+        \label{fig:future-perfect-tense-pattern1}
+    \end{subfigure}
+    \caption{Past, present and future perfect tense patterns}
+    \label{fig:perfect-tense-pattern1}
+\end{figure}
+
+Tense
+perfect
+
+\begin{figure}[!ht]
+    \centering
+    \begin{subfigure}[t]{0.97\textwidth}
+        \centering
+        \begin{tikzpicture}[tree-style,level distance=3em,level 1/.style={sibling distance=7em},]
+        \node[pattern-node] {pos:VBG, [...]}
+        child {node[pattern-node] {lemma:have\\pos:$_{OR}$[VBD,VBN]} edge from parent node[right] {} }
+        child {node[pattern-node] {lemma:be\\pos:VBN} edge from parent node[right] {} }
+        child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+        ;
+        \end{tikzpicture}
+        \caption{Past perfect continuous tense pattern}
+        \label{fig:past-perfect-progressive-tense-pattern1}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.97\textwidth}
+        \centering
+        \begin{tikzpicture}[tree-style,level distance=3em,level 1/.style={sibling distance=7em},]
+        \node[pattern-node] {pos:VBG, [...]}
+        child {node[pattern-node] {lemma:have\\pos:$_{OR}$[VBZ,VBP]} edge from parent node[right] {} }
+        child {node[pattern-node] {lemma:be\\pos:VBN} edge from parent node[right] {} }
+        child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+        ;
+        \end{tikzpicture}
+        \caption{Present perfect continuous tense pattern}
+        \label{fig:present-perfect-progressive-tense-pattern1}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.97\textwidth}
+        \centering
+        \begin{tikzpicture}[tree-style,level distance=4em,level 1/.style={sibling distance=7em},]
+        \node[pattern-node] {pos:VBG, [...]}
+        child {node[pattern-node] {lemma:will} edge from parent node[right] {} }
+        child {node[pattern-node] {lemma:have\\pos:$_{OR}$[VB,VBP]} edge from parent node[right] {} }
+        child {node[pattern-node] {lemma:be\\pos:VBN} edge from parent node[right] {} }
+        child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+        ;
+        \end{tikzpicture}
+        \caption{Future perfect continuous pattern}
+        \label{fig:future-perfect-progressive-tense-pattern1}
+    \end{subfigure}
+    \caption{Past, present and future perfect continuous tense patterns}
+    \label{fig:perfect-progressive-tense-pattern1}
+\end{figure}

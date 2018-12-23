@@ -1,0 +1,682 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.2180327868852459
+,Recall,0.6855670103092784
+,F1,0.3308457711442786
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+4,1.0,"28, 46","28, 47",1,an eating disorder,an eating disorder?,possessed,possessed
+3,0.0,"23, 27","23, 27",0,have,have,main,main
+2,0.0,"21, 22","21, 22",0,I,I,carrier,carrier
+116,1.0,"18, 46","18, 47",1,Do I have an eating disorder,Do I have an eating disorder?,relational,relational
+116,1.0,"18, 46","18, 47",1,Do I have an eating disorder,Do I have an eating disorder?,possessive,possessive
+149,0.0,"63, 67","63, 67",0,Call,Call,main,main
+5,0.0,"78, 79","78, 79",0,I,I,carrier,carrier
+7,0.0,"84, 114","84, 114",0,"a 6'0, 190, 32 w, athletic guy","a 6'0, 190, 32 w, athletic guy",attribute,attribute
+117,1.0,"78, 132","78, 133",1,"I was a 6'0, 190, 32 w, athletic guy about 2 years ago","I was a 6'0, 190, 32 w, athletic guy about 2 years ago.",attributive,attributive
+117,1.0,"78, 132","78, 133",1,"I was a 6'0, 190, 32 w, athletic guy about 2 years ago","I was a 6'0, 190, 32 w, athletic guy about 2 years ago.",relational,relational
+6,0.0,"80, 83","80, 83",0,was,was,main,main
+118,5.0990195135927845,"139, 165","134, 166",6,I don't know what happened,Then I don't know what happened.,mental,mental
+118,5.0990195135927845,"139, 165","134, 166",6,I don't know what happened,Then I don't know what happened.,two-role-cognition,two-role-cognition
+155,1.0,"152, 165","152, 166",1,what happened,what happened.,action,action
+8,0.0,"139, 140","139, 140",0,I,I,cognizant,cognizant
+11,1.0,"152, 165","152, 166",1,what happened,what happened.,phenomenon,phenomenon
+154,0.0,"157, 165","157, 165",0,happened,happened,main,main
+10,4.0,"147, 151","143, 151",4,know,n't know,main,main
+12,0.0,"167, 168","167, 168",0,I,I,affected-carrier,affected-carrier
+119,0.0,"167, 196","167, 196",0,I lost all desire to workout.,I lost all desire to workout.,possessive,possessive
+13,0.0,"169, 173","169, 173",0,lost,lost,main,main
+14,11.0,"174, 196","185, 196",11,all desire to workout.,to workout.,affected-possessed,affected-possessed
+157,0.0,"227, 230","227, 230",0,was,was,main,main
+156,23.021728866442675,"231, 256","254, 257",24,"go home, eat and watch TV",TV.,phenomenon,phenomenon
+16,24.020824298928627,"293, 332","317, 333",25,did not have any desire to meet friends,to meet friends.,relational,relational
+21,1.0,"269, 290","269, 289",1,to clubs or anything.,to clubs or anything,destination,destination
+16,4.123105625617661,"293, 332","289, 333",5,did not have any desire to meet friends,... did not have any desire to meet friends.,possessive,possessive
+23,4.0,"301, 305","297, 305",4,have,not have,main,main
+25,1.0,"306, 332","306, 333",1,any desire to meet friends,any desire to meet friends.,possessed,possessed
+18,0.0,"258, 259","258, 259",0,I,I,carrier,carrier
+15,1.0,"258, 290","258, 289",1,I don't go to clubs or anything.,I don't go to clubs or anything,directional,directional
+15,1.0,"258, 290","258, 289",1,I don't go to clubs or anything.,I don't go to clubs or anything,relational,relational
+20,4.0,"266, 268","262, 268",4,go,n't go,main,main
+27,0.0,"349, 352","349, 352",0,got,got,main,main
+32,0.0,"395, 403","395, 403",0,informed,informed,main,main
+31,0.0,"391, 394","391, 394",0,she,she,agent,agent
+29,0.0,"359, 363","359, 363",0,Went,Went,main,main
+30,0.0,"364, 386","364, 386",0,to the doctor's office,to the doctor's office,destination,destination
+163,5.0990195135927845,"412, 455","407, 456",6,I gained 55 lbs in the last couple of years,that I gained 55 lbs in the last couple of years.,relational,relational
+163,5.0990195135927845,"412, 455","407, 456",6,I gained 55 lbs in the last couple of years,that I gained 55 lbs in the last couple of years.,possessive,possessive
+160,0.0,"412, 413","412, 413",0,I,I,affected-carrier,affected-carrier
+35,29.274562336608895,"391, 427","387, 456",33,she informed me that I gained 55 lbs,and she informed me that I gained 55 lbs in the last couple of years.,mental,mental
+35,29.274562336608895,"391, 427","387, 456",33,she informed me that I gained 55 lbs,and she informed me that I gained 55 lbs in the last couple of years.,three-role-cognition,three-role-cognition
+33,0.0,"404, 406","404, 406",0,me,me,affected-cognizant,affected-cognizant
+24,0.0,"359, 386","359, 386",0,Went to the doctor's office,Went to the doctor's office,directional,directional
+24,0.0,"359, 386","359, 386",0,Went to the doctor's office,Went to the doctor's office,relational,relational
+34,5.0990195135927845,"412, 455","407, 456",6,I gained 55 lbs in the last couple of years,that I gained 55 lbs in the last couple of years.,phenomenon,phenomenon
+162,29.0,"421, 427","421, 456",29,55 lbs,55 lbs in the last couple of years.,possessed,possessed
+161,0.0,"414, 420","414, 420",0,gained,gained,main,main
+41,0.0,"503, 507","503, 507",0,told,told,main,main
+38,0.0,"461, 470","461, 470",0,diagnosed,diagnosed,main,main
+176,0.0,"550, 560","550, 560",0,what I ate,what I ate,action,action
+46,0.0,"540, 541","540, 541",0,I,I,agent,agent
+175,0.0,"557, 560","557, 560",0,ate,ate,main,main
+48,0.0,"550, 560","550, 560",0,what I ate,what I ate,phenomenon,phenomenon
+51,0.0,"596, 600","596, 600",0,went,went,main,main
+52,0.0,"601, 611","601, 611",0,to the gym,to the gym,destination,destination
+173,0.0,"550, 554","550, 554",0,what,what,affected,affected
+127,4.123105625617661,"596, 647","592, 648",5,went to the gym as often as I can - almost everyday,and went to the gym as often as I can - almost everyday.,directional,directional
+127,4.123105625617661,"596, 647","592, 648",5,went to the gym as often as I can - almost everyday,and went to the gym as often as I can - almost everyday.,relational,relational
+174,0.0,"555, 556","555, 556",0,I,I,agent,agent
+47,0.0,"542, 549","542, 549",0,watched,watched,main,main
+54,0.0,"663, 670","663, 670",0,dropped,dropped,main,main
+56,0.0,"682, 689","682, 689",0,started,started,main,main
+143,0.0,"649, 677","649, 677",0,"In a month, I dropped 20 lbs","In a month, I dropped 20 lbs",relational,relational
+57,1.0,"690, 704","690, 705",1,looking better,looking better.,created-phenomenon,created-phenomenon
+144,4.123105625617661,"682, 704","678, 705",5,started looking better,and started looking better.,influential,influential
+60,0.0,"713, 728","713, 728",0,the bloatedness,the bloatedness,affected-possessed,affected-possessed
+146,4.123105625617661,"733, 752","729, 753",5,I felt a lot better,and I felt a lot better.,attributive,attributive
+61,0.0,"733, 734","733, 734",0,I,I,carrier,carrier
+63,1.0,"740, 752","740, 753",1,a lot better,a lot better.,attribute,attribute
+58,0.0,"706, 707","706, 707",0,I,I,affected-carrier,affected-carrier
+145,0.0,"706, 728","706, 728",0,I lost the bloatedness,I lost the bloatedness,possessive,possessive
+62,0.0,"735, 739","735, 739",0,felt,felt,main,main
+59,0.0,"708, 712","708, 712",0,lost,lost,main,main
+64,0.0,"754, 765","754, 765",0,The problem,The problem,created-phenomenon,created-phenomenon
+128,1.0,"754, 784","754, 785",1,The problem started a week ago,The problem started a week ago.,action,action
+65,0.0,"766, 773","766, 773",0,started,started,main,main
+67,0.0,"788, 791","788, 791",0,had,had,main,main
+68,1.0,"792, 800","792, 801",1,a burger,a burger.,affected,affected
+66,0.0,"786, 787","786, 787",0,I,I,agent,agent
+129,1.0,"786, 800","786, 801",1,I had a burger,I had a burger.,action,action
+170,3.0,"882, 888","879, 888",3,handle,to handle,main,main
+147,0.0,"903, 913","903, 913",0,I threw up,I threw up,action,action
+77,1.0,"926, 937","926, 938",1,much better,much better.,attribute,attribute
+76,0.0,"921, 925","921, 925",0,felt,felt,main,main
+74,3.0,"905, 913","905, 910",3,threw up,threw,main,main
+73,0.0,"903, 904","903, 904",0,I,I,agent,agent
+75,0.0,"918, 920","918, 920",0,it,it,carrier,carrier
+131,4.123105625617661,"918, 937","914, 938",5,it felt much better,and it felt much better.,attributive,attributive
+131,4.123105625617661,"918, 937","914, 938",5,it felt much better,and it felt much better.,relational,relational
+79,0.0,"955, 958","955, 958",0,had,had,main,main
+78,0.0,"953, 954","953, 954",0,I,I,agent,agent
+133,2.23606797749979,"985, 1004","983, 1005",3,same thing happened,- same thing happened.,action,action
+80,0.0,"959, 982","959, 982",0,some salad with chicken,some salad with chicken,affected,affected
+132,0.0,"953, 982","953, 982",0,I had some salad with chicken,I had some salad with chicken,action,action
+82,0.0,"996, 1004","996, 1004",0,happened,happened,main,main
+86,0.0,"1030, 1056","1030, 1056",0,fruits and vegetable salad,fruits and vegetable salad,affected,affected
+171,3.0,"1025, 1029","1022, 1029",3,keep,to keep,main,main
+134,16.0312195418814,"1006, 1061","1022, 1062",17,I can only seem to keep fruits and vegetable salad down,to keep fruits and vegetable salad down.,action,action
+88,0.0,"1074, 1080","1074, 1080",0,scared,scared,main,main
+95,23.0,"1126, 1171","1126, 1148",23,that strange sensation when you want to purge,that strange sensation,phenomenon,phenomenon
+136,0.0,"1085, 1110","1085, 1110",0,I had soup and some salad,I had soup and some salad,action,action
+93,0.0,"1119, 1120","1119, 1120",0,I,I,perceiver,perceiver
+94,0.0,"1121, 1125","1121, 1125",0,felt,felt,main,main
+178,0.0,"1158, 1162","1158, 1162",0,want,want,main,main
+90,0.0,"1085, 1086","1085, 1086",0,I,I,agent,agent
+92,0.0,"1091, 1110","1091, 1110",0,soup and some salad,soup and some salad,affected,affected
+137,9.055385138137417,"1119, 1171","1110, 1172",10,I felt that strange sensation when you want to purge,... then I felt that strange sensation when you want to purge.,mental,mental
+137,9.055385138137417,"1119, 1171","1110, 1172",10,I felt that strange sensation when you want to purge,... then I felt that strange sensation when you want to purge.,two-role-perception,two-role-perception
+91,0.0,"1087, 1090","1087, 1090",0,had,had,main,main
+97,3.0,"1182, 1185","1179, 1185",3,run,to run,main,main
+101,10.0,"1186, 1201","1186, 1211",10,to the bathroom,to the bathroom 5 minutes,destination,destination
+120,6.082762530298219,"1173, 1226","1179, 1227",7,I had to run to the bathroom 5 minutes after the meal,to run to the bathroom 5 minutes after the meal.,directional,directional
+120,6.082762530298219,"1173, 1226","1179, 1227",7,I had to run to the bathroom 5 minutes after the meal,to run to the bathroom 5 minutes after the meal.,relational,relational
+106,0.0,"1243, 1247","1243, 1247",0,this,this,carrier,carrier
+139,1.0,"1240, 1286","1240, 1287",1,Is this the first signs of anorexia or bulimia,Is this the first signs of anorexia or bulimia?,attributive,attributive
+139,1.0,"1240, 1286","1240, 1287",1,Is this the first signs of anorexia or bulimia,Is this the first signs of anorexia or bulimia?,relational,relational
+105,1.0,"1248, 1286","1248, 1287",1,the first signs of anorexia or bulimia,the first signs of anorexia or bulimia?,attribute,attribute
+104,0.0,"1240, 1242","1240, 1242",0,Is,Is,main,main
+165,0.0,"1360, 1363","1360, 1363",0,got,got,main,main
+108,3.0,"1290, 1299","1290, 1296",3,looked at,looked,main,main
+96,0.0,"1336, 1340","1336, 1340",0,look,look,main,main
+112,1.0,"1391, 1412","1391, 1413",1,in the same condition,in the same condition.,attribute,attribute
+167,0.0,"1372, 1377","1372, 1377",0,email,email,main,main
+111,1.0,"1388, 1390","1387, 1390",1,re,'re,main,main
+141,3.1622776601683795,"1384, 1412","1381, 1413",4,you're in the same condition,if you're in the same condition.,attributive,attributive
+141,3.1622776601683795,"1384, 1412","1381, 1413",4,you're in the same condition,if you're in the same condition.,relational,relational
+110,0.0,"1384, 1387","1384, 1387",0,you,you,carrier,carrier
+114,0.0,"1416, 1420","1416, 1420",0,wish,wish,main,main
+115,1.0,"1421, 1439","1421, 1440",1,to talk to someone,to talk to someone.,phenomenon,phenomenon
+113,0.0,"1414, 1415","1414, 1415",0,I,I,emoter,emoter
+142,1.0,"1414, 1439","1414, 1440",1,I wish to talk to someone,I wish to talk to someone.,mental,mental
+,
+,Manual mismatching all parsed (False Negative)
+152,"63, 76",Call me Tiger,relational
+152,"63, 76",Call me Tiger,attributive
+150,"68, 70",me,affected-carrier
+151,"71, 76",Tiger,attribute
+153,"152, 156",what,carrier
+119,"167, 196",I lost all desire to workout.,relational
+159,"197, 256","All I wanted to do after work was go home, eat and watch TV",event-relating
+158,"197, 226",All I wanted to do after work,carrier
+17,"334, 357","A month ago, I got sick",relational
+17,"334, 357","A month ago, I got sick",attributive
+26,"347, 348",I,affected-carrier
+28,"353, 357",sick,attribute
+122,"457, 498",She diagnosed me with high blood pressure,mental
+122,"457, 498",She diagnosed me with high blood pressure,three-role-cognition
+37,"457, 460",She,agent
+39,"471, 473",me,affected-cognizant
+40,"474, 498",with high blood pressure,phenomenon
+123,"503, 531",told me to get back in shape,mental
+123,"503, 531",told me to get back in shape,three-role-cognition
+42,"508, 510",me,affected-cognizant
+43,"511, 531",to get back in shape,phenomenon
+124,"533, 538",I did,action
+44,"533, 534",I,agent
+125,"540, 560",I watched what I ate,influential
+126,"564, 591",ate salads most of the time,action
+49,"564, 567",ate,main
+50,"568, 574",salads,affected
+143,"649, 677","In a month, I dropped 20 lbs",possessive
+53,"661, 662",I,agent-carrier
+55,"671, 677",20 lbs,affected-possessed
+145,"706, 728",I lost the bloatedness,relational
+146,"733, 752",I felt a lot better,relational
+130,"802, 901",After a month of eating nothing but salads and fruits... my tummy can't seem to handle meat anymore,action
+69,"859, 867",my tummy,affected
+72,"889, 901",meat anymore,phenomenon
+81,"985, 995",same thing,carrier
+36,"1006, 1007",I,affected
+135,"1063, 1083",Last night scared me,mental
+87,"1063, 1073",Last night,phenomenon
+89,"1081, 1083",me,emoter
+180,"1154, 1171",you want to purge,mental
+177,"1154, 1157",you,emoter
+179,"1163, 1171",to purge,phenomenon
+99,"1173, 1174",I,carrier
+138,"1228, 1238",I'm scared,relational
+138,"1228, 1238",I'm scared,attributive
+102,"1228, 1229",I,carrier
+98,"1230, 1231",m,main
+103,"1232, 1238",scared,attribute
+140,"1288, 1320",I looked at some of the websites,mental
+140,"1288, 1320",I looked at some of the websites,two-role-perception
+107,"1288, 1289",I,perceiver
+109,"1300, 1320",some of the websites,phenomenon
+121,"1334, 1340",I look,action
+83,"1334, 1335",I,agent
+166,"1351, 1363",scared I got,relational
+166,"1351, 1363",scared I got,attributive
+148,"1351, 1357",scared,attribute
+164,"1358, 1359",I,carrier
+169,"1372, 1380",email me,action
+168,"1378, 1380",me,affected
+,
+,Parsed mismatching all manual (False Positives)
+28,"28, 47",an eating disorder?,phenomenon
+28,"28, 47",an eating disorder?,affected-emoter
+28,"28, 47",an eating disorder?,created-phenomenon
+28,"28, 47",an eating disorder?,affected-path
+28,"28, 47",an eating disorder?,affected-perceiver
+28,"28, 47",an eating disorder?,affected-cognizant
+28,"28, 47",an eating disorder?,affected-carrier
+28,"28, 47",an eating disorder?,affected-destination
+28,"28, 47",an eating disorder?,affected
+28,"28, 47",an eating disorder?,affected-possessed
+28,"28, 47",an eating disorder?,affected-source
+28,"28, 47",an eating disorder?,created
+21,"21, 22",I,agent
+21,"21, 22",I,agent-cognizant
+21,"21, 22",I,affected-carrier
+21,"21, 22",I,affected
+21,"21, 22",I,agent-carrier
+21,"21, 22",I,agent-perceiver
+21,"21, 22",I,perceiver
+18,"18, 47",Do I have an eating disorder?,process
+18,"18, 47",Do I have an eating disorder?,causative
+18,"18, 47",Do I have an eating disorder?,two-role-action
+18,"18, 47",Do I have an eating disorder?,action
+50,"50, 52",Hi,main
+78,"78, 79",I,agent
+78,"78, 79",I,agent-cognizant
+78,"78, 79",I,affected-carrier
+78,"78, 79",I,affected
+78,"78, 79",I,agent-carrier
+78,"78, 79",I,agent-perceiver
+78,"78, 79",I,perceiver
+84,"84, 114","a 6'0, 190, 32 w, athletic guy",affected-emoter
+84,"84, 114","a 6'0, 190, 32 w, athletic guy",affected-path
+84,"84, 114","a 6'0, 190, 32 w, athletic guy",affected-perceiver
+84,"84, 114","a 6'0, 190, 32 w, athletic guy",location
+84,"84, 114","a 6'0, 190, 32 w, athletic guy",affected-cognizant
+84,"84, 114","a 6'0, 190, 32 w, athletic guy",affected-carrier
+84,"84, 114","a 6'0, 190, 32 w, athletic guy",affected-destination
+84,"84, 114","a 6'0, 190, 32 w, athletic guy",affected
+84,"84, 114","a 6'0, 190, 32 w, athletic guy",affected-possessed
+84,"84, 114","a 6'0, 190, 32 w, athletic guy",path
+84,"84, 114","a 6'0, 190, 32 w, athletic guy",affected-source
+84,"84, 114","a 6'0, 190, 32 w, athletic guy",range
+78,"78, 133","I was a 6'0, 190, 32 w, athletic guy about 2 years ago.",process
+78,"78, 133","I was a 6'0, 190, 32 w, athletic guy about 2 years ago.",locational
+78,"78, 133","I was a 6'0, 190, 32 w, athletic guy about 2 years ago.",directional
+78,"78, 133","I was a 6'0, 190, 32 w, athletic guy about 2 years ago.",two-role-action
+78,"78, 133","I was a 6'0, 190, 32 w, athletic guy about 2 years ago.",action
+134,"134, 166",Then I don't know what happened.,process
+152,"152, 166",what happened.,process
+152,"152, 166",what happened.,one-role-action
+139,"139, 140",I,agent-cognizant
+139,"139, 140",I,affected-cognizant
+152,"152, 166",what happened.,created-phenomenon
+152,"152, 156",what,affected-emoter
+152,"152, 156",what,affected-path
+152,"152, 156",what,affected-perceiver
+152,"152, 156",what,affected-cognizant
+152,"152, 156",what,affected-carrier
+152,"152, 156",what,affected-destination
+152,"152, 156",what,affected
+152,"152, 156",what,affected-possessed
+152,"152, 156",what,affected-source
+167,"167, 168",I,agent
+167,"167, 168",I,agent-cognizant
+167,"167, 168",I,affected
+167,"167, 168",I,agent-carrier
+167,"167, 168",I,agent-perceiver
+167,"167, 168",I,carrier
+167,"167, 196",I lost all desire to workout.,process
+167,"167, 196",I lost all desire to workout.,two-role-action
+167,"167, 196",I lost all desire to workout.,action
+174,"174, 184",all desire,possessed
+174,"174, 184",all desire,range
+185,"185, 196",to workout.,possessed
+248,"248, 253",watch,main
+210,"210, 215",to do,main
+210,"210, 226",to do after work,process
+210,"210, 226",to do after work,two-role-action
+210,"210, 226",to do after work,action
+254,"254, 257",TV.,created-phenomenon
+254,"254, 257",TV.,range
+210,"210, 226",to do after work,phenomenon
+210,"210, 226",to do after work,created-phenomenon
+203,"203, 209",wanted,main
+240,"240, 243",eat,main
+231,"231, 233",go,main
+201,"201, 202",I,affected-emoter
+201,"201, 202",I,emoter
+244,"244, 257",and watch TV.,process
+244,"244, 257",and watch TV.,two-role-perception
+244,"244, 257",and watch TV.,two-role-action
+244,"244, 257",and watch TV.,action
+231,"231, 238",go home,process
+231,"231, 238",go home,attributive
+231,"231, 238",go home,directional
+231,"231, 238",go home,relational
+216,"216, 226",after work,manner
+234,"234, 238",home,attribute
+234,"234, 238",home,destination
+234,"234, 238",home,affected-destination
+201,"201, 226",I wanted to do after work,process
+201,"201, 226",I wanted to do after work,mental
+201,"201, 226",I wanted to do after work,desiderative
+317,"317, 333",to meet friends.,process
+317,"317, 333",to meet friends.,matching
+317,"317, 333",to meet friends.,two-role-action
+317,"317, 333",to meet friends.,action
+269,"269, 289",to clubs or anything,attribute
+269,"269, 289",to clubs or anything,affected-destination
+269,"269, 289",to clubs or anything,matchee
+289,"289, 333",... did not have any desire to meet friends.,process
+289,"289, 333",... did not have any desire to meet friends.,causative
+289,"289, 333",... did not have any desire to meet friends.,two-role-action
+289,"289, 333",... did not have any desire to meet friends.,action
+317,"317, 324",to meet,main
+306,"306, 333",any desire to meet friends.,phenomenon
+306,"306, 333",any desire to meet friends.,affected-emoter
+306,"306, 333",any desire to meet friends.,created-phenomenon
+306,"306, 333",any desire to meet friends.,affected-path
+306,"306, 333",any desire to meet friends.,affected-perceiver
+306,"306, 333",any desire to meet friends.,affected-cognizant
+306,"306, 333",any desire to meet friends.,affected-carrier
+306,"306, 333",any desire to meet friends.,affected-destination
+306,"306, 333",any desire to meet friends.,affected
+306,"306, 333",any desire to meet friends.,affected-possessed
+306,"306, 333",any desire to meet friends.,affected-source
+306,"306, 333",any desire to meet friends.,created
+325,"325, 333",friends.,affected-emoter
+325,"325, 333",friends.,affected-path
+325,"325, 333",friends.,affected-perceiver
+325,"325, 333",friends.,affected-cognizant
+325,"325, 333",friends.,affected-carrier
+325,"325, 333",friends.,affected-destination
+325,"325, 333",friends.,affected
+325,"325, 333",friends.,affected-possessed
+325,"325, 333",friends.,matchee
+325,"325, 333",friends.,affected-source
+325,"325, 333",friends.,range
+258,"258, 259",I,affected-emoter
+258,"258, 259",I,agent
+258,"258, 259",I,affected-path
+258,"258, 259",I,affected-perceiver
+258,"258, 259",I,agent-cognizant
+258,"258, 259",I,affected-cognizant
+258,"258, 259",I,affected-carrier
+258,"258, 259",I,affected-destination
+258,"258, 259",I,affected
+258,"258, 259",I,agent-carrier
+258,"258, 259",I,affected-possessed
+258,"258, 259",I,agent-perceiver
+258,"258, 259",I,affected-source
+258,"258, 259",I,perceiver
+258,"258, 289",I don't go to clubs or anything,process
+258,"258, 289",I don't go to clubs or anything,attributive
+258,"258, 289",I don't go to clubs or anything,matching
+258,"258, 289",I don't go to clubs or anything,action
+258,"258, 289",I don't go to clubs or anything,one-role-action
+353,"353, 357",sick,main
+391,"391, 394",she,agent-cognizant
+391,"391, 394",she,agent-carrier
+391,"391, 394",she,agent-perceiver
+364,"364, 386",to the doctor's office,attribute
+364,"364, 386",to the doctor's office,affected-destination
+407,"407, 456",that I gained 55 lbs in the last couple of years.,process
+412,"412, 413",I,affected
+412,"412, 413",I,carrier
+387,"387, 456",and she informed me that I gained 55 lbs in the last couple of years.,process
+404,"404, 406",me,cognizant
+404,"404, 406",me,affected
+359,"359, 386",Went to the doctor's office,process
+359,"359, 386",Went to the doctor's office,attributive
+359,"359, 386",Went to the doctor's office,action
+359,"359, 386",Went to the doctor's office,one-role-action
+407,"407, 456",that I gained 55 lbs in the last couple of years.,created-phenomenon
+421,"421, 456",55 lbs in the last couple of years.,affected-possessed
+511,"511, 517",to get,main
+508,"508, 510",me,agent
+508,"508, 510",me,agent-cognizant
+508,"508, 510",me,affected-carrier
+508,"508, 510",me,affected
+508,"508, 510",me,agent-carrier
+508,"508, 510",me,agent-perceiver
+508,"508, 510",me,carrier
+508,"508, 510",me,perceiver
+523,"523, 532",in shape.,affected-emoter
+523,"523, 532",in shape.,affected-path
+523,"523, 532",in shape.,affected-perceiver
+523,"523, 532",in shape.,destination
+523,"523, 532",in shape.,affected-cognizant
+523,"523, 532",in shape.,affected-carrier
+523,"523, 532",in shape.,affected-destination
+523,"523, 532",in shape.,affected
+523,"523, 532",in shape.,affected-possessed
+523,"523, 532",in shape.,affected-source
+523,"523, 532",in shape.,possessed
+523,"523, 532",in shape.,range
+523,"523, 532",in shape.,carrier
+508,"508, 532",me to get back in shape.,process
+508,"508, 532",me to get back in shape.,directional
+508,"508, 532",me to get back in shape.,relational
+508,"508, 532",me to get back in shape.,possessive
+508,"508, 532",me to get back in shape.,two-role-action
+508,"508, 532",me to get back in shape.,action
+535,"535, 538",did,main
+550,"550, 560",what I ate,process
+550,"550, 560",what I ate,two-role-action
+540,"540, 541",I,agent-perceiver
+540,"540, 541",I,perceiver
+540,"540, 560",I watched what I ate,process
+540,"540, 560",I watched what I ate,mental
+540,"540, 560",I watched what I ate,two-role-perception
+550,"550, 560",what I ate,created-phenomenon
+630,"630, 631",-,main
+601,"601, 611",to the gym,attribute
+601,"601, 611",to the gym,affected-destination
+601,"601, 611",to the gym,matchee
+550,"550, 554",what,affected-emoter
+550,"550, 554",what,affected-path
+550,"550, 554",what,affected-perceiver
+550,"550, 554",what,affected-cognizant
+550,"550, 554",what,affected-carrier
+550,"550, 554",what,affected-destination
+550,"550, 554",what,affected-possessed
+550,"550, 554",what,affected-source
+568,"568, 574",salads,main
+592,"592, 648",and went to the gym as often as I can - almost everyday.,process
+592,"592, 648",and went to the gym as often as I can - almost everyday.,attributive
+592,"592, 648",and went to the gym as often as I can - almost everyday.,matching
+592,"592, 648",and went to the gym as often as I can - almost everyday.,action
+592,"592, 648",and went to the gym as often as I can - almost everyday.,one-role-action
+555,"555, 556",I,agent-cognizant
+555,"555, 556",I,agent-carrier
+555,"555, 556",I,agent-perceiver
+671,"671, 677",20 lbs,location
+649,"649, 677","In a month, I dropped 20 lbs",process
+649,"649, 677","In a month, I dropped 20 lbs",locational
+690,"690, 697",looking,main
+690,"690, 705",looking better.,phenomenon
+690,"690, 705",looking better.,created
+678,"678, 705",and started looking better.,process
+678,"678, 705",and started looking better.,starting
+659,"659, 662",", I",agent
+659,"659, 662",", I",agent-perceiver
+659,"659, 662",", I",perceiver
+652,"652, 659",a month,location
+713,"713, 728",the bloatedness,possessed
+713,"713, 728",the bloatedness,range
+729,"729, 753",and I felt a lot better.,process
+729,"729, 753",and I felt a lot better.,mental
+729,"729, 753",and I felt a lot better.,two-role-perception
+729,"729, 753",and I felt a lot better.,emotive
+733,"733, 734",I,affected-emoter
+733,"733, 734",I,agent
+733,"733, 734",I,affected-perceiver
+733,"733, 734",I,affected-carrier
+733,"733, 734",I,agent-carrier
+733,"733, 734",I,agent-perceiver
+733,"733, 734",I,emoter
+733,"733, 734",I,perceiver
+740,"740, 753",a lot better.,phenomenon
+740,"740, 753",a lot better.,created-phenomenon
+706,"706, 707",I,agent
+706,"706, 707",I,agent-cognizant
+706,"706, 707",I,affected
+706,"706, 707",I,agent-carrier
+706,"706, 707",I,agent-perceiver
+706,"706, 707",I,carrier
+706,"706, 728",I lost the bloatedness,process
+706,"706, 728",I lost the bloatedness,two-role-action
+706,"706, 728",I lost the bloatedness,action
+754,"754, 765",The problem,created
+754,"754, 785",The problem started a week ago.,process
+754,"754, 785",The problem started a week ago.,one-role-action
+792,"792, 801",a burger.,phenomenon
+792,"792, 801",a burger.,affected-emoter
+792,"792, 801",a burger.,created-phenomenon
+792,"792, 801",a burger.,affected-path
+792,"792, 801",a burger.,affected-perceiver
+792,"792, 801",a burger.,affected-cognizant
+792,"792, 801",a burger.,affected-carrier
+792,"792, 801",a burger.,affected-destination
+792,"792, 801",a burger.,affected-possessed
+792,"792, 801",a burger.,affected-source
+792,"792, 801",a burger.,created
+792,"792, 801",a burger.,possessed
+786,"786, 787",I,agent-cognizant
+786,"786, 787",I,affected-carrier
+786,"786, 787",I,affected
+786,"786, 787",I,agent-carrier
+786,"786, 787",I,agent-perceiver
+786,"786, 787",I,carrier
+786,"786, 787",I,perceiver
+786,"786, 801",I had a burger.,process
+786,"786, 801",I had a burger.,causative
+786,"786, 801",I had a burger.,relational
+786,"786, 801",I had a burger.,possessive
+786,"786, 801",I had a burger.,two-role-action
+870,"870, 878",n't seem,main
+808,"808, 855",a month of eating nothing but salads and fruits,attribute
+855,"855, 867",... my tummy,affected-carrier
+855,"855, 867",... my tummy,agent-carrier
+855,"855, 867",... my tummy,carrier
+903,"903, 913",I threw up,process
+903,"903, 913",I threw up,one-role-action
+903,"903, 904",I,agent-cognizant
+903,"903, 904",I,agent-carrier
+903,"903, 904",I,agent-perceiver
+918,"918, 920",it,affected-carrier
+918,"918, 920",it,agent-carrier
+914,"914, 938",and it felt much better.,process
+953,"953, 954",I,agent-cognizant
+953,"953, 954",I,affected-carrier
+953,"953, 954",I,affected
+953,"953, 954",I,agent-carrier
+953,"953, 954",I,agent-perceiver
+953,"953, 954",I,carrier
+953,"953, 954",I,perceiver
+983,"983, 1005",- same thing happened.,process
+983,"983, 1005",- same thing happened.,one-role-action
+959,"959, 982",some salad with chicken,phenomenon
+959,"959, 982",some salad with chicken,affected-emoter
+959,"959, 982",some salad with chicken,created-phenomenon
+959,"959, 982",some salad with chicken,affected-path
+959,"959, 982",some salad with chicken,affected-perceiver
+959,"959, 982",some salad with chicken,affected-cognizant
+959,"959, 982",some salad with chicken,affected-carrier
+959,"959, 982",some salad with chicken,affected-destination
+959,"959, 982",some salad with chicken,affected-possessed
+959,"959, 982",some salad with chicken,affected-source
+959,"959, 982",some salad with chicken,created
+959,"959, 982",some salad with chicken,possessed
+983,"983, 995",- same thing,affected-emoter
+983,"983, 995",- same thing,affected-path
+983,"983, 995",- same thing,affected-perceiver
+983,"983, 995",- same thing,affected-cognizant
+983,"983, 995",- same thing,affected-carrier
+983,"983, 995",- same thing,affected-destination
+983,"983, 995",- same thing,affected
+983,"983, 995",- same thing,affected-possessed
+983,"983, 995",- same thing,affected-source
+953,"953, 982",I had some salad with chicken,process
+953,"953, 982",I had some salad with chicken,causative
+953,"953, 982",I had some salad with chicken,relational
+953,"953, 982",I had some salad with chicken,possessive
+953,"953, 982",I had some salad with chicken,two-role-action
+1006,"1006, 1007",I,cognizant
+1006,"1006, 1007",I,agent-cognizant
+1006,"1006, 1007",I,affected-cognizant
+1030,"1030, 1056",fruits and vegetable salad,affected-emoter
+1030,"1030, 1056",fruits and vegetable salad,affected-path
+1030,"1030, 1056",fruits and vegetable salad,affected-perceiver
+1030,"1030, 1056",fruits and vegetable salad,affected-cognizant
+1030,"1030, 1056",fruits and vegetable salad,affected-carrier
+1030,"1030, 1056",fruits and vegetable salad,affected-destination
+1030,"1030, 1056",fruits and vegetable salad,affected-possessed
+1030,"1030, 1056",fruits and vegetable salad,affected-source
+1017,"1017, 1021",seem,main
+1022,"1022, 1062",to keep fruits and vegetable salad down.,phenomenon
+1022,"1022, 1062",to keep fruits and vegetable salad down.,created-phenomenon
+1022,"1022, 1062",to keep fruits and vegetable salad down.,process
+1022,"1022, 1062",to keep fruits and vegetable salad down.,two-role-action
+1126,"1126, 1148",that strange sensation,attribute
+1126,"1126, 1148",that strange sensation,created-phenomenon
+1085,"1085, 1110",I had soup and some salad,process
+1085,"1085, 1110",I had soup and some salad,causative
+1085,"1085, 1110",I had soup and some salad,relational
+1085,"1085, 1110",I had soup and some salad,possessive
+1085,"1085, 1110",I had soup and some salad,two-role-action
+1163,"1163, 1171",to purge,main
+1119,"1119, 1120",I,affected-emoter
+1119,"1119, 1120",I,agent
+1119,"1119, 1120",I,affected-perceiver
+1119,"1119, 1120",I,affected-carrier
+1119,"1119, 1120",I,agent-carrier
+1119,"1119, 1120",I,agent-perceiver
+1119,"1119, 1120",I,emoter
+1119,"1119, 1120",I,carrier
+1085,"1085, 1086",I,agent-cognizant
+1085,"1085, 1086",I,affected-carrier
+1085,"1085, 1086",I,affected
+1085,"1085, 1086",I,agent-carrier
+1085,"1085, 1086",I,agent-perceiver
+1085,"1085, 1086",I,carrier
+1085,"1085, 1086",I,perceiver
+1091,"1091, 1110",soup and some salad,phenomenon
+1091,"1091, 1110",soup and some salad,affected-emoter
+1091,"1091, 1110",soup and some salad,created-phenomenon
+1091,"1091, 1110",soup and some salad,affected-path
+1091,"1091, 1110",soup and some salad,affected-perceiver
+1091,"1091, 1110",soup and some salad,affected-cognizant
+1091,"1091, 1110",soup and some salad,affected-carrier
+1091,"1091, 1110",soup and some salad,affected-destination
+1091,"1091, 1110",soup and some salad,affected-possessed
+1091,"1091, 1110",soup and some salad,affected-source
+1091,"1091, 1110",soup and some salad,created
+1091,"1091, 1110",soup and some salad,possessed
+1110,"1110, 1172",... then I felt that strange sensation when you want to purge.,process
+1110,"1110, 1172",... then I felt that strange sensation when you want to purge.,attributive
+1110,"1110, 1172",... then I felt that strange sensation when you want to purge.,emotive
+1173,"1173, 1227",I had to run to the bathroom 5 minutes after the meal.,process
+1173,"1173, 1227",I had to run to the bathroom 5 minutes after the meal.,causative
+1173,"1173, 1227",I had to run to the bathroom 5 minutes after the meal.,influential
+1175,"1175, 1178",had,main
+1173,"1173, 1174",I,agent
+1173,"1173, 1174",I,agent-cognizant
+1173,"1173, 1174",I,agent-carrier
+1173,"1173, 1174",I,agent-perceiver
+1179,"1179, 1227",to run to the bathroom 5 minutes after the meal.,phenomenon
+1179,"1179, 1227",to run to the bathroom 5 minutes after the meal.,created-phenomenon
+1179,"1179, 1227",to run to the bathroom 5 minutes after the meal.,created
+1212,"1212, 1227",after the meal.,attribute
+1212,"1212, 1227",after the meal.,affected-emoter
+1212,"1212, 1227",after the meal.,affected-path
+1212,"1212, 1227",after the meal.,affected-perceiver
+1212,"1212, 1227",after the meal.,affected-cognizant
+1212,"1212, 1227",after the meal.,affected-carrier
+1212,"1212, 1227",after the meal.,affected-destination
+1212,"1212, 1227",after the meal.,affected
+1212,"1212, 1227",after the meal.,affected-possessed
+1212,"1212, 1227",after the meal.,affected-source
+1212,"1212, 1227",after the meal.,possessed
+1186,"1186, 1211",to the bathroom 5 minutes,attribute
+1186,"1186, 1211",to the bathroom 5 minutes,affected-emoter
+1186,"1186, 1211",to the bathroom 5 minutes,affected-path
+1186,"1186, 1211",to the bathroom 5 minutes,affected-perceiver
+1186,"1186, 1211",to the bathroom 5 minutes,affected-cognizant
+1186,"1186, 1211",to the bathroom 5 minutes,affected-carrier
+1186,"1186, 1211",to the bathroom 5 minutes,affected-destination
+1186,"1186, 1211",to the bathroom 5 minutes,affected
+1186,"1186, 1211",to the bathroom 5 minutes,affected-possessed
+1186,"1186, 1211",to the bathroom 5 minutes,affected-source
+1186,"1186, 1211",to the bathroom 5 minutes,possessed
+1179,"1179, 1227",to run to the bathroom 5 minutes after the meal.,process
+1179,"1179, 1227",to run to the bathroom 5 minutes after the meal.,attributive
+1179,"1179, 1227",to run to the bathroom 5 minutes after the meal.,possessive
+1179,"1179, 1227",to run to the bathroom 5 minutes after the meal.,two-role-action
+1232,"1232, 1238",scared,main
+1243,"1243, 1247",this,affected-carrier
+1243,"1243, 1247",this,agent-carrier
+1240,"1240, 1287",Is this the first signs of anorexia or bulimia?,process
+1391,"1391, 1413",in the same condition.,location
+1391,"1391, 1413",in the same condition.,range
+1381,"1381, 1413",if you're in the same condition.,process
+1381,"1381, 1413",if you're in the same condition.,locational
+1381,"1381, 1413",if you're in the same condition.,two-role-action
+1381,"1381, 1413",if you're in the same condition.,action
+1381,"1381, 1413",if you're in the same condition.,one-role-action
+1384,"1384, 1387",you,agent
+1384,"1384, 1387",you,agent-cognizant
+1384,"1384, 1387",you,affected-carrier
+1384,"1384, 1387",you,affected
+1384,"1384, 1387",you,agent-carrier
+1384,"1384, 1387",you,agent-perceiver
+1384,"1384, 1387",you,perceiver
+1421,"1421, 1440",to talk to someone.,process
+1421,"1421, 1440",to talk to someone.,two-role-action
+1421,"1421, 1440",to talk to someone.,action
+1429,"1429, 1440",to someone.,affected-emoter
+1429,"1429, 1440",to someone.,affected-path
+1429,"1429, 1440",to someone.,affected-perceiver
+1429,"1429, 1440",to someone.,affected-cognizant
+1429,"1429, 1440",to someone.,affected-carrier
+1429,"1429, 1440",to someone.,affected-destination
+1429,"1429, 1440",to someone.,affected
+1429,"1429, 1440",to someone.,affected-possessed
+1429,"1429, 1440",to someone.,affected-source
+1421,"1421, 1440",to talk to someone.,created-phenomenon
+1414,"1414, 1415",I,affected-emoter
+1414,"1414, 1415",I,agent
+1414,"1414, 1415",I,cognizant
+1414,"1414, 1415",I,agent-cognizant
+1414,"1414, 1440",I wish to talk to someone.,process
+1414,"1414, 1440",I wish to talk to someone.,two-role-cognition
+1414,"1414, 1440",I wish to talk to someone.,desiderative
+1421,"1421, 1428",to talk,main
+174,"174, 184",all desire,affected-possessed

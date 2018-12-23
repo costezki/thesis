@@ -1,0 +1,364 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.27303754266211605
+,Recall,0.6015037593984962
+,F1,0.3755868544600939
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+5,0.0,"59, 65","59, 65",0,things,things,agent,agent
+7,8.94427190999916,"73, 86","69, 78",11,going so well,n't going,main,main
+8,4.123105625617661,"59, 86","55, 87",5,things aren't going so well,and things aren't going so well.,action,action
+3,4.0,"36, 42","32, 42",4,posted,n't posted,main,main
+1,3.0,"26, 27","23, 27",3,I,",
+I",agent,agent
+4,0.0,"103, 109","103, 109",0,purged,purged,main,main
+19,5.0,"178, 185","173, 185",5,feeling,been feeling,main,main
+22,0.0,"215, 220","215, 220",0,guess,guess,main,main
+23,1.0,"221, 299","221, 300",1,"my logic is if I'm going to be stupid, I sure as hell don't want to be fat too","my logic is if I'm going to be stupid, I sure as hell don't want to be fat too.",phenomenon,phenomenon
+24,0.0,"230, 232","230, 232",0,is,is,main,main
+21,0.0,"213, 214","213, 214",0,I,I,cognizant,cognizant
+84,1.0,"213, 299","213, 300",1,"I guess my logic is if I'm going to be stupid, I sure as hell don't want to be fat too","I guess my logic is if I'm going to be stupid, I sure as hell don't want to be fat too.",mental,mental
+84,1.0,"213, 299","213, 300",1,"I guess my logic is if I'm going to be stupid, I sure as hell don't want to be fat too","I guess my logic is if I'm going to be stupid, I sure as hell don't want to be fat too.",two-role-cognition,two-role-cognition
+122,48.02082881417188,"221, 299","246, 258",66,"my logic is if I'm going to be stupid, I sure as hell don't want to be fat too",to be stupid,relational,relational
+88,1.0,"302, 318","302, 319",1,Know what I mean,Know what I mean?,two-role-cognition,two-role-cognition
+34,0.0,"312, 313","312, 313",0,I,I,cognizant,cognizant
+33,5.0,"307, 311","302, 311",5,what,Know what,phenomenon,phenomenon
+35,0.0,"314, 318","314, 318",0,mean,mean,main,main
+29,1.0,"331, 332","330, 332",1,s,'s,main,main
+44,0.0,"364, 371","364, 371",0,logical,logical,attribute,attribute
+41,0.0,"353, 357","353, 357",0,this,this,carrier,carrier
+42,4.123105625617661,"344, 377","340, 378",5,at times this seems logical to me,but at times this seems logical to me.,attributive,attributive
+42,4.123105625617661,"344, 377","340, 378",5,at times this seems logical to me,but at times this seems logical to me.,relational,relational
+38,0.0,"328, 338","328, 338",0,it's crazy,it's crazy,phenomenon,phenomenon
+36,0.0,"321, 322","321, 322",0,I,I,cognizant,cognizant
+37,0.0,"323, 327","323, 327",0,know,know,main,main
+39,1.0,"321, 338","321, 339",1,I know it's crazy,"I know it's crazy,",mental,mental
+39,1.0,"321, 338","321, 339",1,I know it's crazy,"I know it's crazy,",two-role-cognition,two-role-cognition
+40,0.0,"358, 363","358, 363",0,seems,seems,main,main
+111,3.1622776601683795,"430, 439","427, 440",4,I am full,if I am full.,attributive,attributive
+111,3.1622776601683795,"430, 439","427, 440",4,I am full,if I am full.,relational,relational
+85,0.0,"405, 406","405, 406",0,I,I,carrier,carrier
+46,5.0,"395, 404","395, 399",5,feel like,feel,main,main
+108,0.0,"430, 431","430, 431",0,I,I,carrier,carrier
+110,1.0,"435, 439","435, 440",1,full,full.,attribute,attribute
+106,0.0,"416, 426","416, 426",0,productive,productive,attribute,attribute
+87,4.0,"413, 415","409, 415",4,be,n't be,main,main
+54,0.0,"558, 561","558, 561",0,was,was,main,main
+95,8.06225774829855,"585, 595","577, 596",9,I was full,because I was full.,attributive,attributive
+95,8.06225774829855,"585, 595","577, 596",9,I was full,because I was full.,relational,relational
+48,0.0,"453, 454","453, 454",0,I,I,carrier,carrier
+94,21.18962010041709,"552, 576","545, 596",27,today was already a flop,", that today was already a flop because I was full.",attributive,attributive
+94,21.18962010041709,"552, 576","545, 596",27,today was already a flop,", that today was already a flop because I was full.",relational,relational
+56,0.0,"585, 586","585, 586",0,I,I,carrier,carrier
+52,0.0,"514, 522","514, 522",0,my paper,my paper,affected,affected
+49,0.0,"455, 458","455, 458",0,was,was,main,main
+58,1.0,"591, 595","591, 596",1,full,full.,attribute,attribute
+89,124.0,"442, 472","442, 596",124,Like today I was a little full,"Like today I was a little full and then decided that I couldn't work on my paper anymore until tomorrow, that today was already a flop because I was full.",attributive,attributive
+89,124.0,"442, 472","442, 596",124,Like today I was a little full,"Like today I was a little full and then decided that I couldn't work on my paper anymore until tomorrow, that today was already a flop because I was full.",relational,relational
+57,0.0,"587, 590","587, 590",0,was,was,main,main
+90,0.0,"495, 496","495, 496",0,I,I,agent,agent
+55,0.0,"570, 576","570, 576",0,a flop,a flop,attribute,attribute
+53,0.0,"552, 557","552, 557",0,today,today,carrier,carrier
+92,5.0,"506, 513","502, 510",7,work on,n't work,main,main
+65,16.278820596099706,"707, 715","704, 731",19,my paper,on my paper for five hours.,affected,affected
+98,4.0,"625, 631","621, 631",4,afford,n't afford,main,main
+115,7.211102550927978,"604, 674","598, 678",10,I decided I couldn't afford to skip working on my paper this afternoon,"Then, I decided I couldn't afford to skip working on my paper this afternoon, so",mental,mental
+115,7.211102550927978,"604, 674","598, 678",10,I decided I couldn't afford to skip working on my paper this afternoon,"Then, I decided I couldn't afford to skip working on my paper this afternoon, so",two-role-cognition,two-role-cognition
+114,0.0,"614, 674","614, 674",0,I couldn't afford to skip working on my paper this afternoon,I couldn't afford to skip working on my paper this afternoon,phenomenon,phenomenon
+59,2.0,"604, 605","602, 605",2,I,", I",cognizant,cognizant
+64,3.0,"697, 706","697, 703",3,worked on,worked,main,main
+63,0.0,"681, 687","681, 687",0,purged,purged,main,main
+116,9.055385138137417,"697, 730","688, 731",10,worked on my paper for five hours,and then worked on my paper for five hours.,action,action
+60,0.0,"606, 613","606, 613",0,decided,decided,main,main
+120,1.0,"829, 838","829, 839",1,a failure,a failure.,attribute,attribute
+119,1.0,"819, 820","818, 820",1,m,'m,main,main
+105,8.06225774829855,"809, 838","801, 839",9,I think I'm already a failure,because I think I'm already a failure.,mental,mental
+105,8.06225774829855,"809, 838","801, 839",9,I think I'm already a failure,because I think I'm already a failure.,two-role-cognition,two-role-cognition
+118,0.0,"817, 818","817, 818",0,I,I,carrier,carrier
+73,66.03786792439622,"779, 783","744, 839",91,full,"hungry and I work too much, or I'm full and I do nothing because I think I'm already a failure.",attribute,attribute
+103,70.0,"775, 783","733, 839",98,I'm full,"Either I'm hungry and I work too much, or I'm full and I do nothing because I think I'm already a failure.",attributive,attributive
+103,70.0,"775, 783","733, 839",98,I'm full,"Either I'm hungry and I work too much, or I'm full and I do nothing because I think I'm already a failure.",relational,relational
+79,1.0,"817, 838","817, 839",1,I'm already a failure,I'm already a failure.,phenomenon,phenomenon
+77,0.0,"809, 810","809, 810",0,I,I,cognizant,cognizant
+121,1.0,"817, 838","817, 839",1,I'm already a failure,I'm already a failure.,attributive,attributive
+121,1.0,"817, 838","817, 839",1,I'm already a failure,I'm already a failure.,relational,relational
+67,0.0,"741, 743","741, 743",0,'m,'m,main,main
+78,0.0,"811, 816","811, 816",0,think,think,main,main
+66,0.0,"740, 741","740, 741",0,I,I,carrier,carrier
+50,124.32618388738553,"459, 472","468, 596",115,a little full,"full and then decided that I couldn't work on my paper anymore until tomorrow, that today was already a flop because I was full.",attribute,attribute
+,
+,Manual mismatching all parsed (False Negative)
+81,"26, 53",I haven't posted in a while,action
+11,"96, 125",I have purged twice this week,action
+9,"96, 97",I,agent
+82,"128, 158",I haven't really binged though,action
+13,"128, 129",I,agent
+15,"145, 151",binged,main
+83,"161, 210",I have just been feeling stressed out over school,relational
+83,"161, 210",I have just been feeling stressed out over school,attributive
+16,"161, 162",I,carrier
+20,"186, 210",stressed out over school,attribute
+122,"221, 299","my logic is if I'm going to be stupid, I sure as hell don't want to be fat too",attributive
+12,"221, 229",my logic,carrier
+25,"233, 299","if I'm going to be stupid, I sure as hell don't want to be fat too",attribute
+88,"302, 318",Know what I mean,mental
+32,"302, 306",Know,main
+26,"307, 318",what I mean,phenomenon
+27,"307, 318",what I mean,mental
+27,"307, 318",what I mean,two-role-cognition
+31,"328, 338",it's crazy,relational
+31,"328, 338",it's crazy,attributive
+28,"328, 330",it,carrier
+30,"333, 338",crazy,attribute
+43,"393, 439",I feel like I can't be productive if I am full,mental
+43,"393, 439",I feel like I can't be productive if I am full,two-role-cognition
+45,"393, 394",I,cognizant
+47,"405, 439",I can't be productive if I am full,phenomenon
+107,"405, 426",I can't be productive,relational
+107,"405, 426",I can't be productive,attributive
+113,"482, 545",decided that I couldn't work on my paper anymore until tomorrow,mental
+113,"482, 545",decided that I couldn't work on my paper anymore until tomorrow,two-role-cognition
+51,"482, 489",decided,main
+93,"495, 545",I couldn't work on my paper anymore until tomorrow,action
+112,"495, 545",I couldn't work on my paper anymore until tomorrow,phenomenon
+99,"614, 674",I couldn't afford to skip working on my paper this afternoon,influential
+96,"614, 615",I,agent
+61,"632, 674",to skip working on my paper this afternoon,phenomenon
+100,"679, 687",I purged,action
+62,"679, 680",I,agent
+101,"740, 750",I'm hungry,relational
+101,"740, 750",I'm hungry,attributive
+68,"744, 750",hungry,attribute
+102,"755, 770",I work too much,action
+69,"755, 756",I,agent
+70,"757, 761",work,main
+71,"775, 776",I,carrier
+72,"777, 778",m,main
+104,"788, 800",I do nothing,action
+74,"788, 789",I,agent
+75,"790, 792",do,main
+76,"793, 800",nothing,range
+80,"841, 850",So stupid,relational
+80,"841, 850",So stupid,attributive
+117,"841, 850",So stupid,attribute
+,
+,Parsed mismatching all manual (False Positives)
+43,"43, 53",in a while,affected-carrier
+43,"43, 53",in a while,affected
+43,"43, 53",in a while,carrier
+16,"16, 18",Hi,main
+59,"59, 65",things,affected-emoter
+59,"59, 65",things,affected-path
+59,"59, 65",things,affected-perceiver
+59,"59, 65",things,agent-cognizant
+59,"59, 65",things,affected-cognizant
+59,"59, 65",things,affected-carrier
+59,"59, 65",things,affected-destination
+59,"59, 65",things,affected
+59,"59, 65",things,agent-carrier
+59,"59, 65",things,affected-possessed
+59,"59, 65",things,agent-perceiver
+59,"59, 65",things,affected-source
+59,"59, 65",things,carrier
+59,"59, 65",things,perceiver
+55,"55, 87",and things aren't going so well.,process
+55,"55, 87",and things aren't going so well.,directional
+55,"55, 87",and things aren't going so well.,one-role-action
+16,"16, 54","Hi Guys,
+I haven't posted in a while,",process
+16,"16, 54","Hi Guys,
+I haven't posted in a while,",directional
+16,"16, 54","Hi Guys,
+I haven't posted in a while,",relational
+23,"23, 27",",
+I",agent-cognizant
+23,"23, 27",",
+I",agent-carrier
+23,"23, 27",",
+I",agent-perceiver
+134,"134, 137",n't,main
+186,"186, 194",stressed,main
+246,"246, 251",to be,main
+240,"240, 245",going,main
+277,"277, 285",n't want,main
+252,"252, 258",stupid,location
+292,"292, 300",fat too.,affected-emoter
+292,"292, 300",fat too.,affected-path
+292,"292, 300",fat too.,affected-perceiver
+292,"292, 300",fat too.,destination
+292,"292, 300",fat too.,affected-cognizant
+292,"292, 300",fat too.,affected-carrier
+292,"292, 300",fat too.,affected-destination
+292,"292, 300",fat too.,affected
+292,"292, 300",fat too.,affected-possessed
+292,"292, 300",fat too.,affected-source
+292,"292, 300",fat too.,range
+286,"286, 300",to be fat too.,process
+286,"286, 300",to be fat too.,directional
+286,"286, 300",to be fat too.,two-role-action
+221,"221, 300","my logic is if I'm going to be stupid, I sure as hell don't want to be fat too.",created-phenomenon
+286,"286, 291",to be,main
+213,"213, 214",I,agent
+213,"213, 214",I,agent-cognizant
+213,"213, 214",I,affected-cognizant
+213,"213, 300","I guess my logic is if I'm going to be stupid, I sure as hell don't want to be fat too.",process
+246,"246, 258",to be stupid,process
+246,"246, 258",to be stupid,locational
+302,"302, 319",Know what I mean?,process
+302,"302, 319",Know what I mean?,attributive
+302,"302, 319",Know what I mean?,relational
+312,"312, 313",I,agent
+312,"312, 313",I,agent-cognizant
+312,"312, 313",I,affected-carrier
+312,"312, 313",I,agent-carrier
+312,"312, 313",I,carrier
+302,"302, 311",Know what,attribute
+302,"302, 311",Know what,created-phenomenon
+328,"328, 338",it's crazy,process
+328,"328, 338",it's crazy,two-role-action
+328,"328, 338",it's crazy,action
+353,"353, 357",this,affected-carrier
+353,"353, 357",this,agent-carrier
+340,"340, 378",but at times this seems logical to me.,process
+372,"372, 378",to me.,attribute
+333,"333, 338",crazy,affected-emoter
+333,"333, 338",crazy,affected-path
+333,"333, 338",crazy,affected-perceiver
+333,"333, 338",crazy,affected-cognizant
+333,"333, 338",crazy,affected-carrier
+333,"333, 338",crazy,affected-destination
+333,"333, 338",crazy,affected
+333,"333, 338",crazy,affected-possessed
+333,"333, 338",crazy,affected-source
+333,"333, 338",crazy,range
+328,"328, 338",it's crazy,created-phenomenon
+321,"321, 322",I,agent-cognizant
+321,"321, 322",I,affected-cognizant
+328,"328, 330",it,agent
+328,"328, 330",it,agent-cognizant
+328,"328, 330",it,agent-carrier
+328,"328, 330",it,agent-perceiver
+344,"344, 352",at times,attribute
+321,"321, 339","I know it's crazy,",process
+427,"427, 440",if I am full.,process
+427,"427, 440",if I am full.,locational
+405,"405, 406",I,affected-carrier
+405,"405, 406",I,agent-carrier
+430,"430, 431",I,affected-carrier
+430,"430, 431",I,agent-carrier
+435,"435, 440",full.,location
+416,"416, 426",productive,location
+432,"432, 434",am,main
+531,"531, 545",until tomorrow,attribute
+577,"577, 596",because I was full.,process
+577,"577, 596",because I was full.,locational
+453,"453, 454",I,affected-carrier
+453,"453, 454",I,agent-carrier
+545,"545, 596",", that today was already a flop because I was full.",process
+545,"545, 596",", that today was already a flop because I was full.",locational
+442,"442, 452",Like today,attribute
+585,"585, 586",I,affected-carrier
+585,"585, 586",I,agent-carrier
+514,"514, 522",my paper,affected-carrier
+514,"514, 522",my paper,carrier
+591,"591, 596",full.,location
+442,"442, 596","Like today I was a little full and then decided that I couldn't work on my paper anymore until tomorrow, that today was already a flop because I was full.",process
+495,"495, 496",I,agent-cognizant
+495,"495, 496",I,agent-carrier
+495,"495, 496",I,agent-perceiver
+570,"570, 576",a flop,location
+552,"552, 557",today,affected-carrier
+552,"552, 557",today,agent-carrier
+704,"704, 731",on my paper for five hours.,attribute
+704,"704, 731",on my paper for five hours.,affected-emoter
+704,"704, 731",on my paper for five hours.,affected-path
+704,"704, 731",on my paper for five hours.,affected-perceiver
+704,"704, 731",on my paper for five hours.,location
+704,"704, 731",on my paper for five hours.,affected-cognizant
+704,"704, 731",on my paper for five hours.,affected-carrier
+704,"704, 731",on my paper for five hours.,affected-destination
+704,"704, 731",on my paper for five hours.,affected-possessed
+704,"704, 731",on my paper for five hours.,affected-source
+704,"704, 731",on my paper for five hours.,range
+640,"640, 674",working on my paper this afternoon,process
+640,"640, 674",working on my paper this afternoon,attributive
+640,"640, 674",working on my paper this afternoon,directional
+640,"640, 674",working on my paper this afternoon,relational
+640,"640, 674",working on my paper this afternoon,two-role-action
+598,"598, 678","Then, I decided I couldn't afford to skip working on my paper this afternoon, so",process
+614,"614, 674",I couldn't afford to skip working on my paper this afternoon,created-phenomenon
+632,"632, 639",to skip,main
+602,"602, 605",", I",agent
+602,"602, 605",", I",agent-cognizant
+640,"640, 647",working,main
+660,"660, 674",this afternoon,affected-emoter
+660,"660, 674",this afternoon,affected-path
+660,"660, 674",this afternoon,affected-perceiver
+660,"660, 674",this afternoon,affected-cognizant
+660,"660, 674",this afternoon,affected-carrier
+660,"660, 674",this afternoon,affected-destination
+660,"660, 674",this afternoon,affected
+660,"660, 674",this afternoon,affected-possessed
+660,"660, 674",this afternoon,path
+660,"660, 674",this afternoon,affected-source
+660,"660, 674",this afternoon,range
+660,"660, 674",this afternoon,carrier
+648,"648, 659",on my paper,attribute
+648,"648, 659",on my paper,affected-emoter
+648,"648, 659",on my paper,affected-path
+648,"648, 659",on my paper,affected-perceiver
+648,"648, 659",on my paper,affected-cognizant
+648,"648, 659",on my paper,affected-carrier
+648,"648, 659",on my paper,affected-destination
+648,"648, 659",on my paper,affected
+648,"648, 659",on my paper,affected-possessed
+648,"648, 659",on my paper,affected-source
+648,"648, 659",on my paper,range
+688,"688, 731",and then worked on my paper for five hours.,process
+688,"688, 731",and then worked on my paper for five hours.,attributive
+688,"688, 731",and then worked on my paper for five hours.,locational
+688,"688, 731",and then worked on my paper for five hours.,relational
+688,"688, 731",and then worked on my paper for five hours.,two-role-action
+688,"688, 731",and then worked on my paper for five hours.,one-role-action
+829,"829, 839",a failure.,location
+801,"801, 839",because I think I'm already a failure.,process
+817,"817, 818",I,affected-carrier
+817,"817, 818",I,agent-carrier
+744,"744, 839","hungry and I work too much, or I'm full and I do nothing because I think I'm already a failure.",location
+733,"733, 839","Either I'm hungry and I work too much, or I'm full and I do nothing because I think I'm already a failure.",process
+733,"733, 839","Either I'm hungry and I work too much, or I'm full and I do nothing because I think I'm already a failure.",locational
+817,"817, 839",I'm already a failure.,created-phenomenon
+809,"809, 810",I,agent
+809,"809, 810",I,agent-cognizant
+809,"809, 810",I,affected-cognizant
+809,"809, 810",I,affected
+817,"817, 839",I'm already a failure.,process
+817,"817, 839",I'm already a failure.,locational
+740,"740, 741",I,affected-carrier
+740,"740, 741",I,agent-carrier
+877,"877, 879",me,phenomenon
+877,"877, 879",me,created-phenomenon
+877,"877, 879",me,affected-possessed
+877,"877, 879",me,created
+877,"877, 879",me,possessed
+869,"869, 879",letting me,process
+869,"869, 879",letting me,relational
+869,"869, 879",letting me,possessive
+869,"869, 879",letting me,permissive
+880,"880, 884",rant,main
+869,"869, 876",letting,main
+891,"891, 905",care everyone.,affected-emoter
+891,"891, 905",care everyone.,affected-path
+891,"891, 905",care everyone.,affected-perceiver
+891,"891, 905",care everyone.,affected-cognizant
+891,"891, 905",care everyone.,affected-carrier
+891,"891, 905",care everyone.,affected-destination
+891,"891, 905",care everyone.,affected
+891,"891, 905",care everyone.,affected-possessed
+891,"891, 905",care everyone.,affected-source
+891,"891, 905",care everyone.,range
+886,"886, 905",Take care everyone.,process
+886,"886, 905",Take care everyone.,two-role-action
+886,"886, 905",Take care everyone.,action
+886,"886, 890",Take,main
+286,"286, 300",to be fat too.,relational

@@ -1,0 +1,1982 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.2045050385299348
+,Recall,0.5555555555555556
+,F1,0.2989601386481803
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+4,0.0,"56, 59","56, 59",0,ate,ate,main,main
+5,5.0,"60, 90","65, 90",5,some of my son's birthday cake,of my son's birthday cake,affected,affected
+541,4.0,"162, 166","158, 166",4,rest,n't rest,main,main
+539,0.0,"151, 152","151, 152",0,I,I,agent,agent
+7,0.0,"96, 99","96, 99",0,was,was,main,main
+16,0.0,"173, 174","173, 174",0,I,I,agent,agent
+2,16.0,"31, 51","31, 35",16,gave into temptation,gave,main,main
+1,4.0,"29, 30","25, 30",4,I,", 
+I",agent,agent
+12,6.082762530298219,"173, 183","167, 184",7,I had some,until I had some.,action,action
+173,4.0,"56, 90","52, 90",4,ate some of my son's birthday cake,and ate some of my son's birthday cake,action,action
+17,0.0,"175, 178","175, 178",0,had,had,main,main
+542,62.6418390534633,"151, 166","91, 184",78,I wouldn't rest,- it was a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,action,action
+18,1.0,"179, 183","179, 184",1,some,some.,affected,affected
+20,0.0,"187, 191","187, 191",0,kept,kept,main,main
+21,1.0,"192, 222","192, 223",1,thinking about it all the time,thinking about it all the time!,phenomenon,phenomenon
+19,0.0,"185, 186","185, 186",0,I,I,agent,agent
+13,1.0,"185, 222","185, 223",1,I kept thinking about it all the time,I kept thinking about it all the time!,influential,influential
+180,87.28115489611719,"357, 385","274, 412",110,OK to have just a little bit,"new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",attribute,attribute
+33,96.42613753542138,"337, 339","274, 412",136,me,"new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",affected-cognizant,affected-cognizant
+15,15.0,"233, 261","248, 261",15,I wasn't going to go near it,to go near it,directional,directional
+15,15.0,"233, 261","248, 261",15,I wasn't going to go near it,to go near it,relational,relational
+25,35.4682957019364,"345, 385","368, 412",33,it would be OK to have just a little bit,just a little bit ( he's very supportive ) .,phenomenon,phenomenon
+179,0.0,"354, 356","354, 356",0,be,be,main,main
+24,3.0,"251, 253","248, 253",3,go,to go,main,main
+182,87.28115489611719,"345, 385","262, 412",110,it would be OK to have just a little bit,"- I'm still new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",attributive,attributive
+182,87.28115489611719,"345, 385","262, 412",110,it would be OK to have just a little bit,"- I'm still new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",relational,relational
+26,2.0,"264, 265","262, 265",2,I,- I,carrier,carrier
+27,1.0,"266, 267","265, 267",1,m,'m,main,main
+183,4.47213595499958,"388, 408","386, 412",6,he's very supportive,( he's very supportive ) .,relational,relational
+36,1.0,"391, 392","390, 392",1,s,'s,main,main
+39,4.0,"415, 425","415, 421",4,worked out,worked,main,main
+594,4.123105625617661,"519, 530","520, 526",5,*scared* of,scared,main,main
+184,0.0,"413, 435","413, 435",0,I worked out my points,I worked out my points,action,action
+50,20.396078054371138,"488, 540","492, 520",24,can you believe I was actually *scared* of eating it,you believe I was actually *,mental,mental
+50,20.396078054371138,"488, 540","492, 520",24,can you believe I was actually *scared* of eating it,you believe I was actually *,two-role-cognition,two-role-cognition
+47,0.0,"492, 495","492, 495",0,you,you,cognizant,cognizant
+44,0.0,"457, 463","457, 463",0,manage,manage,main,main
+42,0.0,"449, 450","449, 450",0,I,I,agent,agent
+48,0.0,"496, 503","496, 503",0,believe,believe,main,main
+38,0.0,"413, 414","413, 414",0,I,I,agent,agent
+49,20.0,"504, 540","504, 520",20,I was actually *scared* of eating it,I was actually *,phenomenon,phenomenon
+41,0.0,"440, 448","440, 448",0,reckoned,reckoned,main,main
+181,15.0,"449, 483","464, 483",15,I could manage some ( 60 g worth ),some ( 60 g worth ),phenomenon,phenomenon
+558,1.0,"550, 610","550, 611",1,I've still got this guilt-food relationship thing to work on,I've still got this guilt-food relationship thing to work on.,phenomenon,phenomenon
+58,0.0,"561, 564","561, 564",0,got,got,main,main
+51,1.0,"542, 610","542, 611",1,I think I've still got this guilt-food relationship thing to work on,I think I've still got this guilt-food relationship thing to work on.,mental,mental
+51,1.0,"542, 610","542, 611",1,I think I've still got this guilt-food relationship thing to work on,I think I've still got this guilt-food relationship thing to work on.,two-role-cognition,two-role-cognition
+55,0.0,"544, 549","544, 549",0,think,think,main,main
+54,0.0,"542, 543","542, 543",0,I,I,cognizant,cognizant
+62,0.0,"653, 655","653, 655",0,it,it,carrier,carrier
+60,26.019223662515376,"674, 698","648, 699",27,5.5 points worth of nice,"that it was nice, but not 5.5 points worth of nice.",attributive,attributive
+60,26.019223662515376,"674, 698","648, 699",27,5.5 points worth of nice,"that it was nice, but not 5.5 points worth of nice.",relational,relational
+568,0.0,"644, 647","644, 647",0,was,was,main,main
+63,0.0,"656, 659","656, 659",0,was,was,main,main
+569,10.63014581273465,"653, 698","660, 690",15,"it was nice, but not 5.5 points worth of nice","nice, but not 5.5 points worth",attribute,attribute
+65,17.029386365926403,"674, 698","691, 699",18,5.5 points worth of nice,of nice.,attribute,attribute
+574,69.9714227381436,"736, 753","700, 813",96,I thought I would,"I didn't really enjoy it as much as I thought I would and was annoyed with myself for ""wasting"" points like that.",mental,mental
+69,0.0,"722, 724","722, 724",0,it,it,phenomenon,phenomenon
+66,0.0,"700, 701","700, 701",0,I,I,emoter,emoter
+81,0.0,"833, 858","833, 858",0,a whole pile of meringues,a whole pile of meringues,affected,affected
+80,5.0,"827, 832","822, 832",5,eaten,have eaten,main,main
+78,0.0,"814, 815","814, 815",0,I,I,agent,agent
+91,0.0,"1034, 1036","1034, 1036",0,it,it,phenomenon,phenomenon
+98,47.0,"1086, 1105","1086, 1152",47,some chocolate cake,some chocolate cake ( useful info for when I go on maintenance ) .,affected,affected
+100,0.0,"1129, 1130","1129, 1130",0,I,I,agent,agent
+87,0.0,"968, 976","968, 976",0,realised,realised,main,main
+90,0.0,"1028, 1033","1028, 1033",0,liked,liked,main,main
+88,27.784887978899608,"977, 1012","991, 1036",35,I didn't have to binge on something,to binge on something just because I liked it,phenomenon,phenomenon
+76,13.0,"1026, 1036","1013, 1036",13,I liked it,just because I liked it,mental,mental
+84,0.0,"937, 940","937, 940",0,was,was,main,main
+547,0.0,"977, 978","977, 978",0,I,I,agent,agent
+97,0.0,"1082, 1085","1082, 1085",0,had,had,main,main
+186,52.630789467763066,"1108, 1119","1067, 1152",74,useful info,just because I had some chocolate cake ( useful info for when I go on maintenance ) .,relational,relational
+82,48.76474136094644,"1080, 1105","1067, 1152",60,I had some chocolate cake,just because I had some chocolate cake ( useful info for when I go on maintenance ) .,action,action
+550,4.242640687119285,"994, 1002","991, 999",6,binge on,to binge,main,main
+96,0.0,"1080, 1081","1080, 1081",0,I,I,agent,agent
+187,5.0,"1129, 1148","1124, 1148",5,I go on maintenance,when I go on maintenance,action,action
+101,15.0,"1131, 1148","1131, 1133",15,go on maintenance,go,main,main
+89,0.0,"1026, 1027","1026, 1027",0,I,I,emoter,emoter
+112,0.0,"1242, 1257","1242, 1257",0,fat and bloated,fat and bloated,attribute,attribute
+103,0.0,"1153, 1155","1153, 1155",0,It,It,agent,agent
+129,0.0,"1400, 1406","1400, 1406",0,wanted,wanted,main,main
+105,0.0,"1168, 1170","1168, 1170",0,me,me,affected-cognizant,affected-cognizant
+190,19.1049731745428,"1235, 1257","1233, 1276",21,I felt fat and bloated,- I felt fat and bloated after I'd eaten it,attributive,attributive
+122,0.0,"1309, 1312","1309, 1312",0,was,was,main,main
+109,0.0,"1196, 1205","1196, 1205",0,my demons,my demons,affected,affected
+114,0.0,"1264, 1265","1264, 1265",0,I,I,agent,agent
+132,0.0,"1447, 1450","1447, 1450",0,was,was,main,main
+106,0.0,"1176, 1177","1176, 1177",0,I,I,agent,agent
+117,0.0,"1274, 1276","1274, 1276",0,it,it,affected,affected
+189,27.459060435491963,"1176, 1205","1171, 1232",32,I haven't conquered my demons,that I haven't conquered my demons as much as I thought I had,action,action
+116,0.0,"1268, 1273","1268, 1273",0,eaten,eaten,main,main
+123,0.0,"1313, 1333","1313, 1333",0,purely psychological,purely psychological,attribute,attribute
+104,0.0,"1161, 1167","1161, 1167",0,showed,showed,main,main
+102,5.0,"1176, 1232","1171, 1232",5,I haven't conquered my demons as much as I thought I had,that I haven't conquered my demons as much as I thought I had,phenomenon,phenomenon
+121,0.0,"1304, 1308","1304, 1308",0,that,that,carrier,carrier
+197,14.035668847618199,"1437, 1464","1423, 1465",15,the taste was disappointing,", even though the taste was disappointing.",attributive,attributive
+197,14.035668847618199,"1437, 1464","1423, 1465",15,the taste was disappointing,", even though the taste was disappointing.",relational,relational
+126,6.4031242374328485,"1346, 1355","1342, 1350",7,gone over,n't gone,main,main
+188,0.0,"1153, 1232","1153, 1232",0,It also showed me that I haven't conquered my demons as much as I thought I had,It also showed me that I haven't conquered my demons as much as I thought I had,mental,mental
+188,0.0,"1153, 1232","1153, 1232",0,It also showed me that I haven't conquered my demons as much as I thought I had,It also showed me that I haven't conquered my demons as much as I thought I had,three-role-cognition,three-role-cognition
+194,0.0,"1304, 1333","1304, 1333",0,that was purely psychological,that was purely psychological,attributive,attributive
+194,0.0,"1304, 1333","1304, 1333",0,that was purely psychological,that was purely psychological,relational,relational
+131,0.0,"1437, 1446","1437, 1446",0,the taste,the taste,carrier,carrier
+111,0.0,"1237, 1241","1237, 1241",0,felt,felt,main,main
+110,2.0,"1235, 1236","1233, 1236",2,I,- I,affected-carrier,affected-carrier
+108,4.0,"1186, 1195","1182, 1195",4,conquered,n't conquered,main,main
+192,6.0,"1264, 1276","1258, 1276",6,I'd eaten it,after I'd eaten it,action,action
+598,0.0,"1499, 1502","1499, 1502",0,how,how,attribute,attribute
+601,5.0,"1499, 1509","1499, 1514",5,how I feel,how I feel now.,attributive,attributive
+198,1.0,"1466, 1513","1466, 1514",1,I'm feeling a bit confused about how I feel now,I'm feeling a bit confused about how I feel now.,attributive,attributive
+134,0.0,"1466, 1467","1466, 1467",0,I,I,carrier,carrier
+136,0.0,"1470, 1477","1470, 1477",0,feeling,feeling,main,main
+600,0.0,"1505, 1509","1505, 1509",0,feel,feel,main,main
+599,0.0,"1503, 1504","1503, 1504",0,I,I,carrier,carrier
+137,1.0,"1478, 1513","1478, 1514",1,a bit confused about how I feel now,a bit confused about how I feel now.,attribute,attribute
+201,12.041594578792296,"1548, 1587","1560, 1588",13,am I out of control of being in control,control of being in control?,relational,relational
+143,0.0,"1548, 1550","1548, 1550",0,am,am,main,main
+200,1.0,"1515, 1542","1515, 1543",1,I'm in control of my eating,"I'm in control of my eating,",attributive,attributive
+200,1.0,"1515, 1542","1515, 1543",1,I'm in control of my eating,"I'm in control of my eating,",relational,relational
+142,0.0,"1519, 1542","1519, 1542",0,in control of my eating,in control of my eating,attribute,attribute
+141,1.0,"1517, 1518","1516, 1518",1,m,'m,main,main
+140,0.0,"1515, 1516","1515, 1516",0,I,I,carrier,carrier
+206,0.0,"1709, 1712","1709, 1712",0,put,put,main,main
+149,0.0,"1593, 1599","1593, 1599",0,scared,scared,main,main
+162,2.0,"1681, 1704","1679, 1704",2,eat everything in sight,", eat everything in sight",action,action
+138,105.75916035975324,"1600, 1630","1624, 1733",90,I won't be able to stop losing,"losing when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again",phenomenon,phenomenon
+152,4.0,"1608, 1610","1604, 1610",4,be,n't be,main,main
+163,4.0,"1713, 1719","1713, 1715",4,it all,it,affected,affected
+155,0.0,"1638, 1643","1638, 1643",0,reach,reach,main,main
+161,9.0,"1685, 1704","1685, 1695",9,everything in sight,everything,affected,affected
+159,8.0,"1666, 1679","1674, 1679",8,totally crack,crack,main,main
+207,18.439088914585774,"1709, 1751","1705, 1733",22,put it all back on again ( and then some ),and put it all back on again,action,action
+160,0.0,"1681, 1684","1681, 1684",0,eat,eat,main,main
+205,8.0,"1661, 1679","1653, 1679",8,I'll totally crack,or that I'll totally crack,action,action
+209,4.123105625617661,"1785, 1813","1781, 1814",5,I'm actually a bit of a mess,but I'm actually a bit of a mess!,attributive,attributive
+209,4.123105625617661,"1785, 1813","1781, 1814",5,I'm actually a bit of a mess,but I'm actually a bit of a mess!,relational,relational
+170,1.0,"1787, 1788","1786, 1788",1,m,'m,main,main
+165,0.0,"1754, 1765","1754, 1765",0,Most people,Most people,cognizant,cognizant
+167,4.0,"1772, 1776","1768, 1776",4,know,n't know,main,main
+169,0.0,"1785, 1786","1785, 1786",0,I,I,carrier,carrier
+171,1.0,"1798, 1813","1798, 1814",1,a bit of a mess,a bit of a mess!,attribute,attribute
+168,0.0,"1777, 1779","1777, 1779",0,it,it,phenomenon,phenomenon
+208,1.0,"1754, 1779","1754, 1780",1,Most people don't know it,"Most people don't know it,",mental,mental
+208,1.0,"1754, 1779","1754, 1780",1,Most people don't know it,"Most people don't know it,",two-role-cognition,two-role-cognition
+215,0.0,"1871, 1880","1871, 1880",0,be asking,be asking,main,main
+213,0.0,"1862, 1863","1862, 1863",0,I,I,agent,agent
+226,4.0,"1903, 1935","1899, 1935",4,I have hit a weight loss plateau,But I have hit a weight loss plateau,action,action
+221,0.0,"1940, 1942","1940, 1942",0,it,it,carrier,carrier
+222,1.0,"1943, 1944","1942, 1944",1,s,'s,main,main
+227,4.123105625617661,"1940, 1970","1936, 1971",5,it's right before the HOLIDAYS,and it's right before the HOLIDAYS!,locational,locational
+227,4.123105625617661,"1940, 1970","1936, 1971",5,it's right before the HOLIDAYS,and it's right before the HOLIDAYS!,relational,relational
+223,20.0,"1945, 1970","1945, 1950",20,right before the HOLIDAYS,right,location,location
+219,0.0,"1910, 1913","1910, 1913",0,hit,hit,main,main
+217,0.0,"1903, 1904","1903, 1904",0,I,I,agent,agent
+579,14.0,"1988, 2017","1988, 2003",14,"what that means, holiday hell",what that means,attributive,attributive
+579,14.0,"1988, 2017","1988, 2003",14,"what that means, holiday hell",what that means,relational,relational
+230,1.0,"1988, 2017","1988, 2018",1,"what that means, holiday hell","what that means, holiday hell.",phenomenon,phenomenon
+229,0.0,"1983, 1987","1983, 1987",0,know,know,main,main
+146,0.0,"1988, 1992","1988, 1992",0,what,what,attribute,attribute
+228,4.0,"1976, 1982","1976, 1978",4,we all,we,cognizant,cognizant
+199,0.0,"1998, 2003","1998, 2003",0,means,means,main,main
+231,4.123105625617661,"1976, 2017","1972, 2018",5,"we all know what that means, holiday hell","And we all know what that means, holiday hell.",mental,mental
+231,4.123105625617661,"1976, 2017","1972, 2018",5,"we all know what that means, holiday hell","And we all know what that means, holiday hell.",two-role-cognition,two-role-cognition
+191,0.0,"1993, 1997","1993, 1997",0,that,that,carrier,carrier
+237,0.0,"2063, 2068","2063, 2068",0,purge,purge,main,main
+239,0.0,"2076, 2078","2076, 2078",0,do,do,main,main
+232,0.0,"2019, 2020","2019, 2020",0,I,I,agent,agent
+235,37.16180835212409,"2079, 2081","2045, 2096",49,it,about how I still purge I just do it with exercise.,phenomenon,phenomenon
+234,9.0,"2024, 2037","2024, 2028",9,told my story,told,main,main
+255,0.0,"2190, 2193","2190, 2193",0,eat,eat,main,main
+251,3.0,"2164, 2168","2161, 2168",3,make,to make,main,main
+246,0.0,"2119, 2126","2119, 2126",0,getting,getting,main,main
+254,0.0,"2188, 2189","2188, 2189",0,I,I,agent,agent
+538,24.20743687382041,"2138, 2184","2153, 2203",34,I'm just going to have to make myself throw up,to have to make myself throw up if I eat too much.,influential,influential
+253,19.0,"2169, 2184","2169, 2203",19,myself throw up,myself throw up if I eat too much.,phenomenon,phenomenon
+258,3.1622776601683795,"2188, 2202","2185, 2203",4,I eat too much,if I eat too much.,action,action
+268,38.91015291668744,"2254, 2259","2219, 2276",52,I try,"I haven't done it in so long, when I try NOTHING HAPPENS!",action,action
+256,0.0,"2216, 2218","2216, 2218",0,is,is,main,main
+259,0.0,"2219, 2220","2219, 2220",0,I,I,agent,agent
+265,0.0,"2256, 2259","2256, 2259",0,try,try,main,main
+261,4.0,"2229, 2233","2225, 2233",4,done,n't done,main,main
+277,8.06225774829855,"2298, 2364","2290, 2365",9,there are family members all over the place trying to FEED ME MORE,because there are family members all over the place trying to FEED ME MORE!,locational,locational
+277,8.06225774829855,"2298, 2364","2290, 2365",9,there are family members all over the place trying to FEED ME MORE,because there are family members all over the place trying to FEED ME MORE!,relational,relational
+274,0.0,"2304, 2307","2304, 2307",0,are,are,main,main
+271,0.0,"2284, 2289","2284, 2289",0,panic,panic,main,main
+275,0.0,"2308, 2322","2308, 2322",0,family members,family members,carrier,carrier
+282,0.0,"2382, 2384","2382, 2384",0,is,is,main,main
+287,3.0,"2415, 2419","2412, 2419",3,know,to know,main,main
+284,0.0,"2366, 2389","2366, 2389",0,The bottom line is this,The bottom line is this,attributive,attributive
+284,0.0,"2366, 2389","2366, 2389",0,The bottom line is this,The bottom line is this,relational,relational
+290,0.0,"2441, 2442","2441, 2442",0,I,I,emoter,emoter
+293,0.0,"2493, 2494","2493, 2494",0,I,I,agent-carrier,agent-carrier
+292,0.0,"2453, 2486","2453, 2486",0,it to get me through the holidays,it to get me through the holidays,phenomenon,phenomenon
+295,5.0,"2499, 2506","2499, 2501",5,go back,go,main,main
+278,0.0,"2441, 2486","2441, 2486",0,I only need it to get me through the holidays,I only need it to get me through the holidays,mental,mental
+291,0.0,"2448, 2452","2448, 2452",0,need,need,main,main
+301,8.0,"2565, 2592","2565, 2584",8,comfortable sharing with me,comfortable sharing,attribute,attribute
+303,0.0,"2603, 2613","2603, 2613",0,understand,understand,main,main
+298,0.0,"2550, 2553","2550, 2553",0,you,you,carrier,carrier
+347,3.0,"2550, 2592","2547, 2592",3,you don't feel comfortable sharing with me,If you don't feel comfortable sharing with me,attributive,attributive
+300,4.0,"2560, 2564","2556, 2564",4,feel,n't feel,main,main
+305,1.0,"2618, 2619","2617, 2619",1,s,'s,main,main
+351,14.317821063276353,"2681, 2688","2678, 2702",17,it's ok,So it's ok if you don't.,attributive,attributive
+351,14.317821063276353,"2681, 2688","2678, 2702",17,it's ok,So it's ok if you don't.,relational,relational
+312,0.0,"2686, 2688","2686, 2688",0,ok,ok,attribute,attribute
+311,1.0,"2684, 2685","2683, 2685",1,s,'s,main,main
+310,0.0,"2681, 2683","2681, 2683",0,it,it,carrier,carrier
+321,0.0,"2745, 2749","2745, 2749",0,help,help,main,main
+350,1.0,"2821, 2823","2821, 2824",1,me,me.,affected,affected
+353,65.06919393998976,"2710, 2735","2707, 2800",68,there is anyone out there,if there is anyone out there that can help me purge the right way after I eat too much PLEASE,locational,locational
+353,65.06919393998976,"2710, 2735","2707, 2800",68,there is anyone out there,if there is anyone out there that can help me purge the right way after I eat too much PLEASE,relational,relational
+354,40.311288741492746,"2736, 2772","2707, 2800",57,that can help me purge the right way,if there is anyone out there that can help me purge the right way after I eat too much PLEASE,action,action
+316,0.0,"2716, 2718","2716, 2718",0,is,is,main,main
+319,0.0,"2736, 2740","2736, 2740",0,that,that,agent,agent
+296,6.0,"2801, 2811","2801, 2805",6,have mercy,have,main,main
+326,0.0,"2816, 2820","2816, 2820",0,help,help,main,main
+325,0.0,"2781, 2784","2781, 2784",0,eat,eat,main,main
+324,0.0,"2779, 2780","2779, 2780",0,I,I,agent,agent
+355,9.219544457292887,"2779, 2793","2773, 2800",13,I eat too much,after I eat too much PLEASE,action,action
+322,57.14017850864661,"2750, 2752","2719, 2800",79,me,anyone out there that can help me purge the right way after I eat too much PLEASE,affected,affected
+317,75.0,"2719, 2725","2719, 2800",75,anyone,anyone out there that can help me purge the right way after I eat too much PLEASE,carrier,carrier
+333,0.0,"2852, 2858","2852, 2858",0,worked,worked,main,main
+329,4.0,"2833, 2836","2829, 2836",4,GET,N'T GET,main,main
+584,0.0,"2913, 2918","2913, 2918",0,doing,doing,main,main
+337,0.0,"2896, 2900","2896, 2900",0,hope,hope,main,main
+342,0.0,"2948, 2951","2948, 2951",0,you,you,emoter,emoter
+346,3.1622776601683795,"2948, 2985","2945, 2986",4,you want to have a private discussion,if you want to have a private discussion.,mental,mental
+341,0.0,"2938, 2944","2938, 2944",0,xxxcom,xxxcom,attribute,attribute
+340,0.0,"2935, 2937","2935, 2937",0,is,is,main,main
+344,1.0,"2957, 2985","2957, 2986",1,to have a private discussion,to have a private discussion.,phenomenon,phenomenon
+345,42.0,"2926, 2944","2926, 2986",42,My email is xxxcom,My email is xxxcom if you want to have a private discussion.,attributive,attributive
+345,42.0,"2926, 2944","2926, 2986",42,My email is xxxcom,My email is xxxcom if you want to have a private discussion.,relational,relational
+343,0.0,"2952, 2956","2952, 2956",0,want,want,main,main
+339,0.0,"2926, 2934","2926, 2934",0,My email,My email,carrier,carrier
+369,0.0,"3104, 3109","3104, 3109",0,found,found,main,main
+359,1.0,"3010, 3011","3009, 3011",1,m,'m,main,main
+390,0.0,"3008, 3028","3008, 3028",0,I'm new to this site,I'm new to this site,relational,relational
+587,8.06225774829855,"3102, 3118","3110, 3119",9,I found you guys,you guys!,phenomenon,phenomenon
+370,1.0,"3110, 3118","3110, 3119",1,you guys,you guys!,possessed,possessed
+392,12.041594578792296,"3090, 3118","3102, 3119",13,I'm so glad I found you guys,I found you guys!,mental,mental
+393,1.0,"3102, 3118","3102, 3119",1,I found you guys,I found you guys!,relational,relational
+393,1.0,"3102, 3118","3102, 3119",1,I found you guys,I found you guys!,possessive,possessive
+394,3.0,"3123, 3138","3120, 3138",3,here's my story,So here's my story,relational,relational
+380,0.0,"3182, 3183","3182, 3183",0,I,I,carrier,carrier
+381,0.0,"3184, 3187","3184, 3187",0,was,was,main,main
+385,0.0,"3225, 3233","3225, 3233",0,realised,realised,main,main
+590,94.42986815621421,"3241, 3251","3155, 3290",125,disgusting,"old and have had EDs since I was about 14, I just woke up one day and realised I look disgusting so I decided to do something about it.",attribute,attribute
+591,103.61949623502326,"3234, 3251","3138, 3290",135,I look disgusting,"... I'm 20 years old and have had EDs since I was about 14, I just woke up one day and realised I look disgusting so I decided to do something about it.",attributive,attributive
+591,103.61949623502326,"3234, 3251","3138, 3290",135,I look disgusting,"... I'm 20 years old and have had EDs since I was about 14, I just woke up one day and realised I look disgusting so I decided to do something about it.",relational,relational
+398,22.0,"3198, 3220","3176, 3220",22,I just woke up one day,"since I was about 14, I just woke up one day",action,action
+383,2.0,"3198, 3199","3196, 3199",2,I,", I",agent,agent
+384,3.0,"3205, 3212","3205, 3209",3,woke up,woke,main,main
+374,4.0,"3142, 3143","3138, 3143",4,I,... I,carrier,carrier
+397,6.0,"3182, 3196","3176, 3196",6,I was about 14,since I was about 14,attributive,attributive
+397,6.0,"3182, 3196","3176, 3196",6,I was about 14,since I was about 14,relational,relational
+382,0.0,"3188, 3196","3188, 3196",0,about 14,about 14,attribute,attribute
+375,1.0,"3144, 3145","3143, 3145",1,m,'m,main,main
+589,0.0,"3236, 3240","3236, 3240",0,look,look,main,main
+372,1.0,"3128, 3129","3127, 3129",1,s,'s,main,main
+401,0.0,"3291, 3292","3291, 3292",0,I,I,agent,agent
+409,0.0,"3337, 3344","3337, 3344",0,managed,managed,main,main
+410,31.400636936215164,"3345, 3386","3376, 3381",36,to achieve a weight that I was happy with,happy,created-phenomenon,created-phenomenon
+402,7.0,"3293, 3305","3293, 3298",7,stuck it out,stuck,main,main
+411,38.2099463490856,"3335, 3386","3331, 3424",42,I managed to achieve a weight that I was happy with,and I managed to achieve a weight that I was happy with ( not that I was going to give up ! ),influential,influential
+593,0.0,"3365, 3386","3365, 3386",0,that I was happy with,that I was happy with,mental,mental
+414,4.242640687119285,"3413, 3420","3410, 3417",6,give up,to give,main,main
+404,58.52349955359813,"3365, 3369","3345, 3424",75,that,to achieve a weight that I was happy with ( not that I was going to give up ! ),phenomenon,phenomenon
+441,19.0,"3310, 3330","3291, 3330",19,I worked really hard,I stuck it out and I worked really hard,action,action
+553,0.0,"3493, 3495","3493, 3495",0,it,it,carrier,carrier
+555,0.0,"3505, 3521","3505, 3521",0,the usual things,the usual things,attribute,attribute
+554,0.0,"3496, 3499","3496, 3499",0,was,was,main,main
+425,0.0,"3577, 3586","3577, 3586",0,diagnosed,diagnosed,main,main
+556,0.0,"3493, 3521","3493, 3521",0,it was just the usual things,it was just the usual things,attributive,attributive
+556,0.0,"3493, 3521","3493, 3521",0,it was just the usual things,it was just the usual things,relational,relational
+417,0.0,"3431, 3435","3431, 3435",0,been,been,main,main
+447,47.38143096192854,"3605, 3637","3611, 3684",53,I had to bring my body weight up,to bring my body weight up to what my neurologist thought was suitable as,action,action
+438,0.0,"3724, 3730","3724, 3730",0,having,having,main,main
+435,58.077534382926416,"3669, 3681","3611, 3684",61,was suitable,to bring my body weight up to what my neurologist thought was suitable as,phenomenon,phenomenon
+431,0.0,"3620, 3634","3620, 3634",0,my body weight,my body weight,affected,affected
+430,3.0,"3614, 3619","3611, 3619",3,bring,to bring,main,main
+428,0.0,"3605, 3606","3605, 3606",0,I,I,agent,agent
+449,8.06225774829855,"3685, 3753","3693, 3754",9,without a regular eating routine I was having up to 3 seizures a day,a regular eating routine I was having up to 3 seizures a day!,relational,relational
+449,8.06225774829855,"3685, 3753","3693, 3754",9,without a regular eating routine I was having up to 3 seizures a day,a regular eating routine I was having up to 3 seizures a day!,possessive,possessive
+439,7.0,"3731, 3747","3731, 3754",7,up to 3 seizures,up to 3 seizures a day!,affected-possessed,affected-possessed
+436,0.0,"3718, 3719","3718, 3719",0,I,I,affected-carrier,affected-carrier
+450,0.0,"3758, 3759","3758, 3759",0,I,I,agent-carrier,agent-carrier
+451,8.0,"3760, 3772","3760, 3764",8,went through,went,main,main
+452,8.06225774829855,"3773, 3806","3765, 3807",9,the most horrible year of my life,through the most horrible year of my life!,path,path
+453,3.1622776601683795,"3758, 3806","3755, 3807",4,I went through the most horrible year of my life,So I went through the most horrible year of my life!,directional,directional
+454,0.0,"3808, 3855","3808, 3855",0,The tablets I was on mixed with my meal routine,The tablets I was on mixed with my meal routine,agent,agent
+458,1.0,"3808, 3877","3808, 3878",1,The tablets I was on mixed with my meal routine made me put on weight,The tablets I was on mixed with my meal routine made me put on weight!,influential,influential
+455,0.0,"3856, 3860","3856, 3860",0,made,made,main,main
+457,1.0,"3861, 3877","3861, 3878",1,me put on weight,me put on weight!,phenomenon,phenomenon
+467,4.123105625617661,"3948, 3977","3944, 3978",5,I have come off my medication,and I have come off my medication!,relational,relational
+464,4.0,"3955, 3963","3955, 3959",4,come off,come,main,main
+461,0.0,"3936, 3943","3936, 3943",0,stopped,stopped,main,main
+466,4.0,"3883, 3943","3879, 3943",4,now after 2 years my seizures have almost completely stopped,But now after 2 years my seizures have almost completely stopped,action,action
+462,0.0,"3948, 3949","3948, 3949",0,I,I,affected-carrier,affected-carrier
+459,0.0,"3901, 3912","3901, 3912",0,my seizures,my seizures,agent,agent
+474,39.01281840626232,"4026, 4082","4065, 4083",40,some support and encouragement to help me get it all off,me get it all off!,phenomenon,phenomenon
+468,0.0,"3982, 3983","3982, 3983",0,I,I,agent,agent
+473,0.0,"4021, 4025","4021, 4025",0,need,need,main,main
+471,0.0,"3997, 4004","3997, 4004",0,dieting,dieting,phenomenon,phenomenon
+470,0.0,"3989, 3996","3989, 3996",0,started,started,main,main
+480,0.0,"4121, 4127","4121, 4127",0,caught,caught,main,main
+478,0.0,"4097, 4104","4097, 4104",0,careful,careful,attribute,attribute
+484,0.0,"4159, 4168","4159, 4168",0,convinced,convinced,main,main
+485,0.0,"4169, 4172","4169, 4172",0,him,him,affected-cognizant,affected-cognizant
+560,0.0,"4178, 4179","4178, 4179",0,I,I,carrier,carrier
+483,0.0,"4157, 4158","4157, 4158",0,I,I,agent,agent
+477,3.0,"4094, 4096","4091, 4096",3,be,to be,main,main
+506,4.123105625617661,"4157, 4222","4153, 4223",5,I convinced him that I was just ill with a tummy bug or something,but I convinced him that I was just ill with a tummy bug or something.,mental,mental
+506,4.123105625617661,"4157, 4222","4153, 4223",5,I convinced him that I was just ill with a tummy bug or something,but I convinced him that I was just ill with a tummy bug or something.,three-role-cognition,three-role-cognition
+561,0.0,"4180, 4183","4180, 4183",0,was,was,main,main
+482,39.56008088970496,"4128, 4138","4091, 4152",51,me purging,to be careful as my boyfriend caught me purging the other day,phenomenon,phenomenon
+486,5.0990195135927845,"4178, 4222","4173, 4223",6,I was just ill with a tummy bug or something,that I was just ill with a tummy bug or something.,phenomenon,phenomenon
+504,48.507731342539614,"4084, 4104","4091, 4152",49,I have to be careful,to be careful as my boyfriend caught me purging the other day,attributive,attributive
+504,48.507731342539614,"4084, 4104","4091, 4152",49,I have to be careful,to be careful as my boyfriend caught me purging the other day,relational,relational
+488,0.0,"4233, 4240","4233, 4240",0,telling,telling,main,main
+490,11.0,"4244, 4255","4233, 4255",11,I look fine,telling me I look fine,phenomenon,phenomenon
+481,18.601075237738275,"4269, 4302","4280, 4287",26,he will be happier with a thin me,happier,phenomenon,phenomenon
+498,0.0,"4277, 4279","4277, 4279",0,be,be,main,main
+492,17.4928556845359,"4260, 4302","4269, 4287",24,I'm sure he will be happier with a thin me,he will be happier,mental,mental
+492,17.4928556845359,"4260, 4302","4269, 4287",24,I'm sure he will be happier with a thin me,he will be happier,two-role-cognition,two-role-cognition
+487,0.0,"4224, 4226","4224, 4226",0,He,He,agent,agent
+565,0.0,"4246, 4250","4246, 4250",0,look,look,main,main
+496,0.0,"4269, 4271","4269, 4271",0,he,he,carrier,carrier
+511,1.0,"4330, 4336","4330, 4337",1,9 st 8,9 st 8!,attribute,attribute
+510,0.0,"4317, 4319","4317, 4319",0,am,am,main,main
+509,0.0,"4315, 4316","4315, 4316",0,I,I,carrier,carrier
+512,1.0,"4315, 4336","4315, 4337",1,I am currently 9 st 8,I am currently 9 st 8!,attributive,attributive
+512,1.0,"4315, 4336","4315, 4337",1,I am currently 9 st 8,I am currently 9 st 8!,relational,relational
+514,0.0,"4340, 4344","4340, 4344",0,feel,feel,main,main
+518,0.0,"4367, 4371","4367, 4371",0,look,look,main,main
+524,9.0,"4413, 4431","4413, 4422",9,something about it,something,range,range
+523,3.0,"4410, 4412","4407, 4412",3,do,to do,main,main
+525,19.026297590440446,"4388, 4431","4407, 4432",20,I desperately need to do something about it,to do something about it!,action,action
+533,0.0,"4433, 4462","4433, 4462",0,I have been reading your tips,I have been reading your tips,mental,mental
+529,0.0,"4453, 4462","4453, 4462",0,your tips,your tips,phenomenon,phenomenon
+534,4.123105625617661,"4467, 4496","4463, 4497",5,have picked up some good ones,and have picked up some good ones!,action,action
+528,5.0,"4445, 4452","4440, 4452",5,reading,been reading,main,main
+531,3.0,"4472, 4481","4472, 4478",3,picked up,picked,main,main
+535,0.0,"4503, 4507","4503, 4507",0,need,need,main,main
+445,115.88356225108029,"3527, 3549","3425, 3604",157,I ended up in hospital,"I had been ill for a while with black outs fainting etc and thought it was just the usual things, but I ended up in hospital, and after many tests they diagnosed me with epilepsy!",relational,relational
+,
+,Manual mismatching all parsed (False Negative)
+172,"29, 51",I gave into temptation,action
+174,"93, 139",it was a chocolate cake from a fabulous bakery,relational
+174,"93, 139",it was a chocolate cake from a fabulous bakery,attributive
+6,"93, 95",it,carrier
+8,"100, 139",a chocolate cake from a fabulous bakery,attribute
+14,"144, 166",I knew I wouldn't rest,mental
+14,"144, 166",I knew I wouldn't rest,two-role-cognition
+9,"144, 145",I,cognizant
+10,"146, 150",knew,main
+11,"151, 166",I wouldn't rest,phenomenon
+22,"233, 234",I,carrier
+3,"254, 261",near it,location
+175,"264, 285",I'm still new at this,relational
+175,"264, 285",I'm still new at this,attributive
+28,"274, 285",new at this,attribute
+176,"290, 315",still terrified of binges,mental
+29,"296, 308",terrified of,main
+30,"309, 315",binges,phenomenon
+177,"321, 385",my DH persuaded me that it would be OK to have just a little bit,mental
+177,"321, 385",my DH persuaded me that it would be OK to have just a little bit,three-role-cognition
+31,"321, 326",my DH,agent
+32,"327, 336",persuaded,main
+183,"388, 408",he's very supportive,attributive
+35,"388, 390",he,carrier
+37,"393, 408",very supportive,attribute
+40,"426, 435",my points,range
+557,"440, 483",reckoned I could manage some ( 60 g worth ),mental
+557,"440, 483",reckoned I could manage some ( 60 g worth ),two-role-cognition
+185,"449, 483",I could manage some ( 60 g worth ),action
+45,"464, 483",some ( 60 g worth ),affected
+546,"504, 540",I was actually *scared* of eating it,mental
+543,"504, 505",I,emoter
+545,"531, 540",eating it,phenomenon
+52,"550, 610",I've still got this guilt-food relationship thing to work on,relational
+52,"550, 610",I've still got this guilt-food relationship thing to work on,possessive
+56,"550, 551",I,carrier
+59,"565, 610",this guilt-food relationship thing to work on,possessed
+570,"620, 698","the disappointing thing was that it was nice, but not 5.5 points worth of nice",relational
+570,"620, 698","the disappointing thing was that it was nice, but not 5.5 points worth of nice",attributive
+559,"620, 643",the disappointing thing,carrier
+53,"653, 665","it was nice,",relational
+53,"653, 665","it was nice,",attributive
+64,"660, 665","nice,",attribute
+61,"700, 724",I didn't really enjoy it,mental
+68,"716, 721",enjoy,main
+574,"736, 753",I thought I would,two-role-cognition
+571,"736, 737",I,cognizant
+572,"738, 745",thought,main
+573,"746, 753",I would,phenomenon
+597,"746, 753",I would,mental
+595,"746, 747",I,emoter
+70,"758, 812","was annoyed with myself for ""wasting"" points like that",relational
+70,"758, 812","was annoyed with myself for ""wasting"" points like that",attributive
+74,"758, 761",was,main
+75,"762, 812","annoyed with myself for ""wasting"" points like that",attribute
+71,"814, 913","I could have eaten a whole pile of meringues for that amount of points, with some sweetened yoghurt",action
+72,"924, 947",the exercise was useful,relational
+72,"924, 947",the exercise was useful,attributive
+83,"924, 936",the exercise,carrier
+85,"941, 947",useful,attribute
+73,"966, 1012",I realised I didn't have to binge on something,mental
+73,"966, 1012",I realised I didn't have to binge on something,two-role-cognition
+86,"966, 967",I,affected-cognizant
+552,"977, 1012",I didn't have to binge on something,action
+551,"1003, 1012",something,affected
+77,"1042, 1066",I didn't have to get fat,relational
+77,"1042, 1066",I didn't have to get fat,attributive
+92,"1042, 1043",I,carrier
+94,"1059, 1062",get,main
+95,"1063, 1066",fat,attribute
+99,"1108, 1119",useful info,attribute
+186,"1108, 1119",useful info,attributive
+578,"1217, 1232",I thought I had,mental
+578,"1217, 1232",I thought I had,two-role-cognition
+575,"1217, 1218",I,cognizant
+576,"1219, 1226",thought,main
+577,"1227, 1232",I had,phenomenon
+190,"1235, 1257",I felt fat and bloated,relational
+193,"1290, 1333",I'm darn sure that was purely psychological,mental
+193,"1290, 1333",I'm darn sure that was purely psychological,two-role-cognition
+118,"1290, 1291",I,cognizant
+120,"1294, 1303",darn sure,main
+113,"1304, 1333",that was purely psychological,phenomenon
+195,"1336, 1377",I haven't gone over my points for the day,action
+124,"1336, 1337",I,agent
+127,"1356, 1377",my points for the day,range
+196,"1384, 1423",something in me wanted to scoff the lot,mental
+128,"1384, 1399",something in me,emoter
+130,"1407, 1423",to scoff the lot,phenomenon
+133,"1451, 1464",disappointing,attribute
+198,"1466, 1513",I'm feeling a bit confused about how I feel now,relational
+135,"1468, 1469",m,main
+601,"1499, 1509",how I feel,relational
+201,"1548, 1587",am I out of control of being in control,attributive
+144,"1551, 1552",I,carrier
+145,"1553, 1587",out of control of being in control,attribute
+202,"1589, 1630",I'm scared I won't be able to stop losing,mental
+147,"1589, 1590",I,emoter
+203,"1600, 1630",I won't be able to stop losing,relational
+203,"1600, 1630",I won't be able to stop losing,attributive
+150,"1600, 1601",I,affected-carrier
+153,"1611, 1630",able to stop losing,attribute
+204,"1636, 1651",I reach my goal,action
+154,"1636, 1637",I,agent
+156,"1644, 1651",my goal,range
+157,"1661, 1662",I,agent
+224,"1846, 1897",I'm not sure if I should be asking this here or not,mental
+224,"1846, 1897",I'm not sure if I should be asking this here or not,two-role-cognition
+210,"1846, 1847",I,cognizant
+212,"1854, 1858",sure,main
+139,"1862, 1897",I should be asking this here or not,phenomenon
+225,"1862, 1897",I should be asking this here or not,mental
+225,"1862, 1897",I should be asking this here or not,three-role-cognition
+216,"1881, 1885",this,phenomenon
+220,"1914, 1935",a weight loss plateau,range
+242,"2019, 2044",I've told my story before,action
+243,"2055, 2068",I still purge,action
+236,"2055, 2056",I,agent
+241,"2069, 2095",I just do it with exercise,influential
+238,"2069, 2070",I,agent
+257,"2102, 2133",the holidays are getting closer,relational
+257,"2102, 2133",the holidays are getting closer,attributive
+244,"2102, 2114",the holidays,carrier
+247,"2127, 2133",closer,attribute
+248,"2138, 2139",I,agent
+581,"2204, 2247",The problem is I haven't done it in so long,event-relating
+252,"2204, 2215",The problem,carrier
+580,"2219, 2247",I haven't done it in so long,phenomenon
+263,"2219, 2247",I haven't done it in so long,influential
+262,"2234, 2236",it,phenomenon
+264,"2254, 2255",I,agent
+269,"2260, 2275",NOTHING HAPPENS,action
+266,"2260, 2267",NOTHING,agent
+267,"2268, 2275",HAPPENS,main
+272,"2282, 2289",I panic,action
+270,"2282, 2283",I,agent
+276,"2323, 2341",all over the place,location
+281,"2366, 2381",The bottom line,attribute
+283,"2385, 2389",this,carrier
+289,"2391, 2439",I REALLY REALLY need to know how to purge better,mental
+289,"2391, 2439",I REALLY REALLY need to know how to purge better,two-role-cognition
+285,"2391, 2392",I,cognizant
+288,"2420, 2439",how to purge better,phenomenon
+297,"2493, 2545",I can go back to my famous purge by exercise routine,relational
+297,"2493, 2545",I can go back to my famous purge by exercise routine,directional
+279,"2507, 2545",to my famous purge by exercise routine,location
+347,"2550, 2592",you don't feel comfortable sharing with me,relational
+348,"2593, 2613",I TOTALLY understand,action
+302,"2593, 2594",I,agent
+349,"2615, 2641",It's a very private matter,relational
+349,"2615, 2641",It's a very private matter,attributive
+304,"2615, 2617",It,carrier
+306,"2620, 2641",a very private matter,attribute
+280,"2646, 2676",not everyone wants to share it,mental
+307,"2650, 2658",everyone,emoter
+308,"2659, 2664",wants,main
+309,"2665, 2676",to share it,phenomenon
+352,"2692, 2701",you don't,mental
+313,"2692, 2695",you,emoter
+318,"2726, 2735",out there,location
+323,"2801, 2811",have mercy,action
+582,"2816, 2823",help me,action
+356,"2825, 2840",I CAN'T GET FAT,relational
+356,"2825, 2840",I CAN'T GET FAT,attributive
+327,"2825, 2826",I,carrier
+330,"2837, 2840",FAT,attribute
+357,"2847, 2882",I've worked so hard to lose so much,action
+331,"2847, 2848",I,agent
+335,"2894, 2924",I hope you all are doing GREAT,mental
+336,"2894, 2895",I,emoter
+338,"2901, 2924",you all are doing GREAT,phenomenon
+586,"2901, 2924",you all are doing GREAT,relational
+586,"2901, 2924",you all are doing GREAT,attributive
+334,"2901, 2908",you all,carrier
+585,"2919, 2924",GREAT,attribute
+390,"3008, 3028",I'm new to this site,attributive
+358,"3008, 3009",I,carrier
+360,"3012, 3028",new to this site,attribute
+391,"3030, 3085",I've never really been a member of a pro ED site before,relational
+391,"3030, 3085",I've never really been a member of a pro ED site before,attributive
+361,"3030, 3031",I,carrier
+363,"3048, 3052",been,main
+364,"3053, 3078",a member of a pro ED site,attribute
+365,"3090, 3091",I,emoter
+367,"3097, 3101",glad,main
+368,"3102, 3103",I,agent-carrier
+394,"3123, 3138",here's my story,attributive
+371,"3123, 3127",here,carrier
+373,"3130, 3138",my story,attribute
+395,"3142, 3158",I'm 20 years old,relational
+395,"3142, 3158",I'm 20 years old,attributive
+376,"3146, 3158",20 years old,attribute
+396,"3163, 3175",have had EDs,relational
+396,"3163, 3175",have had EDs,possessive
+378,"3168, 3171",had,main
+379,"3172, 3175",EDs,possessed
+399,"3225, 3251",realised I look disgusting,mental
+399,"3225, 3251",realised I look disgusting,two-role-cognition
+386,"3234, 3251",I look disgusting,phenomenon
+588,"3234, 3235",I,carrier
+400,"3255, 3289",I decided to do something about it,mental
+400,"3255, 3289",I decided to do something about it,two-role-cognition
+387,"3255, 3256",I,agent-cognizant
+388,"3257, 3264",decided,main
+389,"3265, 3289",to do something about it,phenomenon
+440,"3291, 3305",I stuck it out,action
+405,"3310, 3311",I,agent
+406,"3312, 3318",worked,main
+408,"3335, 3336",I,agent
+403,"3370, 3371",I,emoter
+592,"3376, 3386",happy with,main
+442,"3398, 3420",I was going to give up,action
+412,"3398, 3399",I,agent
+443,"3425, 3480",I had been ill for a while with black outs fainting etc,relational
+443,"3425, 3480",I had been ill for a while with black outs fainting etc,attributive
+415,"3425, 3426",I,carrier
+418,"3436, 3480",ill for a while with black outs fainting etc,attribute
+444,"3485, 3521",thought it was just the usual things,mental
+444,"3485, 3521",thought it was just the usual things,two-role-cognition
+419,"3485, 3492",thought,main
+420,"3493, 3521",it was just the usual things,phenomenon
+445,"3527, 3549",I ended up in hospital,locational
+421,"3527, 3528",I,carrier
+422,"3529, 3537",ended up,main
+423,"3538, 3549",in hospital,location
+446,"3555, 3603",after many tests they diagnosed me with epilepsy,mental
+446,"3555, 3603",after many tests they diagnosed me with epilepsy,three-role-cognition
+424,"3572, 3576",they,agent
+426,"3587, 3589",me,affected-cognizant
+427,"3590, 3603",with epilepsy,phenomenon
+448,"3638, 3681",to what my neurologist thought was suitable,mental
+448,"3638, 3681",to what my neurologist thought was suitable,two-role-cognition
+433,"3646, 3660",my neurologist,cognizant
+434,"3661, 3668",thought,main
+453,"3758, 3806",I went through the most horrible year of my life,relational
+467,"3948, 3977",I have come off my medication,possessive
+465,"3964, 3977",my medication,affected-possessed
+502,"3982, 4010",I have started dieting again,influential
+503,"4012, 4082",I really need some support and encouragement to help me get it all off,mental
+472,"4012, 4013",I,emoter
+475,"4084, 4085",I,carrier
+505,"4108, 4152",my boyfriend caught me purging the other day,mental
+505,"4108, 4152",my boyfriend caught me purging the other day,two-role-perception
+479,"4108, 4120",my boyfriend,perceiver
+563,"4178, 4222",I was just ill with a tummy bug or something,relational
+563,"4178, 4222",I was just ill with a tummy bug or something,attributive
+562,"4189, 4222",ill with a tummy bug or something,attribute
+491,"4224, 4255",He keeps telling me I look fine,mental
+491,"4224, 4255",He keeps telling me I look fine,three-role-cognition
+489,"4241, 4243",me,affected-cognizant
+567,"4244, 4255",I look fine,relational
+567,"4244, 4255",I look fine,attributive
+564,"4244, 4245",I,carrier
+566,"4251, 4255",fine,attribute
+493,"4260, 4261",I,cognizant
+495,"4264, 4268",sure,main
+507,"4269, 4302",he will be happier with a thin me,relational
+507,"4269, 4302",he will be happier with a thin me,attributive
+499,"4280, 4302",happier with a thin me,attribute
+508,"4307, 4313",will I,relational
+508,"4307, 4313",will I,attributive
+501,"4312, 4313",I,carrier
+516,"4338, 4363",I feel fucking disgusting,relational
+516,"4338, 4363",I feel fucking disgusting,attributive
+513,"4338, 4339",I,carrier
+515,"4345, 4363",fucking disgusting,attribute
+520,"4365, 4382",I look disgusting,relational
+520,"4365, 4382",I look disgusting,attributive
+517,"4365, 4366",I,carrier
+519,"4372, 4382",disgusting,attribute
+521,"4388, 4389",I,agent
+533,"4433, 4462",I have been reading your tips,two-role-cognition
+526,"4433, 4434",I,cognizant
+532,"4482, 4496",some good ones,range
+537,"4503, 4521",need encouragement,mental
+536,"4508, 4521",encouragement,phenomenon
+,
+,Parsed mismatching all manual (False Positives)
+100,"100, 184",a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,affected-emoter
+100,"100, 184",a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,affected-path
+100,"100, 184",a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,affected-perceiver
+100,"100, 184",a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,affected-cognizant
+100,"100, 184",a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,affected-carrier
+100,"100, 184",a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,affected-destination
+100,"100, 184",a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,affected-possessed
+100,"100, 184",a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,affected-source
+100,"100, 184",a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,range
+65,"65, 90",of my son's birthday cake,affected-emoter
+65,"65, 90",of my son's birthday cake,affected-path
+65,"65, 90",of my son's birthday cake,affected-perceiver
+65,"65, 90",of my son's birthday cake,affected-cognizant
+65,"65, 90",of my son's birthday cake,affected-carrier
+65,"65, 90",of my son's birthday cake,affected-destination
+65,"65, 90",of my son's birthday cake,affected-possessed
+65,"65, 90",of my son's birthday cake,affected-source
+36,"36, 51",into temptation,created-phenomenon
+36,"36, 51",into temptation,affected-possessed
+36,"36, 51",into temptation,created
+36,"36, 51",into temptation,possessed
+151,"151, 152",I,agent-cognizant
+151,"151, 152",I,agent-carrier
+151,"151, 152",I,agent-perceiver
+173,"173, 174",I,agent-cognizant
+173,"173, 174",I,affected-carrier
+173,"173, 174",I,affected
+173,"173, 174",I,agent-carrier
+173,"173, 174",I,agent-perceiver
+173,"173, 174",I,carrier
+173,"173, 174",I,perceiver
+25,"25, 30",", 
+I",agent-cognizant
+25,"25, 30",", 
+I",agent-carrier
+25,"25, 30",", 
+I",agent-perceiver
+167,"167, 184",until I had some.,process
+167,"167, 184",until I had some.,causative
+167,"167, 184",until I had some.,relational
+167,"167, 184",until I had some.,possessive
+167,"167, 184",until I had some.,two-role-action
+52,"52, 90",and ate some of my son's birthday cake,process
+52,"52, 90",and ate some of my son's birthday cake,two-role-action
+18,"18, 20",Hi,main
+60,"60, 64",some,affected-emoter
+60,"60, 64",some,affected-path
+60,"60, 64",some,affected-perceiver
+60,"60, 64",some,affected-cognizant
+60,"60, 64",some,affected-carrier
+60,"60, 64",some,affected-destination
+60,"60, 64",some,affected
+60,"60, 64",some,affected-possessed
+60,"60, 64",some,affected-source
+91,"91, 184",- it was a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,process
+91,"91, 184",- it was a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,two-role-action
+18,"18, 51","Hi Guys, 
+I gave into temptation",process
+18,"18, 51","Hi Guys, 
+I gave into temptation",relational
+18,"18, 51","Hi Guys, 
+I gave into temptation",possessive
+18,"18, 51","Hi Guys, 
+I gave into temptation",two-role-action
+91,"91, 95",- it,agent
+91,"91, 95",- it,agent-cognizant
+91,"91, 95",- it,agent-carrier
+91,"91, 95",- it,agent-perceiver
+179,"179, 184",some.,phenomenon
+179,"179, 184",some.,affected-emoter
+179,"179, 184",some.,created-phenomenon
+179,"179, 184",some.,affected-path
+179,"179, 184",some.,affected-perceiver
+179,"179, 184",some.,affected-cognizant
+179,"179, 184",some.,affected-carrier
+179,"179, 184",some.,affected-destination
+179,"179, 184",some.,affected-possessed
+179,"179, 184",some.,affected-source
+179,"179, 184",some.,created
+179,"179, 184",some.,possessed
+192,"192, 223",thinking about it all the time!,created-phenomenon
+192,"192, 200",thinking,main
+185,"185, 186",I,agent-cognizant
+185,"185, 186",I,agent-carrier
+185,"185, 186",I,agent-perceiver
+185,"185, 223",I kept thinking about it all the time!,process
+185,"185, 223",I kept thinking about it all the time!,continuing
+274,"274, 412","new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",affected-emoter
+274,"274, 412","new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",affected-path
+274,"274, 412","new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",affected-perceiver
+274,"274, 412","new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",affected-carrier
+274,"274, 412","new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",affected-destination
+274,"274, 412","new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",affected
+274,"274, 412","new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",affected-possessed
+274,"274, 412","new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",affected-source
+393,"393, 408",very supportive,location
+248,"248, 261",to go near it,process
+248,"248, 261",to go near it,attributive
+248,"248, 261",to go near it,action
+248,"248, 261",to go near it,one-role-action
+360,"360, 367",to have,main
+368,"368, 412",just a little bit ( he's very supportive ) .,created-phenomenon
+368,"368, 412",just a little bit ( he's very supportive ) .,created
+254,"254, 261",near it,attribute
+262,"262, 412","- I'm still new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",process
+262,"262, 412","- I'm still new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",two-role-action
+262,"262, 265",- I,agent
+262,"262, 265",- I,agent-cognizant
+262,"262, 265",- I,affected-carrier
+262,"262, 265",- I,agent-carrier
+262,"262, 265",- I,agent-perceiver
+360,"360, 412",to have just a little bit ( he's very supportive ) .,process
+360,"360, 412",to have just a little bit ( he's very supportive ) .,causative
+360,"360, 412",to have just a little bit ( he's very supportive ) .,influential
+238,"238, 247",n't going,main
+388,"388, 390",he,agent
+388,"388, 390",he,agent-perceiver
+388,"388, 390",he,perceiver
+386,"386, 412",( he's very supportive ) .,process
+386,"386, 412",( he's very supportive ) .,locational
+426,"426, 435",my points,created-phenomenon
+426,"426, 435",my points,created
+413,"413, 435",I worked out my points,process
+413,"413, 435",I worked out my points,two-role-action
+492,"492, 520",you believe I was actually *,process
+492,"492, 520",you believe I was actually *,emotive
+492,"492, 495",you,affected-emoter
+492,"492, 495",you,agent-cognizant
+492,"492, 495",you,affected-cognizant
+492,"492, 495",you,emoter
+449,"449, 450",I,affected-emoter
+449,"449, 450",I,affected-path
+449,"449, 450",I,affected-perceiver
+449,"449, 450",I,agent-cognizant
+449,"449, 450",I,affected-cognizant
+449,"449, 450",I,affected-carrier
+449,"449, 450",I,affected-destination
+449,"449, 450",I,affected
+449,"449, 450",I,agent-carrier
+449,"449, 450",I,affected-possessed
+449,"449, 450",I,agent-perceiver
+449,"449, 450",I,affected-source
+506,"506, 509",was,main
+413,"413, 414",I,agent-cognizant
+413,"413, 414",I,agent-carrier
+413,"413, 414",I,agent-perceiver
+504,"504, 520",I was actually *,created-phenomenon
+464,"464, 483",some ( 60 g worth ),created-phenomenon
+464,"464, 483",some ( 60 g worth ),range
+550,"550, 611",I've still got this guilt-food relationship thing to work on.,created-phenomenon
+542,"542, 611",I think I've still got this guilt-food relationship thing to work on.,process
+600,"600, 611",to work on.,process
+600,"600, 611",to work on.,action
+600,"600, 611",to work on.,one-role-action
+600,"600, 607",to work,main
+542,"542, 543",I,agent
+542,"542, 543",I,agent-cognizant
+542,"542, 543",I,affected-cognizant
+542,"542, 543",I,affected
+653,"653, 655",it,affected-carrier
+653,"653, 655",it,agent-carrier
+648,"648, 699","that it was nice, but not 5.5 points worth of nice.",process
+660,"660, 690","nice, but not 5.5 points worth",affected-carrier
+660,"660, 690","nice, but not 5.5 points worth",agent-carrier
+660,"660, 690","nice, but not 5.5 points worth",carrier
+700,"700, 813","I didn't really enjoy it as much as I thought I would and was annoyed with myself for ""wasting"" points like that.",process
+700,"700, 813","I didn't really enjoy it as much as I thought I would and was annoyed with myself for ""wasting"" points like that.",emotive
+722,"722, 724",it,created-phenomenon
+705,"705, 708",n't,main
+700,"700, 701",I,affected-emoter
+886,"886, 914",with some sweetened yoghurt!,affected-emoter
+886,"886, 914",with some sweetened yoghurt!,affected-path
+886,"886, 914",with some sweetened yoghurt!,affected-perceiver
+886,"886, 914",with some sweetened yoghurt!,affected-cognizant
+886,"886, 914",with some sweetened yoghurt!,affected-carrier
+886,"886, 914",with some sweetened yoghurt!,affected-destination
+886,"886, 914",with some sweetened yoghurt!,affected
+886,"886, 914",with some sweetened yoghurt!,affected-possessed
+886,"886, 914",with some sweetened yoghurt!,affected-source
+859,"859, 884",for that amount of points,affected-emoter
+859,"859, 884",for that amount of points,affected-path
+859,"859, 884",for that amount of points,affected-perceiver
+859,"859, 884",for that amount of points,affected-cognizant
+859,"859, 884",for that amount of points,affected-carrier
+859,"859, 884",for that amount of points,affected-destination
+859,"859, 884",for that amount of points,affected
+859,"859, 884",for that amount of points,affected-possessed
+859,"859, 884",for that amount of points,affected-source
+833,"833, 858",a whole pile of meringues,affected-emoter
+833,"833, 858",a whole pile of meringues,affected-path
+833,"833, 858",a whole pile of meringues,affected-perceiver
+833,"833, 858",a whole pile of meringues,affected-cognizant
+833,"833, 858",a whole pile of meringues,affected-carrier
+833,"833, 858",a whole pile of meringues,affected-destination
+833,"833, 858",a whole pile of meringues,affected-possessed
+833,"833, 858",a whole pile of meringues,affected-source
+814,"814, 815",I,agent-cognizant
+814,"814, 815",I,agent-carrier
+814,"814, 815",I,agent-perceiver
+1034,"1034, 1036",it,created-phenomenon
+1086,"1086, 1152",some chocolate cake ( useful info for when I go on maintenance ) .,phenomenon
+1086,"1086, 1152",some chocolate cake ( useful info for when I go on maintenance ) .,affected-emoter
+1086,"1086, 1152",some chocolate cake ( useful info for when I go on maintenance ) .,created-phenomenon
+1086,"1086, 1152",some chocolate cake ( useful info for when I go on maintenance ) .,affected-path
+1086,"1086, 1152",some chocolate cake ( useful info for when I go on maintenance ) .,affected-perceiver
+1086,"1086, 1152",some chocolate cake ( useful info for when I go on maintenance ) .,affected-cognizant
+1086,"1086, 1152",some chocolate cake ( useful info for when I go on maintenance ) .,affected-carrier
+1086,"1086, 1152",some chocolate cake ( useful info for when I go on maintenance ) .,affected-destination
+1086,"1086, 1152",some chocolate cake ( useful info for when I go on maintenance ) .,affected-possessed
+1086,"1086, 1152",some chocolate cake ( useful info for when I go on maintenance ) .,affected-source
+1086,"1086, 1152",some chocolate cake ( useful info for when I go on maintenance ) .,created
+1086,"1086, 1152",some chocolate cake ( useful info for when I go on maintenance ) .,possessed
+1129,"1129, 1130",I,affected-emoter
+1129,"1129, 1130",I,affected-path
+1129,"1129, 1130",I,affected-perceiver
+1129,"1129, 1130",I,agent-cognizant
+1129,"1129, 1130",I,affected-cognizant
+1129,"1129, 1130",I,affected-carrier
+1129,"1129, 1130",I,affected-destination
+1129,"1129, 1130",I,affected
+1129,"1129, 1130",I,agent-carrier
+1129,"1129, 1130",I,affected-possessed
+1129,"1129, 1130",I,agent-perceiver
+1129,"1129, 1130",I,affected-source
+1129,"1129, 1130",I,carrier
+1129,"1129, 1130",I,perceiver
+977,"977, 1036",I didn't have to binge on something just because I liked it,process
+977,"977, 1036",I didn't have to binge on something just because I liked it,causative
+977,"977, 1036",I didn't have to binge on something just because I liked it,influential
+991,"991, 1036",to binge on something just because I liked it,created-phenomenon
+991,"991, 1036",to binge on something just because I liked it,created
+1124,"1124, 1128",when,phenomenon
+1124,"1124, 1128",when,created-phenomenon
+1124,"1124, 1128",when,destination
+1124,"1124, 1128",when,location
+1124,"1124, 1128",when,affected-destination
+1124,"1124, 1128",when,affected-possessed
+1124,"1124, 1128",when,possessed
+1124,"1124, 1128",when,range
+1013,"1013, 1036",just because I liked it,process
+1013,"1013, 1036",just because I liked it,emotive
+1013,"1013, 1036",just because I liked it,desiderative
+1134,"1134, 1148",on maintenance,destination
+1134,"1134, 1148",on maintenance,location
+1134,"1134, 1148",on maintenance,affected-destination
+1134,"1134, 1148",on maintenance,affected-possessed
+1134,"1134, 1148",on maintenance,possessed
+1134,"1134, 1148",on maintenance,range
+977,"977, 978",I,agent-cognizant
+977,"977, 978",I,agent-carrier
+977,"977, 978",I,agent-perceiver
+1067,"1067, 1152",just because I had some chocolate cake ( useful info for when I go on maintenance ) .,process
+1067,"1067, 1152",just because I had some chocolate cake ( useful info for when I go on maintenance ) .,causative
+1067,"1067, 1152",just because I had some chocolate cake ( useful info for when I go on maintenance ) .,possessive
+1067,"1067, 1152",just because I had some chocolate cake ( useful info for when I go on maintenance ) .,two-role-action
+982,"982, 990",n't have,main
+1080,"1080, 1081",I,agent-cognizant
+1080,"1080, 1081",I,affected-carrier
+1080,"1080, 1081",I,affected
+1080,"1080, 1081",I,agent-carrier
+1080,"1080, 1081",I,agent-perceiver
+1080,"1080, 1081",I,carrier
+1080,"1080, 1081",I,perceiver
+1124,"1124, 1148",when I go on maintenance,process
+1124,"1124, 1148",when I go on maintenance,locational
+1124,"1124, 1148",when I go on maintenance,directional
+1124,"1124, 1148",when I go on maintenance,possessive
+1124,"1124, 1148",when I go on maintenance,continuing
+1124,"1124, 1148",when I go on maintenance,two-role-action
+1026,"1026, 1027",I,affected-emoter
+1242,"1242, 1257",fat and bloated,phenomenon
+1242,"1242, 1257",fat and bloated,created-phenomenon
+1227,"1227, 1232",I had,process
+1227,"1227, 1232",I had,action
+1227,"1227, 1232",I had,one-role-action
+1153,"1153, 1155",It,agent-cognizant
+1153,"1153, 1155",It,agent-carrier
+1153,"1153, 1155",It,agent-perceiver
+1168,"1168, 1170",me,cognizant
+1168,"1168, 1170",me,affected-perceiver
+1168,"1168, 1170",me,agent-cognizant
+1168,"1168, 1170",me,affected
+1168,"1168, 1170",me,perceiver
+1233,"1233, 1276",- I felt fat and bloated after I'd eaten it,process
+1233,"1233, 1276",- I felt fat and bloated after I'd eaten it,mental
+1233,"1233, 1276",- I felt fat and bloated after I'd eaten it,two-role-perception
+1233,"1233, 1276",- I felt fat and bloated after I'd eaten it,emotive
+1229,"1229, 1232",had,main
+1196,"1196, 1205",my demons,affected-emoter
+1196,"1196, 1205",my demons,affected-path
+1196,"1196, 1205",my demons,affected-perceiver
+1196,"1196, 1205",my demons,affected-cognizant
+1196,"1196, 1205",my demons,affected-carrier
+1196,"1196, 1205",my demons,affected-destination
+1196,"1196, 1205",my demons,affected-possessed
+1196,"1196, 1205",my demons,affected-source
+1264,"1264, 1265",I,agent-cognizant
+1264,"1264, 1265",I,agent-carrier
+1264,"1264, 1265",I,agent-perceiver
+1227,"1227, 1228",I,agent
+1227,"1227, 1228",I,agent-cognizant
+1227,"1227, 1228",I,agent-carrier
+1227,"1227, 1228",I,agent-perceiver
+1334,"1334, 1379",( I haven't gone over my points for the day ),process
+1334,"1334, 1379",( I haven't gone over my points for the day ),attributive
+1334,"1334, 1379",( I haven't gone over my points for the day ),relational
+1176,"1176, 1177",I,agent-cognizant
+1176,"1176, 1177",I,agent-carrier
+1176,"1176, 1177",I,agent-perceiver
+1274,"1274, 1276",it,affected-emoter
+1274,"1274, 1276",it,affected-path
+1274,"1274, 1276",it,affected-perceiver
+1274,"1274, 1276",it,affected-cognizant
+1274,"1274, 1276",it,affected-carrier
+1274,"1274, 1276",it,affected-destination
+1274,"1274, 1276",it,affected-possessed
+1274,"1274, 1276",it,affected-source
+1171,"1171, 1232",that I haven't conquered my demons as much as I thought I had,process
+1171,"1171, 1232",that I haven't conquered my demons as much as I thought I had,two-role-action
+1407,"1407, 1415",to scoff,main
+1313,"1313, 1333",purely psychological,location
+1171,"1171, 1232",that I haven't conquered my demons as much as I thought I had,created-phenomenon
+1304,"1304, 1308",that,affected-carrier
+1304,"1304, 1308",that,agent-carrier
+1423,"1423, 1465",", even though the taste was disappointing.",process
+1423,"1423, 1465",", even though the taste was disappointing.",locational
+1423,"1423, 1465",", even though the taste was disappointing.",two-role-action
+1423,"1423, 1465",", even though the taste was disappointing.",action
+1291,"1291, 1293",'m,main
+1153,"1153, 1232",It also showed me that I haven't conquered my demons as much as I thought I had,process
+1153,"1153, 1232",It also showed me that I haven't conquered my demons as much as I thought I had,three-role-perception
+1304,"1304, 1333",that was purely psychological,process
+1304,"1304, 1333",that was purely psychological,locational
+1437,"1437, 1446",the taste,agent
+1437,"1437, 1446",the taste,agent-cognizant
+1437,"1437, 1446",the taste,affected-carrier
+1437,"1437, 1446",the taste,affected
+1437,"1437, 1446",the taste,agent-carrier
+1437,"1437, 1446",the taste,agent-perceiver
+1437,"1437, 1446",the taste,perceiver
+1351,"1351, 1377",over my points for the day,attribute
+1423,"1423, 1429",", even",attribute
+1423,"1423, 1429",", even",location
+1423,"1423, 1429",", even",range
+1233,"1233, 1236",- I,affected-emoter
+1233,"1233, 1236",- I,agent
+1233,"1233, 1236",- I,affected-perceiver
+1233,"1233, 1236",- I,agent-carrier
+1233,"1233, 1236",- I,agent-perceiver
+1233,"1233, 1236",- I,emoter
+1233,"1233, 1236",- I,carrier
+1233,"1233, 1236",- I,perceiver
+1258,"1258, 1276",after I'd eaten it,process
+1258,"1258, 1276",after I'd eaten it,two-role-action
+1336,"1336, 1337",I,affected-carrier
+1336,"1336, 1337",I,agent-carrier
+1336,"1336, 1337",I,carrier
+1499,"1499, 1502",how,phenomenon
+1499,"1499, 1502",how,created-phenomenon
+1499,"1499, 1514",how I feel now.,process
+1499,"1499, 1514",how I feel now.,mental
+1499,"1499, 1514",how I feel now.,two-role-perception
+1499,"1499, 1514",how I feel now.,emotive
+1466,"1466, 1514",I'm feeling a bit confused about how I feel now.,process
+1466,"1466, 1514",I'm feeling a bit confused about how I feel now.,mental
+1466,"1466, 1514",I'm feeling a bit confused about how I feel now.,two-role-perception
+1466,"1466, 1514",I'm feeling a bit confused about how I feel now.,emotive
+1466,"1466, 1467",I,affected-emoter
+1466,"1466, 1467",I,agent
+1466,"1466, 1467",I,affected-perceiver
+1466,"1466, 1467",I,affected-carrier
+1466,"1466, 1467",I,agent-carrier
+1466,"1466, 1467",I,agent-perceiver
+1466,"1466, 1467",I,emoter
+1466,"1466, 1467",I,perceiver
+1503,"1503, 1504",I,affected-emoter
+1503,"1503, 1504",I,agent
+1503,"1503, 1504",I,affected-perceiver
+1503,"1503, 1504",I,affected-carrier
+1503,"1503, 1504",I,agent-carrier
+1503,"1503, 1504",I,agent-perceiver
+1503,"1503, 1504",I,emoter
+1503,"1503, 1504",I,perceiver
+1484,"1484, 1492",confused,main
+1478,"1478, 1514",a bit confused about how I feel now.,phenomenon
+1478,"1478, 1514",a bit confused about how I feel now.,created-phenomenon
+1560,"1560, 1588",control of being in control?,affected-emoter
+1560,"1560, 1588",control of being in control?,agent
+1560,"1560, 1588",control of being in control?,affected-path
+1560,"1560, 1588",control of being in control?,affected-perceiver
+1560,"1560, 1588",control of being in control?,affected-cognizant
+1560,"1560, 1588",control of being in control?,affected-carrier
+1560,"1560, 1588",control of being in control?,affected-destination
+1560,"1560, 1588",control of being in control?,affected
+1560,"1560, 1588",control of being in control?,agent-carrier
+1560,"1560, 1588",control of being in control?,affected-possessed
+1560,"1560, 1588",control of being in control?,agent-perceiver
+1560,"1560, 1588",control of being in control?,affected-source
+1560,"1560, 1588",control of being in control?,carrier
+1560,"1560, 1588",control of being in control?,perceiver
+1560,"1560, 1588",control of being in control?,process
+1560,"1560, 1588",control of being in control?,locational
+1560,"1560, 1588",control of being in control?,action
+1560,"1560, 1588",control of being in control?,one-role-action
+1571,"1571, 1588",being in control?,process
+1571,"1571, 1588",being in control?,locational
+1571,"1571, 1588",being in control?,two-role-action
+1571,"1571, 1588",being in control?,action
+1515,"1515, 1543","I'm in control of my eating,",process
+1515,"1515, 1543","I'm in control of my eating,",locational
+1515,"1515, 1543","I'm in control of my eating,",two-role-action
+1515,"1515, 1543","I'm in control of my eating,",action
+1515,"1515, 1543","I'm in control of my eating,",one-role-action
+1519,"1519, 1542",in control of my eating,location
+1519,"1519, 1542",in control of my eating,range
+1571,"1571, 1576",being,main
+1577,"1577, 1588",in control?,location
+1577,"1577, 1588",in control?,range
+1515,"1515, 1516",I,agent
+1515,"1515, 1516",I,agent-cognizant
+1515,"1515, 1516",I,affected-carrier
+1515,"1515, 1516",I,affected
+1515,"1515, 1516",I,agent-carrier
+1515,"1515, 1516",I,agent-perceiver
+1515,"1515, 1516",I,perceiver
+1616,"1616, 1623",to stop,main
+1696,"1696, 1704",in sight,affected-emoter
+1696,"1696, 1704",in sight,affected-path
+1696,"1696, 1704",in sight,affected-perceiver
+1696,"1696, 1704",in sight,affected-cognizant
+1696,"1696, 1704",in sight,affected-carrier
+1696,"1696, 1704",in sight,affected-destination
+1696,"1696, 1704",in sight,affected-possessed
+1696,"1696, 1704",in sight,affected-source
+1679,"1679, 1704",", eat everything in sight",process
+1679,"1679, 1704",", eat everything in sight",two-role-action
+1624,"1624, 1733","losing when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again",created-phenomenon
+1624,"1624, 1733","losing when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again",created
+1661,"1661, 1662",I,affected-emoter
+1661,"1661, 1662",I,affected-path
+1661,"1661, 1662",I,affected-perceiver
+1661,"1661, 1662",I,affected-cognizant
+1661,"1661, 1662",I,affected-carrier
+1661,"1661, 1662",I,affected-destination
+1661,"1661, 1662",I,affected
+1661,"1661, 1662",I,affected-possessed
+1661,"1661, 1662",I,affected-source
+1713,"1713, 1715",it,affected-emoter
+1713,"1713, 1715",it,created-phenomenon
+1713,"1713, 1715",it,affected-path
+1713,"1713, 1715",it,affected-perceiver
+1713,"1713, 1715",it,affected-cognizant
+1713,"1713, 1715",it,affected-carrier
+1713,"1713, 1715",it,affected-destination
+1713,"1713, 1715",it,affected-possessed
+1713,"1713, 1715",it,affected-source
+1713,"1713, 1715",it,created
+1713,"1713, 1715",it,possessed
+1713,"1713, 1715",it,range
+1713,"1713, 1715",it,carrier
+1685,"1685, 1695",everything,affected-emoter
+1685,"1685, 1695",everything,affected-path
+1685,"1685, 1695",everything,affected-perceiver
+1685,"1685, 1695",everything,affected-cognizant
+1685,"1685, 1695",everything,affected-carrier
+1685,"1685, 1695",everything,affected-destination
+1685,"1685, 1695",everything,affected-possessed
+1685,"1685, 1695",everything,affected-source
+1705,"1705, 1733",and put it all back on again,process
+1705,"1705, 1733",and put it all back on again,directional
+1705,"1705, 1733",and put it all back on again,relational
+1705,"1705, 1733",and put it all back on again,possessive
+1705,"1705, 1733",and put it all back on again,two-role-action
+1624,"1624, 1630",losing,main
+1616,"1616, 1733","to stop losing when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again",process
+1616,"1616, 1733","to stop losing when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again",influential
+1616,"1616, 1733","to stop losing when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again",preventive
+1653,"1653, 1679",or that I'll totally crack,process
+1653,"1653, 1679",or that I'll totally crack,one-role-action
+1781,"1781, 1814",but I'm actually a bit of a mess!,process
+1754,"1754, 1765",Most people,agent-cognizant
+1754,"1754, 1765",Most people,affected-cognizant
+1785,"1785, 1786",I,affected-carrier
+1785,"1785, 1786",I,agent-carrier
+1777,"1777, 1779",it,created-phenomenon
+1754,"1754, 1780","Most people don't know it,",process
+1844,"1844, 1898",", I'm not sure if I should be asking this here or not.",process
+1844,"1844, 1898",", I'm not sure if I should be asking this here or not.",attributive
+1844,"1844, 1898",", I'm not sure if I should be asking this here or not.",locational
+1844,"1844, 1898",", I'm not sure if I should be asking this here or not.",relational
+1854,"1854, 1858",sure,attribute
+1854,"1854, 1858",sure,location
+1847,"1847, 1853",'m not,main
+1862,"1862, 1863",I,agent-cognizant
+1862,"1862, 1863",I,agent-carrier
+1862,"1862, 1863",I,agent-perceiver
+1844,"1844, 1847",", I",affected-carrier
+1844,"1844, 1847",", I",agent-carrier
+1844,"1844, 1847",", I",carrier
+1951,"1951, 1971",before the HOLIDAYS!,attribute
+1899,"1899, 1935",But I have hit a weight loss plateau,process
+1899,"1899, 1935",But I have hit a weight loss plateau,two-role-action
+1940,"1940, 1942",it,affected-carrier
+1940,"1940, 1942",it,agent-carrier
+1914,"1914, 1935",a weight loss plateau,affected-emoter
+1914,"1914, 1935",a weight loss plateau,affected-path
+1914,"1914, 1935",a weight loss plateau,affected-perceiver
+1914,"1914, 1935",a weight loss plateau,affected-cognizant
+1914,"1914, 1935",a weight loss plateau,affected-carrier
+1914,"1914, 1935",a weight loss plateau,affected-destination
+1914,"1914, 1935",a weight loss plateau,affected
+1914,"1914, 1935",a weight loss plateau,affected-possessed
+1914,"1914, 1935",a weight loss plateau,affected-source
+1936,"1936, 1971",and it's right before the HOLIDAYS!,process
+1936,"1936, 1971",and it's right before the HOLIDAYS!,attributive
+1945,"1945, 1950",right,attribute
+1945,"1945, 1950",right,affected-carrier
+1945,"1945, 1950",right,agent-carrier
+1945,"1945, 1950",right,carrier
+1903,"1903, 1904",I,agent-cognizant
+1903,"1903, 1904",I,agent-carrier
+1903,"1903, 1904",I,agent-perceiver
+1988,"1988, 2003",what that means,process
+1988,"1988, 2018","what that means, holiday hell.",created-phenomenon
+1976,"1976, 1978",we,agent-cognizant
+1976,"1976, 1978",we,affected-cognizant
+1972,"1972, 2018","And we all know what that means, holiday hell.",process
+1993,"1993, 1997",that,affected-carrier
+1993,"1993, 1997",that,agent-carrier
+2082,"2082, 2096",with exercise.,affected-possessed
+2082,"2082, 2096",with exercise.,matchee
+2082,"2082, 2096",with exercise.,possessed
+2069,"2069, 2070",I,affected-carrier
+2069,"2069, 2070",I,agent-carrier
+2069,"2069, 2070",I,carrier
+2029,"2029, 2037",my story,phenomenon
+2029,"2029, 2037",my story,created-phenomenon
+2019,"2019, 2096",I've told my story before about how I still purge I just do it with exercise.,process
+2019,"2019, 2096",I've told my story before about how I still purge I just do it with exercise.,mental
+2019,"2019, 2096",I've told my story before about how I still purge I just do it with exercise.,two-role-perception
+2019,"2019, 2020",I,agent-perceiver
+2019,"2019, 2020",I,perceiver
+2045,"2045, 2096",about how I still purge I just do it with exercise.,created-phenomenon
+2069,"2069, 2096",I just do it with exercise.,process
+2069,"2069, 2096",I just do it with exercise.,matching
+2069,"2069, 2096",I just do it with exercise.,relational
+2069,"2069, 2096",I just do it with exercise.,possessive
+2079,"2079, 2081",it,affected-possessed
+2079,"2079, 2081",it,matchee
+2079,"2079, 2081",it,possessed
+2194,"2194, 2203",too much.,affected-emoter
+2194,"2194, 2203",too much.,affected-path
+2194,"2194, 2203",too much.,affected-perceiver
+2194,"2194, 2203",too much.,affected-cognizant
+2194,"2194, 2203",too much.,affected-carrier
+2194,"2194, 2203",too much.,affected-destination
+2194,"2194, 2203",too much.,affected
+2194,"2194, 2203",too much.,affected-possessed
+2194,"2194, 2203",too much.,affected-source
+2161,"2161, 2203",to make myself throw up if I eat too much.,created-phenomenon
+2161,"2161, 2203",to make myself throw up if I eat too much.,created
+2176,"2176, 2181",throw,main
+2153,"2153, 2160",to have,main
+2188,"2188, 2189",I,agent-cognizant
+2188,"2188, 2189",I,agent-carrier
+2188,"2188, 2189",I,agent-perceiver
+2161,"2161, 2203",to make myself throw up if I eat too much.,process
+2161,"2161, 2203",to make myself throw up if I eat too much.,causative
+2153,"2153, 2203",to have to make myself throw up if I eat too much.,process
+2153,"2153, 2203",to have to make myself throw up if I eat too much.,causative
+2169,"2169, 2203",myself throw up if I eat too much.,created-phenomenon
+2169,"2169, 2203",myself throw up if I eat too much.,created
+2185,"2185, 2203",if I eat too much.,process
+2185,"2185, 2203",if I eat too much.,two-role-action
+2147,"2147, 2152",going,main
+2169,"2169, 2175",myself,agent
+2169,"2169, 2175",myself,agent-cognizant
+2169,"2169, 2175",myself,agent-carrier
+2169,"2169, 2175",myself,agent-perceiver
+2169,"2169, 2203",myself throw up if I eat too much.,process
+2169,"2169, 2203",myself throw up if I eat too much.,action
+2169,"2169, 2203",myself throw up if I eat too much.,one-role-action
+2219,"2219, 2276","I haven't done it in so long, when I try NOTHING HAPPENS!",process
+2219,"2219, 2276","I haven't done it in so long, when I try NOTHING HAPPENS!",two-role-action
+2219,"2219, 2220",I,agent-cognizant
+2219,"2219, 2220",I,agent-carrier
+2219,"2219, 2220",I,agent-perceiver
+2260,"2260, 2267",NOTHING,main
+2234,"2234, 2236",it,affected-emoter
+2234,"2234, 2236",it,affected-path
+2234,"2234, 2236",it,affected-perceiver
+2234,"2234, 2236",it,affected-cognizant
+2234,"2234, 2236",it,affected-carrier
+2234,"2234, 2236",it,affected-destination
+2234,"2234, 2236",it,affected
+2234,"2234, 2236",it,affected-possessed
+2234,"2234, 2236",it,affected-source
+2290,"2290, 2365",because there are family members all over the place trying to FEED ME MORE!,process
+2290,"2290, 2365",because there are family members all over the place trying to FEED ME MORE!,action
+2290,"2290, 2365",because there are family members all over the place trying to FEED ME MORE!,one-role-action
+2342,"2342, 2365",trying to FEED ME MORE!,process
+2342,"2342, 2365",trying to FEED ME MORE!,two-role-action
+2342,"2342, 2365",trying to FEED ME MORE!,action
+2308,"2308, 2322",family members,affected-emoter
+2308,"2308, 2322",family members,agent
+2308,"2308, 2322",family members,affected-path
+2308,"2308, 2322",family members,affected-perceiver
+2308,"2308, 2322",family members,affected-cognizant
+2308,"2308, 2322",family members,affected-carrier
+2308,"2308, 2322",family members,affected-destination
+2308,"2308, 2322",family members,affected
+2308,"2308, 2322",family members,agent-carrier
+2308,"2308, 2322",family members,affected-possessed
+2308,"2308, 2322",family members,agent-perceiver
+2308,"2308, 2322",family members,affected-source
+2308,"2308, 2322",family members,perceiver
+2349,"2349, 2365",to FEED ME MORE!,affected-emoter
+2349,"2349, 2365",to FEED ME MORE!,affected-path
+2349,"2349, 2365",to FEED ME MORE!,affected-perceiver
+2349,"2349, 2365",to FEED ME MORE!,affected-cognizant
+2349,"2349, 2365",to FEED ME MORE!,affected-carrier
+2349,"2349, 2365",to FEED ME MORE!,affected-destination
+2349,"2349, 2365",to FEED ME MORE!,affected
+2349,"2349, 2365",to FEED ME MORE!,affected-possessed
+2349,"2349, 2365",to FEED ME MORE!,affected-source
+2342,"2342, 2348",trying,main
+2366,"2366, 2381",The bottom line,affected-carrier
+2366,"2366, 2381",The bottom line,agent-carrier
+2366,"2366, 2381",The bottom line,carrier
+2407,"2407, 2411",need,main
+2385,"2385, 2389",this,attribute
+2385,"2385, 2389",this,location
+2424,"2424, 2432",to purge,main
+2366,"2366, 2389",The bottom line is this,process
+2366,"2366, 2389",The bottom line is this,locational
+2441,"2441, 2442",I,affected-emoter
+2453,"2453, 2486",it to get me through the holidays,process
+2453,"2453, 2486",it to get me through the holidays,directional
+2453,"2453, 2486",it to get me through the holidays,relational
+2453,"2453, 2486",it to get me through the holidays,two-role-action
+2453,"2453, 2486",it to get me through the holidays,action
+2493,"2493, 2494",I,affected-emoter
+2493,"2493, 2494",I,affected-path
+2493,"2493, 2494",I,affected-perceiver
+2493,"2493, 2494",I,affected-cognizant
+2493,"2493, 2494",I,affected-carrier
+2493,"2493, 2494",I,affected-destination
+2493,"2493, 2494",I,affected
+2493,"2493, 2494",I,affected-possessed
+2493,"2493, 2494",I,affected-source
+2493,"2493, 2494",I,carrier
+2463,"2463, 2465",me,affected-emoter
+2463,"2463, 2465",me,agent
+2463,"2463, 2465",me,affected-path
+2463,"2463, 2465",me,affected-perceiver
+2463,"2463, 2465",me,destination
+2463,"2463, 2465",me,agent-cognizant
+2463,"2463, 2465",me,affected-cognizant
+2463,"2463, 2465",me,affected-carrier
+2463,"2463, 2465",me,affected-destination
+2463,"2463, 2465",me,affected
+2463,"2463, 2465",me,agent-carrier
+2463,"2463, 2465",me,affected-possessed
+2463,"2463, 2465",me,agent-perceiver
+2463,"2463, 2465",me,affected-source
+2463,"2463, 2465",me,range
+2466,"2466, 2486",through the holidays,affected-emoter
+2466,"2466, 2486",through the holidays,affected-path
+2466,"2466, 2486",through the holidays,affected-perceiver
+2466,"2466, 2486",through the holidays,affected-cognizant
+2466,"2466, 2486",through the holidays,affected-carrier
+2466,"2466, 2486",through the holidays,affected-destination
+2466,"2466, 2486",through the holidays,affected
+2466,"2466, 2486",through the holidays,affected-possessed
+2466,"2466, 2486",through the holidays,affected-source
+2453,"2453, 2486",it to get me through the holidays,created-phenomenon
+2456,"2456, 2462",to get,main
+2441,"2441, 2486",I only need it to get me through the holidays,process
+2441,"2441, 2486",I only need it to get me through the holidays,desiderative
+2453,"2453, 2455",it,agent
+2453,"2453, 2455",it,agent-cognizant
+2453,"2453, 2455",it,affected-carrier
+2453,"2453, 2455",it,affected
+2453,"2453, 2455",it,agent-carrier
+2453,"2453, 2455",it,agent-perceiver
+2453,"2453, 2455",it,carrier
+2453,"2453, 2455",it,perceiver
+2565,"2565, 2584",comfortable sharing,phenomenon
+2565,"2565, 2584",comfortable sharing,created-phenomenon
+2585,"2585, 2592",with me,attribute
+2550,"2550, 2553",you,affected-emoter
+2550,"2550, 2553",you,agent
+2550,"2550, 2553",you,affected-perceiver
+2550,"2550, 2553",you,affected-carrier
+2550,"2550, 2553",you,agent-carrier
+2550,"2550, 2553",you,agent-perceiver
+2550,"2550, 2553",you,emoter
+2550,"2550, 2553",you,perceiver
+2547,"2547, 2592",If you don't feel comfortable sharing with me,process
+2547,"2547, 2592",If you don't feel comfortable sharing with me,mental
+2547,"2547, 2592",If you don't feel comfortable sharing with me,two-role-perception
+2547,"2547, 2592",If you don't feel comfortable sharing with me,emotive
+2665,"2665, 2677",to share it.,process
+2665,"2665, 2677",to share it.,two-role-action
+2665,"2665, 2677",to share it.,action
+2615,"2615, 2617",It,agent
+2615,"2615, 2617",It,agent-cognizant
+2615,"2615, 2617",It,agent-carrier
+2615,"2615, 2617",It,agent-perceiver
+2665,"2665, 2673",to share,main
+2674,"2674, 2677",it.,affected-emoter
+2674,"2674, 2677",it.,affected-path
+2674,"2674, 2677",it.,affected-perceiver
+2674,"2674, 2677",it.,affected-cognizant
+2674,"2674, 2677",it.,affected-carrier
+2674,"2674, 2677",it.,affected-destination
+2674,"2674, 2677",it.,affected
+2674,"2674, 2677",it.,affected-possessed
+2674,"2674, 2677",it.,affected-source
+2620,"2620, 2677",a very private matter and not everyone wants to share it.,affected-emoter
+2620,"2620, 2677",a very private matter and not everyone wants to share it.,affected-path
+2620,"2620, 2677",a very private matter and not everyone wants to share it.,affected-perceiver
+2620,"2620, 2677",a very private matter and not everyone wants to share it.,affected-cognizant
+2620,"2620, 2677",a very private matter and not everyone wants to share it.,affected-carrier
+2620,"2620, 2677",a very private matter and not everyone wants to share it.,affected-destination
+2620,"2620, 2677",a very private matter and not everyone wants to share it.,affected
+2620,"2620, 2677",a very private matter and not everyone wants to share it.,affected-possessed
+2620,"2620, 2677",a very private matter and not everyone wants to share it.,affected-source
+2620,"2620, 2677",a very private matter and not everyone wants to share it.,range
+2615,"2615, 2677",It's a very private matter and not everyone wants to share it.,process
+2615,"2615, 2677",It's a very private matter and not everyone wants to share it.,two-role-action
+2615,"2615, 2677",It's a very private matter and not everyone wants to share it.,action
+2678,"2678, 2702",So it's ok if you don't.,process
+2678,"2678, 2702",So it's ok if you don't.,locational
+2686,"2686, 2688",ok,location
+2696,"2696, 2701",don't,main
+2681,"2681, 2683",it,affected-carrier
+2681,"2681, 2683",it,agent-carrier
+2753,"2753, 2758",purge,main
+2821,"2821, 2824",me.,phenomenon
+2821,"2821, 2824",me.,affected-emoter
+2821,"2821, 2824",me.,created-phenomenon
+2821,"2821, 2824",me.,affected-path
+2821,"2821, 2824",me.,affected-perceiver
+2821,"2821, 2824",me.,affected-cognizant
+2821,"2821, 2824",me.,affected-carrier
+2821,"2821, 2824",me.,affected-destination
+2821,"2821, 2824",me.,affected-possessed
+2821,"2821, 2824",me.,affected-source
+2707,"2707, 2800",if there is anyone out there that can help me purge the right way after I eat too much PLEASE,process
+2707,"2707, 2800",if there is anyone out there that can help me purge the right way after I eat too much PLEASE,one-role-action
+2736,"2736, 2740",that,agent-cognizant
+2736,"2736, 2740",that,agent-carrier
+2736,"2736, 2740",that,agent-perceiver
+2750,"2750, 2800",me purge the right way after I eat too much PLEASE,phenomenon
+2750,"2750, 2800",me purge the right way after I eat too much PLEASE,created-phenomenon
+2785,"2785, 2800",too much PLEASE,affected-emoter
+2785,"2785, 2800",too much PLEASE,affected-path
+2785,"2785, 2800",too much PLEASE,affected-perceiver
+2785,"2785, 2800",too much PLEASE,affected-cognizant
+2785,"2785, 2800",too much PLEASE,affected-carrier
+2785,"2785, 2800",too much PLEASE,affected-destination
+2785,"2785, 2800",too much PLEASE,affected
+2785,"2785, 2800",too much PLEASE,affected-possessed
+2785,"2785, 2800",too much PLEASE,affected-source
+2812,"2812, 2824",and help me.,process
+2812,"2812, 2824",and help me.,two-role-action
+2812,"2812, 2824",and help me.,influential
+2812,"2812, 2824",and help me.,preventive
+2779,"2779, 2780",I,agent-cognizant
+2779,"2779, 2780",I,agent-carrier
+2779,"2779, 2780",I,agent-perceiver
+2773,"2773, 2800",after I eat too much PLEASE,process
+2773,"2773, 2800",after I eat too much PLEASE,two-role-action
+2719,"2719, 2800",anyone out there that can help me purge the right way after I eat too much PLEASE,affected-emoter
+2719,"2719, 2800",anyone out there that can help me purge the right way after I eat too much PLEASE,agent
+2719,"2719, 2800",anyone out there that can help me purge the right way after I eat too much PLEASE,affected-path
+2719,"2719, 2800",anyone out there that can help me purge the right way after I eat too much PLEASE,affected-perceiver
+2719,"2719, 2800",anyone out there that can help me purge the right way after I eat too much PLEASE,affected-cognizant
+2719,"2719, 2800",anyone out there that can help me purge the right way after I eat too much PLEASE,affected-carrier
+2719,"2719, 2800",anyone out there that can help me purge the right way after I eat too much PLEASE,affected-destination
+2719,"2719, 2800",anyone out there that can help me purge the right way after I eat too much PLEASE,agent-carrier
+2719,"2719, 2800",anyone out there that can help me purge the right way after I eat too much PLEASE,affected-possessed
+2719,"2719, 2800",anyone out there that can help me purge the right way after I eat too much PLEASE,agent-perceiver
+2719,"2719, 2800",anyone out there that can help me purge the right way after I eat too much PLEASE,affected-source
+2719,"2719, 2800",anyone out there that can help me purge the right way after I eat too much PLEASE,perceiver
+2825,"2825, 2826",I,agent
+2825,"2825, 2826",I,cognizant
+2825,"2825, 2826",I,agent-cognizant
+2825,"2825, 2826",I,agent-carrier
+2825,"2825, 2826",I,agent-perceiver
+2825,"2825, 2826",I,perceiver
+2867,"2867, 2874",to lose,main
+2837,"2837, 2840",FAT,phenomenon
+2837,"2837, 2840",FAT,affected-emoter
+2837,"2837, 2840",FAT,created-phenomenon
+2837,"2837, 2840",FAT,affected-path
+2837,"2837, 2840",FAT,affected-perceiver
+2837,"2837, 2840",FAT,affected-cognizant
+2837,"2837, 2840",FAT,affected-carrier
+2837,"2837, 2840",FAT,affected-destination
+2837,"2837, 2840",FAT,affected
+2837,"2837, 2840",FAT,affected-possessed
+2837,"2837, 2840",FAT,affected-source
+2837,"2837, 2840",FAT,possessed
+2901,"2901, 2925",you all are doing GREAT!,process
+2901,"2901, 2925",you all are doing GREAT!,two-role-action
+2901,"2901, 2925",you all are doing GREAT!,action
+2901,"2901, 2904",you,agent
+2901,"2901, 2904",you,agent-cognizant
+2901,"2901, 2904",you,agent-carrier
+2901,"2901, 2904",you,agent-perceiver
+2919,"2919, 2925",GREAT!,manner
+2919,"2919, 2925",GREAT!,range
+2948,"2948, 2951",you,affected-emoter
+2945,"2945, 2986",if you want to have a private discussion.,process
+2945,"2945, 2986",if you want to have a private discussion.,desiderative
+2938,"2938, 2944",xxxcom,location
+2957,"2957, 2986",to have a private discussion.,created-phenomenon
+2957,"2957, 2964",to have,main
+2926,"2926, 2986",My email is xxxcom if you want to have a private discussion.,process
+2926,"2926, 2986",My email is xxxcom if you want to have a private discussion.,locational
+2965,"2965, 2986",a private discussion.,affected
+2965,"2965, 2986",a private discussion.,affected-possessed
+2965,"2965, 2986",a private discussion.,possessed
+2926,"2926, 2934",My email,affected-carrier
+2926,"2926, 2934",My email,agent-carrier
+2957,"2957, 2986",to have a private discussion.,process
+2957,"2957, 2986",to have a private discussion.,relational
+2957,"2957, 2986",to have a private discussion.,possessive
+3008,"3008, 3028",I'm new to this site,process
+3008,"3008, 3028",I'm new to this site,directional
+3110,"3110, 3119",you guys!,created-phenomenon
+3110,"3110, 3119",you guys!,affected-possessed
+3016,"3016, 3028",to this site,destination
+3016,"3016, 3028",to this site,affected-destination
+3012,"3012, 3015",new,destination
+3012,"3012, 3015",new,affected-destination
+3035,"3035, 3040",never,main
+3102,"3102, 3119",I found you guys!,process
+3102,"3102, 3119",I found you guys!,two-role-cognition
+3102,"3102, 3119",I found you guys!,two-role-perception
+3091,"3091, 3093",'m,main
+3102,"3102, 3103",I,cognizant
+3102,"3102, 3103",I,affected-perceiver
+3102,"3102, 3103",I,agent-cognizant
+3102,"3102, 3103",I,affected-cognizant
+3102,"3102, 3103",I,affected-carrier
+3102,"3102, 3103",I,affected
+3102,"3102, 3103",I,agent-perceiver
+3102,"3102, 3103",I,carrier
+3102,"3102, 3103",I,perceiver
+3008,"3008, 3009",I,agent
+3008,"3008, 3009",I,agent-perceiver
+3008,"3008, 3009",I,perceiver
+3120,"3120, 3138",So here's my story,process
+3120,"3120, 3138",So here's my story,directional
+3182,"3182, 3183",I,agent
+3182,"3182, 3183",I,affected-carrier
+3182,"3182, 3183",I,affected
+3182,"3182, 3183",I,agent-carrier
+3182,"3182, 3183",I,agent-perceiver
+3182,"3182, 3183",I,perceiver
+3241,"3241, 3290",disgusting so I decided to do something about it.,affected-emoter
+3241,"3241, 3290",disgusting so I decided to do something about it.,affected-path
+3241,"3241, 3290",disgusting so I decided to do something about it.,affected-perceiver
+3241,"3241, 3290",disgusting so I decided to do something about it.,affected-cognizant
+3241,"3241, 3290",disgusting so I decided to do something about it.,affected-carrier
+3241,"3241, 3290",disgusting so I decided to do something about it.,affected-destination
+3241,"3241, 3290",disgusting so I decided to do something about it.,affected
+3241,"3241, 3290",disgusting so I decided to do something about it.,affected-possessed
+3241,"3241, 3290",disgusting so I decided to do something about it.,affected-source
+3271,"3271, 3280",something,manner
+3271,"3271, 3280",something,range
+3130,"3130, 3138",my story,destination
+3130,"3130, 3138",my story,affected-destination
+3234,"3234, 3235",I,agent
+3234,"3234, 3235",I,agent-cognizant
+3234,"3234, 3235",I,agent-carrier
+3234,"3234, 3235",I,agent-perceiver
+3155,"3155, 3290","old and have had EDs since I was about 14, I just woke up one day and realised I look disgusting so I decided to do something about it.",location
+3138,"3138, 3290","... I'm 20 years old and have had EDs since I was about 14, I just woke up one day and realised I look disgusting so I decided to do something about it.",process
+3138,"3138, 3290","... I'm 20 years old and have had EDs since I was about 14, I just woke up one day and realised I look disgusting so I decided to do something about it.",locational
+3176,"3176, 3220","since I was about 14, I just woke up one day",process
+3176,"3176, 3220","since I was about 14, I just woke up one day",two-role-action
+3213,"3213, 3216",one,affected-emoter
+3213,"3213, 3216",one,affected-path
+3213,"3213, 3216",one,affected-perceiver
+3213,"3213, 3216",one,affected-cognizant
+3213,"3213, 3216",one,affected-carrier
+3213,"3213, 3216",one,affected-destination
+3213,"3213, 3216",one,affected
+3213,"3213, 3216",one,affected-possessed
+3213,"3213, 3216",one,affected-source
+3196,"3196, 3199",", I",agent-cognizant
+3196,"3196, 3199",", I",agent-carrier
+3196,"3196, 3199",", I",agent-perceiver
+3234,"3234, 3290",I look disgusting so I decided to do something about it.,process
+3234,"3234, 3290",I look disgusting so I decided to do something about it.,two-role-action
+3234,"3234, 3290",I look disgusting so I decided to do something about it.,action
+3138,"3138, 3143",... I,affected-carrier
+3138,"3138, 3143",... I,agent-carrier
+3176,"3176, 3196",since I was about 14,process
+3176,"3176, 3196",since I was about 14,locational
+3176,"3176, 3196",since I was about 14,directional
+3281,"3281, 3290",about it.,manner
+3188,"3188, 3196",about 14,affected-path
+3188,"3188, 3196",about 14,location
+3188,"3188, 3196",about 14,path
+3265,"3265, 3290",to do something about it.,process
+3265,"3265, 3290",to do something about it.,two-role-action
+3265,"3265, 3290",to do something about it.,action
+3265,"3265, 3270",to do,main
+3291,"3291, 3292",I,agent-cognizant
+3291,"3291, 3292",I,affected-carrier
+3291,"3291, 3292",I,affected
+3291,"3291, 3292",I,agent-carrier
+3291,"3291, 3292",I,agent-perceiver
+3291,"3291, 3292",I,carrier
+3376,"3376, 3381",happy,phenomenon
+3376,"3376, 3381",happy,location
+3376,"3376, 3381",happy,matchee
+3335,"3335, 3336",I,affected-emoter
+3335,"3335, 3336",I,affected-path
+3335,"3335, 3336",I,affected-perceiver
+3335,"3335, 3336",I,affected-cognizant
+3335,"3335, 3336",I,affected-carrier
+3335,"3335, 3336",I,affected-destination
+3335,"3335, 3336",I,affected
+3335,"3335, 3336",I,affected-possessed
+3335,"3335, 3336",I,affected-source
+3404,"3404, 3409",going,main
+3370,"3370, 3371",I,agent
+3370,"3370, 3371",I,cognizant
+3370,"3370, 3371",I,agent-cognizant
+3370,"3370, 3371",I,affected-cognizant
+3370,"3370, 3371",I,affected-carrier
+3370,"3370, 3371",I,agent-carrier
+3370,"3370, 3371",I,agent-perceiver
+3370,"3370, 3371",I,carrier
+3370,"3370, 3371",I,perceiver
+3331,"3331, 3424",and I managed to achieve a weight that I was happy with ( not that I was going to give up ! ),process
+3331,"3331, 3424",and I managed to achieve a weight that I was happy with ( not that I was going to give up ! ),succeeding
+3365,"3365, 3386",that I was happy with,process
+3365,"3365, 3386",that I was happy with,matching
+3365,"3365, 3386",that I was happy with,locational
+3365,"3365, 3386",that I was happy with,two-role-cognition
+3319,"3319, 3330",really hard,affected-emoter
+3319,"3319, 3330",really hard,affected-path
+3319,"3319, 3330",really hard,affected-perceiver
+3319,"3319, 3330",really hard,location
+3319,"3319, 3330",really hard,affected-cognizant
+3319,"3319, 3330",really hard,affected-carrier
+3319,"3319, 3330",really hard,affected-destination
+3319,"3319, 3330",really hard,affected
+3319,"3319, 3330",really hard,affected-possessed
+3319,"3319, 3330",really hard,affected-source
+3345,"3345, 3355",to achieve,main
+3372,"3372, 3375",was,main
+3345,"3345, 3424",to achieve a weight that I was happy with ( not that I was going to give up ! ),created-phenomenon
+3291,"3291, 3330",I stuck it out and I worked really hard,process
+3291,"3291, 3330",I stuck it out and I worked really hard,locational
+3291,"3291, 3330",I stuck it out and I worked really hard,two-role-action
+3452,"3452, 3480",with black outs fainting etc,matchee
+3493,"3493, 3495",it,agent
+3493,"3493, 3495",it,agent-cognizant
+3493,"3493, 3495",it,affected-carrier
+3493,"3493, 3495",it,affected
+3493,"3493, 3495",it,agent-carrier
+3493,"3493, 3495",it,agent-perceiver
+3493,"3493, 3495",it,perceiver
+3505,"3505, 3521",the usual things,location
+3505,"3505, 3521",the usual things,range
+3425,"3425, 3426",I,agent
+3425,"3425, 3426",I,agent-perceiver
+3425,"3425, 3426",I,perceiver
+3425,"3425, 3604","I had been ill for a while with black outs fainting etc and thought it was just the usual things, but I ended up in hospital, and after many tests they diagnosed me with epilepsy!",process
+3425,"3425, 3604","I had been ill for a while with black outs fainting etc and thought it was just the usual things, but I ended up in hospital, and after many tests they diagnosed me with epilepsy!",matching
+3493,"3493, 3521",it was just the usual things,process
+3493,"3493, 3521",it was just the usual things,locational
+3493,"3493, 3521",it was just the usual things,two-role-action
+3493,"3493, 3521",it was just the usual things,action
+3605,"3605, 3754",I had to bring my body weight up to what my neurologist thought was suitable as without a regular eating routine I was having up to 3 seizures a day!,process
+3605,"3605, 3754",I had to bring my body weight up to what my neurologist thought was suitable as without a regular eating routine I was having up to 3 seizures a day!,causative
+3605,"3605, 3754",I had to bring my body weight up to what my neurologist thought was suitable as without a regular eating routine I was having up to 3 seizures a day!,influential
+3611,"3611, 3684",to bring my body weight up to what my neurologist thought was suitable as,process
+3611,"3611, 3684",to bring my body weight up to what my neurologist thought was suitable as,two-role-action
+3611,"3611, 3684",to bring my body weight up to what my neurologist thought was suitable as,created-phenomenon
+3611,"3611, 3684",to bring my body weight up to what my neurologist thought was suitable as,created
+3620,"3620, 3634",my body weight,affected-emoter
+3620,"3620, 3634",my body weight,affected-path
+3620,"3620, 3634",my body weight,affected-perceiver
+3620,"3620, 3634",my body weight,affected-cognizant
+3620,"3620, 3634",my body weight,affected-carrier
+3620,"3620, 3634",my body weight,affected-destination
+3620,"3620, 3634",my body weight,affected-possessed
+3620,"3620, 3634",my body weight,affected-source
+3607,"3607, 3610",had,main
+3605,"3605, 3606",I,agent-cognizant
+3605,"3605, 3606",I,agent-carrier
+3605,"3605, 3606",I,agent-perceiver
+3693,"3693, 3754",a regular eating routine I was having up to 3 seizures a day!,process
+3693,"3693, 3754",a regular eating routine I was having up to 3 seizures a day!,causative
+3693,"3693, 3754",a regular eating routine I was having up to 3 seizures a day!,two-role-action
+3693,"3693, 3754",a regular eating routine I was having up to 3 seizures a day!,action
+3731,"3731, 3754",up to 3 seizures a day!,phenomenon
+3731,"3731, 3754",up to 3 seizures a day!,affected-emoter
+3731,"3731, 3754",up to 3 seizures a day!,created-phenomenon
+3731,"3731, 3754",up to 3 seizures a day!,affected-path
+3731,"3731, 3754",up to 3 seizures a day!,affected-perceiver
+3731,"3731, 3754",up to 3 seizures a day!,affected-cognizant
+3731,"3731, 3754",up to 3 seizures a day!,affected-carrier
+3731,"3731, 3754",up to 3 seizures a day!,affected-destination
+3731,"3731, 3754",up to 3 seizures a day!,affected
+3731,"3731, 3754",up to 3 seizures a day!,affected-source
+3731,"3731, 3754",up to 3 seizures a day!,created
+3731,"3731, 3754",up to 3 seizures a day!,possessed
+3731,"3731, 3754",up to 3 seizures a day!,carrier
+3693,"3693, 3717",a regular eating routine,phenomenon
+3693,"3693, 3717",a regular eating routine,affected-emoter
+3693,"3693, 3717",a regular eating routine,created-phenomenon
+3693,"3693, 3717",a regular eating routine,affected-path
+3693,"3693, 3717",a regular eating routine,affected-perceiver
+3693,"3693, 3717",a regular eating routine,affected-cognizant
+3693,"3693, 3717",a regular eating routine,affected-carrier
+3693,"3693, 3717",a regular eating routine,affected-destination
+3693,"3693, 3717",a regular eating routine,affected
+3693,"3693, 3717",a regular eating routine,affected-possessed
+3693,"3693, 3717",a regular eating routine,affected-source
+3693,"3693, 3717",a regular eating routine,created
+3693,"3693, 3717",a regular eating routine,possessed
+3718,"3718, 3719",I,agent
+3718,"3718, 3719",I,agent-cognizant
+3718,"3718, 3719",I,affected
+3718,"3718, 3719",I,agent-carrier
+3718,"3718, 3719",I,agent-perceiver
+3718,"3718, 3719",I,carrier
+3718,"3718, 3719",I,perceiver
+3669,"3669, 3672",was,main
+3758,"3758, 3759",I,affected-emoter
+3758,"3758, 3759",I,agent
+3758,"3758, 3759",I,affected-path
+3758,"3758, 3759",I,affected-perceiver
+3758,"3758, 3759",I,agent-cognizant
+3758,"3758, 3759",I,affected-cognizant
+3758,"3758, 3759",I,affected-carrier
+3758,"3758, 3759",I,affected-destination
+3758,"3758, 3759",I,affected
+3758,"3758, 3759",I,affected-possessed
+3758,"3758, 3759",I,agent-perceiver
+3758,"3758, 3759",I,affected-source
+3758,"3758, 3759",I,perceiver
+3765,"3765, 3807",through the most horrible year of my life!,affected-emoter
+3765,"3765, 3807",through the most horrible year of my life!,affected-path
+3765,"3765, 3807",through the most horrible year of my life!,affected-perceiver
+3765,"3765, 3807",through the most horrible year of my life!,affected-cognizant
+3765,"3765, 3807",through the most horrible year of my life!,affected-carrier
+3765,"3765, 3807",through the most horrible year of my life!,affected-destination
+3765,"3765, 3807",through the most horrible year of my life!,affected
+3765,"3765, 3807",through the most horrible year of my life!,affected-possessed
+3765,"3765, 3807",through the most horrible year of my life!,affected-source
+3755,"3755, 3807",So I went through the most horrible year of my life!,process
+3755,"3755, 3807",So I went through the most horrible year of my life!,two-role-action
+3755,"3755, 3807",So I went through the most horrible year of my life!,action
+3755,"3755, 3807",So I went through the most horrible year of my life!,one-role-action
+3864,"3864, 3867",put,main
+3808,"3808, 3855",The tablets I was on mixed with my meal routine,agent-cognizant
+3808,"3808, 3855",The tablets I was on mixed with my meal routine,agent-carrier
+3808,"3808, 3855",The tablets I was on mixed with my meal routine,agent-perceiver
+3868,"3868, 3878",on weight!,affected-emoter
+3868,"3868, 3878",on weight!,created-phenomenon
+3868,"3868, 3878",on weight!,affected-path
+3868,"3868, 3878",on weight!,affected-perceiver
+3868,"3868, 3878",on weight!,affected-cognizant
+3868,"3868, 3878",on weight!,affected-carrier
+3868,"3868, 3878",on weight!,affected-destination
+3868,"3868, 3878",on weight!,affected
+3868,"3868, 3878",on weight!,affected-possessed
+3868,"3868, 3878",on weight!,affected-source
+3868,"3868, 3878",on weight!,created
+3868,"3868, 3878",on weight!,possessed
+3868,"3868, 3878",on weight!,range
+3808,"3808, 3878",The tablets I was on mixed with my meal routine made me put on weight!,process
+3808,"3808, 3878",The tablets I was on mixed with my meal routine made me put on weight!,causative
+3861,"3861, 3878",me put on weight!,process
+3861,"3861, 3878",me put on weight!,relational
+3861,"3861, 3878",me put on weight!,possessive
+3861,"3861, 3878",me put on weight!,two-role-action
+3861,"3861, 3878",me put on weight!,action
+3861,"3861, 3863",me,agent
+3861,"3861, 3863",me,agent-cognizant
+3861,"3861, 3863",me,agent-carrier
+3861,"3861, 3863",me,agent-perceiver
+3861,"3861, 3863",me,perceiver
+3835,"3835, 3855",with my meal routine,created-phenomenon
+3835,"3835, 3855",with my meal routine,matchee
+3835,"3835, 3855",with my meal routine,created
+3829,"3829, 3834",mixed,main
+3820,"3820, 3855",I was on mixed with my meal routine,process
+3820,"3820, 3855",I was on mixed with my meal routine,matching
+3820,"3820, 3855",I was on mixed with my meal routine,two-role-action
+3820,"3820, 3855",I was on mixed with my meal routine,action
+3820,"3820, 3855",I was on mixed with my meal routine,one-role-action
+3820,"3820, 3821",I,agent
+3820,"3820, 3821",I,agent-cognizant
+3820,"3820, 3821",I,affected-carrier
+3820,"3820, 3821",I,agent-carrier
+3820,"3820, 3821",I,agent-perceiver
+3820,"3820, 3821",I,carrier
+3861,"3861, 3878",me put on weight!,created-phenomenon
+3861,"3861, 3878",me put on weight!,created
+3944,"3944, 3978",and I have come off my medication!,process
+3944,"3944, 3978",and I have come off my medication!,attributive
+3944,"3944, 3978",and I have come off my medication!,directional
+3893,"3893, 3900",2 years,phenomenon
+3893,"3893, 3900",2 years,affected-emoter
+3893,"3893, 3900",2 years,created-phenomenon
+3893,"3893, 3900",2 years,affected-path
+3893,"3893, 3900",2 years,affected-perceiver
+3893,"3893, 3900",2 years,location
+3893,"3893, 3900",2 years,affected-cognizant
+3893,"3893, 3900",2 years,affected-carrier
+3893,"3893, 3900",2 years,affected-destination
+3893,"3893, 3900",2 years,affected
+3893,"3893, 3900",2 years,affected-possessed
+3893,"3893, 3900",2 years,affected-source
+3893,"3893, 3900",2 years,created
+3879,"3879, 3943",But now after 2 years my seizures have almost completely stopped,process
+3879,"3879, 3943",But now after 2 years my seizures have almost completely stopped,locational
+3879,"3879, 3943",But now after 2 years my seizures have almost completely stopped,relational
+3879,"3879, 3943",But now after 2 years my seizures have almost completely stopped,two-role-action
+3879,"3879, 3943",But now after 2 years my seizures have almost completely stopped,preventive
+3879,"3879, 3943",But now after 2 years my seizures have almost completely stopped,one-role-action
+3948,"3948, 3949",I,agent
+3948,"3948, 3949",I,affected
+3948,"3948, 3949",I,agent-carrier
+3948,"3948, 3949",I,agent-perceiver
+3948,"3948, 3949",I,carrier
+3948,"3948, 3949",I,perceiver
+3964,"3964, 3978",my medication!,attribute
+3964,"3964, 3978",my medication!,source
+3964,"3964, 3978",my medication!,affected-source
+3901,"3901, 3912",my seizures,affected-emoter
+3901,"3901, 3912",my seizures,affected-path
+3901,"3901, 3912",my seizures,affected-perceiver
+3901,"3901, 3912",my seizures,agent-cognizant
+3901,"3901, 3912",my seizures,affected-cognizant
+3901,"3901, 3912",my seizures,affected-carrier
+3901,"3901, 3912",my seizures,affected-destination
+3901,"3901, 3912",my seizures,affected
+3901,"3901, 3912",my seizures,agent-carrier
+3901,"3901, 3912",my seizures,affected-possessed
+3901,"3901, 3912",my seizures,agent-perceiver
+3901,"3901, 3912",my seizures,affected-source
+3901,"3901, 3912",my seizures,carrier
+3901,"3901, 3912",my seizures,perceiver
+4065,"4065, 4083",me get it all off!,created-phenomenon
+3982,"3982, 3983",I,affected-emoter
+3982,"3982, 3983",I,affected-path
+3982,"3982, 3983",I,affected-perceiver
+3982,"3982, 3983",I,agent-cognizant
+3982,"3982, 3983",I,affected-cognizant
+3982,"3982, 3983",I,affected-carrier
+3982,"3982, 3983",I,affected-destination
+3982,"3982, 3983",I,affected
+3982,"3982, 3983",I,agent-carrier
+3982,"3982, 3983",I,affected-possessed
+3982,"3982, 3983",I,agent-perceiver
+3982,"3982, 3983",I,affected-source
+4065,"4065, 4083",me get it all off!,process
+4065,"4065, 4083",me get it all off!,directional
+4065,"4065, 4083",me get it all off!,two-role-action
+4065,"4065, 4083",me get it all off!,action
+3979,"3979, 4010",So I have started dieting again,process
+3979,"3979, 4010",So I have started dieting again,two-role-action
+3979,"3979, 4010",So I have started dieting again,action
+3979,"3979, 4010",So I have started dieting again,starting
+4072,"4072, 4074",it,affected-emoter
+4072,"4072, 4074",it,affected-path
+4072,"4072, 4074",it,affected-perceiver
+4072,"4072, 4074",it,source
+4072,"4072, 4074",it,affected-cognizant
+4072,"4072, 4074",it,affected-carrier
+4072,"4072, 4074",it,affected-destination
+4072,"4072, 4074",it,affected
+4072,"4072, 4074",it,affected-possessed
+4072,"4072, 4074",it,affected-source
+4072,"4072, 4074",it,range
+4068,"4068, 4071",get,main
+3997,"3997, 4004",dieting,created-phenomenon
+3997,"3997, 4004",dieting,created
+4057,"4057, 4083",to help me get it all off!,process
+4057,"4057, 4083",to help me get it all off!,influential
+4057,"4057, 4083",to help me get it all off!,preventive
+4057,"4057, 4064",to help,main
+4065,"4065, 4067",me,agent
+4065,"4065, 4067",me,agent-cognizant
+4065,"4065, 4067",me,agent-carrier
+4065,"4065, 4067",me,agent-perceiver
+4065,"4065, 4067",me,perceiver
+4131,"4131, 4138",purging,main
+4184,"4184, 4192",just ill,created-phenomenon
+4184,"4184, 4192",just ill,location
+4184,"4184, 4192",just ill,matchee
+4097,"4097, 4104",careful,location
+4169,"4169, 4172",him,cognizant
+4169,"4169, 4172",him,affected
+4173,"4173, 4223",that I was just ill with a tummy bug or something.,process
+4173,"4173, 4223",that I was just ill with a tummy bug or something.,matching
+4173,"4173, 4223",that I was just ill with a tummy bug or something.,locational
+4173,"4173, 4223",that I was just ill with a tummy bug or something.,two-role-cognition
+4178,"4178, 4179",I,agent
+4178,"4178, 4179",I,cognizant
+4178,"4178, 4179",I,agent-cognizant
+4178,"4178, 4179",I,affected-cognizant
+4178,"4178, 4179",I,affected-carrier
+4178,"4178, 4179",I,agent-carrier
+4178,"4178, 4179",I,agent-perceiver
+4178,"4178, 4179",I,perceiver
+4157,"4157, 4158",I,agent-cognizant
+4157,"4157, 4158",I,agent-carrier
+4157,"4157, 4158",I,agent-perceiver
+4086,"4086, 4090",have,main
+4153,"4153, 4223",but I convinced him that I was just ill with a tummy bug or something.,process
+4091,"4091, 4152",to be careful as my boyfriend caught me purging the other day,created-phenomenon
+4091,"4091, 4152",to be careful as my boyfriend caught me purging the other day,created
+4193,"4193, 4223",with a tummy bug or something.,matchee
+4084,"4084, 4152",I have to be careful as my boyfriend caught me purging the other day,process
+4084,"4084, 4152",I have to be careful as my boyfriend caught me purging the other day,causative
+4084,"4084, 4152",I have to be careful as my boyfriend caught me purging the other day,influential
+4084,"4084, 4085",I,agent
+4084,"4084, 4085",I,agent-cognizant
+4084,"4084, 4085",I,agent-carrier
+4084,"4084, 4085",I,agent-perceiver
+4173,"4173, 4223",that I was just ill with a tummy bug or something.,created-phenomenon
+4091,"4091, 4152",to be careful as my boyfriend caught me purging the other day,process
+4091,"4091, 4152",to be careful as my boyfriend caught me purging the other day,locational
+4224,"4224, 4255",He keeps telling me I look fine,process
+4224,"4224, 4255",He keeps telling me I look fine,continuing
+4224,"4224, 4255",He keeps telling me I look fine,influential
+4251,"4251, 4255",fine,affected-emoter
+4251,"4251, 4255",fine,affected-path
+4251,"4251, 4255",fine,affected-perceiver
+4251,"4251, 4255",fine,affected-cognizant
+4251,"4251, 4255",fine,affected-carrier
+4251,"4251, 4255",fine,affected-destination
+4251,"4251, 4255",fine,affected
+4251,"4251, 4255",fine,affected-possessed
+4251,"4251, 4255",fine,affected-source
+4233,"4233, 4255",telling me I look fine,created-phenomenon
+4280,"4280, 4287",happier,created-phenomenon
+4280,"4280, 4287",happier,location
+4280,"4280, 4287",happier,matchee
+4269,"4269, 4287",he will be happier,process
+4269,"4269, 4287",he will be happier,matching
+4269,"4269, 4287",he will be happier,locational
+4244,"4244, 4255",I look fine,process
+4244,"4244, 4255",I look fine,two-role-action
+4244,"4244, 4255",I look fine,action
+4224,"4224, 4226",He,agent-cognizant
+4224,"4224, 4226",He,agent-carrier
+4224,"4224, 4226",He,agent-perceiver
+4269,"4269, 4271",he,agent
+4269,"4269, 4271",he,cognizant
+4269,"4269, 4271",he,agent-cognizant
+4269,"4269, 4271",he,affected-cognizant
+4269,"4269, 4271",he,affected-carrier
+4269,"4269, 4271",he,agent-carrier
+4269,"4269, 4271",he,agent-perceiver
+4269,"4269, 4271",he,perceiver
+4244,"4244, 4245",I,agent
+4244,"4244, 4245",I,agent-cognizant
+4244,"4244, 4245",I,agent-carrier
+4244,"4244, 4245",I,agent-perceiver
+4261,"4261, 4263",'m,main
+4227,"4227, 4232",keeps,main
+4330,"4330, 4337",9 st 8!,location
+4315,"4315, 4316",I,affected-carrier
+4315,"4315, 4316",I,agent-carrier
+4315,"4315, 4337",I am currently 9 st 8!,process
+4315,"4315, 4337",I am currently 9 st 8!,locational
+4353,"4353, 4363",disgusting,affected-emoter
+4353,"4353, 4363",disgusting,affected-path
+4353,"4353, 4363",disgusting,affected-perceiver
+4353,"4353, 4363",disgusting,affected-cognizant
+4353,"4353, 4363",disgusting,affected-carrier
+4353,"4353, 4363",disgusting,affected-destination
+4353,"4353, 4363",disgusting,affected
+4353,"4353, 4363",disgusting,affected-possessed
+4353,"4353, 4363",disgusting,affected-source
+4338,"4338, 4339",I,affected-emoter
+4338,"4338, 4339",I,agent
+4338,"4338, 4339",I,affected-perceiver
+4338,"4338, 4339",I,agent-perceiver
+4338,"4338, 4339",I,emoter
+4338,"4338, 4339",I,perceiver
+4338,"4338, 4363",I feel fucking disgusting,process
+4338,"4338, 4363",I feel fucking disgusting,mental
+4338,"4338, 4363",I feel fucking disgusting,two-role-perception
+4338,"4338, 4363",I feel fucking disgusting,emotive
+4345,"4345, 4363",fucking disgusting,phenomenon
+4345,"4345, 4363",fucking disgusting,created-phenomenon
+4345,"4345, 4352",fucking,main
+4345,"4345, 4363",fucking disgusting,process
+4345,"4345, 4363",fucking disgusting,two-role-action
+4345,"4345, 4363",fucking disgusting,action
+4423,"4423, 4432",about it!,manner
+4413,"4413, 4422",something,manner
+4388,"4388, 4389",I,affected-emoter
+4388,"4388, 4389",I,emoter
+4407,"4407, 4432",to do something about it!,phenomenon
+4407,"4407, 4432",to do something about it!,created-phenomenon
+4384,"4384, 4432",And I desperately need to do something about it!,process
+4384,"4384, 4432",And I desperately need to do something about it!,mental
+4384,"4384, 4432",And I desperately need to do something about it!,desiderative
+4402,"4402, 4406",need,main
+4407,"4407, 4432",to do something about it!,process
+4407,"4407, 4432",to do something about it!,two-role-action
+4433,"4433, 4434",I,agent
+4433,"4433, 4434",I,agent-cognizant
+4433,"4433, 4434",I,agent-carrier
+4433,"4433, 4434",I,agent-perceiver
+4433,"4433, 4434",I,perceiver
+4433,"4433, 4462",I have been reading your tips,process
+4433,"4433, 4462",I have been reading your tips,two-role-perception
+4433,"4433, 4462",I have been reading your tips,three-role-cognition
+4433,"4433, 4462",I have been reading your tips,two-role-action
+4453,"4453, 4462",your tips,created-phenomenon
+4453,"4453, 4462",your tips,range
+4463,"4463, 4497",and have picked up some good ones!,process
+4463,"4463, 4497",and have picked up some good ones!,possessive
+4463,"4463, 4497",and have picked up some good ones!,two-role-action
+4482,"4482, 4497",some good ones!,affected-emoter
+4482,"4482, 4497",some good ones!,affected-path
+4482,"4482, 4497",some good ones!,affected-perceiver
+4482,"4482, 4497",some good ones!,affected-cognizant
+4482,"4482, 4497",some good ones!,affected-carrier
+4482,"4482, 4497",some good ones!,affected-destination
+4482,"4482, 4497",some good ones!,affected
+4482,"4482, 4497",some good ones!,affected-possessed
+4482,"4482, 4497",some good ones!,affected-source
+4482,"4482, 4497",some good ones!,possessed
+4534,"4534, 4543",listening,main
+100,"100, 184",a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,affected
+1696,"1696, 1704",in sight,affected
+2161,"2161, 2203",to make myself throw up if I eat too much.,influential
+2161,"2161, 2203",to make myself throw up if I eat too much.,phenomenon
+4173,"4173, 4223",that I was just ill with a tummy bug or something.,mental
+4184,"4184, 4192",just ill,phenomenon

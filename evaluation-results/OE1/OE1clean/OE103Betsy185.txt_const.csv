@@ -1,0 +1,147 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.7107438016528925
+,Recall,0.8514851485148515
+,F1,0.7747747747747747
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+18,18.0,"49, 75","67, 75",18,a lifetime eating disorder,disorder,participant-role,participant-role
+5,3.0,"104, 106","101, 106",3,be,to be,main,main
+62,53.150729063673246,"17, 75","28, 127",63,I am about to finally let go of a lifetime eating disorder,"to finally let go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",configuration,configuration
+1,0.0,"17, 18","17, 18",0,I,I,participant-role,participant-role
+64,2.0,"96, 114","94, 114",2,used to be bulimic,", used to be bulimic",configuration,configuration
+6,7.0,"116, 130","116, 123",7,started out as,started,main,main
+63,0.0,"107, 114","107, 114",0,bulimic,bulimic,participant-role,participant-role
+7,3.0,"131, 149","131, 152",3,a compulsive eater,a compulsive eater as,participant-role,participant-role
+65,51.85556864985669,"116, 160","76, 127",43,started out as a compulsive eater as a child,"( now binge eating, used to be bulimic, started out",configuration,configuration
+9,1.0,"168, 169","167, 169",1,m,'m,main,main
+66,1.0,"166, 182","166, 183",1,I'm 44 years old,I'm 44 years old.,configuration,configuration
+8,0.0,"166, 167","166, 167",0,I,I,participant-role,participant-role
+10,9.055385138137417,"170, 182","179, 183",10,44 years old,old.,participant-role,participant-role
+17,1.0,"269, 352","269, 353",1,"wonderful to read the thought-provoking, intelligent and feisty posts in this group","wonderful to read the thought-provoking, intelligent and feisty posts in this group!",participant-role,participant-role
+14,12.0,"195, 236","195, 248",12,self-acceptance an immensely helpful tool,self-acceptance an immensely helpful tool in the past,participant-role,participant-role
+11,0.0,"184, 185","184, 185",0,I,I,participant-role,participant-role
+12,0.0,"189, 194","189, 194",0,found,found,main,main
+67,0.0,"184, 248","184, 248",0,I've found self-acceptance an immensely helpful tool in the past,I've found self-acceptance an immensely helpful tool in the past,configuration,configuration
+16,0.0,"263, 268","263, 268",0,feels,feels,main,main
+68,4.123105625617661,"253, 352","249, 353",5,"it always feels wonderful to read the thought-provoking, intelligent and feisty posts in this group","and it always feels wonderful to read the thought-provoking, intelligent and feisty posts in this group!",configuration,configuration
+15,0.0,"253, 255","253, 255",0,it,it,participant-role,participant-role
+19,0.0,"372, 374","372, 374",0,it,it,participant-role,participant-role
+96,0.0,"488, 500","488, 500",0,binge eating,binge eating,participant-role,participant-role
+95,0.0,"478, 487","478, 487",0,conquered,conquered,main,main
+87,7.0,"462, 500","469, 500",7,any of you have conquered binge eating,you have conquered binge eating,configuration,configuration
+22,0.0,"393, 394","393, 394",0,I,I,participant-role,participant-role
+100,0.0,"517, 521","517, 521",0,took,took,main,main
+99,0.0,"514, 516","514, 516",0,it,it,participant-role,participant-role
+93,7.0,"462, 472","462, 465",7,any of you,any,participant-role,participant-role
+70,49.0,"393, 457","393, 408",49,I was wondering if anyone here has words of encouragement for me,I was wondering,configuration,configuration
+91,7.0,"428, 450","428, 457",7,words of encouragement,words of encouragement for me,participant-role,participant-role
+24,0.0,"399, 408","399, 408",0,wondering,wondering,main,main
+90,0.0,"424, 427","424, 427",0,has,has,main,main
+92,3.0,"412, 457","409, 457",3,anyone here has words of encouragement for me,if anyone here has words of encouragement for me,configuration,configuration
+89,5.0,"412, 423","412, 418",5,anyone here,anyone,participant-role,participant-role
+88,4.123105625617661,"505, 521","501, 522",5,how long it took,and how long it took.,configuration,configuration
+30,0.0,"529, 533","529, 533",0,been,been,main,main
+72,44.40720662234904,"560, 612","524, 638",62,I'm doing some conscious eating exercises at present,"I've been in therapy several years, I'm doing some conscious eating exercises at present and I exercise regularly.",configuration,configuration
+35,0.0,"570, 601","570, 601",0,some conscious eating exercises,some conscious eating exercises,participant-role,participant-role
+32,2.0,"560, 561","558, 561",2,I,", I",participant-role,participant-role
+36,0.0,"617, 618","617, 618",0,I,I,participant-role,participant-role
+28,0.0,"524, 525","524, 525",0,I,I,participant-role,participant-role
+41,1.0,"647, 735","647, 736",1,"I could use some encouragement and advice on becoming more assertive, among other things","I could use some encouragement and advice on becoming more assertive, among other things.",participant-role,participant-role
+106,1.0,"647, 735","647, 736",1,"I could use some encouragement and advice on becoming more assertive, among other things","I could use some encouragement and advice on becoming more assertive, among other things.",configuration,configuration
+105,36.05551275463989,"659, 735","689, 715",50,"some encouragement and advice on becoming more assertive, among other things",on becoming more assertive,participant-role,participant-role
+39,0.0,"640, 641","640, 641",0,I,I,participant-role,participant-role
+40,0.0,"642, 646","642, 646",0,know,know,main,main
+102,0.0,"647, 648","647, 648",0,I,I,participant-role,participant-role
+74,1.0,"640, 735","640, 736",1,"I know I could use some encouragement and advice on becoming more assertive, among other things","I know I could use some encouragement and advice on becoming more assertive, among other things.",configuration,configuration
+104,0.0,"655, 658","655, 658",0,use,use,main,main
+113,1.0,"825, 845","825, 846",1,a fair amount who do,a fair amount who do.,participant-role,participant-role
+109,0.0,"773, 804","773, 804",0,an eating disordered background,an eating disordered background,participant-role,participant-role
+112,1.0,"823, 824","822, 824",1,s,'s,main,main
+44,5.0,"749, 804","744, 804",5,not all fat people have an eating disordered background,that not all fat people have an eating disordered background,participant-role,participant-role
+110,5.0,"749, 804","744, 804",5,not all fat people have an eating disordered background,that not all fat people have an eating disordered background,configuration,configuration
+107,0.0,"749, 767","749, 767",0,not all fat people,not all fat people,participant-role,participant-role
+108,0.0,"768, 772","768, 772",0,have,have,main,main
+47,1.0,"817, 845","817, 846",1,there's a fair amount who do,there's a fair amount who do.,participant-role,participant-role
+114,1.0,"817, 845","817, 846",1,there's a fair amount who do,there's a fair amount who do.,configuration,configuration
+42,0.0,"737, 738","737, 738",0,I,I,participant-role,participant-role
+45,0.0,"809, 810","809, 810",0,I,I,participant-role,participant-role
+76,4.123105625617661,"809, 845","805, 846",5,I think there's a fair amount who do,but I think there's a fair amount who do.,configuration,configuration
+75,0.0,"737, 804","737, 804",0,I know that not all fat people have an eating disordered background,I know that not all fat people have an eating disordered background,configuration,configuration
+43,0.0,"739, 743","739, 743",0,know,know,main,main
+46,0.0,"811, 816","811, 816",0,think,think,main,main
+50,0.0,"852, 856","852, 856",0,like,like,main,main
+79,3.0,"926, 932","926, 935",3,it all,it all go,participant-role,participant-role
+80,0.0,"940, 945","940, 945",0,found,found,main,main
+52,0.0,"922, 925","922, 925",0,let,let,main,main
+82,0.0,"913, 935","913, 935",0,who have let it all go,who have let it all go,configuration,configuration
+48,0.0,"848, 849","848, 849",0,I,I,participant-role,participant-role
+84,0.0,"913, 916","913, 916",0,who,who,participant-role,participant-role
+83,4.0,"940, 968","936, 968",4,found a more fulfilling life,and found a more fulfilling life,configuration,configuration
+56,0.0,"996, 1006","996, 1006",0,substitute,substitute,main,main
+57,0.0,"1007, 1011","1007, 1011",0,food,food,participant-role,participant-role
+51,56.0,"857, 912","857, 968",56,to make contact with those strong and brave people here,to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,participant-role,participant-role
+77,56.0,"848, 912","848, 968",56,I'd like to make contact with those strong and brave people here,I'd like to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,configuration,configuration
+55,0.0,"981, 984","981, 984",0,you,you,participant-role,participant-role
+85,5.656854249492381,"972, 1015","968, 1011",8,what did you ultimately substitute food for,... what did you ultimately substitute food,configuration,configuration
+81,0.0,"946, 968","946, 968",0,a more fulfilling life,a more fulfilling life,participant-role,participant-role
+53,4.0,"972, 976","968, 976",4,what,... what,participant-role,participant-role
+86,4.123105625617661,"1031, 1082","1027, 1083",5,I am grateful in advance for any thoughtful replies,and I am grateful in advance for any thoughtful replies.,configuration,configuration
+59,0.0,"1031, 1032","1031, 1032",0,I,I,participant-role,participant-role
+61,0.0,"1036, 1044","1036, 1044",0,grateful,grateful,participant-role,participant-role
+60,0.0,"1033, 1035","1033, 1035",0,am,am,main,main
+31,94.0,"534, 544","534, 638",94,in therapy,"in therapy several years, I'm doing some conscious eating exercises at present and I exercise regularly.",participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+3,"39, 48",let go of,main
+69,"355, 391",Especially since it became moderated,configuration
+20,"375, 381",became,main
+21,"382, 391",moderated,participant-role
+25,"412, 457",anyone here has words of encouragement for me,participant-role
+26,"462, 500",any of you have conquered binge eating,participant-role
+97,"462, 500",any of you have conquered binge eating,configuration
+27,"505, 521",how long it took,participant-role
+101,"505, 521",how long it took,configuration
+98,"505, 513",how long,participant-role
+71,"524, 558",I've been in therapy several years,configuration
+34,"564, 569",doing,main
+73,"617, 637",I exercise regularly,configuration
+38,"619, 627",exercise,main
+111,"817, 822",there,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+96,"96, 100",used,main
+150,"150, 160",as a child,participant-role
+43,"43, 127","go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",participant-role
+28,"28, 127","to finally let go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",participant-role
+60,"60, 66",eating,main
+82,"82, 114","binge eating, used to be bulimic",participant-role
+28,"28, 30",to,main
+279,"279, 286",to read,main
+339,"339, 353",in this group!,participant-role
+287,"287, 338","the thought-provoking, intelligent and feisty posts",participant-role
+279,"279, 353","to read the thought-provoking, intelligent and feisty posts in this group!",participant-role
+602,"602, 612",at present,participant-role
+692,"692, 700",becoming,main
+701,"701, 715",more assertive,participant-role
+717,"717, 736",among other things.,participant-role
+659,"659, 688",some encouragement and advice,participant-role
+692,"692, 715",becoming more assertive,configuration
+843,"843, 845",do,main
+839,"839, 842",who,participant-role
+857,"857, 864",to make,main
+933,"933, 935",go,main
+913,"913, 968",who have let it all go and found a more fulfilling life,configuration
+926,"926, 928",it,participant-role
+1017,"1017, 1026",Thank you,configuration
+1023,"1023, 1026",you,participant-role
+1017,"1017, 1022",Thank,main
+1045,"1045, 1083",in advance for any thoughtful replies.,participant-role
+101,"101, 114",to be bulimic,configuration
+101,"101, 114",to be bulimic,participant-role
+60,"60, 127","eating disorder ( now binge eating, used to be bulimic, started out",configuration
+279,"279, 353","to read the thought-provoking, intelligent and feisty posts in this group!",configuration
+839,"839, 846",who do.,configuration
+926,"926, 935",it all go,configuration
+865,"865, 968",contact with those strong and brave people here who have let it all go and found a more fulfilling life,participant-role
+857,"857, 968",to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,configuration

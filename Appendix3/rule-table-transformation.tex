@@ -1,0 +1,117 @@
+\chapter{Mapping dependency to constituency graph}
+\label{ch:rule-table-transformation}
+
+%todo make span across multiple pages
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \textit{\textbf{key}} & \textit{\textbf{operation}} & \textit{\textbf{parameter}}      \\ \hline
+            acomp                 & new constituent             & COMPLEMENT                       \\ \hline
+            advcl                 & new constituent             & ADJUNCT                          \\ \hline
+            advmod                & extend current              & None                             \\ \hline
+            amod                  & new constituent             & EPITHET\_CLASSIFIER\_OR\_ORDINAL \\ \hline
+            agent                 & new constituent             & COMPLEMENT\_AGENT                \\ \hline
+            appos                 & new constituent             & APPOSITION                       \\ \hline
+            aux                   & extend current              & None                             \\ \hline
+            auxpass               & extend current              & None                             \\ \hline
+            complm                & new constituent             & MARKER                           \\ \hline
+            conj                  & extend current              & None                             \\ \hline
+            csubj                 & new constituent             & SUBJECT                          \\ \hline
+            csubjpass             & new constituent             & SUBJECT                          \\ \hline
+            det                   & new constituent             & DEICTIC                          \\ \hline
+            dobj                  & new constituent             & COMPLEMENT                       \\ \hline
+            expl                  & new constituent             & EXPLETIVE\_MARKER                \\ \hline
+            infmod                & new constituent             & QUALIFIER                        \\ \hline
+            iobj                  & new constituent             & COMPLEMENT\_DATIVE               \\ \hline
+            mark                  & new constituent             & MARKER                           \\ \hline
+            mwe                   & extend current              & None                             \\ \hline
+            neg                   & extend current              & None                             \\ \hline
+            nn                    & extend current              & None                             \\ \hline
+            npadvmod              & new constituent             & ADJUNCT                          \\ \hline
+            nsubj                 & new constituent             & SUBJECT                          \\ \hline
+            nsubjpass             & new constituent             & SUBJECT                          \\ \hline
+            num                   & new constituent             & CARDINAL\_NUMERATIVE             \\ \hline
+            number                & extend current              & None                             \\ \hline
+            parataxis             & new constituent             & CLAUSE                           \\ \hline
+            partmod               & new constituent             & QUALIFIER                        \\ \hline
+            vmod                  & new constituent             & QUALIFIER                        \\ \hline
+            pobj                  & extend current              & None                             \\ \hline
+            poss                  & new constituent             & POSESSOR                         \\ \hline
+            possessive            & new constituent             & POSESSOR                         \\ \hline
+            preconj               & extend current              & None                             \\ \hline
+            predet                & new constituent             & PREDEICTIC                       \\ \hline
+            prepc                 & new constituent             & COMPLEMENT\_ADJUNCT              \\ \hline
+            prt                   & new constituent             & MARKER                           \\ \hline
+            punct                 & extend current              & None                             \\ \hline
+            purpcl                & new constituent             & CLAUSE                           \\ \hline
+            quantmod              & extend current              & None                             \\ \hline
+            rcmod                 & new constituent             & QUALIFIER                        \\ \hline
+            ref                   & extend current              & None                             \\ \hline
+            rel                   & new constituent             & CLAUSE                           \\ \hline
+            tmod                  & new constituent             & ADJUNCT                          \\ \hline
+            xcomp                 & new constituent             & COMPLEMENT                       \\ \hline
+            xsubj                 & new constituent             & SUBJECT                          \\ \hline
+            discourse             & new constituent             & DISCOURSE                        \\ \hline
+            goeswith              & extend current              & None                             \\ \hline
+        \end{tabular}%
+    }
+    \caption{The rule table mapping generic dependency context to generative operations}
+    \label{tab:rule-table-complete}
+\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \textit{\textbf{Key}} & \textit{\textbf{Operation}} & \textit{\textbf{Value}} \\ \hline
+            JJ-dep-IN             & new constituent             & MARKER                  \\ \hline
+            VB-dep-IN             & new constituent             & MARKER                  \\ \hline
+            VB-dep-VB             & new constituent             & CLAUSE                  \\ \hline
+            NN-dep-NN             & extend current              & None                    \\ \hline
+            NN-dep-VB             & new constituent             & CLAUSE                  \\ \hline
+            VB-dep-WP             & new constituent             & COMPLEMENT\_ADJUNCT     \\ \hline
+            VB-dep-NN             & new constituent             & ADJUNCT                 \\ \hline
+            RB-dep-IN             & extend current              & None                    \\ \hline
+            WR-dep-JJ             & extend current              & None                    \\ \hline
+            VB-dep-JJ             & new constituent             & ADJUNCT                 \\ \hline
+            VB-conj-VB            & new constituent             & CLAUSE                  \\ \hline
+            VB-cc-CC              & new constituent             & MARKER                  \\ \hline
+            NN-cc-CC              & extend current              & None                    \\ \hline
+            VB-prep-NN            & new constituent             & COMPLEMENT\_ADJUNCT     \\ \hline
+            VB-prep-JJ            & new constituent             & COMPLEMENT\_ADJUNCT     \\ \hline
+            VB-prep-PR            & new constituent             & COMPLEMENT\_ADJUNCT     \\ \hline
+            VB-prep-WP            & new constituent             & COMPLEMENT\_ADJUNCT     \\ \hline
+            VB-prep-CD            & new constituent             & COMPLEMENT\_ADJUNCT     \\ \hline
+            NN-prep-NN            & new constituent             & QUALIFIER               \\ \hline
+            NN-prep-PR            & new constituent             & QUALIFIER               \\ \hline
+            RB-npadvmod-NN        & extend current              & None                    \\ \hline
+            NN-npadvmod-NN        & extend current              & None                    \\ \hline
+            VB-npadvmod-NN        & new constituent             & ADJUNCT                 \\ \hline
+            JJ-npadvmod-RB        & extend current              & None                    \\ \hline
+            VB-advmod-RB          & new constituent             & ADJUNCT                 \\ \hline
+            VB-advmod-JJ          & new constituent             & ADJUNCT                 \\ \hline
+            VB-advmod-WR          & new constituent             & COMPLEMENT              \\ \hline
+            NN-advmod-RB          & new constituent             & PREDEICTIC              \\ \hline
+            VB-ccomp-NN           & new constituent             & COMPLEMENT              \\ \hline
+            VB-ccomp-VB           & new constituent             & COMPLEMENT              \\ \hline
+            IN-pcomp-IN           & new constituent             & COMPLEMENT\_ADJUNCT     \\ \hline
+            IN-pcomp-NN           & new constituent             & COMPLEMENT\_ADJUNCT     \\ \hline
+            IN-pcomp-CD           & new constituent             & COMPLEMENT\_ADJUNCT     \\ \hline
+            IN-pcomp-JJ           & new constituent             & COMPLEMENT\_ADJUNCT     \\ \hline
+            NN-amod-CD            & new constituent             & CARDINAL\_NUMERATIVE    \\ \hline
+            NN-infmod-VB          & new constituent             & QUALIFIER               \\ \hline
+            CD-prep-NN            & new constituent             & QUALIFIER               \\ \hline
+            NN-vmod-VB            & new constituent             & QUALIFIER               \\ \hline
+            NN-prep-JJ            & new constituent             & QUALIFIER               \\ \hline
+            DT-prep-NN            & new constituent             & QUALIFIER               \\ \hline
+            JJ-prep-NN            & extend current              & None                    \\ \hline
+        \end{tabular}%
+    }
+    \caption{The rule table mapping specific dependency context to generative operations}
+    \label{tab:rule-table-complete1}
+\end{table}

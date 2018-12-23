@@ -1,0 +1,219 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.7846153846153846
+,Recall,0.9216867469879518
+,F1,0.8476454293628809
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+4,4.123105625617661,"27, 52","23, 53",5,this is really hard to do,Boy this is really hard to do.,configuration,configuration
+1,0.0,"27, 31","27, 31",0,this,this,participant-role,participant-role
+3,5.0990195135927845,"42, 52","47, 53",6,hard to do,to do.,participant-role,participant-role
+2,0.0,"32, 34","32, 34",0,is,is,main,main
+11,0.0,"75, 80","75, 80",0,being,being,main,main
+6,0.0,"56, 61","56, 61",0,think,think,main,main
+13,1.0,"62, 111","62, 112",1,my spouse is being unfaithful to our relationship,my spouse is being unfaithful to our relationship.,configuration,configuration
+5,0.0,"54, 55","54, 55",0,I,I,participant-role,participant-role
+12,11.045361017187261,"81, 111","92, 112",12,unfaithful to our relationship,to our relationship.,participant-role,participant-role
+8,1.0,"54, 111","54, 112",1,I think my spouse is being unfaithful to our relationship,I think my spouse is being unfaithful to our relationship.,configuration,configuration
+9,0.0,"62, 71","62, 71",0,my spouse,my spouse,participant-role,participant-role
+7,1.0,"62, 111","62, 112",1,my spouse is being unfaithful to our relationship,my spouse is being unfaithful to our relationship.,participant-role,participant-role
+18,0.0,"146, 147","146, 147",0,I,I,participant-role,participant-role
+15,0.0,"135, 137","135, 137",0,is,is,main,main
+23,5.0990195135927845,"169, 187","174, 188",6,some of her emails,of her emails.,participant-role,participant-role
+17,1.0,"113, 187","113, 188",1,The reason I say this is because I had a hunch and read some of her emails,The reason I say this is because I had a hunch and read some of her emails.,configuration,configuration
+19,0.0,"148, 151","148, 151",0,had,had,main,main
+24,4.123105625617661,"164, 187","160, 188",5,read some of her emails,and read some of her emails.,configuration,configuration
+20,0.0,"152, 159","152, 159",0,a hunch,a hunch,participant-role,participant-role
+16,16.0312195418814,"146, 187","130, 188",17,I had a hunch and read some of her emails,this is because I had a hunch and read some of her emails.,participant-role,participant-role
+186,0.0,"130, 134","130, 134",0,this,this,participant-role,participant-role
+22,0.0,"164, 168","164, 168",0,read,read,main,main
+185,0.0,"126, 129","126, 129",0,say,say,main,main
+14,9.0,"113, 134","113, 125",9,The reason I say this,The reason I,participant-role,participant-role
+21,8.0,"146, 159","138, 159",8,I had a hunch,because I had a hunch,configuration,configuration
+25,0.0,"203, 206","203, 206",0,she,she,participant-role,participant-role
+38,4.123105625617661,"274, 306","273, 310",5,don't know if I spelled it right,(don't know if I spelled it right ) .,configuration,configuration
+42,3.0,"288, 306","285, 306",3,I spelled it right,if I spelled it right,configuration,configuration
+29,0.0,"189, 235","189, 235",0,In her emails she was talking with another man,In her emails she was talking with another man,configuration,configuration
+39,0.0,"288, 289","288, 289",0,I,I,participant-role,participant-role
+27,5.0,"211, 223","211, 218",5,talking with,talking,main,main
+28,5.0,"224, 235","219, 235",5,another man,with another man,participant-role,participant-role
+34,4.0,"240, 272","236, 272",4,they were using sexual innuendos,and they were using sexual innuendos,configuration,configuration
+41,0.0,"298, 300","298, 300",0,it,it,participant-role,participant-role
+40,0.0,"290, 297","290, 297",0,spelled,spelled,main,main
+30,0.0,"240, 244","240, 244",0,they,they,participant-role,participant-role
+32,0.0,"250, 255","250, 255",0,using,using,main,main
+33,0.0,"256, 272","256, 272",0,sexual innuendos,sexual innuendos,participant-role,participant-role
+36,4.0,"280, 284","276, 284",4,know,n't know,main,main
+48,0.0,"358, 361","358, 361",0,are,are,main,main
+45,11.0,"320, 331","320, 342",11,this person,this person about once,participant-role,participant-role
+50,3.1622776601683795,"353, 386","350, 387",4,they are on a similar sports team,as they are on a similar sports team.,configuration,configuration
+46,38.0,"311, 349","311, 387",38,She sees this person about once a week,She sees this person about once a week as they are on a similar sports team.,configuration,configuration
+43,0.0,"311, 314","311, 314",0,She,She,participant-role,participant-role
+47,0.0,"353, 357","353, 357",0,they,they,participant-role,participant-role
+44,0.0,"315, 319","315, 319",0,sees,sees,main,main
+49,1.0,"362, 386","362, 387",1,on a similar sports team,on a similar sports team.,participant-role,participant-role
+72,1.0,"476, 478","476, 479",1,me,me.,participant-role,participant-role
+57,0.0,"405, 406","405, 406",0,I,I,participant-role,participant-role
+65,0.0,"447, 448","447, 448",0,I,I,participant-role,participant-role
+59,0.0,"412, 421","412, 421",0,her email,her email,participant-role,participant-role
+69,0.0,"460, 463","460, 463",0,she,she,participant-role,participant-role
+54,0.0,"401, 404","401, 404",0,her,her,participant-role,participant-role
+51,0.0,"388, 389","388, 389",0,I,I,participant-role,participant-role
+68,0.0,"447, 459","447, 459",0,I was spying,I was spying,configuration,configuration
+61,0.0,"433, 436","433, 436",0,she,she,participant-role,participant-role
+64,3.0,"433, 459","430, 459",3,she found out I was spying,if she found out I was spying,configuration,configuration
+62,4.0,"437, 446","437, 442",4,found out,found,main,main
+58,0.0,"407, 411","407, 411",0,read,read,main,main
+53,4.0,"396, 400","392, 400",4,tell,n't tell,main,main
+71,0.0,"470, 475","470, 475",0,leave,leave,main,main
+63,0.0,"447, 459","447, 459",0,I was spying,I was spying,participant-role,participant-role
+182,5.0,"510, 522","514, 519",7,was going on,going,main,main
+78,36.89173349139343,"500, 522","520, 553",25,something was going on,on being very selective about how,participant-role,participant-role
+76,0.0,"487, 492","487, 492",0,asked,asked,main,main
+83,0.0,"562, 565","562, 565",0,she,she,participant-role,participant-role
+74,0.0,"480, 481","480, 481",0,I,I,participant-role,participant-role
+85,4.0,"575, 582","571, 582",4,suspect,n't suspect,main,main
+77,0.0,"493, 496","493, 496",0,her,her,participant-role,participant-role
+87,8.06225774829855,"562, 591","554, 592",9,she wouldn't suspect anything,so that she wouldn't suspect anything.,configuration,configuration
+181,0.0,"500, 509","500, 509",0,something,something,participant-role,participant-role
+86,1.0,"583, 591","583, 592",1,anything,anything.,participant-role,participant-role
+79,70.0,"480, 522","480, 592",70,I have asked her if something was going on,I have asked her if something was going on being very selective about how so that she wouldn't suspect anything.,configuration,configuration
+93,0.0,"642, 649","642, 649",0,started,started,main,main
+94,18.788294228055936,"625, 661","617, 678",25,our relationship started 5 years ago,because our relationship started 5 years ago when she cheated,configuration,configuration
+89,5.0,"595, 604","595, 599",5,feel like,feel,main,main
+95,0.0,"667, 670","667, 670",0,she,she,participant-role,participant-role
+98,18.681541692269406,"667, 696","662, 678",21,she cheated on her ex with me,when she cheated,configuration,configuration
+90,5.0,"605, 616","600, 616",5,such a fool,like such a fool,participant-role,participant-role
+96,3.0,"671, 681","671, 678",3,cheated on,cheated,main,main
+91,81.0,"593, 616","593, 697",81,I feel like such a fool,I feel like such a fool because our relationship started 5 years ago when she cheated on her ex with me.,configuration,configuration
+88,0.0,"593, 594","593, 594",0,I,I,participant-role,participant-role
+92,0.0,"625, 641","625, 641",0,our relationship,our relationship,participant-role,participant-role
+109,4.123105625617661,"756, 774","752, 775",5,chose to ignore it,and chose to ignore it.,configuration,configuration
+106,4.0,"728, 751","724, 751",4,I was much younger then,but I was much younger then,configuration,configuration
+103,0.0,"728, 729","728, 729",0,I,I,participant-role,participant-role
+108,1.0,"762, 774","762, 775",1,to ignore it,to ignore it.,participant-role,participant-role
+101,5.0,"712, 717","707, 717",5,known,have known,main,main
+107,0.0,"756, 761","756, 761",0,chose,chose,main,main
+99,0.0,"698, 699","698, 699",0,I,I,participant-role,participant-role
+116,1.0,"808, 850","808, 851",1,"a child whom we both love very, very, much","a child whom we both love very, very, much.",participant-role,participant-role
+110,0.0,"776, 787","776, 787",0,The problem,The problem,participant-role,participant-role
+117,5.0990195135927845,"800, 850","795, 851",6,"we have a child whom we both love very, very, much","that we have a child whom we both love very, very, much.",configuration,configuration
+111,0.0,"792, 794","792, 794",0,is,is,main,main
+115,0.0,"803, 807","803, 807",0,have,have,main,main
+113,1.0,"776, 850","776, 851",1,"The problem now is that we have a child whom we both love very, very, much","The problem now is that we have a child whom we both love very, very, much.",configuration,configuration
+114,0.0,"800, 802","800, 802",0,we,we,participant-role,participant-role
+112,5.0990195135927845,"800, 850","795, 851",6,"we have a child whom we both love very, very, much","that we have a child whom we both love very, very, much.",participant-role,participant-role
+125,0.0,"875, 878","875, 878",0,she,she,participant-role,participant-role
+118,0.0,"852, 853","852, 853",0,I,I,participant-role,participant-role
+129,0.0,"875, 898","875, 898",0,she will take our child,she will take our child,configuration,configuration
+130,0.0,"903, 908","903, 908",0,leave,leave,main,main
+121,0.0,"867, 868","867, 868",0,I,I,participant-role,participant-role
+131,4.123105625617661,"903, 908","899, 909",5,leave,and leave.,configuration,configuration
+122,0.0,"869, 874","869, 874",0,leave,leave,main,main
+128,0.0,"889, 898","889, 898",0,our child,our child,participant-role,participant-role
+127,0.0,"884, 888","884, 888",0,take,take,main,main
+124,1.0,"852, 908","852, 909",1,I am afraid if I leave she will take our child and leave,I am afraid if I leave she will take our child and leave.,configuration,configuration
+120,1.0,"875, 908","875, 909",1,she will take our child and leave,she will take our child and leave.,participant-role,participant-role
+141,7.0,"944, 955","944, 948",7,what I know,what,participant-role,participant-role
+136,1.0,"910, 955","910, 956",1,It kills me that I can't tell her what I know,"It kills me that I can't tell her what I know,",configuration,configuration
+140,0.0,"940, 943","940, 943",0,her,her,participant-role,participant-role
+149,0.0,"986, 990","986, 990",0,know,know,main,main
+146,13.416407864998739,"970, 1014","964, 1026",18,I think she may know I am reading her emails,a way I think she may know I am reading her emails because she,configuration,configuration
+156,4.123105625617661,"1023, 1077","1027, 1078",5,she and this gentleman have stopped speaking via email,and this gentleman have stopped speaking via email.,configuration,configuration
+154,0.0,"1051, 1058","1051, 1058",0,stopped,stopped,main,main
+139,4.0,"935, 939","931, 939",4,tell,n't tell,main,main
+133,0.0,"913, 918","913, 918",0,kills,kills,main,main
+155,1.0,"1059, 1077","1059, 1078",1,speaking via email,speaking via email.,participant-role,participant-role
+137,0.0,"927, 928","927, 928",0,I,I,participant-role,participant-role
+134,0.0,"919, 921","919, 921",0,me,me,participant-role,participant-role
+147,0.0,"978, 981","978, 981",0,she,she,participant-role,participant-role
+143,0.0,"970, 971","970, 971",0,I,I,participant-role,participant-role
+135,5.0,"927, 955","922, 955",5,I can't tell her what I know,that I can't tell her what I know,participant-role,participant-role
+142,5.0,"927, 955","922, 955",5,I can't tell her what I know,that I can't tell her what I know,configuration,configuration
+150,12.0,"991, 1014","991, 1026",12,I am reading her emails,I am reading her emails because she,participant-role,participant-role
+144,0.0,"972, 977","972, 977",0,think,think,main,main
+152,8.0,"1023, 1045","1031, 1045",8,she and this gentleman,this gentleman,participant-role,participant-role
+145,12.0,"978, 1014","978, 1026",12,she may know I am reading her emails,she may know I am reading her emails because she,participant-role,participant-role
+151,12.0,"978, 1014","978, 1026",12,she may know I am reading her emails,she may know I am reading her emails because she,configuration,configuration
+132,0.0,"910, 912","910, 912",0,It,It,participant-role,participant-role
+161,0.0,"1135, 1139","1135, 1139",0,they,they,participant-role,participant-role
+159,0.0,"1102, 1118","1102, 1118",0,be communicating,be communicating,main,main
+157,0.0,"1087, 1091","1087, 1091",0,they,they,participant-role,participant-role
+162,7.0,"1140, 1151","1140, 1144",7,play soccer,play,main,main
+163,5.0990195135927845,"1135, 1151","1130, 1152",6,they play soccer,when they play soccer.,configuration,configuration
+167,1.0,"1153, 1171","1153, 1172",1,I am very confused,I am very confused.,configuration,configuration
+164,0.0,"1153, 1154","1153, 1154",0,I,I,participant-role,participant-role
+180,29.732137494637012,"1240, 1252","1218, 1272",42,I will leave,"but if she's cheating I will leave, no second chances.",configuration,configuration
+176,3.0,"1225, 1239","1222, 1239",3,she's cheating,if she's cheating,configuration,configuration
+168,0.0,"1173, 1174","1173, 1174",0,I,I,participant-role,participant-role
+171,0.0,"1186, 1217","1186, 1217",0,to loose my wife or my daughter,to loose my wife or my daughter,participant-role,participant-role
+173,0.0,"1225, 1228","1225, 1228",0,she,she,participant-role,participant-role
+177,0.0,"1240, 1241","1240, 1241",0,I,I,participant-role,participant-role
+172,0.0,"1173, 1217","1173, 1217",0,I don't want to loose my wife or my daughter,I don't want to loose my wife or my daughter,configuration,configuration
+179,0.0,"1247, 1252","1247, 1252",0,leave,leave,main,main
+170,4.0,"1181, 1185","1177, 1185",4,want,n't want,main,main
+175,0.0,"1231, 1239","1231, 1239",0,cheating,cheating,main,main
+187,54.3323108288245,"124, 134","130, 188",51,I say this,this is because I had a hunch and read some of her emails.,configuration,configuration
+73,38.01315561749642,"460, 478","422, 479",39,she would leave me,because if she found out I was spying she would leave me.,configuration,configuration
+188,70.06425622241343,"500, 522","497, 592",73,something was going on,if something was going on being very selective about how so that she wouldn't suspect anything.,configuration,configuration
+123,35.12833614050059,"867, 874","864, 909",38,I leave,if I leave she will take our child and leave.,configuration,configuration
+60,58.0,"405, 421","405, 479",58,I read her email,I read her email because if she found out I was spying she would leave me.,configuration,configuration
+,
+,Manual mismatching all parsed (False Negative)
+184,"124, 125",I,participant-role
+37,"288, 306",I spelled it right,participant-role
+56,"388, 421",I can't tell her I read her email,configuration
+55,"405, 421",I read her email,participant-role
+67,"453, 459",spying,main
+97,"682, 688",her ex,participant-role
+102,"698, 722",I should have known then,configuration
+104,"730, 733",was,main
+105,"734, 746",much younger,participant-role
+119,"857, 863",afraid,main
+160,"1087, 1118",they may still be communicating,configuration
+165,"1155, 1157",am,main
+166,"1158, 1171",very confused,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+47,"47, 53",to do.,configuration
+47,"47, 52",to do,main
+81,"81, 91",unfaithful,participant-role
+169,"169, 173",some,participant-role
+192,"192, 202",her emails,participant-role
+449,"449, 452",was,main
+523,"523, 553",being very selective about how,configuration
+529,"529, 543",very selective,participant-role
+523,"523, 528",being,main
+662,"662, 666",when,participant-role
+762,"762, 775",to ignore it.,configuration
+739,"739, 746",younger,main
+762,"762, 771",to ignore,main
+821,"821, 823",we,participant-role
+829,"829, 833",love,main
+854,"854, 856",am,main
+857,"857, 863",afraid,participant-role
+875,"875, 909",she will take our child and leave.,configuration
+964,"964, 969",a way,participant-role
+1059,"1059, 1067",speaking,main
+1059,"1059, 1078",speaking via email.,configuration
+951,"951, 955",know,main
+996,"996, 1003",reading,main
+1068,"1068, 1078",via email.,participant-role
+1145,"1145, 1152",soccer.,participant-role
+1125,"1125, 1152",than when they play soccer.,participant-role
+1130,"1130, 1134",when,participant-role
+1163,"1163, 1171",confused,main
+35,"35, 46",really hard,participant-role
+138,"138, 188",because I had a hunch and read some of her emails.,configuration
+453,"453, 459",spying,participant-role
+772,"772, 775",it.,participant-role
+816,"816, 851","whom we both love very, very, much.",configuration
+834,"834, 851","very, very, much.",participant-role
+816,"816, 820",whom,participant-role
+864,"864, 909",if I leave she will take our child and leave.,participant-role
+949,"949, 950",I,participant-role
+991,"991, 992",I,participant-role
+944,"944, 955",what I know,configuration
+1004,"1004, 1014",her emails,participant-role
+1015,"1015, 1026",because she,participant-role
+991,"991, 1026",I am reading her emails because she,configuration

@@ -1,0 +1,325 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.6782006920415224
+,Recall,0.8868778280542986
+,F1,0.7686274509803921
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+19,1.0,"22, 62","22, 63",1,My wife of 5 years has a very bad temper,My wife of 5 years has a very bad temper.,configuration,configuration
+3,1.0,"45, 62","45, 63",1,a very bad temper,a very bad temper.,participant-role,participant-role
+1,0.0,"22, 40","22, 40",0,My wife of 5 years,My wife of 5 years,participant-role,participant-role
+2,0.0,"41, 44","41, 44",0,has,has,main,main
+26,0.0,"182, 189","182, 189",0,smashes,smashes,main,main
+5,0.0,"73, 77","73, 77",0,gets,gets,main,main
+20,7.211102550927978,"69, 83","73, 77",10,she gets angry,gets,configuration,configuration
+10,0.0,"111, 114","111, 114",0,she,she,participant-role,participant-role
+14,0.0,"129, 134","129, 134",0,wants,wants,main,main
+25,4.0,"150, 180","146, 180",4,throws her wedding rings at me,and throws her wedding rings at me,configuration,configuration
+13,2.0,"125, 128","123, 128",2,she,", she",participant-role,participant-role
+23,5.0,"111, 123","106, 123",5,she hates me,that she hates me,configuration,configuration
+15,0.0,"135, 144","135, 144",0,a divorce,a divorce,participant-role,participant-role
+12,0.0,"121, 123","121, 123",0,me,me,participant-role,participant-role
+17,0.0,"157, 174","157, 174",0,her wedding rings,her wedding rings,participant-role,participant-role
+7,0.0,"84, 87","84, 87",0,she,she,participant-role,participant-role
+8,10.0,"88, 105","98, 105",10,yells and screams,screams,main,main
+21,20.024984394500787,"84, 144","64, 145",21,"she yells and screams that she hates me, she wants a divorce","When she gets angry she yells and screams that she hates me, she wants a divorce,",configuration,configuration
+28,5.385164807134504,"182, 204","180, 209",7,smashes wedding photos,", smashes wedding photos etc.",configuration,configuration
+11,0.0,"115, 120","115, 120",0,hates,hates,main,main
+27,5.0,"190, 204","190, 209",5,wedding photos,wedding photos etc.,participant-role,participant-role
+18,0.0,"175, 180","175, 180",0,at me,at me,participant-role,participant-role
+16,0.0,"150, 156","150, 156",0,throws,throws,main,main
+4,0.0,"69, 72","69, 72",0,she,she,participant-role,participant-role
+37,6.082762530298219,"248, 267","242, 268",7,we've been together,since we've been together.,configuration,configuration
+32,0.0,"248, 250","248, 250",0,we,we,participant-role,participant-role
+36,1.0,"259, 267","259, 268",1,together,together.,participant-role,participant-role
+29,0.0,"210, 214","210, 214",0,This,This,participant-role,participant-role
+35,0.0,"254, 258","254, 258",0,been,been,main,main
+31,0.0,"219, 227","219, 227",0,happened,happened,main,main
+33,27.0,"210, 241","210, 268",27,This has happened some 50 times,This has happened some 50 times since we've been together.,configuration,configuration
+91,2.23606797749979,"302, 339","300, 340",3,begging her to take back her comments,", begging her to take back her comments.",configuration,configuration
+38,2.0,"279, 280","277, 280",2,I,", I",participant-role,participant-role
+90,1.0,"310, 339","310, 340",1,her to take back her comments,her to take back her comments.,participant-role,participant-role
+22,0.0,"302, 309","302, 309",0,begging,begging,main,main
+40,11.0,"287, 289","287, 300",11,be,be devastated,main,main
+44,0.0,"354, 357","354, 357",0,she,she,participant-role,participant-role
+49,3.0,"372, 384","369, 384",3,it continued,As it continued,configuration,configuration
+58,0.0,"487, 488","487, 488",0,I,I,participant-role,participant-role
+57,10.0,"440, 466","430, 466",10,I feel like letting it end,where now I feel like letting it end,configuration,configuration
+60,1.0,"504, 526","504, 527",1,to make peace with her,to make peace with her.,participant-role,participant-role
+59,0.0,"496, 503","496, 503",0,attempt,attempt,main,main
+47,0.0,"372, 374","372, 374",0,it,it,participant-role,participant-role
+55,5.0,"442, 451","442, 446",5,feel like,feel,main,main
+54,0.0,"440, 441","440, 441",0,I,I,participant-role,participant-role
+52,0.0,"395, 416","395, 416",0,more and more distant,more and more distant,participant-role,participant-role
+50,2.0,"386, 387","384, 387",2,I,", I",participant-role,participant-role
+56,5.0,"452, 466","447, 466",5,letting it end,like letting it end,participant-role,participant-role
+61,4.123105625617661,"471, 526","475, 527",5,for some reason I always attempt to make peace with her,some reason I always attempt to make peace with her.,configuration,configuration
+51,0.0,"388, 394","388, 394",0,became,became,main,main
+48,0.0,"375, 384","375, 384",0,continued,continued,main,main
+63,1.4142135623730951,"536, 542","537, 541",2,"""love""",love,main,main
+68,4.0,"563, 567","559, 567",4,want,n't want,main,main
+64,0.0,"543, 550","543, 550",0,my wife,my wife,participant-role,participant-role
+69,0.0,"568, 593","568, 593",0,this kind of relationship,this kind of relationship,participant-role,participant-role
+70,1.0,"555, 601","555, 602",1,I don't want this kind of relationship anymore,I don't want this kind of relationship anymore.,configuration,configuration
+65,4.0,"528, 550","528, 554",4,"I still ""love"" my wife","I still ""love"" my wife but",configuration,configuration
+66,0.0,"555, 556","555, 556",0,I,I,participant-role,participant-role
+62,0.0,"528, 529","528, 529",0,I,I,participant-role,participant-role
+71,0.0,"603, 606","603, 606",0,She,She,participant-role,participant-role
+72,1.0,"607, 608","606, 608",1,s,'s,main,main
+75,0.0,"622, 626","622, 626",0,kids,kids,participant-role,participant-role
+77,13.038404810405298,"616, 630","603, 631",14,wants kids NOW,She's 31 and wants kids NOW.,configuration,configuration
+86,0.0,"756, 757","756, 757",0,I,I,participant-role,participant-role
+92,8.06225774829855,"756, 784","748, 785",9,I feel we are doomed to fail,because I feel we are doomed to fail.,configuration,configuration
+93,0.0,"763, 765","763, 765",0,we,we,participant-role,participant-role
+256,4.0,"719, 724","715, 724",4,bring,n't bring,main,main
+80,3.0,"653, 661","650, 661",3,continue,to continue,main,main
+85,39.84971769034255,"713, 747","725, 785",46,can't bring myself to move forward,myself to move forward because I feel we are doomed to fail.,configuration,configuration
+83,10.63014581273465,"725, 747","732, 739",15,myself to move forward,to move,main,main
+87,0.0,"758, 762","758, 762",0,feel,feel,main,main
+96,1.0,"763, 784","763, 785",1,we are doomed to fail,we are doomed to fail.,participant-role,participant-role
+88,1.0,"763, 784","763, 785",1,we are doomed to fail,we are doomed to fail.,configuration,configuration
+81,12.0,"662, 708","650, 708",12,the relationship in its current state of limbo,to continue the relationship in its current state of limbo,participant-role,participant-role
+78,0.0,"632, 633","632, 633",0,I,I,participant-role,participant-role
+89,0.0,"632, 708","632, 708",0,I seem to be able to continue the relationship in its current state of limbo,I seem to be able to continue the relationship in its current state of limbo,configuration,configuration
+95,7.0710678118654755,"770, 784","777, 785",8,doomed to fail,to fail.,participant-role,participant-role
+115,1.0,"907, 911","907, 912",1,kids,kids.,participant-role,participant-role
+110,0.0,"882, 887","882, 887",0,hates,hates,main,main
+116,4.123105625617661,"897, 911","893, 912",5,I do want kids,but I do want kids.,configuration,configuration
+104,0.0,"864, 867","864, 867",0,mom,mom,participant-role,participant-role
+99,4.0,"794, 798","790, 798",4,want,n't want,main,main
+112,0.0,"897, 898","897, 898",0,I,I,participant-role,participant-role
+101,13.0,"786, 835","799, 835",13,I don't want kids to go through the upcoming mess,kids to go through the upcoming mess,configuration,configuration
+102,8.0,"839, 857","847, 857",8,grow up in a house,in a house,participant-role,participant-role
+107,0.0,"878, 891","878, 891",0,she hates him,she hates him,configuration,configuration
+84,4.0,"878, 891","874, 891",4,she hates him,dad she hates him,participant-role,participant-role
+108,6.0,"864, 891","858, 891",6,mom tells dad she hates him,where mom tells dad she hates him,configuration,configuration
+111,0.0,"888, 891","888, 891",0,him,him,participant-role,participant-role
+109,0.0,"878, 881","878, 881",0,she,she,participant-role,participant-role
+103,34.132096331752024,"839, 857","836, 891",37,grow up in a house,or grow up in a house where mom tells dad she hates him,configuration,configuration
+105,0.0,"868, 873","868, 873",0,tells,tells,main,main
+97,0.0,"786, 787","786, 787",0,I,I,participant-role,participant-role
+100,11.0,"799, 835","810, 835",11,kids to go through the upcoming mess,through the upcoming mess,participant-role,participant-role
+114,0.0,"902, 906","902, 906",0,want,want,main,main
+117,0.0,"921, 922","921, 922",0,I,I,participant-role,participant-role
+122,0.0,"975, 977","975, 977",0,is,is,main,main
+123,5.0990195135927845,"983, 1020","978, 1021",6,she knows I would make an awesome dad,that she knows I would make an awesome dad.,participant-role,participant-role
+121,22.0,"929, 974","929, 952",22,one of the main reasons my wife stays with me,one of the main reasons,participant-role,participant-role
+119,62.96824596572466,"929, 1020","972, 974",89,one of the main reasons my wife stays with me is that she knows I would make an awesome dad,me,participant-role,participant-role
+124,24.020824298928627,"929, 1020","953, 1021",25,one of the main reasons my wife stays with me is that she knows I would make an awesome dad,my wife stays with me is that she knows I would make an awesome dad.,configuration,configuration
+118,0.0,"923, 928","923, 928",0,think,think,main,main
+144,0.0,"1097, 1100","1097, 1100",0,she,she,participant-role,participant-role
+135,1.0,"1026, 1027","1025, 1027",1,s,'s,main,main
+147,19.026297590440446,"1097, 1116","1078, 1117",20,she doesn't act now,kids impossible if she doesn't act now.,configuration,configuration
+134,0.0,"1022, 1025","1022, 1025",0,She,She,participant-role,participant-role
+146,4.0,"1109, 1112","1105, 1112",4,act,n't act,main,main
+143,13.038404810405298,"1071, 1093","1078, 1082",18,having kids impossible,kids,participant-role,participant-role
+150,24.0,"1057, 1093","1057, 1117",24,that may make having kids impossible,that may make having kids impossible if she doesn't act now.,configuration,configuration
+142,0.0,"1066, 1070","1066, 1070",0,make,make,main,main
+140,0.0,"1057, 1061","1057, 1061",0,that,that,participant-role,participant-role
+149,62.369864518050704,"1035, 1056","1022, 1117",74,has had health issues,She's 31 and has had health issues that may make having kids impossible if she doesn't act now.,configuration,configuration
+125,78.00640999302557,"1196, 1282","1118, 1283",79,by staying with her and sitting the fence I'm also ending her chances to have children,I feel that by splitting up with her I'd end her chances to have children and by staying with her and sitting the fence I'm also ending her chances to have children.,configuration,configuration
+152,0.0,"1120, 1124","1120, 1124",0,feel,feel,main,main
+151,0.0,"1118, 1119","1118, 1119",0,I,I,participant-role,participant-role
+169,1.0,"1297, 1314","1297, 1315",1,to do this to her,to do this to her.,participant-role,participant-role
+168,4.0,"1292, 1296","1288, 1296",4,want,n't want,main,main
+166,0.0,"1284, 1285","1284, 1285",0,I,I,participant-role,participant-role
+170,1.0,"1284, 1314","1284, 1315",1,I don't want to do this to her,I don't want to do this to her.,configuration,configuration
+183,7.0710678118654755,"1412, 1438","1419, 1439",8,a book on anger management,on anger management.,participant-role,participant-role
+171,0.0,"1316, 1317","1316, 1317",0,I,I,participant-role,participant-role
+173,0.0,"1321, 1326","1321, 1326",0,asked,asked,main,main
+178,0.0,"1316, 1375","1316, 1375",0,I've asked my wife many times to go to marriage counselling,I've asked my wife many times to go to marriage counselling,configuration,configuration
+179,4.0,"1380, 1391","1376, 1391",4,she refuses,but she refuses,configuration,configuration
+184,77.00649323271382,"1393, 1438","1316, 1439",78,she won't even buy a book on anger management,"I've asked my wife many times to go to marriage counselling but she refuses, she won't even buy a book on anger management.",configuration,configuration
+177,0.0,"1384, 1391","1384, 1391",0,refuses,refuses,main,main
+180,2.0,"1393, 1396","1391, 1396",2,she,", she",participant-role,participant-role
+175,0.0,"1346, 1375","1346, 1375",0,to go to marriage counselling,to go to marriage counselling,participant-role,participant-role
+176,0.0,"1380, 1383","1380, 1383",0,she,she,participant-role,participant-role
+187,0.0,"1477, 1485","1477, 1485",0,resulted,resulted,main,main
+188,1.0,"1486, 1500","1486, 1501",1,in huge fights,in huge fights.,participant-role,participant-role
+189,1.0,"1440, 1500","1440, 1501",1,Each of these requests of course has resulted in huge fights,Each of these requests of course has resulted in huge fights.,configuration,configuration
+185,12.806248474865697,"1440, 1462","1448, 1472",18,Each of these requests,these requests of course,participant-role,participant-role
+192,0.0,"1513, 1516","1513, 1516",0,you,you,participant-role,participant-role
+193,0.0,"1517, 1519","1517, 1519",0,do,do,main,main
+190,0.0,"1502, 1506","1502, 1506",0,What,What,participant-role,participant-role
+201,1.0,"1566, 1567","1565, 1567",1,m,'m,main,main
+205,0.0,"1564, 1565","1564, 1565",0,I,I,participant-role,participant-role
+196,5.0,"1539, 1548","1539, 1543",5,feel like,feel,main,main
+204,3.0,"1552, 1563","1549, 1563",3,I leave her,if I leave her,configuration,configuration
+198,1.0,"1537, 1588","1537, 1589",1,I feel like if I leave her I'm a self-centered jerk,I feel like if I leave her I'm a self-centered jerk.,configuration,configuration
+206,20.024984394500787,"1564, 1588","1544, 1589",21,I'm a self-centered jerk,like if I leave her I'm a self-centered jerk.,configuration,configuration
+195,0.0,"1537, 1538","1537, 1538",0,I,I,participant-role,participant-role
+200,0.0,"1554, 1559","1554, 1559",0,leave,leave,main,main
+202,1.0,"1568, 1588","1568, 1589",1,a self-centered jerk,a self-centered jerk.,participant-role,participant-role
+203,0.0,"1560, 1563","1560, 1563",0,her,her,participant-role,participant-role
+199,0.0,"1552, 1553","1552, 1553",0,I,I,participant-role,participant-role
+216,0.0,"1651, 1653","1651, 1653",0,is,is,main,main
+212,0.0,"1618, 1620","1618, 1620",0,is,is,main,main
+211,0.0,"1614, 1617","1614, 1617",0,she,she,participant-role,participant-role
+217,4.123105625617661,"1647, 1661","1643, 1662",5,she is to them,and she is to them.,configuration,configuration
+213,0.0,"1621, 1641","1621, 1641",0,super sweet and nice,super sweet and nice,participant-role,participant-role
+209,0.0,"1614, 1641","1614, 1641",0,she is super sweet and nice,she is super sweet and nice,participant-role,participant-role
+214,0.0,"1614, 1641","1614, 1641",0,she is super sweet and nice,she is super sweet and nice,configuration,configuration
+208,0.0,"1607, 1613","1607, 1613",0,thinks,thinks,main,main
+215,0.0,"1647, 1650","1647, 1650",0,she,she,participant-role,participant-role
+207,0.0,"1590, 1606","1590, 1606",0,Everyone we know,Everyone we know,participant-role,participant-role
+210,1.0,"1590, 1641","1590, 1642",1,Everyone we know thinks she is super sweet and nice,"Everyone we know thinks she is super sweet and nice,",configuration,configuration
+218,0.0,"1668, 1669","1668, 1669",0,I,I,participant-role,participant-role
+219,0.0,"1670, 1674","1670, 1674",0,tell,tell,main,main
+127,0.0,"1757, 1786","1757, 1786",0,"""but I have to live with you""","""but I have to live with you""",participant-role,participant-role
+241,5.0990195135927845,"1762, 1785","1757, 1786",6,I have to live with you,"""but I have to live with you""",configuration,configuration
+227,30.23243291566195,"1702, 1747","1719, 1722",42,with the decency she would treat someone else,she,participant-role,participant-role
+222,40.311288741492746,"1668, 1747","1663, 1787",45,"I tell her, she's not treating me with the decency she would treat someone else","When I tell her, she's not treating me with the decency she would treat someone else she says ""but I have to live with you"".",configuration,configuration
+237,0.0,"1748, 1786","1748, 1786",0,"she says ""but I have to live with you""","she says ""but I have to live with you""",configuration,configuration
+239,3.0,"1772, 1776","1769, 1776",3,live,to live,main,main
+225,4.0,"1690, 1698","1686, 1698",4,treating,not treating,main,main
+236,0.0,"1762, 1763","1762, 1763",0,I,I,participant-role,participant-role
+221,44.77722635447622,"1680, 1747","1702, 1786",61,she's not treating me with the decency she would treat someone else,"with the decency she would treat someone else she says ""but I have to live with you""",participant-role,participant-role
+223,2.0,"1680, 1683","1678, 1683",2,she,", she",participant-role,participant-role
+234,0.0,"1748, 1751","1748, 1751",0,she,she,participant-role,participant-role
+226,0.0,"1699, 1701","1699, 1701",0,me,me,participant-role,participant-role
+240,1.0,"1777, 1785","1777, 1786",1,with you,"with you""",participant-role,participant-role
+220,0.0,"1675, 1678","1675, 1678",0,her,her,participant-role,participant-role
+235,0.0,"1752, 1756","1752, 1756",0,says,says,main,main
+228,55.154328932550705,"1680, 1747","1719, 1786",49,she's not treating me with the decency she would treat someone else,"she would treat someone else she says ""but I have to live with you""",configuration,configuration
+246,0.0,"1800, 1801","1800, 1801",0,I,I,participant-role,participant-role
+244,22.02271554554524,"1800, 1830","1822, 1831",23,I'm faking it staying with her,with her.,participant-role,participant-role
+242,0.0,"1788, 1789","1788, 1789",0,I,I,participant-role,participant-role
+245,1.0,"1788, 1830","1788, 1831",1,I feel like I'm faking it staying with her,I feel like I'm faking it staying with her.,configuration,configuration
+243,5.0,"1790, 1799","1790, 1794",5,feel like,feel,main,main
+249,0.0,"1811, 1813","1811, 1813",0,it,it,participant-role,participant-role
+248,0.0,"1804, 1810","1804, 1810",0,faking,faking,main,main
+251,0.0,"1832, 1833","1832, 1833",0,I,I,participant-role,participant-role
+128,0.0,"1844, 1852","1844, 1852",0,avoiding,avoiding,main,main
+253,1.0,"1853, 1862","1853, 1863",1,the issue,the issue.,participant-role,participant-role
+254,1.0,"1832, 1862","1832, 1863",1,I just keep avoiding the issue,I just keep avoiding the issue.,configuration,configuration
+9,21.587033144922902,"111, 144","106, 123",21,"she hates me, she wants a divorce",that she hates me,participant-role,participant-role
+53,112.29425630903836,"386, 416","369, 527",128,I became more and more distant,"As it continued, I became more and more distant to the point where now I feel like letting it end but for some reason I always attempt to make peace with her.",configuration,configuration
+73,20.0,"609, 611","609, 631",20,31,31 and wants kids NOW.,participant-role,participant-role
+106,76.2954782408499,"874, 877","799, 891",89,dad,kids to go through the upcoming mess or grow up in a house where mom tells dad she hates him,participant-role,participant-role
+120,46.010868281309364,"921, 1020","967, 1021",47,I think one of the main reasons my wife stays with me is that she knows I would make an awesome dad,with me is that she knows I would make an awesome dad.,configuration,configuration
+139,61.0,"1043, 1056","1043, 1117",61,health issues,health issues that may make having kids impossible if she doesn't act now.,participant-role,participant-role
+174,58.05170109479997,"1327, 1334","1316, 1391",68,my wife,I've asked my wife many times to go to marriage counselling but she refuses,participant-role,participant-role
+250,18.681541692269406,"1800, 1813","1795, 1831",23,I'm faking it,like I'm faking it staying with her.,configuration,configuration
+136,87.0,"1028, 1030","1028, 1117",87,31,31 and has had health issues that may make having kids impossible if she doesn't act now.,participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+6,"78, 83",angry,participant-role
+24,"125, 144",she wants a divorce,configuration
+42,"279, 300",I would be devastated,configuration
+41,"290, 300",devastated,participant-role
+46,"341, 367",Rarely would she apologize,configuration
+45,"358, 367",apologize,main
+76,"603, 611",She's 31,configuration
+74,"616, 621",wants,main
+94,"766, 769",are,main
+148,"1022, 1030",She's 31,configuration
+138,"1039, 1042",had,main
+163,"1118, 1191",I feel that by splitting up with her I'd end her chances to have children,configuration
+153,"1130, 1191",by splitting up with her I'd end her chances to have children,participant-role
+164,"1155, 1191",I'd end her chances to have children,configuration
+154,"1155, 1156",I,participant-role
+156,"1159, 1162",end,main
+157,"1163, 1191",her chances to have children,participant-role
+158,"1196, 1282",by staying with her and sitting the fence I'm also ending her chances to have children,participant-role
+165,"1238, 1282",I'm also ending her chances to have children,configuration
+159,"1238, 1239",I,participant-role
+161,"1247, 1253",ending,main
+162,"1254, 1282",her chances to have children,participant-role
+182,"1408, 1411",buy,main
+194,"1502, 1535",What would you do in my situation,configuration
+126,"1564, 1588",I'm a self-centered jerk,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+64,"64, 68",When,participant-role
+94,"94, 123",and screams that she hates me,configuration
+88,"88, 93",yells,main
+84,"84, 93",she yells,configuration
+78,"78, 83",angry,main
+64,"64, 123",When she gets angry she yells and screams that she hates me,configuration
+78,"78, 123",angry she yells and screams that she hates me,configuration
+228,"228, 241",some 50 times,participant-role
+327,"327, 340",her comments.,participant-role
+310,"310, 340",her to take back her comments.,configuration
+310,"310, 313",her,participant-role
+314,"314, 321",to take,main
+269,"269, 277",At first,participant-role
+463,"463, 466",end,main
+417,"417, 429",to the point,participant-role
+452,"452, 459",letting,main
+452,"452, 466",letting it end,configuration
+475,"475, 486",some reason,participant-role
+430,"430, 435",where,participant-role
+460,"460, 462",it,participant-role
+504,"504, 511",to make,main
+518,"518, 527",with her.,participant-role
+512,"512, 517",peace,participant-role
+770,"770, 776",doomed,main
+639,"639, 644",to be,main
+645,"645, 649",able,participant-role
+725,"725, 731",myself,participant-role
+634,"634, 638",seem,main
+662,"662, 678",the relationship,participant-role
+777,"777, 784",to fail,main
+650,"650, 708",to continue the relationship in its current state of limbo,configuration
+679,"679, 708",in its current state of limbo,participant-role
+804,"804, 809",to go,main
+839,"839, 843",grow,main
+858,"858, 863",where,participant-role
+786,"786, 892","I don't want kids to go through the upcoming mess or grow up in a house where mom tells dad she hates him,",configuration
+1001,"1001, 1005",make,main
+987,"987, 992",knows,main
+961,"961, 966",stays,main
+953,"953, 960",my wife,participant-role
+913,"913, 920",In fact,participant-role
+913,"913, 952",In fact I think one of the main reasons,configuration
+993,"993, 1021",I would make an awesome dad.,participant-role
+993,"993, 1021",I would make an awesome dad.,configuration
+983,"983, 986",she,participant-role
+1078,"1078, 1117",kids impossible if she doesn't act now.,participant-role
+1071,"1071, 1077",having,main
+1303,"1303, 1307",this,participant-role
+1308,"1308, 1315",to her.,participant-role
+1297,"1297, 1302",to do,main
+1346,"1346, 1375",to go to marriage counselling,configuration
+1335,"1335, 1345",many times,participant-role
+1412,"1412, 1418",a book,participant-role
+1346,"1346, 1351",to go,main
+1399,"1399, 1402",n't,main
+1352,"1352, 1375",to marriage counselling,participant-role
+1440,"1440, 1444",Each,participant-role
+1520,"1520, 1536",in my situation?,participant-role
+1602,"1602, 1606",know,main
+1654,"1654, 1662",to them.,participant-role
+1663,"1663, 1667",When,participant-role
+1663,"1663, 1678",When I tell her,configuration
+1764,"1764, 1768",have,main
+1769,"1769, 1786","to live with you""",configuration
+1729,"1729, 1734",treat,main
+1735,"1735, 1786","someone else she says ""but I have to live with you""",participant-role
+1814,"1814, 1821",staying,main
+1839,"1839, 1843",keep,main
+84,"84, 123",she yells and screams that she hates me,configuration
+300,"300, 340",", begging her to take back her comments.",participant-role
+460,"460, 466",it end,configuration
+460,"460, 466",it end,participant-role
+504,"504, 527",to make peace with her.,configuration
+725,"725, 785",myself to move forward because I feel we are doomed to fail.,participant-role
+777,"777, 785",to fail.,configuration
+639,"639, 708",to be able to continue the relationship in its current state of limbo,participant-role
+639,"639, 708",to be able to continue the relationship in its current state of limbo,configuration
+799,"799, 891",kids to go through the upcoming mess or grow up in a house where mom tells dad she hates him,configuration
+799,"799, 803",kids,participant-role
+1006,"1006, 1021",an awesome dad.,participant-role
+993,"993, 994",I,participant-role
+1071,"1071, 1117",having kids impossible if she doesn't act now.,configuration
+1071,"1071, 1117",having kids impossible if she doesn't act now.,participant-role
+1297,"1297, 1315",to do this to her.,configuration
+1316,"1316, 1391",I've asked my wife many times to go to marriage counselling but she refuses,configuration
+1599,"1599, 1601",we,participant-role
+1599,"1599, 1606",we know,configuration
+1769,"1769, 1786","to live with you""",participant-role
+1844,"1844, 1863",avoiding the issue.,participant-role
+1844,"1844, 1863",avoiding the issue.,configuration
+84,"84, 123",she yells and screams that she hates me,participant-role
+978,"978, 1021",that she knows I would make an awesome dad.,configuration
+1811,"1811, 1831",it staying with her.,configuration

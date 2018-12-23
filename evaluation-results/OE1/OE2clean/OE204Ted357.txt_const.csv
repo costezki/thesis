@@ -1,0 +1,276 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.6967213114754098
+,Recall,0.8900523560209425
+,F1,0.7816091954022988
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+1,0.0,"16, 17","16, 17",0,I,I,participant-role,participant-role
+4,1.0,"16, 36","16, 37",1,I really am confused,I really am confused.,configuration,configuration
+9,25.019992006393608,"77, 108","52, 109",26,especially attentive to my wife,very busy lately and not especially attentive to my wife.,participant-role,participant-role
+10,33.015148038438355,"73, 108","40, 109",34,not especially attentive to my wife,I have been very busy lately and not especially attentive to my wife.,configuration,configuration
+5,0.0,"40, 41","40, 41",0,I,I,participant-role,participant-role
+7,0.0,"47, 51","47, 51",0,been,been,main,main
+14,0.0,"156, 160","156, 160",0,that,that,participant-role,participant-role
+17,2.23606797749979,"112, 150","110, 151",3,"The necessary, routine things get done","( The necessary, routine things get done,",configuration,configuration
+13,0.0,"146, 150","146, 150",0,done,done,main,main
+16,1.0,"163, 171","163, 172",1,about it,about it.,participant-role,participant-role
+18,4.123105625617661,"156, 171","152, 172",5,that's about it,but that's about it.,configuration,configuration
+11,0.0,"112, 141","112, 141",0,"The necessary, routine things","The necessary, routine things",participant-role,participant-role
+15,1.0,"161, 162","160, 162",1,s,'s,main,main
+23,0.0,"242, 244","242, 244",0,it,it,participant-role,participant-role
+20,0.0,"189, 192","189, 192",0,try,try,main,main
+19,2.0,"186, 188","184, 188",2,we,", we",participant-role,participant-role
+22,0.0,"175, 237","175, 237",0,"As always, we try to pack too much into the pre-Christmas time","As always, we try to pack too much into the pre-Christmas time",configuration,configuration
+26,4.123105625617661,"242, 261","238, 262",5,it's very stressful,and it's very stressful.,configuration,configuration
+25,1.0,"247, 261","247, 262",1,very stressful,very stressful.,participant-role,participant-role
+24,1.0,"245, 246","244, 246",1,s,'s,main,main
+21,0.0,"193, 237","193, 237",0,to pack too much into the pre-Christmas time,to pack too much into the pre-Christmas time,participant-role,participant-role
+29,0.0,"290, 303","290, 303",0,the reference,the reference,participant-role,participant-role
+30,2.0,"305, 329","303, 329",2,one of the main stresses,", one of the main stresses",participant-role,participant-role
+31,0.0,"330, 332","330, 332",0,is,is,main,main
+35,2.0,"354, 363","352, 363",2,the other,; the other,participant-role,participant-role
+27,10.0,"265, 278","275, 278",10,For those who,who,participant-role,participant-role
+37,8.94427190999916,"368, 399","376, 395",12,getting the Christmas cards out,the Christmas cards,participant-role,participant-role
+38,2.23606797749979,"354, 399","352, 400",3,the other was getting the Christmas cards out,; the other was getting the Christmas cards out.,configuration,configuration
+34,42.0,"305, 352","263, 352",42,one of the main stresses is the cookie marathon,"( For those who understand the reference, one of the main stresses is the cookie marathon",configuration,configuration
+33,10.0,"265, 303","275, 303",10,For those who understand the reference,who understand the reference,configuration,configuration
+28,0.0,"279, 289","279, 289",0,understand,understand,main,main
+200,5.0990195135927845,"429, 465","434, 466",6,what for us constitutes a real fight,for us constitutes a real fight.,configuration,configuration
+166,7.0,"429, 440","429, 433",7,what for us,what,participant-role,participant-role
+39,2.0,"422, 424","420, 424",2,we,", we",participant-role,participant-role
+199,1.0,"453, 465","453, 466",1,a real fight,a real fight.,participant-role,participant-role
+198,0.0,"441, 452","441, 452",0,constitutes,constitutes,main,main
+40,0.0,"425, 428","425, 428",0,had,had,main,main
+41,26.570660511172846,"429, 465","438, 440",34,what for us constitutes a real fight,us,participant-role,participant-role
+42,1.0,"403, 465","403, 466",1,"Sunday a week ago, we had what for us constitutes a real fight","Sunday a week ago, we had what for us constitutes a real fight.",configuration,configuration
+44,0.0,"470, 473","470, 473",0,had,had,main,main
+46,0.0,"526, 527","526, 527",0,I,I,participant-role,participant-role
+47,0.0,"528, 531","528, 531",0,had,had,main,main
+50,4.123105625617661,"526, 550","522, 551",5,I had an evening meeting,and I had an evening meeting.,configuration,configuration
+45,0.0,"474, 521","474, 521",0,an afternoon Christmas party with her relatives,an afternoon Christmas party with her relatives,participant-role,participant-role
+48,1.0,"532, 550","532, 551",1,an evening meeting,an evening meeting.,participant-role,participant-role
+49,0.0,"467, 521","467, 521",0,We had an afternoon Christmas party with her relatives,We had an afternoon Christmas party with her relatives,configuration,configuration
+43,0.0,"467, 469","467, 469",0,We,We,participant-role,participant-role
+60,0.0,"628, 631","628, 631",0,was,was,main,main
+59,0.0,"625, 627","625, 627",0,it,it,participant-role,participant-role
+63,60.0,"552, 613","552, 673",60,It turns out I'd never put my meeting on our calendar at home,It turns out I'd never put my meeting on our calendar at home ( although it was on mine at work and in my portable one. ),configuration,configuration
+87,0.0,"894, 897","894, 897",0,she,she,participant-role,participant-role
+57,1.0,"908, 939","908, 940",1,we needed to get back early too,we needed to get back early too.,participant-role,participant-role
+85,1.0,"894, 939","894, 940",1,she was aware we needed to get back early too,she was aware we needed to get back early too.,configuration,configuration
+203,0.0,"778, 785","778, 785",0,near us,near us,participant-role,participant-role
+201,0.0,"768, 771","768, 771",0,who,who,participant-role,participant-role
+204,0.0,"768, 785","768, 785",0,who lives near us,who lives near us,configuration,configuration
+82,0.0,"878, 880","878, 880",0,it,it,participant-role,participant-role
+79,8.0,"860, 872","868, 872",8,the way that,that,participant-role,participant-role
+69,0.0,"726, 739","726, 739",0,how many cars,how many cars,participant-role,participant-role
+80,0.0,"873, 877","873, 877",0,went,went,main,main
+72,0.0,"760, 785","760, 785",0,our son who lives near us,our son who lives near us,participant-role,participant-role
+78,50.0,"760, 853","810, 853",50,our son who lives near us needed to get back from the party for an evening commitment himself,the party for an evening commitment himself,configuration,configuration
+202,0.0,"772, 777","772, 777",0,lives,lives,main,main
+75,34.36568055487916,"805, 819","810, 853",36,from the party,the party for an evening commitment himself,participant-role,participant-role
+67,0.0,"705, 708","705, 708",0,was,was,main,main
+74,5.830951894845301,"796, 804","793, 799",7,get back,to get,main,main
+84,0.0,"888, 893","888, 893",0,to me,to me,participant-role,participant-role
+83,0.0,"881, 887","881, 887",0,seemed,seemed,main,main
+76,51.0,"675, 749","675, 698",51,Leading up to the party there was discussion about how many cars had to go,Leading up to the party,configuration,configuration
+86,1.0,"878, 939","878, 940",1,it seemed to me she was aware we needed to get back early too,it seemed to me she was aware we needed to get back early too.,configuration,configuration
+71,3.0,"747, 749","744, 749",3,go,to go,main,main
+62,1.0,"894, 939","894, 940",1,she was aware we needed to get back early too,she was aware we needed to get back early too.,participant-role,participant-role
+104,0.0,"1031, 1038","1031, 1038",0,started,started,main,main
+100,0.0,"1004, 1008","1004, 1008",0,came,came,main,main
+95,0.0,"946, 948","946, 948",0,it,it,participant-role,participant-role
+110,0.0,"1063, 1072","1063, 1072",0,good-byes,good-byes,participant-role,participant-role
+112,7.0710678118654755,"1084, 1088","1077, 1089",8,long,always long.,participant-role,participant-role
+105,12.0,"1039, 1060","1051, 1060",12,to set that in motion,in motion,participant-role,participant-role
+96,4.0,"949, 959","949, 955",4,turned out,turned,main,main
+109,10.0,"1029, 1060","1039, 1060",10,I started to set that in motion,to set that in motion,configuration,configuration
+111,0.0,"1073, 1076","1073, 1076",0,are,are,main,main
+107,102.07840124139877,"946, 989","942, 1091",106,it turned out to be quite a surprise to her,But it turned out to be quite a surprise to her when the time came for us to leave and I started to set that in motion ( good-byes are always long. ),configuration,configuration
+113,3.605551275463989,"1063, 1088","1061, 1091",5,good-byes are always long,( good-byes are always long. ),configuration,configuration
+103,0.0,"1029, 1030","1029, 1030",0,I,I,participant-role,participant-role
+99,0.0,"995, 1003","995, 1003",0,the time,the time,participant-role,participant-role
+108,5.0,"995, 1024","990, 1024",5,the time came for us to leave,when the time came for us to leave,configuration,configuration
+114,2.0,"1125, 1128","1123, 1128",2,she,", she",participant-role,participant-role
+127,10.04987562112089,"1236, 1261","1246, 1262",11,Christmas with her family,with her family.,participant-role,participant-role
+118,0.0,"1092, 1199","1092, 1199",0,"The next day among other things, she told me not to bother to go out and buy any Christmas presents for her","The next day among other things, she told me not to bother to go out and buy any Christmas presents for her",configuration,configuration
+122,0.0,"1219, 1223","1219, 1223",0,them,them,participant-role,participant-role
+117,3.0,"1137, 1199","1134, 1199",3,not to bother to go out and buy any Christmas presents for her,me not to bother to go out and buy any Christmas presents for her,participant-role,participant-role
+128,2.23606797749979,"1225, 1261","1223, 1262",3,I'd ruined Christmas with her family,", I'd ruined Christmas with her family.",configuration,configuration
+119,2.0,"1201, 1204","1199, 1204",2,she,", she",participant-role,participant-role
+116,0.0,"1134, 1136","1134, 1136",0,me,me,participant-role,participant-role
+121,4.0,"1214, 1218","1210, 1218",4,open,n't open,main,main
+124,2.0,"1225, 1226","1223, 1226",2,I,", I",participant-role,participant-role
+115,0.0,"1129, 1133","1129, 1133",0,told,told,main,main
+126,0.0,"1229, 1235","1229, 1235",0,ruined,ruined,main,main
+130,0.0,"1267, 1270","1267, 1270",0,was,was,main,main
+131,1.0,"1271, 1293","1271, 1294",1,a tense couple of days,a tense couple of days.,participant-role,participant-role
+129,0.0,"1264, 1266","1264, 1266",0,It,It,participant-role,participant-role
+132,1.0,"1264, 1293","1264, 1294",1,It was a tense couple of days,It was a tense couple of days.,configuration,configuration
+134,0.0,"1311, 1318","1311, 1318",0,happens,happens,main,main
+92,4.123105625617661,"1300, 1328","1296, 1329",5,guess what happens yesterday,"So, guess what happens yesterday?",configuration,configuration
+135,11.0,"1306, 1318","1306, 1329",11,what happens,what happens yesterday?,configuration,configuration
+133,0.0,"1306, 1310","1306, 1310",0,what,what,participant-role,participant-role
+90,0.0,"1300, 1305","1300, 1305",0,guess,guess,main,main
+91,1.0,"1306, 1328","1306, 1329",1,what happens yesterday,what happens yesterday?,participant-role,participant-role
+192,0.0,"1544, 1546","1544, 1546",0,be,be,main,main
+137,0.0,"1334, 1337","1334, 1337",0,had,had,main,main
+190,0.0,"1535, 1537","1535, 1537",0,it,it,participant-role,participant-role
+146,6.0,"1497, 1519","1491, 1519",6,the weather cleared up,until the weather cleared up,configuration,configuration
+154,4.123105625617661,"1571, 1600","1567, 1601",5,the road crews had gotten out,and the road crews had gotten out.,configuration,configuration
+147,0.0,"1522, 1527","1522, 1527",0,radar,radar,participant-role,participant-role
+101,29.0,"1444, 1490","1444, 1519",29,there was no point to my trying to get to work,there was no point to my trying to get to work until the weather cleared up,configuration,configuration
+149,0.0,"1535, 1563","1535, 1563",0,it would be in an hour or so,it would be in an hour or so,participant-role,participant-role
+194,0.0,"1535, 1563","1535, 1563",0,it would be in an hour or so,it would be in an hour or so,configuration,configuration
+141,29.0,"1444, 1490","1444, 1519",29,there was no point to my trying to get to work,there was no point to my trying to get to work until the weather cleared up,participant-role,participant-role
+153,4.0,"1590, 1600","1590, 1596",4,gotten out,gotten,main,main
+143,29.0,"1387, 1490","1387, 1519",29,"after looking at the traffic reports, we mutually agreed there was no point to my trying to get to work","after looking at the traffic reports, we mutually agreed there was no point to my trying to get to work until the weather cleared up",configuration,configuration
+136,0.0,"1331, 1333","1331, 1333",0,We,We,participant-role,participant-role
+142,4.0,"1331, 1382","1331, 1386",4,We had some really bad weather early in the morning,We had some really bad weather early in the morning and,configuration,configuration
+140,0.0,"1437, 1443","1437, 1443",0,agreed,agreed,main,main
+145,3.0,"1509, 1519","1509, 1516",3,cleared up,cleared,main,main
+150,2.8284271247461903,"1522, 1563","1520, 1565",4,radar showed it would be in an hour or so,( radar showed it would be in an hour or so ),configuration,configuration
+151,0.0,"1571, 1585","1571, 1585",0,the road crews,the road crews,participant-role,participant-role
+148,0.0,"1528, 1534","1528, 1534",0,showed,showed,main,main
+97,29.0,"1454, 1490","1454, 1519",29,no point to my trying to get to work,no point to my trying to get to work until the weather cleared up,participant-role,participant-role
+144,0.0,"1497, 1508","1497, 1508",0,the weather,the weather,participant-role,participant-role
+139,2.0,"1425, 1427","1423, 1427",2,we,", we",participant-role,participant-role
+138,21.0,"1338, 1361","1338, 1382",21,some really bad weather,some really bad weather early in the morning,participant-role,participant-role
+94,0.0,"1450, 1453","1450, 1453",0,was,was,main,main
+156,0.0,"1605, 1609","1605, 1609",0,said,said,main,main
+162,1.0,"1643, 1658","1643, 1659",1,some more sleep,"some more sleep""",participant-role,participant-role
+159,2.0,"1633, 1634","1631, 1634",2,I,", I",participant-role,participant-role
+155,0.0,"1603, 1604","1603, 1604",0,I,I,participant-role,participant-role
+157,0.0,"1610, 1659","1610, 1659",0,"something like, ""good, I can get some more sleep""","something like, ""good, I can get some more sleep""",participant-role,participant-role
+158,1.0,"1603, 1659","1603, 1660",1,"I said something like, ""good, I can get some more sleep""","I said something like, ""good, I can get some more sleep"".",configuration,configuration
+161,0.0,"1639, 1642","1639, 1642",0,get,get,main,main
+170,9.0,"1694, 1708","1694, 1717",9,something else,"something else in mind""",participant-role,participant-role
+171,9.055385138137417,"1688, 1708","1687, 1717",10,I had something else,"""I had something else in mind""",configuration,configuration
+169,0.0,"1690, 1693","1690, 1693",0,had,had,main,main
+102,0.0,"1671, 1717","1671, 1717",0,"something like, ""I had something else in mind""","something like, ""I had something else in mind""",participant-role,participant-role
+167,2.0,"1662, 1717","1662, 1719",2,"She said something like, ""I had something else in mind""","She said something like, ""I had something else in mind"" .",configuration,configuration
+168,1.0,"1688, 1689","1687, 1689",1,I,"""I",participant-role,participant-role
+165,0.0,"1666, 1670","1666, 1670",0,said,said,main,main
+164,0.0,"1662, 1665","1662, 1665",0,She,She,participant-role,participant-role
+172,0.0,"1724, 1727","1724, 1727",0,she,she,participant-role,participant-role
+174,4.123105625617661,"1724, 1731","1720, 1732",5,she did,And she did.,configuration,configuration
+177,1.0,"1745, 1749","1745, 1750",1,good,good.,participant-role,participant-role
+176,0.0,"1741, 1744","1741, 1744",0,was,was,main,main
+178,4.123105625617661,"1738, 1749","1734, 1750",5,it was good,And it was good.,configuration,configuration
+175,0.0,"1738, 1740","1738, 1740",0,it,it,participant-role,participant-role
+195,26.68332812825267,"1767, 1805","1793, 1811",29,I was at fault leading up to the fight,"to the fight, both",participant-role,participant-role
+180,0.0,"1756, 1760","1756, 1760",0,know,know,main,main
+183,0.0,"1844, 1848","1844, 1848",0,that,that,participant-role,participant-role
+186,0.0,"1767, 1768","1767, 1768",0,I,I,participant-role,participant-role
+184,4.123105625617661,"1849, 1850","1848, 1854",5,s,'s not,main,main
+179,0.0,"1754, 1755","1754, 1755",0,I,I,participant-role,participant-role
+185,1.0,"1855, 1888","1855, 1889",1,the point of this particular post,the point of this particular post.,participant-role,participant-role
+187,0.0,"1769, 1772","1769, 1772",0,was,was,main,main
+188,57.0,"1773, 1781","1773, 1838",57,at fault,"at fault leading up to the fight, both generally and specifically",participant-role,participant-role
+189,4.123105625617661,"1844, 1888","1840, 1889",5,that's not the point of this particular post,but that's not the point of this particular post.,configuration,configuration
+181,33.54101966249684,"1767, 1805","1761, 1838",39,I was at fault leading up to the fight,"where I was at fault leading up to the fight, both generally and specifically",configuration,configuration
+182,34.058772731852805,"1754, 1805","1752, 1839",36,I know where I was at fault leading up to the fight,"( I know where I was at fault leading up to the fight, both generally and specifically,",configuration,configuration
+81,63.0,"860, 877","860, 940",63,the way that went,the way that went it seemed to me she was aware we needed to get back early too.,configuration,configuration
+68,55.0,"709, 749","709, 804",55,discussion about how many cars had to go,discussion about how many cars had to go ( because our son who lives near us needed to get back,participant-role,participant-role
+77,192.89893727027115,"726, 749","699, 940",218,how many cars had to go,there was discussion about how many cars had to go ( because our son who lives near us needed to get back from the party for an evening commitment himself ) and the way that went it seemed to me she was aware we needed to get back early too.,configuration,configuration
+98,105.26157893552613,"960, 989","986, 1091",85,to be quite a surprise to her,her when the time came for us to leave and I started to set that in motion ( good-byes are always long. ),participant-role,participant-role
+163,23.021728866442675,"1633, 1658","1610, 1659",24,I can get some more sleep,"something like, ""good, I can get some more sleep""",configuration,configuration
+,
+,Manual mismatching all parsed (False Negative)
+2,"25, 27",am,main
+3,"28, 36",confused,participant-role
+196,"40, 68",I have been very busy lately,configuration
+8,"52, 61",very busy,participant-role
+32,"333, 352",the cookie marathon,participant-role
+36,"364, 367",was,main
+51,"552, 554",It,participant-role
+52,"555, 564",turns out,main
+64,"565, 613",I'd never put my meeting on our calendar at home,configuration
+197,"565, 613",I'd never put my meeting on our calendar at home,participant-role
+53,"565, 566",I,participant-role
+55,"575, 578",put,main
+56,"579, 589",my meeting,participant-role
+58,"590, 613",on our calendar at home,participant-role
+65,"625, 670",it was on mine at work and in my portable one,configuration
+61,"632, 670",on mine at work and in my portable one,participant-role
+66,"699, 704",there,participant-role
+89,"902, 907",aware,main
+123,"1201, 1223",she wouldn't open them,configuration
+93,"1444, 1449",there,participant-role
+193,"1547, 1563",in an hour or so,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+28,"28, 36",confused,main
+193,"193, 200",to pack,main
+193,"193, 237",to pack too much into the pre-Christmas time,configuration
+210,"210, 237",into the pre-Christmas time,participant-role
+368,"368, 375",getting,main
+269,"269, 304","those who understand the reference,",participant-role
+786,"786, 792",needed,main
+911,"911, 917",needed,main
+740,"740, 743",had,main
+918,"918, 940",to get back early too.,configuration
+846,"846, 853",himself,participant-role
+918,"918, 924",to get,main
+686,"686, 698",to the party,participant-role
+675,"675, 682",Leading,main
+898,"898, 901",was,main
+918,"918, 940",to get back early too.,participant-role
+750,"750, 804",( because our son who lives near us needed to get back,configuration
+878,"878, 940",it seemed to me she was aware we needed to get back early too.,participant-role
+1013,"1013, 1015",us,participant-role
+1016,"1016, 1024",to leave,main
+1009,"1009, 1024",for us to leave,participant-role
+1039,"1039, 1045",to set,main
+1025,"1025, 1091",and I started to set that in motion ( good-byes are always long. ),configuration
+960,"960, 965",to be,main
+990,"990, 994",when,participant-role
+1046,"1046, 1050",that,participant-role
+1134,"1134, 1199",me not to bother to go out and buy any Christmas presents for her,configuration
+1137,"1137, 1150",not to bother,main
+1092,"1092, 1123",The next day among other things,participant-role
+1151,"1151, 1160",to go out,configuration
+1236,"1236, 1245",Christmas,participant-role
+1165,"1165, 1168",buy,main
+1151,"1151, 1156",to go,main
+1169,"1169, 1191",any Christmas presents,participant-role
+1476,"1476, 1482",to get,main
+1476,"1476, 1519",to get to work until the weather cleared up,configuration
+1401,"1401, 1423",at the traffic reports,participant-role
+1483,"1483, 1490",to work,main
+1469,"1469, 1475",trying,main
+1469,"1469, 1519",trying to get to work until the weather cleared up,configuration
+1393,"1393, 1400",looking,main
+1387,"1387, 1423",after looking at the traffic reports,participant-role
+1620,"1620, 1624",like,main
+1610,"1610, 1619",something,participant-role
+1671,"1671, 1680",something,participant-role
+1681,"1681, 1685",like,main
+1728,"1728, 1731",did,main
+1782,"1782, 1789",leading,main
+1761,"1761, 1766",where,participant-role
+908,"908, 940",we needed to get back early too.,configuration
+860,"860, 940",the way that went it seemed to me she was aware we needed to get back early too.,participant-role
+902,"902, 907",aware,participant-role
+908,"908, 910",we,participant-role
+891,"891, 940",me she was aware we needed to get back early too.,configuration
+868,"868, 940",that went it seemed to me she was aware we needed to get back early too.,configuration
+891,"891, 940",me she was aware we needed to get back early too.,participant-role
+1039,"1039, 1091",to set that in motion ( good-byes are always long. ),participant-role
+986,"986, 1091",her when the time came for us to leave and I started to set that in motion ( good-byes are always long. ),configuration
+1039,"1039, 1091",to set that in motion ( good-byes are always long. ),configuration
+990,"990, 1091",when the time came for us to leave and I started to set that in motion ( good-byes are always long. ),configuration
+1009,"1009, 1024",for us to leave,configuration
+1192,"1192, 1199",for her,participant-role
+1161,"1161, 1199",and buy any Christmas presents for her,configuration
+1151,"1151, 1199",to go out and buy any Christmas presents for her,configuration
+1151,"1151, 1199",to go out and buy any Christmas presents for her,participant-role
+1483,"1483, 1519",to work until the weather cleared up,configuration
+1393,"1393, 1423",looking at the traffic reports,configuration
+1476,"1476, 1519",to get to work until the weather cleared up,participant-role
+1483,"1483, 1519",to work until the weather cleared up,participant-role
+1610,"1610, 1625","something like,",configuration
+1687,"1687, 1717","""I had something else in mind""",participant-role
+1671,"1671, 1717","something like, ""I had something else in mind""",configuration
+1782,"1782, 1838","leading up to the fight, both generally and specifically",configuration
+720,"720, 804",about how many cars had to go ( because our son who lives near us needed to get back,participant-role

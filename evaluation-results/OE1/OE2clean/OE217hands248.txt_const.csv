@@ -1,0 +1,213 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.680628272251309
+,Recall,0.9285714285714286
+,F1,0.785498489425982
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+2,0.0,"21, 28","21, 28",0,someone,someone,participant-role,participant-role
+4,0.0,"35, 42","35, 42",0,a light,a light,participant-role,participant-role
+3,0.0,"29, 34","29, 34",0,spark,spark,main,main
+8,0.0,"112, 116","112, 116",0,like,like,main,main
+9,1.0,"117, 140","117, 141",1,to hold hands in public,to hold hands in public!,participant-role,participant-role
+10,1.0,"67, 140","67, 141",1,My husband of 5 years does not ( never has ) like to hold hands in public,My husband of 5 years does not ( never has ) like to hold hands in public!,configuration,configuration
+6,23.0,"67, 88","67, 111",23,My husband of 5 years,My husband of 5 years does not ( never has ),participant-role,participant-role
+17,3.0,"168, 175","168, 172",3,used to,used,main,main
+18,3.0,"176, 178","173, 178",3,it,to it,participant-role,participant-role
+21,0.0,"200, 206","200, 206",0,wonder,wonder,main,main
+14,20.0,"142, 159","142, 179",20,I am ok with that,"I am ok with that as I am used to it,",configuration,configuration
+11,0.0,"142, 143","142, 143",0,I,I,participant-role,participant-role
+23,4.123105625617661,"184, 210","180, 211",5,now and again I wonder why,but now and again I wonder why?,configuration,configuration
+15,0.0,"163, 164","163, 164",0,I,I,participant-role,participant-role
+19,3.0,"163, 178","160, 178",3,I am used to it,as I am used to it,configuration,configuration
+20,0.0,"198, 199","198, 199",0,I,I,participant-role,participant-role
+25,0.0,"235, 239","235, 239",0,feel,feel,main,main
+27,9.848857801796104,"216, 248","212, 239",13,sometimes I really feel rejected,And sometimes I really feel,configuration,configuration
+24,0.0,"226, 227","226, 227",0,I,I,participant-role,participant-role
+37,11.045361017187261,"292, 326","281, 327",12,I don't want this direct rejection,anymore as I don't want this direct rejection.,configuration,configuration
+30,8.94427190999916,"258, 271","254, 263",12,reach out for,n't reach,main,main
+32,39.0,"250, 288","250, 327",39,I don't reach out for his hand anymore,I don't reach out for his hand anymore as I don't want this direct rejection.,configuration,configuration
+36,1.0,"305, 326","305, 327",1,this direct rejection,this direct rejection.,participant-role,participant-role
+31,4.0,"272, 280","268, 280",4,his hand,for his hand,participant-role,participant-role
+28,0.0,"250, 251","250, 251",0,I,I,participant-role,participant-role
+35,4.0,"300, 304","296, 304",4,want,n't want,main,main
+33,0.0,"292, 293","292, 293",0,I,I,participant-role,participant-role
+40,0.0,"335, 339","335, 339",0,told,told,main,main
+41,0.0,"340, 342","340, 342",0,me,me,participant-role,participant-role
+42,5.0990195135927845,"348, 395","343, 396",6,"people know we are together, no need to show it","that people know we are together, no need to show it.",participant-role,participant-role
+45,0.0,"355, 359","355, 359",0,know,know,main,main
+43,1.0,"328, 395","328, 396",1,"He has told me that people know we are together, no need to show it","He has told me that people know we are together, no need to show it.",configuration,configuration
+44,0.0,"348, 354","348, 354",0,people,people,participant-role,participant-role
+38,0.0,"328, 330","328, 330",0,He,He,participant-role,participant-role
+46,13.0,"360, 375","360, 362",13,we are together,we,participant-role,participant-role
+52,0.0,"405, 407","405, 407",0,he,he,participant-role,participant-role
+53,0.0,"408, 414","408, 414",0,trying,trying,main,main
+54,1.0,"415, 421","415, 422",1,to say,to say?,participant-role,participant-role
+50,1.0,"397, 421","397, 422",1,What is he trying to say,What is he trying to say?,configuration,configuration
+59,0.0,"442, 448","442, 448",0,upsets,upsets,main,main
+61,3.0,"437, 451","437, 454",3,that upsets me,that upsets me is,configuration,configuration
+55,3.0,"423, 451","423, 454",3,Another thing that upsets me,Another thing that upsets me is,participant-role,participant-role
+56,0.0,"452, 454","452, 454",0,is,is,main,main
+60,0.0,"449, 451","449, 451",0,me,me,participant-role,participant-role
+62,1.0,"423, 463","423, 464",1,Another thing that upsets me is presents,Another thing that upsets me is presents.,configuration,configuration
+58,0.0,"437, 441","437, 441",0,that,that,participant-role,participant-role
+48,0.0,"529, 531","529, 531",0,we,we,participant-role,participant-role
+70,0.0,"558, 563","558, 563",0,given,given,main,main
+65,4.0,"473, 477","469, 477",4,want,n't want,main,main
+72,19.0,"567, 585","567, 604",19,a little something,a little something for my birthday or,participant-role,participant-role
+66,0.0,"478, 497","478, 497",0,to sound as a child,to sound as a child,participant-role,participant-role
+71,0.0,"564, 566","564, 566",0,me,me,participant-role,participant-role
+77,15.0,"529, 550","517, 541",18,we have been together,the 6 years we have been,configuration,configuration
+69,0.0,"555, 557","555, 557",0,he,he,participant-role,participant-role
+67,1.0,"465, 497","465, 498",1,I don't want to sound as a child,"I don't want to sound as a child,",configuration,configuration
+73,41.43669871020132,"503, 618","542, 604",53,never once in the 6 years we have been together has he given me a little something for my birthday or for Christmas,together has he given me a little something for my birthday or,configuration,configuration
+63,0.0,"465, 466","465, 466",0,I,I,participant-role,participant-role
+84,6.0,"665, 667","659, 667",6,it,about it,participant-role,participant-role
+93,1.0,"712, 714","712, 715",1,me,me.,participant-role,participant-role
+82,0.0,"651, 652","651, 652",0,I,I,participant-role,participant-role
+92,0.0,"703, 711","703, 711",0,surprise,surprise,main,main
+86,0.0,"683, 684","683, 684",0,I,I,participant-role,participant-role
+79,0.0,"629, 633","629, 633",0,feel,feel,main,main
+87,0.0,"685, 689","685, 689",0,hope,hope,main,main
+89,4.123105625617661,"672, 714","668, 715",5,every year I hope that he will surprise me,and every year I hope that he will surprise me.,configuration,configuration
+94,5.0990195135927845,"695, 714","690, 715",6,he will surprise me,that he will surprise me.,configuration,configuration
+90,0.0,"695, 697","695, 697",0,he,he,participant-role,participant-role
+88,5.0990195135927845,"695, 714","690, 715",6,he will surprise me,that he will surprise me.,participant-role,participant-role
+78,0.0,"620, 621","620, 621",0,I,I,participant-role,participant-role
+103,5.0990195135927845,"758, 777","753, 778",6,he just won't do it,that he just won't do it.,configuration,configuration
+99,0.0,"758, 760","758, 760",0,he,he,participant-role,participant-role
+96,0.0,"727, 731","727, 731",0,know,know,main,main
+95,0.0,"720, 721","720, 721",0,I,I,participant-role,participant-role
+101,4.0,"772, 774","768, 774",4,do,n't do,main,main
+98,4.123105625617661,"720, 777","716, 778",5,I also know deep inside my heart that he just won't do it,But I also know deep inside my heart that he just won't do it.,configuration,configuration
+102,1.0,"775, 777","775, 778",1,it,it.,participant-role,participant-role
+97,5.0990195135927845,"758, 777","753, 778",6,he just won't do it,that he just won't do it.,participant-role,participant-role
+116,1.0,"854, 882","854, 883",1,to hold on to this tradition,to hold on to this tradition.,participant-role,participant-role
+113,2.0,"816, 842","814, 842",2,it's part of my upbringing,", it's part of my upbringing",configuration,configuration
+115,0.0,"849, 853","849, 853",0,want,want,main,main
+112,0.0,"821, 842","821, 842",0,part of my upbringing,part of my upbringing,participant-role,participant-role
+117,4.123105625617661,"847, 882","843, 883",5,I want to hold on to this tradition,and I want to hold on to this tradition.,configuration,configuration
+109,0.0,"779, 814","779, 814",0,I have never not given him anything,I have never not given him anything,configuration,configuration
+107,0.0,"802, 805","802, 805",0,him,him,participant-role,participant-role
+114,0.0,"847, 848","847, 848",0,I,I,participant-role,participant-role
+110,2.0,"816, 818","814, 818",2,it,", it",participant-role,participant-role
+108,0.0,"806, 814","806, 814",0,anything,anything,participant-role,participant-role
+104,0.0,"779, 780","779, 780",0,I,I,participant-role,participant-role
+111,1.0,"819, 820","818, 820",1,s,'s,main,main
+106,4.0,"796, 801","792, 801",4,given,not given,main,main
+122,1.0,"884, 927","884, 928",1,I have tried to address this issue with him,"I have tried to address this issue with him,",configuration,configuration
+118,0.0,"884, 885","884, 885",0,I,I,participant-role,participant-role
+124,0.0,"935, 939","935, 939",0,find,find,main,main
+120,0.0,"891, 896","891, 896",0,tried,tried,main,main
+121,0.0,"897, 927","897, 927",0,to address this issue with him,to address this issue with him,participant-role,participant-role
+126,49.16299421312742,"933, 952","929, 1001",53,I find it difficult,but I find it difficult because I don't want to sound needy or childish.,configuration,configuration
+129,0.0,"969, 973","969, 973",0,want,want,main,main
+131,5.0990195135927845,"961, 1000","966, 1001",6,I don't want to sound needy or childish,'t want to sound needy or childish.,configuration,configuration
+127,0.0,"961, 962","961, 962",0,I,I,participant-role,participant-role
+125,10.0,"940, 952","940, 942",10,it difficult,it,participant-role,participant-role
+123,0.0,"933, 934","933, 934",0,I,I,participant-role,participant-role
+130,1.0,"974, 1000","974, 1001",1,to sound needy or childish,to sound needy or childish.,participant-role,participant-role
+150,15.0,"1157, 1178","1157, 1163",15,to try and understand,to try,participant-role,participant-role
+141,4.0,"1092, 1094","1092, 1098",4,is,is not,main,main
+138,5.0,"1080, 1112","1075, 1112",5,the sparkle is not there anymore,that the sparkle is not there anymore,participant-role,participant-role
+143,5.0,"1080, 1112","1075, 1112",5,the sparkle is not there anymore,that the sparkle is not there anymore,configuration,configuration
+156,1.0,"1202, 1209","1202, 1210",1,he does,he does.,configuration,configuration
+137,0.0,"1070, 1074","1070, 1074",0,feel,feel,main,main
+133,0.0,"1008, 1011","1008, 1011",0,are,are,main,main
+151,15.132745950421556,"1152, 1178","1150, 1163",17,want to try and understand,", want to try",configuration,configuration
+142,0.0,"1099, 1104","1099, 1104",0,there,there,participant-role,participant-role
+139,4.0,"1061, 1112","1057, 1112",4,I really feel that the sparkle is not there anymore,and I really feel that the sparkle is not there anymore,configuration,configuration
+155,4.123105625617661,"1183, 1209","1179, 1210",5,he does the things he does,why he does the things he does.,configuration,configuration
+49,0.0,"1202, 1204","1202, 1204",0,he,he,participant-role,participant-role
+74,0.0,"1205, 1209","1205, 1209",0,does,does,main,main
+140,0.0,"1080, 1091","1080, 1091",0,the sparkle,the sparkle,participant-role,participant-role
+148,13.0,"1118, 1150","1131, 1150",13,I don't want to give up just yet,to give up just yet,configuration,configuration
+135,0.0,"1002, 1056","1002, 1056",0,There are a lot of things going on in our relationship,There are a lot of things going on in our relationship,configuration,configuration
+149,0.0,"1152, 1156","1152, 1156",0,want,want,main,main
+146,4.0,"1126, 1130","1122, 1130",4,want,n't want,main,main
+144,0.0,"1118, 1119","1118, 1119",0,I,I,participant-role,participant-role
+154,1.0,"1191, 1209","1191, 1210",1,the things he does,the things he does.,participant-role,participant-role
+152,0.0,"1183, 1185","1183, 1185",0,he,he,participant-role,participant-role
+136,0.0,"1061, 1062","1061, 1062",0,I,I,participant-role,participant-role
+134,20.0,"1012, 1036","1012, 1056",20,a lot of things going on,a lot of things going on in our relationship,participant-role,participant-role
+153,0.0,"1186, 1190","1186, 1190",0,does,does,main,main
+147,69.0,"1131, 1141","1131, 1210",69,to give up,"to give up just yet, want to try and understand why he does the things he does.",participant-role,participant-role
+47,21.587033144922902,"348, 375","343, 396",26,people know we are together,"that people know we are together, no need to show it.",configuration,configuration
+85,57.14017850864661,"651, 667","620, 715",79,I think about it,I always feel so very sad when I think about it and every year I hope that he will surprise me.,configuration,configuration
+80,70.0,"634, 645","634, 715",70,so very sad,so very sad when I think about it and every year I hope that he will surprise me.,participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+5,"17, 57",Can someone spark a light to my question,configuration
+12,"144, 146",am,main
+13,"147, 159",ok with that,participant-role
+22,"207, 210",why,participant-role
+26,"240, 248",rejected,participant-role
+57,"455, 463",presents,participant-role
+76,"537, 550",been together,main
+81,"620, 645",I always feel so very sad,configuration
+83,"653, 664",think about,main
+132,"1002, 1007",There,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+43,"43, 57",to my question,participant-role
+125,"125, 130",hands,participant-role
+89,"89, 97",does not,main
+117,"117, 124",to hold,main
+98,"98, 111",( never has ),configuration
+106,"106, 109",has,main
+147,"147, 149",ok,main
+240,"240, 248",rejected,main
+393,"393, 396",it.,participant-role
+363,"363, 366",are,main
+375,"375, 384",", no need",participant-role
+385,"385, 396",to show it.,configuration
+385,"385, 392",to show,main
+397,"397, 401",What,participant-role
+415,"415, 421",to say,main
+449,"449, 454",me is,participant-role
+455,"455, 463",presents,main
+478,"478, 486",to sound,main
+487,"487, 497",as a child,participant-role
+503,"503, 508",never,main
+646,"646, 650",when,participant-role
+737,"737, 752",inside my heart,participant-role
+854,"854, 861",to hold,main
+865,"865, 883",to this tradition.,participant-role
+897,"897, 907",to address,main
+963,"963, 966",don,main
+974,"974, 982",to sound,main
+940,"940, 1001",it difficult because I don't want to sound needy or childish.,configuration
+983,"983, 1001",needy or childish.,participant-role
+908,"908, 918",this issue,participant-role
+966,"966, 968",'t,participant-role
+919,"919, 927",with him,participant-role
+1131,"1131, 1138",to give,main
+1168,"1168, 1178",understand,main
+1179,"1179, 1182",why,participant-role
+1157,"1157, 1163",to try,main
+1142,"1142, 1150",just yet,participant-role
+1028,"1028, 1033",going,main
+1131,"1131, 1210","to give up just yet, want to try and understand why he does the things he does.",configuration
+1037,"1037, 1056",in our relationship,participant-role
+1219,"1219, 1222",you,participant-role
+1213,"1213, 1218",Thank,main
+1213,"1213, 1232","Thank you, 
+Lydia.",configuration
+117,"117, 141",to hold hands in public!,configuration
+131,"131, 141",in public!,participant-role
+89,"89, 97",does not,configuration
+240,"240, 249",rejected.,configuration
+360,"360, 396","we are together, no need to show it.",participant-role
+415,"415, 422",to say?,configuration
+449,"449, 454",me is,configuration
+478,"478, 497",to sound as a child,configuration
+854,"854, 883",to hold on to this tradition.,configuration
+897,"897, 927",to address this issue with him,configuration
+940,"940, 1001",it difficult because I don't want to sound needy or childish.,participant-role
+974,"974, 1001",to sound needy or childish.,configuration
+966,"966, 1001",'t want to sound needy or childish.,participant-role
+1157,"1157, 1163",to try,configuration
+1164,"1164, 1210",and understand why he does the things he does.,configuration
+1114,"1114, 1210","but I don't want to give up just yet, want to try and understand why he does the things he does.",configuration
+1028,"1028, 1056",going on in our relationship,configuration
+360,"360, 396","we are together, no need to show it.",configuration

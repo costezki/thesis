@@ -1,0 +1,433 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.19722222222222222
+,Recall,0.5338345864661654
+,F1,0.28803245436105473
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+6,22.0,"52, 103","74, 103",22,sharing your feelings after a break-up with your ex,after a break-up with your ex,carrier,carrier
+9,19.4164878389476,"48, 122","52, 103",23,why sharing your feelings after a break-up with your ex is not recommended,sharing your feelings after a break-up with your ex,relational,relational
+4,1.0,"41, 122","41, 123",1,to ask why sharing your feelings after a break-up with your ex is not recommended,to ask why sharing your feelings after a break-up with your ex is not recommended?,phenomenon,phenomenon
+1,2.0,"23, 24","21, 24",2,I,", I",emoter,emoter
+3,0.0,"36, 40","36, 40",0,like,like,main,main
+5,18.027756377319946,"23, 122","41, 123",19,I would just like to ask why sharing your feelings after a break-up with your ex is not recommended,to ask why sharing your feelings after a break-up with your ex is not recommended?,mental,mental
+18,0.0,"161, 165","161, 165",0,know,know,main,main
+140,21.0,"166, 178","166, 199",21,how you feel,how you feel after your break-up?,attributive,attributive
+19,29.0,"166, 198","166, 169",29,how you feel after your break-up,how,phenomenon,phenomenon
+139,0.0,"166, 169","166, 169",0,how,how,attribute,attribute
+138,0.0,"174, 178","174, 178",0,feel,feel,main,main
+12,0.0,"134, 136","134, 136",0,be,be,main,main
+137,0.0,"170, 173","170, 173",0,you,you,carrier,carrier
+20,0.0,"200, 201","200, 201",0,I,I,carrier,carrier
+23,18.0,"212, 235","212, 253",18,in an emotional turmoil,in an emotional turmoil for almost a year,location,location
+24,1.0,"200, 288","200, 289",1,I have been in an emotional turmoil for almost a year now after a separation from a girl,I have been in an emotional turmoil for almost a year now after a separation from a girl.,locational,locational
+24,1.0,"200, 288","200, 289",1,I have been in an emotional turmoil for almost a year now after a separation from a girl,I have been in an emotional turmoil for almost a year now after a separation from a girl.,relational,relational
+22,0.0,"207, 211","207, 211",0,been,been,main,main
+26,0.0,"293, 298","293, 298",0,seems,seems,main,main
+28,1.0,"290, 319","290, 320",1,It seems that I can't recover,It seems that I can't recover.,mental,mental
+28,1.0,"290, 319","290, 320",1,It seems that I can't recover,It seems that I can't recover.,two-role-cognition,two-role-cognition
+31,4.0,"312, 319","308, 319",4,recover,n't recover,main,main
+27,5.0990195135927845,"304, 319","299, 320",6,I can't recover,that I can't recover.,phenomenon,phenomenon
+36,0.0,"321, 352","321, 352",0,I'm still in pain for this long,I'm still in pain for this long,attributive,attributive
+36,0.0,"321, 352","321, 352",0,I'm still in pain for this long,I'm still in pain for this long,relational,relational
+39,0.0,"361, 369","361, 369",0,planning,planning,main,main
+35,14.0,"331, 338","331, 352",14,in pain,in pain for this long,attribute,attribute
+37,4.0,"356, 357","352, 357",4,I,... I,agent,agent
+141,12.727922061357855,"389, 436","398, 427",18,tell her my utmost feelings of sadness and hate,my utmost feelings of sadness,created-phenomenon,created-phenomenon
+33,0.0,"321, 322","321, 322",0,I,I,carrier,carrier
+34,1.0,"323, 324","322, 324",1,m,'m,main,main
+50,13.038404810405298,"465, 505","478, 506",14,I would like to tell her all my feelings,to tell her all my feelings.,mental,mental
+48,0.0,"473, 477","473, 477",0,like,like,main,main
+46,0.0,"465, 466","465, 466",0,I,I,emoter,emoter
+49,1.0,"478, 505","478, 506",1,to tell her all my feelings,to tell her all my feelings.,phenomenon,phenomenon
+56,0.0,"562, 567","562, 567",0,think,think,main,main
+87,0.0,"883, 889","883, 889",0,affect,affect,main,main
+130,0.0,"525, 527","525, 527",0,it,it,agent,agent
+75,0.0,"703, 707","703, 707",0,vent,vent,main,main
+64,0.0,"613, 614","613, 614",0,I,I,cognizant,cognizant
+52,0.0,"517, 519","517, 519",0,is,is,main,main
+65,0.0,"615, 620","615, 620",0,think,think,main,main
+81,0.0,"781, 782","781, 782",0,I,I,agent,agent
+66,47.0,"621, 691","621, 738",47,it would really make those gruesome feelings inside of me to disappear,it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not,phenomenon,phenomenon
+71,51.478150704935004,"642, 691","621, 738",68,those gruesome feelings inside of me to disappear,it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not,created-phenomenon,created-phenomenon
+57,134.17153200288055,"568, 607","539, 738",160,she doesn't know what I'm going through,"things clear because I think she doesn't know what I'm going through, and I think it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not",phenomenon,phenomenon
+83,15.0,"794, 815","794, 800",15,shared my feelings to,shared,main,main
+61,4.0,"580, 584","576, 584",4,know,n't know,main,main
+85,11.0,"781, 833","770, 833",11,I've already shared my feelings to others many times,; although I've already shared my feelings to others many times,action,action
+67,47.16990566028302,"613, 691","609, 738",51,I think it would really make those gruesome feelings inside of me to disappear,and I think it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not,mental,mental
+67,47.16990566028302,"613, 691","609, 738",51,I think it would really make those gruesome feelings inside of me to disappear,and I think it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not,two-role-cognition,two-role-cognition
+132,0.0,"534, 538","534, 538",0,make,make,main,main
+70,0.0,"637, 641","637, 641",0,make,make,main,main
+84,11.40175425099138,"816, 822","813, 833",14,others,to others many times,affected,affected
+96,5.0,"937, 945","933, 942",7,focus on,n't focus,main,main
+102,1.0,"991, 993","991, 994",1,me,me.,affected,affected
+101,0.0,"983, 990","983, 990",0,killing,killing,main,main
+99,0.0,"978, 980","978, 980",0,It,It,agent,agent
+105,1.0,"1002, 1003","1001, 1003",1,s,'s,main,main
+107,1.0,"997, 1021","997, 1022",1,What's your take on this,What's your take on this?,relational,relational
+109,0.0,"1026, 1029","1026, 1029",0,you,you,cognizant,cognizant
+112,1.0,"1023, 1077","1023, 1078",1,Do you think it would make it easier for me to recover,Do you think it would make it easier for me to recover?,mental,mental
+112,1.0,"1023, 1077","1023, 1078",1,Do you think it would make it easier for me to recover,Do you think it would make it easier for me to recover?,two-role-cognition,two-role-cognition
+111,1.0,"1036, 1077","1036, 1078",1,it would make it easier for me to recover,it would make it easier for me to recover?,phenomenon,phenomenon
+115,0.0,"1045, 1049","1045, 1049",0,make,make,main,main
+110,0.0,"1030, 1035","1030, 1035",0,think,think,main,main
+124,2.0,"1108, 1109","1106, 1109",2,I,", I",agent,agent
+128,3.0,"1133, 1140","1133, 1137",3,move on,move,main,main
+126,4.0,"1122, 1128","1126, 1128",4,let go,go,main,main
+121,0.0,"1084, 1088","1084, 1088",0,been,been,main,main
+40,53.0,"370, 384","370, 437",53,to call her up,to call her up and tell her my utmost feelings of sadness and hate.,created-phenomenon,created-phenomenon
+,
+,Manual mismatching all parsed (False Negative)
+9,"48, 122",why sharing your feelings after a break-up with your ex is not recommended,attributive
+7,"104, 106",is,main
+8,"111, 122",recommended,attribute
+15,"125, 143",Would it be better,relational
+15,"125, 143",Would it be better,attributive
+13,"137, 143",better,attribute
+14,"147, 198",your ex would know how you feel after your break-up,carrier
+16,"147, 154",your ex,cognizant
+140,"166, 178",how you feel,relational
+32,"304, 319",I can't recover,action
+29,"304, 305",I,agent
+41,"356, 384",I am planning to call her up,influential
+142,"389, 436",tell her my utmost feelings of sadness and hate,influential
+45,"438, 463",I'm actually angry at her,mental
+42,"438, 439",I,emoter
+43,"451, 459",angry at,main
+44,"460, 463",her,phenomenon
+54,"507, 551",My reason is that it would make things clear,relational
+54,"507, 551",My reason is that it would make things clear,attributive
+51,"507, 516",My reason,carrier
+53,"525, 551",it would make things clear,attribute
+134,"525, 551",it would make things clear,relational
+134,"525, 551",it would make things clear,attributive
+133,"539, 545",things,affected-carrier
+135,"546, 551",clear,attribute
+58,"560, 607",I think she doesn't know what I'm going through,mental
+58,"560, 607",I think she doesn't know what I'm going through,two-role-cognition
+55,"560, 561",I,cognizant
+63,"568, 607",she doesn't know what I'm going through,mental
+63,"568, 607",she doesn't know what I'm going through,two-role-cognition
+59,"568, 571",she,cognizant
+62,"585, 607",what I'm going through,phenomenon
+72,"621, 691",it would really make those gruesome feelings inside of me to disappear,influential
+80,"695, 770",I would vent it out directly to her and not to some friends or other people,mental
+80,"695, 770",I would vent it out directly to her and not to some friends or other people,three-role-cognition
+73,"695, 696",I,agent
+76,"708, 710",it,phenomenon
+79,"727, 730",her,affected-cognizant
+89,"839, 897",those gruesome feelings inside of me really affect my life,action
+86,"839, 875",those gruesome feelings inside of me,agent
+88,"890, 897",my life,affected
+93,"903, 920",I'm deteriorating,action
+90,"903, 904",I,affected
+92,"907, 920",deteriorating,main
+98,"922, 976",I really can't focus on anything now for almost a year,mental
+98,"922, 976",I really can't focus on anything now for almost a year,two-role-cognition
+94,"922, 923",I,cognizant
+97,"946, 954",anything,phenomenon
+103,"978, 993",It's killing me,action
+107,"997, 1021",What's your take on this,attributive
+104,"997, 1001",What,carrier
+106,"1004, 1021",your take on this,attribute
+118,"1036, 1077",it would make it easier for me to recover,relational
+118,"1036, 1077",it would make it easier for me to recover,attributive
+113,"1036, 1038",it,carrier
+117,"1053, 1077",easier for me to recover,attribute
+123,"1079, 1106",It's been almost a year now,relational
+123,"1079, 1106",It's been almost a year now,directional
+119,"1079, 1081",It,carrier
+122,"1089, 1102",almost a year,path
+127,"1108, 1128",I still can't let go,action
+129,"1133, 1140",move on,action
+,
+,Parsed mismatching all manual (False Positives)
+74,"74, 103",after a break-up with your ex,affected-emoter
+74,"74, 103",after a break-up with your ex,affected-path
+74,"74, 103",after a break-up with your ex,affected-perceiver
+74,"74, 103",after a break-up with your ex,affected-cognizant
+74,"74, 103",after a break-up with your ex,affected-carrier
+74,"74, 103",after a break-up with your ex,affected-destination
+74,"74, 103",after a break-up with your ex,affected
+74,"74, 103",after a break-up with your ex,affected-possessed
+74,"74, 103",after a break-up with your ex,affected-source
+52,"52, 103",sharing your feelings after a break-up with your ex,process
+52,"52, 103",sharing your feelings after a break-up with your ex,possessive
+52,"52, 103",sharing your feelings after a break-up with your ex,two-role-action
+41,"41, 123",to ask why sharing your feelings after a break-up with your ex is not recommended?,created-phenomenon
+52,"52, 59",sharing,main
+107,"107, 122",not recommended,main
+41,"41, 47",to ask,main
+60,"60, 73",your feelings,affected-emoter
+60,"60, 73",your feelings,affected-path
+60,"60, 73",your feelings,affected-perceiver
+60,"60, 73",your feelings,affected-cognizant
+60,"60, 73",your feelings,affected-carrier
+60,"60, 73",your feelings,affected-destination
+60,"60, 73",your feelings,affected
+60,"60, 73",your feelings,affected-possessed
+60,"60, 73",your feelings,affected-source
+60,"60, 73",your feelings,possessed
+21,"21, 24",", I",affected-emoter
+41,"41, 123",to ask why sharing your feelings after a break-up with your ex is not recommended?,process
+41,"41, 123",to ask why sharing your feelings after a break-up with your ex is not recommended?,three-role-cognition
+179,"179, 199",after your break-up?,attribute
+166,"166, 199",how you feel after your break-up?,process
+166,"166, 199",how you feel after your break-up?,mental
+166,"166, 199",how you feel after your break-up?,two-role-perception
+166,"166, 199",how you feel after your break-up?,emotive
+166,"166, 169",how,created-phenomenon
+170,"170, 173",you,affected-emoter
+170,"170, 173",you,agent
+170,"170, 173",you,affected-perceiver
+170,"170, 173",you,affected-carrier
+170,"170, 173",you,agent-carrier
+170,"170, 173",you,agent-perceiver
+170,"170, 173",you,emoter
+170,"170, 173",you,perceiver
+200,"200, 201",I,agent
+200,"200, 201",I,agent-cognizant
+200,"200, 201",I,affected-carrier
+200,"200, 201",I,affected
+200,"200, 201",I,agent-carrier
+200,"200, 201",I,agent-perceiver
+200,"200, 201",I,perceiver
+212,"212, 253",in an emotional turmoil for almost a year,attribute
+212,"212, 253",in an emotional turmoil for almost a year,affected-emoter
+212,"212, 253",in an emotional turmoil for almost a year,affected-path
+212,"212, 253",in an emotional turmoil for almost a year,affected-perceiver
+212,"212, 253",in an emotional turmoil for almost a year,affected-cognizant
+212,"212, 253",in an emotional turmoil for almost a year,affected-carrier
+212,"212, 253",in an emotional turmoil for almost a year,affected-destination
+212,"212, 253",in an emotional turmoil for almost a year,affected
+212,"212, 253",in an emotional turmoil for almost a year,affected-possessed
+212,"212, 253",in an emotional turmoil for almost a year,affected-source
+212,"212, 253",in an emotional turmoil for almost a year,range
+200,"200, 289",I have been in an emotional turmoil for almost a year now after a separation from a girl.,process
+200,"200, 289",I have been in an emotional turmoil for almost a year now after a separation from a girl.,attributive
+200,"200, 289",I have been in an emotional turmoil for almost a year now after a separation from a girl.,two-role-action
+200,"200, 289",I have been in an emotional turmoil for almost a year now after a separation from a girl.,action
+200,"200, 289",I have been in an emotional turmoil for almost a year now after a separation from a girl.,one-role-action
+258,"258, 289",after a separation from a girl.,attribute
+258,"258, 289",after a separation from a girl.,affected-emoter
+258,"258, 289",after a separation from a girl.,affected-path
+258,"258, 289",after a separation from a girl.,affected-perceiver
+258,"258, 289",after a separation from a girl.,affected-cognizant
+258,"258, 289",after a separation from a girl.,affected-carrier
+258,"258, 289",after a separation from a girl.,affected-destination
+258,"258, 289",after a separation from a girl.,affected
+258,"258, 289",after a separation from a girl.,affected-possessed
+258,"258, 289",after a separation from a girl.,affected-source
+290,"290, 320",It seems that I can't recover.,process
+299,"299, 320",that I can't recover.,created-phenomenon
+321,"321, 352",I'm still in pain for this long,process
+321,"321, 352",I'm still in pain for this long,locational
+321,"321, 352",I'm still in pain for this long,two-role-action
+321,"321, 352",I'm still in pain for this long,action
+321,"321, 352",I'm still in pain for this long,one-role-action
+385,"385, 427",and tell her my utmost feelings of sadness,process
+385,"385, 427",and tell her my utmost feelings of sadness,mental
+385,"385, 427",and tell her my utmost feelings of sadness,two-role-perception
+370,"370, 384",to call her up,process
+370,"370, 384",to call her up,mental
+370,"370, 384",to call her up,emotive
+370,"370, 384",to call her up,two-role-action
+370,"370, 377",to call,main
+378,"378, 381",her,affected-emoter
+378,"378, 381",her,affected-path
+378,"378, 381",her,affected-perceiver
+378,"378, 381",her,affected-cognizant
+378,"378, 381",her,affected-carrier
+378,"378, 381",her,affected-destination
+378,"378, 381",her,affected
+378,"378, 381",her,affected-possessed
+378,"378, 381",her,affected-source
+378,"378, 381",her,emoter
+394,"394, 397",her,phenomenon
+389,"389, 393",tell,main
+331,"331, 352",in pain for this long,location
+331,"331, 352",in pain for this long,range
+370,"370, 437",to call her up and tell her my utmost feelings of sadness and hate.,phenomenon
+352,"352, 357",... I,cognizant
+352,"352, 357",... I,agent-cognizant
+352,"352, 437",... I am planning to call her up and tell her my utmost feelings of sadness and hate.,process
+352,"352, 437",... I am planning to call her up and tell her my utmost feelings of sadness and hate.,mental
+352,"352, 437",... I am planning to call her up and tell her my utmost feelings of sadness and hate.,two-role-cognition
+398,"398, 427",my utmost feelings of sadness,phenomenon
+432,"432, 436",hate,main
+321,"321, 322",I,agent
+321,"321, 322",I,agent-cognizant
+321,"321, 322",I,affected-carrier
+321,"321, 322",I,affected
+321,"321, 322",I,agent-carrier
+321,"321, 322",I,agent-perceiver
+321,"321, 322",I,perceiver
+457,"457, 464",at her.,affected-emoter
+457,"457, 464",at her.,affected-path
+457,"457, 464",at her.,affected-perceiver
+457,"457, 464",at her.,affected-cognizant
+457,"457, 464",at her.,affected-carrier
+457,"457, 464",at her.,affected-destination
+457,"457, 464",at her.,affected
+457,"457, 464",at her.,affected-possessed
+457,"457, 464",at her.,affected-source
+438,"438, 439",I,agent
+438,"438, 439",I,agent-cognizant
+438,"438, 439",I,agent-carrier
+438,"438, 439",I,agent-perceiver
+438,"438, 464",I'm actually angry at her.,process
+438,"438, 464",I'm actually angry at her.,two-role-action
+438,"438, 464",I'm actually angry at her.,action
+439,"439, 441",'m,main
+442,"442, 456",actually angry,affected-emoter
+442,"442, 456",actually angry,affected-path
+442,"442, 456",actually angry,affected-perceiver
+442,"442, 456",actually angry,affected-cognizant
+442,"442, 456",actually angry,affected-carrier
+442,"442, 456",actually angry,affected-destination
+442,"442, 456",actually angry,affected
+442,"442, 456",actually angry,affected-possessed
+442,"442, 456",actually angry,affected-source
+442,"442, 456",actually angry,range
+478,"478, 506",to tell her all my feelings.,process
+478,"478, 506",to tell her all my feelings.,three-role-cognition
+490,"490, 506",all my feelings.,created-phenomenon
+465,"465, 466",I,affected-emoter
+478,"478, 485",to tell,main
+486,"486, 489",her,cognizant
+486,"486, 489",her,affected-cognizant
+486,"486, 489",her,affected
+478,"478, 506",to tell her all my feelings.,created-phenomenon
+907,"907, 921",deteriorating.,attribute
+907,"907, 921",deteriorating.,location
+525,"525, 527",it,agent-cognizant
+525,"525, 527",it,agent-carrier
+525,"525, 527",it,agent-perceiver
+801,"801, 812",my feelings,affected-emoter
+801,"801, 812",my feelings,affected-path
+801,"801, 812",my feelings,affected-perceiver
+801,"801, 812",my feelings,affected-cognizant
+801,"801, 812",my feelings,affected-carrier
+801,"801, 812",my feelings,affected-destination
+801,"801, 812",my feelings,affected
+801,"801, 812",my feelings,affected-possessed
+801,"801, 812",my feelings,affected-source
+801,"801, 812",my feelings,possessed
+613,"613, 614",I,agent
+613,"613, 614",I,agent-cognizant
+613,"613, 614",I,affected-cognizant
+613,"613, 614",I,affected
+585,"585, 589",what,affected-emoter
+585,"585, 589",what,affected-path
+585,"585, 589",what,affected-perceiver
+585,"585, 589",what,affected-cognizant
+585,"585, 589",what,affected-carrier
+585,"585, 589",what,affected-destination
+585,"585, 589",what,affected
+585,"585, 589",what,affected-possessed
+585,"585, 589",what,path
+585,"585, 589",what,affected-source
+585,"585, 589",what,range
+594,"594, 599",going,main
+585,"585, 608","what I'm going through,",process
+585,"585, 608","what I'm going through,",directional
+585,"585, 608","what I'm going through,",relational
+585,"585, 608","what I'm going through,",two-role-action
+585,"585, 608","what I'm going through,",action
+585,"585, 608","what I'm going through,",one-role-action
+781,"781, 782",I,agent-cognizant
+781,"781, 782",I,affected-carrier
+781,"781, 782",I,agent-carrier
+781,"781, 782",I,agent-perceiver
+781,"781, 782",I,carrier
+898,"898, 921",that I'm deteriorating.,process
+898,"898, 921",that I'm deteriorating.,attributive
+898,"898, 921",that I'm deteriorating.,locational
+898,"898, 921",that I'm deteriorating.,relational
+590,"590, 591",I,affected-emoter
+590,"590, 591",I,agent
+590,"590, 591",I,affected-path
+590,"590, 591",I,affected-perceiver
+590,"590, 591",I,agent-cognizant
+590,"590, 591",I,affected-cognizant
+590,"590, 591",I,affected-carrier
+590,"590, 591",I,affected-destination
+590,"590, 591",I,affected
+590,"590, 591",I,agent-carrier
+590,"590, 591",I,affected-possessed
+590,"590, 591",I,agent-perceiver
+590,"590, 591",I,affected-source
+590,"590, 591",I,perceiver
+904,"904, 906",'m,main
+903,"903, 904",I,affected-carrier
+903,"903, 904",I,agent-carrier
+903,"903, 904",I,carrier
+539,"539, 738","things clear because I think she doesn't know what I'm going through, and I think it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not",created-phenomenon
+679,"679, 738",to disappear if I would vent it out directly to her and not,process
+679,"679, 738",to disappear if I would vent it out directly to her and not,action
+679,"679, 738",to disappear if I would vent it out directly to her and not,one-role-action
+679,"679, 691",to disappear,main
+770,"770, 833",; although I've already shared my feelings to others many times,process
+770,"770, 833",; although I've already shared my feelings to others many times,matching
+770,"770, 833",; although I've already shared my feelings to others many times,relational
+770,"770, 833",; although I've already shared my feelings to others many times,possessive
+770,"770, 833",; although I've already shared my feelings to others many times,two-role-action
+609,"609, 738",and I think it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not,process
+813,"813, 833",to others many times,affected-emoter
+813,"813, 833",to others many times,affected-path
+813,"813, 833",to others many times,affected-perceiver
+813,"813, 833",to others many times,affected-cognizant
+813,"813, 833",to others many times,affected-carrier
+813,"813, 833",to others many times,affected-destination
+813,"813, 833",to others many times,affected-possessed
+813,"813, 833",to others many times,matchee
+813,"813, 833",to others many times,affected-source
+813,"813, 833",to others many times,possessed
+813,"813, 833",to others many times,carrier
+943,"943, 954",on anything,destination
+943,"943, 954",on anything,affected-destination
+922,"922, 923",I,affected-carrier
+922,"922, 923",I,agent-carrier
+922,"922, 923",I,carrier
+991,"991, 994",me.,phenomenon
+991,"991, 994",me.,affected-emoter
+991,"991, 994",me.,created-phenomenon
+991,"991, 994",me.,affected-path
+991,"991, 994",me.,affected-perceiver
+991,"991, 994",me.,affected-cognizant
+991,"991, 994",me.,affected-carrier
+991,"991, 994",me.,affected-destination
+991,"991, 994",me.,affected-possessed
+991,"991, 994",me.,affected-source
+978,"978, 980",It,agent-cognizant
+978,"978, 980",It,agent-carrier
+978,"978, 980",It,agent-perceiver
+978,"978, 996",It's killing me. ),process
+978,"978, 996",It's killing me. ),ceasing
+978,"978, 996",It's killing me. ),two-role-action
+978,"978, 996",It's killing me. ),influential
+997,"997, 1001",What,location
+997,"997, 1022",What's your take on this?,process
+997,"997, 1022",What's your take on this?,locational
+1004,"1004, 1013",your take,affected-carrier
+1004,"1004, 1013",your take,agent-carrier
+1004,"1004, 1013",your take,carrier
+1026,"1026, 1029",you,agent
+1026,"1026, 1029",you,agent-cognizant
+1026,"1026, 1029",you,affected-cognizant
+1026,"1026, 1029",you,affected
+1023,"1023, 1078",Do you think it would make it easier for me to recover?,process
+1036,"1036, 1078",it would make it easier for me to recover?,created-phenomenon
+1067,"1067, 1077",to recover,main
+1129,"1129, 1137",and move,process
+1129,"1129, 1137",and move,continuing
+1129,"1129, 1137",and move,influential
+1106,"1106, 1109",", I",agent-cognizant
+1106,"1106, 1109",", I",agent-carrier
+1106,"1106, 1109",", I",agent-perceiver
+1079,"1079, 1106",It's been almost a year now,phenomenon
+1079,"1079, 1106",It's been almost a year now,created-phenomenon
+1079,"1079, 1106",It's been almost a year now,created
+394,"394, 397",her,created-phenomenon
+490,"490, 506",all my feelings.,phenomenon
+1118,"1118, 1125",n't let,main

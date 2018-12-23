@@ -1,0 +1,174 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.803921568627451
+,Recall,0.9389312977099237
+,F1,0.8661971830985915
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+93,6.082762530298219,"101, 124","107, 125",7,to me I have a huge gut,I have a huge gut.,configuration,configuration
+5,0.0,"51, 57","51, 57",0,weighs,weighs,main,main
+90,26.476404589747453,"25, 46","20, 72",31,I'm a 25 year old guy,Well I'm a 25 year old guy who weighs about 12 stone,configuration,configuration
+2,1.0,"27, 28","26, 28",1,m,'m,main,main
+4,0.0,"47, 50","47, 50",0,who,who,participant-role,participant-role
+91,24.0,"47, 96","47, 72",24,"who weighs about 12 stone, not exactly overweight",who weighs about 12 stone,configuration,configuration
+6,0.0,"58, 72","58, 72",0,about 12 stone,about 12 stone,participant-role,participant-role
+10,1.0,"114, 124","114, 125",1,a huge gut,a huge gut.,participant-role,participant-role
+9,0.0,"109, 113","109, 113",0,have,have,main,main
+1,0.0,"25, 26","25, 26",0,I,I,participant-role,participant-role
+3,26.0,"29, 46","29, 72",26,a 25 year old guy,a 25 year old guy who weighs about 12 stone,participant-role,participant-role
+8,0.0,"107, 108","107, 108",0,I,I,participant-role,participant-role
+13,5.0,"137, 142","132, 142",5,doing,been doing,main,main
+52,0.0,"212, 217","212, 217",0,guess,guess,main,main
+17,0.0,"200, 207","200, 207",0,smoking,smoking,participant-role,participant-role
+95,5.0,"190, 207","185, 207",5,I gave up smoking,when I gave up smoking,configuration,configuration
+11,0.0,"126, 127","126, 127",0,I,I,participant-role,participant-role
+7,4.123105625617661,"212, 222","208, 223",5,guess what,and guess what?,configuration,configuration
+94,39.0,"126, 184","126, 223",39,I had been doing really well up until about two months ago,I had been doing really well up until about two months ago when I gave up smoking and guess what?,configuration,configuration
+15,0.0,"190, 191","190, 191",0,I,I,participant-role,participant-role
+16,3.0,"192, 199","192, 196",3,gave up,gave,main,main
+92,1.0,"218, 222","218, 223",1,what,what?,participant-role,participant-role
+18,0.0,"224, 225","224, 225",0,I,I,participant-role,participant-role
+19,8.0,"226, 237","226, 229",8,put back on,put,main,main
+96,22.0,"224, 252","224, 274",22,I put back on all the weight,I put back on all the weight I had originally lost,configuration,configuration
+20,22.20360331117452,"238, 252","235, 274",25,all the weight,on all the weight I had originally lost,participant-role,participant-role
+119,0.0,"253, 274","253, 274",0,I had originally lost,I had originally lost,configuration,configuration
+22,0.0,"278, 282","278, 282",0,feel,feel,main,main
+23,1.0,"283, 288","283, 289",1,awful,awful.,participant-role,participant-role
+117,0.0,"253, 254","253, 254",0,I,I,participant-role,participant-role
+21,2.0,"276, 277","274, 277",2,I,", I",participant-role,participant-role
+118,0.0,"270, 274","270, 274",0,lost,lost,main,main
+47,5.0,"505, 540","500, 540",5,someone does take an interest in me,when someone does take an interest in me,configuration,configuration
+121,0.0,"311, 315","311, 315",0,look,look,main,main
+68,0.0,"680, 689","680, 689",0,beginning,beginning,main,main
+28,12.0,"290, 320","290, 308",12,My friends tell me I look fine,My friends tell me,configuration,configuration
+61,0.0,"613, 619","613, 619",0,sounds,sounds,main,main
+60,4.0,"601, 603","597, 603",4,It,... It,participant-role,participant-role
+106,4.123105625617661,"674, 705","670, 706",5,it is beginning to ruin my life,but it is beginning to ruin my life.,configuration,configuration
+65,0.0,"649, 653","649, 653",0,what,what,participant-role,participant-role
+102,0.0,"654, 657","654, 657",0,you,you,participant-role,participant-role
+122,0.0,"316, 320","316, 320",0,fine,fine,participant-role,participant-role
+125,0.0,"457, 463","457, 463",0,anyone,anyone,participant-role,participant-role
+123,0.0,"309, 320","309, 320",0,I look fine,I look fine,configuration,configuration
+131,0.0,"585, 597","585, 597",0,what you see,what you see,participant-role,participant-role
+56,12.0,"573, 597","585, 597",12,you'll hate what you see,what you see,configuration,configuration
+64,0.0,"644, 648","644, 648",0,type,type,main,main
+66,0.0,"674, 676","674, 676",0,it,it,participant-role,participant-role
+58,34.23448553724738,"601, 634","597, 668",38,It actually sounds quite humorous,... It actually sounds quite humorous when you type what you're feeling,configuration,configuration
+25,0.0,"301, 305","301, 305",0,tell,tell,main,main
+54,0.0,"541, 542","541, 542",0,I,I,participant-role,participant-role
+127,0.0,"470, 474","470, 474",0,want,want,main,main
+42,0.0,"432, 433","432, 433",0,I,I,participant-role,participant-role
+130,0.0,"580, 584","580, 584",0,hate,hate,main,main
+34,0.0,"371, 377","371, 377",0,no-one,no-one,participant-role,participant-role
+51,15.0,"518, 537","518, 522",15,take an interest in,take,main,main
+105,0.0,"649, 668","649, 668",0,what you're feeling,what you're feeling,configuration,configuration
+49,0.0,"505, 512","505, 512",0,someone,someone,participant-role,participant-role
+24,0.0,"290, 300","290, 300",0,My friends,My friends,participant-role,participant-role
+36,0.0,"382, 385","382, 385",0,see,see,main,main
+37,0.0,"386, 396","386, 396",0,my stomach,my stomach,participant-role,participant-role
+59,20.615528128088304,"640, 648","635, 668",25,you type,when you type what you're feeling,configuration,configuration
+128,10.0,"475, 494","475, 484",10,to see me like this,to see me,participant-role,participant-role
+129,20.591260281974,"457, 494","475, 484",28,anyone would want to see me like this,to see me,configuration,configuration
+120,0.0,"309, 310","309, 310",0,I,I,participant-role,participant-role
+69,1.0,"690, 705","690, 706",1,to ruin my life,to ruin my life.,participant-role,participant-role
+104,0.0,"661, 668","661, 668",0,feeling,feeling,main,main
+55,7.0,"543, 556","543, 549",7,scream inside,scream,main,main
+38,2.0,"398, 400","396, 400",2,it,", it",participant-role,participant-role
+31,3.0,"327, 336","327, 333",3,breath in,breath,main,main
+48,16.0,"541, 597","557, 597",16,I scream inside thinking my God you'll hate what you see,thinking my God you'll hate what you see,configuration,configuration
+41,0.0,"417, 428","417, 428",0,my sex life,my sex life,participant-role,participant-role
+30,0.0,"325, 326","325, 326",0,I,I,participant-role,participant-role
+40,0.0,"409, 416","409, 416",0,ruining,ruining,main,main
+33,0.0,"354, 367","354, 367",0,baggy clothes,baggy clothes,participant-role,participant-role
+57,0.0,"573, 576","573, 576",0,you,you,participant-role,participant-role
+63,0.0,"640, 643","640, 643",0,you,you,participant-role,participant-role
+62,0.0,"620, 634","620, 634",0,quite humorous,quite humorous,participant-role,participant-role
+29,26.30589287593181,"325, 344","321, 370",30,I breath in all day,but I breath in all day and wear baggy clothes so,configuration,configuration
+26,0.0,"306, 308","306, 308",0,me,me,participant-role,participant-role
+53,15.0,"538, 540","523, 540",15,me,an interest in me,participant-role,participant-role
+133,7.211102550927978,"893, 905","887, 909",10,usually fail,( and usually fail ) .,configuration,configuration
+76,6.0,"763, 783","757, 783",6,throwing it up again,about throwing it up again,participant-role,participant-role
+81,0.0,"901, 905","901, 905",0,fail,fail,main,main
+74,2.0,"747, 748","745, 748",2,I,", I",participant-role,participant-role
+143,70.178344238091,"801, 816","796, 886",75,it isn't for me,that it isn't for me so then I try to hardly eat anything else for the next couple of days,configuration,configuration
+108,16.0,"747, 783","763, 783",16,I thought about throwing it up again,throwing it up again,configuration,configuration
+141,3.0,"804, 806","804, 809",3,is,isn't,main,main
+142,4.0,"810, 816","814, 816",4,for me,me,participant-role,participant-role
+107,0.0,"734, 745","734, 745",0,feel guilty,feel guilty,configuration,configuration
+72,0.0,"734, 738","734, 738",0,feel,feel,main,main
+132,0.0,"707, 724","707, 724",0,I pig out one day,I pig out one day,configuration,configuration
+70,0.0,"707, 708","707, 708",0,I,I,participant-role,participant-role
+140,0.0,"801, 803","801, 803",0,it,it,participant-role,participant-role
+75,6.0,"749, 762","749, 756",6,thought about,thought,main,main
+73,0.0,"739, 745","739, 745",0,guilty,guilty,participant-role,participant-role
+110,6.0,"825, 886","831, 886",6,I try to hardly eat anything else for the next couple of days,to hardly eat anything else for the next couple of days,configuration,configuration
+77,0.0,"788, 795","788, 795",0,realise,realise,main,main
+71,4.0,"709, 716","709, 712",4,pig out,pig,main,main
+82,28.0,"831, 858","831, 886",28,to hardly eat anything else,to hardly eat anything else for the next couple of days,participant-role,participant-role
+80,0.0,"827, 830","827, 830",0,try,try,main,main
+79,0.0,"825, 826","825, 826",0,I,I,participant-role,participant-role
+113,0.0,"928, 929","928, 929",0,I,I,participant-role,participant-role
+111,11.0,"921, 940","910, 940",11,I feel I'm waffling,Sorry guys I feel I'm waffling,configuration,configuration
+112,32.7566787083184,"942, 991","910, 998",39,I'd be interested in what any of you think or say,"Sorry guys I feel I'm waffling, I'd be interested in what any of you think or say 
+B/ S",configuration,configuration
+136,0.0,"979, 984","979, 984",0,think,think,main,main
+84,0.0,"923, 927","923, 927",0,feel,feel,main,main
+138,0.0,"988, 991","988, 991",0,say,say,main,main
+89,13.892443989449804,"963, 991","975, 998",19,what any of you think or say,"you think or say 
+B/ S",participant-role,participant-role
+139,3.0,"988, 991","985, 991",3,say,or say,configuration,configuration
+83,0.0,"921, 922","921, 922",0,I,I,participant-role,participant-role
+115,0.0,"932, 940","932, 940",0,waffling,waffling,main,main
+88,14.0,"946, 962","946, 948",14,be interested in,be,main,main
+85,0.0,"928, 940","928, 940",0,I'm waffling,I'm waffling,participant-role,participant-role
+116,0.0,"928, 940","928, 940",0,I'm waffling,I'm waffling,configuration,configuration
+135,7.0,"968, 978","968, 971",7,any of you,any,participant-role,participant-role
+134,0.0,"963, 967","963, 967",0,what,what,participant-role,participant-role
+86,2.0,"942, 943","940, 943",2,I,", I",participant-role,participant-role
+97,52.009614495783374,"276, 288","224, 289",53,I feel awful,"I put back on all the weight I had originally lost, I feel awful.",configuration,configuration
+45,26.92582403567252,"457, 494","482, 484",35,anyone would want to see me like this,me,participant-role,participant-role
+46,118.20744477400736,"432, 494","490, 597",82,I can't possibly believe anyone would want to see me like this,"this, and when someone does take an interest in me I scream inside thinking my God you'll hate what you see",configuration,configuration
+109,73.37574531137656,"788, 816","810, 886",59,realise that it isn't for me,for me so then I try to hardly eat anything else for the next couple of days,configuration,configuration
+78,93.13431161500041,"801, 816","796, 909",98,it isn't for me,that it isn't for me so then I try to hardly eat anything else for the next couple of days ( and usually fail ) .,participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+14,"143, 154",really well,participant-role
+27,"309, 320",I look fine,participant-role
+98,"349, 367",wear baggy clothes,configuration
+32,"349, 353",wear,main
+99,"371, 396",no-one can see my stomach,configuration
+100,"398, 428",it is even ruining my sex life,configuration
+44,"449, 456",believe,main
+137,"963, 984",what any of you think,configuration
+,
+,Parsed mismatching all manual (False Positives)
+185,"185, 189",when,participant-role
+690,"690, 697",to ruin,main
+436,"436, 439",n't,main
+594,"594, 597",see,main
+500,"500, 504",when,participant-role
+649,"649, 668",what you're feeling,participant-role
+635,"635, 639",when,participant-role
+334,"334, 344",in all day,participant-role
+475,"475, 481",to see,main
+590,"590, 593",you,participant-role
+585,"585, 589",what,participant-role
+717,"717, 720",one,participant-role
+772,"772, 774",it,participant-role
+763,"763, 771",throwing,main
+707,"707, 783","I pig out one day and then feel guilty, I thought about throwing it up again",configuration
+831,"831, 833",to,main
+994,"994, 998",B/ S,configuration
+949,"949, 959",interested,participant-role
+994,"994, 998",B/ S,participant-role
+72,"72, 100",", not exactly overweight but",configuration
+185,"185, 223",when I gave up smoking and guess what?,configuration
+224,"224, 274",I put back on all the weight I had originally lost,participant-role
+690,"690, 706",to ruin my life.,configuration
+496,"496, 556",and when someone does take an interest in me I scream inside,configuration
+698,"698, 706",my life.,participant-role
+707,"707, 745",I pig out one day and then feel guilty,configuration
+707,"707, 745",I pig out one day and then feel guilty,participant-role
+845,"845, 886",anything else for the next couple of days,participant-role
+796,"796, 909",that it isn't for me so then I try to hardly eat anything else for the next couple of days ( and usually fail ) .,configuration
+784,"784, 909",but realise that it isn't for me so then I try to hardly eat anything else for the next couple of days ( and usually fail ) .,configuration

@@ -1,0 +1,218 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.7853403141361257
+,Recall,0.9036144578313253
+,F1,0.8403361344537815
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+4,5.0,"42, 49","37, 49",5,lurking,been lurking,main,main
+11,8.06225774829855,"69, 114","61, 115",9,I'm experiencing some problems in my marriage,because I'm experiencing some problems in my marriage.,configuration,configuration
+9,14.035668847618199,"86, 114","100, 115",15,some problems in my marriage,in my marriage.,participant-role,participant-role
+10,55.0,"32, 60","32, 115",55,I've been lurking here a bit,I've been lurking here a bit because I'm experiencing some problems in my marriage.,configuration,configuration
+6,0.0,"69, 70","69, 70",0,I,I,participant-role,participant-role
+1,0.0,"32, 33","32, 33",0,I,I,participant-role,participant-role
+8,0.0,"73, 85","73, 85",0,experiencing,experiencing,main,main
+15,1.0,"116, 148","116, 149",1,Here's a quick bit of background,Here's a quick bit of background.,configuration,configuration
+12,0.0,"116, 120","116, 120",0,Here,Here,participant-role,participant-role
+14,1.0,"123, 148","123, 149",1,a quick bit of background,a quick bit of background.,participant-role,participant-role
+13,1.0,"121, 122","120, 122",1,s,'s,main,main
+18,0.0,"154, 167","154, 167",0,a married man,a married man,participant-role,participant-role
+17,1.0,"152, 153","151, 153",1,m,'m,main,main
+21,2.23606797749979,"169, 193","167, 194",3,been married for 7 years,", been married for 7 years.",configuration,configuration
+22,27.0,"150, 167","150, 194",27,I'm a married man,"I'm a married man, been married for 7 years.",configuration,configuration
+16,0.0,"150, 151","150, 151",0,I,I,participant-role,participant-role
+19,8.0,"169, 173","169, 181",8,been,been married,main,main
+23,0.0,"195, 196","195, 196",0,I,I,participant-role,participant-role
+25,17.0,"202, 233","202, 216",17,"three children, aged 6, 4 and 2",three children,participant-role,participant-role
+27,1.0,"195, 233","195, 234",1,"I have three children, aged 6, 4 and 2","I have three children, aged 6, 4 and 2.",configuration,configuration
+31,17.72004514666935,"255, 296","250, 313",22,friendship getting in the way of marriage,"with friendship getting in the way of marriage, and vice-versa.",participant-role,participant-role
+29,0.0,"235, 243","235, 243",0,My issue,My issue,participant-role,participant-role
+30,5.0,"244, 254","244, 249",5,deals with,deals,main,main
+32,1.0,"235, 312","235, 313",1,"My issue deals with friendship getting in the way of marriage, and vice-versa","My issue deals with friendship getting in the way of marriage, and vice-versa.",configuration,configuration
+35,0.0,"326, 333","326, 333",0,younger,younger,participant-role,participant-role
+38,0.0,"359, 363","359, 363",0,been,been,main,main
+40,6.0,"320, 333","314, 333",6,I was younger,Since I was younger,configuration,configuration
+33,0.0,"320, 321","320, 321",0,I,I,participant-role,participant-role
+34,0.0,"322, 325","322, 325",0,was,was,main,main
+36,2.0,"335, 353","333, 353",2,most of my friends,", most of my friends",participant-role,participant-role
+41,21.02379604162864,"335, 370","314, 371",22,most of my friends have been female,"Since I was younger, most of my friends have been female.",configuration,configuration
+39,1.0,"364, 370","364, 371",1,female,female.,participant-role,participant-role
+49,25.317977802344327,"395, 438","391, 413",29,has had no problem with this until recently,and has had no problem,configuration,configuration
+44,0.0,"385, 389","385, 389",0,this,this,participant-role,participant-role
+47,0.0,"399, 402","399, 402",0,had,had,main,main
+43,0.0,"380, 384","380, 384",0,knew,knew,main,main
+48,10.0,"403, 423","403, 413",10,no problem with this,no problem,participant-role,participant-role
+45,1.0,"372, 389","372, 390",1,My wife knew this,"My wife knew this,",configuration,configuration
+42,0.0,"372, 379","372, 379",0,My wife,My wife,participant-role,participant-role
+59,2.23606797749979,"496, 525","494, 526",3,who also happens to be female,", who also happens to be female.",configuration,configuration
+52,0.0,"452, 465","452, 465",0,been visiting,been visiting,main,main
+58,1.0,"519, 525","519, 526",1,female,female.,participant-role,participant-role
+57,32.0,"440, 494","440, 526",32,Lately I've been visiting a mutual friend of 6 + years,"Lately I've been visiting a mutual friend of 6 + years, who also happens to be female.",configuration,configuration
+53,32.0,"466, 494","466, 526",32,a mutual friend of 6 + years,"a mutual friend of 6 + years, who also happens to be female.",participant-role,participant-role
+50,0.0,"447, 448","447, 448",0,I,I,participant-role,participant-role
+54,2.0,"496, 499","494, 499",2,who,", who",participant-role,participant-role
+56,0.0,"513, 518","513, 518",0,to be,to be,main,main
+60,0.0,"527, 536","527, 536",0,My visits,My visits,participant-role,participant-role
+68,11.0,"578, 597","567, 597",11,the kids are asleep,well after the kids are asleep,configuration,configuration
+62,6.0,"548, 566","554, 566",6,going to her house,to her house,participant-role,participant-role
+67,37.44329045369811,"527, 566","548, 597",38,My visits consist of going to her house,going to her house well after the kids are asleep,configuration,configuration
+65,0.0,"591, 597","591, 597",0,asleep,asleep,participant-role,participant-role
+64,0.0,"587, 590","587, 590",0,are,are,main,main
+61,3.0,"537, 547","537, 544",3,consist of,consist,main,main
+178,4.123105625617661,"602, 621","598, 622",5,staying rather late,and staying rather late.,configuration,configuration
+63,0.0,"578, 586","578, 586",0,the kids,the kids,participant-role,participant-role
+75,0.0,"668, 671","668, 671",0,are,are,main,main
+76,8.0,"672, 684","672, 692",8,other people,other people present,participant-role,participant-role
+70,0.0,"623, 633","623, 633",0,The visits,The visits,participant-role,participant-role
+71,0.0,"634, 637","634, 637",0,are,are,main,main
+73,6.0,"623, 655","623, 661",6,The visits are strictly platonic,"The visits are strictly platonic, plus",configuration,configuration
+72,6.0,"638, 655","638, 661",6,strictly platonic,"strictly platonic, plus",participant-role,participant-role
+78,1.0,"662, 703","662, 704",1,there are other people present every time,there are other people present every time.,configuration,configuration
+91,9.055385138137417,"777, 801","768, 802",10,they are married as well,", unless they are married as well.",configuration,configuration
+85,4.0,"749, 753","745, 753",4,have,not have,main,main
+81,34.36568055487916,"724, 768","719, 802",39,a married man should not have female friends,"that a married man should not have female friends, unless they are married as well.",participant-role,participant-role
+87,34.36568055487916,"724, 768","719, 802",39,a married man should not have female friends,"that a married man should not have female friends, unless they are married as well.",configuration,configuration
+86,0.0,"754, 768","754, 768",0,female friends,female friends,participant-role,participant-role
+88,0.0,"777, 781","777, 781",0,they,they,participant-role,participant-role
+80,0.0,"713, 718","713, 718",0,feels,feels,main,main
+79,0.0,"705, 712","705, 712",0,My wife,My wife,participant-role,participant-role
+82,34.0,"705, 768","705, 802",34,My wife feels that a married man should not have female friends,"My wife feels that a married man should not have female friends, unless they are married as well.",configuration,configuration
+83,0.0,"724, 737","724, 737",0,a married man,a married man,participant-role,participant-role
+93,0.0,"807, 811","807, 811",0,says,says,main,main
+96,0.0,"822, 826","822, 826",0,wish,wish,main,main
+92,0.0,"803, 806","803, 806",0,She,She,participant-role,participant-role
+3,8.06225774829855,"820, 930","812, 931",9,"I wish to continue seeing this friend or any other female friend, she must also be present or we must separate","that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate.",participant-role,participant-role
+104,0.0,"914, 916","914, 916",0,we,we,participant-role,participant-role
+98,3.0,"820, 884","817, 884",3,I wish to continue seeing this friend or any other female friend,if I wish to continue seeing this friend or any other female friend,configuration,configuration
+97,0.0,"827, 884","827, 884",0,to continue seeing this friend or any other female friend,to continue seeing this friend or any other female friend,participant-role,participant-role
+102,21.0,"903, 910","903, 931",21,present,present or we must separate.,participant-role,participant-role
+94,1.0,"803, 930","803, 931",1,"She says that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate","She says that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate.",configuration,configuration
+99,2.0,"886, 889","884, 889",2,she,", she",participant-role,participant-role
+101,0.0,"900, 902","900, 902",0,be,be,main,main
+95,0.0,"820, 821","820, 821",0,I,I,participant-role,participant-role
+108,0.0,"932, 941","932, 941",0,My visits,My visits,participant-role,participant-role
+114,5.0990195135927845,"999, 1016","1004, 1017",6,home with my wife,with my wife.,participant-role,participant-role
+115,18.027756377319946,"976, 1016","994, 1017",19,every other night I am home with my wife,I am home with my wife.,configuration,configuration
+113,0.0,"996, 998","996, 998",0,am,am,main,main
+111,43.0,"932, 974","932, 1017",43,My visits are limited to about once a week,"My visits are limited to about once a week, every other night I am home with my wife.",configuration,configuration
+112,0.0,"994, 995","994, 995",0,I,I,participant-role,participant-role
+130,21.213203435596427,"1100, 1116","1097, 1137",24,discuss religion,or discuss religion which bores the heck,configuration,configuration
+116,0.0,"1023, 1024","1023, 1024",0,I,I,participant-role,participant-role
+118,0.0,"1031, 1042","1031, 1042",0,this friend,this friend,participant-role,participant-role
+121,0.0,"1055, 1060","1055, 1060",0,watch,watch,main,main
+176,15.0,"1117, 1152","1117, 1137",15,which bores the heck out of my wife,which bores the heck,configuration,configuration
+119,5.0,"1023, 1042","1018, 1042",5,I visit this friend,When I visit this friend,configuration,configuration
+117,0.0,"1025, 1030","1025, 1030",0,visit,visit,main,main
+26,0.0,"1068, 1073","1068, 1073",0,which,which,participant-role,participant-role
+125,4.0,"1091, 1095","1087, 1095",4,like,not like,main,main
+66,16.0,"1123, 1144","1123, 1128",16,bores the heck out of,bores,main,main
+127,1.0,"1068, 1095","1068, 1096",1,which my wife does not like,"which my wife does not like,",configuration,configuration
+69,1.0,"1145, 1152","1145, 1153",1,my wife,my wife.,participant-role,participant-role
+28,0.0,"1117, 1122","1117, 1122",0,which,which,participant-role,participant-role
+120,2.0,"1044, 1046","1042, 1046",2,we,", we",participant-role,participant-role
+129,21.0,"1108, 1116","1108, 1137",21,religion,religion which bores the heck,participant-role,participant-role
+128,0.0,"1100, 1107","1100, 1107",0,discuss,discuss,main,main
+123,0.0,"1074, 1081","1074, 1081",0,my wife,my wife,participant-role,participant-role
+146,1.0,"1259, 1285","1259, 1286",1,I am not seeking an affair,I am not seeking an affair.,participant-role,participant-role
+136,0.0,"1165, 1167","1165, 1167",0,is,is,main,main
+147,5.0990195135927845,"1248, 1285","1243, 1286",6,she trusts I am not seeking an affair,that she trusts I am not seeking an affair.,configuration,configuration
+143,18.027756377319946,"1226, 1285","1208, 1286",19,my wife stresses that she trusts I am not seeking an affair,", especially when my wife stresses that she trusts I am not seeking an affair.",configuration,configuration
+144,0.0,"1248, 1251","1248, 1251",0,she,she,participant-role,participant-role
+145,0.0,"1252, 1258","1252, 1258",0,trusts,trusts,main,main
+134,78.0,"1154, 1208","1154, 1286",78,I think it is reasonable for me to have female friends,"I think it is reasonable for me to have female friends, especially when my wife stresses that she trusts I am not seeking an affair.",configuration,configuration
+140,0.0,"1226, 1233","1226, 1233",0,my wife,my wife,participant-role,participant-role
+132,0.0,"1156, 1161","1156, 1161",0,think,think,main,main
+142,5.0990195135927845,"1248, 1285","1243, 1286",6,she trusts I am not seeking an affair,that she trusts I am not seeking an affair.,participant-role,participant-role
+138,0.0,"1186, 1208","1186, 1208",0,to have female friends,to have female friends,participant-role,participant-role
+139,24.0,"1162, 1208","1186, 1208",24,it is reasonable for me to have female friends,to have female friends,configuration,configuration
+131,0.0,"1154, 1155","1154, 1155",0,I,I,participant-role,participant-role
+135,0.0,"1162, 1164","1162, 1164",0,it,it,participant-role,participant-role
+137,7.0,"1168, 1185","1168, 1178",7,reasonable for me,reasonable,participant-role,participant-role
+133,28.600699292150182,"1162, 1208","1179, 1185",40,it is reasonable for me to have female friends,for me,participant-role,participant-role
+141,0.0,"1234, 1242","1234, 1242",0,stresses,stresses,main,main
+151,5.0,"1287, 1304","1292, 1304",5,What so you think,so you think,configuration,configuration
+155,31.400636936215164,"1306, 1322","1287, 1347",44,am I out of line,"What so you think, am I out of line, is she, or are we both?",configuration,configuration
+149,0.0,"1295, 1298","1295, 1298",0,you,you,participant-role,participant-role
+153,0.0,"1306, 1308","1306, 1308",0,am,am,main,main
+150,0.0,"1299, 1304","1299, 1304",0,think,think,main,main
+148,0.0,"1287, 1291","1287, 1291",0,What,What,participant-role,participant-role
+160,1.0,"1339, 1346","1339, 1347",1,we both,we both?,participant-role,participant-role
+157,0.0,"1327, 1330","1327, 1330",0,she,she,participant-role,participant-role
+162,0.0,"1349, 1350","1349, 1350",0,I,I,participant-role,participant-role
+165,0.0,"1403, 1405","1403, 1405",0,it,it,participant-role,participant-role
+174,0.0,"1437, 1441","1437, 1441",0,both,both,participant-role,participant-role
+168,0.0,"1349, 1398","1349, 1398",0,I want to keep my marriage as well as friendships,I want to keep my marriage as well as friendships,configuration,configuration
+170,4.123105625617661,"1403, 1449","1399, 1450",5,it doesn't appear that I can have both anymore,but it doesn't appear that I can have both anymore.,configuration,configuration
+173,0.0,"1432, 1436","1432, 1436",0,have,have,main,main
+163,0.0,"1351, 1355","1351, 1355",0,want,want,main,main
+167,4.0,"1414, 1420","1410, 1420",4,appear,n't appear,main,main
+171,0.0,"1426, 1427","1426, 1427",0,I,I,participant-role,participant-role
+164,23.0,"1356, 1398","1356, 1375",23,to keep my marriage as well as friendships,to keep my marriage,participant-role,participant-role
+169,5.0990195135927845,"1426, 1449","1421, 1450",6,I can have both anymore,that I can have both anymore.,participant-role,participant-role
+175,10.295630140987,"1426, 1441","1421, 1450",14,I can have both,that I can have both anymore.,configuration,configuration
+177,57.0087712549569,"602, 621","545, 622",58,staying rather late,of going to her house well after the kids are asleep and staying rather late.,participant-role,participant-role
+103,76.92203845452875,"886, 910","812, 931",95,she must also be present,"that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate.",configuration,configuration
+126,89.8443097808648,"1044, 1067","1018, 1153",112,we usually watch movies,"When I visit this friend, we usually watch movies which my wife does not like, or discuss religion which bores the heck out of my wife.",configuration,configuration
+122,70.0,"1061, 1067","1061, 1137",70,movies,"movies which my wife does not like, or discuss religion which bores the heck",participant-role,participant-role
+154,25.96150997149434,"1311, 1322","1318, 1347",25,out of line,"line, is she, or are we both?",participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+5,"50, 54",here,participant-role
+20,"174, 181",married,participant-role
+24,"197, 201",have,main
+74,"662, 667",there,participant-role
+77,"685, 692",present,participant-role
+89,"782, 785",are,main
+90,"786, 793",married,participant-role
+107,"914, 930",we must separate,configuration
+106,"922, 930",separate,main
+109,"942, 945",are,main
+110,"946, 974",limited to about once a week,participant-role
+152,"1309, 1310",I,participant-role
+158,"1324, 1330",is she,configuration
+156,"1324, 1326",is,main
+161,"1335, 1346",are we both,configuration
+159,"1335, 1338",are,main
+,
+,Parsed mismatching all manual (False Positives)
+20,"20, 22",Hi,main
+20,"20, 29",Hi folks!,configuration
+23,"23, 29",folks!,participant-role
+182,"182, 194",for 7 years.,participant-role
+218,"218, 222",aged,main
+274,"274, 313","in the way of marriage, and vice-versa.",participant-role
+266,"266, 273",getting,main
+513,"513, 526",to be female.,configuration
+505,"505, 512",happens,main
+602,"602, 609",staying,main
+548,"548, 553",going,main
+693,"693, 704",every time.,participant-role
+786,"786, 793",married,main
+827,"827, 838",to continue,main
+827,"827, 884",to continue seeing this friend or any other female friend,configuration
+839,"839, 884",seeing this friend or any other female friend,participant-role
+839,"839, 884",seeing this friend or any other female friend,configuration
+839,"839, 845",seeing,main
+946,"946, 953",limited,main
+1018,"1018, 1022",When,participant-role
+1068,"1068, 1137","which my wife does not like, or discuss religion which bores the heck",configuration
+1264,"1264, 1275",not seeking,main
+1208,"1208, 1225",", especially when",participant-role
+1276,"1276, 1286",an affair.,participant-role
+1186,"1186, 1193",to have,main
+1356,"1356, 1363",to keep,main
+1356,"1356, 1375",to keep my marriage,configuration
+86,"86, 99",some problems,participant-role
+55,"55, 115",a bit because I'm experiencing some problems in my marriage.,participant-role
+223,"223, 234","6, 4 and 2.",participant-role
+266,"266, 313","getting in the way of marriage, and vice-versa.",configuration
+513,"513, 526",to be female.,participant-role
+527,"527, 622",My visits consist of going to her house well after the kids are asleep and staying rather late.,configuration
+846,"846, 884",this friend or any other female friend,participant-role
+974,"974, 1017",", every other night I am home with my wife.",participant-role
+1259,"1259, 1286",I am not seeking an affair.,configuration
+1259,"1259, 1260",I,participant-role
+1194,"1194, 1208",female friends,participant-role
+1162,"1162, 1286","it is reasonable for me to have female friends, especially when my wife stresses that she trusts I am not seeking an affair.",configuration
+1162,"1162, 1286","it is reasonable for me to have female friends, especially when my wife stresses that she trusts I am not seeking an affair.",participant-role
+1364,"1364, 1375",my marriage,participant-role

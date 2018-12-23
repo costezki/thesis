@@ -1,0 +1,823 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.25523012552301255
+,Recall,0.658273381294964
+,F1,0.3678391959798995
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+3,5.0,"47, 53","42, 53",5,seeing,been seeing,main,main
+6,2.0,"99, 101","97, 101",2,we,", we",carrier,carrier
+10,0.0,"139, 141","139, 141",0,we,we,agent,agent
+11,10.0,"142, 156","142, 146",10,play in a band,play,main,main
+9,46.84015371452148,"99, 136","86, 181",58,we were friends for a couple of years,"Before that, we were friends for a couple of years ( we play in a band together at weekends ) .",attributive,attributive
+9,46.84015371452148,"99, 136","86, 181",58,we were friends for a couple of years,"Before that, we were friends for a couple of years ( we play in a band together at weekends ) .",relational,relational
+8,67.0,"107, 114","107, 181",67,friends,friends for a couple of years ( we play in a band together at weekends ) .,attribute,attribute
+7,0.0,"102, 106","102, 106",0,were,were,main,main
+28,2.0,"214, 220","212, 220",2,I'm 30,", I'm 30",attributive,attributive
+28,2.0,"214, 220","212, 220",2,I'm 30,", I'm 30",relational,relational
+15,1.0,"185, 186","184, 186",1,s,'s,main,main
+22,1.0,"225, 226","224, 226",1,s,'s,main,main
+19,1.0,"216, 217","215, 217",1,m,'m,main,main
+20,0.0,"218, 220","218, 220",0,30,30,attribute,attribute
+18,2.0,"214, 215","212, 215",2,I,", I",carrier,carrier
+34,10.0,"294, 317","288, 309",14,"they have twins, aged 7",", and they have twins",relational,relational
+34,10.0,"294, 317","288, 309",14,"they have twins, aged 7",", and they have twins",possessive,possessive
+33,8.0,"304, 317","304, 309",8,"twins, aged 7",twins,possessed,possessed
+31,0.0,"294, 298","294, 298",0,they,they,carrier,carrier
+32,0.0,"299, 303","299, 303",0,have,have,main,main
+26,8.0,"236, 240","236, 248",8,been,been married,main,main
+46,18.439088914585774,"392, 445","406, 457",26,I was nothing to do with the break-up of the marriage,"to do with the break-up of the marriage, by the way",relational,relational
+45,0.0,"394, 397","394, 397",0,was,was,main,main
+40,0.0,"366, 378","366, 378",0,his children,his children,affected,affected
+35,0.0,"319, 321","319, 321",0,He,He,agent-carrier,agent-carrier
+36,5.0,"322, 336","322, 331",5,separated from,separated,main,main
+39,0.0,"361, 365","361, 365",0,sees,sees,main,main
+38,0.0,"319, 356","319, 356",0,He separated from his wife a year ago,He separated from his wife a year ago,matching,matching
+38,0.0,"319, 356","319, 356",0,He separated from his wife a year ago,He separated from his wife a year ago,relational,relational
+48,2.0,"487, 489","485, 489",2,we,", we",agent,agent
+63,0.0,"577, 579","577, 579",0,he,he,agent,agent
+50,0.0,"495, 502","495, 502",0,talking,talking,main,main
+41,9.0,"560, 572","569, 572",9,he loved her,her,phenomenon,phenomenon
+61,12.0,"548, 572","560, 572",12,he told her he loved her,he loved her,mental,mental
+96,8.0,"470, 502","462, 502",8,"a few weeks ago, we were talking","Anyway, a few weeks ago, we were talking",action,action
+97,17.69180601295413,"507, 572","519, 559",25,I asked him if when he was with his wife he told her he loved her,if when he was with his wife he told her,mental,mental
+101,4.0,"577, 597","573, 597",4,"he said, ""of course""","and he said, ""of course""",mental,mental
+101,4.0,"577, 597","573, 597",4,"he said, ""of course""","and he said, ""of course""",three-role-cognition,three-role-cognition
+53,0.0,"515, 518","515, 518",0,him,him,affected-cognizant,affected-cognizant
+52,0.0,"509, 514","509, 514",0,asked,asked,main,main
+64,0.0,"580, 584","580, 584",0,said,said,main,main
+54,0.0,"527, 529","527, 529",0,he,he,carrier,carrier
+55,0.0,"530, 533","530, 533",0,was,was,main,main
+58,0.0,"551, 555","551, 555",0,told,told,main,main
+98,5.0,"527, 547","522, 547",5,he was with his wife,when he was with his wife,locational,locational
+12,36.40054944640259,"522, 572","556, 559",47,when he was with his wife he told her he loved her,her,phenomenon,phenomenon
+57,0.0,"548, 550","548, 550",0,he,he,agent,agent
+97,25.317977802344327,"507, 572","503, 597",29,I asked him if when he was with his wife he told her he loved her,"and I asked him if when he was with his wife he told her he loved her and he said, ""of course""",three-role-cognition,three-role-cognition
+51,0.0,"507, 508","507, 508",0,I,I,agent,agent
+81,0.0,"706, 710","706, 710",0,said,said,main,main
+104,5.0,"632, 643","627, 643",5,he loves me,that he loves me,mental,mental
+94,0.0,"804, 808","804, 808",0,find,find,main,main
+68,6.0,"616, 620","610, 620",6,said,never said,main,main
+85,4.0,"730, 734","726, 734",4,love,n't love,main,main
+103,0.0,"641, 643","641, 643",0,me,me,phenomenon,phenomenon
+93,0.0,"797, 799","797, 799",0,go,go,main,main
+107,8.06225774829855,"703, 737","711, 738",9,"he said that no, he didn't love me","that no, he didn't love me,",mental,mental
+88,0.0,"753, 759","753, 759",0,wanted,wanted,main,main
+91,0.0,"784, 785","784, 785",0,I,I,agent,agent
+66,2.8284271247461903,"605, 607","603, 609",4,he,", he's",agent,agent
+83,2.0,"720, 722","718, 722",2,he,", he",emoter,emoter
+76,13.601470508735444,"804, 821","800, 808",13,find someone else,and find,relational,relational
+76,13.601470508735444,"804, 821","800, 808",13,find someone else,and find,possessive,possessive
+105,0.0,"648, 698","648, 698",0,last night I asked him straight out if he loved me,last night I asked him straight out if he loved me,mental,mental
+105,0.0,"648, 698","648, 698",0,last night I asked him straight out if he loved me,last night I asked him straight out if he loved me,three-role-cognition,three-role-cognition
+43,20.0,"687, 698","667, 698",20,he loved me,him straight out if he loved me,phenomenon,phenomenon
+71,7.211102550927978,"605, 643","599, 647",10,he's never said to me that he loves me,"Well, he's never said to me that he loves me, so",mental,mental
+71,7.211102550927978,"605, 643","599, 647",10,he's never said to me that he loves me,"Well, he's never said to me that he loves me, so",three-role-cognition,three-role-cognition
+70,5.0,"632, 643","627, 643",5,he loves me,that he loves me,phenomenon,phenomenon
+72,0.0,"632, 634","632, 634",0,he,he,emoter,emoter
+78,0.0,"690, 695","690, 695",0,loved,loved,main,main
+73,0.0,"659, 660","659, 660",0,I,I,agent,agent
+74,0.0,"661, 666","661, 666",0,asked,asked,main,main
+102,0.0,"635, 640","635, 640",0,loves,loves,main,main
+86,0.0,"735, 737","735, 737",0,me,me,phenomenon,phenomenon
+111,0.0,"839, 843","839, 843",0,said,said,main,main
+122,0.0,"921, 924","921, 924",0,was,was,main,main
+123,0.0,"969, 971","969, 971",0,he,he,carrier,carrier
+124,0.0,"972, 975","972, 975",0,had,had,main,main
+117,8.94427190999916,"860, 872","856, 864",10,fall in love,n't fall,main,main
+125,1.0,"976, 1003","976, 1004",1,any strong feelings for her,any strong feelings for her.,possessed,possessed
+110,0.0,"831, 833","831, 833",0,he,he,agent,agent
+126,47.01063709417264,"918, 961","899, 1004",62,he was with his ex-wife for about two years,"that, for example, he was with his ex-wife for about two years before he had any strong feelings for her.",relational,relational
+120,5.0990195135927845,"849, 893","844, 894",6,he doesn't fall in love at the drop of a hat,"that he doesn't fall in love at the drop of a hat,",action,action
+113,111.28791488746656,"831, 893","823, 1004",119,he also said that he doesn't fall in love at the drop of a hat,"However he also said that he doesn't fall in love at the drop of a hat, and that, for example, he was with his ex-wife for about two years before he had any strong feelings for her.",mental,mental
+113,111.28791488746656,"831, 893","823, 1004",119,he also said that he doesn't fall in love at the drop of a hat,"However he also said that he doesn't fall in love at the drop of a hat, and that, for example, he was with his ex-wife for about two years before he had any strong feelings for her.",three-role-cognition,three-role-cognition
+128,7.0710678118654755,"969, 1003","962, 1004",8,he had any strong feelings for her,before he had any strong feelings for her.,relational,relational
+128,7.0710678118654755,"969, 1003","962, 1004",8,he had any strong feelings for her,before he had any strong feelings for her.,possessive,possessive
+131,0.0,"1042, 1046","1042, 1046",0,been,been,main,main
+138,0.0,"1121, 1125","1121, 1125",0,this,this,carrier,carrier
+133,17.0,"1005, 1065","1022, 1065",17,The two times in my life that I have been in love previously,my life that I have been in love previously,attributive,attributive
+133,17.0,"1005, 1065","1022, 1065",17,The two times in my life that I have been in love previously,my life that I have been in love previously,relational,relational
+132,0.0,"1047, 1054","1047, 1054",0,in love,in love,attribute,attribute
+135,0.0,"1078, 1081","1078, 1081",0,was,was,main,main
+141,5.0990195135927845,"1121, 1138","1116, 1139",6,this was the case,that this was the case.,attributive,attributive
+141,5.0990195135927845,"1121, 1138","1116, 1139",6,this was the case,that this was the case.,relational,relational
+139,0.0,"1126, 1129","1126, 1129",0,was,was,main,main
+129,0.0,"1035, 1036","1035, 1036",0,I,I,affected-carrier,affected-carrier
+140,1.0,"1130, 1138","1130, 1139",1,the case,the case.,attribute,attribute
+152,10.0,"1224, 1237","1224, 1227",10,cut my losses,cut,main,main
+154,0.0,"1242, 1246","1242, 1246",0,look,look,main,main
+144,7.0,"1149, 1160","1149, 1153",7,hang around,hang,main,main
+146,2.0,"1187, 1189","1185, 1189",2,he,", he",agent,agent
+143,0.0,"1147, 1148","1147, 1148",0,I,I,agent,agent
+148,0.0,"1196, 1202","1196, 1202",0,return,return,main,main
+164,0.0,"1300, 1302","1300, 1302",0,he,he,emoter,emoter
+167,34.0,"1300, 1311","1300, 1345",34,he loves me,he loves me at this stage in the relationship,mental,mental
+166,0.0,"1309, 1311","1309, 1311",0,me,me,phenomenon,phenomenon
+161,0.0,"1263, 1268","1263, 1268",0,being,being,main,main
+165,0.0,"1303, 1308","1303, 1308",0,loves,loves,main,main
+176,2.0,"1415, 1416","1413, 1416",2,I,", I",emoter,emoter
+191,50.039984012787215,"1399, 1475","1397, 1525",52,"For the record, I have felt like telling him I love him since about February","( For the record, I have felt like telling him I love him since about February, but I didn't as I was unsure how he would react,",mental,mental
+182,0.0,"1451, 1454","1451, 1454",0,him,him,phenomenon,phenomenon
+178,5.0,"1422, 1431","1422, 1426",5,felt like,felt,main,main
+202,20.024984394500787,"1535, 1590","1555, 1591",21,aren't you supposed to wait for the man to say it first,to wait for the man to say it first?,action,action
+199,5.0,"1558, 1566","1555, 1562",7,wait for,to wait,main,main
+192,22.0,"1444, 1454","1444, 1476",22,I love him,"I love him since about February,",mental,mental
+181,0.0,"1446, 1450","1446, 1450",0,love,love,main,main
+190,0.0,"1519, 1524","1519, 1524",0,react,react,main,main
+180,0.0,"1444, 1445","1444, 1445",0,I,I,emoter,emoter
+221,4.123105625617661,"1652, 1690","1648, 1691",5,that's as far as it goes at the moment,but that's as far as it goes at the moment.,attributive,attributive
+221,4.123105625617661,"1652, 1690","1648, 1691",5,that's as far as it goes at the moment,but that's as far as it goes at the moment.,relational,relational
+204,0.0,"1597, 1601","1597, 1601",0,says,says,main,main
+215,0.0,"1652, 1656","1652, 1656",0,that,that,carrier,carrier
+208,0.0,"1605, 1610","1605, 1610",0,likes,likes,main,main
+212,0.0,"1627, 1632","1627, 1632",0,likes,likes,main,main
+210,30.01666203960727,"1624, 1646","1594, 1647",31,he likes being with me,"He says he likes me, and that he likes being with me,",mental,mental
+206,34.0,"1594, 1613","1594, 1647",34,He says he likes me,"He says he likes me, and that he likes being with me,",three-role-cognition,three-role-cognition
+209,0.0,"1611, 1613","1611, 1613",0,me,me,phenomenon,phenomenon
+216,1.0,"1657, 1658","1656, 1658",1,s,'s,main,main
+205,1.0,"1602, 1613","1602, 1614",1,he likes me,"he likes me,",mental,mental
+214,31.0,"1633, 1646","1602, 1646",31,being with me,"he likes me, and that he likes being with me",phenomenon,phenomenon
+203,0.0,"1594, 1596","1594, 1596",0,He,He,agent,agent
+207,0.0,"1602, 1604","1602, 1604",0,he,he,emoter,emoter
+224,0.0,"1698, 1705","1698, 1705",0,suppose,suppose,main,main
+119,1.0,"1706, 1720","1706, 1721",1,I do want more,I do want more.,phenomenon,phenomenon
+230,1.0,"1716, 1720","1716, 1721",1,more,more.,phenomenon,phenomenon
+225,1.0,"1706, 1720","1706, 1721",1,I do want more,I do want more.,mental,mental
+226,4.123105625617661,"1696, 1720","1692, 1721",5,I suppose I do want more,But I suppose I do want more.,mental,mental
+226,4.123105625617661,"1696, 1720","1692, 1721",5,I suppose I do want more,But I suppose I do want more.,two-role-cognition,two-role-cognition
+223,0.0,"1696, 1697","1696, 1697",0,I,I,cognizant,cognizant
+229,0.0,"1711, 1715","1711, 1715",0,want,want,main,main
+227,0.0,"1706, 1707","1706, 1707",0,I,I,emoter,emoter
+231,0.0,"1725, 1726","1725, 1726",0,I,I,agent,agent
+242,6.082762530298219,"1786, 1821","1780, 1822",7,I try to work out what I'm gonna do,while I try to work out what I'm gonna do.,influential,influential
+236,0.0,"1788, 1791","1788, 1791",0,try,try,main,main
+233,4.0,"1733, 1739","1729, 1739",4,seeing,not seeing,main,main
+235,0.0,"1786, 1787","1786, 1787",0,I,I,agent,agent
+127,1.0,"1792, 1821","1792, 1822",1,to work out what I'm gonna do,to work out what I'm gonna do.,phenomenon,phenomenon
+234,0.0,"1740, 1743","1740, 1743",0,him,him,affected,affected
+241,3.0,"1819, 1821","1816, 1821",3,do,na do,main,main
+171,0.0,"1830, 1894","1830, 1894",0,what I've written above makes him sound rather hard and uncaring,what I've written above makes him sound rather hard and uncaring,phenomenon,phenomenon
+175,0.0,"1860, 1894","1860, 1894",0,him sound rather hard and uncaring,him sound rather hard and uncaring,phenomenon,phenomenon
+201,24.0,"1830, 1894","1854, 1894",24,what I've written above makes him sound rather hard and uncaring,makes him sound rather hard and uncaring,influential,influential
+258,1.0,"1935, 1936","1934, 1936",1,s,'s,main,main
+257,0.0,"1931, 1934","1931, 1934",0,who,who,carrier,carrier
+254,1.0,"1913, 1914","1912, 1914",1,s,'s,main,main
+259,22.02271554554524,"1937, 1968","1915, 1969",23,"faithful, generous and reliable","a very nice guy who's faithful, generous and reliable.",attribute,attribute
+260,23.0,"1931, 1968","1931, 1945",23,"who's faithful, generous and reliable",who's faithful,attributive,attributive
+260,23.0,"1931, 1968","1931, 1945",23,"who's faithful, generous and reliable",who's faithful,relational,relational
+153,0.0,"1823, 1824","1823, 1824",0,I,I,cognizant,cognizant
+155,0.0,"1825, 1829","1825, 1829",0,know,know,main,main
+252,2.0,"1910, 1912","1908, 1912",2,he,", he",carrier,carrier
+250,0.0,"1854, 1859","1854, 1859",0,makes,makes,main,main
+173,17.72004514666935,"1830, 1853","1835, 1836",22,what I've written above,I,agent,agent
+172,5.0,"1823, 1894","1823, 1899",5,I know what I've written above makes him sound rather hard and uncaring,"I know what I've written above makes him sound rather hard and uncaring, but",mental,mental
+172,5.0,"1823, 1894","1823, 1899",5,I know what I've written above makes him sound rather hard and uncaring,"I know what I've written above makes him sound rather hard and uncaring, but",two-role-cognition,two-role-cognition
+261,0.0,"1970, 1972","1970, 1972",0,He,He,emoter,emoter
+265,1.0,"1970, 1993","1970, 1994",1,He just doesn't love me,He just doesn't love me.,mental,mental
+263,4.0,"1986, 1990","1982, 1990",4,love,n't love,main,main
+264,1.0,"1991, 1993","1991, 1994",1,me,me.,phenomenon,phenomenon
+270,54.230987451824994,"2021, 2036","2016, 2090",59,I'm second best,like I'm second best compared to the women he's been out with in the past.,attributive,attributive
+270,54.230987451824994,"2021, 2036","2016, 2090",59,I'm second best,like I'm second best compared to the women he's been out with in the past.,relational,relational
+267,0.0,"2002, 2007","2002, 2007",0,makes,makes,main,main
+266,0.0,"1999, 2001","1999, 2001",0,it,it,agent,agent
+268,1.0,"2008, 2089","2008, 2090",1,me feel like I'm second best compared to the women he's been out with in the past,me feel like I'm second best compared to the women he's been out with in the past.,created-phenomenon,created-phenomenon
+277,9.0,"2064, 2077","2064, 2068",9,been out with,been,main,main
+271,32.2490309931942,"1999, 2058","1995, 2090",36,it makes me feel like I'm second best compared to the women,And it makes me feel like I'm second best compared to the women he's been out with in the past.,influential,influential
+272,0.0,"2021, 2022","2021, 2022",0,I,I,carrier,carrier
+274,5.0,"2025, 2036","2025, 2031",5,second best,second,attribute,attribute
+273,1.0,"2023, 2024","2022, 2024",1,m,'m,main,main
+256,40.26164427839479,"1910, 1930","1900, 1969",49,he's a very nice guy,"actually, he's a very nice guy who's faithful, generous and reliable.",attributive,attributive
+256,40.26164427839479,"1910, 1930","1900, 1969",49,he's a very nice guy,"actually, he's a very nice guy who's faithful, generous and reliable.",relational,relational
+,
+,Manual mismatching all parsed (False Negative)
+5,"37, 84",I've been seeing this guy for about nine months,action
+1,"37, 38",I,agent
+4,"54, 62",this guy,affected
+13,"139, 177",we play in a band together at weekends,action
+17,"182, 212",He's quite a bit older than me,relational
+17,"182, 212",He's quite a bit older than me,attributive
+14,"182, 184",He,carrier
+16,"187, 212",quite a bit older than me,attribute
+29,"222, 229",he's 52,relational
+29,"222, 229",he's 52,attributive
+21,"222, 224",he,carrier
+23,"227, 229",52,attribute
+30,"231, 254",He's been married twice,relational
+30,"231, 254",He's been married twice,attributive
+24,"231, 233",He,carrier
+27,"241, 248",married,attribute
+37,"337, 345",his wife,matchee
+42,"361, 389",sees his children on Sundays,action
+46,"392, 445",I was nothing to do with the break-up of the marriage,attributive
+44,"392, 393",I,carrier
+47,"398, 445",nothing to do with the break-up of the marriage,attribute
+98,"527, 547",he was with his wife,relational
+56,"534, 547",with his wife,location
+61,"548, 572",he told her he loved her,three-role-cognition
+59,"556, 559",her,affected-cognizant
+65,"586, 597","""of course""",phenomenon
+69,"621, 626",to me,affected-cognizant
+75,"667, 670",him,affected-cognizant
+106,"687, 698",he loved me,mental
+60,"687, 689",he,emoter
+79,"696, 698",me,phenomenon
+107,"703, 737","he said that no, he didn't love me",three-role-cognition
+80,"703, 705",he,agent
+82,"716, 737","no, he didn't love me",phenomenon
+108,"720, 737",he didn't love me,mental
+89,"751, 778",I wanted someone to love me,mental
+87,"751, 752",I,emoter
+90,"760, 778",someone to love me,phenomenon
+62,"784, 799",I had better go,action
+95,"809, 821",someone else,affected-possessed
+112,"849, 893",he doesn't fall in love at the drop of a hat,phenomenon
+115,"849, 851",he,agent
+126,"918, 961",he was with his ex-wife for about two years,locational
+114,"918, 920",he,carrier
+121,"925, 941",with his ex-wife,location
+137,"1075, 1115",it was apparent after a couple of months,relational
+137,"1075, 1115",it was apparent after a couple of months,attributive
+136,"1082, 1090",apparent,attribute
+145,"1144, 1172",do I hang around in the hope,action
+156,"1178, 1214","in time, he might return my feelings",action
+149,"1203, 1214",my feelings,range
+157,"1219, 1237",do I cut my losses,action
+151,"1222, 1223",I,agent
+158,"1242, 1256",look elsewhere,action
+163,"1258, 1345",Am I being impatient to expect him to say he loves me at this stage in the relationship,relational
+163,"1258, 1345",Am I being impatient to expect him to say he loves me at this stage in the relationship,attributive
+160,"1261, 1262",I,carrier
+162,"1269, 1311",impatient to expect him to say he loves me,attribute
+174,"1350, 1372",are my feelings normal,relational
+174,"1350, 1372",are my feelings normal,attributive
+168,"1350, 1353",are,main
+169,"1354, 1365",my feelings,carrier
+170,"1366, 1372",normal,attribute
+100,"1377, 1395",his lagging behind,action
+77,"1377, 1380",his,agent
+99,"1381, 1395",lagging behind,main
+179,"1432, 1454",telling him I love him,phenomenon
+193,"1481, 1489",I didn't,mental
+193,"1481, 1489",I didn't,three-role-cognition
+183,"1481, 1482",I,agent
+194,"1493, 1524",I was unsure how he would react,mental
+194,"1493, 1524",I was unsure how he would react,two-role-cognition
+185,"1493, 1494",I,cognizant
+187,"1499, 1505",unsure,main
+109,"1510, 1524",he would react,phenomenon
+195,"1510, 1524",he would react,action
+188,"1510, 1512",he,agent
+197,"1542, 1545",you,agent
+200,"1567, 1574",the man,range
+206,"1594, 1613",He says he likes me,mental
+118,"1602, 1613",he likes me,phenomenon
+211,"1624, 1626",he,emoter
+217,"1659, 1676",as far as it goes,attribute
+239,"1725, 1779",I'm not seeing him at all for the next couple of weeks,action
+243,"1809, 1821",I'm gonna do,action
+238,"1809, 1810",I,agent
+255,"1915, 1930",a very nice guy,attribute
+280,"2049, 2089",the women he's been out with in the past,action
+213,"2049, 2058",the women,affected
+275,"2059, 2061",he,agent
+284,"2091, 2134",Any sincere replies are greatly appreciated,relational
+284,"2091, 2134",Any sincere replies are greatly appreciated,attributive
+281,"2091, 2110",Any sincere replies,carrier
+282,"2111, 2114",are,main
+283,"2115, 2134",greatly appreciated,attribute
+,
+,Parsed mismatching all manual (False Positives)
+25,"25, 27",Hi,main
+97,"97, 101",", we",agent
+97,"97, 101",", we",agent-cognizant
+97,"97, 101",", we",affected-carrier
+97,"97, 101",", we",agent-carrier
+97,"97, 101",", we",agent-perceiver
+97,"97, 101",", we",perceiver
+139,"139, 141",we,agent-perceiver
+139,"139, 141",we,perceiver
+86,"86, 181","Before that, we were friends for a couple of years ( we play in a band together at weekends ) .",process
+86,"86, 181","Before that, we were friends for a couple of years ( we play in a band together at weekends ) .",locational
+86,"86, 181","Before that, we were friends for a couple of years ( we play in a band together at weekends ) .",two-role-action
+147,"147, 156",in a band,attribute
+107,"107, 181",friends for a couple of years ( we play in a band together at weekends ) .,location
+107,"107, 181",friends for a couple of years ( we play in a band together at weekends ) .,range
+137,"137, 181",( we play in a band together at weekends ) .,process
+137,"137, 181",( we play in a band together at weekends ) .,attributive
+137,"137, 181",( we play in a band together at weekends ) .,relational
+166,"166, 177",at weekends,attribute
+212,"212, 220",", I'm 30",process
+212,"212, 220",", I'm 30",locational
+218,"218, 220",30,location
+212,"212, 215",", I",affected-carrier
+212,"212, 215",", I",agent-carrier
+288,"288, 309",", and they have twins",process
+288,"288, 309",", and they have twins",causative
+288,"288, 309",", and they have twins",two-role-action
+288,"288, 309",", and they have twins",action
+304,"304, 309",twins,phenomenon
+304,"304, 309",twins,affected-emoter
+304,"304, 309",twins,created-phenomenon
+304,"304, 309",twins,affected-path
+304,"304, 309",twins,affected-perceiver
+304,"304, 309",twins,affected-cognizant
+304,"304, 309",twins,affected-carrier
+304,"304, 309",twins,affected-destination
+304,"304, 309",twins,affected
+304,"304, 309",twins,affected-possessed
+304,"304, 309",twins,affected-source
+304,"304, 309",twins,created
+316,"316, 318",7.,affected-emoter
+316,"316, 318",7.,affected-path
+316,"316, 318",7.,affected-perceiver
+316,"316, 318",7.,affected-cognizant
+316,"316, 318",7.,affected-carrier
+316,"316, 318",7.,affected-destination
+316,"316, 318",7.,affected
+316,"316, 318",7.,affected-possessed
+316,"316, 318",7.,affected-source
+311,"311, 315",aged,main
+294,"294, 298",they,agent
+294,"294, 298",they,agent-cognizant
+294,"294, 298",they,affected-carrier
+294,"294, 298",they,affected
+294,"294, 298",they,agent-carrier
+294,"294, 298",they,agent-perceiver
+294,"294, 298",they,perceiver
+254,"254, 288",; the last time for about 13 years,process
+254,"254, 288",; the last time for about 13 years,two-role-action
+254,"254, 288",; the last time for about 13 years,action
+254,"254, 288",; the last time for about 13 years,agent
+254,"254, 288",; the last time for about 13 years,agent-cognizant
+254,"254, 288",; the last time for about 13 years,agent-carrier
+254,"254, 288",; the last time for about 13 years,agent-perceiver
+406,"406, 457","to do with the break-up of the marriage, by the way",process
+406,"406, 457","to do with the break-up of the marriage, by the way",matching
+406,"406, 457","to do with the break-up of the marriage, by the way",possessive
+379,"379, 461","on Sundays ( I was nothing to do with the break-up of the marriage, by the way ) .",phenomenon
+379,"379, 461","on Sundays ( I was nothing to do with the break-up of the marriage, by the way ) .",created-phenomenon
+379,"379, 461","on Sundays ( I was nothing to do with the break-up of the marriage, by the way ) .",created
+406,"406, 411",to do,main
+412,"412, 445",with the break-up of the marriage,affected-possessed
+412,"412, 445",with the break-up of the marriage,matchee
+412,"412, 445",with the break-up of the marriage,possessed
+447,"447, 457",by the way,affected-possessed
+447,"447, 457",by the way,possessed
+366,"366, 378",his children,phenomenon
+366,"366, 378",his children,affected-emoter
+366,"366, 378",his children,created-phenomenon
+366,"366, 378",his children,affected-path
+366,"366, 378",his children,affected-perceiver
+366,"366, 378",his children,affected-cognizant
+366,"366, 378",his children,affected-carrier
+366,"366, 378",his children,affected-destination
+366,"366, 378",his children,affected-possessed
+366,"366, 378",his children,matchee
+366,"366, 378",his children,affected-source
+366,"366, 378",his children,created
+366,"366, 378",his children,range
+357,"357, 461","and sees his children on Sundays ( I was nothing to do with the break-up of the marriage, by the way ) .",process
+357,"357, 461","and sees his children on Sundays ( I was nothing to do with the break-up of the marriage, by the way ) .",matching
+357,"357, 461","and sees his children on Sundays ( I was nothing to do with the break-up of the marriage, by the way ) .",causative
+357,"357, 461","and sees his children on Sundays ( I was nothing to do with the break-up of the marriage, by the way ) .",relational
+357,"357, 461","and sees his children on Sundays ( I was nothing to do with the break-up of the marriage, by the way ) .",two-role-action
+319,"319, 321",He,agent
+319,"319, 321",He,agent-cognizant
+319,"319, 321",He,affected-carrier
+319,"319, 321",He,agent-perceiver
+319,"319, 321",He,carrier
+319,"319, 356",He separated from his wife a year ago,process
+319,"319, 356",He separated from his wife a year ago,locational
+485,"485, 489",", we",agent-cognizant
+485,"485, 489",", we",agent-carrier
+485,"485, 489",", we",agent-perceiver
+534,"534, 547",with his wife,matchee
+577,"577, 579",he,cognizant
+577,"577, 579",he,agent-cognizant
+577,"577, 579",he,affected-cognizant
+577,"577, 579",he,agent-carrier
+577,"577, 579",he,agent-perceiver
+577,"577, 579",he,perceiver
+569,"569, 572",her,created-phenomenon
+560,"560, 562",he,affected-emoter
+560,"560, 562",he,emoter
+560,"560, 572",he loved her,process
+560,"560, 572",he loved her,emotive
+462,"462, 502","Anyway, a few weeks ago, we were talking",process
+462,"462, 502","Anyway, a few weeks ago, we were talking",one-role-action
+519,"519, 559",if when he was with his wife he told her,process
+519,"519, 559",if when he was with his wife he told her,two-role-perception
+573,"573, 597","and he said, ""of course""",process
+573,"573, 597","and he said, ""of course""",two-role-cognition
+573,"573, 597","and he said, ""of course""",two-role-perception
+573,"573, 597","and he said, ""of course""",two-role-action
+573,"573, 597","and he said, ""of course""",action
+515,"515, 518",him,phenomenon
+515,"515, 518",him,created-phenomenon
+515,"515, 518",him,cognizant
+515,"515, 518",him,affected
+563,"563, 568",loved,main
+527,"527, 529",he,agent
+527,"527, 529",he,cognizant
+527,"527, 529",he,agent-cognizant
+527,"527, 529",he,affected-cognizant
+527,"527, 529",he,affected-carrier
+527,"527, 529",he,agent-carrier
+527,"527, 529",he,agent-perceiver
+527,"527, 529",he,perceiver
+522,"522, 547",when he was with his wife,process
+522,"522, 547",when he was with his wife,matching
+522,"522, 547",when he was with his wife,mental
+522,"522, 547",when he was with his wife,two-role-cognition
+556,"556, 559",her,created-phenomenon
+522,"522, 526",when,phenomenon
+522,"522, 526",when,created-phenomenon
+522,"522, 526",when,location
+522,"522, 526",when,matchee
+548,"548, 550",he,agent-perceiver
+548,"548, 550",he,perceiver
+503,"503, 597","and I asked him if when he was with his wife he told her he loved her and he said, ""of course""",process
+503,"503, 597","and I asked him if when he was with his wife he told her he loved her and he said, ""of course""",mental
+507,"507, 508",I,agent-cognizant
+507,"507, 508",I,agent-carrier
+507,"507, 508",I,agent-perceiver
+627,"627, 643",that he loves me,process
+627,"627, 643",that he loves me,emotive
+641,"641, 643",me,created-phenomenon
+711,"711, 738","that no, he didn't love me,",process
+711,"711, 738","that no, he didn't love me,",emotive
+784,"784, 785",I,affected-carrier
+784,"784, 785",I,affected
+784,"784, 785",I,agent-carrier
+784,"784, 785",I,agent-perceiver
+784,"784, 785",I,carrier
+784,"784, 785",I,perceiver
+603,"603, 609",", he's",cognizant
+603,"603, 609",", he's",agent-cognizant
+603,"603, 609",", he's",affected-cognizant
+603,"603, 609",", he's",agent-carrier
+603,"603, 609",", he's",agent-perceiver
+603,"603, 609",", he's",perceiver
+718,"718, 722",", he",affected-emoter
+800,"800, 808",and find,process
+648,"648, 698",last night I asked him straight out if he loved me,process
+667,"667, 698",him straight out if he loved me,created-phenomenon
+809,"809, 822",someone else.,attribute
+809,"809, 822",someone else.,destination
+809,"809, 822",someone else.,location
+809,"809, 822",someone else.,affected-destination
+809,"809, 822",someone else.,matchee
+599,"599, 647","Well, he's never said to me that he loves me, so",process
+599,"599, 647","Well, he's never said to me that he loves me, so",two-role-cognition
+599,"599, 647","Well, he's never said to me that he loves me, so",two-role-perception
+627,"627, 643",that he loves me,created-phenomenon
+779,"779, 799",that I had better go,process
+779,"779, 799",that I had better go,attributive
+779,"779, 799",that I had better go,matching
+779,"779, 799",that I had better go,locational
+779,"779, 799",that I had better go,directional
+779,"779, 799",that I had better go,relational
+632,"632, 634",he,affected-emoter
+768,"768, 775",to love,main
+659,"659, 660",I,agent-cognizant
+659,"659, 660",I,agent-carrier
+659,"659, 660",I,agent-perceiver
+735,"735, 737",me,created-phenomenon
+925,"925, 961",with his ex-wife for about two years,matchee
+849,"849, 851",he,affected-emoter
+849,"849, 851",he,affected-path
+849,"849, 851",he,affected-perceiver
+849,"849, 851",he,affected-cognizant
+849,"849, 851",he,affected-carrier
+849,"849, 851",he,affected-destination
+849,"849, 851",he,affected
+849,"849, 851",he,affected-possessed
+849,"849, 851",he,affected-source
+899,"899, 1004","that, for example, he was with his ex-wife for about two years before he had any strong feelings for her.",phenomenon
+899,"899, 1004","that, for example, he was with his ex-wife for about two years before he had any strong feelings for her.",created-phenomenon
+916,"916, 920",", he",agent
+916,"916, 920",", he",agent-perceiver
+916,"916, 920",", he",perceiver
+969,"969, 971",he,affected-carrier
+969,"969, 971",he,agent-carrier
+976,"976, 1004",any strong feelings for her.,affected
+976,"976, 1004",any strong feelings for her.,affected-possessed
+831,"831, 833",he,cognizant
+831,"831, 833",he,agent-cognizant
+831,"831, 833",he,affected-cognizant
+831,"831, 833",he,agent-carrier
+831,"831, 833",he,agent-perceiver
+831,"831, 833",he,perceiver
+899,"899, 1004","that, for example, he was with his ex-wife for about two years before he had any strong feelings for her.",process
+899,"899, 1004","that, for example, he was with his ex-wife for about two years before he had any strong feelings for her.",matching
+844,"844, 894","that he doesn't fall in love at the drop of a hat,",process
+844,"844, 894","that he doesn't fall in love at the drop of a hat,",one-role-action
+823,"823, 1004","However he also said that he doesn't fall in love at the drop of a hat, and that, for example, he was with his ex-wife for about two years before he had any strong feelings for her.",process
+823,"823, 1004","However he also said that he doesn't fall in love at the drop of a hat, and that, for example, he was with his ex-wife for about two years before he had any strong feelings for her.",two-role-cognition
+823,"823, 1004","However he also said that he doesn't fall in love at the drop of a hat, and that, for example, he was with his ex-wife for about two years before he had any strong feelings for her.",two-role-perception
+962,"962, 1004",before he had any strong feelings for her.,process
+1121,"1121, 1125",this,affected-carrier
+1121,"1121, 1125",this,agent-carrier
+1022,"1022, 1065",my life that I have been in love previously,process
+1022,"1022, 1065",my life that I have been in love previously,locational
+1022,"1022, 1065",my life that I have been in love previously,two-role-action
+1022,"1022, 1065",my life that I have been in love previously,action
+1022,"1022, 1065",my life that I have been in love previously,one-role-action
+1065,"1065, 1074",", though,",affected-emoter
+1065,"1065, 1074",", though,",agent
+1065,"1065, 1074",", though,",affected-path
+1065,"1065, 1074",", though,",affected-perceiver
+1065,"1065, 1074",", though,",agent-cognizant
+1065,"1065, 1074",", though,",affected-cognizant
+1065,"1065, 1074",", though,",affected-carrier
+1065,"1065, 1074",", though,",affected-destination
+1065,"1065, 1074",", though,",affected
+1065,"1065, 1074",", though,",agent-carrier
+1065,"1065, 1074",", though,",affected-possessed
+1065,"1065, 1074",", though,",agent-perceiver
+1065,"1065, 1074",", though,",affected-source
+1047,"1047, 1054",in love,location
+1047,"1047, 1054",in love,range
+1005,"1005, 1139","The two times in my life that I have been in love previously, though, it was apparent after a couple of months that this was the case.",process
+1005,"1005, 1139","The two times in my life that I have been in love previously, though, it was apparent after a couple of months that this was the case.",two-role-action
+1005,"1005, 1139","The two times in my life that I have been in love previously, though, it was apparent after a couple of months that this was the case.",action
+1005,"1005, 1065",The two times in my life that I have been in love previously,affected-emoter
+1005,"1005, 1065",The two times in my life that I have been in love previously,agent
+1005,"1005, 1065",The two times in my life that I have been in love previously,affected-path
+1005,"1005, 1065",The two times in my life that I have been in love previously,affected-perceiver
+1005,"1005, 1065",The two times in my life that I have been in love previously,agent-cognizant
+1005,"1005, 1065",The two times in my life that I have been in love previously,affected-cognizant
+1005,"1005, 1065",The two times in my life that I have been in love previously,affected-destination
+1005,"1005, 1065",The two times in my life that I have been in love previously,affected
+1005,"1005, 1065",The two times in my life that I have been in love previously,agent-carrier
+1005,"1005, 1065",The two times in my life that I have been in love previously,affected-possessed
+1005,"1005, 1065",The two times in my life that I have been in love previously,agent-perceiver
+1005,"1005, 1065",The two times in my life that I have been in love previously,affected-source
+1116,"1116, 1139",that this was the case.,process
+1116,"1116, 1139",that this was the case.,locational
+1091,"1091, 1115",after a couple of months,affected-emoter
+1091,"1091, 1115",after a couple of months,affected-path
+1091,"1091, 1115",after a couple of months,affected-perceiver
+1091,"1091, 1115",after a couple of months,affected-cognizant
+1091,"1091, 1115",after a couple of months,affected-carrier
+1091,"1091, 1115",after a couple of months,affected-destination
+1091,"1091, 1115",after a couple of months,affected
+1091,"1091, 1115",after a couple of months,affected-possessed
+1091,"1091, 1115",after a couple of months,affected-source
+1035,"1035, 1036",I,agent
+1035,"1035, 1036",I,agent-cognizant
+1035,"1035, 1036",I,affected
+1035,"1035, 1036",I,agent-carrier
+1035,"1035, 1036",I,agent-perceiver
+1035,"1035, 1036",I,carrier
+1035,"1035, 1036",I,perceiver
+1130,"1130, 1139",the case.,location
+1228,"1228, 1237",my losses,attribute
+1228,"1228, 1237",my losses,affected-carrier
+1228,"1228, 1237",my losses,affected
+1228,"1228, 1237",my losses,carrier
+1203,"1203, 1214",my feelings,phenomenon
+1203,"1203, 1214",my feelings,created-phenomenon
+1203,"1203, 1214",my feelings,destination
+1203,"1203, 1214",my feelings,affected-carrier
+1203,"1203, 1214",my feelings,affected-destination
+1203,"1203, 1214",my feelings,affected
+1203,"1203, 1214",my feelings,carrier
+1178,"1178, 1185",in time,destination
+1178,"1178, 1185",in time,affected-destination
+1178,"1178, 1185",in time,affected-possessed
+1178,"1178, 1185",in time,possessed
+1216,"1216, 1237",or do I cut my losses,process
+1216,"1216, 1237",or do I cut my losses,attributive
+1216,"1216, 1237",or do I cut my losses,relational
+1161,"1161, 1172",in the hope,location
+1140,"1140, 1215","So, do I hang around in the hope that in time, he might return my feelings,",process
+1140,"1140, 1215","So, do I hang around in the hope that in time, he might return my feelings,",locational
+1140,"1140, 1215","So, do I hang around in the hope that in time, he might return my feelings,",relational
+1185,"1185, 1189",", he",cognizant
+1185,"1185, 1189",", he",agent-cognizant
+1185,"1185, 1189",", he",agent-carrier
+1185,"1185, 1189",", he",agent-perceiver
+1185,"1185, 1189",", he",perceiver
+1147,"1147, 1148",I,agent-perceiver
+1147,"1147, 1148",I,perceiver
+1289,"1289, 1345",him to say he loves me at this stage in the relationship,process
+1289,"1289, 1345",him to say he loves me at this stage in the relationship,two-role-cognition
+1289,"1289, 1345",him to say he loves me at this stage in the relationship,two-role-perception
+1289,"1289, 1345",him to say he loves me at this stage in the relationship,three-role-cognition
+1289,"1289, 1292",him,agent
+1289,"1289, 1292",him,cognizant
+1289,"1289, 1292",him,agent-cognizant
+1289,"1289, 1292",him,affected-cognizant
+1289,"1289, 1292",him,agent-carrier
+1289,"1289, 1292",him,agent-perceiver
+1289,"1289, 1292",him,perceiver
+1300,"1300, 1302",he,affected-emoter
+1300,"1300, 1345",he loves me at this stage in the relationship,created-phenomenon
+1293,"1293, 1299",to say,main
+1300,"1300, 1345",he loves me at this stage in the relationship,process
+1300,"1300, 1345",he loves me at this stage in the relationship,emotive
+1279,"1279, 1288",to expect,main
+1309,"1309, 1311",me,created-phenomenon
+1413,"1413, 1416",", I",affected-emoter
+1413,"1413, 1416",", I",affected-carrier
+1413,"1413, 1416",", I",agent-carrier
+1413,"1413, 1416",", I",carrier
+1397,"1397, 1525","( For the record, I have felt like telling him I love him since about February, but I didn't as I was unsure how he would react,",process
+1397,"1397, 1525","( For the record, I have felt like telling him I love him since about February, but I didn't as I was unsure how he would react,",attributive
+1397,"1397, 1525","( For the record, I have felt like telling him I love him since about February, but I didn't as I was unsure how he would react,",relational
+1397,"1397, 1525","( For the record, I have felt like telling him I love him since about February, but I didn't as I was unsure how he would react,",emotive
+1397,"1397, 1525","( For the record, I have felt like telling him I love him since about February, but I didn't as I was unsure how he would react,",desiderative
+1451,"1451, 1454",him,created-phenomenon
+1546,"1546, 1591",supposed to wait for the man to say it first?,process
+1546,"1546, 1591",supposed to wait for the man to say it first?,mental
+1546,"1546, 1591",supposed to wait for the man to say it first?,two-role-cognition
+1546,"1546, 1591",supposed to wait for the man to say it first?,two-role-perception
+1555,"1555, 1591",to wait for the man to say it first?,phenomenon
+1555,"1555, 1591",to wait for the man to say it first?,created-phenomenon
+1555,"1555, 1591",to wait for the man to say it first?,process
+1555,"1555, 1591",to wait for the man to say it first?,two-role-action
+1563,"1563, 1591",for the man to say it first?,affected-emoter
+1563,"1563, 1591",for the man to say it first?,affected-path
+1563,"1563, 1591",for the man to say it first?,affected-perceiver
+1563,"1563, 1591",for the man to say it first?,affected-cognizant
+1563,"1563, 1591",for the man to say it first?,affected-carrier
+1563,"1563, 1591",for the man to say it first?,affected-destination
+1563,"1563, 1591",for the man to say it first?,affected
+1563,"1563, 1591",for the man to say it first?,affected-possessed
+1563,"1563, 1591",for the man to say it first?,affected-source
+1575,"1575, 1591",to say it first?,process
+1575,"1575, 1591",to say it first?,mental
+1575,"1575, 1591",to say it first?,two-role-cognition
+1575,"1575, 1591",to say it first?,two-role-perception
+1575,"1575, 1591",to say it first?,three-role-cognition
+1575,"1575, 1591",to say it first?,two-role-action
+1575,"1575, 1591",to say it first?,action
+1444,"1444, 1476","I love him since about February,",process
+1444,"1444, 1476","I love him since about February,",emotive
+1546,"1546, 1554",supposed,main
+1575,"1575, 1581",to say,main
+1495,"1495, 1498",was,main
+1582,"1582, 1584",it,phenomenon
+1582,"1582, 1584",it,created-phenomenon
+1582,"1582, 1584",it,range
+1403,"1403, 1413",the record,phenomenon
+1403,"1403, 1413",the record,attribute
+1403,"1403, 1413",the record,created-phenomenon
+1432,"1432, 1439",telling,main
+1444,"1444, 1445",I,affected-emoter
+1483,"1483, 1489",didn't,main
+1535,"1535, 1541",aren't,main
+1633,"1633, 1646",being with me,process
+1633,"1633, 1646",being with me,matching
+1633,"1633, 1646",being with me,relational
+1648,"1648, 1691",but that's as far as it goes at the moment.,process
+1648,"1648, 1691",but that's as far as it goes at the moment.,locational
+1652,"1652, 1656",that,affected-carrier
+1652,"1652, 1656",that,agent-carrier
+1639,"1639, 1646",with me,matchee
+1633,"1633, 1638",being,main
+1594,"1594, 1647","He says he likes me, and that he likes being with me,",process
+1594,"1594, 1647","He says he likes me, and that he likes being with me,",two-role-cognition
+1594,"1594, 1647","He says he likes me, and that he likes being with me,",two-role-perception
+1611,"1611, 1613",me,created-phenomenon
+1602,"1602, 1614","he likes me,",process
+1602,"1602, 1614","he likes me,",emotive
+1602,"1602, 1614","he likes me,",desiderative
+1602,"1602, 1646","he likes me, and that he likes being with me",created-phenomenon
+1594,"1594, 1596",He,cognizant
+1594,"1594, 1596",He,agent-cognizant
+1594,"1594, 1596",He,affected-cognizant
+1594,"1594, 1596",He,agent-carrier
+1594,"1594, 1596",He,agent-perceiver
+1594,"1594, 1596",He,perceiver
+1602,"1602, 1604",he,affected-emoter
+1706,"1706, 1721",I do want more.,created-phenomenon
+1716,"1716, 1721",more.,created-phenomenon
+1706,"1706, 1721",I do want more.,process
+1706,"1706, 1721",I do want more.,desiderative
+1692,"1692, 1721",But I suppose I do want more.,process
+1692,"1692, 1721",But I suppose I do want more.,two-role-perception
+1696,"1696, 1697",I,agent
+1696,"1696, 1697",I,agent-cognizant
+1696,"1696, 1697",I,agent-perceiver
+1696,"1696, 1697",I,perceiver
+1706,"1706, 1707",I,affected-emoter
+1725,"1725, 1726",I,cognizant
+1725,"1725, 1726",I,affected-perceiver
+1725,"1725, 1726",I,agent-cognizant
+1725,"1725, 1726",I,affected-cognizant
+1725,"1725, 1726",I,affected
+1725,"1725, 1726",I,agent-carrier
+1725,"1725, 1726",I,agent-perceiver
+1725,"1725, 1726",I,perceiver
+1780,"1780, 1822",while I try to work out what I'm gonna do.,process
+1780,"1780, 1822",while I try to work out what I'm gonna do.,tentative
+1813,"1813, 1816",gon,main
+1792,"1792, 1799",to work,main
+1751,"1751, 1779",for the next couple of weeks,phenomenon
+1751,"1751, 1779",for the next couple of weeks,affected-emoter
+1751,"1751, 1779",for the next couple of weeks,created-phenomenon
+1751,"1751, 1779",for the next couple of weeks,affected-path
+1751,"1751, 1779",for the next couple of weeks,affected-perceiver
+1751,"1751, 1779",for the next couple of weeks,affected-cognizant
+1751,"1751, 1779",for the next couple of weeks,affected-carrier
+1751,"1751, 1779",for the next couple of weeks,affected-destination
+1751,"1751, 1779",for the next couple of weeks,affected
+1751,"1751, 1779",for the next couple of weeks,affected-possessed
+1751,"1751, 1779",for the next couple of weeks,affected-source
+1751,"1751, 1779",for the next couple of weeks,created
+1722,"1722, 1822",So I'm not seeing him at all for the next couple of weeks while I try to work out what I'm gonna do.,process
+1722,"1722, 1822",So I'm not seeing him at all for the next couple of weeks while I try to work out what I'm gonna do.,matching
+1722,"1722, 1822",So I'm not seeing him at all for the next couple of weeks while I try to work out what I'm gonna do.,causative
+1722,"1722, 1822",So I'm not seeing him at all for the next couple of weeks while I try to work out what I'm gonna do.,relational
+1722,"1722, 1822",So I'm not seeing him at all for the next couple of weeks while I try to work out what I'm gonna do.,two-role-cognition
+1722,"1722, 1822",So I'm not seeing him at all for the next couple of weeks while I try to work out what I'm gonna do.,two-role-perception
+1722,"1722, 1822",So I'm not seeing him at all for the next couple of weeks while I try to work out what I'm gonna do.,two-role-action
+1786,"1786, 1787",I,agent-cognizant
+1786,"1786, 1787",I,agent-carrier
+1786,"1786, 1787",I,agent-perceiver
+1792,"1792, 1822",to work out what I'm gonna do.,created-phenomenon
+1740,"1740, 1743",him,phenomenon
+1740,"1740, 1743",him,affected-emoter
+1740,"1740, 1743",him,created-phenomenon
+1740,"1740, 1743",him,affected-path
+1740,"1740, 1743",him,affected-perceiver
+1740,"1740, 1743",him,affected-cognizant
+1740,"1740, 1743",him,affected-carrier
+1740,"1740, 1743",him,affected-destination
+1740,"1740, 1743",him,affected-possessed
+1740,"1740, 1743",him,matchee
+1740,"1740, 1743",him,affected-source
+1740,"1740, 1743",him,created
+1740,"1740, 1743",him,range
+1830,"1830, 1894",what I've written above makes him sound rather hard and uncaring,created-phenomenon
+1860,"1860, 1894",him sound rather hard and uncaring,created-phenomenon
+1860,"1860, 1894",him sound rather hard and uncaring,created
+1854,"1854, 1894",makes him sound rather hard and uncaring,process
+1854,"1854, 1894",makes him sound rather hard and uncaring,causative
+1870,"1870, 1894",rather hard and uncaring,attribute
+1870,"1870, 1894",rather hard and uncaring,range
+1860,"1860, 1894",him sound rather hard and uncaring,process
+1860,"1860, 1894",him sound rather hard and uncaring,attributive
+1860,"1860, 1894",him sound rather hard and uncaring,relational
+1860,"1860, 1894",him sound rather hard and uncaring,two-role-action
+1900,"1900, 1969","actually, he's a very nice guy who's faithful, generous and reliable.",process
+1900,"1900, 1969","actually, he's a very nice guy who's faithful, generous and reliable.",locational
+1931,"1931, 1934",who,affected-carrier
+1931,"1931, 1934",who,agent-carrier
+1860,"1860, 1863",him,agent
+1860,"1860, 1863",him,agent-cognizant
+1860,"1860, 1863",him,affected-carrier
+1860,"1860, 1863",him,agent-carrier
+1860,"1860, 1863",him,agent-perceiver
+1860,"1860, 1863",him,carrier
+1937,"1937, 1945",faithful,location
+1864,"1864, 1869",sound,main
+1915,"1915, 1969","a very nice guy who's faithful, generous and reliable.",location
+1931,"1931, 1945",who's faithful,process
+1931,"1931, 1945",who's faithful,locational
+1823,"1823, 1824",I,agent-cognizant
+1823,"1823, 1824",I,affected-cognizant
+1830,"1830, 1834",what,created-phenomenon
+1830,"1830, 1834",what,created
+1830,"1830, 1834",what,range
+1908,"1908, 1912",", he",affected-carrier
+1908,"1908, 1912",", he",agent-carrier
+1835,"1835, 1836",I,agent-cognizant
+1835,"1835, 1836",I,agent-carrier
+1835,"1835, 1836",I,agent-perceiver
+1830,"1830, 1894",what I've written above makes him sound rather hard and uncaring,process
+1830,"1830, 1894",what I've written above makes him sound rather hard and uncaring,two-role-action
+1830,"1830, 1894",what I've written above makes him sound rather hard and uncaring,action
+1840,"1840, 1847",written,main
+1823,"1823, 1899","I know what I've written above makes him sound rather hard and uncaring, but",process
+1970,"1970, 1972",He,affected-emoter
+1970,"1970, 1994",He just doesn't love me.,process
+1970,"1970, 1994",He just doesn't love me.,emotive
+1991,"1991, 1994",me.,created-phenomenon
+2069,"2069, 2090",out with in the past.,attribute
+2016,"2016, 2090",like I'm second best compared to the women he's been out with in the past.,process
+2016,"2016, 2090",like I'm second best compared to the women he's been out with in the past.,locational
+1999,"1999, 2001",it,agent-cognizant
+1999,"1999, 2001",it,agent-carrier
+1999,"1999, 2001",it,agent-perceiver
+2008,"2008, 2090",me feel like I'm second best compared to the women he's been out with in the past.,phenomenon
+2008,"2008, 2090",me feel like I'm second best compared to the women he's been out with in the past.,created
+1995,"1995, 2090",And it makes me feel like I'm second best compared to the women he's been out with in the past.,process
+1995,"1995, 2090",And it makes me feel like I'm second best compared to the women he's been out with in the past.,causative
+2059,"2059, 2061",he,affected-carrier
+2059,"2059, 2061",he,agent-carrier
+2059,"2059, 2061",he,carrier
+2011,"2011, 2015",feel,main
+2021,"2021, 2022",I,affected-carrier
+2021,"2021, 2022",I,agent-carrier
+2025,"2025, 2031",second,location
+2059,"2059, 2090",he's been out with in the past.,process
+2059,"2059, 2090",he's been out with in the past.,attributive
+2059,"2059, 2090",he's been out with in the past.,relational
+2123,"2123, 2134",appreciated,main
+1005,"1005, 1065",The two times in my life that I have been in love previously,affected-carrier
+1289,"1289, 1345",him to say he loves me at this stage in the relationship,mental
+1300,"1300, 1345",he loves me at this stage in the relationship,phenomenon
+1937,"1937, 1945",faithful,attribute

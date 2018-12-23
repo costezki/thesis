@@ -1,0 +1,402 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.21282798833819241
+,Recall,0.6033057851239669
+,F1,0.3146551724137931
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+18,18.0,"49, 75","67, 75",18,a lifetime eating disorder,disorder,affected-possessed,affected-possessed
+5,3.0,"104, 106","101, 106",3,be,to be,main,main
+6,7.0,"116, 130","116, 123",7,started out as,started,main,main
+9,1.0,"168, 169","167, 169",1,m,'m,main,main
+66,1.0,"166, 182","166, 183",1,I'm 44 years old,I'm 44 years old.,attributive,attributive
+66,1.0,"166, 182","166, 183",1,I'm 44 years old,I'm 44 years old.,relational,relational
+8,0.0,"166, 167","166, 167",0,I,I,carrier,carrier
+10,9.055385138137417,"170, 182","179, 183",10,44 years old,old.,attribute,attribute
+14,12.0,"195, 236","195, 248",12,self-acceptance an immensely helpful tool,self-acceptance an immensely helpful tool in the past,phenomenon,phenomenon
+17,22.80350850198276,"269, 352","287, 338",32,"wonderful to read the thought-provoking, intelligent and feisty posts in this group","the thought-provoking, intelligent and feisty posts",phenomenon,phenomenon
+11,0.0,"184, 185","184, 185",0,I,I,cognizant,cognizant
+12,0.0,"189, 194","189, 194",0,found,found,main,main
+67,0.0,"184, 248","184, 248",0,I've found self-acceptance an immensely helpful tool in the past,I've found self-acceptance an immensely helpful tool in the past,mental,mental
+67,0.0,"184, 248","184, 248",0,I've found self-acceptance an immensely helpful tool in the past,I've found self-acceptance an immensely helpful tool in the past,two-role-cognition,two-role-cognition
+68,26.019223662515376,"253, 352","279, 353",27,"it always feels wonderful to read the thought-provoking, intelligent and feisty posts in this group","to read the thought-provoking, intelligent and feisty posts in this group!",mental,mental
+16,0.0,"263, 268","263, 268",0,feels,feels,main,main
+95,0.0,"478, 487","478, 487",0,conquered,conquered,main,main
+100,0.0,"517, 521","517, 521",0,took,took,main,main
+99,0.0,"514, 516","514, 516",0,it,it,carrier,carrier
+25,16.0,"412, 457","428, 457",16,anyone here has words of encouragement for me,words of encouragement for me,phenomenon,phenomenon
+91,7.0,"428, 450","428, 457",7,words of encouragement,words of encouragement for me,possessed,possessed
+24,0.0,"399, 408","399, 408",0,wondering,wondering,main,main
+90,0.0,"424, 427","424, 427",0,has,has,main,main
+92,3.0,"412, 457","409, 457",3,anyone here has words of encouragement for me,if anyone here has words of encouragement for me,relational,relational
+92,3.0,"412, 457","409, 457",3,anyone here has words of encouragement for me,if anyone here has words of encouragement for me,possessive,possessive
+89,5.0,"412, 423","412, 418",5,anyone here,anyone,carrier,carrier
+101,4.123105625617661,"505, 521","501, 522",5,how long it took,and how long it took.,relational,relational
+30,0.0,"529, 533","529, 533",0,been,been,main,main
+31,94.0,"534, 544","534, 638",94,in therapy,"in therapy several years, I'm doing some conscious eating exercises at present and I exercise regularly.",location,location
+35,51.62363799656123,"570, 601","534, 638",73,some conscious eating exercises,"in therapy several years, I'm doing some conscious eating exercises at present and I exercise regularly.",range,range
+71,80.0,"524, 558","524, 638",80,I've been in therapy several years,"I've been in therapy several years, I'm doing some conscious eating exercises at present and I exercise regularly.",locational,locational
+71,80.0,"524, 558","524, 638",80,I've been in therapy several years,"I've been in therapy several years, I'm doing some conscious eating exercises at present and I exercise regularly.",relational,relational
+72,44.40720662234904,"560, 612","524, 638",62,I'm doing some conscious eating exercises at present,"I've been in therapy several years, I'm doing some conscious eating exercises at present and I exercise regularly.",action,action
+28,0.0,"524, 525","524, 525",0,I,I,affected-carrier,affected-carrier
+41,1.0,"647, 735","647, 736",1,"I could use some encouragement and advice on becoming more assertive, among other things","I could use some encouragement and advice on becoming more assertive, among other things.",phenomenon,phenomenon
+39,0.0,"640, 641","640, 641",0,I,I,cognizant,cognizant
+40,0.0,"642, 646","642, 646",0,know,know,main,main
+74,1.0,"640, 735","640, 736",1,"I know I could use some encouragement and advice on becoming more assertive, among other things","I know I could use some encouragement and advice on becoming more assertive, among other things.",mental,mental
+74,1.0,"640, 735","640, 736",1,"I know I could use some encouragement and advice on becoming more assertive, among other things","I know I could use some encouragement and advice on becoming more assertive, among other things.",two-role-cognition,two-role-cognition
+104,0.0,"655, 658","655, 658",0,use,use,main,main
+109,0.0,"773, 804","773, 804",0,an eating disordered background,an eating disordered background,possessed,possessed
+112,1.0,"823, 824","822, 824",1,s,'s,main,main
+44,5.0,"749, 804","744, 804",5,not all fat people have an eating disordered background,that not all fat people have an eating disordered background,phenomenon,phenomenon
+107,0.0,"749, 767","749, 767",0,not all fat people,not all fat people,carrier,carrier
+108,0.0,"768, 772","768, 772",0,have,have,main,main
+47,1.0,"817, 845","817, 846",1,there's a fair amount who do,there's a fair amount who do.,phenomenon,phenomenon
+110,5.0,"749, 804","744, 804",5,not all fat people have an eating disordered background,that not all fat people have an eating disordered background,relational,relational
+110,5.0,"749, 804","744, 804",5,not all fat people have an eating disordered background,that not all fat people have an eating disordered background,possessive,possessive
+42,0.0,"737, 738","737, 738",0,I,I,cognizant,cognizant
+45,0.0,"809, 810","809, 810",0,I,I,cognizant,cognizant
+114,1.0,"817, 845","817, 846",1,there's a fair amount who do,there's a fair amount who do.,relational,relational
+76,4.123105625617661,"809, 845","805, 846",5,I think there's a fair amount who do,but I think there's a fair amount who do.,mental,mental
+76,4.123105625617661,"809, 845","805, 846",5,I think there's a fair amount who do,but I think there's a fair amount who do.,two-role-cognition,two-role-cognition
+75,0.0,"737, 804","737, 804",0,I know that not all fat people have an eating disordered background,I know that not all fat people have an eating disordered background,mental,mental
+75,0.0,"737, 804","737, 804",0,I know that not all fat people have an eating disordered background,I know that not all fat people have an eating disordered background,two-role-cognition,two-role-cognition
+43,0.0,"739, 743","739, 743",0,know,know,main,main
+46,0.0,"811, 816","811, 816",0,think,think,main,main
+50,0.0,"852, 856","852, 856",0,like,like,main,main
+80,0.0,"940, 945","940, 945",0,found,found,main,main
+52,0.0,"922, 925","922, 925",0,let,let,main,main
+48,0.0,"848, 849","848, 849",0,I,I,emoter,emoter
+81,81.0,"946, 968","865, 968",81,a more fulfilling life,contact with those strong and brave people here who have let it all go and found a more fulfilling life,created,created
+56,0.0,"996, 1006","996, 1006",0,substitute,substitute,main,main
+82,65.0,"913, 935","857, 968",89,who have let it all go,to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,relational,relational
+82,65.0,"913, 935","857, 968",89,who have let it all go,to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,possessive,possessive
+51,56.0,"857, 912","857, 968",56,to make contact with those strong and brave people here,to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,phenomenon,phenomenon
+77,56.0,"848, 912","848, 968",56,I'd like to make contact with those strong and brave people here,I'd like to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,mental,mental
+79,4.0,"926, 932","926, 928",4,it all,it,affected-possessed,affected-possessed
+86,4.123105625617661,"1031, 1082","1027, 1083",5,I am grateful in advance for any thoughtful replies,and I am grateful in advance for any thoughtful replies.,attributive,attributive
+86,4.123105625617661,"1031, 1082","1027, 1083",5,I am grateful in advance for any thoughtful replies,and I am grateful in advance for any thoughtful replies.,relational,relational
+59,0.0,"1031, 1032","1031, 1032",0,I,I,carrier,carrier
+61,0.0,"1036, 1044","1036, 1044",0,grateful,grateful,attribute,attribute
+60,0.0,"1033, 1035","1033, 1035",0,am,am,main,main
+,
+,Manual mismatching all parsed (False Negative)
+62,"17, 75",I am about to finally let go of a lifetime eating disorder,relational
+62,"17, 75",I am about to finally let go of a lifetime eating disorder,possessive
+1,"17, 18",I,agent-carrier
+3,"39, 48",let go of,main
+64,"96, 114",used to be bulimic,relational
+64,"96, 114",used to be bulimic,attributive
+63,"107, 114",bulimic,attribute
+65,"116, 160",started out as a compulsive eater as a child,relational
+65,"116, 160",started out as a compulsive eater as a child,attributive
+7,"131, 149",a compulsive eater,attribute
+68,"253, 352","it always feels wonderful to read the thought-provoking, intelligent and feisty posts in this group",two-role-cognition
+69,"355, 391",Especially since it became moderated,relational
+69,"355, 391",Especially since it became moderated,attributive
+19,"372, 374",it,carrier
+20,"375, 381",became,main
+21,"382, 391",moderated,attribute
+70,"393, 457",I was wondering if anyone here has words of encouragement for me,mental
+70,"393, 457",I was wondering if anyone here has words of encouragement for me,two-role-cognition
+22,"393, 394",I,cognizant
+26,"462, 500",any of you have conquered binge eating,phenomenon
+87,"462, 500",any of you have conquered binge eating,mental
+87,"462, 500",any of you have conquered binge eating,two-role-cognition
+97,"462, 500",any of you have conquered binge eating,action
+93,"462, 472",any of you,agent
+96,"488, 500",binge eating,range
+27,"505, 521",how long it took,phenomenon
+88,"505, 521",how long it took,mental
+88,"505, 521",how long it took,two-role-cognition
+101,"505, 521",how long it took,directional
+98,"505, 513",how long,path
+32,"560, 561",I,agent
+34,"564, 569",doing,main
+73,"617, 637",I exercise regularly,action
+36,"617, 618",I,agent
+38,"619, 627",exercise,main
+106,"647, 735","I could use some encouragement and advice on becoming more assertive, among other things",mental
+102,"647, 648",I,emoter
+105,"659, 735","some encouragement and advice on becoming more assertive, among other things",phenomenon
+114,"817, 845",there's a fair amount who do,attributive
+111,"817, 822",there,carrier
+113,"825, 845",a fair amount who do,attribute
+84,"913, 916",who,carrier
+83,"940, 968",found a more fulfilling life,action
+85,"972, 1015",what did you ultimately substitute food for,relational
+85,"972, 1015",what did you ultimately substitute food for,possessive
+53,"972, 976",what,affected-carrier
+55,"981, 984",you,agent
+57,"1007, 1011",food,affected-possessed
+,
+,Parsed mismatching all manual (False Positives)
+67,"67, 75",disorder,affected-emoter
+67,"67, 75",disorder,affected-path
+67,"67, 75",disorder,affected-perceiver
+67,"67, 75",disorder,affected-cognizant
+67,"67, 75",disorder,affected-carrier
+67,"67, 75",disorder,affected-destination
+67,"67, 75",disorder,affected
+67,"67, 75",disorder,affected-source
+28,"28, 127","to finally let go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",process
+28,"28, 127","to finally let go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",two-role-action
+28,"28, 127","to finally let go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",action
+96,"96, 100",used,main
+60,"60, 127","eating disorder ( now binge eating, used to be bulimic, started out",process
+60,"60, 127","eating disorder ( now binge eating, used to be bulimic, started out",two-role-action
+60,"60, 127","eating disorder ( now binge eating, used to be bulimic, started out",action
+150,"150, 160",as a child,phenomenon
+150,"150, 160",as a child,created-phenomenon
+150,"150, 160",as a child,created
+43,"43, 127","go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",affected-emoter
+43,"43, 127","go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",affected-path
+43,"43, 127","go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",affected-perceiver
+43,"43, 127","go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",affected-cognizant
+43,"43, 127","go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",affected-carrier
+43,"43, 127","go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",affected-destination
+43,"43, 127","go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",affected
+43,"43, 127","go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",affected-possessed
+43,"43, 127","go of a lifetime eating disorder ( now binge eating, used to be bulimic, started out",affected-source
+131,"131, 152",a compulsive eater as,phenomenon
+131,"131, 152",a compulsive eater as,created-phenomenon
+131,"131, 152",a compulsive eater as,created
+60,"60, 66",eating,main
+76,"76, 127","( now binge eating, used to be bulimic, started out",process
+76,"76, 127","( now binge eating, used to be bulimic, started out",two-role-action
+76,"76, 127","( now binge eating, used to be bulimic, started out",action
+76,"76, 127","( now binge eating, used to be bulimic, started out",one-role-action
+76,"76, 127","( now binge eating, used to be bulimic, started out",starting
+82,"82, 114","binge eating, used to be bulimic",affected-emoter
+82,"82, 114","binge eating, used to be bulimic",agent
+82,"82, 114","binge eating, used to be bulimic",created-phenomenon
+82,"82, 114","binge eating, used to be bulimic",affected-path
+82,"82, 114","binge eating, used to be bulimic",affected-perceiver
+82,"82, 114","binge eating, used to be bulimic",agent-cognizant
+82,"82, 114","binge eating, used to be bulimic",affected-cognizant
+82,"82, 114","binge eating, used to be bulimic",affected-carrier
+82,"82, 114","binge eating, used to be bulimic",affected-destination
+82,"82, 114","binge eating, used to be bulimic",affected
+82,"82, 114","binge eating, used to be bulimic",agent-carrier
+82,"82, 114","binge eating, used to be bulimic",affected-possessed
+82,"82, 114","binge eating, used to be bulimic",agent-perceiver
+82,"82, 114","binge eating, used to be bulimic",affected-source
+82,"82, 114","binge eating, used to be bulimic",created
+28,"28, 30",to,main
+166,"166, 183",I'm 44 years old.,process
+166,"166, 183",I'm 44 years old.,locational
+166,"166, 167",I,affected-carrier
+166,"166, 167",I,agent-carrier
+179,"179, 183",old.,location
+269,"269, 353","wonderful to read the thought-provoking, intelligent and feisty posts in this group!",attribute
+279,"279, 286",to read,main
+339,"339, 353",in this group!,affected-carrier
+339,"339, 353",in this group!,affected
+339,"339, 353",in this group!,range
+339,"339, 353",in this group!,carrier
+195,"195, 248",self-acceptance an immensely helpful tool in the past,created-phenomenon
+195,"195, 248",self-acceptance an immensely helpful tool in the past,affected-possessed
+195,"195, 248",self-acceptance an immensely helpful tool in the past,possessed
+287,"287, 338","the thought-provoking, intelligent and feisty posts",created-phenomenon
+287,"287, 338","the thought-provoking, intelligent and feisty posts",range
+184,"184, 185",I,affected-perceiver
+184,"184, 185",I,agent-cognizant
+184,"184, 185",I,affected-cognizant
+184,"184, 185",I,affected-carrier
+184,"184, 185",I,affected
+184,"184, 185",I,agent-perceiver
+184,"184, 185",I,carrier
+184,"184, 185",I,perceiver
+184,"184, 248",I've found self-acceptance an immensely helpful tool in the past,process
+184,"184, 248",I've found self-acceptance an immensely helpful tool in the past,relational
+184,"184, 248",I've found self-acceptance an immensely helpful tool in the past,possessive
+184,"184, 248",I've found self-acceptance an immensely helpful tool in the past,two-role-perception
+279,"279, 353","to read the thought-provoking, intelligent and feisty posts in this group!",process
+279,"279, 353","to read the thought-provoking, intelligent and feisty posts in this group!",two-role-perception
+279,"279, 353","to read the thought-provoking, intelligent and feisty posts in this group!",three-role-cognition
+279,"279, 353","to read the thought-provoking, intelligent and feisty posts in this group!",two-role-action
+249,"249, 353","and it always feels wonderful to read the thought-provoking, intelligent and feisty posts in this group!",process
+249,"249, 353","and it always feels wonderful to read the thought-provoking, intelligent and feisty posts in this group!",attributive
+249,"249, 353","and it always feels wonderful to read the thought-provoking, intelligent and feisty posts in this group!",relational
+253,"253, 255",it,affected-carrier
+253,"253, 255",it,agent-carrier
+253,"253, 255",it,carrier
+514,"514, 516",it,agent
+514,"514, 516",it,agent-cognizant
+514,"514, 516",it,affected-carrier
+514,"514, 516",it,agent-carrier
+514,"514, 516",it,agent-perceiver
+514,"514, 516",it,perceiver
+428,"428, 457",words of encouragement for me,affected-emoter
+428,"428, 457",words of encouragement for me,created-phenomenon
+428,"428, 457",words of encouragement for me,affected-path
+428,"428, 457",words of encouragement for me,affected-perceiver
+428,"428, 457",words of encouragement for me,affected-cognizant
+428,"428, 457",words of encouragement for me,affected-carrier
+428,"428, 457",words of encouragement for me,affected-destination
+428,"428, 457",words of encouragement for me,affected
+428,"428, 457",words of encouragement for me,affected-possessed
+428,"428, 457",words of encouragement for me,affected-source
+428,"428, 457",words of encouragement for me,created
+409,"409, 457",if anyone here has words of encouragement for me,process
+409,"409, 457",if anyone here has words of encouragement for me,causative
+409,"409, 457",if anyone here has words of encouragement for me,two-role-action
+409,"409, 457",if anyone here has words of encouragement for me,action
+412,"412, 418",anyone,agent
+412,"412, 418",anyone,agent-cognizant
+412,"412, 418",anyone,affected-carrier
+412,"412, 418",anyone,affected
+412,"412, 418",anyone,agent-carrier
+412,"412, 418",anyone,agent-perceiver
+412,"412, 418",anyone,perceiver
+501,"501, 522",and how long it took.,process
+501,"501, 522",and how long it took.,locational
+501,"501, 522",and how long it took.,possessive
+501,"501, 522",and how long it took.,two-role-action
+501,"501, 522",and how long it took.,action
+534,"534, 638","in therapy several years, I'm doing some conscious eating exercises at present and I exercise regularly.",attribute
+524,"524, 638","I've been in therapy several years, I'm doing some conscious eating exercises at present and I exercise regularly.",process
+524,"524, 638","I've been in therapy several years, I'm doing some conscious eating exercises at present and I exercise regularly.",attributive
+524,"524, 638","I've been in therapy several years, I'm doing some conscious eating exercises at present and I exercise regularly.",two-role-action
+524,"524, 525",I,agent
+524,"524, 525",I,agent-cognizant
+524,"524, 525",I,affected
+524,"524, 525",I,agent-carrier
+524,"524, 525",I,agent-perceiver
+524,"524, 525",I,carrier
+524,"524, 525",I,perceiver
+647,"647, 736","I could use some encouragement and advice on becoming more assertive, among other things.",created-phenomenon
+640,"640, 641",I,agent-cognizant
+640,"640, 641",I,affected-cognizant
+647,"647, 648",I,agent
+647,"647, 648",I,agent-cognizant
+647,"647, 648",I,agent-carrier
+647,"647, 648",I,agent-perceiver
+640,"640, 736","I know I could use some encouragement and advice on becoming more assertive, among other things.",process
+692,"692, 700",becoming,main
+717,"717, 736",among other things.,affected-emoter
+717,"717, 736",among other things.,affected-path
+717,"717, 736",among other things.,affected-perceiver
+717,"717, 736",among other things.,affected-cognizant
+717,"717, 736",among other things.,affected-carrier
+717,"717, 736",among other things.,affected-destination
+717,"717, 736",among other things.,affected
+717,"717, 736",among other things.,affected-possessed
+717,"717, 736",among other things.,affected-source
+659,"659, 688",some encouragement and advice,affected-emoter
+659,"659, 688",some encouragement and advice,affected-path
+659,"659, 688",some encouragement and advice,affected-perceiver
+659,"659, 688",some encouragement and advice,affected-cognizant
+659,"659, 688",some encouragement and advice,affected-carrier
+659,"659, 688",some encouragement and advice,affected-destination
+659,"659, 688",some encouragement and advice,affected
+659,"659, 688",some encouragement and advice,affected-possessed
+659,"659, 688",some encouragement and advice,affected-source
+825,"825, 846",a fair amount who do.,affected-carrier
+825,"825, 846",a fair amount who do.,agent-carrier
+825,"825, 846",a fair amount who do.,carrier
+773,"773, 804",an eating disordered background,affected-emoter
+773,"773, 804",an eating disordered background,created-phenomenon
+773,"773, 804",an eating disordered background,affected-path
+773,"773, 804",an eating disordered background,affected-perceiver
+773,"773, 804",an eating disordered background,affected-cognizant
+773,"773, 804",an eating disordered background,affected-carrier
+773,"773, 804",an eating disordered background,affected-destination
+773,"773, 804",an eating disordered background,affected
+773,"773, 804",an eating disordered background,affected-possessed
+773,"773, 804",an eating disordered background,affected-source
+773,"773, 804",an eating disordered background,created
+744,"744, 804",that not all fat people have an eating disordered background,created-phenomenon
+749,"749, 767",not all fat people,agent
+749,"749, 767",not all fat people,agent-cognizant
+749,"749, 767",not all fat people,affected-carrier
+749,"749, 767",not all fat people,affected
+749,"749, 767",not all fat people,agent-carrier
+749,"749, 767",not all fat people,agent-perceiver
+749,"749, 767",not all fat people,perceiver
+843,"843, 845",do,main
+817,"817, 846",there's a fair amount who do.,created-phenomenon
+744,"744, 804",that not all fat people have an eating disordered background,process
+744,"744, 804",that not all fat people have an eating disordered background,causative
+744,"744, 804",that not all fat people have an eating disordered background,two-role-action
+744,"744, 804",that not all fat people have an eating disordered background,action
+737,"737, 738",I,agent-cognizant
+737,"737, 738",I,affected-cognizant
+809,"809, 810",I,agent
+809,"809, 810",I,agent-cognizant
+809,"809, 810",I,affected-cognizant
+809,"809, 810",I,affected
+817,"817, 846",there's a fair amount who do.,process
+817,"817, 846",there's a fair amount who do.,locational
+805,"805, 846",but I think there's a fair amount who do.,process
+737,"737, 804",I know that not all fat people have an eating disordered background,process
+857,"857, 864",to make,main
+926,"926, 935",it all go,phenomenon
+926,"926, 935",it all go,created-phenomenon
+926,"926, 935",it all go,created
+913,"913, 935",who have let it all go,process
+913,"913, 935",who have let it all go,permissive
+913,"913, 935",who have let it all go,influential
+933,"933, 935",go,main
+848,"848, 849",I,affected-emoter
+913,"913, 916",who,agent
+913,"913, 916",who,agent-cognizant
+913,"913, 916",who,agent-carrier
+913,"913, 916",who,agent-perceiver
+865,"865, 968",contact with those strong and brave people here who have let it all go and found a more fulfilling life,attribute
+865,"865, 968",contact with those strong and brave people here who have let it all go and found a more fulfilling life,created-phenomenon
+865,"865, 968",contact with those strong and brave people here who have let it all go and found a more fulfilling life,destination
+865,"865, 968",contact with those strong and brave people here who have let it all go and found a more fulfilling life,affected-destination
+865,"865, 968",contact with those strong and brave people here who have let it all go and found a more fulfilling life,possessed
+936,"936, 968",and found a more fulfilling life,process
+936,"936, 968",and found a more fulfilling life,relational
+936,"936, 968",and found a more fulfilling life,possessive
+926,"926, 935",it all go,process
+926,"926, 935",it all go,directional
+926,"926, 935",it all go,action
+926,"926, 935",it all go,one-role-action
+857,"857, 968",to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,process
+857,"857, 968",to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,attributive
+857,"857, 968",to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,directional
+857,"857, 968",to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,causative
+857,"857, 968",to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,two-role-action
+857,"857, 968",to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,influential
+857,"857, 968",to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,created-phenomenon
+848,"848, 968",I'd like to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,process
+848,"848, 968",I'd like to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,emotive
+848,"848, 968",I'd like to make contact with those strong and brave people here who have let it all go and found a more fulfilling life,desiderative
+926,"926, 928",it,affected-emoter
+926,"926, 928",it,agent
+926,"926, 928",it,affected-path
+926,"926, 928",it,affected-perceiver
+926,"926, 928",it,agent-cognizant
+926,"926, 928",it,affected-cognizant
+926,"926, 928",it,affected-carrier
+926,"926, 928",it,affected-destination
+926,"926, 928",it,affected
+926,"926, 928",it,agent-carrier
+926,"926, 928",it,agent-perceiver
+926,"926, 928",it,affected-source
+926,"926, 928",it,carrier
+926,"926, 928",it,perceiver
+946,"946, 968",a more fulfilling life,affected-possessed
+946,"946, 968",a more fulfilling life,possessed
+1027,"1027, 1083",and I am grateful in advance for any thoughtful replies.,process
+1027,"1027, 1083",and I am grateful in advance for any thoughtful replies.,locational
+1027,"1027, 1083",and I am grateful in advance for any thoughtful replies.,two-role-action
+1027,"1027, 1083",and I am grateful in advance for any thoughtful replies.,action
+1031,"1031, 1032",I,agent
+1031,"1031, 1032",I,agent-cognizant
+1031,"1031, 1032",I,affected-carrier
+1031,"1031, 1032",I,affected
+1031,"1031, 1032",I,agent-carrier
+1031,"1031, 1032",I,agent-perceiver
+1031,"1031, 1032",I,perceiver
+1036,"1036, 1044",grateful,location
+1036,"1036, 1044",grateful,range
+1017,"1017, 1022",Thank,main
+1045,"1045, 1083",in advance for any thoughtful replies.,attribute
+1045,"1045, 1083",in advance for any thoughtful replies.,location
+1045,"1045, 1083",in advance for any thoughtful replies.,range
+773,"773, 804",an eating disordered background,phenomenon
+865,"865, 968",contact with those strong and brave people here who have let it all go and found a more fulfilling life,phenomenon
+865,"865, 968",contact with those strong and brave people here who have let it all go and found a more fulfilling life,affected-possessed

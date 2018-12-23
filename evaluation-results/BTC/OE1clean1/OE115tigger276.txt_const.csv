@@ -1,0 +1,298 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.6043956043956044
+,Recall,0.9217877094972067
+,F1,0.7300884955752213
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+1,0.0,"17, 19","17, 19",0,Do,Do,verb,verb
+4,1.0,"27, 45","27, 46",1,an eating disorder,an eating disorder?,participant-role,participant-role
+2,0.0,"20, 21","20, 21",0,I,I,participant-role,participant-role
+3,0.0,"22, 26","22, 26",0,have,have,main,main
+3,0.0,"22, 26","22, 26",0,have,have,verb,verb
+151,3.1622776601683795,"70, 75","67, 76",4,Tiger,me Tiger.,participant-role,participant-role
+149,0.0,"62, 66","62, 66",0,Call,Call,main,main
+149,0.0,"62, 66","62, 66",0,Call,Call,verb,verb
+150,0.0,"67, 69","67, 69",0,me,me,participant-role,participant-role
+5,0.0,"77, 78","77, 78",0,I,I,participant-role,participant-role
+7,0.0,"83, 113","83, 113",0,"a 6'0, 190, 32 w, athletic guy","a 6'0, 190, 32 w, athletic guy",participant-role,participant-role
+6,0.0,"79, 82","79, 82",0,was,was,main,main
+6,0.0,"79, 82","79, 82",0,was,was,verb,verb
+8,0.0,"138, 139","138, 139",0,I,I,participant-role,participant-role
+10,4.0,"146, 150","142, 150",4,know,n't know,main,main
+10,4.0,"146, 150","142, 150",4,know,n't know,verb,verb
+154,0.0,"156, 164","156, 164",0,happened,happened,main,main
+154,0.0,"156, 164","156, 164",0,happened,happened,verb,verb
+9,0.0,"140, 142","140, 142",0,do,do,verb,verb
+11,1.0,"151, 164","151, 165",1,what happened,what happened.,participant-role,participant-role
+153,0.0,"151, 155","151, 155",0,what,what,participant-role,participant-role
+14,11.0,"173, 194","173, 183",11,all desire to workout,all desire,participant-role,participant-role
+13,0.0,"168, 172","168, 172",0,lost,lost,main,main
+13,0.0,"168, 172","168, 172",0,lost,lost,verb,verb
+12,0.0,"166, 167","166, 167",0,I,I,participant-role,participant-role
+158,0.0,"196, 225","196, 225",0,All I wanted to do after work,All I wanted to do after work,participant-role,participant-role
+156,1.0,"230, 255","230, 256",1,"go home, eat and watch TV","go home, eat and watch TV.",participant-role,participant-role
+157,0.0,"226, 229","226, 229",0,was,was,main,main
+157,0.0,"226, 229","226, 229",0,was,was,verb,verb
+23,4.0,"300, 304","296, 304",4,have,not have,main,main
+23,4.0,"300, 304","296, 304",4,have,not have,verb,verb
+19,0.0,"259, 261","259, 261",0,do,do,verb,verb
+22,0.0,"292, 295","292, 295",0,did,did,verb,verb
+25,1.0,"305, 331","305, 332",1,any desire to meet friends,any desire to meet friends.,participant-role,participant-role
+20,4.0,"265, 267","261, 267",4,go,n't go,main,main
+20,4.0,"265, 267","261, 267",4,go,n't go,verb,verb
+18,0.0,"257, 258","257, 258",0,I,I,participant-role,participant-role
+27,0.0,"348, 351","348, 351",0,got,got,main,main
+27,0.0,"348, 351","348, 351",0,got,got,verb,verb
+26,2.0,"346, 347","344, 347",2,I,", I",participant-role,participant-role
+32,0.0,"394, 402","394, 402",0,informed,informed,main,main
+32,0.0,"394, 402","394, 402",0,informed,informed,verb,verb
+29,0.0,"358, 362","358, 362",0,Went,Went,main,main
+29,0.0,"358, 362","358, 362",0,Went,Went,verb,verb
+31,0.0,"390, 393","390, 393",0,she,she,participant-role,participant-role
+34,5.0990195135927845,"411, 454","406, 455",6,I gained 55 lbs in the last couple of years,that I gained 55 lbs in the last couple of years.,participant-role,participant-role
+160,0.0,"411, 412","411, 412",0,I,I,participant-role,participant-role
+33,0.0,"403, 405","403, 405",0,me,me,participant-role,participant-role
+161,0.0,"413, 419","413, 419",0,gained,gained,main,main
+161,0.0,"413, 419","413, 419",0,gained,gained,verb,verb
+42,0.0,"507, 509","507, 509",0,me,me,participant-role,participant-role
+38,0.0,"460, 469","460, 469",0,diagnosed,diagnosed,main,main
+38,0.0,"460, 469","460, 469",0,diagnosed,diagnosed,verb,verb
+39,0.0,"470, 472","470, 472",0,me,me,participant-role,participant-role
+43,3.1622776601683795,"510, 530","507, 531",4,to get back in shape,me to get back in shape.,participant-role,participant-role
+41,0.0,"502, 506","502, 506",0,told,told,main,main
+41,0.0,"502, 506","502, 506",0,told,told,verb,verb
+37,0.0,"456, 459","456, 459",0,She,She,participant-role,participant-role
+45,0.0,"534, 537","534, 537",0,did,did,verb,verb
+44,0.0,"532, 533","532, 533",0,I,I,participant-role,participant-role
+48,0.0,"549, 559","549, 559",0,what I ate,what I ate,participant-role,participant-role
+47,0.0,"541, 548","541, 548",0,watched,watched,main,main
+47,0.0,"541, 548","541, 548",0,watched,watched,verb,verb
+46,0.0,"539, 540","539, 540",0,I,I,participant-role,participant-role
+51,0.0,"595, 599","595, 599",0,went,went,main,main
+51,0.0,"595, 599","595, 599",0,went,went,verb,verb
+173,0.0,"549, 553","549, 553",0,what,what,participant-role,participant-role
+175,0.0,"556, 559","556, 559",0,ate,ate,main,main
+175,0.0,"556, 559","556, 559",0,ate,ate,verb,verb
+174,0.0,"554, 555","554, 555",0,I,I,participant-role,participant-role
+53,2.0,"660, 661","658, 661",2,I,", I",participant-role,participant-role
+54,0.0,"662, 669","662, 669",0,dropped,dropped,main,main
+54,0.0,"662, 669","662, 669",0,dropped,dropped,verb,verb
+55,0.0,"670, 676","670, 676",0,20 lbs,20 lbs,participant-role,participant-role
+56,0.0,"681, 688","681, 688",0,started,started,main,main
+56,0.0,"681, 688","681, 688",0,started,started,verb,verb
+57,1.0,"689, 703","689, 704",1,looking better,looking better.,participant-role,participant-role
+58,0.0,"705, 706","705, 706",0,I,I,participant-role,participant-role
+60,0.0,"712, 727","712, 727",0,the bloatedness,the bloatedness,participant-role,participant-role
+63,1.0,"739, 751","739, 752",1,a lot better,a lot better.,participant-role,participant-role
+59,0.0,"707, 711","707, 711",0,lost,lost,main,main
+59,0.0,"707, 711","707, 711",0,lost,lost,verb,verb
+62,0.0,"734, 738","734, 738",0,felt,felt,main,main
+62,0.0,"734, 738","734, 738",0,felt,felt,verb,verb
+61,0.0,"732, 733","732, 733",0,I,I,participant-role,participant-role
+65,0.0,"765, 772","765, 772",0,started,started,main,main
+65,0.0,"765, 772","765, 772",0,started,started,verb,verb
+64,0.0,"753, 764","753, 764",0,The problem,The problem,participant-role,participant-role
+67,0.0,"787, 790","787, 790",0,had,had,main,main
+67,0.0,"787, 790","787, 790",0,had,had,verb,verb
+66,0.0,"785, 786","785, 786",0,I,I,participant-role,participant-role
+68,1.0,"791, 799","791, 800",1,a burger,a burger.,participant-role,participant-role
+72,8.0,"888, 900","888, 892",8,meat anymore,meat,participant-role,participant-role
+71,5.0,"873, 880","869, 877",7,seem to,n't seem,verb,verb
+70,0.0,"867, 869","867, 869",0,ca,ca,verb,verb
+69,4.0,"858, 866","854, 866",4,my tummy,... my tummy,participant-role,participant-role
+170,3.0,"881, 887","878, 887",3,handle,to handle,main,main
+170,3.0,"881, 887","878, 887",3,handle,to handle,verb,verb
+73,0.0,"902, 903","902, 903",0,I,I,participant-role,participant-role
+77,1.0,"925, 936","925, 937",1,much better,much better.,participant-role,participant-role
+74,3.0,"904, 912","904, 909",3,threw up,threw,main,main
+74,3.0,"904, 912","904, 909",3,threw up,threw,verb,verb
+76,0.0,"920, 924","920, 924",0,felt,felt,main,main
+76,0.0,"920, 924","920, 924",0,felt,felt,verb,verb
+75,0.0,"917, 919","917, 919",0,it,it,participant-role,participant-role
+80,0.0,"958, 981","958, 981",0,some salad with chicken,some salad with chicken,participant-role,participant-role
+81,2.0,"984, 994","982, 994",2,same thing,- same thing,participant-role,participant-role
+82,0.0,"995, 1003","995, 1003",0,happened,happened,main,main
+82,0.0,"995, 1003","995, 1003",0,happened,happened,verb,verb
+79,0.0,"954, 957","954, 957",0,had,had,main,main
+79,0.0,"954, 957","954, 957",0,had,had,verb,verb
+78,0.0,"952, 953","952, 953",0,I,I,participant-role,participant-role
+86,0.0,"1029, 1055","1029, 1055",0,fruits and vegetable salad,fruits and vegetable salad,participant-role,participant-role
+84,0.0,"1007, 1010","1007, 1010",0,can,can,verb,verb
+171,3.0,"1024, 1028","1021, 1028",3,keep,to keep,main,main
+171,3.0,"1024, 1028","1021, 1028",3,keep,to keep,verb,verb
+85,3.0,"1016, 1023","1016, 1020",3,seem to,seem,verb,verb
+36,0.0,"1005, 1006","1005, 1006",0,I,I,participant-role,participant-role
+89,1.0,"1080, 1082","1080, 1083",1,me,me.,participant-role,participant-role
+87,0.0,"1062, 1072","1062, 1072",0,Last night,Last night,participant-role,participant-role
+88,0.0,"1073, 1079","1073, 1079",0,scared,scared,main,main
+88,0.0,"1073, 1079","1073, 1079",0,scared,scared,verb,verb
+94,0.0,"1120, 1124","1120, 1124",0,felt,felt,main,main
+94,0.0,"1120, 1124","1120, 1124",0,felt,felt,verb,verb
+177,0.0,"1153, 1156","1153, 1156",0,you,you,participant-role,participant-role
+178,0.0,"1157, 1161","1157, 1161",0,want,want,main,main
+178,0.0,"1157, 1161","1157, 1161",0,want,want,verb,verb
+179,1.0,"1162, 1170","1162, 1171",1,to purge,to purge.,participant-role,participant-role
+90,0.0,"1084, 1085","1084, 1085",0,I,I,participant-role,participant-role
+91,0.0,"1086, 1089","1086, 1089",0,had,had,main,main
+91,0.0,"1086, 1089","1086, 1089",0,had,had,verb,verb
+95,23.0,"1125, 1170","1125, 1147",23,that strange sensation when you want to purge,that strange sensation,participant-role,participant-role
+92,0.0,"1090, 1109","1090, 1109",0,soup and some salad,soup and some salad,participant-role,participant-role
+93,0.0,"1118, 1119","1118, 1119",0,I,I,participant-role,participant-role
+97,3.0,"1181, 1184","1178, 1184",3,run,to run,main,main
+97,3.0,"1181, 1184","1178, 1184",3,run,to run,verb,verb
+101,26.92582403567252,"1185, 1200","1178, 1226",33,to the bathroom,to run to the bathroom 5 minutes after the meal.,participant-role,participant-role
+99,0.0,"1172, 1173","1172, 1173",0,I,I,participant-role,participant-role
+100,3.0,"1174, 1180","1174, 1177",3,had to,had,verb,verb
+102,0.0,"1227, 1228","1227, 1228",0,I,I,participant-role,participant-role
+98,1.0,"1229, 1230","1228, 1230",1,m,'m,verb,verb
+105,1.0,"1247, 1285","1247, 1286",1,the first signs of anorexia or bulimia,the first signs of anorexia or bulimia?,participant-role,participant-role
+104,0.0,"1239, 1241","1239, 1241",0,Is,Is,main,main
+104,0.0,"1239, 1241","1239, 1241",0,Is,Is,verb,verb
+106,0.0,"1242, 1246","1242, 1246",0,this,this,participant-role,participant-role
+164,0.0,"1357, 1358","1357, 1358",0,I,I,participant-role,participant-role
+107,0.0,"1287, 1288","1287, 1288",0,I,I,participant-role,participant-role
+165,0.0,"1359, 1362","1359, 1362",0,got,got,main,main
+165,0.0,"1359, 1362","1359, 1362",0,got,got,verb,verb
+108,3.0,"1289, 1298","1289, 1295",3,looked at,looked,main,main
+108,3.0,"1289, 1298","1289, 1295",3,looked at,looked,verb,verb
+83,0.0,"1333, 1334","1333, 1334",0,I,I,participant-role,participant-role
+96,0.0,"1335, 1339","1335, 1339",0,look,look,main,main
+96,0.0,"1335, 1339","1335, 1339",0,look,look,verb,verb
+111,1.0,"1387, 1389","1386, 1389",1,re,'re,main,main
+111,1.0,"1387, 1389","1386, 1389",1,re,'re,verb,verb
+110,0.0,"1383, 1386","1383, 1386",0,you,you,participant-role,participant-role
+168,0.0,"1377, 1379","1377, 1379",0,me,me,participant-role,participant-role
+167,0.0,"1371, 1376","1371, 1376",0,email,email,main,main
+167,0.0,"1371, 1376","1371, 1376",0,email,email,verb,verb
+113,0.0,"1413, 1414","1413, 1414",0,I,I,participant-role,participant-role
+114,0.0,"1415, 1419","1415, 1419",0,wish,wish,main,main
+114,0.0,"1415, 1419","1415, 1419",0,wish,wish,verb,verb
+115,1.0,"1420, 1438","1420, 1439",1,to talk to someone,to talk to someone.,participant-role,participant-role
+162,29.0,"420, 426","420, 455",29,55 lbs,55 lbs in the last couple of years.,participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+21,"268, 288",to clubs or anything,participant-role
+28,"352, 356",sick,participant-role
+30,"363, 385",to the doctor's office,participant-role
+40,"473, 497",with high blood pressure,participant-role
+49,"563, 566",ate,verb
+49,"563, 566",ate,main
+50,"567, 573",salads,participant-role
+52,"600, 610",to the gym,participant-role
+172,"1056, 1060",down,verb
+98,"1229, 1230",m,main
+103,"1231, 1237",scared,participant-role
+109,"1299, 1319",some of the websites,participant-role
+148,"1350, 1356",scared,participant-role
+112,"1390, 1411",in the same condition,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+17,"17, 46",Do I have an eating disorder?,process
+49,"49, 61",Hi everyone.,process
+52,"52, 61",everyone.,participant-role
+49,"49, 51",Hi,main
+49,"49, 51",Hi,verb
+62,"62, 76",Call me Tiger.,process
+77,"77, 132","I was a 6'0, 190, 32 w, athletic guy about 2 years ago.",process
+151,"151, 165",what happened.,process
+133,"133, 165",Then I don't know what happened.,process
+166,"166, 195",I lost all desire to workout.,process
+202,"202, 208",wanted,main
+202,"202, 208",wanted,verb
+209,"209, 225",to do after work,process
+209,"209, 214",to do,main
+209,"209, 214",to do,verb
+196,"196, 256","All I wanted to do after work was go home, eat and watch TV.",process
+230,"230, 232",go,main
+230,"230, 232",go,verb
+239,"239, 242",eat,main
+239,"239, 242",eat,verb
+253,"253, 256",TV.,participant-role
+237,"237, 242",", eat",process
+200,"200, 225",I wanted to do after work,process
+200,"200, 201",I,participant-role
+230,"230, 256","go home, eat and watch TV.",process
+230,"230, 237",go home,process
+243,"243, 256",and watch TV.,process
+247,"247, 252",watch,main
+247,"247, 252",watch,verb
+316,"316, 332",to meet friends.,process
+288,"288, 332",... did not have any desire to meet friends.,process
+257,"257, 288",I don't go to clubs or anything,process
+316,"316, 323",to meet,main
+316,"316, 323",to meet,verb
+333,"333, 347","A month ago, I",process
+348,"348, 351",got,process
+352,"352, 356",sick,main
+352,"352, 356",sick,verb
+386,"386, 455",and she informed me that I gained 55 lbs in the last couple of years.,process
+406,"406, 455",that I gained 55 lbs in the last couple of years.,process
+358,"358, 385",Went to the doctor's office,process
+456,"456, 497",She diagnosed me with high blood pressure,process
+510,"510, 516",to get,main
+510,"510, 516",to get,verb
+498,"498, 531",and told me to get back in shape.,process
+507,"507, 531",me to get back in shape.,process
+534,"534, 537",did,main
+532,"532, 538",I did.,process
+539,"539, 559",I watched what I ate,process
+625,"625, 628",can,verb
+549,"549, 559",what I ate,process
+559,"559, 590",... ate salads most of the time,process
+631,"631, 647",almost everyday.,participant-role
+574,"574, 590",most of the time,participant-role
+591,"591, 647",and went to the gym as often as I can - almost everyday.,process
+620,"620, 647",as I can - almost everyday.,process
+629,"629, 630",-,main
+629,"629, 630",-,verb
+623,"623, 624",I,participant-role
+567,"567, 573",salads,main
+567,"567, 573",salads,verb
+559,"559, 566",... ate,participant-role
+689,"689, 696",looking,main
+689,"689, 696",looking,verb
+648,"648, 676","In a month, I dropped 20 lbs",process
+689,"689, 704",looking better.,process
+677,"677, 704",and started looking better.,process
+705,"705, 727",I lost the bloatedness,process
+728,"728, 752",and I felt a lot better.,process
+753,"753, 784",The problem started a week ago.,process
+785,"785, 800",I had a burger.,process
+878,"878, 901",to handle meat anymore.,process
+869,"869, 877",n't seem,main
+913,"913, 937",and it felt much better.,process
+902,"902, 912",I threw up,process
+952,"952, 981",I had some salad with chicken,process
+982,"982, 1004",- same thing happened.,process
+1021,"1021, 1061",to keep fruits and vegetable salad down.,process
+1021,"1021, 1061",to keep fruits and vegetable salad down.,participant-role
+1016,"1016, 1020",seem,main
+1062,"1062, 1083",Last night scared me.,process
+1162,"1162, 1171",to purge.,process
+1148,"1148, 1171",when you want to purge.,process
+1109,"1109, 1171",... then I felt that strange sensation when you want to purge.,process
+1084,"1084, 1109",I had soup and some salad,process
+1148,"1148, 1152",when,participant-role
+1162,"1162, 1170",to purge,main
+1162,"1162, 1170",to purge,verb
+1178,"1178, 1226",to run to the bathroom 5 minutes after the meal.,process
+1174,"1174, 1177",had,main
+1172,"1172, 1226",I had to run to the bathroom 5 minutes after the meal.,process
+1231,"1231, 1237",scared,main
+1231,"1231, 1237",scared,verb
+1227,"1227, 1238",I'm scared.,process
+1239,"1239, 1286",Is this the first signs of anorexia or bulimia?,process
+1324,"1324, 1339",the more I look,process
+1324,"1324, 1363","the more I look, the more scared I got.",process
+1287,"1287, 1323",I looked at some of the websites and,process
+1380,"1380, 1412",if you're in the same condition.,process
+1364,"1364, 1412",Please email me if you're in the same condition.,process
+1420,"1420, 1439",to talk to someone.,process
+1420,"1420, 1427",to talk,main
+1420,"1420, 1427",to talk,verb
+1413,"1413, 1439",I wish to talk to someone.,process
+209,"209, 225",to do after work,participant-role
+233,"233, 237",home,participant-role
+324,"324, 332",friends.,participant-role
+878,"878, 901",to handle meat anymore.,participant-role

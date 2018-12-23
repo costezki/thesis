@@ -1,0 +1,597 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.1926782273603083
+,Recall,0.5988023952095808
+,F1,0.2915451895043732
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+9,26.627053911388696,"17, 94","32, 72",37,I'm sooo happy to say that I've been hanging on so well since my brother left,to say that I've been hanging on so well,mental,mental
+4,0.0,"44, 45","44, 45",0,I,I,agent,agent
+10,22.561028345356956,"44, 94","39, 72",27,I've been hanging on so well since my brother left,that I've been hanging on so well,action,action
+6,5.830951894845301,"54, 64","49, 61",8,hanging on,been hanging,main,main
+159,22.561028345356956,"44, 94","39, 72",27,I've been hanging on so well since my brother left,that I've been hanging on so well,phenomenon,phenomenon
+3,11.0,"21, 38","32, 38",11,sooo happy to say,to say,main,main
+13,0.0,"106, 113","106, 113",0,keeping,keeping,main,main
+21,0.0,"226, 227","226, 227",0,I,I,agent,agent
+22,0.0,"228, 235","228, 235",0,weighed,weighed,main,main
+23,0.0,"236, 242","236, 242",0,myself,myself,affected,affected
+26,0.0,"272, 280","272, 280",0,8 pounds,8 pounds,agent,agent
+29,1.0,"272, 295","272, 296",1,8 pounds gone in a week,8 pounds gone in a week.,action,action
+27,0.0,"281, 285","281, 285",0,gone,gone,main,main
+35,1.0,"367, 371","367, 372",1,loss,loss!,attribute,attribute
+36,5.0,"297, 348","297, 353",5,I think a lot of it is water weight and muscle loss,"I think a lot of it is water weight and muscle loss, but",mental,mental
+36,5.0,"297, 348","297, 353",5,I think a lot of it is water weight and muscle loss,"I think a lot of it is water weight and muscle loss, but",two-role-cognition,two-role-cognition
+30,0.0,"297, 298","297, 298",0,I,I,cognizant,cognizant
+8,0.0,"317, 319","317, 319",0,is,is,main,main
+33,2.0,"359, 363","357, 363",2,loss,", loss",carrier,carrier
+31,0.0,"299, 304","299, 304",0,think,think,main,main
+34,0.0,"364, 366","364, 366",0,is,is,main,main
+37,5.0990195135927845,"359, 371","354, 372",6,loss is loss,"hey, loss is loss!",attributive,attributive
+37,5.0990195135927845,"359, 371","354, 372",6,loss is loss,"hey, loss is loss!",relational,relational
+32,0.0,"305, 348","305, 348",0,a lot of it is water weight and muscle loss,a lot of it is water weight and muscle loss,phenomenon,phenomenon
+41,0.0,"394, 395","394, 395",0,I,I,carrier,carrier
+39,1.0,"376, 377","375, 377",1,s,'s,main,main
+139,4.0,"389, 393","385, 393",4,full,how full,attribute,attribute
+138,5.0,"404, 411","399, 411",5,feeling,been feeling,main,main
+140,9.848857801796104,"389, 411","385, 420",13,full I've been feeling,"how full I've been feeling, though.",attributive,attributive
+47,1.0,"421, 500","421, 501",1,I don't understand how easily restricting is coming back to me this time around,I don't understand how easily restricting is coming back to me this time around.,mental,mental
+47,1.0,"421, 500","421, 501",1,I don't understand how easily restricting is coming back to me this time around,I don't understand how easily restricting is coming back to me this time around.,two-role-cognition,two-role-cognition
+141,0.0,"451, 462","451, 462",0,restricting,restricting,carrier,carrier
+43,0.0,"421, 422","421, 422",0,I,I,cognizant,cognizant
+143,5.0,"466, 477","466, 472",5,coming back,coming,main,main
+45,4.0,"429, 439","425, 439",4,understand,n't understand,main,main
+46,1.0,"440, 500","440, 501",1,how easily restricting is coming back to me this time around,how easily restricting is coming back to me this time around.,phenomenon,phenomenon
+145,11.045361017187261,"451, 500","440, 501",12,restricting is coming back to me this time around,how easily restricting is coming back to me this time around.,directional,directional
+144,0.0,"478, 483","478, 483",0,to me,to me,destination,destination
+57,0.0,"623, 625","623, 625",0,is,is,main,main
+119,4.123105625617661,"601, 647","597, 648",5,school-related stress is my main binge-trigger,and school-related stress is my main binge-trigger.,attributive,attributive
+119,4.123105625617661,"601, 647","597, 648",5,school-related stress is my main binge-trigger,and school-related stress is my main binge-trigger.,relational,relational
+58,1.0,"626, 647","626, 648",1,my main binge-trigger,my main binge-trigger.,attribute,attribute
+56,0.0,"601, 622","601, 622",0,school-related stress,school-related stress,carrier,carrier
+51,3.0,"534, 537","531, 537",3,end,to end,main,main
+60,0.0,"655, 660","655, 660",0,think,think,main,main
+147,0.0,"695, 702","695, 702",0,keeping,keeping,main,main
+66,1.0,"763, 764","762, 764",1,s,'s,main,main
+122,0.0,"760, 790","760, 790",0,it's almost completely protein,it's almost completely protein,attributive,attributive
+122,0.0,"760, 790","760, 790",0,it's almost completely protein,it's almost completely protein,relational,relational
+63,1.0,"743, 744","742, 744",1,s,'s,main,main
+121,2.8284271247461903,"728, 757","726, 759",4,even though it's sooo low-cal,( even though it's sooo low-cal ),relational,relational
+65,0.0,"760, 762","760, 762",0,it,it,carrier,carrier
+62,0.0,"740, 742","740, 742",0,it,it,carrier,carrier
+120,102.07840124139877,"653, 716","649, 818",106,"I think eating a can of tuna every day is keeping me going, too","And I think eating a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",mental,mental
+120,102.07840124139877,"653, 716","649, 818",106,"I think eating a can of tuna every day is keeping me going, too","And I think eating a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",two-role-cognition,two-role-cognition
+67,7.0,"772, 790","765, 790",7,completely protein,almost completely protein,attribute,attribute
+68,0.0,"796, 803","796, 803",0,keeping,keeping,main,main
+59,0.0,"653, 654","653, 654",0,I,I,cognizant,cognizant
+61,102.0,"661, 716","661, 818",102,"eating a can of tuna every day is keeping me going, too","eating a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",phenomenon,phenomenon
+153,8.0,"845, 867","845, 859",8,"enough veggies, though",enough veggies,possessed,possessed
+73,4.0,"827, 832","823, 832",4,think,n't think,main,main
+154,8.0,"833, 867","833, 859",8,"I'm getting enough veggies, though",I'm getting enough veggies,possessive,possessive
+150,0.0,"833, 834","833, 834",0,I,I,carrier,carrier
+71,0.0,"819, 820","819, 820",0,I,I,cognizant,cognizant
+152,0.0,"837, 844","837, 844",0,getting,getting,main,main
+74,8.0,"833, 867","833, 859",8,"I'm getting enough veggies, though",I'm getting enough veggies,phenomenon,phenomenon
+124,1.0,"819, 867","819, 868",1,"I don't think I'm getting enough veggies, though","I don't think I'm getting enough veggies, though.",mental,mental
+124,1.0,"819, 867","819, 868",1,"I don't think I'm getting enough veggies, though","I don't think I'm getting enough veggies, though.",two-role-cognition,two-role-cognition
+77,10.0,"884, 901","884, 911",10,a salad for lunch,a salad for lunch at school,affected,affected
+125,0.0,"869, 911","869, 911",0,I usually have a salad for lunch at school,I usually have a salad for lunch at school,action,action
+80,4.0,"937, 941","933, 941",4,been,n't been,main,main
+75,0.0,"869, 870","869, 870",0,I,I,agent,agent
+76,0.0,"879, 883","879, 883",0,have,have,main,main
+127,33.54101966249684,"1014, 1044","1008, 1077",39,the loss was a good motivation,"Well, the loss was a good motivation, which I've been needing lately.",relational,relational
+87,5.0,"1062, 1069","1057, 1069",5,needing,been needing,main,main
+83,0.0,"1023, 1026","1023, 1026",0,was,was,main,main
+82,2.0,"1014, 1022","1012, 1022",2,the loss,", the loss",carrier,carrier
+90,4.0,"1082, 1094","1082, 1090",4,shooting for,shooting,main,main
+93,0.0,"1127, 1132","1127, 1132",0,think,think,main,main
+132,1.0,"1146, 1262","1146, 1263",1,I don't want to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him,I don't want to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,mental,mental
+133,1.0,"1201, 1262","1201, 1263",1,I've lost another 30 pounds since the last time I've seen him,I've lost another 30 pounds since the last time I've seen him.,possessive,possessive
+98,1.0,"1159, 1262","1159, 1263",1,to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him,to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,phenomenon,phenomenon
+97,4.0,"1154, 1158","1150, 1158",4,want,n't want,main,main
+101,0.0,"1206, 1210","1206, 1210",0,lost,lost,main,main
+95,0.0,"1146, 1147","1146, 1147",0,I,I,emoter,emoter
+99,0.0,"1201, 1202","1201, 1202",0,I,I,affected-carrier,affected-carrier
+133,42.01190307520001,"1201, 1262","1159, 1263",43,I've lost another 30 pounds since the last time I've seen him,to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,relational,relational
+102,35.0,"1211, 1228","1211, 1263",35,another 30 pounds,another 30 pounds since the last time I've seen him.,affected-possessed,affected-possessed
+106,0.0,"1278, 1287","1278, 1287",0,wondering,wondering,main,main
+155,0.0,"1303, 1307","1303, 1307",0,gets,gets,main,main
+110,4.0,"1331, 1338","1327, 1338",4,stopped,n't stopped,main,main
+158,18.027756377319946,"1371, 1381","1353, 1382",19,I lay down,", especially when I lay down.",action,action
+111,29.0,"1339, 1353","1339, 1382",29,aching in days,"aching in days, especially when I lay down.",phenomenon,phenomenon
+108,0.0,"1319, 1323","1319, 1323",0,Mine,Mine,agent,agent
+135,1.0,"1319, 1381","1319, 1382",1,"Mine hasn't stopped aching in days, especially when I lay down","Mine hasn't stopped aching in days, especially when I lay down.",influential,influential
+157,5.0,"1373, 1381","1373, 1376",5,lay down,lay,main,main
+112,0.0,"1371, 1372","1371, 1372",0,I,I,agent,agent
+116,0.0,"1404, 1414","1404, 1414",0,be lacking,be lacking,main,main
+113,0.0,"1383, 1395","1383, 1395",0,Any vitamins,Any vitamins,affected-possessed,affected-possessed
+114,0.0,"1396, 1397","1396, 1397",0,I,I,affected-carrier,affected-carrier
+,
+,Manual mismatching all parsed (False Negative)
+1,"17, 18",I,emoter
+16,"96, 168",I've been keeping it at 600 or below every day without even wanting more,relational
+16,"96, 168",I've been keeping it at 600 or below every day without even wanting more,attributive
+11,"96, 97",I,carrier
+14,"114, 116",it,affected-carrier
+15,"117, 132",at 600 or below,attribute
+20,"178, 197",it's an extra apple,relational
+20,"178, 197",it's an extra apple,attributive
+17,"178, 180",it,carrier
+18,"181, 182",s,main
+19,"183, 217",an extra apple damn sugar cravings,attribute
+24,"226, 248",I weighed myself today,action
+28,"305, 348",a lot of it is water weight and muscle loss,relational
+28,"305, 348",a lot of it is water weight and muscle loss,attributive
+7,"305, 316",a lot of it,carrier
+25,"320, 348",water weight and muscle loss,attribute
+42,"373, 419","It's so odd how full I've been feeling, though",relational
+42,"373, 419","It's so odd how full I've been feeling, though",attributive
+38,"373, 375",It,carrier
+40,"378, 384",so odd,attribute
+140,"389, 411",full I've been feeling,relational
+145,"451, 500",restricting is coming back to me this time around,relational
+117,"516, 537",school's about to end,action
+48,"516, 522",school,carrier
+118,"542, 570",there's little stress around,relational
+118,"542, 570",there's little stress around,locational
+53,"548, 549",s,main
+54,"550, 563",little stress,carrier
+55,"564, 570",around,location
+149,"661, 711",eating a can of tuna every day is keeping me going,influential
+50,"661, 691",eating a can of tuna every day,agent
+148,"703, 711",me going,phenomenon
+121,"728, 757",even though it's sooo low-cal,attributive
+64,"745, 757",sooo low-cal,attribute
+123,"796, 817",keeping my body happy,relational
+123,"796, 817",keeping my body happy,attributive
+69,"804, 811",my body,affected-carrier
+70,"812, 817",happy,attribute
+154,"833, 867","I'm getting enough veggies, though",relational
+126,"916, 962",the salad bar hasn't been open for some reason,relational
+126,"916, 962",the salad bar hasn't been open for some reason,attributive
+78,"916, 929",the salad bar,carrier
+81,"942, 946",open,attribute
+127,"1014, 1044",the loss was a good motivation,attributive
+84,"1027, 1044",a good motivation,attribute
+129,"1046, 1076",which I've been needing lately,relational
+129,"1046, 1076",which I've been needing lately,possessive
+128,"1046, 1051",which,possessed
+85,"1052, 1053",I,carrier
+130,"1078, 1117",I'm shooting for 110 by the end of June,relational
+130,"1078, 1117",I'm shooting for 110 by the end of June,attributive
+88,"1078, 1079",I,carrier
+91,"1095, 1098",110,attribute
+131,"1119, 1144",which I think is possible,mental
+131,"1119, 1144",which I think is possible,two-role-cognition
+92,"1125, 1126",I,cognizant
+94,"1133, 1144",is possible,phenomenon
+134,"1272, 1317",I was wondering if anyone here gets back pain,mental
+134,"1272, 1317",I was wondering if anyone here gets back pain,two-role-cognition
+104,"1272, 1273",I,cognizant
+107,"1291, 1317",anyone here gets back pain,phenomenon
+160,"1291, 1317",anyone here gets back pain,relational
+160,"1291, 1317",anyone here gets back pain,possessive
+103,"1291, 1302",anyone here,affected-carrier
+156,"1308, 1317",back pain,possessed
+136,"1383, 1414",Any vitamins I could be lacking,relational
+136,"1383, 1414",Any vitamins I could be lacking,possessive
+,
+,Parsed mismatching all manual (False Positives)
+32,"32, 72",to say that I've been hanging on so well,process
+32,"32, 72",to say that I've been hanging on so well,three-role-cognition
+44,"44, 45",I,agent-cognizant
+44,"44, 45",I,agent-carrier
+44,"44, 45",I,agent-perceiver
+39,"39, 72",that I've been hanging on so well,process
+39,"39, 72",that I've been hanging on so well,one-role-action
+79,"79, 89",my brother,agent
+79,"79, 89",my brother,agent-cognizant
+79,"79, 89",my brother,agent-carrier
+79,"79, 89",my brother,agent-perceiver
+18,"18, 20",'m,main
+90,"90, 94",left,main
+39,"39, 72",that I've been hanging on so well,created-phenomenon
+73,"73, 95",since my brother left.,process
+73,"73, 95",since my brother left.,action
+73,"73, 95",since my brother left.,one-role-action
+226,"226, 227",I,agent-cognizant
+226,"226, 227",I,affected-carrier
+226,"226, 227",I,agent-carrier
+226,"226, 227",I,agent-perceiver
+226,"226, 227",I,carrier
+222,"222, 249",And I weighed myself today!,process
+222,"222, 249",And I weighed myself today!,attributive
+222,"222, 249",And I weighed myself today!,relational
+222,"222, 249",And I weighed myself today!,two-role-action
+236,"236, 242",myself,attribute
+236,"236, 242",myself,affected-emoter
+236,"236, 242",myself,affected-path
+236,"236, 242",myself,affected-perceiver
+236,"236, 242",myself,affected-cognizant
+236,"236, 242",myself,affected-carrier
+236,"236, 242",myself,affected-destination
+236,"236, 242",myself,affected-possessed
+236,"236, 242",myself,affected-source
+272,"272, 280",8 pounds,agent-cognizant
+272,"272, 280",8 pounds,affected-carrier
+272,"272, 280",8 pounds,affected
+272,"272, 280",8 pounds,agent-carrier
+272,"272, 280",8 pounds,agent-perceiver
+272,"272, 280",8 pounds,carrier
+272,"272, 280",8 pounds,perceiver
+272,"272, 296",8 pounds gone in a week.,process
+272,"272, 296",8 pounds gone in a week.,directional
+272,"272, 296",8 pounds gone in a week.,relational
+272,"272, 296",8 pounds gone in a week.,two-role-action
+286,"286, 296",in a week.,destination
+286,"286, 296",in a week.,affected-destination
+286,"286, 296",in a week.,range
+320,"320, 348",water weight and muscle loss,affected-emoter
+320,"320, 348",water weight and muscle loss,affected-path
+320,"320, 348",water weight and muscle loss,affected-perceiver
+320,"320, 348",water weight and muscle loss,affected-cognizant
+320,"320, 348",water weight and muscle loss,affected-carrier
+320,"320, 348",water weight and muscle loss,affected-destination
+320,"320, 348",water weight and muscle loss,affected
+320,"320, 348",water weight and muscle loss,affected-possessed
+320,"320, 348",water weight and muscle loss,affected-source
+320,"320, 348",water weight and muscle loss,range
+367,"367, 372",loss!,location
+297,"297, 353","I think a lot of it is water weight and muscle loss, but",process
+297,"297, 298",I,agent
+297,"297, 298",I,agent-cognizant
+297,"297, 298",I,affected-cognizant
+297,"297, 298",I,affected
+357,"357, 363",", loss",affected-carrier
+357,"357, 363",", loss",agent-carrier
+305,"305, 316",a lot of it,agent
+305,"305, 316",a lot of it,agent-cognizant
+305,"305, 316",a lot of it,agent-carrier
+305,"305, 316",a lot of it,agent-perceiver
+354,"354, 372","hey, loss is loss!",process
+354,"354, 372","hey, loss is loss!",locational
+305,"305, 348",a lot of it is water weight and muscle loss,process
+305,"305, 348",a lot of it is water weight and muscle loss,two-role-action
+305,"305, 348",a lot of it is water weight and muscle loss,action
+305,"305, 348",a lot of it is water weight and muscle loss,created-phenomenon
+394,"394, 395",I,affected-emoter
+394,"394, 395",I,agent
+394,"394, 395",I,affected-perceiver
+394,"394, 395",I,affected-carrier
+394,"394, 395",I,agent-carrier
+394,"394, 395",I,agent-perceiver
+394,"394, 395",I,emoter
+394,"394, 395",I,perceiver
+385,"385, 393",how full,phenomenon
+385,"385, 393",how full,created-phenomenon
+385,"385, 420","how full I've been feeling, though.",process
+385,"385, 420","how full I've been feeling, though.",mental
+385,"385, 420","how full I've been feeling, though.",two-role-perception
+385,"385, 420","how full I've been feeling, though.",emotive
+421,"421, 501",I don't understand how easily restricting is coming back to me this time around.,process
+451,"451, 462",restricting,affected-emoter
+451,"451, 462",restricting,affected-path
+451,"451, 462",restricting,affected-perceiver
+451,"451, 462",restricting,affected-cognizant
+451,"451, 462",restricting,affected-carrier
+451,"451, 462",restricting,affected-destination
+451,"451, 462",restricting,affected
+451,"451, 462",restricting,agent-carrier
+451,"451, 462",restricting,affected-possessed
+451,"451, 462",restricting,affected-source
+421,"421, 422",I,affected-cognizant
+421,"421, 422",I,affected
+440,"440, 501",how easily restricting is coming back to me this time around.,created-phenomenon
+440,"440, 501",how easily restricting is coming back to me this time around.,process
+440,"440, 501",how easily restricting is coming back to me this time around.,attributive
+440,"440, 501",how easily restricting is coming back to me this time around.,action
+440,"440, 501",how easily restricting is coming back to me this time around.,one-role-action
+440,"440, 501",how easily restricting is coming back to me this time around.,starting
+478,"478, 483",to me,phenomenon
+478,"478, 483",to me,attribute
+478,"478, 483",to me,created-phenomenon
+478,"478, 483",to me,affected-destination
+478,"478, 483",to me,created
+597,"597, 648",and school-related stress is my main binge-trigger.,process
+597,"597, 648",and school-related stress is my main binge-trigger.,locational
+597,"597, 648",and school-related stress is my main binge-trigger.,two-role-action
+597,"597, 648",and school-related stress is my main binge-trigger.,action
+626,"626, 648",my main binge-trigger.,location
+626,"626, 648",my main binge-trigger.,range
+601,"601, 622",school-related stress,agent
+601,"601, 622",school-related stress,agent-cognizant
+601,"601, 622",school-related stress,affected-carrier
+601,"601, 622",school-related stress,affected
+601,"601, 622",school-related stress,agent-carrier
+601,"601, 622",school-related stress,agent-perceiver
+601,"601, 622",school-related stress,perceiver
+760,"760, 790",it's almost completely protein,process
+760,"760, 790",it's almost completely protein,locational
+760,"760, 790",it's almost completely protein,two-role-action
+760,"760, 790",it's almost completely protein,action
+668,"668, 691",a can of tuna every day,affected-emoter
+668,"668, 691",a can of tuna every day,affected-path
+668,"668, 691",a can of tuna every day,affected-perceiver
+668,"668, 691",a can of tuna every day,affected-cognizant
+668,"668, 691",a can of tuna every day,affected-carrier
+668,"668, 691",a can of tuna every day,affected-destination
+668,"668, 691",a can of tuna every day,affected
+668,"668, 691",a can of tuna every day,affected-possessed
+668,"668, 691",a can of tuna every day,affected-source
+726,"726, 759",( even though it's sooo low-cal ),process
+726,"726, 759",( even though it's sooo low-cal ),locational
+760,"760, 762",it,agent
+760,"760, 762",it,agent-cognizant
+760,"760, 762",it,affected-carrier
+760,"760, 762",it,affected
+760,"760, 762",it,agent-carrier
+760,"760, 762",it,agent-perceiver
+760,"760, 762",it,perceiver
+740,"740, 742",it,affected-carrier
+740,"740, 742",it,agent-carrier
+703,"703, 705",me,affected-emoter
+703,"703, 705",me,agent
+703,"703, 705",me,affected-path
+703,"703, 705",me,affected-perceiver
+703,"703, 705",me,agent-cognizant
+703,"703, 705",me,affected-cognizant
+703,"703, 705",me,affected-carrier
+703,"703, 705",me,affected-destination
+703,"703, 705",me,affected
+703,"703, 705",me,agent-carrier
+703,"703, 705",me,affected-possessed
+703,"703, 705",me,agent-perceiver
+703,"703, 705",me,affected-source
+703,"703, 705",me,carrier
+703,"703, 705",me,perceiver
+804,"804, 818",my body happy.,phenomenon
+804,"804, 818",my body happy.,created-phenomenon
+706,"706, 711",going,main
+649,"649, 818","And I think eating a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",process
+765,"765, 790",almost completely protein,location
+765,"765, 790",almost completely protein,range
+668,"668, 791","a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein,",process
+668,"668, 791","a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein,",action
+668,"668, 791","a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein,",one-role-action
+745,"745, 757",sooo low-cal,location
+812,"812, 817",happy,main
+661,"661, 667",eating,main
+653,"653, 654",I,agent
+653,"653, 654",I,agent-cognizant
+653,"653, 654",I,affected-cognizant
+653,"653, 654",I,affected
+661,"661, 818","eating a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",created-phenomenon
+792,"792, 818",and keeping my body happy.,process
+792,"792, 818",and keeping my body happy.,continuing
+792,"792, 818",and keeping my body happy.,influential
+703,"703, 790","me going, too, because ( even though it's sooo low-cal ) it's almost completely protein",process
+703,"703, 790","me going, too, because ( even though it's sooo low-cal ) it's almost completely protein",directional
+703,"703, 790","me going, too, because ( even though it's sooo low-cal ) it's almost completely protein",action
+703,"703, 790","me going, too, because ( even though it's sooo low-cal ) it's almost completely protein",one-role-action
+845,"845, 859",enough veggies,attribute
+845,"845, 859",enough veggies,affected-emoter
+845,"845, 859",enough veggies,created-phenomenon
+845,"845, 859",enough veggies,affected-path
+845,"845, 859",enough veggies,affected-perceiver
+845,"845, 859",enough veggies,destination
+845,"845, 859",enough veggies,affected-cognizant
+845,"845, 859",enough veggies,affected-carrier
+845,"845, 859",enough veggies,affected-destination
+845,"845, 859",enough veggies,affected
+845,"845, 859",enough veggies,affected-possessed
+845,"845, 859",enough veggies,affected-source
+845,"845, 859",enough veggies,created
+833,"833, 859",I'm getting enough veggies,process
+833,"833, 859",I'm getting enough veggies,attributive
+833,"833, 859",I'm getting enough veggies,directional
+833,"833, 859",I'm getting enough veggies,causative
+833,"833, 859",I'm getting enough veggies,two-role-action
+833,"833, 859",I'm getting enough veggies,action
+833,"833, 834",I,agent
+833,"833, 834",I,cognizant
+833,"833, 834",I,agent-cognizant
+833,"833, 834",I,affected-cognizant
+833,"833, 834",I,affected-carrier
+833,"833, 834",I,affected
+833,"833, 834",I,agent-carrier
+833,"833, 834",I,agent-perceiver
+833,"833, 834",I,perceiver
+819,"819, 820",I,agent
+819,"819, 820",I,agent-cognizant
+819,"819, 820",I,affected-cognizant
+819,"819, 820",I,affected
+833,"833, 859",I'm getting enough veggies,created-phenomenon
+819,"819, 868","I don't think I'm getting enough veggies, though.",process
+884,"884, 911",a salad for lunch at school,phenomenon
+884,"884, 911",a salad for lunch at school,affected-emoter
+884,"884, 911",a salad for lunch at school,created-phenomenon
+884,"884, 911",a salad for lunch at school,affected-path
+884,"884, 911",a salad for lunch at school,affected-perceiver
+884,"884, 911",a salad for lunch at school,affected-cognizant
+884,"884, 911",a salad for lunch at school,affected-carrier
+884,"884, 911",a salad for lunch at school,affected-destination
+884,"884, 911",a salad for lunch at school,affected-possessed
+884,"884, 911",a salad for lunch at school,affected-source
+884,"884, 911",a salad for lunch at school,created
+884,"884, 911",a salad for lunch at school,possessed
+942,"942, 946",open,range
+975,"975, 981",resort,main
+869,"869, 911",I usually have a salad for lunch at school,process
+869,"869, 911",I usually have a salad for lunch at school,causative
+869,"869, 911",I usually have a salad for lunch at school,relational
+869,"869, 911",I usually have a salad for lunch at school,possessive
+869,"869, 911",I usually have a salad for lunch at school,two-role-action
+869,"869, 870",I,agent-cognizant
+869,"869, 870",I,affected-carrier
+869,"869, 870",I,affected
+869,"869, 870",I,agent-carrier
+869,"869, 870",I,agent-perceiver
+869,"869, 870",I,carrier
+869,"869, 870",I,perceiver
+972,"972, 1001",me resort to an apple instead,phenomenon
+972,"972, 1001",me resort to an apple instead,created-phenomenon
+972,"972, 1001",me resort to an apple instead,created
+916,"916, 929",the salad bar,agent
+916,"916, 929",the salad bar,agent-cognizant
+916,"916, 929",the salad bar,agent-carrier
+916,"916, 929",the salad bar,agent-perceiver
+912,"912, 1005",but the salad bar hasn't been open for some reason ( having me resort to an apple instead ) .,process
+912,"912, 1005",but the salad bar hasn't been open for some reason ( having me resort to an apple instead ) .,two-role-action
+912,"912, 1005",but the salad bar hasn't been open for some reason ( having me resort to an apple instead ) .,action
+965,"965, 971",having,main
+963,"963, 1005",( having me resort to an apple instead ) .,process
+963,"963, 1005",( having me resort to an apple instead ) .,causative
+963,"963, 1005",( having me resort to an apple instead ) .,influential
+1027,"1027, 1077","a good motivation, which I've been needing lately.",affected-emoter
+1027,"1027, 1077","a good motivation, which I've been needing lately.",affected-path
+1027,"1027, 1077","a good motivation, which I've been needing lately.",affected-perceiver
+1027,"1027, 1077","a good motivation, which I've been needing lately.",location
+1027,"1027, 1077","a good motivation, which I've been needing lately.",affected-cognizant
+1027,"1027, 1077","a good motivation, which I've been needing lately.",affected-carrier
+1027,"1027, 1077","a good motivation, which I've been needing lately.",affected-destination
+1027,"1027, 1077","a good motivation, which I've been needing lately.",affected
+1027,"1027, 1077","a good motivation, which I've been needing lately.",affected-possessed
+1027,"1027, 1077","a good motivation, which I've been needing lately.",affected-source
+1027,"1027, 1077","a good motivation, which I've been needing lately.",range
+1044,"1044, 1051",", which",phenomenon
+1044,"1044, 1051",", which",created-phenomenon
+1052,"1052, 1053",I,affected-emoter
+1052,"1052, 1053",I,emoter
+1008,"1008, 1077","Well, the loss was a good motivation, which I've been needing lately.",process
+1008,"1008, 1077","Well, the loss was a good motivation, which I've been needing lately.",locational
+1008,"1008, 1077","Well, the loss was a good motivation, which I've been needing lately.",two-role-action
+1044,"1044, 1077",", which I've been needing lately.",process
+1044,"1044, 1077",", which I've been needing lately.",mental
+1044,"1044, 1077",", which I've been needing lately.",desiderative
+1012,"1012, 1022",", the loss",agent
+1012,"1012, 1022",", the loss",agent-cognizant
+1012,"1012, 1022",", the loss",affected-carrier
+1012,"1012, 1022",", the loss",agent-carrier
+1012,"1012, 1022",", the loss",agent-perceiver
+1078,"1078, 1145","I'm shooting for 110 by the end of June, which I think is possible.",process
+1078,"1078, 1145","I'm shooting for 110 by the end of June, which I think is possible.",action
+1078,"1078, 1145","I'm shooting for 110 by the end of June, which I think is possible.",one-role-action
+1078,"1078, 1079",I,agent
+1078,"1078, 1079",I,agent-cognizant
+1078,"1078, 1079",I,agent-carrier
+1078,"1078, 1079",I,agent-perceiver
+1133,"1133, 1135",is,main
+1146,"1146, 1263",I don't want to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,process
+1146,"1146, 1263",I don't want to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,desiderative
+1194,"1194, 1200",to say,main
+1259,"1259, 1263",him.,affected-emoter
+1259,"1259, 1263",him.,created-phenomenon
+1259,"1259, 1263",him.,affected-path
+1259,"1259, 1263",him.,affected-perceiver
+1259,"1259, 1263",him.,affected-cognizant
+1259,"1259, 1263",him.,affected-carrier
+1259,"1259, 1263",him.,affected-destination
+1259,"1259, 1263",him.,affected
+1259,"1259, 1263",him.,affected-possessed
+1259,"1259, 1263",him.,matchee
+1259,"1259, 1263",him.,affected-source
+1259,"1259, 1263",him.,created
+1259,"1259, 1263",him.,range
+1168,"1168, 1174",my dad,affected-emoter
+1168,"1168, 1174",my dad,affected-path
+1168,"1168, 1174",my dad,affected-perceiver
+1168,"1168, 1174",my dad,destination
+1168,"1168, 1174",my dad,affected-cognizant
+1168,"1168, 1174",my dad,affected-carrier
+1168,"1168, 1174",my dad,affected-destination
+1168,"1168, 1174",my dad,affected
+1168,"1168, 1174",my dad,affected-possessed
+1168,"1168, 1174",my dad,affected-source
+1201,"1201, 1263",I've lost another 30 pounds since the last time I've seen him.,process
+1201,"1201, 1263",I've lost another 30 pounds since the last time I've seen him.,two-role-action
+1201,"1201, 1263",I've lost another 30 pounds since the last time I've seen him.,action
+1159,"1159, 1263",to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,created-phenomenon
+1249,"1249, 1250",I,agent
+1249,"1249, 1250",I,cognizant
+1249,"1249, 1250",I,affected-perceiver
+1249,"1249, 1250",I,agent-cognizant
+1249,"1249, 1250",I,affected-cognizant
+1249,"1249, 1250",I,affected
+1249,"1249, 1250",I,agent-carrier
+1249,"1249, 1250",I,agent-perceiver
+1249,"1249, 1250",I,perceiver
+1146,"1146, 1147",I,affected-emoter
+1201,"1201, 1263",I've lost another 30 pounds since the last time I've seen him.,phenomenon
+1201,"1201, 1263",I've lost another 30 pounds since the last time I've seen him.,created-phenomenon
+1201,"1201, 1202",I,agent
+1201,"1201, 1202",I,agent-cognizant
+1201,"1201, 1202",I,affected
+1201,"1201, 1202",I,agent-carrier
+1201,"1201, 1202",I,agent-perceiver
+1201,"1201, 1202",I,carrier
+1159,"1159, 1263",to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,process
+1159,"1159, 1263",to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,directional
+1159,"1159, 1263",to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,two-role-action
+1194,"1194, 1263",to say I've lost another 30 pounds since the last time I've seen him.,process
+1194,"1194, 1263",to say I've lost another 30 pounds since the last time I've seen him.,mental
+1194,"1194, 1263",to say I've lost another 30 pounds since the last time I've seen him.,two-role-cognition
+1194,"1194, 1263",to say I've lost another 30 pounds since the last time I've seen him.,two-role-perception
+1194,"1194, 1263",to say I've lost another 30 pounds since the last time I've seen him.,three-role-cognition
+1254,"1254, 1258",seen,main
+1211,"1211, 1263",another 30 pounds since the last time I've seen him.,possessed
+1211,"1211, 1263",another 30 pounds since the last time I've seen him.,range
+1159,"1159, 1167",to visit,main
+1249,"1249, 1263",I've seen him.,process
+1249,"1249, 1263",I've seen him.,matching
+1249,"1249, 1263",I've seen him.,causative
+1249,"1249, 1263",I've seen him.,relational
+1249,"1249, 1263",I've seen him.,two-role-cognition
+1249,"1249, 1263",I've seen him.,two-role-perception
+1249,"1249, 1263",I've seen him.,two-role-action
+1183,"1183, 1188",being,main
+1288,"1288, 1318",if anyone here gets back pain?,process
+1288,"1288, 1318",if anyone here gets back pain?,two-role-action
+1288,"1288, 1318",if anyone here gets back pain?,action
+1313,"1313, 1318",pain?,affected-emoter
+1313,"1313, 1318",pain?,affected-path
+1313,"1313, 1318",pain?,affected-perceiver
+1313,"1313, 1318",pain?,affected-cognizant
+1313,"1313, 1318",pain?,affected-carrier
+1313,"1313, 1318",pain?,affected-destination
+1313,"1313, 1318",pain?,affected
+1313,"1313, 1318",pain?,affected-possessed
+1313,"1313, 1318",pain?,affected-source
+1291,"1291, 1297",anyone,agent
+1291,"1291, 1297",anyone,agent-cognizant
+1291,"1291, 1297",anyone,agent-carrier
+1291,"1291, 1297",anyone,agent-perceiver
+1353,"1353, 1370",", especially when",affected-emoter
+1353,"1353, 1370",", especially when",created-phenomenon
+1353,"1353, 1370",", especially when",affected-path
+1353,"1353, 1370",", especially when",affected-perceiver
+1353,"1353, 1370",", especially when",affected-cognizant
+1353,"1353, 1370",", especially when",affected-carrier
+1353,"1353, 1370",", especially when",affected-destination
+1353,"1353, 1370",", especially when",affected
+1353,"1353, 1370",", especially when",affected-possessed
+1353,"1353, 1370",", especially when",affected-source
+1353,"1353, 1370",", especially when",created
+1353,"1353, 1370",", especially when",carrier
+1353,"1353, 1382",", especially when I lay down.",process
+1353,"1353, 1382",", especially when I lay down.",directional
+1353,"1353, 1382",", especially when I lay down.",two-role-action
+1339,"1339, 1382","aching in days, especially when I lay down.",created-phenomenon
+1339,"1339, 1382","aching in days, especially when I lay down.",created
+1319,"1319, 1323",Mine,agent-cognizant
+1319,"1319, 1323",Mine,agent-carrier
+1319,"1319, 1323",Mine,agent-perceiver
+1319,"1319, 1382","Mine hasn't stopped aching in days, especially when I lay down.",process
+1319,"1319, 1382","Mine hasn't stopped aching in days, especially when I lay down.",preventive
+1371,"1371, 1372",I,agent-cognizant
+1371,"1371, 1372",I,agent-carrier
+1371,"1371, 1372",I,agent-perceiver
+1339,"1339, 1382","aching in days, especially when I lay down.",process
+1339,"1339, 1382","aching in days, especially when I lay down.",action
+1339,"1339, 1382","aching in days, especially when I lay down.",one-role-action
+1339,"1339, 1345",aching,main
+1383,"1383, 1395",Any vitamins,possessed
+1396,"1396, 1397",I,agent-carrier
+1396,"1396, 1397",I,carrier
+845,"845, 859",enough veggies,phenomenon
+833,"833, 859",I'm getting enough veggies,mental
+833,"833, 859",I'm getting enough veggies,two-role-cognition
+1259,"1259, 1263",him.,phenomenon

@@ -1,0 +1,353 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.7138461538461538
+,Recall,0.9469387755102041
+,F1,0.8140350877192982
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+3,5.0,"47, 53","42, 53",5,seeing,been seeing,main,main
+4,23.0,"54, 62","54, 85",23,this guy,this guy for about nine months.,participant-role,participant-role
+1,6.0,"37, 38","31, 38",6,I,", 
+
+I",participant-role,participant-role
+5,12.041594578792296,"37, 84","25, 85",13,I've been seeing this guy for about nine months,"Hi all, 
+
+I've been seeing this guy for about nine months.",configuration,configuration
+6,2.0,"99, 101","97, 101",2,we,", we",participant-role,participant-role
+10,0.0,"139, 141","139, 141",0,we,we,participant-role,participant-role
+11,10.0,"142, 156","142, 146",10,play in a band,play,main,main
+9,46.84015371452148,"99, 136","86, 181",58,we were friends for a couple of years,"Before that, we were friends for a couple of years ( we play in a band together at weekends ) .",configuration,configuration
+8,67.0,"107, 114","107, 181",67,friends,friends for a couple of years ( we play in a band together at weekends ) .,participant-role,participant-role
+7,0.0,"102, 106","102, 106",0,were,were,main,main
+13,4.47213595499958,"139, 177","137, 181",6,we play in a band together at weekends,( we play in a band together at weekends ) .,configuration,configuration
+28,2.0,"214, 220","212, 220",2,I'm 30,", I'm 30",configuration,configuration
+15,1.0,"185, 186","184, 186",1,s,'s,main,main
+16,20.0,"187, 212","187, 192",20,quite a bit older than me,quite,participant-role,participant-role
+22,1.0,"225, 226","224, 226",1,s,'s,main,main
+17,18.0,"182, 212","182, 230",18,He's quite a bit older than me,"He's quite a bit older than me, I'm 30, he's 52.",configuration,configuration
+19,1.0,"216, 217","215, 217",1,m,'m,main,main
+29,2.23606797749979,"222, 229","220, 230",3,he's 52,", he's 52.",configuration,configuration
+21,2.0,"222, 224","220, 224",2,he,", he",participant-role,participant-role
+20,0.0,"218, 220","218, 220",0,30,30,participant-role,participant-role
+14,0.0,"182, 184","182, 184",0,He,He,participant-role,participant-role
+23,1.0,"227, 229","227, 230",1,52,52.,participant-role,participant-role
+18,2.0,"214, 215","212, 215",2,I,", I",participant-role,participant-role
+34,10.0,"294, 317","288, 309",14,"they have twins, aged 7",", and they have twins",configuration,configuration
+33,8.0,"304, 317","304, 309",8,"twins, aged 7",twins,participant-role,participant-role
+24,0.0,"231, 233","231, 233",0,He,He,participant-role,participant-role
+31,0.0,"294, 298","294, 298",0,they,they,participant-role,participant-role
+32,0.0,"299, 303","299, 303",0,have,have,main,main
+30,0.0,"231, 254","231, 254",0,He's been married twice,He's been married twice,configuration,configuration
+26,8.0,"236, 240","236, 248",8,been,been married,main,main
+37,5.0,"337, 345","332, 345",5,his wife,from his wife,participant-role,participant-role
+46,16.1245154965971,"392, 445","390, 461",18,I was nothing to do with the break-up of the marriage,"( I was nothing to do with the break-up of the marriage, by the way ) .",configuration,configuration
+44,0.0,"392, 393","392, 393",0,I,I,participant-role,participant-role
+47,14.0,"398, 445","412, 445",14,nothing to do with the break-up of the marriage,with the break-up of the marriage,participant-role,participant-role
+45,0.0,"394, 397","394, 397",0,was,was,main,main
+40,0.0,"366, 378","366, 378",0,his children,his children,participant-role,participant-role
+42,72.11102550927978,"361, 389","357, 461",76,sees his children on Sundays,"and sees his children on Sundays ( I was nothing to do with the break-up of the marriage, by the way ) .",configuration,configuration
+35,0.0,"319, 321","319, 321",0,He,He,participant-role,participant-role
+36,5.0,"322, 336","322, 331",5,separated from,separated,main,main
+39,0.0,"361, 365","361, 365",0,sees,sees,main,main
+38,0.0,"319, 356","319, 356",0,He separated from his wife a year ago,He separated from his wife a year ago,configuration,configuration
+48,2.0,"487, 489","485, 489",2,we,", we",participant-role,participant-role
+56,0.0,"534, 547","534, 547",0,with his wife,with his wife,participant-role,participant-role
+63,0.0,"577, 579","577, 579",0,he,he,participant-role,participant-role
+50,0.0,"495, 502","495, 502",0,talking,talking,main,main
+41,9.0,"560, 572","569, 572",9,he loved her,her,participant-role,participant-role
+12,39.293765408777,"522, 572","560, 562",48,when he was with his wife he told her he loved her,he,participant-role,participant-role
+61,12.0,"548, 572","560, 572",12,he told her he loved her,he loved her,configuration,configuration
+98,5.0,"527, 547","522, 547",5,he was with his wife,when he was with his wife,configuration,configuration
+96,8.0,"470, 502","462, 502",8,"a few weeks ago, we were talking","Anyway, a few weeks ago, we were talking",configuration,configuration
+97,17.69180601295413,"507, 572","519, 559",25,I asked him if when he was with his wife he told her he loved her,if when he was with his wife he told her,configuration,configuration
+101,4.0,"577, 597","573, 597",4,"he said, ""of course""","and he said, ""of course""",configuration,configuration
+53,0.0,"515, 518","515, 518",0,him,him,participant-role,participant-role
+52,0.0,"509, 514","509, 514",0,asked,asked,main,main
+64,0.0,"580, 584","580, 584",0,said,said,main,main
+54,0.0,"527, 529","527, 529",0,he,he,participant-role,participant-role
+55,0.0,"530, 533","530, 533",0,was,was,main,main
+58,0.0,"551, 555","551, 555",0,told,told,main,main
+59,0.0,"556, 559","556, 559",0,her,her,participant-role,participant-role
+57,0.0,"548, 550","548, 550",0,he,he,participant-role,participant-role
+51,0.0,"507, 508","507, 508",0,I,I,participant-role,participant-role
+81,0.0,"706, 710","706, 710",0,said,said,main,main
+104,5.0,"632, 643","627, 643",5,he loves me,that he loves me,configuration,configuration
+79,0.0,"696, 698","696, 698",0,me,me,participant-role,participant-role
+94,0.0,"804, 808","804, 808",0,find,find,main,main
+68,6.0,"616, 620","610, 620",6,said,never said,main,main
+85,4.0,"730, 734","726, 734",4,love,n't love,main,main
+80,0.0,"703, 705","703, 705",0,he,he,participant-role,participant-role
+103,0.0,"641, 643","641, 643",0,me,me,participant-role,participant-role
+93,0.0,"797, 799","797, 799",0,go,go,main,main
+60,0.0,"687, 689","687, 689",0,he,he,participant-role,participant-role
+75,0.0,"667, 670","667, 670",0,him,him,participant-role,participant-role
+107,8.06225774829855,"703, 737","711, 738",9,"he said that no, he didn't love me","that no, he didn't love me,",configuration,configuration
+88,0.0,"753, 759","753, 759",0,wanted,wanted,main,main
+91,0.0,"784, 785","784, 785",0,I,I,participant-role,participant-role
+66,2.8284271247461903,"605, 607","603, 609",4,he,", he's",participant-role,participant-role
+83,2.0,"720, 722","718, 722",2,he,", he",participant-role,participant-role
+90,11.0,"760, 778","760, 767",11,someone to love me,someone,participant-role,participant-role
+76,13.601470508735444,"804, 821","800, 808",13,find someone else,and find,configuration,configuration
+105,0.0,"648, 698","648, 698",0,last night I asked him straight out if he loved me,last night I asked him straight out if he loved me,configuration,configuration
+43,20.0,"687, 698","667, 698",20,he loved me,him straight out if he loved me,participant-role,participant-role
+106,20.0,"687, 698","667, 698",20,he loved me,him straight out if he loved me,configuration,configuration
+95,1.0,"809, 821","809, 822",1,someone else,someone else.,participant-role,participant-role
+87,0.0,"751, 752","751, 752",0,I,I,participant-role,participant-role
+71,7.211102550927978,"605, 643","599, 647",10,he's never said to me that he loves me,"Well, he's never said to me that he loves me, so",configuration,configuration
+89,45.60701700396552,"751, 778","739, 822",56,I wanted someone to love me,and that if I wanted someone to love me that I had better go and find someone else.,configuration,configuration
+69,0.0,"621, 626","621, 626",0,to me,to me,participant-role,participant-role
+70,5.0,"632, 643","627, 643",5,he loves me,that he loves me,participant-role,participant-role
+62,5.0,"784, 799","779, 799",5,I had better go,that I had better go,configuration,configuration
+72,0.0,"632, 634","632, 634",0,he,he,participant-role,participant-role
+78,0.0,"690, 695","690, 695",0,loved,loved,main,main
+73,0.0,"659, 660","659, 660",0,I,I,participant-role,participant-role
+74,0.0,"661, 666","661, 666",0,asked,asked,main,main
+102,0.0,"635, 640","635, 640",0,loves,loves,main,main
+86,0.0,"735, 737","735, 737",0,me,me,participant-role,participant-role
+128,7.0710678118654755,"969, 1003","962, 1004",8,he had any strong feelings for her,before he had any strong feelings for her.,configuration,configuration
+111,0.0,"839, 843","839, 843",0,said,said,main,main
+122,0.0,"921, 924","921, 924",0,was,was,main,main
+112,24.0,"849, 893","873, 893",24,he doesn't fall in love at the drop of a hat,at the drop of a hat,participant-role,participant-role
+121,20.0,"925, 941","925, 961",20,with his ex-wife,with his ex-wife for about two years,participant-role,participant-role
+115,0.0,"849, 851","849, 851",0,he,he,participant-role,participant-role
+126,47.01063709417264,"918, 961","899, 1004",62,he was with his ex-wife for about two years,"that, for example, he was with his ex-wife for about two years before he had any strong feelings for her.",configuration,configuration
+114,2.0,"918, 920","916, 920",2,he,", he",participant-role,participant-role
+123,0.0,"969, 971","969, 971",0,he,he,participant-role,participant-role
+124,0.0,"972, 975","972, 975",0,had,had,main,main
+117,8.94427190999916,"860, 872","856, 864",10,fall in love,n't fall,main,main
+125,1.0,"976, 1003","976, 1004",1,any strong feelings for her,any strong feelings for her.,participant-role,participant-role
+110,0.0,"831, 833","831, 833",0,he,he,participant-role,participant-role
+120,5.0990195135927845,"849, 893","844, 894",6,he doesn't fall in love at the drop of a hat,"that he doesn't fall in love at the drop of a hat,",configuration,configuration
+113,111.28791488746656,"831, 893","823, 1004",119,he also said that he doesn't fall in love at the drop of a hat,"However he also said that he doesn't fall in love at the drop of a hat, and that, for example, he was with his ex-wife for about two years before he had any strong feelings for her.",configuration,configuration
+141,5.0990195135927845,"1121, 1138","1116, 1139",6,this was the case,that this was the case.,configuration,configuration
+131,0.0,"1042, 1046","1042, 1046",0,been,been,main,main
+138,0.0,"1121, 1125","1121, 1125",0,this,this,participant-role,participant-role
+133,17.0,"1005, 1065","1022, 1065",17,The two times in my life that I have been in love previously,my life that I have been in love previously,configuration,configuration
+132,0.0,"1047, 1054","1047, 1054",0,in love,in love,participant-role,participant-role
+137,74.0,"1075, 1115","1005, 1139",94,it was apparent after a couple of months,"The two times in my life that I have been in love previously, though, it was apparent after a couple of months that this was the case.",configuration,configuration
+135,0.0,"1078, 1081","1078, 1081",0,was,was,main,main
+139,0.0,"1126, 1129","1126, 1129",0,was,was,main,main
+134,2.0,"1075, 1077","1073, 1077",2,it,", it",participant-role,participant-role
+129,0.0,"1035, 1036","1035, 1036",0,I,I,participant-role,participant-role
+140,1.0,"1130, 1138","1130, 1139",1,the case,the case.,participant-role,participant-role
+152,10.0,"1224, 1237","1224, 1227",10,cut my losses,cut,main,main
+151,0.0,"1222, 1223","1222, 1223",0,I,I,participant-role,participant-role
+149,0.0,"1203, 1214","1203, 1214",0,my feelings,my feelings,participant-role,participant-role
+158,4.123105625617661,"1242, 1256","1238, 1257",5,look elsewhere,and look elsewhere?,configuration,configuration
+157,3.0,"1219, 1237","1216, 1237",3,do I cut my losses,or do I cut my losses,configuration,configuration
+154,0.0,"1242, 1246","1242, 1246",0,look,look,main,main
+144,7.0,"1149, 1160","1149, 1153",7,hang around,hang,main,main
+146,2.0,"1187, 1189","1185, 1189",2,he,", he",participant-role,participant-role
+156,5.0,"1178, 1214","1173, 1214",5,"in time, he might return my feelings","that in time, he might return my feelings",configuration,configuration
+143,0.0,"1147, 1148","1147, 1148",0,I,I,participant-role,participant-role
+148,0.0,"1196, 1202","1196, 1202",0,return,return,main,main
+162,27.586228448267445,"1269, 1311","1289, 1292",39,impatient to expect him to say he loves me,him,participant-role,participant-role
+164,0.0,"1300, 1302","1300, 1302",0,he,he,participant-role,participant-role
+170,26.832815729997478,"1366, 1372","1354, 1396",36,normal,my feelings normal and his lagging behind?,participant-role,participant-role
+167,34.0,"1300, 1311","1300, 1345",34,he loves me,he loves me at this stage in the relationship,configuration,configuration
+163,21.0,"1258, 1345","1279, 1345",21,Am I being impatient to expect him to say he loves me at this stage in the relationship,to expect him to say he loves me at this stage in the relationship,configuration,configuration
+166,0.0,"1309, 1311","1309, 1311",0,me,me,participant-role,participant-role
+160,0.0,"1261, 1262","1261, 1262",0,I,I,participant-role,participant-role
+161,0.0,"1263, 1268","1263, 1268",0,being,being,main,main
+169,32.28002478313795,"1354, 1365","1345, 1396",40,my feelings,", or are my feelings normal and his lagging behind?",participant-role,participant-role
+174,95.0789145920377,"1350, 1372","1258, 1396",116,are my feelings normal,"Am I being impatient to expect him to say he loves me at this stage in the relationship, or are my feelings normal and his lagging behind?",configuration,configuration
+165,0.0,"1303, 1308","1303, 1308",0,loves,loves,main,main
+179,13.601470508735444,"1432, 1454","1440, 1443",19,telling him I love him,him,participant-role,participant-role
+176,2.0,"1415, 1416","1413, 1416",2,I,", I",participant-role,participant-role
+194,3.0,"1493, 1524","1490, 1524",3,I was unsure how he would react,as I was unsure how he would react,configuration,configuration
+202,9.055385138137417,"1535, 1590","1526, 1591",10,aren't you supposed to wait for the man to say it first,and also aren't you supposed to wait for the man to say it first?,configuration,configuration
+182,0.0,"1451, 1454","1451, 1454",0,him,him,participant-role,participant-role
+185,0.0,"1493, 1494","1493, 1494",0,I,I,participant-role,participant-role
+178,5.0,"1422, 1431","1422, 1426",5,felt like,felt,main,main
+199,5.0,"1558, 1566","1555, 1562",7,wait for,to wait,main,main
+200,17.46424919657298,"1567, 1574","1563, 1591",21,the man,for the man to say it first?,participant-role,participant-role
+192,22.0,"1444, 1454","1444, 1476",22,I love him,"I love him since about February,",configuration,configuration
+181,0.0,"1446, 1450","1446, 1450",0,love,love,main,main
+190,0.0,"1519, 1524","1519, 1524",0,react,react,main,main
+109,4.0,"1510, 1524","1506, 1524",4,he would react,how he would react,participant-role,participant-role
+195,4.0,"1510, 1524","1506, 1524",4,he would react,how he would react,configuration,configuration
+188,0.0,"1510, 1512","1510, 1512",0,he,he,participant-role,participant-role
+183,0.0,"1481, 1482","1481, 1482",0,I,I,participant-role,participant-role
+193,4.0,"1481, 1489","1477, 1489",4,I didn't,but I didn't,configuration,configuration
+191,45.967379738244816,"1399, 1475","1432, 1443",65,"For the record, I have felt like telling him I love him since about February",telling him,configuration,configuration
+180,0.0,"1444, 1445","1444, 1445",0,I,I,participant-role,participant-role
+210,9.0,"1624, 1646","1633, 1646",9,he likes being with me,being with me,configuration,configuration
+221,4.123105625617661,"1652, 1690","1648, 1691",5,that's as far as it goes at the moment,but that's as far as it goes at the moment.,configuration,configuration
+204,0.0,"1597, 1601","1597, 1601",0,says,says,main,main
+215,0.0,"1652, 1656","1652, 1656",0,that,that,participant-role,participant-role
+208,0.0,"1605, 1610","1605, 1610",0,likes,likes,main,main
+211,0.0,"1624, 1626","1624, 1626",0,he,he,participant-role,participant-role
+212,0.0,"1627, 1632","1627, 1632",0,likes,likes,main,main
+214,0.0,"1633, 1646","1633, 1646",0,being with me,being with me,participant-role,participant-role
+209,0.0,"1611, 1613","1611, 1613",0,me,me,participant-role,participant-role
+217,11.180339887498949,"1659, 1676","1669, 1671",15,as far as it goes,it,participant-role,participant-role
+216,1.0,"1657, 1658","1656, 1658",1,s,'s,main,main
+205,1.0,"1602, 1613","1602, 1614",1,he likes me,"he likes me,",configuration,configuration
+118,33.0,"1602, 1613","1602, 1646",33,he likes me,"he likes me, and that he likes being with me",participant-role,participant-role
+206,33.95585369269929,"1594, 1613","1602, 1646",28,He says he likes me,"he likes me, and that he likes being with me",configuration,configuration
+203,0.0,"1594, 1596","1594, 1596",0,He,He,participant-role,participant-role
+207,0.0,"1602, 1604","1602, 1604",0,he,he,participant-role,participant-role
+224,0.0,"1698, 1705","1698, 1705",0,suppose,suppose,main,main
+119,1.0,"1706, 1720","1706, 1721",1,I do want more,I do want more.,participant-role,participant-role
+225,1.0,"1706, 1720","1706, 1721",1,I do want more,I do want more.,configuration,configuration
+230,1.0,"1716, 1720","1716, 1721",1,more,more.,participant-role,participant-role
+226,4.123105625617661,"1696, 1720","1692, 1721",5,I suppose I do want more,But I suppose I do want more.,configuration,configuration
+223,0.0,"1696, 1697","1696, 1697",0,I,I,participant-role,participant-role
+229,0.0,"1711, 1715","1711, 1715",0,want,want,main,main
+227,0.0,"1706, 1707","1706, 1707",0,I,I,participant-role,participant-role
+231,0.0,"1725, 1726","1725, 1726",0,I,I,participant-role,participant-role
+242,6.082762530298219,"1786, 1821","1780, 1822",7,I try to work out what I'm gonna do,while I try to work out what I'm gonna do.,configuration,configuration
+239,43.104524124504614,"1725, 1779","1722, 1822",46,I'm not seeing him at all for the next couple of weeks,So I'm not seeing him at all for the next couple of weeks while I try to work out what I'm gonna do.,configuration,configuration
+236,0.0,"1788, 1791","1788, 1791",0,try,try,main,main
+233,4.0,"1733, 1739","1729, 1739",4,seeing,not seeing,main,main
+235,0.0,"1786, 1787","1786, 1787",0,I,I,participant-role,participant-role
+238,0.0,"1809, 1810","1809, 1810",0,I,I,participant-role,participant-role
+243,5.0990195135927845,"1809, 1821","1804, 1822",6,I'm gonna do,what I'm gonna do.,configuration,configuration
+127,1.0,"1792, 1821","1792, 1822",1,to work out what I'm gonna do,to work out what I'm gonna do.,participant-role,participant-role
+234,0.0,"1740, 1743","1740, 1743",0,him,him,participant-role,participant-role
+241,3.0,"1819, 1821","1816, 1821",3,do,na do,main,main
+171,0.0,"1830, 1894","1830, 1894",0,what I've written above makes him sound rather hard and uncaring,what I've written above makes him sound rather hard and uncaring,participant-role,participant-role
+201,0.0,"1830, 1894","1830, 1894",0,what I've written above makes him sound rather hard and uncaring,what I've written above makes him sound rather hard and uncaring,configuration,configuration
+175,0.0,"1860, 1894","1860, 1894",0,him sound rather hard and uncaring,him sound rather hard and uncaring,participant-role,participant-role
+258,1.0,"1935, 1936","1934, 1936",1,s,'s,main,main
+260,23.0,"1931, 1968","1931, 1945",23,"who's faithful, generous and reliable",who's faithful,configuration,configuration
+257,0.0,"1931, 1934","1931, 1934",0,who,who,participant-role,participant-role
+254,1.0,"1913, 1914","1912, 1914",1,s,'s,main,main
+259,22.02271554554524,"1937, 1968","1915, 1969",23,"faithful, generous and reliable","a very nice guy who's faithful, generous and reliable.",participant-role,participant-role
+153,0.0,"1823, 1824","1823, 1824",0,I,I,participant-role,participant-role
+155,0.0,"1825, 1829","1825, 1829",0,know,know,main,main
+252,2.0,"1910, 1912","1908, 1912",2,he,", he",participant-role,participant-role
+250,0.0,"1854, 1859","1854, 1859",0,makes,makes,main,main
+173,17.72004514666935,"1830, 1853","1835, 1836",22,what I've written above,I,participant-role,participant-role
+172,5.0,"1823, 1894","1823, 1899",5,I know what I've written above makes him sound rather hard and uncaring,"I know what I've written above makes him sound rather hard and uncaring, but",configuration,configuration
+261,0.0,"1970, 1972","1970, 1972",0,He,He,participant-role,participant-role
+265,1.0,"1970, 1993","1970, 1994",1,He just doesn't love me,He just doesn't love me.,configuration,configuration
+263,4.0,"1986, 1990","1982, 1990",4,love,n't love,main,main
+264,1.0,"1991, 1993","1991, 1994",1,me,me.,participant-role,participant-role
+267,0.0,"2002, 2007","2002, 2007",0,makes,makes,main,main
+266,0.0,"1999, 2001","1999, 2001",0,it,it,participant-role,participant-role
+268,1.0,"2008, 2089","2008, 2090",1,me feel like I'm second best compared to the women he's been out with in the past,me feel like I'm second best compared to the women he's been out with in the past.,participant-role,participant-role
+277,9.0,"2064, 2077","2064, 2068",9,been out with,been,main,main
+271,32.2490309931942,"1999, 2058","1995, 2090",36,it makes me feel like I'm second best compared to the women,And it makes me feel like I'm second best compared to the women he's been out with in the past.,configuration,configuration
+275,0.0,"2059, 2061","2059, 2061",0,he,he,participant-role,participant-role
+272,0.0,"2021, 2022","2021, 2022",0,I,I,participant-role,participant-role
+280,10.04987562112089,"2049, 2089","2059, 2090",11,the women he's been out with in the past,he's been out with in the past.,configuration,configuration
+274,5.0,"2025, 2036","2025, 2031",5,second best,second,participant-role,participant-role
+273,1.0,"2023, 2024","2022, 2024",1,m,'m,main,main
+284,1.0,"2091, 2134","2091, 2135",1,Any sincere replies are greatly appreciated,Any sincere replies are greatly appreciated.,configuration,configuration
+281,0.0,"2091, 2110","2091, 2110",0,Any sincere replies,Any sincere replies,participant-role,participant-role
+82,85.14693182963201,"716, 737","711, 822",90,"no, he didn't love me","that no, he didn't love me, and that if I wanted someone to love me that I had better go and find someone else.",participant-role,participant-role
+108,85.47514258543241,"720, 737","711, 822",94,he didn't love me,"that no, he didn't love me, and that if I wanted someone to love me that I had better go and find someone else.",configuration,configuration
+145,43.18564576337837,"1144, 1172","1140, 1215",47,do I hang around in the hope,"So, do I hang around in the hope that in time, he might return my feelings,",configuration,configuration
+256,40.26164427839479,"1910, 1930","1900, 1969",49,he's a very nice guy,"actually, he's a very nice guy who's faithful, generous and reliable.",configuration,configuration
+270,54.230987451824994,"2021, 2036","2016, 2090",59,I'm second best,like I'm second best compared to the women he's been out with in the past.,configuration,configuration
+,
+,Manual mismatching all parsed (False Negative)
+27,"241, 248",married,participant-role
+65,"586, 597","""of course""",participant-role
+136,"1082, 1090",apparent,participant-role
+168,"1350, 1353",are,main
+100,"1377, 1395",his lagging behind,configuration
+77,"1377, 1380",his,participant-role
+99,"1381, 1395",lagging behind,main
+187,"1499, 1505",unsure,main
+197,"1542, 1545",you,participant-role
+255,"1915, 1930",a very nice guy,participant-role
+213,"2049, 2058",the women,participant-role
+282,"2111, 2114",are,main
+283,"2115, 2134",greatly appreciated,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+25,"25, 27",Hi,main
+25,"25, 31",Hi all,participant-role
+25,"25, 31",Hi all,configuration
+28,"28, 31",all,participant-role
+147,"147, 156",in a band,participant-role
+166,"166, 177",at weekends,participant-role
+210,"210, 212",me,participant-role
+205,"205, 230","than me, I'm 30, he's 52.",configuration
+316,"316, 318",7.,participant-role
+311,"311, 315",aged,main
+254,"254, 288",; the last time for about 13 years,configuration
+254,"254, 288",; the last time for about 13 years,participant-role
+406,"406, 411",to do,main
+447,"447, 457",by the way,participant-role
+398,"398, 405",nothing,participant-role
+406,"406, 457","to do with the break-up of the marriage, by the way",participant-role
+563,"563, 568",loved,main
+519,"519, 597","if when he was with his wife he told her he loved her and he said, ""of course""",configuration
+522,"522, 526",when,participant-role
+503,"503, 597","and I asked him if when he was with his wife he told her he loved her and he said, ""of course""",configuration
+768,"768, 775",to love,main
+865,"865, 872",in love,participant-role
+905,"905, 916",for example,participant-role
+1065,"1065, 1074",", though,",participant-role
+1091,"1091, 1115",after a couple of months,participant-role
+1228,"1228, 1237",my losses,participant-role
+1178,"1178, 1185",in time,participant-role
+1161,"1161, 1172",in the hope,participant-role
+1173,"1173, 1214","that in time, he might return my feelings",participant-role
+1312,"1312, 1345",at this stage in the relationship,participant-role
+1293,"1293, 1299",to say,main
+1279,"1279, 1288",to expect,main
+1289,"1289, 1345",him to say he loves me at this stage in the relationship,participant-role
+1279,"1279, 1345",to expect him to say he loves me at this stage in the relationship,participant-role
+1546,"1546, 1591",supposed to wait for the man to say it first?,configuration
+1555,"1555, 1591",to wait for the man to say it first?,configuration
+1575,"1575, 1591",to say it first?,configuration
+1546,"1546, 1554",supposed,main
+1575,"1575, 1581",to say,main
+1506,"1506, 1509",how,participant-role
+1495,"1495, 1498",was,main
+1582,"1582, 1584",it,participant-role
+1499,"1499, 1505",unsure,participant-role
+1403,"1403, 1413",the record,participant-role
+1432,"1432, 1439",telling,main
+1483,"1483, 1489",didn't,main
+1535,"1535, 1541",aren't,main
+1455,"1455, 1475",since about February,participant-role
+1677,"1677, 1691",at the moment.,participant-role
+1633,"1633, 1638",being,main
+1615,"1615, 1646",and that he likes being with me,configuration
+1813,"1813, 1816",gon,main
+1792,"1792, 1799",to work,main
+1751,"1751, 1779",for the next couple of weeks,participant-role
+1816,"1816, 1822",na do.,participant-role
+1792,"1792, 1822",to work out what I'm gonna do.,configuration
+1870,"1870, 1894",rather hard and uncaring,participant-role
+1860,"1860, 1863",him,participant-role
+1864,"1864, 1869",sound,main
+1840,"1840, 1847",written,main
+2011,"2011, 2015",feel,main
+2078,"2078, 2090",in the past.,participant-role
+2008,"2008, 2010",me,participant-role
+2123,"2123, 2134",appreciated,main
+205,"205, 230","than me, I'm 30, he's 52.",participant-role
+406,"406, 457","to do with the break-up of the marriage, by the way",configuration
+379,"379, 461","on Sundays ( I was nothing to do with the break-up of the marriage, by the way ) .",participant-role
+768,"768, 822",to love me that I had better go and find someone else.,participant-role
+776,"776, 778",me,participant-role
+768,"768, 822",to love me that I had better go and find someone else.,configuration
+779,"779, 822",that I had better go and find someone else.,participant-role
+779,"779, 822",that I had better go and find someone else.,configuration
+899,"899, 1004","that, for example, he was with his ex-wife for about two years before he had any strong feelings for her.",participant-role
+1005,"1005, 1065",The two times in my life that I have been in love previously,participant-role
+1116,"1116, 1139",that this was the case.,participant-role
+1289,"1289, 1345",him to say he loves me at this stage in the relationship,configuration
+1300,"1300, 1345",he loves me at this stage in the relationship,participant-role
+1555,"1555, 1591",to wait for the man to say it first?,participant-role
+1397,"1397, 1525","( For the record, I have felt like telling him I love him since about February, but I didn't as I was unsure how he would react,",configuration
+1427,"1427, 1489","like telling him I love him since about February, but I didn't",participant-role
+1639,"1639, 1646",with me,participant-role
+1594,"1594, 1647","He says he likes me, and that he likes being with me,",configuration
+1804,"1804, 1808",what,participant-role
+1816,"1816, 1822",na do.,configuration
+1804,"1804, 1822",what I'm gonna do.,participant-role
+1860,"1860, 1894",him sound rather hard and uncaring,configuration
+1937,"1937, 1945",faithful,participant-role
+1848,"1848, 1894",above makes him sound rather hard and uncaring,participant-role
+1830,"1830, 1834",what,participant-role
+1854,"1854, 1894",makes him sound rather hard and uncaring,configuration
+2069,"2069, 2090",out with in the past.,participant-role
+699,"699, 822","and he said that no, he didn't love me, and that if I wanted someone to love me that I had better go and find someone else.",configuration
+2008,"2008, 2090",me feel like I'm second best compared to the women he's been out with in the past.,configuration

@@ -1,0 +1,630 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.28628230616302186
+,Recall,0.5538461538461539
+,F1,0.37745740498034075
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+4,0.0,"42, 43","42, 43",0,I,I,emoter,emoter
+6,0.0,"49, 69","49, 69",0,you can bear with me,you can bear with me,phenomenon,phenomenon
+5,0.0,"44, 48","44, 48",0,hope,hope,main,main
+7,3.0,"42, 69","39, 69",3,I hope you can bear with me,so I hope you can bear with me,mental,mental
+3,32.57299494980466,"20, 38","30, 69",30,am new to all this,all this so I hope you can bear with me,relational,relational
+10,5.0,"57, 66","57, 61",5,bear with,bear,main,main
+1,0.0,"20, 22","20, 22",0,am,am,main,main
+13,0.0,"93, 94","93, 94",0,I,I,carrier,carrier
+16,0.0,"93, 100","93, 100",0,I am 23,I am 23,attributive,attributive
+16,0.0,"93, 100","93, 100",0,I am 23,I am 23,relational,relational
+15,0.0,"98, 100","98, 100",0,23,23,attribute,attribute
+14,0.0,"95, 97","95, 97",0,am,am,main,main
+18,0.0,"112, 114","112, 114",0,is,is,main,main
+21,0.0,"119, 120","119, 120",0,I,I,carrier,carrier
+22,0.0,"121, 125","121, 125",0,have,have,main,main
+23,35.0,"126, 138","126, 173",35,a 3 year old,a 3 year old from my last marriage ( I know ) .,possessed,possessed
+24,13.0,"119, 160","119, 173",13,I have a 3 year old from my last marriage,I have a 3 year old from my last marriage ( I know ) .,relational,relational
+24,13.0,"119, 160","119, 173",13,I have a 3 year old from my last marriage,I have a 3 year old from my last marriage ( I know ) .,possessive,possessive
+33,22.02271554554524,"207, 243","229, 244",23,I just moved 40 miles to be with him,to be with him.,relational,relational
+27,0.0,"182, 186","182, 186",0,been,been,main,main
+33,33.015148038438355,"207, 243","174, 244",34,I just moved 40 miles to be with him,We have been together a year and I just moved 40 miles to be with him.,directional,directional
+29,42.0,"174, 202","174, 244",42,We have been together a year,We have been together a year and I just moved 40 miles to be with him.,relational,relational
+48,0.0,"315, 318","315, 318",0,she,she,emoter,emoter
+40,5.0,"264, 270","259, 270",5,we met,when we met,action,action
+35,0.0,"248, 253","248, 253",0,hated,hated,main,main
+39,0.0,"267, 270","267, 270",0,met,met,main,main
+43,50.80354318352215,"275, 292","245, 333",71,now loves my girl,He hated kids when we met but now loves my girl as if she was his own she loves him too.,mental,mental
+38,0.0,"264, 266","264, 266",0,we,we,agent,agent
+49,0.0,"319, 324","319, 324",0,loves,loves,main,main
+44,0.0,"299, 302","299, 302",0,she,she,carrier,carrier
+45,0.0,"303, 306","303, 306",0,was,was,main,main
+46,4.0,"307, 314","311, 314",4,his own,own,attribute,attribute
+47,3.0,"299, 314","296, 314",3,she was his own,if she was his own,attributive,attributive
+47,3.0,"299, 314","296, 314",3,she was his own,if she was his own,relational,relational
+51,22.02271554554524,"315, 332","293, 333",23,she loves him too,as if she was his own she loves him too.,mental,mental
+42,31.0,"285, 292","254, 292",31,my girl,kids when we met but now loves my girl,phenomenon,phenomenon
+34,0.0,"245, 247","245, 247",0,He,He,emoter,emoter
+50,0.0,"325, 328","325, 328",0,him,him,phenomenon,phenomenon
+41,0.0,"279, 284","279, 284",0,loves,loves,main,main
+228,0.0,"356, 357","356, 357",0,I,I,carrier,carrier
+229,0.0,"358, 362","358, 362",0,feel,feel,main,main
+63,3.0,"423, 432","423, 429",3,scared of,scared,main,main
+231,3.0,"356, 391","353, 391",3,I feel threatened by what they have,if I feel threatened by what they have,attributive,attributive
+56,19.0,"334, 391","353, 391",19,Sometimes I wonder if I feel threatened by what they have,if I feel threatened by what they have,mental,mental
+231,21.0,"356, 391","377, 391",21,I feel threatened by what they have,what they have,relational,relational
+61,6.0,"398, 415","392, 415",6,I want to get out,or if I want to get out,mental,mental
+60,0.0,"405, 415","405, 415",0,to get out,to get out,phenomenon,phenomenon
+54,7.0,"356, 391","363, 391",7,I feel threatened by what they have,threatened by what they have,phenomenon,phenomenon
+230,0.0,"363, 391","363, 391",0,threatened by what they have,threatened by what they have,attribute,attribute
+59,0.0,"400, 404","400, 404",0,want,want,main,main
+53,0.0,"346, 352","346, 352",0,wonder,wonder,main,main
+67,0.0,"482, 484","482, 484",0,is,is,main,main
+66,0.0,"479, 481","479, 481",0,He,He,carrier,carrier
+73,61.07372593840988,"526, 547","479, 586",86,I come home from work,"He is a wonderful man kind caring considerate, I come home from work and he runs a bath and lights candles.",relational,relational
+85,0.0,"631, 635","631, 635",0,mean,mean,main,main
+86,1.0,"636, 639","636, 640",1,HOT,HOT!,phenomenon,phenomenon
+84,2.0,"629, 630","627, 630",2,I,", I",cognizant,cognizant
+83,13.0,"587, 627","587, 640",13,Up until recently our sex life was great,"Up until recently our sex life was great, I mean HOT!",attributive,attributive
+83,13.0,"587, 627","587, 640",13,Up until recently our sex life was great,"Up until recently our sex life was great, I mean HOT!",relational,relational
+87,42.01190307520001,"629, 639","587, 640",43,I mean HOT,"Up until recently our sex life was great, I mean HOT!",two-role-cognition,two-role-cognition
+102,1.0,"711, 714","711, 715",1,him,him.,affected-emoter,affected-emoter
+101,0.0,"705, 710","705, 710",0,hurts,hurts,main,main
+92,0.0,"641, 669","641, 669",0,Now I don't want him near me,Now I don't want him near me,mental,mental
+90,4.0,"653, 657","649, 657",4,want,n't want,main,main
+94,0.0,"673, 677","673, 677",0,feel,feel,main,main
+91,8.0,"658, 669","658, 661",8,him near me,him,phenomenon,phenomenon
+97,0.0,"689, 692","689, 692",0,see,see,main,main
+88,0.0,"645, 646","645, 646",0,I,I,emoter,emoter
+105,0.0,"718, 722","718, 722",0,feel,feel,main,main
+115,15.0,"759, 777","759, 792",15,I love him so much,I love him so much I want to cry.,mental,mental
+109,0.0,"753, 758","753, 758",0,think,think,main,main
+117,0.0,"780, 784","780, 784",0,want,want,main,main
+110,1.0,"759, 791","759, 792",1,I love him so much I want to cry,I love him so much I want to cry.,phenomenon,phenomenon
+113,0.0,"761, 765","761, 765",0,love,love,main,main
+112,0.0,"759, 760","759, 760",0,I,I,emoter,emoter
+111,1.0,"741, 791","741, 792",1,Sometimes I think I love him so much I want to cry,Sometimes I think I love him so much I want to cry.,mental,mental
+111,1.0,"741, 791","741, 792",1,Sometimes I think I love him so much I want to cry,Sometimes I think I love him so much I want to cry.,two-role-cognition,two-role-cognition
+118,1.0,"785, 791","785, 792",1,to cry,to cry.,phenomenon,phenomenon
+114,23.0,"766, 769","766, 792",23,him,him so much I want to cry.,phenomenon,phenomenon
+108,0.0,"751, 752","751, 752",0,I,I,cognizant,cognizant
+119,1.0,"778, 791","778, 792",1,I want to cry,I want to cry.,mental,mental
+116,0.0,"778, 779","778, 779",0,I,I,emoter,emoter
+128,0.0,"830, 833","830, 833",0,are,are,main,main
+139,2.23606797749979,"880, 893","878, 894",3,am I horrible,", am I horrible?",attributive,attributive
+139,2.23606797749979,"880, 893","878, 894",3,am I horrible,", am I horrible?",relational,relational
+136,0.0,"880, 882","880, 882",0,am,am,main,main
+137,0.0,"883, 884","883, 884",0,I,I,carrier,carrier
+138,1.0,"885, 893","885, 894",1,horrible,horrible?,attribute,attribute
+121,3.0,"800, 807","800, 804",3,look at,look,main,main
+134,3.0,"870, 872","867, 872",3,be,to be,main,main
+124,0.0,"816, 822","816, 822",0,wonder,wonder,main,main
+135,24.0,"843, 878","867, 878",24,other times I just need to be alone,to be alone,relational,relational
+145,3.0,"955, 958","955, 961",3,are,aren't,main,main
+234,0.0,"921, 923","921, 923",0,is,is,main,main
+156,0.0,"1000, 1006","1000, 1006",0,wanted,wanted,main,main
+151,1.0,"977, 1006","977, 1007",1,everything I have ever wanted,everything I have ever wanted.,attribute,attribute
+150,0.0,"974, 976","974, 976",0,is,is,main,main
+152,1.0,"971, 1006","971, 1007",1,He is everything I have ever wanted,He is everything I have ever wanted.,attributive,attributive
+152,1.0,"971, 1006","971, 1007",1,He is everything I have ever wanted,He is everything I have ever wanted.,relational,relational
+149,0.0,"971, 973","971, 973",0,He,He,carrier,carrier
+171,0.0,"1044, 1089","1044, 1089",0,we don't go anyplace other than food shopping,we don't go anyplace other than food shopping,directional,directional
+171,0.0,"1044, 1089","1044, 1089",0,we don't go anyplace other than food shopping,we don't go anyplace other than food shopping,relational,relational
+179,1.0,"1139, 1144","1139, 1145",1,sport,sport.,phenomenon,phenomenon
+169,4.0,"1053, 1055","1049, 1055",4,go,n't go,main,main
+175,29.274562336608895,"1095, 1116","1091, 1145",33,he likes to stay home,but he likes to stay home unless he is watching sport.,mental,mental
+174,29.0,"1104, 1116","1104, 1145",29,to stay home,to stay home unless he is watching sport.,phenomenon,phenomenon
+172,0.0,"1095, 1097","1095, 1097",0,he,he,emoter,emoter
+165,0.0,"1044, 1089","1044, 1089",0,we don't go anyplace other than food shopping,we don't go anyplace other than food shopping,phenomenon,phenomenon
+166,0.0,"1037, 1089","1037, 1089",0,I mean we don't go anyplace other than food shopping,I mean we don't go anyplace other than food shopping,mental,mental
+166,0.0,"1037, 1089","1037, 1089",0,I mean we don't go anyplace other than food shopping,I mean we don't go anyplace other than food shopping,two-role-cognition,two-role-cognition
+170,19.0,"1056, 1089","1056, 1070",19,anyplace other than food shopping,anyplace other,destination,destination
+176,0.0,"1124, 1126","1124, 1126",0,he,he,perceiver,perceiver
+173,0.0,"1098, 1103","1098, 1103",0,likes,likes,main,main
+178,0.0,"1130, 1138","1130, 1138",0,watching,watching,main,main
+180,7.0710678118654755,"1124, 1144","1117, 1145",8,he is watching sport,unless he is watching sport.,two-role-perception,two-role-perception
+163,0.0,"1037, 1038","1037, 1038",0,I,I,cognizant,cognizant
+164,0.0,"1039, 1043","1039, 1043",0,mean,mean,main,main
+159,0.0,"1015, 1022","1015, 1022",0,stopped,stopped,main,main
+167,0.0,"1044, 1046","1044, 1046",0,we,we,agent-carrier,agent-carrier
+182,5.0,"1154, 1163","1154, 1158",5,goes away,goes,main,main
+183,19.6468827043885,"1151, 1175","1146, 1194",24,he goes away at weekends,Then he goes away at weekends or out after work.,action,action
+181,0.0,"1151, 1153","1151, 1153",0,he,he,agent,agent
+194,5.0990195135927845,"1210, 1224","1205, 1225",6,he has a hobby,that he has a hobby.,relational,relational
+194,5.0990195135927845,"1210, 1224","1205, 1225",6,he has a hobby,that he has a hobby.,possessive,possessive
+191,0.0,"1210, 1212","1210, 1212",0,he,he,carrier,carrier
+187,1.0,"1198, 1199","1197, 1199",1,s,'s,main,main
+193,1.0,"1217, 1224","1217, 1225",1,a hobby,a hobby.,possessed,possessed
+192,0.0,"1213, 1216","1213, 1216",0,has,has,main,main
+196,5.0,"1228, 1237","1228, 1232",5,feel like,feel,main,main
+206,0.0,"1276, 1277","1276, 1277",0,I,I,affected-carrier,affected-carrier
+199,0.0,"1238, 1239","1238, 1239",0,I,I,carrier,carrier
+210,5.0990195135927845,"1276, 1299","1271, 1300",6,I have lost my identity,like I have lost my identity.,possessive,possessive
+208,0.0,"1283, 1287","1283, 1287",0,lost,lost,main,main
+202,30.4138126514911,"1238, 1270","1233, 1300",35,I am not the person I used to be,like I am not the person I used to be like I have lost my identity.,relational,relational
+209,1.0,"1288, 1299","1288, 1300",1,my identity,my identity.,possessed,possessed
+200,4.0,"1240, 1242","1240, 1246",4,am,am not,main,main
+216,0.0,"1340, 1343","1340, 1343",0,met,met,main,main
+221,5.0990195135927845,"1368, 1379","1363, 1380",6,an old maid,like an old maid.,attribute,attribute
+222,1.0,"1356, 1379","1356, 1380",1,I feel like an old maid,I feel like an old maid.,attributive,attributive
+222,1.0,"1356, 1379","1356, 1380",1,I feel like an old maid,I feel like an old maid.,relational,relational
+219,0.0,"1356, 1357","1356, 1357",0,I,I,affected-carrier,affected-carrier
+220,5.0,"1358, 1367","1358, 1362",5,feel like,feel,main,main
+224,1.0,"1386, 1387","1385, 1387",1,s,'s,main,main
+227,1.0,"1381, 1401","1381, 1402",1,What's wrong with me,What's wrong with me?,relational,relational
+,
+,Manual mismatching all parsed (False Negative)
+3,"20, 38",am new to all this,attributive
+2,"23, 38",new to all this,attribute
+12,"49, 69",you can bear with me,mental
+8,"49, 52",you,emoter
+11,"67, 69",me,phenomenon
+20,"102, 117",my fiancé is 37,relational
+20,"102, 117",my fiancé is 37,attributive
+17,"102, 111",my fiancé,carrier
+19,"115, 117",37,attribute
+29,"174, 202",We have been together a year,attributive
+25,"174, 176",We,carrier
+28,"187, 195",together,attribute
+30,"207, 208",I,agent-carrier
+31,"214, 219",moved,main
+32,"220, 228",40 miles,path
+37,"245, 258",He hated kids,mental
+36,"254, 258",kids,phenomenon
+56,"334, 391",Sometimes I wonder if I feel threatened by what they have,two-role-cognition
+52,"344, 345",I,cognizant
+55,"398, 477",I want to get out but am scared of putting my daughter through another break-up,phenomenon
+57,"398, 477",I want to get out but am scared of putting my daughter through another break-up,mental
+57,"398, 477",I want to get out but am scared of putting my daughter through another break-up,two-role-cognition
+58,"398, 399",I,emoter
+65,"420, 477",am scared of putting my daughter through another break-up,mental
+64,"433, 477",putting my daughter through another break-up,phenomenon
+69,"479, 524",He is a wonderful man kind caring considerate,relational
+69,"479, 524",He is a wonderful man kind caring considerate,attributive
+68,"485, 524",a wonderful man kind caring considerate,attribute
+73,"526, 547",I come home from work,directional
+70,"526, 527",I,agent-carrier
+71,"528, 542",come home from,main
+72,"543, 547",work,source
+76,"552, 566",he runs a bath,action
+74,"552, 554",he,agent
+75,"555, 566",runs a bath,main
+79,"571, 585",lights candles,action
+77,"571, 577",lights,main
+78,"578, 585",candles,affected
+80,"605, 617",our sex life,carrier
+81,"618, 621",was,main
+82,"622, 627",great,attribute
+87,"629, 639",I mean HOT,mental
+232,"671, 681",I feel bad,relational
+232,"671, 681",I feel bad,attributive
+93,"671, 672",I,affected-carrier
+95,"678, 681",bad,attribute
+99,"687, 714",I see how much it hurts him,mental
+99,"687, 714",I see how much it hurts him,two-role-perception
+96,"687, 688",I,perceiver
+98,"693, 714",how much it hurts him,phenomenon
+103,"702, 714",it hurts him,mental
+100,"702, 704",it,phenomenon
+107,"716, 739",I feel so low and alone,relational
+107,"716, 739",I feel so low and alone,attributive
+104,"716, 717",I,affected-carrier
+106,"723, 739",so low and alone,attribute
+123,"793, 811",I just look at him,mental
+123,"793, 811",I just look at him,two-role-perception
+120,"793, 794",I,perceiver
+122,"808, 811",him,phenomenon
+126,"816, 842",wonder why we are together,mental
+126,"816, 842",wonder why we are together,two-role-cognition
+125,"823, 842",why we are together,phenomenon
+130,"827, 842",we are together,relational
+130,"827, 842",we are together,attributive
+127,"827, 829",we,carrier
+129,"834, 842",together,attribute
+135,"843, 878",other times I just need to be alone,attributive
+131,"855, 856",I,carrier
+133,"873, 878",alone,attribute
+144,"895, 947",I don't even know if this is a Mars / Venus question,mental
+144,"895, 947",I don't even know if this is a Mars / Venus question,two-role-cognition
+140,"895, 896",I,cognizant
+142,"908, 912",know,main
+236,"916, 947",this is a Mars / Venus question,relational
+236,"916, 947",this is a Mars / Venus question,attributive
+143,"916, 947",this is a Mars / Venus question,phenomenon
+233,"916, 920",this,carrier
+235,"924, 947",a Mars / Venus question,attribute
+148,"951, 969",why aren't I happy,relational
+148,"951, 969",why aren't I happy,attributive
+146,"962, 963",I,carrier
+147,"964, 969",happy,attribute
+157,"977, 1006",everything I have ever wanted,mental
+153,"977, 987",everything,phenomenon
+154,"988, 989",I,emoter
+162,"1008, 1036",He has stopped wooing me now,influential
+158,"1008, 1010",He,agent
+160,"1023, 1032",wooing me,phenomenon
+180,"1124, 1144",he is watching sport,mental
+185,"1179, 1193",out after work,action
+190,"1195, 1224",It's good that he has a hobby,relational
+190,"1195, 1224",It's good that he has a hobby,attributive
+188,"1200, 1204",good,attribute
+189,"1205, 1224",that he has a hobby,carrier
+198,"1226, 1270",I feel like I am not the person I used to be,mental
+198,"1226, 1270",I feel like I am not the person I used to be,two-role-cognition
+195,"1226, 1227",I,cognizant
+197,"1238, 1270",I am not the person I used to be,phenomenon
+202,"1238, 1270",I am not the person I used to be,attributive
+201,"1247, 1270",the person I used to be,attribute
+205,"1271, 1299",like I have lost my identity,mental
+205,"1271, 1299",like I have lost my identity,two-role-cognition
+204,"1276, 1299",I have lost my identity,phenomenon
+210,"1276, 1299",I have lost my identity,relational
+214,"1301, 1331",I was a interesting fun person,relational
+214,"1301, 1331",I was a interesting fun person,attributive
+211,"1301, 1302",I,carrier
+212,"1303, 1306",was,main
+213,"1307, 1331",a interesting fun person,attribute
+218,"1337, 1346",he met me,action
+215,"1337, 1339",he,agent
+217,"1344, 1346",me,affected
+227,"1381, 1401",What's wrong with me,attributive
+225,"1388, 1398",wrong with,attribute
+226,"1399, 1401",me,carrier
+,
+,Parsed mismatching all manual (False Positives)
+73,"73, 76",gee,main
+42,"42, 43",I,affected-emoter
+49,"49, 69",you can bear with me,created-phenomenon
+23,"23, 26",new,destination
+23,"23, 26",new,affected-destination
+39,"39, 69",so I hope you can bear with me,process
+39,"39, 69",so I hope you can bear with me,desiderative
+83,"83, 91",to start,main
+77,"77, 82",where,phenomenon
+77,"77, 82",where,created-phenomenon
+77,"77, 82",where,created
+49,"49, 52",you,affected-carrier
+49,"49, 52",you,agent-carrier
+49,"49, 52",you,carrier
+30,"30, 69",all this so I hope you can bear with me,process
+30,"30, 69",all this so I hope you can bear with me,directional
+62,"62, 69",with me,affected-possessed
+62,"62, 69",with me,possessed
+77,"77, 92",where to start.,process
+77,"77, 92",where to start.,two-role-action
+77,"77, 92",where to start.,action
+77,"77, 92",where to start.,starting
+93,"93, 94",I,affected-carrier
+93,"93, 94",I,agent-carrier
+93,"93, 100",I am 23,process
+93,"93, 100",I am 23,locational
+98,"98, 100",23,location
+119,"119, 120",I,agent
+119,"119, 120",I,agent-cognizant
+119,"119, 120",I,affected-carrier
+119,"119, 120",I,affected
+119,"119, 120",I,agent-carrier
+119,"119, 120",I,agent-perceiver
+119,"119, 120",I,perceiver
+126,"126, 173",a 3 year old from my last marriage ( I know ) .,phenomenon
+126,"126, 173",a 3 year old from my last marriage ( I know ) .,affected-emoter
+126,"126, 173",a 3 year old from my last marriage ( I know ) .,created-phenomenon
+126,"126, 173",a 3 year old from my last marriage ( I know ) .,affected-path
+126,"126, 173",a 3 year old from my last marriage ( I know ) .,affected-perceiver
+126,"126, 173",a 3 year old from my last marriage ( I know ) .,affected-cognizant
+126,"126, 173",a 3 year old from my last marriage ( I know ) .,affected-carrier
+126,"126, 173",a 3 year old from my last marriage ( I know ) .,affected-destination
+126,"126, 173",a 3 year old from my last marriage ( I know ) .,affected
+126,"126, 173",a 3 year old from my last marriage ( I know ) .,affected-possessed
+126,"126, 173",a 3 year old from my last marriage ( I know ) .,affected-source
+126,"126, 173",a 3 year old from my last marriage ( I know ) .,created
+119,"119, 173",I have a 3 year old from my last marriage ( I know ) .,process
+119,"119, 173",I have a 3 year old from my last marriage ( I know ) .,causative
+119,"119, 173",I have a 3 year old from my last marriage ( I know ) .,two-role-action
+119,"119, 173",I have a 3 year old from my last marriage ( I know ) .,action
+165,"165, 169",know,main
+235,"235, 244",with him.,matchee
+229,"229, 244",to be with him.,process
+229,"229, 244",to be with him.,matching
+229,"229, 234",to be,main
+196,"196, 244",a year and I just moved 40 miles to be with him.,destination
+196,"196, 244",a year and I just moved 40 miles to be with him.,affected-destination
+174,"174, 176",We,agent
+174,"174, 176",We,agent-perceiver
+174,"174, 176",We,perceiver
+174,"174, 244",We have been together a year and I just moved 40 miles to be with him.,process
+315,"315, 318",she,affected-emoter
+259,"259, 270",when we met,process
+259,"259, 270",when we met,matching
+259,"259, 270",when we met,relational
+259,"259, 270",when we met,two-role-action
+245,"245, 333",He hated kids when we met but now loves my girl as if she was his own she loves him too.,process
+245,"245, 333",He hated kids when we met but now loves my girl as if she was his own she loves him too.,emotive
+259,"259, 263",when,affected-emoter
+259,"259, 263",when,affected-path
+259,"259, 263",when,affected-perceiver
+259,"259, 263",when,affected-cognizant
+259,"259, 263",when,affected-carrier
+259,"259, 263",when,affected-destination
+259,"259, 263",when,affected
+259,"259, 263",when,affected-possessed
+259,"259, 263",when,matchee
+259,"259, 263",when,affected-source
+259,"259, 263",when,range
+264,"264, 266",we,agent-cognizant
+264,"264, 266",we,affected-carrier
+264,"264, 266",we,agent-carrier
+264,"264, 266",we,agent-perceiver
+264,"264, 266",we,carrier
+299,"299, 302",she,affected-carrier
+299,"299, 302",she,agent-carrier
+311,"311, 314",own,location
+296,"296, 314",if she was his own,process
+296,"296, 314",if she was his own,locational
+293,"293, 333",as if she was his own she loves him too.,process
+293,"293, 333",as if she was his own she loves him too.,emotive
+254,"254, 292",kids when we met but now loves my girl,created-phenomenon
+245,"245, 247",He,affected-emoter
+325,"325, 328",him,created-phenomenon
+356,"356, 357",I,affected-emoter
+356,"356, 357",I,agent
+356,"356, 357",I,affected-perceiver
+356,"356, 357",I,affected-carrier
+356,"356, 357",I,agent-carrier
+356,"356, 357",I,agent-perceiver
+356,"356, 357",I,emoter
+356,"356, 357",I,perceiver
+453,"453, 478",through another break-up.,affected-emoter
+453,"453, 478",through another break-up.,affected-path
+453,"453, 478",through another break-up.,affected-perceiver
+453,"453, 478",through another break-up.,affected-cognizant
+453,"453, 478",through another break-up.,affected-carrier
+453,"453, 478",through another break-up.,affected-destination
+453,"453, 478",through another break-up.,affected
+453,"453, 478",through another break-up.,affected-possessed
+453,"453, 478",through another break-up.,affected-source
+433,"433, 478",putting my daughter through another break-up.,process
+433,"433, 478",putting my daughter through another break-up.,two-role-action
+433,"433, 478",putting my daughter through another break-up.,action
+353,"353, 391",if I feel threatened by what they have,process
+353,"353, 391",if I feel threatened by what they have,two-role-perception
+353,"353, 391",if I feel threatened by what they have,emotive
+405,"405, 415",to get out,process
+405,"405, 415",to get out,action
+405,"405, 415",to get out,one-role-action
+377,"377, 391",what they have,process
+377,"377, 391",what they have,causative
+377,"377, 391",what they have,possessive
+377,"377, 391",what they have,two-role-action
+377,"377, 391",what they have,action
+392,"392, 415",or if I want to get out,process
+392,"392, 415",or if I want to get out,desiderative
+382,"382, 386",they,agent
+382,"382, 386",they,agent-cognizant
+382,"382, 386",they,affected-carrier
+382,"382, 386",they,affected
+382,"382, 386",they,agent-carrier
+382,"382, 386",they,agent-perceiver
+382,"382, 386",they,carrier
+382,"382, 386",they,perceiver
+405,"405, 415",to get out,created-phenomenon
+363,"363, 391",threatened by what they have,created-phenomenon
+441,"441, 452",my daughter,affected-emoter
+441,"441, 452",my daughter,affected-path
+441,"441, 452",my daughter,affected-perceiver
+441,"441, 452",my daughter,affected-cognizant
+441,"441, 452",my daughter,affected-carrier
+441,"441, 452",my daughter,affected-destination
+441,"441, 452",my daughter,affected
+441,"441, 452",my daughter,affected-possessed
+441,"441, 452",my daughter,affected-source
+387,"387, 391",have,main
+433,"433, 440",putting,main
+405,"405, 411",to get,main
+377,"377, 381",what,phenomenon
+377,"377, 381",what,affected-emoter
+377,"377, 381",what,created-phenomenon
+377,"377, 381",what,affected-path
+377,"377, 381",what,affected-perceiver
+377,"377, 381",what,affected-cognizant
+377,"377, 381",what,affected-carrier
+377,"377, 381",what,affected-destination
+377,"377, 381",what,affected
+377,"377, 381",what,affected-possessed
+377,"377, 381",what,affected-source
+377,"377, 381",what,created
+377,"377, 381",what,possessed
+524,"524, 586",", I come home from work and he runs a bath and lights candles.",location
+506,"506, 512",caring,main
+506,"506, 524",caring considerate,process
+506,"506, 524",caring considerate,mental
+506,"506, 524",caring considerate,emotive
+506,"506, 524",caring considerate,desiderative
+479,"479, 481",He,affected-carrier
+479,"479, 481",He,agent-carrier
+479,"479, 586","He is a wonderful man kind caring considerate, I come home from work and he runs a bath and lights candles.",process
+479,"479, 586","He is a wonderful man kind caring considerate, I come home from work and he runs a bath and lights candles.",locational
+513,"513, 524",considerate,phenomenon
+513,"513, 524",considerate,created-phenomenon
+636,"636, 640",HOT!,attribute
+636,"636, 640",HOT!,created-phenomenon
+627,"627, 630",", I",agent
+627,"627, 630",", I",agent-cognizant
+627,"627, 630",", I",affected-carrier
+627,"627, 630",", I",agent-carrier
+627,"627, 630",", I",carrier
+587,"587, 640","Up until recently our sex life was great, I mean HOT!",process
+711,"711, 715",him.,affected-path
+711,"711, 715",him.,affected-perceiver
+711,"711, 715",him.,affected-cognizant
+711,"711, 715",him.,affected-carrier
+711,"711, 715",him.,affected-destination
+711,"711, 715",him.,affected
+711,"711, 715",him.,affected-possessed
+711,"711, 715",him.,affected-source
+702,"702, 704",it,agent
+702,"702, 704",it,agent-cognizant
+702,"702, 704",it,agent-carrier
+702,"702, 704",it,agent-perceiver
+641,"641, 669",Now I don't want him near me,process
+641,"641, 669",Now I don't want him near me,desiderative
+693,"693, 715",how much it hurts him.,process
+693,"693, 715",how much it hurts him.,two-role-action
+693,"693, 715",how much it hurts him.,action
+658,"658, 661",him,created-phenomenon
+645,"645, 646",I,affected-emoter
+759,"759, 792",I love him so much I want to cry.,process
+759,"759, 792",I love him so much I want to cry.,emotive
+773,"773, 777",much,main
+785,"785, 792",to cry.,process
+785,"785, 792",to cry.,action
+785,"785, 792",to cry.,one-role-action
+759,"759, 792",I love him so much I want to cry.,created-phenomenon
+759,"759, 760",I,affected-emoter
+741,"741, 792",Sometimes I think I love him so much I want to cry.,process
+785,"785, 792",to cry.,created-phenomenon
+766,"766, 792",him so much I want to cry.,created-phenomenon
+785,"785, 791",to cry,main
+751,"751, 752",I,agent
+751,"751, 752",I,agent-cognizant
+751,"751, 752",I,affected-cognizant
+751,"751, 752",I,affected
+778,"778, 792",I want to cry.,process
+778,"778, 792",I want to cry.,desiderative
+778,"778, 779",I,affected-emoter
+855,"855, 878",I just need to be alone,process
+855,"855, 878",I just need to be alone,mental
+855,"855, 878",I just need to be alone,desiderative
+878,"878, 894",", am I horrible?",process
+878,"878, 894",", am I horrible?",locational
+867,"867, 878",to be alone,phenomenon
+867,"867, 878",to be alone,created-phenomenon
+873,"873, 878",alone,location
+883,"883, 884",I,affected-carrier
+883,"883, 884",I,agent-carrier
+885,"885, 894",horrible?,location
+862,"862, 866",need,main
+855,"855, 856",I,affected-emoter
+855,"855, 856",I,emoter
+867,"867, 878",to be alone,process
+867,"867, 878",to be alone,locational
+899,"899, 902",n't,main
+977,"977, 1007",everything I have ever wanted.,location
+977,"977, 1007",everything I have ever wanted.,range
+971,"971, 1007",He is everything I have ever wanted.,process
+971,"971, 1007",He is everything I have ever wanted.,locational
+971,"971, 1007",He is everything I have ever wanted.,two-role-action
+971,"971, 1007",He is everything I have ever wanted.,action
+971,"971, 973",He,agent
+971,"971, 973",He,agent-cognizant
+971,"971, 973",He,affected-carrier
+971,"971, 973",He,affected
+971,"971, 973",He,agent-carrier
+971,"971, 973",He,agent-perceiver
+971,"971, 973",He,perceiver
+1104,"1104, 1111",to stay,main
+1044,"1044, 1089",we don't go anyplace other than food shopping,process
+1044,"1044, 1089",we don't go anyplace other than food shopping,attributive
+1044,"1044, 1089",we don't go anyplace other than food shopping,matching
+1044,"1044, 1089",we don't go anyplace other than food shopping,locational
+1071,"1071, 1089",than food shopping,attribute
+1139,"1139, 1145",sport.,created-phenomenon
+1139,"1139, 1145",sport.,range
+1091,"1091, 1145",but he likes to stay home unless he is watching sport.,process
+1091,"1091, 1145",but he likes to stay home unless he is watching sport.,emotive
+1091,"1091, 1145",but he likes to stay home unless he is watching sport.,desiderative
+1104,"1104, 1145",to stay home unless he is watching sport.,created-phenomenon
+1095,"1095, 1097",he,affected-emoter
+1044,"1044, 1089",we don't go anyplace other than food shopping,created-phenomenon
+1037,"1037, 1089",I mean we don't go anyplace other than food shopping,process
+1056,"1056, 1070",anyplace other,attribute
+1056,"1056, 1070",anyplace other,location
+1056,"1056, 1070",anyplace other,affected-destination
+1056,"1056, 1070",anyplace other,matchee
+1124,"1124, 1126",he,agent
+1124,"1124, 1126",he,agent-cognizant
+1124,"1124, 1126",he,agent-carrier
+1124,"1124, 1126",he,agent-perceiver
+1117,"1117, 1145",unless he is watching sport.,process
+1117,"1117, 1145",unless he is watching sport.,two-role-action
+1117,"1117, 1145",unless he is watching sport.,action
+1023,"1023, 1029",wooing,main
+1037,"1037, 1038",I,agent
+1037,"1037, 1038",I,agent-cognizant
+1104,"1104, 1145",to stay home unless he is watching sport.,process
+1104,"1104, 1145",to stay home unless he is watching sport.,locational
+1104,"1104, 1145",to stay home unless he is watching sport.,relational
+1112,"1112, 1116",home,location
+1044,"1044, 1046",we,agent
+1044,"1044, 1046",we,affected-carrier
+1044,"1044, 1046",we,affected
+1044,"1044, 1046",we,agent-perceiver
+1044,"1044, 1046",we,carrier
+1044,"1044, 1046",we,perceiver
+1146,"1146, 1194",Then he goes away at weekends or out after work.,process
+1146,"1146, 1194",Then he goes away at weekends or out after work.,one-role-action
+1151,"1151, 1153",he,affected-emoter
+1151,"1151, 1153",he,affected-path
+1151,"1151, 1153",he,affected-perceiver
+1151,"1151, 1153",he,agent-cognizant
+1151,"1151, 1153",he,affected-cognizant
+1151,"1151, 1153",he,affected-carrier
+1151,"1151, 1153",he,affected-destination
+1151,"1151, 1153",he,affected
+1151,"1151, 1153",he,agent-carrier
+1151,"1151, 1153",he,affected-possessed
+1151,"1151, 1153",he,agent-perceiver
+1151,"1151, 1153",he,affected-source
+1205,"1205, 1225",that he has a hobby.,process
+1205,"1205, 1225",that he has a hobby.,causative
+1205,"1205, 1225",that he has a hobby.,two-role-action
+1205,"1205, 1225",that he has a hobby.,action
+1210,"1210, 1212",he,agent
+1210,"1210, 1212",he,agent-cognizant
+1210,"1210, 1212",he,affected-carrier
+1210,"1210, 1212",he,affected
+1210,"1210, 1212",he,agent-carrier
+1210,"1210, 1212",he,agent-perceiver
+1210,"1210, 1212",he,perceiver
+1217,"1217, 1225",a hobby.,phenomenon
+1217,"1217, 1225",a hobby.,affected-emoter
+1217,"1217, 1225",a hobby.,created-phenomenon
+1217,"1217, 1225",a hobby.,affected-path
+1217,"1217, 1225",a hobby.,affected-perceiver
+1217,"1217, 1225",a hobby.,affected-cognizant
+1217,"1217, 1225",a hobby.,affected-carrier
+1217,"1217, 1225",a hobby.,affected-destination
+1217,"1217, 1225",a hobby.,affected
+1217,"1217, 1225",a hobby.,affected-possessed
+1217,"1217, 1225",a hobby.,affected-source
+1217,"1217, 1225",a hobby.,created
+1276,"1276, 1277",I,agent
+1276,"1276, 1277",I,agent-cognizant
+1276,"1276, 1277",I,affected
+1276,"1276, 1277",I,agent-carrier
+1276,"1276, 1277",I,agent-perceiver
+1276,"1276, 1277",I,carrier
+1247,"1247, 1300",the person I used to be like I have lost my identity.,location
+1238,"1238, 1239",I,affected-carrier
+1238,"1238, 1239",I,agent-carrier
+1271,"1271, 1300",like I have lost my identity.,process
+1271,"1271, 1300",like I have lost my identity.,two-role-action
+1271,"1271, 1300",like I have lost my identity.,action
+1233,"1233, 1300",like I am not the person I used to be like I have lost my identity.,process
+1233,"1233, 1300",like I am not the person I used to be like I have lost my identity.,locational
+1288,"1288, 1300",my identity.,affected-possessed
+1288,"1288, 1300",my identity.,range
+1265,"1265, 1270",to be,main
+1260,"1260, 1264",used,main
+1356,"1356, 1380",I feel like an old maid.,process
+1356,"1356, 1357",I,agent-carrier
+1356,"1356, 1357",I,carrier
+1394,"1394, 1402",with me?,matchee
+1381,"1381, 1402",What's wrong with me?,process
+1381,"1381, 1402",What's wrong with me?,matching
+1381,"1381, 1402",What's wrong with me?,locational
+1381,"1381, 1385",What,agent
+1381,"1381, 1385",What,affected-carrier
+1381,"1381, 1385",What,agent-carrier
+1381,"1381, 1385",What,agent-perceiver
+1381,"1381, 1385",What,carrier
+1381,"1381, 1385",What,perceiver
+1388,"1388, 1393",wrong,location
+1388,"1388, 1393",wrong,matchee

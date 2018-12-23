@@ -1,0 +1,177 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.6710526315789473
+,Recall,0.8947368421052632
+,F1,0.7669172932330827
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+7,11.045361017187261,"68, 130","79, 131",12,I'm REALLY vibing with the watching what other people eat part,vibing with the watching what other people eat part.,configuration,configuration
+3,0.0,"41, 62","41, 62",0,this message of yours,this message of yours,participant-role,participant-role
+6,4.0,"79, 89","79, 85",4,vibing wit,vibing,main,main
+4,0.0,"68, 69","68, 69",0,I,I,participant-role,participant-role
+96,4.123105625617661,"30, 62","26, 63",5, just read this message of yours,"-
+I just read this message of yours,",configuration,configuration
+1,3.0,"29, 30","26, 30",3,I,"-
+I",participant-role,participant-role
+8,5.0990195135927845,"91, 130","86, 131",6,the watching what other people eat part,with the watching what other people eat part.,participant-role,participant-role
+2,1.0,"36, 39","36, 40",1,rea,read,main,main
+9,0.0,"133, 134","133, 134",0,I,I,participant-role,participant-role
+86,7.0,"221, 222","221, 229",7,i,is never,main,main
+122,0.0,"208, 209","208, 209",0,I,I,participant-role,participant-role
+85,1.0,"215, 219","215, 220",1,whic,which,participant-role,participant-role
+97,7.810249675906654,"134, 159","139, 153",11, get SO SO SO angry/ mood,SO SO SO angry,configuration,configuration
+93,5.385164807134504,"215, 228","213, 233",7,which is neve,( which is never ) .,configuration,configuration
+12,1.0,"166, 185","166, 186",1,my sister and my mo,my sister and my mom,participant-role,participant-role
+11,6.0,"139, 159","139, 153",6,SO SO SO angry/ mood,SO SO SO angry,participant-role,participant-role
+15,0.0,"241, 242","241, 242",0,I,I,participant-role,participant-role
+24,4.0,"327, 339","327, 335",4,snapping bac,snapping,main,main
+19,1.0,"267, 268","267, 269",1,i,is,main,main
+105,4.123105625617661,"324, 355","320, 356",5,be snapping back at her all day,and be snapping back at her all day.,configuration,configuration
+18,9.055385138137417,"257, 265","248, 266",10,my siste,home and my sister,participant-role,participant-role
+103,10.0,"297, 316","307, 316",10, will get soooo mad,soooo mad,configuration,configuration
+21,2.0,"296, 297","294, 297",2,I,", I",participant-role,participant-role
+101,9.0,"257, 294","248, 294",9,my sister is out running or something,home and my sister is out running or something,configuration,configuration
+23,0.0,"307, 316","307, 316",0,soooo mad,soooo mad,participant-role,participant-role
+102,1.0,"303, 305","303, 306",1,ge,get,main,main
+20,22.0,"270, 272","270, 294",22,ou,out running or something,participant-role,participant-role
+16,1.0,"243, 246","243, 247",1,com,come,main,main
+25,10.0,"341, 346","341, 356",10,at he,at her all day.,participant-role,participant-role
+128,5.0990195135927845,"417, 452","412, 453",6,I've been sitting on my butt eating,like I've been sitting on my butt eating.,configuration,configuration
+35,5.0990195135927845,"406, 452","401, 453",6, feel like I've been sitting on my butt eating,and I feel like I've been sitting on my butt eating.,configuration,configuration
+29,6.082762530298219,"374, 399","380, 400",7,she's out burning calorie,out burning calories,participant-role,participant-role
+34,18.027756377319946,"417, 452","435, 453",19,I've been sitting on my butt eating,on my butt eating.,participant-role,participant-role
+125,0.0,"417, 418","417, 418",0,I,I,participant-role,participant-role
+33,4.0,"407, 415","407, 411",4,feel lik,feel,main,main
+28,0.0,"374, 377","374, 377",0,she,she,participant-role,participant-role
+127,5.0990195135927845,"427, 433","422, 434",6,sittin,been sitting,main,main
+71,1.0,"378, 379","377, 379",1,s,'s,main,main
+26,0.0,"358, 359","358, 359",0,I,I,participant-role,participant-role
+94,1.4142135623730951,"359, 399","358, 400",2, guess because she's out burning calorie,I guess because she's out burning calories,configuration,configuration
+32,0.0,"405, 406","405, 406",0,I,I,participant-role,participant-role
+27,1.0,"360, 364","360, 365",1,gues,guess,main,main
+39,5.0,"467, 478","467, 473",5,talked abou,talked,main,main
+41,1.0,"485, 501","485, 502",1,with my therapis,with my therapist,participant-role,participant-role
+43,1.0,"552, 558","552, 559",1,subsid,subside,main,main
+107,5.0,"532, 558","532, 563",5,these feelings will subsid,these feelings will subside ) .,configuration,configuration
+36,14.035668847618199,"466, 515","480, 516",15, talked about this with my therapist the other da,this with my therapist the other day,configuration,configuration
+42,1.0,"532, 545","532, 546",1,these feeling,these feelings,participant-role,participant-role
+46,39.01281840626232,"584, 615","583, 654",40," don't ""move on"" to other peopl","I don't ""move on"" to other people because my sis is smaller than me so.",participant-role,participant-role
+114,39.01281840626232,"584, 615","583, 654",40," don't ""move on"" to other peopl","I don't ""move on"" to other people because my sis is smaller than me so.",configuration,configuration
+51,1.0,"632, 633","632, 634",1,i,is,main,main
+44,2.0,"575, 576","573, 576",2,I,", I",participant-role,participant-role
+70,0.0,"583, 584","583, 584",0,I,I,participant-role,participant-role
+113,1.0,"601, 615","601, 616",1,to other peopl,to other people,participant-role,participant-role
+48,8.06225774829855,"625, 653","617, 654",9,my sis is smaller than me so,because my sis is smaller than me so.,configuration,configuration
+47,40.52159917870962,"576, 615","565, 654",50," guess I don't ""move on"" to other peopl","But yeah, I guess I don't ""move on"" to other people because my sis is smaller than me so.",configuration,configuration
+53,8.06225774829855,"635, 649","643, 650",9,smaller than m,than me,participant-role,participant-role
+45,1.0,"577, 581","577, 582",1,gues,guess,main,main
+50,1.0,"625, 630","625, 631",1,my si,my sis,participant-role,participant-role
+110,1.4142135623730951,"784, 806","783, 807",2, get so angry and rude,I get so angry and rude.,configuration,configuration
+54,0.0,"656, 657","656, 657",0,I,I,participant-role,participant-role
+67,11.045361017187261,"789, 806","778, 807",12,so angry and rude,more I get so angry and rude.,participant-role,participant-role
+37,6.082762530298219,"702, 726","708, 727",7, used to always be to he,to always be to her,configuration,configuration
+49,113.00442469213318,"657, 694","656, 807",114, want to be the same loving big siste,I want to be the same loving big sister that I used to always be to her but when she doesn't overeat like me or exercises more I get so angry and rude.,configuration,configuration
+63,4.123105625617661,"749, 755","745, 756",5,overea,n't overeat,main,main
+61,1.0,"737, 739","737, 740",1,sh,she,participant-role,participant-role
+66,1.0,"785, 787","785, 788",1,ge,get,main,main
+108,9.055385138137417,"737, 763","728, 764",10,she doesn't overeat like m,but when she doesn't overeat like me,configuration,configuration
+64,1.0,"768, 776","768, 777",1,exercise,exercises,main,main
+55,1.0,"658, 661","658, 662",1,wan,want,main,main
+57,0.0,"701, 702","701, 702",0,I,I,participant-role,participant-role
+65,0.0,"783, 784","783, 784",0,I,I,participant-role,participant-role
+69,1.0,"814, 816","814, 817",1,yo,you,participant-role,participant-role
+31,1.0,"809, 852","809, 853",1,"Have you been able to ""fix"" these responses","Have you been able to ""fix"" these responses?",configuration,configuration
+73,1.0,"837, 852","837, 853",1,these responses,these responses?,participant-role,participant-role
+77,1.0,"870, 893","870, 894",1,to get a handle on them,to get a handle on them.,participant-role,participant-role
+76,1.0,"865, 868","865, 869",1,lik,like,main,main
+74,0.0,"854, 855","854, 855",0,I,I,participant-role,participant-role
+111,1.0,"854, 893","854, 894",1,I'd really like to get a handle on them,I'd really like to get a handle on them.,configuration,configuration
+116,1.0,"929, 932","929, 933",1,kno,know,main,main
+79,20.0,"917, 977","917, 957",20,I'd let you know you're really not alone with those feelings,I'd let you know you're really not alone,participant-role,participant-role
+118,20.0,"917, 977","917, 957",20,I'd let you know you're really not alone with those feelings,I'd let you know you're really not alone,configuration,configuration
+52,0.0,"917, 918","917, 918",0,I,I,participant-role,participant-role
+78,1.0,"909, 915","909, 916",1,though,thought,main,main
+117,20.0,"934, 977","934, 957",20,you're really not alone with those feelings,you're really not alone,participant-role,participant-role
+115,1.0,"925, 927","925, 928",1,yo,you,participant-role,participant-role
+80,13.038404810405298,"909, 977","896, 978",14,thought I'd let you know you're really not alone with those feelings,"Anyway, just thought I'd let you know you're really not alone with those feelings.",configuration,configuration
+81,0.0,"980, 1012","980, 1012",0,Everyone have a great Turkey Day,Everyone have a great Turkey Day,configuration,configuration
+90,4.123105625617661,"1016, 1017","1012, 1018",5,i,... it,participant-role,participant-role
+88,1.0,"989, 992","989, 993",1,hav,have,main,main
+119,1.0,"1039, 1040","1039, 1041",1,i,is,main,main
+120,4.123105625617661,"1042, 1056","1046, 1057",5,all about food,about food.,participant-role,participant-role
+121,1.0,"1030, 1056","1030, 1057",1,this day is all about food,this day is all about food.,configuration,configuration
+91,1.0,"1024, 1028","1024, 1029",1,suck,sucks,main,main
+95,1.0,"1030, 1037","1030, 1038",1,this da,this day,participant-role,participant-role
+82,29.274562336608895,"1016, 1028","1012, 1057",33,it just suck,... it just sucks this day is all about food.,configuration,configuration
+87,1.0,"980, 987","980, 988",1,Everyon,Everyone,participant-role,participant-role
+100,43.18564576337837,"242, 251","238, 294",47, come hom,if I come home and my sister is out running or something,configuration,configuration
+17,43.0,"248, 251","248, 294",43,hom,home and my sister is out running or something,participant-role,participant-role
+84,8.06225774829855,"374, 399","366, 400",9,she's out burning calorie,because she's out burning calories,configuration,configuration
+109,26.1725046566048,"768, 781","765, 807",29,exercises mor,or exercises more I get so angry and rude.,configuration,configuration
+56,113.0,"663, 694","663, 807",113,to be the same loving big siste,to be the same loving big sister that I used to always be to her but when she doesn't overeat like me or exercises more I get so angry and rude.,participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+10,"135, 137",ge,main
+99,"166, 211",my sister and my mom don't eat as much as I d,configuration
+14,"193, 195",ea,main
+124,"209, 211", d,configuration
+92,"224, 228",neve,participant-role
+83,"380, 382",ou,participant-role
+38,"465, 466",I,participant-role
+40,"480, 483",thi,participant-role
+112,"591, 599","""move on",main
+59,"718, 719",b,main
+72,"831, 835","""fix",main
+89,"995, 1012", great Turkey Day,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+64,"64, 78",and I'm REALLY,configuration
+104,"104, 131",what other people eat part.,configuration
+72,"72, 78",REALLY,participant-role
+69,"69, 71",'m,main
+122,"122, 125",eat,main
+104,"104, 108",what,participant-role
+109,"109, 121",other people,participant-role
+148,"148, 153",angry,main
+161,"161, 165",when,participant-role
+313,"313, 316",mad,main
+307,"307, 312",soooo,participant-role
+522,"522, 531",hopefully,main
+503,"503, 516",the other day,participant-role
+517,"517, 531",- so hopefully,configuration
+651,"651, 654",so.,participant-role
+587,"587, 590",n't,main
+663,"663, 668",to be,main
+721,"721, 727",to her,participant-role
+792,"792, 797",angry,main
+785,"785, 788",get,configuration
+789,"789, 807",so angry and rude.,configuration
+708,"708, 710",to,main
+703,"703, 707",used,main
+708,"708, 727",to always be to her,participant-role
+732,"732, 736",when,participant-role
+696,"696, 727",that I used to always be to her,configuration
+757,"757, 764",like me,participant-role
+818,"818, 822",been,main
+828,"828, 830",to,main
+823,"823, 827",able,participant-role
+886,"886, 894",on them.,participant-role
+870,"870, 876",to get,main
+877,"877, 885",a handle,participant-role
+937,"937, 940",'re,main
+921,"921, 924",let,main
+963,"963, 978",those feelings.,participant-role
+934,"934, 957",you're really not alone,configuration
+934,"934, 937",you,participant-role
+126,"126, 131",part.,participant-role
+139,"139, 147",SO SO SO,participant-role
+663,"663, 807",to be the same loving big sister that I used to always be to her but when she doesn't overeat like me or exercises more I get so angry and rude.,configuration
+828,"828, 853","to ""fix"" these responses?",configuration
+828,"828, 853","to ""fix"" these responses?",participant-role
+870,"870, 894",to get a handle on them.,configuration
+925,"925, 957",you know you're really not alone,participant-role
+925,"925, 957",you know you're really not alone,configuration
+1042,"1042, 1045",all,participant-role
+1030,"1030, 1057",this day is all about food.,participant-role
+234,"234, 319","And if I come home and my sister is out running or something, I will get soooo mad...",configuration
+669,"669, 807",the same loving big sister that I used to always be to her but when she doesn't overeat like me or exercises more I get so angry and rude.,participant-role

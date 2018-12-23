@@ -1,0 +1,752 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.7245949926362297
+,Recall,0.9077490774907749
+,F1,0.8058968058968059
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+8,45.0,"100, 139","100, 184",45,a chocolate cake from a fabulous bakery,a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,participant-role,participant-role
+4,0.0,"56, 59","56, 59",0,ate,ate,main,main
+5,5.0,"60, 90","65, 90",5,some of my son's birthday cake,of my son's birthday cake,participant-role,participant-role
+9,0.0,"144, 145","144, 145",0,I,I,participant-role,participant-role
+541,4.0,"162, 166","158, 166",4,rest,n't rest,main,main
+539,0.0,"151, 152","151, 152",0,I,I,participant-role,participant-role
+11,18.0,"151, 166","151, 184",18,I wouldn't rest,I wouldn't rest until I had some.,participant-role,participant-role
+542,18.0,"151, 166","151, 184",18,I wouldn't rest,I wouldn't rest until I had some.,configuration,configuration
+7,0.0,"96, 99","96, 99",0,was,was,main,main
+16,0.0,"173, 174","173, 174",0,I,I,participant-role,participant-role
+2,16.0,"31, 51","31, 35",16,gave into temptation,gave,main,main
+1,4.0,"29, 30","25, 30",4,I,", 
+I",participant-role,participant-role
+12,6.082762530298219,"173, 183","167, 184",7,I had some,until I had some.,configuration,configuration
+173,4.0,"56, 90","52, 90",4,ate some of my son's birthday cake,and ate some of my son's birthday cake,configuration,configuration
+17,0.0,"175, 178","175, 178",0,had,had,main,main
+174,45.044422518220834,"93, 139","91, 184",47,it was a chocolate cake from a fabulous bakery,- it was a chocolate cake from a fabulous bakery and I knew I wouldn't rest until I had some.,configuration,configuration
+172,11.0,"29, 51","18, 51",11,I gave into temptation,"Hi Guys, 
+I gave into temptation",configuration,configuration
+6,2.0,"93, 95","91, 95",2,it,- it,participant-role,participant-role
+18,1.0,"179, 183","179, 184",1,some,some.,participant-role,participant-role
+20,0.0,"187, 191","187, 191",0,kept,kept,main,main
+21,1.0,"192, 222","192, 223",1,thinking about it all the time,thinking about it all the time!,participant-role,participant-role
+19,0.0,"185, 186","185, 186",0,I,I,participant-role,participant-role
+13,1.0,"185, 222","185, 223",1,I kept thinking about it all the time,I kept thinking about it all the time!,configuration,configuration
+37,0.0,"393, 408","393, 408",0,very supportive,very supportive,participant-role,participant-role
+22,0.0,"233, 234","233, 234",0,I,I,participant-role,participant-role
+3,0.0,"254, 261","254, 261",0,near it,near it,participant-role,participant-role
+179,0.0,"354, 356","354, 356",0,be,be,main,main
+25,27.459060435491963,"345, 385","340, 412",32,it would be OK to have just a little bit,that it would be OK to have just a little bit ( he's very supportive ) .,participant-role,participant-role
+182,27.459060435491963,"345, 385","340, 412",32,it would be OK to have just a little bit,that it would be OK to have just a little bit ( he's very supportive ) .,configuration,configuration
+24,3.0,"251, 253","248, 253",3,go,to go,main,main
+26,2.0,"264, 265","262, 265",2,I,- I,participant-role,participant-role
+33,0.0,"337, 339","337, 339",0,me,me,participant-role,participant-role
+27,1.0,"266, 267","265, 267",1,m,'m,main,main
+180,26.0,"357, 385","357, 359",26,OK to have just a little bit,OK,participant-role,participant-role
+34,0.0,"345, 347","345, 347",0,it,it,participant-role,participant-role
+31,0.0,"321, 326","321, 326",0,my DH,my DH,participant-role,participant-role
+35,0.0,"388, 390","388, 390",0,he,he,participant-role,participant-role
+15,9.0,"233, 261","224, 261",9,I wasn't going to go near it,At first I wasn't going to go near it,configuration,configuration
+183,4.47213595499958,"388, 408","386, 412",6,he's very supportive,( he's very supportive ) .,configuration,configuration
+36,1.0,"391, 392","390, 392",1,s,'s,main,main
+39,4.0,"415, 425","415, 421",4,worked out,worked,main,main
+594,4.123105625617661,"519, 530","520, 526",5,*scared* of,scared,main,main
+545,7.0710678118654755,"531, 540","538, 541",8,eating it,it?,participant-role,participant-role
+40,0.0,"426, 435","426, 435",0,my points,my points,participant-role,participant-role
+184,0.0,"413, 435","413, 435",0,I worked out my points,I worked out my points,configuration,configuration
+47,0.0,"492, 495","492, 495",0,you,you,participant-role,participant-role
+557,4.0,"440, 483","436, 483",4,reckoned I could manage some ( 60 g worth ),and reckoned I could manage some ( 60 g worth ),configuration,configuration
+44,0.0,"457, 463","457, 463",0,manage,manage,main,main
+42,0.0,"449, 450","449, 450",0,I,I,participant-role,participant-role
+543,0.0,"504, 505","504, 505",0,I,I,participant-role,participant-role
+546,20.0,"504, 540","504, 520",20,I was actually *scared* of eating it,I was actually *,configuration,configuration
+48,0.0,"496, 503","496, 503",0,believe,believe,main,main
+38,0.0,"413, 414","413, 414",0,I,I,participant-role,participant-role
+49,20.0,"504, 540","504, 520",20,I was actually *scared* of eating it,I was actually *,participant-role,participant-role
+50,4.123105625617661,"488, 540","484, 541",5,can you believe I was actually *scared* of eating it,but can you believe I was actually *scared* of eating it?,configuration,configuration
+181,0.0,"449, 483","449, 483",0,I could manage some ( 60 g worth ),I could manage some ( 60 g worth ),participant-role,participant-role
+185,0.0,"449, 483","449, 483",0,I could manage some ( 60 g worth ),I could manage some ( 60 g worth ),configuration,configuration
+41,0.0,"440, 448","440, 448",0,reckoned,reckoned,main,main
+45,0.0,"464, 483","464, 483",0,some ( 60 g worth ),some ( 60 g worth ),participant-role,participant-role
+59,11.0,"565, 610","565, 599",11,this guilt-food relationship thing to work on,this guilt-food relationship thing,participant-role,participant-role
+558,1.0,"550, 610","550, 611",1,I've still got this guilt-food relationship thing to work on,I've still got this guilt-food relationship thing to work on.,participant-role,participant-role
+52,1.0,"550, 610","550, 611",1,I've still got this guilt-food relationship thing to work on,I've still got this guilt-food relationship thing to work on.,configuration,configuration
+58,0.0,"561, 564","561, 564",0,got,got,main,main
+51,1.0,"542, 610","542, 611",1,I think I've still got this guilt-food relationship thing to work on,I think I've still got this guilt-food relationship thing to work on.,configuration,configuration
+56,0.0,"550, 551","550, 551",0,I,I,participant-role,participant-role
+55,0.0,"544, 549","544, 549",0,think,think,main,main
+54,0.0,"542, 543","542, 543",0,I,I,participant-role,participant-role
+62,0.0,"653, 655","653, 655",0,it,it,participant-role,participant-role
+569,5.0990195135927845,"653, 698","648, 699",6,"it was nice, but not 5.5 points worth of nice","that it was nice, but not 5.5 points worth of nice.",participant-role,participant-role
+60,26.019223662515376,"674, 698","648, 699",27,5.5 points worth of nice,"that it was nice, but not 5.5 points worth of nice.",configuration,configuration
+568,0.0,"644, 647","644, 647",0,was,was,main,main
+559,2.0,"620, 643","618, 643",2,the disappointing thing,", the disappointing thing",participant-role,participant-role
+570,8.06225774829855,"620, 698","612, 699",9,"the disappointing thing was that it was nice, but not 5.5 points worth of nice","Anyway, the disappointing thing was that it was nice, but not 5.5 points worth of nice.",configuration,configuration
+63,0.0,"656, 659","656, 659",0,was,was,main,main
+65,16.1245154965971,"674, 698","660, 690",22,5.5 points worth of nice,"nice, but not 5.5 points worth",participant-role,participant-role
+70,58.008620049092706,"758, 812","700, 813",59,"was annoyed with myself for ""wasting"" points like that","I didn't really enjoy it as much as I thought I would and was annoyed with myself for ""wasting"" points like that.",configuration,configuration
+69,0.0,"722, 724","722, 724",0,it,it,participant-role,participant-role
+75,22.360679774997898,"762, 812","782, 802",30,"annoyed with myself for ""wasting"" points like that","for ""wasting"" points",participant-role,participant-role
+595,0.0,"746, 747","746, 747",0,I,I,participant-role,participant-role
+571,0.0,"736, 737","736, 737",0,I,I,participant-role,participant-role
+66,0.0,"700, 701","700, 701",0,I,I,participant-role,participant-role
+81,0.0,"833, 858","833, 858",0,a whole pile of meringues,a whole pile of meringues,participant-role,participant-role
+80,5.0,"827, 832","822, 832",5,eaten,have eaten,main,main
+78,0.0,"814, 815","814, 815",0,I,I,participant-role,participant-role
+91,0.0,"1034, 1036","1034, 1036",0,it,it,participant-role,participant-role
+99,39.66106403010388,"1108, 1119","1086, 1152",55,useful info,some chocolate cake ( useful info for when I go on maintenance ) .,participant-role,participant-role
+86,0.0,"966, 967","966, 967",0,I,I,participant-role,participant-role
+100,0.0,"1129, 1130","1129, 1130",0,I,I,participant-role,participant-role
+552,24.0,"977, 1012","977, 1036",24,I didn't have to binge on something,I didn't have to binge on something just because I liked it,configuration,configuration
+87,0.0,"968, 976","968, 976",0,realised,realised,main,main
+73,24.515301344262525,"966, 1012","961, 1036",29,I realised I didn't have to binge on something,that I realised I didn't have to binge on something just because I liked it,configuration,configuration
+90,0.0,"1028, 1033","1028, 1033",0,liked,liked,main,main
+76,13.0,"1026, 1036","1013, 1036",13,I liked it,just because I liked it,configuration,configuration
+551,3.0,"1003, 1012","1000, 1012",3,something,on something,participant-role,participant-role
+92,0.0,"1042, 1043","1042, 1043",0,I,I,participant-role,participant-role
+84,0.0,"937, 940","937, 940",0,was,was,main,main
+547,0.0,"977, 978","977, 978",0,I,I,participant-role,participant-role
+97,0.0,"1082, 1085","1082, 1085",0,had,had,main,main
+77,153.37861650177967,"1042, 1066","915, 1152",213,I didn't have to get fat,"However, the exercise was useful in the sense that I realised I didn't have to binge on something just because I liked it, and I didn't have to get fat just because I had some chocolate cake ( useful info for when I go on maintenance ) .",configuration,configuration
+82,48.76474136094644,"1080, 1105","1067, 1152",60,I had some chocolate cake,just because I had some chocolate cake ( useful info for when I go on maintenance ) .,configuration,configuration
+98,55.758407437802596,"1086, 1105","1056, 1152",77,some chocolate cake,to get fat just because I had some chocolate cake ( useful info for when I go on maintenance ) .,participant-role,participant-role
+186,61.587336360651285,"1108, 1119","1056, 1152",85,useful info,to get fat just because I had some chocolate cake ( useful info for when I go on maintenance ) .,configuration,configuration
+83,2.0,"924, 936","922, 936",2,the exercise,", the exercise",participant-role,participant-role
+550,4.242640687119285,"994, 1002","991, 999",6,binge on,to binge,main,main
+96,0.0,"1080, 1081","1080, 1081",0,I,I,participant-role,participant-role
+88,24.0,"977, 1012","977, 1036",24,I didn't have to binge on something,I didn't have to binge on something just because I liked it,participant-role,participant-role
+187,5.0,"1129, 1148","1124, 1148",5,I go on maintenance,when I go on maintenance,configuration,configuration
+101,15.0,"1131, 1148","1131, 1133",15,go on maintenance,go,main,main
+89,0.0,"1026, 1027","1026, 1027",0,I,I,participant-role,participant-role
+95,90.13878188659973,"1063, 1066","1036, 1152",113,fat,", and I didn't have to get fat just because I had some chocolate cake ( useful info for when I go on maintenance ) .",participant-role,participant-role
+112,0.0,"1242, 1257","1242, 1257",0,fat and bloated,fat and bloated,participant-role,participant-role
+578,10.0,"1217, 1232","1227, 1232",10,I thought I had,I had,configuration,configuration
+103,0.0,"1153, 1155","1153, 1155",0,It,It,participant-role,participant-role
+129,0.0,"1400, 1406","1400, 1406",0,wanted,wanted,main,main
+105,0.0,"1168, 1170","1168, 1170",0,me,me,participant-role,participant-role
+190,19.1049731745428,"1235, 1257","1233, 1276",21,I felt fat and bloated,- I felt fat and bloated after I'd eaten it,configuration,configuration
+122,0.0,"1309, 1312","1309, 1312",0,was,was,main,main
+192,6.0,"1264, 1276","1258, 1276",6,I'd eaten it,after I'd eaten it,configuration,configuration
+109,0.0,"1196, 1205","1196, 1205",0,my demons,my demons,participant-role,participant-role
+114,0.0,"1264, 1265","1264, 1265",0,I,I,participant-role,participant-role
+132,0.0,"1447, 1450","1447, 1450",0,was,was,main,main
+195,2.8284271247461903,"1336, 1377","1334, 1379",4,I haven't gone over my points for the day,( I haven't gone over my points for the day ),configuration,configuration
+106,0.0,"1176, 1177","1176, 1177",0,I,I,participant-role,participant-role
+118,0.0,"1290, 1291","1290, 1291",0,I,I,participant-role,participant-role
+117,0.0,"1274, 1276","1274, 1276",0,it,it,participant-role,participant-role
+577,0.0,"1227, 1232","1227, 1232",0,I had,I had,participant-role,participant-role
+116,0.0,"1268, 1273","1268, 1273",0,eaten,eaten,main,main
+193,14.0,"1290, 1333","1276, 1333",14,I'm darn sure that was purely psychological,", even though I'm darn sure that was purely psychological",configuration,configuration
+128,0.0,"1384, 1399","1384, 1399",0,something in me,something in me,participant-role,participant-role
+123,0.0,"1313, 1333","1313, 1333",0,purely psychological,purely psychological,participant-role,participant-role
+196,23.0,"1384, 1423","1407, 1423",23,something in me wanted to scoff the lot,to scoff the lot,configuration,configuration
+104,0.0,"1161, 1167","1161, 1167",0,showed,showed,main,main
+102,5.0,"1176, 1232","1171, 1232",5,I haven't conquered my demons as much as I thought I had,that I haven't conquered my demons as much as I thought I had,participant-role,participant-role
+121,0.0,"1304, 1308","1304, 1308",0,that,that,participant-role,participant-role
+130,0.0,"1407, 1423","1407, 1423",0,to scoff the lot,to scoff the lot,participant-role,participant-role
+197,14.035668847618199,"1437, 1464","1423, 1465",15,the taste was disappointing,", even though the taste was disappointing.",configuration,configuration
+126,6.4031242374328485,"1346, 1355","1342, 1350",7,gone over,n't gone,main,main
+188,0.0,"1153, 1232","1153, 1232",0,It also showed me that I haven't conquered my demons as much as I thought I had,It also showed me that I haven't conquered my demons as much as I thought I had,configuration,configuration
+194,0.0,"1304, 1333","1304, 1333",0,that was purely psychological,that was purely psychological,configuration,configuration
+113,0.0,"1304, 1333","1304, 1333",0,that was purely psychological,that was purely psychological,participant-role,participant-role
+131,0.0,"1437, 1446","1437, 1446",0,the taste,the taste,participant-role,participant-role
+111,0.0,"1237, 1241","1237, 1241",0,felt,felt,main,main
+127,5.0,"1356, 1377","1351, 1377",5,my points for the day,over my points for the day,participant-role,participant-role
+110,2.0,"1235, 1236","1233, 1236",2,I,- I,participant-role,participant-role
+108,4.0,"1186, 1195","1182, 1195",4,conquered,n't conquered,main,main
+575,0.0,"1217, 1218","1217, 1218",0,I,I,participant-role,participant-role
+124,0.0,"1336, 1337","1336, 1337",0,I,I,participant-role,participant-role
+598,0.0,"1499, 1502","1499, 1502",0,how,how,participant-role,participant-role
+601,5.0,"1499, 1509","1499, 1514",5,how I feel,how I feel now.,configuration,configuration
+198,1.0,"1466, 1513","1466, 1514",1,I'm feeling a bit confused about how I feel now,I'm feeling a bit confused about how I feel now.,configuration,configuration
+134,0.0,"1466, 1467","1466, 1467",0,I,I,participant-role,participant-role
+136,0.0,"1470, 1477","1470, 1477",0,feeling,feeling,main,main
+600,0.0,"1505, 1509","1505, 1509",0,feel,feel,main,main
+599,0.0,"1503, 1504","1503, 1504",0,I,I,participant-role,participant-role
+137,1.0,"1478, 1513","1478, 1514",1,a bit confused about how I feel now,a bit confused about how I feel now.,participant-role,participant-role
+145,7.0710678118654755,"1553, 1587","1560, 1588",8,out of control of being in control,control of being in control?,participant-role,participant-role
+201,12.041594578792296,"1548, 1587","1560, 1588",13,am I out of control of being in control,control of being in control?,configuration,configuration
+143,0.0,"1548, 1550","1548, 1550",0,am,am,main,main
+200,1.0,"1515, 1542","1515, 1543",1,I'm in control of my eating,"I'm in control of my eating,",configuration,configuration
+142,0.0,"1519, 1542","1519, 1542",0,in control of my eating,in control of my eating,participant-role,participant-role
+141,1.0,"1517, 1518","1516, 1518",1,m,'m,main,main
+140,0.0,"1515, 1516","1515, 1516",0,I,I,participant-role,participant-role
+153,15.0,"1611, 1630","1611, 1615",15,able to stop losing,able,participant-role,participant-role
+154,0.0,"1636, 1637","1636, 1637",0,I,I,participant-role,participant-role
+206,0.0,"1709, 1712","1709, 1712",0,put,put,main,main
+156,0.0,"1644, 1651","1644, 1651",0,my goal,my goal,participant-role,participant-role
+149,0.0,"1593, 1599","1593, 1599",0,scared,scared,main,main
+162,2.0,"1681, 1704","1679, 1704",2,eat everything in sight,", eat everything in sight",configuration,configuration
+157,0.0,"1661, 1662","1661, 1662",0,I,I,participant-role,participant-role
+152,4.0,"1608, 1610","1604, 1610",4,be,n't be,main,main
+150,0.0,"1600, 1601","1600, 1601",0,I,I,participant-role,participant-role
+147,0.0,"1589, 1590","1589, 1590",0,I,I,participant-role,participant-role
+163,4.0,"1713, 1719","1713, 1715",4,it all,it,participant-role,participant-role
+155,0.0,"1638, 1643","1638, 1643",0,reach,reach,main,main
+161,9.0,"1685, 1704","1685, 1695",9,everything in sight,everything,participant-role,participant-role
+159,8.0,"1666, 1679","1674, 1679",8,totally crack,crack,main,main
+207,18.439088914585774,"1709, 1751","1705, 1733",22,put it all back on again ( and then some ),and put it all back on again,configuration,configuration
+138,103.0,"1600, 1630","1600, 1733",103,I won't be able to stop losing,"I won't be able to stop losing when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again",participant-role,participant-role
+203,103.0,"1600, 1630","1600, 1733",103,I won't be able to stop losing,"I won't be able to stop losing when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again",configuration,configuration
+204,5.0990195135927845,"1636, 1651","1631, 1652",6,I reach my goal,"when I reach my goal,",configuration,configuration
+160,0.0,"1681, 1684","1681, 1684",0,eat,eat,main,main
+205,8.0,"1661, 1679","1653, 1679",8,I'll totally crack,or that I'll totally crack,configuration,configuration
+209,4.123105625617661,"1785, 1813","1781, 1814",5,I'm actually a bit of a mess,but I'm actually a bit of a mess!,configuration,configuration
+170,1.0,"1787, 1788","1786, 1788",1,m,'m,main,main
+165,0.0,"1754, 1765","1754, 1765",0,Most people,Most people,participant-role,participant-role
+167,4.0,"1772, 1776","1768, 1776",4,know,n't know,main,main
+169,0.0,"1785, 1786","1785, 1786",0,I,I,participant-role,participant-role
+171,1.0,"1798, 1813","1798, 1814",1,a bit of a mess,a bit of a mess!,participant-role,participant-role
+168,0.0,"1777, 1779","1777, 1779",0,it,it,participant-role,participant-role
+208,1.0,"1754, 1779","1754, 1780",1,Most people don't know it,"Most people don't know it,",configuration,configuration
+225,3.1622776601683795,"1862, 1897","1859, 1898",4,I should be asking this here or not,if I should be asking this here or not.,configuration,configuration
+224,2.23606797749979,"1846, 1897","1844, 1898",3,I'm not sure if I should be asking this here or not,", I'm not sure if I should be asking this here or not.",configuration,configuration
+215,0.0,"1871, 1880","1871, 1880",0,be asking,be asking,main,main
+213,0.0,"1862, 1863","1862, 1863",0,I,I,participant-role,participant-role
+210,2.0,"1846, 1847","1844, 1847",2,I,", I",participant-role,participant-role
+223,6.082762530298219,"1945, 1970","1951, 1971",7,right before the HOLIDAYS,before the HOLIDAYS!,participant-role,participant-role
+226,4.0,"1903, 1935","1899, 1935",4,I have hit a weight loss plateau,But I have hit a weight loss plateau,configuration,configuration
+221,0.0,"1940, 1942","1940, 1942",0,it,it,participant-role,participant-role
+220,0.0,"1914, 1935","1914, 1935",0,a weight loss plateau,a weight loss plateau,participant-role,participant-role
+222,1.0,"1943, 1944","1942, 1944",1,s,'s,main,main
+227,4.123105625617661,"1940, 1970","1936, 1971",5,it's right before the HOLIDAYS,and it's right before the HOLIDAYS!,configuration,configuration
+219,0.0,"1910, 1913","1910, 1913",0,hit,hit,main,main
+217,0.0,"1903, 1904","1903, 1904",0,I,I,participant-role,participant-role
+579,14.0,"1988, 2017","1988, 2003",14,"what that means, holiday hell",what that means,configuration,configuration
+230,1.0,"1988, 2017","1988, 2018",1,"what that means, holiday hell","what that means, holiday hell.",participant-role,participant-role
+229,0.0,"1983, 1987","1983, 1987",0,know,know,main,main
+146,0.0,"1988, 1992","1988, 1992",0,what,what,participant-role,participant-role
+228,4.0,"1976, 1982","1976, 1978",4,we all,we,participant-role,participant-role
+199,0.0,"1998, 2003","1998, 2003",0,means,means,main,main
+231,4.123105625617661,"1976, 2017","1972, 2018",5,"we all know what that means, holiday hell","And we all know what that means, holiday hell.",configuration,configuration
+191,0.0,"1993, 1997","1993, 1997",0,that,that,participant-role,participant-role
+237,0.0,"2063, 2068","2063, 2068",0,purge,purge,main,main
+238,0.0,"2069, 2070","2069, 2070",0,I,I,participant-role,participant-role
+241,1.0,"2069, 2095","2069, 2096",1,I just do it with exercise,I just do it with exercise.,configuration,configuration
+239,0.0,"2076, 2078","2076, 2078",0,do,do,main,main
+232,0.0,"2019, 2020","2019, 2020",0,I,I,participant-role,participant-role
+243,28.284271247461902,"2055, 2068","2051, 2096",32,I still purge,how I still purge I just do it with exercise.,configuration,configuration
+235,0.0,"2079, 2081","2079, 2081",0,it,it,participant-role,participant-role
+236,0.0,"2055, 2056","2055, 2056",0,I,I,participant-role,participant-role
+234,9.0,"2024, 2037","2024, 2028",9,told my story,told,main,main
+257,5.0,"2102, 2133","2097, 2133",5,the holidays are getting closer,Well the holidays are getting closer,configuration,configuration
+244,0.0,"2102, 2114","2102, 2114",0,the holidays,the holidays,participant-role,participant-role
+538,19.4164878389476,"2138, 2184","2134, 2203",23,I'm just going to have to make myself throw up,and I'm just going to have to make myself throw up if I eat too much.,configuration,configuration
+255,0.0,"2190, 2193","2190, 2193",0,eat,eat,main,main
+251,3.0,"2164, 2168","2161, 2168",3,make,to make,main,main
+246,0.0,"2119, 2126","2119, 2126",0,getting,getting,main,main
+254,0.0,"2188, 2189","2188, 2189",0,I,I,participant-role,participant-role
+258,3.1622776601683795,"2188, 2202","2185, 2203",4,I eat too much,if I eat too much.,configuration,configuration
+248,0.0,"2138, 2139","2138, 2139",0,I,I,participant-role,participant-role
+253,9.0,"2169, 2184","2169, 2175",9,myself throw up,myself,participant-role,participant-role
+252,0.0,"2204, 2215","2204, 2215",0,The problem,The problem,participant-role,participant-role
+580,29.0,"2219, 2247","2219, 2276",29,I haven't done it in so long,"I haven't done it in so long, when I try NOTHING HAPPENS!",participant-role,participant-role
+263,29.0,"2219, 2247","2219, 2276",29,I haven't done it in so long,"I haven't done it in so long, when I try NOTHING HAPPENS!",configuration,configuration
+256,0.0,"2216, 2218","2216, 2218",0,is,is,main,main
+259,0.0,"2219, 2220","2219, 2220",0,I,I,participant-role,participant-role
+265,0.0,"2256, 2259","2256, 2259",0,try,try,main,main
+581,29.0,"2204, 2247","2204, 2276",29,The problem is I haven't done it in so long,"The problem is I haven't done it in so long, when I try NOTHING HAPPENS!",configuration,configuration
+261,4.0,"2229, 2233","2225, 2233",4,done,n't done,main,main
+269,1.0,"2260, 2275","2260, 2276",1,NOTHING HAPPENS,NOTHING HAPPENS!,configuration,configuration
+262,0.0,"2234, 2236","2234, 2236",0,it,it,participant-role,participant-role
+266,9.0,"2260, 2267","2260, 2276",9,NOTHING,NOTHING HAPPENS!,participant-role,participant-role
+264,0.0,"2254, 2255","2254, 2255",0,I,I,participant-role,participant-role
+277,8.06225774829855,"2298, 2364","2290, 2365",9,there are family members all over the place trying to FEED ME MORE,because there are family members all over the place trying to FEED ME MORE!,configuration,configuration
+274,0.0,"2304, 2307","2304, 2307",0,are,are,main,main
+271,0.0,"2284, 2289","2284, 2289",0,panic,panic,main,main
+272,76.16429609731846,"2282, 2289","2277, 2365",81,I panic,Then I panic because there are family members all over the place trying to FEED ME MORE!,configuration,configuration
+276,24.331050121192877,"2323, 2341","2327, 2365",28,all over the place,over the place trying to FEED ME MORE!,participant-role,participant-role
+275,0.0,"2308, 2322","2308, 2322",0,family members,family members,participant-role,participant-role
+270,0.0,"2282, 2283","2282, 2283",0,I,I,participant-role,participant-role
+282,0.0,"2382, 2384","2382, 2384",0,is,is,main,main
+289,2.23606797749979,"2391, 2439","2389, 2440",3,I REALLY REALLY need to know how to purge better,: I REALLY REALLY need to know how to purge better.,configuration,configuration
+287,3.0,"2415, 2419","2412, 2419",3,know,to know,main,main
+281,0.0,"2366, 2381","2366, 2381",0,The bottom line,The bottom line,participant-role,participant-role
+283,0.0,"2385, 2389","2385, 2389",0,this,this,participant-role,participant-role
+288,1.0,"2420, 2439","2420, 2440",1,how to purge better,how to purge better.,participant-role,participant-role
+285,14.142135623730951,"2391, 2392","2389, 2406",16,I,: I REALLY REALLY,participant-role,participant-role
+284,0.0,"2366, 2389","2366, 2389",0,The bottom line is this,The bottom line is this,configuration,configuration
+290,0.0,"2441, 2442","2441, 2442",0,I,I,participant-role,participant-role
+293,0.0,"2493, 2494","2493, 2494",0,I,I,participant-role,participant-role
+292,0.0,"2453, 2486","2453, 2486",0,it to get me through the holidays,it to get me through the holidays,participant-role,participant-role
+295,5.0,"2499, 2506","2499, 2501",5,go back,go,main,main
+279,19.026297590440446,"2507, 2545","2526, 2546",20,to my famous purge by exercise routine,by exercise routine.,participant-role,participant-role
+278,0.0,"2441, 2486","2441, 2486",0,I only need it to get me through the holidays,I only need it to get me through the holidays,configuration,configuration
+291,0.0,"2448, 2452","2448, 2452",0,need,need,main,main
+301,8.0,"2565, 2592","2565, 2584",8,comfortable sharing with me,comfortable sharing,participant-role,participant-role
+303,0.0,"2603, 2613","2603, 2613",0,understand,understand,main,main
+302,0.0,"2593, 2594","2593, 2594",0,I,I,participant-role,participant-role
+298,0.0,"2550, 2553","2550, 2553",0,you,you,participant-role,participant-role
+347,3.0,"2550, 2592","2547, 2592",3,you don't feel comfortable sharing with me,If you don't feel comfortable sharing with me,configuration,configuration
+300,4.0,"2560, 2564","2556, 2564",4,feel,n't feel,main,main
+348,46.010868281309364,"2593, 2613","2547, 2614",47,I TOTALLY understand,If you don't feel comfortable sharing with me I TOTALLY understand.,configuration,configuration
+309,1.0,"2665, 2676","2665, 2677",1,to share it,to share it.,participant-role,participant-role
+280,19.026297590440446,"2646, 2676","2665, 2677",20,not everyone wants to share it,to share it.,configuration,configuration
+304,0.0,"2615, 2617","2615, 2617",0,It,It,participant-role,participant-role
+305,1.0,"2618, 2619","2617, 2619",1,s,'s,main,main
+349,36.0,"2615, 2641","2615, 2677",36,It's a very private matter,It's a very private matter and not everyone wants to share it.,configuration,configuration
+307,0.0,"2650, 2658","2650, 2658",0,everyone,everyone,participant-role,participant-role
+352,3.1622776601683795,"2692, 2701","2689, 2702",4,you don't,if you don't.,configuration,configuration
+351,14.317821063276353,"2681, 2688","2678, 2702",17,it's ok,So it's ok if you don't.,configuration,configuration
+312,0.0,"2686, 2688","2686, 2688",0,ok,ok,participant-role,participant-role
+311,1.0,"2684, 2685","2683, 2685",1,s,'s,main,main
+313,0.0,"2692, 2695","2692, 2695",0,you,you,participant-role,participant-role
+310,0.0,"2681, 2683","2681, 2683",0,it,it,participant-role,participant-role
+321,0.0,"2745, 2749","2745, 2749",0,help,help,main,main
+350,1.0,"2821, 2823","2821, 2824",1,me,me.,participant-role,participant-role
+316,0.0,"2716, 2718","2716, 2718",0,is,is,main,main
+355,9.219544457292887,"2779, 2793","2773, 2800",13,I eat too much,after I eat too much PLEASE,configuration,configuration
+319,0.0,"2736, 2740","2736, 2740",0,that,that,participant-role,participant-role
+296,6.0,"2801, 2811","2801, 2805",6,have mercy,have,main,main
+326,0.0,"2816, 2820","2816, 2820",0,help,help,main,main
+582,4.123105625617661,"2816, 2823","2812, 2824",5,help me,and help me.,configuration,configuration
+325,0.0,"2781, 2784","2781, 2784",0,eat,eat,main,main
+354,28.0,"2736, 2772","2736, 2800",28,that can help me purge the right way,that can help me purge the right way after I eat too much PLEASE,configuration,configuration
+324,0.0,"2779, 2780","2779, 2780",0,I,I,participant-role,participant-role
+322,0.0,"2750, 2752","2750, 2752",0,me,me,participant-role,participant-role
+318,65.37583651472461,"2726, 2735","2719, 2800",72,out there,anyone out there that can help me purge the right way after I eat too much PLEASE,participant-role,participant-role
+357,6.082762530298219,"2847, 2882","2841, 2883",7,I've worked so hard to lose so much,after I've worked so hard to lose so much.,configuration,configuration
+333,0.0,"2852, 2858","2852, 2858",0,worked,worked,main,main
+327,0.0,"2825, 2826","2825, 2826",0,I,I,participant-role,participant-role
+331,0.0,"2847, 2848","2847, 2848",0,I,I,participant-role,participant-role
+330,0.0,"2837, 2840","2837, 2840",0,FAT,FAT,participant-role,participant-role
+329,4.0,"2833, 2836","2829, 2836",4,GET,N'T GET,main,main
+584,0.0,"2913, 2918","2913, 2918",0,doing,doing,main,main
+586,1.0,"2901, 2924","2901, 2925",1,you all are doing GREAT,you all are doing GREAT!,configuration,configuration
+335,10.04987562112089,"2894, 2924","2884, 2925",11,I hope you all are doing GREAT,"Ana Love, I hope you all are doing GREAT!",configuration,configuration
+334,4.0,"2901, 2908","2901, 2904",4,you all,you,participant-role,participant-role
+337,0.0,"2896, 2900","2896, 2900",0,hope,hope,main,main
+338,1.0,"2901, 2924","2901, 2925",1,you all are doing GREAT,you all are doing GREAT!,participant-role,participant-role
+336,2.0,"2894, 2895","2892, 2895",2,I,", I",participant-role,participant-role
+585,1.0,"2919, 2924","2919, 2925",1,GREAT,GREAT!,participant-role,participant-role
+342,0.0,"2948, 2951","2948, 2951",0,you,you,participant-role,participant-role
+346,3.1622776601683795,"2948, 2985","2945, 2986",4,you want to have a private discussion,if you want to have a private discussion.,configuration,configuration
+341,0.0,"2938, 2944","2938, 2944",0,xxxcom,xxxcom,participant-role,participant-role
+340,0.0,"2935, 2937","2935, 2937",0,is,is,main,main
+344,1.0,"2957, 2985","2957, 2986",1,to have a private discussion,to have a private discussion.,participant-role,participant-role
+345,42.0,"2926, 2944","2926, 2986",42,My email is xxxcom,My email is xxxcom if you want to have a private discussion.,configuration,configuration
+343,0.0,"2952, 2956","2952, 2956",0,want,want,main,main
+339,0.0,"2926, 2934","2926, 2934",0,My email,My email,participant-role,participant-role
+369,0.0,"3104, 3109","3104, 3109",0,found,found,main,main
+361,2.0,"3030, 3031","3028, 3031",2,I,", I",participant-role,participant-role
+359,1.0,"3010, 3011","3009, 3011",1,m,'m,main,main
+390,0.0,"3008, 3028","3008, 3028",0,I'm new to this site,I'm new to this site,configuration,configuration
+370,1.0,"3110, 3118","3110, 3119",1,you guys,you guys!,participant-role,participant-role
+360,4.0,"3012, 3028","3016, 3028",4,new to this site,to this site,participant-role,participant-role
+392,4.123105625617661,"3090, 3118","3086, 3119",5,I'm so glad I found you guys,but I'm so glad I found you guys!,configuration,configuration
+365,0.0,"3090, 3091","3090, 3091",0,I,I,participant-role,participant-role
+587,1.0,"3102, 3118","3102, 3119",1,I found you guys,I found you guys!,participant-role,participant-role
+393,1.0,"3102, 3118","3102, 3119",1,I found you guys,I found you guys!,configuration,configuration
+368,0.0,"3102, 3103","3102, 3103",0,I,I,participant-role,participant-role
+364,41.0,"3053, 3078","3053, 3119",41,a member of a pro ED site,a member of a pro ED site before but I'm so glad I found you guys!,participant-role,participant-role
+358,0.0,"3008, 3009","3008, 3009",0,I,I,participant-role,participant-role
+391,54.817880294662984,"3030, 3085","2987, 3119",77,I've never really been a member of a pro ED site before,"XOXOX 
+Maria 
+
+Hi I'm new to this site, I've never really been a member of a pro ED site before but I'm so glad I found you guys!",configuration,configuration
+394,3.0,"3123, 3138","3120, 3138",3,here's my story,So here's my story,configuration,configuration
+380,0.0,"3182, 3183","3182, 3183",0,I,I,participant-role,participant-role
+381,0.0,"3184, 3187","3184, 3187",0,was,was,main,main
+385,0.0,"3225, 3233","3225, 3233",0,realised,realised,main,main
+397,6.0,"3182, 3196","3176, 3196",6,I was about 14,since I was about 14,configuration,configuration
+373,0.0,"3130, 3138","3130, 3138",0,my story,my story,participant-role,participant-role
+588,0.0,"3234, 3235","3234, 3235",0,I,I,participant-role,participant-role
+398,22.0,"3198, 3220","3176, 3220",22,I just woke up one day,"since I was about 14, I just woke up one day",configuration,configuration
+383,2.0,"3198, 3199","3196, 3199",2,I,", I",participant-role,participant-role
+384,3.0,"3205, 3212","3205, 3209",3,woke up,woke,main,main
+374,4.0,"3142, 3143","3138, 3143",4,I,... I,participant-role,participant-role
+382,0.0,"3188, 3196","3188, 3196",0,about 14,about 14,participant-role,participant-role
+400,10.04987562112089,"3255, 3289","3265, 3290",11,I decided to do something about it,to do something about it.,configuration,configuration
+375,1.0,"3144, 3145","3143, 3145",1,m,'m,main,main
+389,1.0,"3265, 3289","3265, 3290",1,to do something about it,to do something about it.,participant-role,participant-role
+386,39.0,"3234, 3251","3234, 3290",39,I look disgusting,I look disgusting so I decided to do something about it.,participant-role,participant-role
+589,0.0,"3236, 3240","3236, 3240",0,look,look,main,main
+372,1.0,"3128, 3129","3127, 3129",1,s,'s,main,main
+387,0.0,"3255, 3256","3255, 3256",0,I,I,participant-role,participant-role
+401,0.0,"3291, 3292","3291, 3292",0,I,I,participant-role,participant-role
+409,0.0,"3337, 3344","3337, 3344",0,managed,managed,main,main
+405,0.0,"3310, 3311","3310, 3311",0,I,I,participant-role,participant-role
+402,7.0,"3293, 3305","3293, 3298",7,stuck it out,stuck,main,main
+410,24.596747752497688,"3345, 3386","3356, 3364",33,to achieve a weight that I was happy with,a weight,participant-role,participant-role
+408,0.0,"3335, 3336","3335, 3336",0,I,I,participant-role,participant-role
+403,0.0,"3370, 3371","3370, 3371",0,I,I,participant-role,participant-role
+411,38.2099463490856,"3335, 3386","3331, 3424",42,I managed to achieve a weight that I was happy with,and I managed to achieve a weight that I was happy with ( not that I was going to give up ! ),configuration,configuration
+593,0.0,"3365, 3386","3365, 3386",0,that I was happy with,that I was happy with,configuration,configuration
+414,4.242640687119285,"3413, 3420","3410, 3417",6,give up,to give,main,main
+442,11.704699910719626,"3398, 3420","3387, 3424",15,I was going to give up,( not that I was going to give up ! ),configuration,configuration
+412,0.0,"3398, 3399","3398, 3399",0,I,I,participant-role,participant-role
+441,19.0,"3310, 3330","3291, 3330",19,I worked really hard,I stuck it out and I worked really hard,configuration,configuration
+418,16.0,"3436, 3480","3452, 3480",16,ill for a while with black outs fainting etc,with black outs fainting etc,participant-role,participant-role
+553,0.0,"3493, 3495","3493, 3495",0,it,it,participant-role,participant-role
+555,0.0,"3505, 3521","3505, 3521",0,the usual things,the usual things,participant-role,participant-role
+554,0.0,"3496, 3499","3496, 3499",0,was,was,main,main
+415,0.0,"3425, 3426","3425, 3426",0,I,I,participant-role,participant-role
+426,0.0,"3587, 3589","3587, 3589",0,me,me,participant-role,participant-role
+444,102.41581909060729,"3485, 3521","3425, 3604",143,thought it was just the usual things,"I had been ill for a while with black outs fainting etc and thought it was just the usual things, but I ended up in hospital, and after many tests they diagnosed me with epilepsy!",configuration,configuration
+424,0.0,"3572, 3576","3572, 3576",0,they,they,participant-role,participant-role
+425,0.0,"3577, 3586","3577, 3586",0,diagnosed,diagnosed,main,main
+556,0.0,"3493, 3521","3493, 3521",0,it was just the usual things,it was just the usual things,configuration,configuration
+446,6.082762530298219,"3555, 3603","3561, 3604",7,after many tests they diagnosed me with epilepsy,many tests they diagnosed me with epilepsy!,configuration,configuration
+420,0.0,"3493, 3521","3493, 3521",0,it was just the usual things,it was just the usual things,participant-role,participant-role
+427,1.0,"3590, 3603","3590, 3604",1,with epilepsy,with epilepsy!,participant-role,participant-role
+423,0.0,"3538, 3549","3538, 3549",0,in hospital,in hospital,participant-role,participant-role
+421,0.0,"3527, 3528","3527, 3528",0,I,I,participant-role,participant-role
+417,0.0,"3431, 3435","3431, 3435",0,been,been,main,main
+448,27.16615541441225,"3638, 3681","3611, 3684",30,to what my neurologist thought was suitable,to bring my body weight up to what my neurologist thought was suitable as,configuration,configuration
+449,8.06225774829855,"3685, 3753","3693, 3754",9,without a regular eating routine I was having up to 3 seizures a day,a regular eating routine I was having up to 3 seizures a day!,configuration,configuration
+438,0.0,"3724, 3730","3724, 3730",0,having,having,main,main
+431,0.0,"3620, 3634","3620, 3634",0,my body weight,my body weight,participant-role,participant-role
+430,3.0,"3614, 3619","3611, 3619",3,bring,to bring,main,main
+435,4.0,"3669, 3681","3673, 3681",4,was suitable,suitable,participant-role,participant-role
+428,0.0,"3605, 3606","3605, 3606",0,I,I,participant-role,participant-role
+439,7.0,"3731, 3747","3731, 3754",7,up to 3 seizures,up to 3 seizures a day!,participant-role,participant-role
+436,0.0,"3718, 3719","3718, 3719",0,I,I,participant-role,participant-role
+433,8.0,"3646, 3660","3646, 3668",8,my neurologist,my neurologist thought,participant-role,participant-role
+450,0.0,"3758, 3759","3758, 3759",0,I,I,participant-role,participant-role
+451,8.0,"3760, 3772","3760, 3764",8,went through,went,main,main
+452,8.06225774829855,"3773, 3806","3765, 3807",9,the most horrible year of my life,through the most horrible year of my life!,participant-role,participant-role
+453,3.1622776601683795,"3758, 3806","3755, 3807",4,I went through the most horrible year of my life,So I went through the most horrible year of my life!,configuration,configuration
+454,0.0,"3808, 3855","3808, 3855",0,The tablets I was on mixed with my meal routine,The tablets I was on mixed with my meal routine,participant-role,participant-role
+458,1.0,"3808, 3877","3808, 3878",1,The tablets I was on mixed with my meal routine made me put on weight,The tablets I was on mixed with my meal routine made me put on weight!,configuration,configuration
+455,0.0,"3856, 3860","3856, 3860",0,made,made,main,main
+457,1.0,"3861, 3877","3861, 3878",1,me put on weight,me put on weight!,participant-role,participant-role
+467,4.123105625617661,"3948, 3977","3944, 3978",5,I have come off my medication,and I have come off my medication!,configuration,configuration
+464,4.0,"3955, 3963","3955, 3959",4,come off,come,main,main
+461,0.0,"3936, 3943","3936, 3943",0,stopped,stopped,main,main
+466,4.0,"3883, 3943","3879, 3943",4,now after 2 years my seizures have almost completely stopped,But now after 2 years my seizures have almost completely stopped,configuration,configuration
+462,0.0,"3948, 3949","3948, 3949",0,I,I,participant-role,participant-role
+465,1.0,"3964, 3977","3964, 3978",1,my medication,my medication!,participant-role,participant-role
+459,0.0,"3901, 3912","3901, 3912",0,my seizures,my seizures,participant-role,participant-role
+468,0.0,"3982, 3983","3982, 3983",0,I,I,participant-role,participant-role
+474,26.0,"4026, 4082","4026, 4056",26,some support and encouragement to help me get it all off,some support and encouragement,participant-role,participant-role
+472,2.0,"4012, 4013","4010, 4013",2,I,", I",participant-role,participant-role
+503,33.015148038438355,"4012, 4082","3979, 4083",34,I really need some support and encouragement to help me get it all off,"So I have started dieting again, I really need some support and encouragement to help me get it all off!",configuration,configuration
+473,0.0,"4021, 4025","4021, 4025",0,need,need,main,main
+502,3.0,"3982, 4010","3979, 4010",3,I have started dieting again,So I have started dieting again,configuration,configuration
+471,0.0,"3997, 4004","3997, 4004",0,dieting,dieting,participant-role,participant-role
+470,0.0,"3989, 3996","3989, 3996",0,started,started,main,main
+480,0.0,"4121, 4127","4121, 4127",0,caught,caught,main,main
+478,0.0,"4097, 4104","4097, 4104",0,careful,careful,participant-role,participant-role
+484,0.0,"4159, 4168","4159, 4168",0,convinced,convinced,main,main
+479,0.0,"4108, 4120","4108, 4120",0,my boyfriend,my boyfriend,participant-role,participant-role
+482,8.0,"4128, 4138","4128, 4130",8,me purging,me,participant-role,participant-role
+485,0.0,"4169, 4172","4169, 4172",0,him,him,participant-role,participant-role
+563,5.0990195135927845,"4178, 4222","4173, 4223",6,I was just ill with a tummy bug or something,that I was just ill with a tummy bug or something.,configuration,configuration
+505,3.0,"4108, 4152","4105, 4152",3,my boyfriend caught me purging the other day,as my boyfriend caught me purging the other day,configuration,configuration
+560,0.0,"4178, 4179","4178, 4179",0,I,I,participant-role,participant-role
+483,0.0,"4157, 4158","4157, 4158",0,I,I,participant-role,participant-role
+477,3.0,"4094, 4096","4091, 4096",3,be,to be,main,main
+506,4.123105625617661,"4157, 4222","4153, 4223",5,I convinced him that I was just ill with a tummy bug or something,but I convinced him that I was just ill with a tummy bug or something.,configuration,configuration
+561,0.0,"4180, 4183","4180, 4183",0,was,was,main,main
+562,4.123105625617661,"4189, 4222","4193, 4223",5,ill with a tummy bug or something,with a tummy bug or something.,participant-role,participant-role
+504,48.0,"4084, 4104","4084, 4152",48,I have to be careful,I have to be careful as my boyfriend caught me purging the other day,configuration,configuration
+475,0.0,"4084, 4085","4084, 4085",0,I,I,participant-role,participant-role
+486,5.0990195135927845,"4178, 4222","4173, 4223",6,I was just ill with a tummy bug or something,that I was just ill with a tummy bug or something.,participant-role,participant-role
+491,0.0,"4224, 4255","4224, 4255",0,He keeps telling me I look fine,He keeps telling me I look fine,configuration,configuration
+488,0.0,"4233, 4240","4233, 4240",0,telling,telling,main,main
+566,0.0,"4251, 4255","4251, 4255",0,fine,fine,participant-role,participant-role
+490,11.0,"4244, 4255","4233, 4255",11,I look fine,telling me I look fine,participant-role,participant-role
+492,15.524174696260024,"4260, 4302","4256, 4287",19,I'm sure he will be happier with a thin me,but I'm sure he will be happier,configuration,configuration
+499,15.0,"4280, 4302","4280, 4287",15,happier with a thin me,happier,participant-role,participant-role
+498,0.0,"4277, 4279","4277, 4279",0,be,be,main,main
+481,15.0,"4269, 4302","4269, 4287",15,he will be happier with a thin me,he will be happier,participant-role,participant-role
+507,15.0,"4269, 4302","4269, 4287",15,he will be happier with a thin me,he will be happier,configuration,configuration
+489,0.0,"4241, 4243","4241, 4243",0,me,me,participant-role,participant-role
+567,0.0,"4244, 4255","4244, 4255",0,I look fine,I look fine,configuration,configuration
+487,0.0,"4224, 4226","4224, 4226",0,He,He,participant-role,participant-role
+493,0.0,"4260, 4261","4260, 4261",0,I,I,participant-role,participant-role
+565,0.0,"4246, 4250","4246, 4250",0,look,look,main,main
+496,0.0,"4269, 4271","4269, 4271",0,he,he,participant-role,participant-role
+564,0.0,"4244, 4245","4244, 4245",0,I,I,participant-role,participant-role
+501,1.0,"4312, 4313","4312, 4314",1,I,I!,participant-role,participant-role
+511,1.0,"4330, 4336","4330, 4337",1,9 st 8,9 st 8!,participant-role,participant-role
+510,0.0,"4317, 4319","4317, 4319",0,am,am,main,main
+509,0.0,"4315, 4316","4315, 4316",0,I,I,participant-role,participant-role
+512,1.0,"4315, 4336","4315, 4337",1,I am currently 9 st 8,I am currently 9 st 8!,configuration,configuration
+514,0.0,"4340, 4344","4340, 4344",0,feel,feel,main,main
+516,0.0,"4338, 4363","4338, 4363",0,I feel fucking disgusting,I feel fucking disgusting,configuration,configuration
+513,0.0,"4338, 4339","4338, 4339",0,I,I,participant-role,participant-role
+518,0.0,"4367, 4371","4367, 4371",0,look,look,main,main
+515,0.0,"4345, 4363","4345, 4363",0,fucking disgusting,fucking disgusting,participant-role,participant-role
+519,1.0,"4372, 4382","4372, 4383",1,disgusting,disgusting!,participant-role,participant-role
+517,2.0,"4365, 4366","4363, 4366",2,I,", I",participant-role,participant-role
+521,0.0,"4388, 4389","4388, 4389",0,I,I,participant-role,participant-role
+523,3.0,"4410, 4412","4407, 4412",3,do,to do,main,main
+524,6.082762530298219,"4413, 4431","4407, 4432",7,something about it,to do something about it!,participant-role,participant-role
+525,4.123105625617661,"4388, 4431","4384, 4432",5,I desperately need to do something about it,And I desperately need to do something about it!,configuration,configuration
+526,0.0,"4433, 4434","4433, 4434",0,I,I,participant-role,participant-role
+533,0.0,"4433, 4462","4433, 4462",0,I have been reading your tips,I have been reading your tips,configuration,configuration
+529,0.0,"4453, 4462","4453, 4462",0,your tips,your tips,participant-role,participant-role
+534,4.123105625617661,"4467, 4496","4463, 4497",5,have picked up some good ones,and have picked up some good ones!,configuration,configuration
+528,5.0,"4445, 4452","4440, 4452",5,reading,been reading,main,main
+532,1.0,"4482, 4496","4482, 4497",1,some good ones,some good ones!,participant-role,participant-role
+531,3.0,"4472, 4481","4472, 4478",3,picked up,picked,main,main
+537,29.427877939124322,"4503, 4521","4498, 4550",34,need encouragement,"Just need encouragement, thanks for listening 
+Sara",configuration,configuration
+536,29.0,"4508, 4521","4508, 4550",29,encouragement,"encouragement, thanks for listening 
+Sara",participant-role,participant-role
+535,0.0,"4503, 4507","4503, 4507",0,need,need,main,main
+30,103.12128781197411,"309, 315","274, 412",132,binges,"new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",participant-role,participant-role
+177,47.43416490252569,"321, 385","360, 412",46,my DH persuaded me that it would be OK to have just a little bit,to have just a little bit ( he's very supportive ) .,configuration,configuration
+189,27.459060435491963,"1176, 1205","1171, 1232",32,I haven't conquered my demons,that I haven't conquered my demons as much as I thought I had,configuration,configuration
+202,106.48004507887852,"1589, 1630","1616, 1733",94,I'm scared I won't be able to stop losing,"to stop losing when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again",configuration,configuration
+242,52.0,"2019, 2044","2019, 2096",52,I've told my story before,I've told my story before about how I still purge I just do it with exercise.,configuration,configuration
+268,18.384776310850235,"2254, 2259","2247, 2276",24,I try,", when I try NOTHING HAPPENS!",configuration,configuration
+306,36.0,"2620, 2641","2620, 2677",36,a very private matter,a very private matter and not everyone wants to share it.,participant-role,participant-role
+353,65.06919393998976,"2710, 2735","2707, 2800",68,there is anyone out there,if there is anyone out there that can help me purge the right way after I eat too much PLEASE,configuration,configuration
+317,75.95393340703298,"2719, 2725","2707, 2800",87,anyone,if there is anyone out there that can help me purge the right way after I eat too much PLEASE,participant-role,participant-role
+590,39.0,"3241, 3251","3241, 3290",39,disgusting,disgusting so I decided to do something about it.,participant-role,participant-role
+399,39.20459156782532,"3225, 3251","3221, 3290",43,realised I look disgusting,and realised I look disgusting so I decided to do something about it.,configuration,configuration
+591,39.0,"3234, 3251","3234, 3290",39,I look disgusting,I look disgusting so I decided to do something about it.,configuration,configuration
+379,115.0,"3172, 3175","3172, 3290",115,EDs,"EDs since I was about 14, I just woke up one day and realised I look disgusting so I decided to do something about it.",participant-role,participant-role
+404,55.0,"3365, 3369","3365, 3424",55,that,that I was happy with ( not that I was going to give up ! ),participant-role,participant-role
+447,117.0,"3605, 3637","3605, 3754",117,I had to bring my body weight up,I had to bring my body weight up to what my neurologist thought was suitable as without a regular eating routine I was having up to 3 seizures a day!,configuration,configuration
+520,27.018512172212592,"4365, 4382","4338, 4383",28,I look disgusting,"I feel fucking disgusting, I look disgusting!",configuration,configuration
+176,100.96038827183659,"290, 315","262, 412",125,still terrified of binges,"- I'm still new at this and still terrified of binges, but my DH persuaded me that it would be OK to have just a little bit ( he's very supportive ) .",configuration,configuration
+323,98.0,"2801, 2811","2703, 2811",98,have mercy,But if there is anyone out there that can help me purge the right way after I eat too much PLEASE have mercy,configuration,configuration
+396,117.6860229593982,"3163, 3175","3138, 3290",140,have had EDs,"... I'm 20 years old and have had EDs since I was about 14, I just woke up one day and realised I look disgusting so I decided to do something about it.",configuration,configuration
+376,132.30646242719968,"3146, 3158","3155, 3290",127,20 years old,"old and have had EDs since I was about 14, I just woke up one day and realised I look disgusting so I decided to do something about it.",participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+14,"144, 166",I knew I wouldn't rest,configuration
+10,"146, 150",knew,main
+175,"264, 285",I'm still new at this,configuration
+28,"274, 285",new at this,participant-role
+29,"296, 308",terrified of,main
+32,"327, 336",persuaded,main
+53,"653, 665","it was nice,",configuration
+64,"660, 665","nice,",participant-role
+61,"700, 724",I didn't really enjoy it,configuration
+68,"716, 721",enjoy,main
+574,"736, 753",I thought I would,configuration
+572,"738, 745",thought,main
+573,"746, 753",I would,participant-role
+597,"746, 753",I would,configuration
+74,"758, 761",was,main
+71,"814, 913","I could have eaten a whole pile of meringues for that amount of points, with some sweetened yoghurt",configuration
+72,"924, 947",the exercise was useful,configuration
+85,"941, 947",useful,participant-role
+94,"1059, 1062",get,main
+576,"1219, 1226",thought,main
+120,"1294, 1303",darn sure,main
+133,"1451, 1464",disappointing,participant-role
+135,"1468, 1469",m,main
+144,"1551, 1552",I,participant-role
+212,"1854, 1858",sure,main
+139,"1862, 1897",I should be asking this here or not,participant-role
+216,"1881, 1885",this,participant-role
+247,"2127, 2133",closer,participant-role
+267,"2268, 2275",HAPPENS,main
+273,"2298, 2303",there,participant-role
+297,"2493, 2545",I can go back to my famous purge by exercise routine,configuration
+308,"2659, 2664",wants,main
+315,"2710, 2715",there,participant-role
+356,"2825, 2840",I CAN'T GET FAT,configuration
+363,"3048, 3052",been,main
+367,"3097, 3101",glad,main
+371,"3123, 3127",here,participant-role
+395,"3142, 3158",I'm 20 years old,configuration
+378,"3168, 3171",had,main
+388,"3257, 3264",decided,main
+440,"3291, 3305",I stuck it out,configuration
+406,"3312, 3318",worked,main
+592,"3376, 3386",happy with,main
+443,"3425, 3480",I had been ill for a while with black outs fainting etc,configuration
+419,"3485, 3492",thought,main
+445,"3527, 3549",I ended up in hospital,configuration
+422,"3529, 3537",ended up,main
+434,"3661, 3668",thought,main
+495,"4264, 4268",sure,main
+508,"4307, 4313",will I,configuration
+,
+,Parsed mismatching all manual (False Positives)
+21,"21, 25",Guys,participant-role
+18,"18, 25",Hi Guys,configuration
+36,"36, 51",into temptation,participant-role
+18,"18, 25",Hi Guys,participant-role
+18,"18, 20",Hi,main
+60,"60, 64",some,participant-role
+210,"210, 223",all the time!,participant-role
+192,"192, 200",thinking,main
+201,"201, 209",about it,participant-role
+224,"224, 232",At first,participant-role
+360,"360, 367",to have,main
+248,"248, 261",to go near it,participant-role
+238,"238, 247",n't going,main
+506,"506, 509",was,main
+600,"600, 611",to work on.,configuration
+600,"600, 607",to work,main
+600,"600, 611",to work on.,participant-role
+691,"691, 699",of nice.,participant-role
+762,"762, 769",annoyed,participant-role
+705,"705, 708",n't,main
+770,"770, 781",with myself,participant-role
+886,"886, 914",with some sweetened yoghurt!,participant-role
+859,"859, 884",for that amount of points,participant-role
+948,"948, 960",in the sense,participant-role
+991,"991, 1036",to binge on something just because I liked it,configuration
+1124,"1124, 1128",when,participant-role
+1134,"1134, 1148",on maintenance,participant-role
+1120,"1120, 1148",for when I go on maintenance,participant-role
+982,"982, 990",n't have,main
+1229,"1229, 1232",had,main
+1407,"1407, 1415",to scoff,main
+1291,"1291, 1293",'m,main
+1276,"1276, 1282",", even",participant-role
+1423,"1423, 1429",", even",participant-role
+1484,"1484, 1492",confused,main
+1568,"1568, 1588",of being in control?,participant-role
+1571,"1571, 1588",being in control?,configuration
+1571,"1571, 1576",being,main
+1577,"1577, 1588",in control?,participant-role
+1616,"1616, 1623",to stop,main
+1624,"1624, 1630",losing,main
+1631,"1631, 1635",when,participant-role
+1854,"1854, 1858",sure,participant-role
+1847,"1847, 1853",'m not,main
+1945,"1945, 1950",right,participant-role
+2082,"2082, 2096",with exercise.,participant-role
+2051,"2051, 2054",how,participant-role
+2029,"2029, 2037",my story,participant-role
+2194,"2194, 2203",too much.,participant-role
+2176,"2176, 2181",throw,main
+2153,"2153, 2160",to have,main
+2153,"2153, 2203",to have to make myself throw up if I eat too much.,configuration
+2153,"2153, 2203",to have to make myself throw up if I eat too much.,participant-role
+2147,"2147, 2152",going,main
+2247,"2247, 2253",", when",participant-role
+2268,"2268, 2276",HAPPENS!,participant-role
+2260,"2260, 2267",NOTHING,main
+2342,"2342, 2365",trying to FEED ME MORE!,configuration
+2349,"2349, 2365",to FEED ME MORE!,participant-role
+2342,"2342, 2348",trying,main
+2412,"2412, 2440",to know how to purge better.,configuration
+2407,"2407, 2411",need,main
+2420,"2420, 2440",how to purge better.,configuration
+2424,"2424, 2432",to purge,main
+2412,"2412, 2440",to know how to purge better.,participant-role
+2456,"2456, 2462",to get,main
+2453,"2453, 2455",it,participant-role
+2585,"2585, 2592",with me,participant-role
+2665,"2665, 2673",to share,main
+2674,"2674, 2677",it.,participant-role
+2696,"2696, 2701",don't,main
+2806,"2806, 2811",mercy,participant-role
+2753,"2753, 2758",purge,main
+2785,"2785, 2800",too much PLEASE,participant-role
+2759,"2759, 2772",the right way,participant-role
+2867,"2867, 2883",to lose so much.,configuration
+2867,"2867, 2883",to lose so much.,participant-role
+2867,"2867, 2874",to lose,main
+2884,"2884, 2892",Ana Love,participant-role
+2957,"2957, 2986",to have a private discussion.,configuration
+2957,"2957, 2964",to have,main
+2965,"2965, 2986",a private discussion.,participant-role
+3012,"3012, 3015",new,participant-role
+3035,"3035, 3040",never,main
+3091,"3091, 3093",'m,main
+3094,"3094, 3101",so glad,participant-role
+3213,"3213, 3216",one,participant-role
+3281,"3281, 3290",about it.,participant-role
+3265,"3265, 3270",to do,main
+3404,"3404, 3409",going,main
+3319,"3319, 3330",really hard,participant-role
+3345,"3345, 3355",to achieve,main
+3345,"3345, 3424",to achieve a weight that I was happy with ( not that I was going to give up ! ),configuration
+3410,"3410, 3422",to give up !,participant-role
+3410,"3410, 3422",to give up !,configuration
+3372,"3372, 3375",was,main
+3440,"3440, 3451",for a while,participant-role
+3561,"3561, 3571",many tests,participant-role
+3607,"3607, 3610",had,main
+3693,"3693, 3717",a regular eating routine,participant-role
+3641,"3641, 3645",what,participant-role
+3669,"3669, 3672",was,main
+3864,"3864, 3867",put,main
+3861,"3861, 3878",me put on weight!,configuration
+3861,"3861, 3863",me,participant-role
+3835,"3835, 3855",with my meal routine,participant-role
+3829,"3829, 3834",mixed,main
+3820,"3820, 3821",I,participant-role
+3893,"3893, 3900",2 years,participant-role
+4072,"4072, 4074",it,participant-role
+4057,"4057, 4083",to help me get it all off!,participant-role
+4057,"4057, 4083",to help me get it all off!,configuration
+4068,"4068, 4071",get,main
+3979,"3979, 4010",So I have started dieting again,participant-role
+4057,"4057, 4064",to help,main
+4065,"4065, 4067",me,participant-role
+4131,"4131, 4138",purging,main
+4086,"4086, 4090",have,main
+4105,"4105, 4127",as my boyfriend caught,configuration
+4128,"4128, 4152",me purging the other day,configuration
+4091,"4091, 4152",to be careful as my boyfriend caught me purging the other day,participant-role
+4264,"4264, 4268",sure,participant-role
+4261,"4261, 4263",'m,main
+4233,"4233, 4243",telling me,configuration
+4227,"4227, 4232",keeps,main
+4345,"4345, 4363",fucking disgusting,configuration
+4345,"4345, 4352",fucking,main
+4402,"4402, 4406",need,main
+4534,"4534, 4543",listening,main
+4530,"4530, 4550","for listening 
+Sara",participant-role
+4546,"4546, 4550",Sara,participant-role
+4534,"4534, 4550","listening 
+Sara",configuration
+192,"192, 223",thinking about it all the time!,configuration
+368,"368, 412",just a little bit ( he's very supportive ) .,participant-role
+360,"360, 412",to have just a little bit ( he's very supportive ) .,participant-role
+248,"248, 261",to go near it,configuration
+488,"488, 520",can you believe I was actually *,participant-role
+492,"492, 520",you believe I was actually *,configuration
+961,"961, 1036",that I realised I didn't have to binge on something just because I liked it,participant-role
+991,"991, 1036",to binge on something just because I liked it,participant-role
+1227,"1227, 1228",I,participant-role
+1380,"1380, 1465","and something in me wanted to scoff the lot, even though the taste was disappointing.",configuration
+1416,"1416, 1423",the lot,participant-role
+1484,"1484, 1514",confused about how I feel now.,configuration
+1493,"1493, 1514",about how I feel now.,participant-role
+1631,"1631, 1733","when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again",participant-role
+1631,"1631, 1733","when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again",configuration
+1624,"1624, 1733","losing when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again",participant-role
+1616,"1616, 1733","to stop losing when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again",participant-role
+1696,"1696, 1704",in sight,participant-role
+1624,"1624, 1733","losing when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again",configuration
+2069,"2069, 2096",I just do it with exercise.,participant-role
+2045,"2045, 2096",about how I still purge I just do it with exercise.,participant-role
+2161,"2161, 2203",to make myself throw up if I eat too much.,participant-role
+2161,"2161, 2203",to make myself throw up if I eat too much.,configuration
+2169,"2169, 2203",myself throw up if I eat too much.,configuration
+2169,"2169, 2203",myself throw up if I eat too much.,participant-role
+2420,"2420, 2423",how,participant-role
+2463,"2463, 2465",me,participant-role
+2466,"2466, 2486",through the holidays,participant-role
+2453,"2453, 2486",it to get me through the holidays,configuration
+2750,"2750, 2800",me purge the right way after I eat too much PLEASE,configuration
+2750,"2750, 2800",me purge the right way after I eat too much PLEASE,participant-role
+3079,"3079, 3119",before but I'm so glad I found you guys!,participant-role
+3110,"3110, 3113",you,participant-role
+2987,"2987, 3028","XOXOX 
+Maria 
+
+Hi I'm new to this site",participant-role
+3271,"3271, 3280",something,participant-role
+3376,"3376, 3381",happy,participant-role
+3365,"3365, 3424",that I was happy with ( not that I was going to give up ! ),configuration
+3481,"3481, 3554","and thought it was just the usual things, but I ended up in hospital, and",participant-role
+3693,"3693, 3754",a regular eating routine I was having up to 3 seizures a day!,participant-role
+3611,"3611, 3684",to bring my body weight up to what my neurologist thought was suitable as,participant-role
+3820,"3820, 3855",I was on mixed with my meal routine,configuration
+3868,"3868, 3878",on weight!,participant-role
+4065,"4065, 4083",me get it all off!,participant-role
+4065,"4065, 4083",me get it all off!,configuration
+4184,"4184, 4192",just ill,participant-role
+4091,"4091, 4152",to be careful as my boyfriend caught me purging the other day,configuration
+4233,"4233, 4255",telling me I look fine,configuration
+4353,"4353, 4363",disgusting,participant-role
+4338,"4338, 4363",I feel fucking disgusting,participant-role
+4423,"4423, 4432",about it!,participant-role
+4413,"4413, 4422",something,participant-role
+4407,"4407, 4432",to do something about it!,configuration
+1589,"1589, 1753","I'm scared I won't be able to stop losing when I reach my goal, or that I'll totally crack, eat everything in sight and put it all back on again ( and then some ) .",configuration
+3176,"3176, 3290","since I was about 14, I just woke up one day and realised I look disgusting so I decided to do something about it.",configuration
+3345,"3345, 3424",to achieve a weight that I was happy with ( not that I was going to give up ! ),participant-role

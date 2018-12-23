@@ -1,0 +1,235 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.7477064220183486
+,Recall,0.9644970414201184
+,F1,0.8423772609819122
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+4,1.0,"28, 46","28, 47",1,an eating disorder,an eating disorder?,participant-role,participant-role
+3,0.0,"23, 27","23, 27",0,have,have,main,main
+2,0.0,"21, 22","21, 22",0,I,I,participant-role,participant-role
+116,1.0,"18, 46","18, 47",1,Do I have an eating disorder,Do I have an eating disorder?,configuration,configuration
+149,0.0,"63, 67","63, 67",0,Call,Call,main,main
+150,0.0,"68, 70","68, 70",0,me,me,participant-role,participant-role
+151,3.1622776601683795,"71, 76","68, 77",4,Tiger,me Tiger.,participant-role,participant-role
+152,1.0,"63, 76","63, 77",1,Call me Tiger,Call me Tiger.,configuration,configuration
+5,0.0,"78, 79","78, 79",0,I,I,participant-role,participant-role
+7,0.0,"84, 114","84, 114",0,"a 6'0, 190, 32 w, athletic guy","a 6'0, 190, 32 w, athletic guy",participant-role,participant-role
+117,1.0,"78, 132","78, 133",1,"I was a 6'0, 190, 32 w, athletic guy about 2 years ago","I was a 6'0, 190, 32 w, athletic guy about 2 years ago.",configuration,configuration
+6,0.0,"80, 83","80, 83",0,was,was,main,main
+118,5.0990195135927845,"139, 165","134, 166",6,I don't know what happened,Then I don't know what happened.,configuration,configuration
+155,1.0,"152, 165","152, 166",1,what happened,what happened.,configuration,configuration
+8,0.0,"139, 140","139, 140",0,I,I,participant-role,participant-role
+11,1.0,"152, 165","152, 166",1,what happened,what happened.,participant-role,participant-role
+154,0.0,"157, 165","157, 165",0,happened,happened,main,main
+10,4.0,"147, 151","143, 151",4,know,n't know,main,main
+153,0.0,"152, 156","152, 156",0,what,what,participant-role,participant-role
+12,0.0,"167, 168","167, 168",0,I,I,participant-role,participant-role
+119,0.0,"167, 196","167, 196",0,I lost all desire to workout.,I lost all desire to workout.,configuration,configuration
+13,0.0,"169, 173","169, 173",0,lost,lost,main,main
+14,11.0,"174, 196","185, 196",11,all desire to workout.,to workout.,participant-role,participant-role
+157,0.0,"227, 230","227, 230",0,was,was,main,main
+159,1.0,"197, 256","197, 257",1,"All I wanted to do after work was go home, eat and watch TV","All I wanted to do after work was go home, eat and watch TV.",configuration,configuration
+158,0.0,"197, 226","197, 226",0,All I wanted to do after work,All I wanted to do after work,participant-role,participant-role
+156,1.0,"231, 256","231, 257",1,"go home, eat and watch TV","go home, eat and watch TV.",participant-role,participant-role
+21,1.0,"269, 290","269, 289",1,to clubs or anything.,to clubs or anything,participant-role,participant-role
+16,4.123105625617661,"293, 332","289, 333",5,did not have any desire to meet friends,... did not have any desire to meet friends.,configuration,configuration
+23,4.0,"301, 305","297, 305",4,have,not have,main,main
+25,1.0,"306, 332","306, 333",1,any desire to meet friends,any desire to meet friends.,participant-role,participant-role
+18,0.0,"258, 259","258, 259",0,I,I,participant-role,participant-role
+15,1.0,"258, 290","258, 289",1,I don't go to clubs or anything.,I don't go to clubs or anything,configuration,configuration
+20,4.0,"266, 268","262, 268",4,go,n't go,main,main
+27,0.0,"349, 352","349, 352",0,got,got,main,main
+17,9.0,"334, 357","334, 348",9,"A month ago, I got sick","A month ago, I",configuration,configuration
+26,2.0,"347, 348","345, 348",2,I,", I",participant-role,participant-role
+32,0.0,"395, 403","395, 403",0,informed,informed,main,main
+31,0.0,"391, 394","391, 394",0,she,she,participant-role,participant-role
+29,0.0,"359, 363","359, 363",0,Went,Went,main,main
+30,0.0,"364, 386","364, 386",0,to the doctor's office,to the doctor's office,participant-role,participant-role
+163,5.0990195135927845,"412, 455","407, 456",6,I gained 55 lbs in the last couple of years,that I gained 55 lbs in the last couple of years.,configuration,configuration
+160,0.0,"412, 413","412, 413",0,I,I,participant-role,participant-role
+35,29.274562336608895,"391, 427","387, 456",33,she informed me that I gained 55 lbs,and she informed me that I gained 55 lbs in the last couple of years.,configuration,configuration
+33,0.0,"404, 406","404, 406",0,me,me,participant-role,participant-role
+24,0.0,"359, 386","359, 386",0,Went to the doctor's office,Went to the doctor's office,configuration,configuration
+34,5.0990195135927845,"412, 455","407, 456",6,I gained 55 lbs in the last couple of years,that I gained 55 lbs in the last couple of years.,participant-role,participant-role
+162,29.0,"421, 427","421, 456",29,55 lbs,55 lbs in the last couple of years.,participant-role,participant-role
+161,0.0,"414, 420","414, 420",0,gained,gained,main,main
+122,0.0,"457, 498","457, 498",0,She diagnosed me with high blood pressure,She diagnosed me with high blood pressure,configuration,configuration
+123,4.123105625617661,"503, 531","499, 532",5,told me to get back in shape,and told me to get back in shape.,configuration,configuration
+41,0.0,"503, 507","503, 507",0,told,told,main,main
+43,3.1622776601683795,"511, 531","508, 532",4,to get back in shape,me to get back in shape.,participant-role,participant-role
+39,0.0,"471, 473","471, 473",0,me,me,participant-role,participant-role
+42,0.0,"508, 510","508, 510",0,me,me,participant-role,participant-role
+38,0.0,"461, 470","461, 470",0,diagnosed,diagnosed,main,main
+40,0.0,"474, 498","474, 498",0,with high blood pressure,with high blood pressure,participant-role,participant-role
+37,0.0,"457, 460","457, 460",0,She,She,participant-role,participant-role
+124,1.0,"533, 538","533, 539",1,I did,I did.,configuration,configuration
+44,0.0,"533, 534","533, 534",0,I,I,participant-role,participant-role
+176,0.0,"550, 560","550, 560",0,what I ate,what I ate,configuration,configuration
+46,0.0,"540, 541","540, 541",0,I,I,participant-role,participant-role
+175,0.0,"557, 560","557, 560",0,ate,ate,main,main
+125,0.0,"540, 560","540, 560",0,I watched what I ate,I watched what I ate,configuration,configuration
+48,0.0,"550, 560","550, 560",0,what I ate,what I ate,participant-role,participant-role
+126,4.0,"564, 591","560, 591",4,ate salads most of the time,... ate salads most of the time,configuration,configuration
+51,0.0,"596, 600","596, 600",0,went,went,main,main
+52,0.0,"601, 611","601, 611",0,to the gym,to the gym,participant-role,participant-role
+173,0.0,"550, 554","550, 554",0,what,what,participant-role,participant-role
+127,4.123105625617661,"596, 647","592, 648",5,went to the gym as often as I can - almost everyday,and went to the gym as often as I can - almost everyday.,configuration,configuration
+174,0.0,"555, 556","555, 556",0,I,I,participant-role,participant-role
+47,0.0,"542, 549","542, 549",0,watched,watched,main,main
+54,0.0,"663, 670","663, 670",0,dropped,dropped,main,main
+55,0.0,"671, 677","671, 677",0,20 lbs,20 lbs,participant-role,participant-role
+56,0.0,"682, 689","682, 689",0,started,started,main,main
+143,0.0,"649, 677","649, 677",0,"In a month, I dropped 20 lbs","In a month, I dropped 20 lbs",configuration,configuration
+57,1.0,"690, 704","690, 705",1,looking better,looking better.,participant-role,participant-role
+144,4.123105625617661,"682, 704","678, 705",5,started looking better,and started looking better.,configuration,configuration
+53,2.0,"661, 662","659, 662",2,I,", I",participant-role,participant-role
+60,0.0,"713, 728","713, 728",0,the bloatedness,the bloatedness,participant-role,participant-role
+146,4.123105625617661,"733, 752","729, 753",5,I felt a lot better,and I felt a lot better.,configuration,configuration
+61,0.0,"733, 734","733, 734",0,I,I,participant-role,participant-role
+63,1.0,"740, 752","740, 753",1,a lot better,a lot better.,participant-role,participant-role
+58,0.0,"706, 707","706, 707",0,I,I,participant-role,participant-role
+145,0.0,"706, 728","706, 728",0,I lost the bloatedness,I lost the bloatedness,configuration,configuration
+62,0.0,"735, 739","735, 739",0,felt,felt,main,main
+59,0.0,"708, 712","708, 712",0,lost,lost,main,main
+64,0.0,"754, 765","754, 765",0,The problem,The problem,participant-role,participant-role
+128,1.0,"754, 784","754, 785",1,The problem started a week ago,The problem started a week ago.,configuration,configuration
+65,0.0,"766, 773","766, 773",0,started,started,main,main
+67,0.0,"788, 791","788, 791",0,had,had,main,main
+68,1.0,"792, 800","792, 801",1,a burger,a burger.,participant-role,participant-role
+66,0.0,"786, 787","786, 787",0,I,I,participant-role,participant-role
+129,1.0,"786, 800","786, 801",1,I had a burger,I had a burger.,configuration,configuration
+170,3.0,"882, 888","879, 888",3,handle,to handle,main,main
+130,77.00649323271382,"802, 901","879, 902",78,After a month of eating nothing but salads and fruits... my tummy can't seem to handle meat anymore,to handle meat anymore.,configuration,configuration
+69,4.0,"859, 867","855, 867",4,my tummy,... my tummy,participant-role,participant-role
+72,8.0,"889, 901","889, 893",8,meat anymore,meat,participant-role,participant-role
+147,0.0,"903, 913","903, 913",0,I threw up,I threw up,configuration,configuration
+77,1.0,"926, 937","926, 938",1,much better,much better.,participant-role,participant-role
+76,0.0,"921, 925","921, 925",0,felt,felt,main,main
+74,3.0,"905, 913","905, 910",3,threw up,threw,main,main
+73,0.0,"903, 904","903, 904",0,I,I,participant-role,participant-role
+75,0.0,"918, 920","918, 920",0,it,it,participant-role,participant-role
+131,4.123105625617661,"918, 937","914, 938",5,it felt much better,and it felt much better.,configuration,configuration
+79,0.0,"955, 958","955, 958",0,had,had,main,main
+78,0.0,"953, 954","953, 954",0,I,I,participant-role,participant-role
+133,2.23606797749979,"985, 1004","983, 1005",3,same thing happened,- same thing happened.,configuration,configuration
+80,0.0,"959, 982","959, 982",0,some salad with chicken,some salad with chicken,participant-role,participant-role
+81,2.0,"985, 995","983, 995",2,same thing,- same thing,participant-role,participant-role
+132,0.0,"953, 982","953, 982",0,I had some salad with chicken,I had some salad with chicken,configuration,configuration
+82,0.0,"996, 1004","996, 1004",0,happened,happened,main,main
+36,0.0,"1006, 1007","1006, 1007",0,I,I,participant-role,participant-role
+86,0.0,"1030, 1056","1030, 1056",0,fruits and vegetable salad,fruits and vegetable salad,participant-role,participant-role
+171,3.0,"1025, 1029","1022, 1029",3,keep,to keep,main,main
+134,16.0312195418814,"1006, 1061","1022, 1062",17,I can only seem to keep fruits and vegetable salad down,to keep fruits and vegetable salad down.,configuration,configuration
+135,1.0,"1063, 1083","1063, 1084",1,Last night scared me,Last night scared me.,configuration,configuration
+88,0.0,"1074, 1080","1074, 1080",0,scared,scared,main,main
+89,1.0,"1081, 1083","1081, 1084",1,me,me.,participant-role,participant-role
+87,0.0,"1063, 1073","1063, 1073",0,Last night,Last night,participant-role,participant-role
+95,23.0,"1126, 1171","1126, 1148",23,that strange sensation when you want to purge,that strange sensation,participant-role,participant-role
+179,1.0,"1163, 1171","1163, 1172",1,to purge,to purge.,participant-role,participant-role
+136,0.0,"1085, 1110","1085, 1110",0,I had soup and some salad,I had soup and some salad,configuration,configuration
+93,0.0,"1119, 1120","1119, 1120",0,I,I,participant-role,participant-role
+94,0.0,"1121, 1125","1121, 1125",0,felt,felt,main,main
+178,0.0,"1158, 1162","1158, 1162",0,want,want,main,main
+90,0.0,"1085, 1086","1085, 1086",0,I,I,participant-role,participant-role
+92,0.0,"1091, 1110","1091, 1110",0,soup and some salad,soup and some salad,participant-role,participant-role
+180,5.0990195135927845,"1154, 1171","1149, 1172",6,you want to purge,when you want to purge.,configuration,configuration
+177,0.0,"1154, 1157","1154, 1157",0,you,you,participant-role,participant-role
+137,9.055385138137417,"1119, 1171","1110, 1172",10,I felt that strange sensation when you want to purge,... then I felt that strange sensation when you want to purge.,configuration,configuration
+91,0.0,"1087, 1090","1087, 1090",0,had,had,main,main
+120,1.0,"1173, 1226","1173, 1227",1,I had to run to the bathroom 5 minutes after the meal,I had to run to the bathroom 5 minutes after the meal.,configuration,configuration
+99,0.0,"1173, 1174","1173, 1174",0,I,I,participant-role,participant-role
+97,3.0,"1182, 1185","1179, 1185",3,run,to run,main,main
+101,10.0,"1186, 1201","1186, 1211",10,to the bathroom,to the bathroom 5 minutes,participant-role,participant-role
+138,1.0,"1228, 1238","1228, 1239",1,I'm scared,I'm scared.,configuration,configuration
+102,0.0,"1228, 1229","1228, 1229",0,I,I,participant-role,participant-role
+106,0.0,"1243, 1247","1243, 1247",0,this,this,participant-role,participant-role
+139,1.0,"1240, 1286","1240, 1287",1,Is this the first signs of anorexia or bulimia,Is this the first signs of anorexia or bulimia?,configuration,configuration
+105,1.0,"1248, 1286","1248, 1287",1,the first signs of anorexia or bulimia,the first signs of anorexia or bulimia?,participant-role,participant-role
+104,0.0,"1240, 1242","1240, 1242",0,Is,Is,main,main
+164,0.0,"1358, 1359","1358, 1359",0,I,I,participant-role,participant-role
+165,0.0,"1360, 1363","1360, 1363",0,got,got,main,main
+140,4.0,"1288, 1320","1288, 1324",4,I looked at some of the websites,I looked at some of the websites and,configuration,configuration
+107,0.0,"1288, 1289","1288, 1289",0,I,I,participant-role,participant-role
+121,9.0,"1334, 1340","1325, 1340",9,I look,the more I look,configuration,configuration
+109,5.0,"1300, 1320","1305, 1320",5,some of the websites,of the websites,participant-role,participant-role
+108,3.0,"1290, 1299","1290, 1296",3,looked at,looked,main,main
+166,26.019223662515376,"1351, 1363","1325, 1364",27,scared I got,"the more I look, the more scared I got.",configuration,configuration
+83,0.0,"1334, 1335","1334, 1335",0,I,I,participant-role,participant-role
+96,0.0,"1336, 1340","1336, 1340",0,look,look,main,main
+112,1.0,"1391, 1412","1391, 1413",1,in the same condition,in the same condition.,participant-role,participant-role
+168,0.0,"1378, 1380","1378, 1380",0,me,me,participant-role,participant-role
+167,0.0,"1372, 1377","1372, 1377",0,email,email,main,main
+111,1.0,"1388, 1390","1387, 1390",1,re,'re,main,main
+141,3.1622776601683795,"1384, 1412","1381, 1413",4,you're in the same condition,if you're in the same condition.,configuration,configuration
+110,0.0,"1384, 1387","1384, 1387",0,you,you,participant-role,participant-role
+114,0.0,"1416, 1420","1416, 1420",0,wish,wish,main,main
+115,1.0,"1421, 1439","1421, 1440",1,to talk to someone,to talk to someone.,participant-role,participant-role
+113,0.0,"1414, 1415","1414, 1415",0,I,I,participant-role,participant-role
+142,1.0,"1414, 1439","1414, 1440",1,I wish to talk to someone,I wish to talk to someone.,configuration,configuration
+169,33.734255586866,"1372, 1380","1365, 1413",40,email me,Please email me if you're in the same condition.,configuration,configuration
+,
+,Manual mismatching all parsed (False Negative)
+28,"353, 357",sick,participant-role
+49,"564, 567",ate,main
+50,"568, 574",salads,participant-role
+98,"1230, 1231",m,main
+103,"1232, 1238",scared,participant-role
+148,"1351, 1357",scared,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+53,"53, 62",everyone.,participant-role
+50,"50, 52",Hi,main
+50,"50, 62",Hi everyone.,configuration
+248,"248, 253",watch,main
+210,"210, 215",to do,main
+203,"203, 209",wanted,main
+240,"240, 243",eat,main
+231,"231, 233",go,main
+201,"201, 202",I,participant-role
+244,"244, 257",and watch TV.,configuration
+231,"231, 238",go home,configuration
+216,"216, 226",after work,participant-role
+231,"231, 257","go home, eat and watch TV.",configuration
+317,"317, 324",to meet,main
+325,"325, 333",friends.,participant-role
+353,"353, 357",sick,main
+349,"349, 352",got,configuration
+511,"511, 517",to get,main
+508,"508, 532",me to get back in shape.,configuration
+523,"523, 532",in shape.,participant-role
+535,"535, 538",did,main
+560,"560, 567",... ate,participant-role
+575,"575, 591",most of the time,participant-role
+632,"632, 648",almost everyday.,participant-role
+624,"624, 625",I,participant-role
+630,"630, 631",-,main
+568,"568, 574",salads,main
+690,"690, 697",looking,main
+652,"652, 659",a month,participant-role
+870,"870, 878",n't seem,main
+808,"808, 855",a month of eating nothing but salads and fruits,participant-role
+1017,"1017, 1021",seem,main
+1022,"1022, 1062",to keep fruits and vegetable salad down.,participant-role
+1163,"1163, 1171",to purge,main
+1149,"1149, 1153",when,participant-role
+1175,"1175, 1178",had,main
+1179,"1179, 1227",to run to the bathroom 5 minutes after the meal.,configuration
+1212,"1212, 1227",after the meal.,participant-role
+1232,"1232, 1238",scared,main
+1421,"1421, 1428",to talk,main
+174,"174, 184",all desire,participant-role
+238,"238, 243",", eat",configuration
+210,"210, 226",to do after work,configuration
+201,"201, 226",I wanted to do after work,configuration
+210,"210, 226",to do after work,participant-role
+254,"254, 257",TV.,participant-role
+234,"234, 238",home,participant-role
+317,"317, 333",to meet friends.,configuration
+621,"621, 648",as I can - almost everyday.,configuration
+690,"690, 705",looking better.,configuration
+879,"879, 902",to handle meat anymore.,participant-role
+1163,"1163, 1172",to purge.,configuration
+1179,"1179, 1227",to run to the bathroom 5 minutes after the meal.,participant-role
+1429,"1429, 1440",to someone.,participant-role
+1421,"1421, 1440",to talk to someone.,configuration

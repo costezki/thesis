@@ -1,0 +1,124 @@
+Name,Man N,Man %,Auto N,Auto %,Precision,Recall,F1
+,
+TOTAL,151,,397,,0.21662468513853905,0.5695364238410596,0.31386861313868614
+,
+CONFIGURATION-TYPE,36,23.841059602649008,26,6.54911838790932,0.5384615384615384,0.3888888888888889,0.45161290322580644
+action,8,22.22222222222222,8,30.76923076923077,0.25,0.25,0.25
+relational,12,33.33333333333333,11,42.30769230769231,0.5454545454545454,0.5,0.5217391304347826
+mental,13,36.11111111111111,6,23.076923076923077,0.8333333333333334,0.38461538461538464,0.5263157894736842
+other,0,0.0,0,0.0,-1,-1,-1.0
+environmental,0,0.0,0,0.0,-1,-1,-1.0
+influential,3,8.333333333333332,1,3.8461538461538463,1.0,0.3333333333333333,0.5
+event-relating,0,0.0,0,0.0,-1,-1,-1.0
+,
+COGNITION-TYPE,7,4.635761589403973,3,0.7556675062972292,0.3333333333333333,0.14285714285714285,0.2
+two-role-cognition,5,71.42857142857143,2,66.66666666666666,0.5,0.2,0.28571428571428575
+three-role-cognition,2,28.57142857142857,1,33.33333333333333,0.0,0.0,-1
+,
+PERCEPTION-TYPE,1,0.6622516556291391,4,1.0075566750629723,0.0,0.0,-1
+two-role-perception,1,100.0,4,100.0,0.0,0.0,-1
+three-role-perception,0,0.0,0,0.0,-1,-1,-1.0
+,
+RELATIONAL-TYPE,12,7.9470198675496695,16,4.030226700251889,0.375,0.5,0.42857142857142855
+attributive,7,58.333333333333336,6,37.5,0.6666666666666666,0.5714285714285714,0.6153846153846153
+possessive,5,41.66666666666667,4,25.0,0.5,0.4,0.4444444444444445
+locational,0,0.0,2,12.5,0.0,-1,0.0
+directional,0,0.0,2,12.5,0.0,-1,0.0
+matching,0,0.0,2,12.5,0.0,-1,0.0
+,
+PARTICIPANT-ROLE-TYPE,59,39.0728476821192,267,67.2544080604534,0.11610486891385768,0.5254237288135594,0.1901840490797546
+agent,13,22.033898305084744,54,20.224719101123593,0.07407407407407407,0.3076923076923077,0.11940298507462686
+affected,6,10.16949152542373,128,47.940074906367045,0.03125,0.6666666666666666,0.05970149253731343
+created,1,1.694915254237288,22,8.239700374531834,0.045454545454545456,1.0,0.08695652173913045
+carrier,10,16.94915254237288,41,15.355805243445692,0.14634146341463414,0.6,0.23529411764705882
+attribute,7,11.864406779661017,6,2.247191011235955,0.6666666666666666,0.5714285714285714,0.6153846153846153
+phenomenon,15,25.423728813559322,28,10.486891385767791,0.32142857142857145,0.6,0.41860465116279066
+emoter,5,8.47457627118644,19,7.116104868913857,0.21052631578947367,0.8,0.3333333333333333
+perceiver,1,1.694915254237288,36,13.48314606741573,0.027777777777777776,1.0,0.05405405405405406
+cognizant,4,6.779661016949152,28,10.486891385767791,0.03571428571428571,0.25,0.0625
+affected-cognizant,5,8.47457627118644,33,12.359550561797752,0.06060606060606061,0.4,0.10526315789473685
+possessed,4,6.779661016949152,18,6.741573033707865,0.16666666666666666,0.75,0.27272727272727276
+location,0,0.0,2,0.7490636704119851,0.0,-1,0.0
+source,0,0.0,15,5.617977528089887,0.0,-1,0.0
+path,0,0.0,11,4.119850187265917,0.0,-1,0.0
+destination,0,0.0,15,5.617977528089887,0.0,-1,0.0
+there,0,0.0,0,0.0,-1,-1,-1.0
+it-empty,0,0.0,0,0.0,-1,-1,-1.0
+affected-carrier,10,16.94915254237288,45,16.853932584269664,0.13333333333333333,0.6,0.2181818181818182
+affected-possessed,5,8.47457627118644,35,13.108614232209737,0.11428571428571428,0.8,0.19999999999999998
+agent-perceiver,12,20.33898305084746,37,13.857677902621724,0.08108108108108109,0.25,0.12244897959183675
+agent-carrier,19,32.20338983050847,37,13.857677902621724,0.1891891891891892,0.3684210526315789,0.25
+agent-cognizant,14,23.728813559322035,30,11.235955056179774,0.1,0.21428571428571427,0.13636363636363638
+affected-destination,1,1.694915254237288,32,11.985018726591761,0.03125,1.0,0.06060606060606061
+affected-emoter,6,10.16949152542373,36,13.48314606741573,0.1388888888888889,0.8333333333333334,0.2380952380952381
+affected-path,1,1.694915254237288,28,10.486891385767791,0.03571428571428571,1.0,0.0689655172413793
+affected-perceiver,1,1.694915254237288,39,14.606741573033707,0.02564102564102564,1.0,0.05
+affected-source,1,1.694915254237288,32,11.985018726591761,0.03125,1.0,0.06060606060606061
+created-phenomenon,15,25.423728813559322,35,13.108614232209737,0.2571428571428571,0.6,0.36
+manner,1,1.694915254237288,0,0.0,-1,0.0,0.0
+matchee,0,0.0,3,1.1235955056179776,0.0,-1,0.0
+range,0,0.0,6,2.247191011235955,0.0,-1,0.0
+,
+Mann <=> Auto Mapping,
+phenomenon,"created-phenomenon, phenomenon"
+process,configuration
+attribute,attribute
+delaying,delaying
+affected-emoter,"affected, affected-emoter, emoter"
+agent,"agent-perceiver, agent-cognizant, agent-carrier, agent"
+created-phenomenon,"created-phenomenon, phenomenon, created"
+manner,manner
+cognizant,"agent-cognizant, affected-cognizant, cognizant"
+attributive,attributive
+affected-path,"affected-path, affected, path"
+matching,matching
+succeeding,succeeding
+mental,mental
+locational,locational
+directional,directional
+affected-perceiver,"affected-perceiver, perceiver, affected"
+destination,"destination, affected-destination"
+causative,causative
+source,"source, affected-source"
+three-role-perception,three-role-perception
+agent-cognizant,"agent-cognizant, cognizant, agent"
+location,location
+affected-cognizant,"affected, cognizant, affected-cognizant"
+relational,relational
+possessive,possessive
+affected-carrier,"affected-carrier, affected, carrier"
+three-role-action,three-role-action
+two-role-cognition,two-role-cognition
+affected-destination,"destination, affected, affected-destination"
+two-role-perception,two-role-perception
+affected,"affected, affected-source, affected-perceiver, affected-emoter, affected-possessed, affected-cognizant, affected-path, affected-carrier, affected-destination"
+three-role-cognition,three-role-cognition
+permissive,permissive
+emotive,emotive
+ceasing,ceasing
+continuing,continuing
+agent-carrier,"carrier, agent-carrier, agent"
+affected-possessed,"possessed, affected, affected-possessed"
+environmental,environmental
+tentative,tentative
+path,"path, affected-path"
+matchee,matchee
+agent-perceiver,"perceiver, agent, agent-perceiver"
+desiderative,desiderative
+main,process
+two-role-action,two-role-action
+affected-source,"source, affected, affected-source"
+created,"created-phenomenon, created"
+influential,influential
+possessed,"possessed, affected-possessed"
+failing,failing
+emoter,"affected-emoter, emoter"
+enabling,enabling
+event-relating,event-relating
+range,range
+carrier,"carrier, affected-carrier, agent-carrier"
+perceiver,"affected-perceiver, perceiver, agent-perceiver"
+action,action
+preventive,preventive
+one-role-action,one-role-action
+starting,starting

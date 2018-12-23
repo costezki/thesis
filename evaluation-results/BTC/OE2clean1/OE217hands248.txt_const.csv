@@ -1,0 +1,268 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.5850622406639004
+,Recall,0.9038461538461539
+,F1,0.7103274559193955
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+2,0.0,"20, 27","20, 27",0,someone,someone,participant-role,participant-role
+3,0.0,"28, 33","28, 33",0,spark,spark,main,main
+3,0.0,"28, 33","28, 33",0,spark,spark,verb,verb
+4,0.0,"34, 41","34, 41",0,a light,a light,participant-role,participant-role
+1,0.0,"16, 19","16, 19",0,Can,Can,verb,verb
+8,0.0,"111, 115","111, 115",0,like,like,main,main
+8,0.0,"111, 115","111, 115",0,like,like,verb,verb
+6,23.0,"66, 87","66, 110",23,My husband of 5 years,My husband of 5 years does not ( never has ),participant-role,participant-role
+7,4.0,"88, 92","88, 96",4,does,does not,verb,verb
+9,1.0,"116, 139","116, 140",1,to hold hands in public,to hold hands in public!,participant-role,participant-role
+15,0.0,"162, 163","162, 163",0,I,I,participant-role,participant-role
+21,0.0,"199, 205","199, 205",0,wonder,wonder,main,main
+21,0.0,"199, 205","199, 205",0,wonder,wonder,verb,verb
+17,3.0,"167, 174","167, 171",3,used to,used,main,main
+17,3.0,"167, 174","167, 171",3,used to,used,verb,verb
+12,0.0,"143, 145","143, 145",0,am,am,verb,verb
+11,0.0,"141, 142","141, 142",0,I,I,participant-role,participant-role
+20,0.0,"197, 198","197, 198",0,I,I,participant-role,participant-role
+16,0.0,"164, 166","164, 166",0,am,am,verb,verb
+25,0.0,"234, 238","234, 238",0,feel,feel,main,main
+25,0.0,"234, 238","234, 238",0,feel,feel,verb,verb
+24,0.0,"225, 226","225, 226",0,I,I,participant-role,participant-role
+28,0.0,"249, 250","249, 250",0,I,I,participant-role,participant-role
+33,0.0,"291, 292","291, 292",0,I,I,participant-role,participant-role
+34,0.0,"293, 295","293, 295",0,do,do,verb,verb
+36,1.0,"304, 325","304, 326",1,this direct rejection,this direct rejection.,participant-role,participant-role
+30,8.94427190999916,"257, 270","253, 262",12,reach out for,n't reach,main,main
+30,8.94427190999916,"257, 270","253, 262",12,reach out for,n't reach,verb,verb
+35,4.0,"299, 303","295, 303",4,want,n't want,main,main
+35,4.0,"299, 303","295, 303",4,want,n't want,verb,verb
+29,0.0,"251, 253","251, 253",0,do,do,verb,verb
+41,0.0,"339, 341","339, 341",0,me,me,participant-role,participant-role
+38,0.0,"327, 329","327, 329",0,He,He,participant-role,participant-role
+45,0.0,"354, 358","354, 358",0,know,know,main,main
+45,0.0,"354, 358","354, 358",0,know,know,verb,verb
+42,5.0990195135927845,"347, 394","342, 395",6,"people know we are together, no need to show it","that people know we are together, no need to show it.",participant-role,participant-role
+44,0.0,"347, 353","347, 353",0,people,people,participant-role,participant-role
+40,0.0,"334, 338","334, 338",0,told,told,main,main
+40,0.0,"334, 338","334, 338",0,told,told,verb,verb
+39,0.0,"330, 333","330, 333",0,has,has,verb,verb
+46,13.0,"359, 374","359, 361",13,we are together,we,participant-role,participant-role
+51,0.0,"401, 403","401, 403",0,is,is,verb,verb
+52,0.0,"404, 406","404, 406",0,he,he,participant-role,participant-role
+54,1.0,"414, 420","414, 421",1,to say,to say?,participant-role,participant-role
+53,0.0,"407, 413","407, 413",0,trying,trying,main,main
+53,0.0,"407, 413","407, 413",0,trying,trying,verb,verb
+55,3.0,"422, 450","422, 453",3,Another thing that upsets me,Another thing that upsets me is,participant-role,participant-role
+60,0.0,"448, 450","448, 450",0,me,me,participant-role,participant-role
+58,0.0,"436, 440","436, 440",0,that,that,participant-role,participant-role
+59,0.0,"441, 447","441, 447",0,upsets,upsets,main,main
+59,0.0,"441, 447","441, 447",0,upsets,upsets,verb,verb
+56,0.0,"451, 453","451, 453",0,is,is,main,main
+56,0.0,"451, 453","451, 453",0,is,is,verb,verb
+68,0.0,"550, 553","550, 553",0,has,has,verb,verb
+75,0.0,"531, 535","531, 535",0,have,have,verb,verb
+48,0.0,"528, 530","528, 530",0,we,we,participant-role,participant-role
+69,0.0,"554, 556","554, 556",0,he,he,participant-role,participant-role
+72,19.0,"566, 584","566, 603",19,a little something,a little something for my birthday or,participant-role,participant-role
+65,4.0,"472, 476","468, 476",4,want,n't want,main,main
+65,4.0,"472, 476","468, 476",4,want,n't want,verb,verb
+63,0.0,"464, 465","464, 465",0,I,I,participant-role,participant-role
+66,0.0,"477, 496","477, 496",0,to sound as a child,to sound as a child,participant-role,participant-role
+70,0.0,"557, 562","557, 562",0,given,given,main,main
+70,0.0,"557, 562","557, 562",0,given,given,verb,verb
+64,0.0,"466, 468","466, 468",0,do,do,verb,verb
+79,0.0,"628, 632","628, 632",0,feel,feel,main,main
+79,0.0,"628, 632","628, 632",0,feel,feel,verb,verb
+87,0.0,"684, 688","684, 688",0,hope,hope,main,main
+87,0.0,"684, 688","684, 688",0,hope,hope,verb,verb
+84,57.14017850864661,"664, 666","633, 714",79,it,so very sad when I think about it and every year I hope that he will surprise me.,participant-role,participant-role
+88,5.0990195135927845,"694, 713","689, 714",6,he will surprise me,that he will surprise me.,participant-role,participant-role
+90,0.0,"694, 696","694, 696",0,he,he,participant-role,participant-role
+91,0.0,"697, 701","697, 701",0,will,will,verb,verb
+86,0.0,"682, 683","682, 683",0,I,I,participant-role,participant-role
+78,0.0,"619, 620","619, 620",0,I,I,participant-role,participant-role
+93,1.0,"711, 713","711, 714",1,me,me.,participant-role,participant-role
+82,0.0,"650, 651","650, 651",0,I,I,participant-role,participant-role
+92,0.0,"702, 710","702, 710",0,surprise,surprise,main,main
+92,0.0,"702, 710","702, 710",0,surprise,surprise,verb,verb
+101,4.0,"771, 773","767, 773",4,do,n't do,main,main
+101,4.0,"771, 773","767, 773",4,do,n't do,verb,verb
+97,5.0990195135927845,"757, 776","752, 777",6,he just won't do it,that he just won't do it.,participant-role,participant-role
+96,0.0,"726, 730","726, 730",0,know,know,main,main
+96,0.0,"726, 730","726, 730",0,know,know,verb,verb
+95,0.0,"719, 720","719, 720",0,I,I,participant-role,participant-role
+100,0.0,"765, 767","765, 767",0,wo,wo,verb,verb
+102,1.0,"774, 776","774, 777",1,it,it.,participant-role,participant-role
+99,0.0,"757, 759","757, 759",0,he,he,participant-role,participant-role
+104,0.0,"778, 779","778, 779",0,I,I,participant-role,participant-role
+114,0.0,"846, 847","846, 847",0,I,I,participant-role,participant-role
+108,0.0,"805, 813","805, 813",0,anything,anything,participant-role,participant-role
+116,1.0,"853, 881","853, 882",1,to hold on to this tradition,to hold on to this tradition.,participant-role,participant-role
+110,2.0,"815, 817","813, 817",2,it,", it",participant-role,participant-role
+105,0.0,"780, 784","780, 784",0,have,have,verb,verb
+112,0.0,"820, 841","820, 841",0,part of my upbringing,part of my upbringing,participant-role,participant-role
+111,1.0,"818, 819","817, 819",1,s,'s,main,main
+111,1.0,"818, 819","817, 819",1,s,'s,verb,verb
+106,4.0,"795, 800","791, 800",4,given,not given,main,main
+106,4.0,"795, 800","791, 800",4,given,not given,verb,verb
+115,0.0,"848, 852","848, 852",0,want,want,main,main
+115,0.0,"848, 852","848, 852",0,want,want,verb,verb
+125,10.0,"939, 951","939, 941",10,it difficult,it,participant-role,participant-role
+129,4.0,"968, 972","964, 972",4,want,n't want,main,main
+129,4.0,"968, 972","964, 972",4,want,n't want,verb,verb
+119,0.0,"885, 889","885, 889",0,have,have,verb,verb
+121,0.0,"896, 926","896, 926",0,to address this issue with him,to address this issue with him,participant-role,participant-role
+130,1.0,"973, 999","973, 1000",1,to sound needy or childish,to sound needy or childish.,participant-role,participant-role
+124,0.0,"934, 938","934, 938",0,find,find,main,main
+124,0.0,"934, 938","934, 938",0,find,find,verb,verb
+118,0.0,"883, 884","883, 884",0,I,I,participant-role,participant-role
+127,0.0,"960, 961","960, 961",0,I,I,participant-role,participant-role
+128,0.0,"962, 964","962, 964",0,do,do,verb,verb
+120,0.0,"890, 895","890, 895",0,tried,tried,main,main
+120,0.0,"890, 895","890, 895",0,tried,tried,verb,verb
+123,0.0,"932, 933","932, 933",0,I,I,participant-role,participant-role
+150,15.0,"1156, 1177","1156, 1162",15,to try and understand,to try,participant-role,participant-role
+133,0.0,"1007, 1010","1007, 1010",0,are,are,main,main
+133,0.0,"1007, 1010","1007, 1010",0,are,are,verb,verb
+140,0.0,"1079, 1090","1079, 1090",0,the sparkle,the sparkle,participant-role,participant-role
+145,0.0,"1119, 1121","1119, 1121",0,do,do,verb,verb
+146,4.0,"1125, 1129","1121, 1129",4,want,n't want,main,main
+146,4.0,"1125, 1129","1121, 1129",4,want,n't want,verb,verb
+153,0.0,"1185, 1189","1185, 1189",0,does,does,main,main
+153,0.0,"1185, 1189","1185, 1189",0,does,does,verb,verb
+142,0.0,"1098, 1103","1098, 1103",0,there,there,participant-role,participant-role
+74,0.0,"1204, 1208","1204, 1208",0,does,does,main,main
+74,0.0,"1204, 1208","1204, 1208",0,does,does,verb,verb
+149,0.0,"1151, 1155","1151, 1155",0,want,want,main,main
+149,0.0,"1151, 1155","1151, 1155",0,want,want,verb,verb
+49,0.0,"1201, 1203","1201, 1203",0,he,he,participant-role,participant-role
+141,4.0,"1091, 1093","1091, 1097",4,is,is not,main,main
+141,4.0,"1091, 1093","1091, 1097",4,is,is not,verb,verb
+154,1.0,"1190, 1208","1190, 1209",1,the things he does,the things he does.,participant-role,participant-role
+136,0.0,"1060, 1061","1060, 1061",0,I,I,participant-role,participant-role
+137,0.0,"1069, 1073","1069, 1073",0,feel,feel,main,main
+137,0.0,"1069, 1073","1069, 1073",0,feel,feel,verb,verb
+152,0.0,"1182, 1184","1182, 1184",0,he,he,participant-role,participant-role
+134,20.0,"1011, 1035","1011, 1055",20,a lot of things going on,a lot of things going on in our relationship,participant-role,participant-role
+138,5.0,"1079, 1111","1074, 1111",5,the sparkle is not there anymore,that the sparkle is not there anymore,participant-role,participant-role
+144,0.0,"1117, 1118","1117, 1118",0,I,I,participant-role,participant-role
+147,69.0,"1130, 1140","1130, 1209",69,to give up,"to give up just yet, want to try and understand why he does the things he does.",participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+12,"143, 145",am,main
+13,"146, 158",ok with that,participant-role
+18,"175, 177",it,participant-role
+22,"206, 209",why,participant-role
+26,"239, 247",rejected,participant-role
+31,"271, 279",his hand,participant-role
+57,"454, 462",presents,participant-role
+76,"536, 549",been together,verb
+76,"536, 549",been together,main
+71,"563, 565",me,participant-role
+80,"633, 644",so very sad,participant-role
+83,"652, 663",think about,verb
+83,"652, 663",think about,main
+107,"801, 804",him,participant-role
+132,"1001, 1006",There,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+88,"88, 96",does not,process
+105,"105, 108",has,main
+105,"105, 108",has,verb
+116,"116, 140",to hold hands in public!,process
+88,"88, 96",does not,main
+116,"116, 123",to hold,main
+116,"116, 123",to hold,verb
+97,"97, 110",( never has ),process
+66,"66, 140",My husband of 5 years does not ( never has ) like to hold hands in public!,process
+146,"146, 148",ok,main
+146,"146, 148",ok,verb
+159,"159, 177",as I am used to it,process
+141,"141, 178","I am ok with that as I am used to it,",process
+179,"179, 210",but now and again I wonder why?,process
+239,"239, 248",rejected.,process
+239,"239, 247",rejected,main
+239,"239, 247",rejected,verb
+211,"211, 238",And sometimes I really feel,process
+249,"249, 326",I don't reach out for his hand anymore as I don't want this direct rejection.,process
+280,"280, 326",anymore as I don't want this direct rejection.,process
+342,"342, 395","that people know we are together, no need to show it.",process
+359,"359, 395","we are together, no need to show it.",process
+384,"384, 395",to show it.,process
+362,"362, 365",are,main
+362,"362, 365",are,verb
+327,"327, 395","He has told me that people know we are together, no need to show it.",process
+392,"392, 395",it.,participant-role
+374,"374, 383",", no need",participant-role
+384,"384, 391",to show,main
+384,"384, 391",to show,verb
+414,"414, 421",to say?,process
+414,"414, 420",to say,main
+414,"414, 420",to say,verb
+396,"396, 421",What is he trying to say?,process
+422,"422, 463",Another thing that upsets me is presents.,process
+436,"436, 453",that upsets me is,process
+448,"448, 453",me is,process
+454,"454, 462",presents,main
+454,"454, 462",presents,verb
+464,"464, 497","I don't want to sound as a child,",process
+516,"516, 540",the 6 years we have been,process
+502,"502, 507",never,main
+502,"502, 507",never,verb
+477,"477, 496",to sound as a child,process
+477,"477, 485",to sound,main
+477,"477, 485",to sound,verb
+541,"541, 603",together has he given me a little something for my birthday or,process
+645,"645, 649",when,participant-role
+689,"689, 714",that he will surprise me.,process
+667,"667, 714",and every year I hope that he will surprise me.,process
+619,"619, 714",I always feel so very sad when I think about it and every year I hope that he will surprise me.,process
+752,"752, 777",that he just won't do it.,process
+715,"715, 777",But I also know deep inside my heart that he just won't do it.,process
+778,"778, 813",I have never not given him anything,process
+842,"842, 882",and I want to hold on to this tradition.,process
+813,"813, 841",", it's part of my upbringing",process
+853,"853, 860",to hold,main
+853,"853, 860",to hold,verb
+853,"853, 882",to hold on to this tradition.,process
+973,"973, 981",to sound,main
+973,"973, 981",to sound,verb
+883,"883, 927","I have tried to address this issue with him,",process
+896,"896, 906",to address,main
+896,"896, 906",to address,verb
+939,"939, 1000",it difficult because I don't want to sound needy or childish.,process
+896,"896, 926",to address this issue with him,process
+973,"973, 1000",to sound needy or childish.,process
+928,"928, 1000",but I find it difficult because I don't want to sound needy or childish.,process
+982,"982, 1000",needy or childish.,participant-role
+907,"907, 917",this issue,participant-role
+939,"939, 1000",it difficult because I don't want to sound needy or childish.,participant-role
+1201,"1201, 1209",he does.,process
+1156,"1156, 1162",to try,process
+1027,"1027, 1032",going,main
+1027,"1027, 1032",going,verb
+1113,"1113, 1209","but I don't want to give up just yet, want to try and understand why he does the things he does.",process
+1163,"1163, 1209",and understand why he does the things he does.,process
+1141,"1141, 1149",just yet,participant-role
+1167,"1167, 1177",understand,main
+1167,"1167, 1177",understand,verb
+1178,"1178, 1209",why he does the things he does.,process
+1130,"1130, 1149",to give up just yet,process
+1027,"1027, 1055",going on in our relationship,process
+1056,"1056, 1111",and I really feel that the sparkle is not there anymore,process
+1130,"1130, 1137",to give,main
+1130,"1130, 1137",to give,verb
+1130,"1130, 1209","to give up just yet, want to try and understand why he does the things he does.",process
+1074,"1074, 1111",that the sparkle is not there anymore,process
+1149,"1149, 1162",", want to try",process
+1156,"1156, 1162",to try,main
+1156,"1156, 1162",to try,verb
+1001,"1001, 1055",There are a lot of things going on in our relationship,process
+1178,"1178, 1181",why,participant-role
+1212,"1212, 1217",Thank,main
+1212,"1212, 1217",Thank,verb
+1218,"1218, 1221",you,participant-role
+1212,"1212, 1231","Thank you, 
+Lydia.",process
+124,"124, 129",hands,participant-role
+359,"359, 395","we are together, no need to show it.",participant-role
+448,"448, 453",me is,participant-role

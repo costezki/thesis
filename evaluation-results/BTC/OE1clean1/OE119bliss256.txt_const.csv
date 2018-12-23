@@ -1,0 +1,262 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.614406779661017
+,Recall,0.90625
+,F1,0.7323232323232324
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+1,0.0,"16, 17","16, 17",0,I,I,participant-role,participant-role
+159,22.561028345356956,"43, 93","38, 71",27,I've been hanging on so well since my brother left,that I've been hanging on so well,participant-role,participant-role
+2,1.0,"18, 19","17, 19",1,m,'m,verb,verb
+6,5.830951894845301,"53, 63","48, 60",8,hanging on,been hanging,main,main
+6,5.830951894845301,"53, 63","48, 60",8,hanging on,been hanging,verb,verb
+3,11.0,"20, 37","31, 37",11,sooo happy to say,to say,main,main
+3,11.0,"20, 37","31, 37",11,sooo happy to say,to say,verb,verb
+4,0.0,"43, 44","43, 44",0,I,I,participant-role,participant-role
+5,5.0990195135927845,"45, 52","44, 47",6,ve been,'ve,verb,verb
+13,0.0,"105, 112","105, 112",0,keeping,keeping,main,main
+13,0.0,"105, 112","105, 112",0,keeping,keeping,verb,verb
+11,0.0,"95, 96","95, 96",0,I,I,participant-role,participant-role
+22,0.0,"227, 234","227, 234",0,weighed,weighed,main,main
+22,0.0,"227, 234","227, 234",0,weighed,weighed,verb,verb
+21,0.0,"225, 226","225, 226",0,I,I,participant-role,participant-role
+23,0.0,"235, 241","235, 241",0,myself,myself,participant-role,participant-role
+26,0.0,"271, 279","271, 279",0,8 pounds,8 pounds,participant-role,participant-role
+27,0.0,"280, 284","280, 284",0,gone,gone,main,main
+27,0.0,"280, 284","280, 284",0,gone,gone,verb,verb
+35,1.0,"366, 370","366, 371",1,loss,loss!,participant-role,participant-role
+31,0.0,"298, 303","298, 303",0,think,think,main,main
+31,0.0,"298, 303","298, 303",0,think,think,verb,verb
+34,0.0,"363, 365","363, 365",0,is,is,main,main
+34,0.0,"363, 365","363, 365",0,is,is,verb,verb
+8,0.0,"316, 318","316, 318",0,is,is,main,main
+8,0.0,"316, 318","316, 318",0,is,is,verb,verb
+7,0.0,"304, 315","304, 315",0,a lot of it,a lot of it,participant-role,participant-role
+33,2.0,"358, 362","356, 362",2,loss,", loss",participant-role,participant-role
+32,0.0,"304, 347","304, 347",0,a lot of it is water weight and muscle loss,a lot of it is water weight and muscle loss,participant-role,participant-role
+25,0.0,"319, 347","319, 347",0,water weight and muscle loss,water weight and muscle loss,participant-role,participant-role
+30,0.0,"296, 297","296, 297",0,I,I,participant-role,participant-role
+39,1.0,"375, 376","374, 376",1,s,'s,main,main
+39,1.0,"375, 376","374, 376",1,s,'s,verb,verb
+138,5.0,"403, 410","398, 410",5,feeling,been feeling,main,main
+138,5.0,"403, 410","398, 410",5,feeling,been feeling,verb,verb
+41,0.0,"393, 394","393, 394",0,I,I,participant-role,participant-role
+137,5.0990195135927845,"395, 402","394, 397",6,ve been,'ve,verb,verb
+139,4.0,"388, 392","384, 392",4,full,how full,participant-role,participant-role
+38,0.0,"372, 374","372, 374",0,It,It,participant-role,participant-role
+40,0.0,"377, 383","377, 383",0,so odd,so odd,participant-role,participant-role
+46,1.0,"439, 499","439, 500",1,how easily restricting is coming back to me this time around,how easily restricting is coming back to me this time around.,participant-role,participant-role
+45,4.0,"428, 438","424, 438",4,understand,n't understand,main,main
+45,4.0,"428, 438","424, 438",4,understand,n't understand,verb,verb
+141,0.0,"450, 461","450, 461",0,restricting,restricting,participant-role,participant-role
+44,0.0,"422, 424","422, 424",0,do,do,verb,verb
+143,5.0,"465, 476","465, 471",5,coming back,coming,main,main
+143,5.0,"465, 476","465, 471",5,coming back,coming,verb,verb
+43,0.0,"420, 421","420, 421",0,I,I,participant-role,participant-role
+142,0.0,"462, 464","462, 464",0,is,is,verb,verb
+48,0.0,"515, 521","515, 521",0,school,school,participant-role,participant-role
+51,3.0,"533, 536","530, 536",3,end,to end,main,main
+51,3.0,"533, 536","530, 536",3,end,to end,verb,verb
+56,0.0,"600, 621","600, 621",0,school-related stress,school-related stress,participant-role,participant-role
+55,27.784887978899608,"563, 569","549, 593",38,around,little stress around ( except about finals ),participant-role,participant-role
+57,0.0,"622, 624","622, 624",0,is,is,main,main
+57,0.0,"622, 624","622, 624",0,is,is,verb,verb
+58,1.0,"625, 646","625, 647",1,my main binge-trigger,my main binge-trigger.,participant-role,participant-role
+66,1.0,"762, 763","761, 763",1,s,'s,main,main
+66,1.0,"762, 763","761, 763",1,s,'s,verb,verb
+61,102.0,"660, 715","660, 817",102,"eating a can of tuna every day is keeping me going, too","eating a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",participant-role,participant-role
+148,6.0,"702, 710","702, 704",6,me going,me,participant-role,participant-role
+59,0.0,"652, 653","652, 653",0,I,I,participant-role,participant-role
+69,0.0,"803, 810","803, 810",0,my body,my body,participant-role,participant-role
+64,0.0,"744, 756","744, 756",0,sooo low-cal,sooo low-cal,participant-role,participant-role
+147,0.0,"694, 701","694, 701",0,keeping,keeping,main,main
+147,0.0,"694, 701","694, 701",0,keeping,keeping,verb,verb
+67,7.0,"771, 789","764, 789",7,completely protein,almost completely protein,participant-role,participant-role
+63,1.0,"742, 743","741, 743",1,s,'s,main,main
+63,1.0,"742, 743","741, 743",1,s,'s,verb,verb
+50,7.0,"660, 690","667, 690",7,eating a can of tuna every day,a can of tuna every day,participant-role,participant-role
+146,0.0,"691, 693","691, 693",0,is,is,verb,verb
+68,0.0,"795, 802","795, 802",0,keeping,keeping,main,main
+68,0.0,"795, 802","795, 802",0,keeping,keeping,verb,verb
+65,0.0,"759, 761","759, 761",0,it,it,participant-role,participant-role
+62,0.0,"739, 741","739, 741",0,it,it,participant-role,participant-role
+70,8.06225774829855,"811, 816","803, 817",9,happy,my body happy.,participant-role,participant-role
+60,0.0,"654, 659","654, 659",0,think,think,main,main
+60,0.0,"654, 659","654, 659",0,think,think,verb,verb
+150,0.0,"832, 833","832, 833",0,I,I,participant-role,participant-role
+151,1.0,"834, 835","833, 835",1,m,'m,verb,verb
+153,8.0,"844, 866","844, 858",8,"enough veggies, though",enough veggies,participant-role,participant-role
+152,0.0,"836, 843","836, 843",0,getting,getting,main,main
+152,0.0,"836, 843","836, 843",0,getting,getting,verb,verb
+72,0.0,"820, 822","820, 822",0,do,do,verb,verb
+73,4.0,"826, 831","822, 831",4,think,n't think,main,main
+73,4.0,"826, 831","822, 831",4,think,n't think,verb,verb
+71,0.0,"818, 819","818, 819",0,I,I,participant-role,participant-role
+74,8.0,"832, 866","832, 858",8,"I'm getting enough veggies, though",I'm getting enough veggies,participant-role,participant-role
+81,0.0,"941, 945","941, 945",0,open,open,participant-role,participant-role
+75,0.0,"868, 869","868, 869",0,I,I,participant-role,participant-role
+79,0.0,"929, 932","929, 932",0,has,has,verb,verb
+77,10.0,"883, 900","883, 910",10,a salad for lunch,a salad for lunch at school,participant-role,participant-role
+76,0.0,"878, 882","878, 882",0,have,have,main,main
+76,0.0,"878, 882","878, 882",0,have,have,verb,verb
+78,0.0,"915, 928","915, 928",0,the salad bar,the salad bar,participant-role,participant-role
+80,4.0,"936, 940","932, 940",4,been,n't been,main,main
+80,4.0,"936, 940","932, 940",4,been,n't been,verb,verb
+128,2.0,"1045, 1050","1043, 1050",2,which,", which",participant-role,participant-role
+87,5.0,"1061, 1068","1056, 1068",5,needing,been needing,main,main
+87,5.0,"1061, 1068","1056, 1068",5,needing,been needing,verb,verb
+83,0.0,"1022, 1025","1022, 1025",0,was,was,main,main
+83,0.0,"1022, 1025","1022, 1025",0,was,was,verb,verb
+84,33.0,"1026, 1043","1026, 1076",33,a good motivation,"a good motivation, which I've been needing lately.",participant-role,participant-role
+82,2.0,"1013, 1021","1011, 1021",2,the loss,", the loss",participant-role,participant-role
+86,5.0990195135927845,"1053, 1060","1052, 1055",6,ve been,'ve,verb,verb
+85,0.0,"1051, 1052","1051, 1052",0,I,I,participant-role,participant-role
+90,4.0,"1081, 1093","1081, 1089",4,shooting for,shooting,main,main
+90,4.0,"1081, 1093","1081, 1089",4,shooting for,shooting,verb,verb
+88,0.0,"1077, 1078","1077, 1078",0,I,I,participant-role,participant-role
+92,0.0,"1124, 1125","1124, 1125",0,I,I,participant-role,participant-role
+89,1.0,"1079, 1080","1078, 1080",1,m,'m,verb,verb
+93,0.0,"1126, 1131","1126, 1131",0,think,think,main,main
+93,0.0,"1126, 1131","1126, 1131",0,think,think,verb,verb
+94,1.0,"1132, 1143","1132, 1144",1,is possible,is possible.,participant-role,participant-role
+98,1.0,"1158, 1261","1158, 1262",1,to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him,to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,participant-role,participant-role
+97,4.0,"1153, 1157","1149, 1157",4,want,n't want,main,main
+97,4.0,"1153, 1157","1149, 1157",4,want,n't want,verb,verb
+99,1.0,"1202, 1204","1201, 1204",1,ve,'ve,verb,verb
+96,0.0,"1147, 1149","1147, 1149",0,do,do,verb,verb
+95,0.0,"1145, 1146","1145, 1146",0,I,I,participant-role,participant-role
+102,35.0,"1210, 1227","1210, 1262",35,another 30 pounds,another 30 pounds since the last time I've seen him.,participant-role,participant-role
+101,0.0,"1205, 1209","1205, 1209",0,lost,lost,main,main
+101,0.0,"1205, 1209","1205, 1209",0,lost,lost,verb,verb
+100,0.0,"1200, 1201","1200, 1201",0,I,I,participant-role,participant-role
+104,0.0,"1271, 1272","1271, 1272",0,I,I,participant-role,participant-role
+106,0.0,"1277, 1286","1277, 1286",0,wondering,wondering,main,main
+106,0.0,"1277, 1286","1277, 1286",0,wondering,wondering,verb,verb
+105,0.0,"1273, 1276","1273, 1276",0,was,was,verb,verb
+156,5.0990195135927845,"1307, 1316","1312, 1317",6,back pain,pain?,participant-role,participant-role
+155,0.0,"1302, 1306","1302, 1306",0,gets,gets,main,main
+155,0.0,"1302, 1306","1302, 1306",0,gets,gets,verb,verb
+103,5.0,"1290, 1301","1290, 1296",5,anyone here,anyone,participant-role,participant-role
+110,4.0,"1330, 1337","1326, 1337",4,stopped,n't stopped,main,main
+110,4.0,"1330, 1337","1326, 1337",4,stopped,n't stopped,verb,verb
+112,0.0,"1370, 1371","1370, 1371",0,I,I,participant-role,participant-role
+157,5.0,"1372, 1380","1372, 1375",5,lay down,lay,main,main
+157,5.0,"1372, 1380","1372, 1375",5,lay down,lay,verb,verb
+111,29.0,"1338, 1352","1338, 1381",29,aching in days,"aching in days, especially when I lay down.",participant-role,participant-role
+109,0.0,"1323, 1326","1323, 1326",0,has,has,verb,verb
+108,0.0,"1318, 1322","1318, 1322",0,Mine,Mine,participant-role,participant-role
+114,0.0,"1395, 1396","1395, 1396",0,I,I,participant-role,participant-role
+116,0.0,"1403, 1413","1403, 1413",0,be lacking,be lacking,main,main
+116,0.0,"1403, 1413","1403, 1413",0,be lacking,be lacking,verb,verb
+115,0.0,"1397, 1402","1397, 1402",0,could,could,verb,verb
+113,0.0,"1382, 1394","1382, 1394",0,Any vitamins,Any vitamins,participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+12,"97, 104",ve been,verb
+14,"113, 115",it,participant-role
+15,"116, 131",at 600 or below,participant-role
+17,"177, 179",it,participant-role
+18,"180, 181",s,verb
+18,"180, 181",s,main
+19,"182, 216",an extra apple damn sugar cravings,participant-role
+144,"477, 482",to me,participant-role
+49,"522, 532",s about to,verb
+52,"541, 546",there,participant-role
+53,"547, 548",s,verb
+53,"547, 548",s,main
+54,"549, 562",little stress,participant-role
+91,"1094, 1097",110,participant-role
+107,"1290, 1316",anyone here gets back pain,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+38,"38, 71",that I've been hanging on so well,process
+17,"17, 19",'m,main
+31,"31, 71",to say that I've been hanging on so well,process
+16,"16, 94",I'm sooo happy to say that I've been hanging on so well since my brother left.,process
+72,"72, 94",since my brother left.,process
+78,"78, 88",my brother,participant-role
+31,"31, 71",to say that I've been hanging on so well,participant-role
+89,"89, 93",left,main
+89,"89, 93",left,verb
+20,"20, 30",sooo happy,participant-role
+95,"95, 220",I've been keeping it at 600 or below every day without even wanting more ( unless it's an extra apple damn sugar cravings ) .,process
+221,"221, 248",And I weighed myself today!,process
+271,"271, 295",8 pounds gone in a week.,process
+296,"296, 352","I think a lot of it is water weight and muscle loss, but",process
+353,"353, 371","hey, loss is loss!",process
+304,"304, 347",a lot of it is water weight and muscle loss,process
+384,"384, 419","how full I've been feeling, though.",process
+384,"384, 419","how full I've been feeling, though.",participant-role
+372,"372, 419","It's so odd how full I've been feeling, though.",process
+439,"439, 500",how easily restricting is coming back to me this time around.,process
+420,"420, 500",I don't understand how easily restricting is coming back to me this time around.,process
+530,"530, 536",to end,process
+596,"596, 647",and school-related stress is my main binge-trigger.,process
+530,"530, 536",to end,participant-role
+660,"660, 817","eating a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",process
+660,"660, 666",eating,main
+660,"660, 666",eating,verb
+725,"725, 758",( even though it's sooo low-cal ),process
+715,"715, 789",", because ( even though it's sooo low-cal ) it's almost completely protein",process
+759,"759, 789",it's almost completely protein,process
+811,"811, 816",happy,main
+811,"811, 816",happy,verb
+702,"702, 789","me going, too, because ( even though it's sooo low-cal ) it's almost completely protein",process
+803,"803, 817",my body happy.,process
+667,"667, 790","a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein,",process
+667,"667, 817","a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",process
+705,"705, 710",going,main
+705,"705, 710",going,verb
+648,"648, 817","And I think eating a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",process
+791,"791, 817",and keeping my body happy.,process
+832,"832, 858",I'm getting enough veggies,process
+818,"818, 867","I don't think I'm getting enough veggies, though.",process
+971,"971, 1000",me resort to an apple instead,process
+971,"971, 1000",me resort to an apple instead,participant-role
+911,"911, 1004",but the salad bar hasn't been open for some reason ( having me resort to an apple instead ) .,process
+962,"962, 1004",( having me resort to an apple instead ) .,process
+868,"868, 910",I usually have a salad for lunch at school,process
+971,"971, 973",me,participant-role
+964,"964, 970",having,main
+964,"964, 970",having,verb
+974,"974, 980",resort,main
+974,"974, 980",resort,verb
+1043,"1043, 1076",", which I've been needing lately.",process
+1007,"1007, 1076","Well, the loss was a good motivation, which I've been needing lately.",process
+1132,"1132, 1144",is possible.,process
+1132,"1132, 1134",is,main
+1132,"1132, 1134",is,verb
+1116,"1116, 1123",", which",participant-role
+1077,"1077, 1144","I'm shooting for 110 by the end of June, which I think is possible.",process
+1116,"1116, 1144",", which I think is possible.",process
+1158,"1158, 1262",to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,process
+1253,"1253, 1257",seen,main
+1253,"1253, 1257",seen,verb
+1158,"1158, 1166",to visit,main
+1158,"1158, 1166",to visit,verb
+1193,"1193, 1262",to say I've lost another 30 pounds since the last time I've seen him.,process
+1200,"1200, 1262",I've lost another 30 pounds since the last time I've seen him.,process
+1182,"1182, 1187",being,main
+1182,"1182, 1187",being,verb
+1182,"1182, 1262",being able to say I've lost another 30 pounds since the last time I've seen him.,process
+1145,"1145, 1262",I don't want to visit my dad without being able to say I've lost another 30 pounds since the last time I've seen him.,process
+1167,"1167, 1173",my dad,participant-role
+1248,"1248, 1262",I've seen him.,process
+1248,"1248, 1249",I,participant-role
+1249,"1249, 1252",'ve,verb
+1258,"1258, 1262",him.,participant-role
+1193,"1193, 1199",to say,main
+1193,"1193, 1199",to say,verb
+1193,"1193, 1262",to say I've lost another 30 pounds since the last time I've seen him.,participant-role
+1200,"1200, 1262",I've lost another 30 pounds since the last time I've seen him.,participant-role
+1188,"1188, 1192",able,participant-role
+1287,"1287, 1317",if anyone here gets back pain?,process
+1271,"1271, 1317",I was wondering if anyone here gets back pain?,process
+1352,"1352, 1381",", especially when I lay down.",process
+1352,"1352, 1369",", especially when",participant-role
+1338,"1338, 1344",aching,main
+1338,"1338, 1344",aching,verb
+1318,"1318, 1381","Mine hasn't stopped aching in days, especially when I lay down.",process
+1338,"1338, 1381","aching in days, especially when I lay down.",process
+667,"667, 817","a can of tuna every day is keeping me going, too, because ( even though it's sooo low-cal ) it's almost completely protein, and keeping my body happy.",participant-role
+1135,"1135, 1144",possible.,participant-role

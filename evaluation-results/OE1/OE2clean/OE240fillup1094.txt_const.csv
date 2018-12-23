@@ -1,0 +1,796 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.6929238985313751
+,Recall,0.9385171790235082
+,F1,0.7972350230414746
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+2,0.0,"23, 26","23, 26",0,you,you,participant-role,participant-role
+4,1.0,"19, 41","19, 42",1,Are you ready for this,Are you ready for this?,configuration,configuration
+5,0.0,"45, 46","45, 46",0,I,I,participant-role,participant-role
+8,1.0,"45, 70","45, 71",1,I am emotionally confused,I am emotionally confused.,configuration,configuration
+11,8.0,"79, 83","79, 91",8,been,been married,main,main
+21,5.0,"173, 182","173, 177",5,gets home,gets,main,main
+17,0.0,"126, 129","126, 129",0,who,who,participant-role,participant-role
+13,0.0,"72, 104","72, 104",0,I have been married for 16 years,I have been married for 16 years,configuration,configuration
+20,0.0,"169, 172","169, 172",0,she,she,participant-role,participant-role
+18,0.0,"130, 136","130, 136",0,drinks,drinks,main,main
+14,5.0,"109, 118","109, 113",5,live with,live,main,main
+9,0.0,"72, 73","72, 73",0,I,I,participant-role,participant-role
+19,21.0,"126, 162","126, 183",21,who drinks every day and every night,who drinks every day and every night after she gets home.,configuration,configuration
+24,1.0,"184, 225","184, 226",1,Usually 2 beers and 2 big glasses of wine,Usually 2 beers and 2 big glasses of wine.,configuration,configuration
+23,1.0,"192, 225","192, 226",1,2 beers and 2 big glasses of wine,2 beers and 2 big glasses of wine.,participant-role,participant-role
+550,5.0990195135927845,"341, 364","336, 365",6,she has no real problem,that she has no real problem.,configuration,configuration
+33,5.0990195135927845,"285, 364","280, 365",6,she gravitates to others in her circle for support that she has no real problem,that she gravitates to others in her circle for support that she has no real problem.,participant-role,participant-role
+30,0.0,"227, 266","227, 266",0,I have confronted her with the drinking,I have confronted her with the drinking,configuration,configuration
+40,1.0,"349, 364","349, 365",1,no real problem,no real problem.,participant-role,participant-role
+29,0.0,"249, 266","249, 266",0,with the drinking,with the drinking,participant-role,participant-role
+31,0.0,"271, 273","271, 273",0,it,it,participant-role,participant-role
+32,0.0,"274, 279","274, 279",0,seems,seems,main,main
+39,0.0,"345, 348","345, 348",0,has,has,main,main
+35,0.0,"285, 288","285, 288",0,she,she,participant-role,participant-role
+28,0.0,"245, 248","245, 248",0,her,her,participant-role,participant-role
+36,3.0,"289, 302","289, 299",3,gravitates to,gravitates,main,main
+38,0.0,"341, 344","341, 344",0,she,she,participant-role,participant-role
+27,0.0,"234, 244","234, 244",0,confronted,confronted,main,main
+34,4.123105625617661,"271, 364","267, 365",5,it seems that she gravitates to others in her circle for support that she has no real problem,and it seems that she gravitates to others in her circle for support that she has no real problem.,configuration,configuration
+25,0.0,"227, 228","227, 228",0,I,I,participant-role,participant-role
+37,12.36931687685298,"303, 323","300, 335",15,others in her circle,to others in her circle for support,participant-role,participant-role
+41,0.0,"366, 369","366, 369",0,She,She,participant-role,participant-role
+46,1.0,"378, 379","377, 379",1,s,'s,main,main
+44,1.0,"366, 395","366, 396",1,She says it's only my problem,She says it's only my problem.,configuration,configuration
+47,1.0,"385, 395","385, 396",1,my problem,my problem.,participant-role,participant-role
+45,0.0,"375, 377","375, 377",0,it,it,participant-role,participant-role
+48,1.0,"375, 395","375, 396",1,it's only my problem,it's only my problem.,configuration,configuration
+42,0.0,"370, 374","370, 374",0,says,says,main,main
+43,1.0,"375, 395","375, 396",1,it's only my problem,it's only my problem.,participant-role,participant-role
+57,12.041594578792296,"418, 462","406, 463",13,they advised me not to react to the drinking,Al-Anon and they advised me not to react to the drinking.,configuration,configuration
+49,0.0,"397, 398","397, 398",0,I,I,participant-role,participant-role
+55,0.0,"431, 433","431, 433",0,me,me,participant-role,participant-role
+56,3.1622776601683795,"434, 462","431, 463",4,not to react to the drinking,me not to react to the drinking.,participant-role,participant-role
+54,0.0,"423, 430","423, 430",0,advised,advised,main,main
+51,9.0,"406, 413","406, 422",9,Al-Anon,Al-Anon and they,participant-role,participant-role
+50,0.0,"399, 405","399, 405",0,called,called,main,main
+52,50.0,"397, 413","397, 463",50,I called Al-Anon,I called Al-Anon and they advised me not to react to the drinking.,configuration,configuration
+59,5.0,"466, 475","466, 470",5,feel like,feel,main,main
+63,0.0,"480, 486","480, 486",0,drinks,drinks,main,main
+58,0.0,"464, 465","464, 465",0,I,I,participant-role,participant-role
+66,0.0,"503, 506","503, 506",0,she,she,participant-role,participant-role
+62,0.0,"476, 479","476, 479",0,she,she,participant-role,participant-role
+61,1.0,"464, 551","464, 552",1,I feel like she drinks so much because she has lost interest in me and our relationship,I feel like she drinks so much because she has lost interest in me and our relationship?,configuration,configuration
+69,3.1622776601683795,"528, 551","525, 552",4,me and our relationship,in me and our relationship?,participant-role,participant-role
+60,48.25971404805462,"476, 551","516, 524",67,she drinks so much because she has lost interest in me and our relationship,interest,participant-role,participant-role
+71,0.0,"561, 562","561, 562",0,I,I,participant-role,participant-role
+73,4.0,"572, 575","568, 575",4,her,for her,participant-role,participant-role
+75,0.0,"580, 584","580, 584",0,want,want,main,main
+74,8.0,"561, 575","553, 575",8,I care for her,Because I care for her,configuration,configuration
+77,27.0,"580, 641","553, 641",27,want her to be more loving to me and cut down on the drinking,Because I care for her and want her to be more loving to me and cut down on the drinking,configuration,configuration
+72,4.0,"563, 571","563, 567",4,care for,care,main,main
+76,29.0,"585, 641","585, 612",29,her to be more loving to me and cut down on the drinking,her to be more loving to me,participant-role,participant-role
+81,0.0,"676, 681","676, 681",0,to me,to me,participant-role,participant-role
+80,0.0,"653, 675","653, 675",0,cold and often distant,cold and often distant,participant-role,participant-role
+78,2.0,"643, 646","641, 646",2,she,", she",participant-role,participant-role
+79,0.0,"647, 652","647, 652",0,seems,seems,main,main
+82,90.00555538409837,"643, 688","553, 689",91,she seems cold and often distant to me lately,"Because I care for her and want her to be more loving to me and cut down on the drinking, she seems cold and often distant to me lately.",configuration,configuration
+87,20.0,"690, 735","690, 715",20,"On Saturdays, she asks me what I have planned","On Saturdays, she asks me",configuration,configuration
+89,4.0,"748, 751","744, 751",4,ask,n't ask,main,main
+100,0.0,"766, 768","766, 768",0,do,do,main,main
+95,0.0,"728, 735","728, 735",0,planned,planned,main,main
+85,0.0,"713, 715","713, 715",0,me,me,participant-role,participant-role
+92,0.0,"716, 720","716, 720",0,what,what,participant-role,participant-role
+98,0.0,"757, 759","757, 759",0,we,we,participant-role,participant-role
+84,0.0,"708, 712","708, 712",0,asks,asks,main,main
+97,0.0,"752, 756","752, 756",0,what,what,participant-role,participant-role
+90,1.0,"752, 777","752, 778",1,what we could do together,what we could do together.,participant-role,participant-role
+101,1.0,"752, 777","752, 778",1,what we could do together,what we could do together.,configuration,configuration
+83,2.0,"704, 707","702, 707",2,she,", she",participant-role,participant-role
+91,4.123105625617661,"740, 777","736, 778",5,doesn't ask what we could do together,and doesn't ask what we could do together.,configuration,configuration
+93,0.0,"721, 722","721, 722",0,I,I,participant-role,participant-role
+96,0.0,"716, 735","716, 735",0,what I have planned,what I have planned,configuration,configuration
+106,0.0,"807, 811","807, 811",0,goes,goes,main,main
+108,18.439088914585774,"807, 840","803, 858",22,"goes to get a tan, her nails done","and goes to get a tan, her nails done, maybe go to work",configuration,configuration
+111,11.045361017187261,"848, 894","859, 895",12,go to work for a few hours and then to the gym,for a few hours and then to the gym.,configuration,configuration
+107,7.0,"812, 840","819, 840",7,"to get a tan, her nails done","a tan, her nails done",participant-role,participant-role
+110,36.0,"851, 894","851, 858",36,to work for a few hours and then to the gym,to work,participant-role,participant-role
+103,0.0,"783, 788","783, 788",0,makes,makes,main,main
+104,0.0,"789, 802","789, 802",0,her own plans,her own plans,participant-role,participant-role
+102,0.0,"779, 782","779, 782",0,She,She,participant-role,participant-role
+109,0.0,"848, 850","848, 850",0,go,go,main,main
+116,0.0,"951, 953","951, 953",0,me,me,participant-role,participant-role
+552,0.0,"1015, 1018","1015, 1018",0,she,she,participant-role,participant-role
+119,22.847319317591726,"944, 970","935, 991",30,greets me with... hi honey,"and then greets me with... hi honey, and needless to say",configuration,configuration
+114,15.132745950421556,"906, 934","904, 919",17,she gets home about 4: 30 pm,", she gets home",configuration,configuration
+123,5.0990195135927845,"1015, 1037","1010, 1038",6,she ditched me all day,that she ditched me all day.,participant-role,participant-role
+555,5.0990195135927845,"1015, 1037","1010, 1038",6,she ditched me all day,that she ditched me all day.,configuration,configuration
+554,0.0,"1027, 1029","1027, 1029",0,me,me,participant-role,participant-role
+124,7.0710678118654755,"998, 1037","991, 1038",8,I am pissed that she ditched me all day,", that I am pissed that she ditched me all day.",configuration,configuration
+118,22.47220505424423,"962, 970","954, 991",29,hi honey,"with... hi honey, and needless to say",participant-role,participant-role
+115,0.0,"944, 950","944, 950",0,greets,greets,main,main
+113,5.0,"910, 919","910, 914",5,gets home,gets,main,main
+122,0.0,"1003, 1009","1003, 1009",0,pissed,pissed,main,main
+112,2.0,"906, 909","904, 909",2,she,", she",participant-role,participant-role
+120,0.0,"998, 999","998, 999",0,I,I,participant-role,participant-role
+553,0.0,"1019, 1026","1019, 1026",0,ditched,ditched,main,main
+126,0.0,"1044, 1046","1044, 1046",0,is,is,main,main
+125,0.0,"1039, 1043","1039, 1043",0,This,This,participant-role,participant-role
+127,1.0,"1047, 1068","1047, 1069",1,a frequent occurrence,a frequent occurrence.,participant-role,participant-role
+128,1.0,"1039, 1068","1039, 1069",1,This is a frequent occurrence,This is a frequent occurrence.,configuration,configuration
+563,3.1622776601683795,"1158, 1202","1155, 1203",4,do other things without me from time to time,to do other things without me from time to time.,participant-role,participant-role
+132,9.0,"1070, 1095","1079, 1095",9,She says that then I pout,that then I pout,configuration,configuration
+518,25.019992006393608,"1149, 1202","1124, 1203",26,wants to do other things without me from time to time,that she has friends and wants to do other things without me from time to time.,participant-role,participant-role
+136,0.0,"1091, 1095","1091, 1095",0,pout,pout,main,main
+134,0.0,"1133, 1136","1133, 1136",0,has,has,main,main
+135,0.0,"1089, 1090","1089, 1090",0,I,I,participant-role,participant-role
+133,0.0,"1129, 1132","1129, 1132",0,she,she,participant-role,participant-role
+138,0.0,"1105, 1106","1105, 1106",0,I,I,participant-role,participant-role
+561,4.123105625617661,"1149, 1202","1145, 1203",5,wants to do other things without me from time to time,and wants to do other things without me from time to time.,configuration,configuration
+140,4.0,"1118, 1123","1114, 1123",4,stand,n't stand,main,main
+516,0.0,"1137, 1144","1137, 1144",0,friends,friends,participant-role,participant-role
+517,5.0,"1129, 1144","1124, 1144",5,she has friends,that she has friends,configuration,configuration
+141,77.33692520394123,"1129, 1144","1079, 1203",109,she has friends,that then I pout and that I just can't stand that she has friends and wants to do other things without me from time to time.,participant-role,participant-role
+130,0.0,"1074, 1078","1074, 1078",0,says,says,main,main
+562,3.0,"1149, 1157","1149, 1154",3,wants to,wants,main,main
+129,0.0,"1070, 1073","1070, 1073",0,She,She,participant-role,participant-role
+158,10.04987562112089,"1318, 1341","1328, 1342",11,something to talk about,to talk about.,participant-role,participant-role
+157,0.0,"1313, 1317","1313, 1317",0,have,have,main,main
+145,1.0,"1213, 1341","1213, 1342",1,we need to be more like her parents and do their own separate things and then get back together and have something to talk about,we need to be more like her parents and do their own separate things and then get back together and have something to talk about.,participant-role,participant-role
+159,4.123105625617661,"1313, 1341","1309, 1342",5,have something to talk about,and have something to talk about.,configuration,configuration
+153,0.0,"1256, 1281","1256, 1281",0,their own separate things,their own separate things,participant-role,participant-role
+143,0.0,"1204, 1207","1204, 1207",0,She,She,participant-role,participant-role
+149,3.0,"1224, 1226","1221, 1226",3,be,to be,main,main
+146,1.0,"1204, 1341","1204, 1342",1,She says we need to be more like her parents and do their own separate things and then get back together and have something to talk about,She says we need to be more like her parents and do their own separate things and then get back together and have something to talk about.,configuration,configuration
+150,5.0,"1227, 1248","1232, 1248",5,more like her parents,like her parents,participant-role,participant-role
+144,0.0,"1208, 1212","1208, 1212",0,says,says,main,main
+147,0.0,"1213, 1215","1213, 1215",0,we,we,participant-role,participant-role
+163,0.0,"1343, 1394","1343, 1394",0,Her father calls her to check in with her every day,Her father calls her to check in with her every day,configuration,configuration
+161,0.0,"1354, 1359","1354, 1359",0,calls,calls,main,main
+160,0.0,"1343, 1353","1343, 1353",0,Her father,Her father,participant-role,participant-role
+165,0.0,"1403, 1405","1403, 1405",0,is,is,main,main
+166,1.0,"1406, 1408","1406, 1409",1,39,39!,participant-role,participant-role
+162,0.0,"1360, 1363","1360, 1363",0,her,her,participant-role,participant-role
+164,0.0,"1399, 1402","1399, 1402",0,she,she,participant-role,participant-role
+167,4.123105625617661,"1399, 1408","1395, 1409",5,she is 39,and she is 39!,configuration,configuration
+179,4.123105625617661,"1478, 1505","1474, 1506",5,we saw each other every day,and we saw each other every day.,configuration,configuration
+175,18.0,"1429, 1473","1447, 1473",18,she literally had to be with me all the time,to be with me all the time,configuration,configuration
+174,0.0,"1453, 1460","1453, 1460",0,with me,with me,participant-role,participant-role
+169,0.0,"1424, 1427","1424, 1427",0,met,met,main,main
+170,5.0,"1415, 1427","1410, 1427",5,we first met,When we first met,configuration,configuration
+171,2.0,"1429, 1432","1427, 1432",2,she,", she",participant-role,participant-role
+177,0.0,"1481, 1484","1481, 1484",0,saw,saw,main,main
+176,0.0,"1478, 1480","1478, 1480",0,we,we,participant-role,participant-role
+173,3.0,"1450, 1452","1447, 1452",3,be,to be,main,main
+178,0.0,"1485, 1495","1485, 1495",0,each other,each other,participant-role,participant-role
+168,0.0,"1415, 1417","1415, 1417",0,we,we,participant-role,participant-role
+193,13.0,"1578, 1615","1578, 1602",13,doing everything for her all the time,doing everything for her,participant-role,participant-role
+196,0.0,"1637, 1660","1637, 1660",0,answering my cell phone,answering my cell phone,participant-role,participant-role
+197,5.0,"1632, 1660","1637, 1660",5,quit answering my cell phone,answering my cell phone,configuration,configuration
+195,0.0,"1632, 1636","1632, 1636",0,quit,quit,main,main
+194,4.123105625617661,"1573, 1615","1569, 1616",5,stop doing everything for her all the time,"and stop doing everything for her all the time,",configuration,configuration
+185,0.0,"1670, 1675","1670, 1675",0,calls,calls,main,main
+187,0.0,"1527, 1528","1527, 1528",0,I,I,participant-role,participant-role
+182,50.24937810560445,"1527, 1660","1522, 1710",55,"I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone","that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",participant-role,participant-role
+184,0.0,"1666, 1669","1666, 1669",0,she,she,participant-role,participant-role
+181,0.0,"1518, 1521","1518, 1521",0,say,say,main,main
+192,0.0,"1573, 1577","1573, 1577",0,stop,stop,main,main
+191,7.0,"1527, 1568","1534, 1568",7,I need to quit calling her during the day,to quit calling her during the day,configuration,configuration
+186,5.0990195135927845,"1666, 1709","1661, 1710",6,she calls to check on me throughout the day,when she calls to check on me throughout the day.,configuration,configuration
+190,0.0,"1542, 1568","1542, 1568",0,calling her during the day,calling her during the day,participant-role,participant-role
+183,50.0,"1507, 1660","1507, 1710",50,"My friends say that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone","My friends say that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",configuration,configuration
+189,3.0,"1537, 1541","1534, 1541",3,quit,to quit,main,main
+180,0.0,"1507, 1517","1507, 1517",0,My friends,My friends,participant-role,participant-role
+201,1.0,"1711, 1772","1711, 1773",1,I literally quit dialling her at work about 2 or 3 months ago,I literally quit dialling her at work about 2 or 3 months ago.,configuration,configuration
+199,0.0,"1723, 1727","1723, 1727",0,quit,quit,main,main
+200,0.0,"1728, 1748","1728, 1748",0,dialling her at work,dialling her at work,participant-role,participant-role
+198,0.0,"1711, 1712","1711, 1712",0,I,I,participant-role,participant-role
+209,6.0,"1806, 1809","1800, 1809",6,her,about her,participant-role,participant-role
+210,1.0,"1787, 1817","1787, 1818",1,I don't care about her anymore,I don't care about her anymore.,configuration,configuration
+203,0.0,"1782, 1786","1782, 1786",0,says,says,main,main
+206,0.0,"1787, 1788","1787, 1788",0,I,I,participant-role,participant-role
+204,1.0,"1787, 1817","1787, 1818",1,I don't care about her anymore,I don't care about her anymore.,participant-role,participant-role
+208,7.211102550927978,"1795, 1805","1791, 1799",9,care about,n't care,main,main
+202,0.0,"1778, 1781","1778, 1781",0,she,she,participant-role,participant-role
+205,4.123105625617661,"1778, 1817","1774, 1818",5,she says I don't care about her anymore,Now she says I don't care about her anymore.,configuration,configuration
+211,2.0,"1831, 1832","1829, 1832",2,I,", I",participant-role,participant-role
+217,10.770329614269007,"1867, 1901","1863, 1891",14,she really has a problem with this,and she really has a problem,configuration,configuration
+214,0.0,"1867, 1870","1867, 1870",0,she,she,participant-role,participant-role
+216,0.0,"1882, 1891","1882, 1891",0,a problem,a problem,participant-role,participant-role
+215,0.0,"1878, 1881","1878, 1881",0,has,has,main,main
+219,1.0,"1912, 1945","1912, 1946",1,me to go do stuff with my friends,me to go do stuff with my friends.,participant-role,participant-role
+213,12.0,"1831, 1862","1819, 1862",12,I work at home 90 % of the time,"By the way, I work at home 90 % of the time",configuration,configuration
+220,4.123105625617661,"1906, 1945","1902, 1946",5,wants me to go do stuff with my friends,and wants me to go do stuff with my friends.,configuration,configuration
+218,0.0,"1906, 1911","1906, 1911",0,wants,wants,main,main
+212,0.0,"1833, 1837","1833, 1837",0,work,work,main,main
+566,6.082762530298219,"2067, 2079","2061, 2080",7,play all day,TV or play all day.,participant-role,participant-role
+221,0.0,"1947, 1948","1947, 1948",0,I,I,participant-role,participant-role
+230,18.027756377319946,"2038, 2063","2044, 2080",23,I sit at home watching TV,at home watching TV or play all day.,participant-role,participant-role
+222,0.0,"1949, 1951","1949, 1951",0,am,am,main,main
+227,37.21558813185679,"1984, 2019","1947, 2023",41,make almost 200000 dollars per year,"I am a top producer with my firm and make almost 200000 dollars per year, so",configuration,configuration
+228,0.0,"2024, 2026","2024, 2026",0,it,it,participant-role,participant-role
+229,4.123105625617661,"2027, 2028","2026, 2032",5,s,'s not,main,main
+231,17.0,"2024, 2063","2024, 2080",17,it's not like I sit at home watching TV,it's not like I sit at home watching TV or play all day.,configuration,configuration
+565,15.033296378372908,"2067, 2079","2052, 2080",16,play all day,watching TV or play all day.,configuration,configuration
+226,0.0,"1989, 2019","1989, 2019",0,almost 200000 dollars per year,almost 200000 dollars per year,participant-role,participant-role
+223,57.0,"1952, 1966","1952, 2023",57,a top producer,"a top producer with my firm and make almost 200000 dollars per year, so",participant-role,participant-role
+238,0.0,"2118, 2125","2118, 2125",0,receive,receive,main,main
+236,7.0,"2094, 2114","2087, 2114",7,I do leave the house,", when I do leave the house",configuration,configuration
+234,0.0,"2099, 2104","2099, 2104",0,leave,leave,main,main
+235,0.0,"2105, 2114","2105, 2114",0,the house,the house,participant-role,participant-role
+239,10.0,"2126, 2143","2126, 2153",10,a series of calls,a series of calls from her.,participant-role,participant-role
+240,35.014282800023196,"2116, 2152","2081, 2153",36,I receive a series of calls from her,"Anyway, when I do leave the house, I receive a series of calls from her.",configuration,configuration
+237,2.0,"2116, 2117","2114, 2117",2,I,", I",participant-role,participant-role
+232,0.0,"2094, 2095","2094, 2095",0,I,I,participant-role,participant-role
+243,4.0,"2162, 2172","2162, 2168",4,having fun,having,main,main
+244,29.0,"2154, 2172","2154, 2201",29,Are you having fun,"Are you having fun, blah, blah... 3 or 4 calls.",configuration,configuration
+242,0.0,"2158, 2161","2158, 2161",0,you,you,participant-role,participant-role
+265,4.123105625617661,"2316, 2331","2312, 2332",5,what am I doing,and what am I doing.,configuration,configuration
+256,34.20526275297414,"2260, 2277","2251, 2310",42,she is calling me,and then she is calling me to say that the kids said I left,configuration,configuration
+248,0.0,"2224, 2241","2224, 2241",0,the teen age kids,the teen age kids,participant-role,participant-role
+264,0.0,"2326, 2331","2326, 2331",0,doing,doing,main,main
+246,0.0,"2214, 2219","2214, 2219",0,leave,leave,main,main
+260,5.0,"2290, 2310","2285, 2310",5,the kids said I left,that the kids said I left,configuration,configuration
+249,0.0,"2242, 2246","2242, 2246",0,call,call,main,main
+251,4.0,"2224, 2250","2220, 2250",4,the teen age kids call her,and the teen age kids call her,configuration,configuration
+569,0.0,"2304, 2310","2304, 2310",0,I left,I left,configuration,configuration
+247,0.0,"2202, 2219","2202, 2219",0,Sometimes I leave,Sometimes I leave,configuration,configuration
+259,0.0,"2304, 2310","2304, 2310",0,I left,I left,participant-role,participant-role
+252,0.0,"2260, 2263","2260, 2263",0,she,she,participant-role,participant-role
+568,0.0,"2306, 2310","2306, 2310",0,left,left,main,main
+567,0.0,"2304, 2305","2304, 2305",0,I,I,participant-role,participant-role
+254,0.0,"2267, 2274","2267, 2274",0,calling,calling,main,main
+245,0.0,"2212, 2213","2212, 2213",0,I,I,participant-role,participant-role
+258,0.0,"2299, 2303","2299, 2303",0,said,said,main,main
+261,0.0,"2316, 2320","2316, 2320",0,what,what,participant-role,participant-role
+263,0.0,"2324, 2325","2324, 2325",0,I,I,participant-role,participant-role
+255,0.0,"2275, 2277","2275, 2277",0,me,me,participant-role,participant-role
+250,0.0,"2247, 2250","2247, 2250",0,her,her,participant-role,participant-role
+257,0.0,"2290, 2298","2290, 2298",0,the kids,the kids,participant-role,participant-role
+268,0.0,"2341, 2342","2341, 2342",0,I,I,participant-role,participant-role
+269,0.0,"2343, 2345","2343, 2345",0,do,do,main,main
+266,0.0,"2333, 2337","2333, 2337",0,What,What,participant-role,participant-role
+270,1.0,"2333, 2375","2333, 2376",1,What do I do to turn this situation around,What do I do to turn this situation around?,configuration,configuration
+272,1.0,"2385, 2386","2384, 2386",1,m,'m,main,main
+274,1.0,"2383, 2415","2383, 2416",1,I'm a bit frustrated with myself,I'm a bit frustrated with myself.,configuration,configuration
+273,6.0,"2387, 2403","2393, 2403",6,a bit frustrated,frustrated,participant-role,participant-role
+271,0.0,"2383, 2384","2383, 2384",0,I,I,participant-role,participant-role
+275,0.0,"2421, 2439","2421, 2439",0,My boyfriend and I,My boyfriend and I,participant-role,participant-role
+278,24.0,"2421, 2474","2421, 2498",24,My boyfriend and I are involved with a married couple,"My boyfriend and I are involved with a married couple, both of whom I ( we! )",configuration,configuration
+282,20.09975124224178,"2476, 2510","2474, 2490",22,both of whom I ( we! ) really love,", both of whom I",configuration,configuration
+279,8.0,"2476, 2488","2484, 2488",8,both of whom,whom,participant-role,participant-role
+277,18.35755975068582,"2444, 2474","2453, 2490",25,involved with a married couple,"with a married couple, both of whom I",participant-role,participant-role
+284,5.0,"2521, 2539","2521, 2534",5,spending time with,spending time,participant-role,participant-role
+283,0.0,"2515, 2520","2515, 2520",0,enjoy,enjoy,main,main
+281,0.0,"2506, 2510","2506, 2510",0,love,love,main,main
+285,6.082762530298219,"2515, 2539","2521, 2540",7,enjoy spending time with,spending time with.,configuration,configuration
+294,7.0,"2585, 2604","2592, 2604",7,I have to be honest,to be honest,configuration,configuration
+287,0.0,"2546, 2548","2546, 2548",0,is,is,main,main
+292,3.0,"2595, 2597","2592, 2597",3,be,to be,main,main
+301,1.0,"2613, 2644","2613, 2645",1,I am tentative about it at best,I am tentative about it at best.,configuration,configuration
+299,0.0,"2615, 2617","2615, 2617",0,am,am,main,main
+295,0.0,"2609, 2612","2609, 2612",0,say,say,main,main
+286,0.0,"2541, 2545","2541, 2545",0,This,This,participant-role,participant-role
+298,0.0,"2613, 2614","2613, 2614",0,I,I,participant-role,participant-role
+293,0.0,"2598, 2604","2598, 2604",0,honest,honest,participant-role,participant-role
+290,0.0,"2585, 2586","2585, 2586",0,I,I,participant-role,participant-role
+300,9.0,"2618, 2636","2618, 2627",9,tentative about it,tentative,participant-role,participant-role
+296,1.0,"2613, 2644","2613, 2645",1,I am tentative about it at best,I am tentative about it at best.,participant-role,participant-role
+289,65.0,"2541, 2580","2541, 2645",65,This is my first venture into polyamory,This is my first venture into polyamory and I have to be honest and say I am tentative about it at best.,configuration,configuration
+297,4.123105625617661,"2609, 2644","2605, 2645",5,say I am tentative about it at best,and say I am tentative about it at best.,configuration,configuration
+305,23.0,"2674, 2734","2674, 2757",23,"a bit of an up and down ( and yes, on and off ) relationship","a bit of an up and down ( and yes, on and off ) relationship for the past two years",participant-role,participant-role
+306,0.0,"2646, 2757","2646, 2757",0,"My boyfriend and I have had a bit of an up and down ( and yes, on and off ) relationship for the past two years","My boyfriend and I have had a bit of an up and down ( and yes, on and off ) relationship for the past two years",configuration,configuration
+307,2.0,"2759, 2789","2757, 2789",2,our main distancing difference,; our main distancing difference,participant-role,participant-role
+308,0.0,"2790, 2795","2790, 2795",0,being,being,main,main
+302,0.0,"2646, 2664","2646, 2664",0,My boyfriend and I,My boyfriend and I,participant-role,participant-role
+310,2.23606797749979,"2759, 2839","2757, 2840",3,our main distancing difference being whether or not to have an open relationship,; our main distancing difference being whether or not to have an open relationship.,configuration,configuration
+309,23.021728866442675,"2796, 2839","2819, 2840",24,whether or not to have an open relationship,an open relationship.,participant-role,participant-role
+304,0.0,"2670, 2673","2670, 2673",0,had,had,main,main
+312,0.0,"2853, 2855","2853, 2855",0,is,is,main,main
+317,22.0,"2935, 2951","2935, 2973",22,a bit unsettling,a bit unsettling at times emotionally.,participant-role,participant-role
+315,2.0,"2911, 2913","2909, 2913",2,it,", it",participant-role,participant-role
+318,35.014282800023196,"2876, 2972","2841, 2973",36,"for me, because of a chaotic past, it is ( unfortunately ) a bit unsettling at times emotionally","This desire is very strong in him; for me, because of a chaotic past, it is ( unfortunately ) a bit unsettling at times emotionally.",configuration,configuration
+311,0.0,"2841, 2852","2841, 2852",0,This desire,This desire,participant-role,participant-role
+328,0.0,"3077, 3083","3077, 3083",0,become,become,main,main
+324,0.0,"3037, 3038","3037, 3038",0,I,I,participant-role,participant-role
+325,0.0,"3039, 3043","3039, 3043",0,have,have,main,main
+330,4.123105625617661,"3077, 3096","3073, 3097",5,become more logical,and become more logical.,configuration,configuration
+327,12.0,"3037, 3072","3049, 3072",12,I have time to think through things,to think through things,configuration,configuration
+329,1.0,"3084, 3096","3084, 3097",1,more logical,more logical.,participant-role,participant-role
+319,0.0,"2974, 2982","2974, 2982",0,My fears,My fears,participant-role,participant-role
+320,0.0,"2983, 2989","2983, 2989",0,sprout,sprout,main,main
+323,9.848857801796104,"3010, 3029","3006, 3020",13,masquerade as truth,and masquerade,configuration,configuration
+322,0.0,"3010, 3020","3010, 3020",0,masquerade,masquerade,main,main
+345,0.0,"3226, 3228","3226, 3228",0,we,we,participant-role,participant-role
+332,0.0,"3101, 3104","3101, 3104",0,are,are,main,main
+352,28.0178514522438,"3286, 3344","3258, 3345",29,"we are both present for these ""extracurricular"" activities","emotionally, and as long as we are both present for these ""extracurricular"" activities.",configuration,configuration
+339,33.37663853655727,"3148, 3180","3143, 3213",38,we can open up our bed to others,that we can open up our bed to others who might be willing to share it,configuration,configuration
+335,0.0,"3148, 3150","3148, 3150",0,we,we,participant-role,participant-role
+346,0.0,"3229, 3235","3229, 3235",0,remain,remain,main,main
+333,0.0,"3127, 3142","3127, 3142",0,in an agreement,in an agreement,participant-role,participant-role
+337,3.0,"3155, 3162","3155, 3159",3,open up,open,main,main
+347,0.0,"3236, 3257","3236, 3257",0,each other's priority,each other's priority,participant-role,participant-role
+340,0.0,"3181, 3184","3181, 3184",0,who,who,participant-role,participant-role
+348,77.10382610480494,"3226, 3269","3213, 3345",89,we remain each other's priority emotionally,", as long as we remain each other's priority emotionally, and as long as we are both present for these ""extracurricular"" activities.",configuration,configuration
+344,0.0,"3181, 3213","3181, 3213",0,who might be willing to share it,who might be willing to share it,configuration,configuration
+331,0.0,"3098, 3100","3098, 3100",0,We,We,participant-role,participant-role
+334,203.0,"3098, 3142","3098, 3345",203,We are currently and happily in an agreement,"We are currently and happily in an agreement that we can open up our bed to others who might be willing to share it, as long as we remain each other's priority emotionally, and as long as we are both present for these ""extracurricular"" activities.",configuration,configuration
+350,0.0,"3289, 3292","3289, 3292",0,are,are,main,main
+342,0.0,"3191, 3193","3191, 3193",0,be,be,main,main
+343,8.0,"3194, 3213","3202, 3213",8,willing to share it,to share it,participant-role,participant-role
+349,0.0,"3286, 3288","3286, 3288",0,we,we,participant-role,participant-role
+338,0.0,"3163, 3170","3163, 3170",0,our bed,our bed,participant-role,participant-role
+360,10.04987562112089,"3423, 3449","3433, 3450",11,happiness or even fidelity,or even fidelity.,participant-role,participant-role
+357,0.0,"3386, 3394","3386, 3394",0,monogamy,monogamy,participant-role,participant-role
+556,17.72004514666935,"3386, 3449","3381, 3432",22,monogamy does not equal or guarantee happiness or even fidelity,that monogamy does not equal or guarantee happiness,participant-role,participant-role
+361,17.72004514666935,"3386, 3449","3381, 3432",22,monogamy does not equal or guarantee happiness or even fidelity,that monogamy does not equal or guarantee happiness,configuration,configuration
+356,1.0,"3346, 3449","3346, 3450",1,I am conscious enough to recognize that monogamy does not equal or guarantee happiness or even fidelity,I am conscious enough to recognize that monogamy does not equal or guarantee happiness or even fidelity.,configuration,configuration
+353,0.0,"3346, 3347","3346, 3347",0,I,I,participant-role,participant-role
+355,17.0,"3351, 3380","3368, 3380",17,conscious enough to recognize,to recognize,main,main
+359,4.0,"3404, 3409","3400, 3409",4,equal,not equal,main,main
+362,0.0,"3451, 3452","3451, 3452",0,I,I,participant-role,participant-role
+368,17.029386365926403,"3500, 3600","3517, 3601",18,love the idea of having both the capacity and the freedom to care for more than one person at a time,having both the capacity and the freedom to care for more than one person at a time.,configuration,configuration
+365,107.0,"3451, 3494","3451, 3601",107,I am also bisexual and adventurous sexually,"I am also bisexual and adventurous sexually, and love the idea of having both the capacity and the freedom to care for more than one person at a time.",configuration,configuration
+363,0.0,"3453, 3455","3453, 3455",0,am,am,main,main
+364,107.11675872616759,"3461, 3494","3456, 3601",112,bisexual and adventurous sexually,"also bisexual and adventurous sexually, and love the idea of having both the capacity and the freedom to care for more than one person at a time.",participant-role,participant-role
+367,1.0,"3505, 3600","3505, 3601",1,the idea of having both the capacity and the freedom to care for more than one person at a time,the idea of having both the capacity and the freedom to care for more than one person at a time.,participant-role,participant-role
+397,0.0,"4004, 4006","4004, 4006",0,he,he,participant-role,participant-role
+373,0.0,"3639, 3640","3639, 3640",0,I,I,participant-role,participant-role
+387,28.071337695236398,"3824, 3842","3796, 3844",30,not all that often,to meet ( which is in truth not all that often ),participant-role,participant-role
+388,2.8284271247461903,"3806, 3842","3804, 3844",4,which is in truth not all that often,( which is in truth not all that often ),configuration,configuration
+396,72.17340230306452,"3874, 3994","3869, 3922",77,"I still sometimes have doubts about my boyfriend and ( though rare, they can be intense ) negative reactions towards him",that I still sometimes have doubts about my boyfriend,configuration,configuration
+400,9.055385138137417,"4004, 4047","3995, 4048",10,he expresses his attraction for someone new,whenever he expresses his attraction for someone new.,configuration,configuration
+394,0.0,"3892, 3896","3892, 3896",0,have,have,main,main
+375,0.0,"3658, 3666","3658, 3666",0,jealousy,jealousy,participant-role,participant-role
+371,5.0,"3639, 3741","3634, 3741",5,I still experience jealousy pretty much every time my boyfriend tells me he's talked to his girlfriend,that I still experience jealousy pretty much every time my boyfriend tells me he's talked to his girlfriend,participant-role,participant-role
+370,0.0,"3631, 3633","3631, 3633",0,is,is,main,main
+372,0.0,"3602, 3741","3602, 3741",0,My frustration and confusion is that I still experience jealousy pretty much every time my boyfriend tells me he's talked to his girlfriend,My frustration and confusion is that I still experience jealousy pretty much every time my boyfriend tells me he's talked to his girlfriend,configuration,configuration
+386,0.0,"3812, 3814","3812, 3814",0,is,is,main,main
+374,0.0,"3647, 3657","3647, 3657",0,experience,experience,main,main
+399,15.033296378372908,"4017, 4047","4032, 4048",16,his attraction for someone new,for someone new.,participant-role,participant-role
+572,0.0,"3709, 3711","3709, 3711",0,me,me,participant-role,participant-role
+381,4.0,"3784, 3790","3784, 3786",4,we all,we,participant-role,participant-role
+378,0.0,"3751, 3761","3751, 3761",0,experience,experience,main,main
+573,12.0,"3712, 3741","3724, 3741",12,he's talked to his girlfriend,to his girlfriend,participant-role,participant-role
+376,23.53720459187964,"3639, 3666","3634, 3689",28,I still experience jealousy,that I still experience jealousy pretty much every time,configuration,configuration
+380,144.01388821915754,"3743, 3778","3741, 3922",146,I still experience anxiety and fear,; I still experience anxiety and fear when we all plan to meet ( which is in truth not all that often ) ; and most troubling is that I still sometimes have doubts about my boyfriend,configuration,configuration
+574,22.0,"3690, 3741","3712, 3741",22,my boyfriend tells me he's talked to his girlfriend,he's talked to his girlfriend,configuration,configuration
+369,0.0,"3602, 3630","3602, 3630",0,My frustration and confusion,My frustration and confusion,participant-role,participant-role
+571,0.0,"3703, 3708","3703, 3708",0,tells,tells,main,main
+390,0.0,"3866, 3868","3866, 3868",0,is,is,main,main
+382,0.0,"3791, 3795","3791, 3795",0,plan,plan,main,main
+389,0.0,"3851, 3865","3851, 3865",0,most troubling,most troubling,participant-role,participant-role
+570,0.0,"3690, 3702","3690, 3702",0,my boyfriend,my boyfriend,participant-role,participant-role
+392,72.11102550927978,"3851, 3994","3847, 3922",76,"most troubling is that I still sometimes have doubts about my boyfriend and ( though rare, they can be intense ) negative reactions towards him",and most troubling is that I still sometimes have doubts about my boyfriend,configuration,configuration
+385,0.0,"3806, 3811","3806, 3811",0,which,which,participant-role,participant-role
+384,12.0,"3784, 3803","3796, 3803",12,we all plan to meet,to meet,configuration,configuration
+377,2.0,"3743, 3744","3741, 3744",2,I,; I,participant-role,participant-role
+398,0.0,"4007, 4016","4007, 4016",0,expresses,expresses,main,main
+395,64.4437739428721,"3897, 3994","3940, 3946",91,"doubts about my boyfriend and ( though rare, they can be intense ) negative reactions towards him",", they",participant-role,participant-role
+393,0.0,"3874, 3875","3874, 3875",0,I,I,participant-role,participant-role
+412,2.0,"4193, 4197","4191, 4197",2,they,", they",participant-role,participant-role
+413,0.0,"4198, 4204","4198, 4204",0,strike,strike,main,main
+401,15.0,"4049, 4077","4049, 4062",15,The confusion for both of us,The confusion,participant-role,participant-role
+402,0.0,"4078, 4080","4078, 4080",0,is,is,main,main
+421,26.30589287593181,"4226, 4316","4222, 4290",30,"I equate the information with ""He's leaving me for someone else. I knew this would happen""","and I equate the information with ""He's leaving me for someone else.",configuration,configuration
+414,0.0,"4205, 4207","4205, 4207",0,me,me,participant-role,participant-role
+416,0.0,"4226, 4227","4226, 4227",0,I,I,participant-role,participant-role
+420,31.064449134018133,"4256, 4316","4273, 4290",43,"""He's leaving me for someone else. I knew this would happen""",for someone else.,participant-role,participant-role
+404,0.0,"4096, 4097","4096, 4097",0,I,I,participant-role,participant-role
+426,6.082762530298219,"4257, 4289","4251, 4290",7,He's leaving me for someone else,"with ""He's leaving me for someone else.",configuration,configuration
+425,0.0,"4270, 4272","4270, 4272",0,me,me,participant-role,participant-role
+417,0.0,"4228, 4234","4228, 4234",0,equate,equate,main,main
+424,0.0,"4262, 4269","4262, 4269",0,leaving,leaving,main,main
+406,0.0,"4101, 4109","4101, 4109",0,thinking,thinking,main,main
+415,16.0,"4193, 4221","4177, 4221",16,they strike me the wrong way,"then at others, they strike me the wrong way",configuration,configuration
+410,0.0,"4133, 4145","4133, 4145",0,these things,these things,participant-role,participant-role
+418,0.0,"4235, 4250","4235, 4250",0,the information,the information,participant-role,participant-role
+422,1.0,"4257, 4259","4256, 4259",1,He,"""He",participant-role,participant-role
+411,140.6627171641441,"4124, 4171","4049, 4290",194,can hear these things with a welcoming attitude,"The confusion for both of us is that sometimes I am thinking logically and can hear these things with a welcoming attitude, and then at others, they strike me the wrong way and I equate the information with ""He's leaving me for someone else.",configuration,configuration
+407,15.0,"4096, 4119","4081, 4119",15,I am thinking logically,that sometimes I am thinking logically,configuration,configuration
+409,0.0,"4128, 4132","4128, 4132",0,hear,hear,main,main
+430,3.0,"4291, 4315","4291, 4318",3,I knew this would happen,"I knew this would happen"" .",configuration,configuration
+428,0.0,"4293, 4297","4293, 4297",0,knew,knew,main,main
+427,0.0,"4291, 4292","4291, 4292",0,I,I,participant-role,participant-role
+429,1.0,"4298, 4315","4298, 4316",1,this would happen,"this would happen""",participant-role,participant-role
+437,0.0,"4388, 4397","4388, 4397",0,reassured,reassured,main,main
+442,0.0,"4412, 4414","4412, 4414",0,me,me,participant-role,participant-role
+441,0.0,"4406, 4411","4406, 4411",0,LOVES,LOVES,main,main
+431,0.0,"4319, 4332","4319, 4332",0,This reaction,This reaction,participant-role,participant-role
+439,21.18962010041709,"4371, 4453","4378, 4433",27,"during which I'm reassured that he LOVES me, but wants to PLAY with others WITH me","which I'm reassured that he LOVES me, but wants to PLAY",configuration,configuration
+445,20.0,"4426, 4453","4426, 4433",20,to PLAY with others WITH me,to PLAY,participant-role,participant-role
+432,0.0,"4333, 4335","4333, 4335",0,is,is,main,main
+446,20.396078054371138,"4420, 4453","4416, 4433",24,wants to PLAY with others WITH me,but wants to PLAY,configuration,configuration
+440,0.0,"4403, 4405","4403, 4405",0,he,he,participant-role,participant-role
+438,20.615528128088304,"4403, 4453","4398, 4433",25,"he LOVES me, but wants to PLAY with others WITH me","that he LOVES me, but wants to PLAY",participant-role,participant-role
+444,0.0,"4420, 4425","4420, 4425",0,wants,wants,main,main
+443,5.0990195135927845,"4403, 4414","4398, 4415",6,he LOVES me,"that he LOVES me,",configuration,configuration
+433,12.0,"4336, 4370","4348, 4370",12,in spite of numerous conversations,numerous conversations,participant-role,participant-role
+434,84.0,"4319, 4370","4319, 4454",84,This reaction is in spite of numerous conversations,"This reaction is in spite of numerous conversations during which I'm reassured that he LOVES me, but wants to PLAY with others WITH me.",configuration,configuration
+435,0.0,"4384, 4385","4384, 4385",0,I,I,participant-role,participant-role
+476,51.15662224971465,"4757, 4882","4753, 4831",55,"I don't know where else to ask these questions and receive an answer other than ""What? Polyamory? Are you crazy? Leave him! """,and I don't know where else to ask these questions and receive an answer other,configuration,configuration
+475,51.0,"4770, 4882","4770, 4831",51,"where else to ask these questions and receive an answer other than ""What? Polyamory? Are you crazy? Leave him! """,where else to ask these questions and receive an answer other,participant-role,participant-role
+458,6.0,"4554, 4579","4554, 4573",6,a bit uncomfortable / shy,a bit uncomfortable,participant-role,participant-role
+454,28.0,"4497, 4537","4497, 4509",28,my boyfriend and his girlfriend together,my boyfriend,participant-role,participant-role
+469,7.0,"4693, 4704","4693, 4697",7,have a need,have,main,main
+466,0.0,"4634, 4685","4634, 4685",0,I may catch some flack for my attitude and thoughts,I may catch some flack for my attitude and thoughts,participant-role,participant-role
+578,0.0,"4634, 4685","4634, 4685",0,I may catch some flack for my attitude and thoughts,I may catch some flack for my attitude and thoughts,configuration,configuration
+577,11.0,"4640, 4656","4640, 4645",11,catch some flack,catch,main,main
+468,0.0,"4691, 4692","4691, 4692",0,I,I,participant-role,participant-role
+449,3.0,"4471, 4477","4468, 4477",3,battle,to battle,main,main
+465,0.0,"4626, 4633","4626, 4633",0,realize,realize,main,main
+447,0.0,"4455, 4456","4455, 4456",0,I,I,participant-role,participant-role
+575,0.0,"4634, 4635","4634, 4635",0,I,I,participant-role,participant-role
+460,0.0,"4585, 4586","4585, 4586",0,I,I,participant-role,participant-role
+463,5.0,"4585, 4620","4580, 4620",5,"I am with her husband, my boyfriend","when I am with her husband, my boyfriend",configuration,configuration
+461,0.0,"4587, 4589","4587, 4589",0,am,am,main,main
+455,28.442925306655784,"4491, 4537","4486, 4509",33,I see my boyfriend and his girlfriend together,when I see my boyfriend,configuration,configuration
+464,4.0,"4624, 4625","4620, 4625",4,I,... I,participant-role,participant-role
+456,4.0,"4541, 4542","4537, 4542",4,I,... I,participant-role,participant-role
+471,4.0,"4691, 4749","4687, 4749",4,I have a need to be honest and to get some honest feedback,but I have a need to be honest and to get some honest feedback,configuration,configuration
+462,0.0,"4590, 4620","4590, 4620",0,"with her husband, my boyfriend","with her husband, my boyfriend",participant-role,participant-role
+459,7.211102550927978,"4541, 4579","4537, 4573",10,I still feel a bit uncomfortable / shy,... I still feel a bit uncomfortable,configuration,configuration
+470,6.0,"4705, 4749","4711, 4749",6,to be honest and to get some honest feedback,honest and to get some honest feedback,participant-role,participant-role
+467,4.123105625617661,"4624, 4685","4620, 4686",5,I realize I may catch some flack for my attitude and thoughts,"... I realize I may catch some flack for my attitude and thoughts,",configuration,configuration
+457,0.0,"4549, 4553","4549, 4553",0,feel,feel,main,main
+453,0.0,"4493, 4496","4493, 4496",0,see,see,main,main
+451,27.294688127912362,"4455, 4485","4468, 4509",28,I still have to battle my mind,to battle my mind when I see my boyfriend,configuration,configuration
+474,4.0,"4765, 4769","4761, 4769",4,know,n't know,main,main
+472,0.0,"4757, 4758","4757, 4758",0,I,I,participant-role,participant-role
+450,0.0,"4478, 4485","4478, 4485",0,my mind,my mind,participant-role,participant-role
+452,0.0,"4491, 4492","4491, 4492",0,I,I,participant-role,participant-role
+479,1.0,"4863, 4868","4863, 4869",1,crazy,crazy?,participant-role,participant-role
+478,0.0,"4859, 4862","4859, 4862",0,you,you,participant-role,participant-role
+480,1.0,"4855, 4868","4855, 4869",1,Are you crazy,Are you crazy?,configuration,configuration
+477,0.0,"4855, 4858","4855, 4858",0,Are,Are,main,main
+482,1.0,"4876, 4879","4876, 4880",1,him,him!,participant-role,participant-role
+481,0.0,"4870, 4875","4870, 4875",0,Leave,Leave,main,main
+483,3.0,"4870, 4879","4870, 4882",3,Leave him,"Leave him! """,configuration,configuration
+484,0.0,"4891, 4895","4891, 4895",0,that,that,participant-role,participant-role
+487,8.06225774829855,"4891, 4919","4883, 4920",9,that's not what I want to do,Because that's not what I want to do.,configuration,configuration
+486,13.0,"4902, 4919","4902, 4906",13,what I want to do,what,participant-role,participant-role
+485,4.123105625617661,"4896, 4897","4895, 4901",5,s,'s not,main,main
+579,0.0,"4907, 4908","4907, 4908",0,I,I,participant-role,participant-role
+582,12.041594578792296,"4902, 4919","4914, 4920",13,what I want to do,to do.,configuration,configuration
+580,3.0,"4909, 4916","4909, 4913",3,want to,want,main,main
+581,3.1622776601683795,"4917, 4919","4914, 4920",4,do,to do.,participant-role,participant-role
+500,0.0,"4998, 5002","4998, 5002",0,know,know,main,main
+502,4.123105625617661,"4995, 5035","4991, 5036",5,we know we really love each other deeply,and we know we really love each other deeply.,configuration,configuration
+559,0.0,"5018, 5028","5018, 5028",0,each other,each other,participant-role,participant-role
+490,0.0,"4949, 4958","4949, 4958",0,around 40,around 40,participant-role,participant-role
+501,1.0,"5003, 5035","5003, 5036",1,we really love each other deeply,we really love each other deeply.,participant-role,participant-role
+560,1.0,"5003, 5035","5003, 5036",1,we really love each other deeply,we really love each other deeply.,configuration,configuration
+492,2.0,"4960, 4962","4958, 4962",2,we,", we",participant-role,participant-role
+495,0.0,"4980, 4984","4980, 4984",0,done,done,main,main
+499,0.0,"4995, 4997","4995, 4997",0,we,we,participant-role,participant-role
+558,0.0,"5013, 5017","5013, 5017",0,love,love,main,main
+488,0.0,"4921, 4939","4921, 4939",0,My boyfriend and I,My boyfriend and I,participant-role,participant-role
+497,7.211102550927978,"4980, 4990","4976, 4984",8,done a lot,and done,configuration,configuration
+557,0.0,"5003, 5005","5003, 5005",0,we,we,participant-role,participant-role
+491,0.0,"4921, 4958","4921, 4958",0,My boyfriend and I are both around 40,My boyfriend and I are both around 40,configuration,configuration
+496,0.0,"4985, 4990","4985, 4990",0,a lot,a lot,participant-role,participant-role
+498,2.0,"4960, 4975","4958, 4975",2,we've both seen,", we've both seen",configuration,configuration
+494,0.0,"4971, 4975","4971, 4975",0,seen,seen,main,main
+489,0.0,"4940, 4943","4940, 4943",0,are,are,main,main
+506,7.0,"5037, 5077","5044, 5077",7,I want to spend my life with this person,to spend my life with this person,configuration,configuration
+509,46.010868281309364,"5083, 5093","5037, 5094",47,he with me,"I want to spend my life with this person, and he with me.",configuration,configuration
+503,0.0,"5037, 5038","5037, 5038",0,I,I,participant-role,participant-role
+505,0.0,"5044, 5077","5044, 5077",0,to spend my life with this person,to spend my life with this person,participant-role,participant-role
+504,0.0,"5039, 5043","5039, 5043",0,want,want,main,main
+515,3.0,"5095, 5202","5095, 5205",3,He has shown me a committed willingness to listen to my heart and understand how I struggle with this issue,He has shown me a committed willingness to listen to my heart and understand how I struggle with this issue...,configuration,configuration
+514,3.0,"5111, 5202","5108, 5202",3,a committed willingness to listen to my heart and understand how I struggle with this issue,me a committed willingness to listen to my heart and understand how I struggle with this issue,participant-role,participant-role
+587,0.0,"5291, 5292","5291, 5292",0,I,I,participant-role,participant-role
+512,0.0,"5102, 5107","5102, 5107",0,shown,shown,main,main
+586,4.0,"5176, 5202","5172, 5202",4,I struggle with this issue,how I struggle with this issue,configuration,configuration
+521,10.0,"5217, 5239","5223, 5231",14,to do the same for him,the same,participant-role,participant-role
+583,0.0,"5176, 5177","5176, 5177",0,I,I,participant-role,participant-role
+513,0.0,"5108, 5110","5108, 5110",0,me,me,participant-role,participant-role
+520,0.0,"5212, 5216","5212, 5216",0,want,want,main,main
+533,8.0,"5453, 5466","5453, 5458",8,doing my best,doing,main,main
+585,5.0,"5192, 5202","5187, 5202",5,this issue,with this issue,participant-role,participant-role
+525,45.221676218380054,"5291, 5396","5305, 5353",57,"I am there in so many ways, even sharing the desire to be open and free and capable of loving more people","so many ways, even sharing the desire to be open",participant-role,participant-role
+526,54.20332093147061,"5272, 5396","5305, 5353",76,"I really feel that I am there in so many ways, even sharing the desire to be open and free and capable of loving more people","so many ways, even sharing the desire to be open",configuration,configuration
+534,2.0,"5443, 5493","5441, 5493",2,that I am doing my best to take responsibility for,", that I am doing my best to take responsibility for",configuration,configuration
+522,4.0,"5210, 5268","5206, 5268",4,I want to do the same for him by understanding this desire,and I want to do the same for him by understanding this desire,configuration,configuration
+531,0.0,"5448, 5449","5448, 5449",0,I,I,participant-role,participant-role
+584,5.0,"5178, 5191","5178, 5186",5,struggle with,struggle,main,main
+530,1.0,"5404, 5509","5404, 5510",1,"these seemingly instinctual reactions, that I am doing my best to take responsibility for, are bothersome","these seemingly instinctual reactions, that I am doing my best to take responsibility for, are bothersome.",configuration,configuration
+523,4.0,"5272, 5273","5268, 5273",4,I,... I,participant-role,participant-role
+510,0.0,"5095, 5097","5095, 5097",0,He,He,participant-role,participant-role
+528,0.0,"5495, 5498","5495, 5498",0,are,are,main,main
+524,0.0,"5281, 5285","5281, 5285",0,feel,feel,main,main
+519,0.0,"5210, 5211","5210, 5211",0,I,I,participant-role,participant-role
+527,0.0,"5404, 5493","5404, 5493",0,"these seemingly instinctual reactions, that I am doing my best to take responsibility for","these seemingly instinctual reactions, that I am doing my best to take responsibility for",participant-role,participant-role
+543,0.0,"5577, 5579","5577, 5579",0,me,me,participant-role,participant-role
+536,5.0,"5515, 5526","5515, 5521",5,anyone else,anyone,participant-role,participant-role
+541,0.0,"5567, 5570","5567, 5570",0,you,you,participant-role,participant-role
+538,8.0,"5540, 5557","5532, 5557",8,a similar journey,through a similar journey,participant-role,participant-role
+537,8.0,"5527, 5539","5527, 5531",8,been through,been,main,main
+539,1.0,"5511, 5557","5511, 5558",1,Has anyone else been through a similar journey,"Has anyone else been through a similar journey,",configuration,configuration
+542,0.0,"5571, 5576","5571, 5576",0,offer,offer,main,main
+544,1.0,"5580, 5593","5580, 5594",1,some guidance,some guidance?,participant-role,participant-role
+546,0.0,"5595, 5597","5595, 5597",0,It,It,participant-role,participant-role
+549,30.0,"5595, 5622","5595, 5652",30,It is very much appreciated,"It is very much appreciated, in advance... 
+Blessings...",configuration,configuration
+15,58.215118311311535,"119, 125","114, 183",63,a wife,with a wife who drinks every day and every night after she gets home.,participant-role,participant-role
+16,58.137767414994535,"109, 125","105, 183",62,live with a wife,and live with a wife who drinks every day and every night after she gets home.,configuration,configuration
+22,32.01562118716424,"169, 182","137, 183",33,she gets home,every day and every night after she gets home.,configuration,configuration
+551,30.4138126514911,"285, 335","280, 365",35,she gravitates to others in her circle for support,that she gravitates to others in her circle for support that she has no real problem.,configuration,configuration
+53,42.720018726587654,"418, 422","406, 463",53,they,Al-Anon and they advised me not to react to the drinking.,participant-role,participant-role
+70,32.01562118716424,"503, 551","471, 552",33,she has lost interest in me and our relationship,like she drinks so much because she has lost interest in me and our relationship?,configuration,configuration
+564,6.082762530298219,"1149, 1202","1155, 1203",7,wants to do other things without me from time to time,to do other things without me from time to time.,configuration,configuration
+154,68.8839603971781,"1253, 1281","1221, 1342",93,do their own separate things,to be more like her parents and do their own separate things and then get back together and have something to talk about.,configuration,configuration
+156,85.0881895447306,"1291, 1308","1213, 1342",112,get back together,we need to be more like her parents and do their own separate things and then get back together and have something to talk about.,configuration,configuration
+288,65.0,"2549, 2580","2549, 2645",65,my first venture into polyamory,my first venture into polyamory and I have to be honest and say I am tentative about it at best.,participant-role,participant-role
+326,49.0,"3044, 3048","3044, 3097",49,time,time to think through things and become more logical.,participant-role,participant-role
+321,92.0,"2974, 3005","2974, 3097",92,My fears sprout without warning,"My fears sprout without warning and masquerade as truth, until I have time to think through things and become more logical.",configuration,configuration
+383,123.76186811776881,"3796, 3803","3762, 3922",153,to meet,anxiety and fear when we all plan to meet ( which is in truth not all that often ) ; and most troubling is that I still sometimes have doubts about my boyfriend,participant-role,participant-role
+391,72.17340230306452,"3874, 3994","3869, 3922",77,"I still sometimes have doubts about my boyfriend and ( though rare, they can be intense ) negative reactions towards him",that I still sometimes have doubts about my boyfriend,participant-role,participant-role
+142,61.98386886924694,"1105, 1144","1124, 1203",58,I just can't stand that she has friends,that she has friends and wants to do other things without me from time to time.,configuration,configuration
+137,108.46197490364999,"1089, 1095","1079, 1203",118,I pout,that then I pout and that I just can't stand that she has friends and wants to do other things without me from time to time.,configuration,configuration
+,
+,Manual mismatching all parsed (False Negative)
+1,"19, 22",Are,main
+3,"27, 41",ready for this,participant-role
+6,"47, 49",am,main
+7,"50, 70",emotionally confused,participant-role
+12,"84, 91",married,participant-role
+65,"476, 494",she drinks so much,configuration
+64,"487, 494",so much,participant-role
+68,"511, 527",lost interest in,main
+86,"716, 735",what I have planned,participant-role
+105,"779, 802",She makes her own plans,configuration
+131,"1084, 1095",then I pout,participant-role
+151,"1213, 1248",we need to be more like her parents,configuration
+152,"1253, 1255",do,main
+155,"1291, 1308",get back together,main
+224,"1947, 1979",I am a top producer with my firm,configuration
+225,"1984, 1988",make,main
+276,"2440, 2443",are,main
+280,"2489, 2498",I ( we! ),participant-role
+314,"2841, 2874",This desire is very strong in him,configuration
+313,"2856, 2867",very strong,participant-role
+316,"2914, 2916",is,main
+351,"3298, 3305",present,participant-role
+366,"3500, 3504",love,main
+379,"3762, 3778",anxiety and fear,participant-role
+403,"4049, 4080",The confusion for both of us is,configuration
+507,"5083, 5085",he,participant-role
+508,"5086, 5093",with me,participant-role
+590,"5291, 5301",I am there,configuration
+588,"5293, 5295",am,main
+589,"5296, 5301",there,participant-role
+529,"5499, 5509",bothersome,participant-role
+545,"5563, 5593",can you offer me some guidance,configuration
+547,"5598, 5600",is,main
+548,"5601, 5622",very much appreciated,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+27,"27, 32",ready,main
+62,"62, 70",confused,main
+178,"178, 183",home.,participant-role
+92,"92, 104",for 16 years,participant-role
+184,"184, 191",Usually,main
+431,"431, 463",me not to react to the drinking.,configuration
+447,"447, 463",to the drinking.,participant-role
+434,"434, 446",not to react,main
+617,"617, 620",cut,main
+595,"595, 606",more loving,participant-role
+585,"585, 612",her to be more loving to me,configuration
+589,"589, 594",to be,main
+585,"585, 588",her,participant-role
+576,"576, 612",and want her to be more loving to me,configuration
+613,"613, 641",and cut down on the drinking,configuration
+626,"626, 641",on the drinking,participant-role
+690,"690, 702",On Saturdays,participant-role
+836,"836, 840",done,main
+851,"851, 858",to work,main
+851,"851, 858",to work,configuration
+836,"836, 840",done,configuration
+812,"812, 818",to get,main
+900,"900, 904",said,main
+926,"926, 934",4: 30 pm,participant-role
+985,"985, 991",to say,configuration
+985,"985, 991",to say,main
+896,"896, 899",All,participant-role
+1185,"1185, 1194",from time,participant-role
+1195,"1195, 1203",to time.,participant-role
+1174,"1174, 1184",without me,participant-role
+1328,"1328, 1335",to talk,main
+1249,"1249, 1342",and do their own separate things and then get back together and have something to talk about.,participant-role
+1216,"1216, 1220",need,main
+1318,"1318, 1327",something,participant-role
+1376,"1376, 1394",with her every day,participant-role
+1360,"1360, 1394",her to check in with her every day,participant-role
+1360,"1360, 1394",her to check in with her every day,configuration
+1364,"1364, 1372",to check,main
+1410,"1410, 1414",When,participant-role
+1443,"1443, 1446",had,main
+1410,"1410, 1473","When we first met, she literally had to be with me all the time",configuration
+1578,"1578, 1583",doing,main
+1676,"1676, 1710",to check on me throughout the day.,participant-role
+1529,"1529, 1533",need,main
+1632,"1632, 1710",quit answering my cell phone when she calls to check on me throughout the day.,configuration
+1676,"1676, 1684",to check,main
+1691,"1691, 1710",throughout the day.,participant-role
+1584,"1584, 1594",everything,participant-role
+1542,"1542, 1549",calling,main
+1637,"1637, 1646",answering,main
+1685,"1685, 1690",on me,participant-role
+1661,"1661, 1665",when,participant-role
+1595,"1595, 1602",for her,participant-role
+1550,"1550, 1553",her,participant-role
+1542,"1542, 1568",calling her during the day,configuration
+1603,"1603, 1615",all the time,participant-role
+1647,"1647, 1660",my cell phone,participant-role
+1741,"1741, 1748",at work,participant-role
+1728,"1728, 1736",dialling,main
+1728,"1728, 1748",dialling her at work,configuration
+1915,"1915, 1920",to go,main
+1838,"1838, 1862",at home 90 % of the time,participant-role
+1921,"1921, 1923",do,main
+1912,"1912, 1914",me,participant-role
+1822,"1822, 1829",the way,participant-role
+2052,"2052, 2060",watching,main
+2038,"2038, 2039",I,participant-role
+2040,"2040, 2043",sit,main
+2087,"2087, 2093",", when",participant-role
+2169,"2169, 2201","fun, blah, blah... 3 or 4 calls.",participant-role
+2278,"2278, 2284",to say,main
+2346,"2346, 2353",to turn,main
+2346,"2346, 2376",to turn this situation around?,participant-role
+2354,"2354, 2368",this situation,participant-role
+2404,"2404, 2416",with myself.,participant-role
+2444,"2444, 2452",involved,main
+2628,"2628, 2645",about it at best.,participant-role
+2895,"2895, 2909",a chaotic past,participant-role
+2990,"2990, 3029",without warning and masquerade as truth,participant-role
+3029,"3029, 3097",", until I have time to think through things and become more logical.",configuration
+3049,"3049, 3057",to think,main
+3021,"3021, 3029",as truth,participant-role
+2998,"2998, 3005",warning,main
+3058,"3058, 3072",through things,participant-role
+3049,"3049, 3097",to think through things and become more logical.,configuration
+3258,"3258, 3282","emotionally, and as long",participant-role
+3306,"3306, 3345","for these ""extracurricular"" activities.",participant-role
+3202,"3202, 3210",to share,main
+3171,"3171, 3213",to others who might be willing to share it,participant-role
+3413,"3413, 3422",guarantee,main
+3348,"3348, 3350",am,main
+3381,"3381, 3409",that monogamy does not equal,configuration
+3368,"3368, 3432",to recognize that monogamy does not equal or guarantee happiness,participant-role
+3368,"3368, 3432",to recognize that monogamy does not equal or guarantee happiness,configuration
+3423,"3423, 3432",happiness,participant-role
+3410,"3410, 3422",or guarantee,configuration
+3517,"3517, 3523",having,main
+3566,"3566, 3590",for more than one person,participant-role
+3524,"3524, 3601",both the capacity and the freedom to care for more than one person at a time.,configuration
+3558,"3558, 3565",to care,main
+3524,"3524, 3557",both the capacity and the freedom,participant-role
+3524,"3524, 3601",both the capacity and the freedom to care for more than one person at a time.,participant-role
+3815,"3815, 3823",in truth,participant-role
+3951,"3951, 3953",be,main
+3779,"3779, 3783",when,participant-role
+3717,"3717, 3723",talked,main
+3712,"3712, 3714",he,participant-role
+3995,"3995, 4003",whenever,participant-role
+4017,"4017, 4031",his attraction,participant-role
+3796,"3796, 3803",to meet,main
+4182,"4182, 4191",at others,participant-role
+4146,"4146, 4171",with a welcoming attitude,participant-role
+4309,"4309, 4315",happen,main
+4298,"4298, 4316","this would happen""",configuration
+4378,"4378, 4383",which,participant-role
+4804,"4804, 4831",and receive an answer other,configuration
+4770,"4770, 4831",where else to ask these questions and receive an answer other,configuration
+4576,"4576, 4579",shy,main
+4463,"4463, 4467",have,main
+4486,"4486, 4490",when,participant-role
+4770,"4770, 4803",where else to ask these questions,configuration
+4788,"4788, 4803",these questions,participant-role
+4729,"4729, 4749",some honest feedback,participant-role
+4808,"4808, 4815",receive,main
+4781,"4781, 4787",to ask,main
+4560,"4560, 4573",uncomfortable,main
+4580,"4580, 4584",when,participant-role
+4776,"4776, 4780",else,participant-role
+4705,"4705, 4710",to be,main
+4646,"4646, 4685",some flack for my attitude and thoughts,participant-role
+4770,"4770, 4775",where,participant-role
+4554,"4554, 4559",a bit,participant-role
+4455,"4455, 4537",I still have to battle my mind when I see my boyfriend and his girlfriend together,configuration
+5044,"5044, 5052",to spend,main
+5053,"5053, 5060",my life,participant-role
+5217,"5217, 5222",to do,main
+5343,"5343, 5348",to be,main
+5172,"5172, 5175",how,participant-role
+5157,"5157, 5202",and understand how I struggle with this issue,configuration
+5243,"5243, 5256",understanding,main
+5217,"5217, 5268",to do the same for him by understanding this desire,participant-role
+5375,"5375, 5396",of loving more people,participant-role
+5135,"5135, 5144",to listen,main
+5378,"5378, 5384",loving,main
+5135,"5135, 5156",to listen to my heart,configuration
+5467,"5467, 5474",to take,main
+5243,"5243, 5268",understanding this desire,configuration
+5385,"5385, 5396",more people,participant-role
+5257,"5257, 5268",this desire,participant-role
+5324,"5324, 5331",sharing,main
+5161,"5161, 5171",understand,main
+5378,"5378, 5396",loving more people,configuration
+5145,"5145, 5156",to my heart,participant-role
+5240,"5240, 5268",by understanding this desire,participant-role
+5475,"5475, 5489",responsibility,participant-role
+5624,"5624, 5649","in advance... 
+Blessings",participant-role
+5611,"5611, 5622",appreciated,main
+137,"137, 183",every day and every night after she gets home.,participant-role
+336,"336, 365",that she has no real problem.,participant-role
+607,"607, 612",to me,participant-role
+819,"819, 858","a tan, her nails done, maybe go to work",configuration
+812,"812, 858","to get a tan, her nails done, maybe go to work",configuration
+819,"819, 858","a tan, her nails done, maybe go to work",participant-role
+812,"812, 858","to get a tan, her nails done, maybe go to work",participant-role
+991,"991, 1038",", that I am pissed that she ditched me all day.",participant-role
+1161,"1161, 1173",other things,participant-role
+1155,"1155, 1160",to do,main
+1221,"1221, 1342",to be more like her parents and do their own separate things and then get back together and have something to talk about.,participant-role
+1328,"1328, 1342",to talk about.,configuration
+1447,"1447, 1473",to be with me all the time,participant-role
+1578,"1578, 1602",doing everything for her,configuration
+1534,"1534, 1710","to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",participant-role
+1534,"1534, 1710","to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",configuration
+1676,"1676, 1710",to check on me throughout the day.,configuration
+1554,"1554, 1568",during the day,participant-role
+1522,"1522, 1710","that I need to quit calling her during the day and stop doing everything for her all the time, and especially quit answering my cell phone when she calls to check on me throughout the day.",configuration
+1737,"1737, 1740",her,participant-role
+1924,"1924, 1929",stuff,participant-role
+1930,"1930, 1946",with my friends.,participant-role
+1921,"1921, 1946",do stuff with my friends.,participant-role
+1921,"1921, 1946",do stuff with my friends.,configuration
+1912,"1912, 1946",me to go do stuff with my friends.,configuration
+2033,"2033, 2080",like I sit at home watching TV or play all day.,configuration
+2275,"2275, 2310",me to say that the kids said I left,configuration
+2275,"2275, 2310",me to say that the kids said I left,participant-role
+2285,"2285, 2310",that the kids said I left,participant-role
+2346,"2346, 2376",to turn this situation around?,configuration
+2511,"2511, 2520",and enjoy,configuration
+2592,"2592, 2604",to be honest,participant-role
+2895,"2895, 2934","a chaotic past, it is ( unfortunately )",participant-role
+3021,"3021, 3029",as truth,configuration
+3202,"3202, 3213",to share it,configuration
+3211,"3211, 3213",it,participant-role
+3194,"3194, 3201",willing,participant-role
+3143,"3143, 3213",that we can open up our bed to others who might be willing to share it,participant-role
+3591,"3591, 3601",at a time.,participant-role
+3514,"3514, 3601",of having both the capacity and the freedom to care for more than one person at a time.,participant-role
+3796,"3796, 3844",to meet ( which is in truth not all that often ),configuration
+3634,"3634, 3741",that I still experience jealousy pretty much every time my boyfriend tells me he's talked to his girlfriend,configuration
+3690,"3690, 3711",my boyfriend tells me,configuration
+3779,"3779, 3922",when we all plan to meet ( which is in truth not all that often ) ; and most troubling is that I still sometimes have doubts about my boyfriend,configuration
+3779,"3779, 3846",when we all plan to meet ( which is in truth not all that often ) ;,configuration
+3954,"3954, 3961",intense,participant-role
+4205,"4205, 4221",me the wrong way,participant-role
+4177,"4177, 4290","then at others, they strike me the wrong way and I equate the information with ""He's leaving me for someone else.",configuration
+4177,"4177, 4290","then at others, they strike me the wrong way and I equate the information with ""He's leaving me for someone else.",participant-role
+4298,"4298, 4302",this,participant-role
+4446,"4446, 4454",WITH me.,participant-role
+4398,"4398, 4433","that he LOVES me, but wants to PLAY",configuration
+4816,"4816, 4831",an answer other,participant-role
+4574,"4574, 4620","/ shy when I am with her husband, my boyfriend",configuration
+4705,"4705, 4749",to be honest and to get some honest feedback,configuration
+4554,"4554, 4573",a bit uncomfortable,configuration
+4698,"4698, 4749",a need to be honest and to get some honest feedback,participant-role
+4468,"4468, 4509",to battle my mind when I see my boyfriend,participant-role
+4883,"4883, 4906",Because that's not what,configuration
+4914,"4914, 4919",to do,main
+5061,"5061, 5077",with this person,participant-role
+5135,"5135, 5202",to listen to my heart and understand how I struggle with this issue,configuration
+5467,"5467, 5493",to take responsibility for,participant-role
+5232,"5232, 5239",for him,participant-role
+5172,"5172, 5202",how I struggle with this issue,participant-role
+5358,"5358, 5374",free and capable,participant-role
+5358,"5358, 5396",free and capable of loving more people,participant-role
+5358,"5358, 5396",free and capable of loving more people,configuration
+5467,"5467, 5493",to take responsibility for,configuration
+5217,"5217, 5268",to do the same for him by understanding this desire,configuration
+5459,"5459, 5466",my best,participant-role
+3897,"3897, 3922",doubts about my boyfriend,participant-role
+1070,"1070, 1203",She says that then I pout and that I just can't stand that she has friends and wants to do other things without me from time to time.,configuration

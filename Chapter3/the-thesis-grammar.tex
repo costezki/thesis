@@ -1,4 +1,4 @@
-\chapter{The grammar structure}
+\chapter{The grammar in Parsimonious Vole}
 \label{ch:the-grammar}
 
 Now that the main theoretical foundations have been covered, I turn to describe the grammatical units  system networks adopted in this thesis some being from Sydney and others from Cardiff grammars. They have common parts and also differ in large parts on their paradigmatic and syntagmatic descriptions. Just like in the previous chapter I base my discussion on pragmatic grounds.
@@ -285,40 +285,54 @@ In this section was discussed in detail the problem of semantic and syntactic he
 
     %The system networks organise the grammatical features realised in structure
     
-    
-    
     It is close to terms and concepts of syntactic structure in traditional grammar (role and definition of Subject, Complement and other functional elements) and the . 
     
 \subsection{MOOD}
 \label{sec:mood}
 
     One of the first system networks presented in the Introduction to Functional Grammar \citep{Halliday2013} is that of MOOD. 
-    This system is introduced in the discussion of interpersonal metafunction of language. In this view a clause is conceptualised as message exchanged between dialogue interactants. A range of grammatical features from traditional grammar such as \textit{mood}, \textit{modality}, \textit{aspect}, \textit{mode}, \textit{polarity}, \textit{tense} etc. are covered, under different names, in this system network. 
+    This system is introduced in the discussion of interpersonal metafunction of language. In this view a clause is conceptualised as message exchanged between dialogue interactants. A range of grammatical features from traditional grammar such as \textit{mood}, \textit{modality}, \textit{aspect}, \textit{mode}, \textit{polarity}, \textit{tense} etc. are conveyed to this system network. 
     
     The terms in SFL literature sometimes are capitalised to distinguish system names, functions and features. Note that here the \textit{MOOD} (all capital) refers here to the name of the system network; the \textit{Mood} (first capital) is an element of clause structure formed of the Subject and Finite elements which, in fact, is not used in this work because of a general orientation towards Cardiff approach to structure; and the \textit{mood} (no capital) is a type of feature carried by finite clauses (e.g. imperative, indicative, interrogative etc.)
 
-    Figure \ref{fig:clause-mood} presents the MOOD system network employed in the current implementation of the Parsimonious Vole parser. This MOOD system is largely identical to the one from \citet[162]{Halliday2013}. It has a few adaptations that were introduced during development of a small test corpus which is described in Chapter \ref{ch:evaluation}. The adaptations are in fact adoptions of a few traditional grammar features such as \textit{tense} and \textit{voice} but also inclusion of the \textit{agency} system \citep{Halliday2013}[350] which belongs to TRANSITIVITY system network in Sydney grammar. 
+    Figure \ref{fig:clause-mood} presents the MOOD system network employed in the current implementation of the Parsimonious Vole parser. This MOOD system is to a large extent similar to the one from \citet[162]{Halliday2013}. It has a few adaptations that were introduced during development the test corpus described in Chapter \ref{ch:evaluation}. The adaptations are adoptions of a few traditional grammar features such as \textit{tense} and \textit{voice} and simplification of the Hallidayan modality.
+    %the \textit{agency} system \citep{Halliday2013}[350] which belongs to TRANSITIVITY system network in Sydney grammar. 
         
-    
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=0.8\linewidth]{Figures/SFL-grammar/clause-mood.pdf}
+        \includegraphics[width=\linewidth]{Figures/SFL-grammar/mood-simplified.pdf}
         \caption{An adaptation of the MOOD system network \citep[162]{Halliday2013}}
         \label{fig:clause-mood}
     \end{figure}
 
-    The \textit{polarity} system is also adapted and was adopted from Cardiff grammar. It captures different ways in 
+    The features of this feature network apply to units of clause class only. Even if some features may be intuitive or I iterate briefly over each of them providing hints for identifying it. 
+    
+    The POLARITY system indicates whether the clause is affirmed or negated. The negative polarity is indicated, in English, by the presence of a clausal particle \textit{not} or \textit{n't}. It can also be signalled by similar negative markers in other clause elements such as the subject (None of the kids came to play.), adjunct (He is never coming back.) or complement (She loves no one.). In present work I consider the clausal negative marker only. 
+    
+    VOICE in the traditional grammar indicates, for transitive verbs, whether subject acts (\textit{active} voice) or is acted upon (\textit{passive} voice). In passive voice the subject and complement change position and the former is introduced by the preposition \textit{by}. 
+    
+    The semantics of FREEDOM system is to indicate whether the clause is \textit{free} and realises a proposition or proposal and serves to develop exchange in a dialogue either by initiating or responding to a speech act. On the other hand the \textit{bound} clauses are not open to negotiation and serve as supporting information to be taken for granted. Structurally, the bound clauses usually depend on a dominant one that is free.
+    
+    FINITENESS system indicates whether the clause is \textit{finite}, i.e. something that can be argued about. The way to make it arguable is by providing a point of reference into here and now (\textit{temporal}) or into the speaker's judgement (\textit{modal}). The latter two features constitute the MODAL-DEIXIS system. 
+    
+    The MODALITY-TYPE system is an adaptation from \citep[689--692]{Halliday2013} that focuses on the usage of the modal verbs only and is organised into ROOT and EPISTEMIC modalities. The former one is comprised of \textit{inclination-volition}, \textit{obligation-permission} and \textit{ability} while the latter of \textit{usuality} and \textit{probability} features.
+    
+    Temporal feature indicates that the clause has a tense. For simplicity I replaced the Sydney account for tense with   that of traditional grammar of English. The systematisation is on three systems, that of TIME (past, present or future), PROGRESSIVITY (progressive or non-progressive) and PERFECTIVITY (perfect or non-perfect).    
+    
+    In addition to MOOD system network I include into the parsing process the DEIXIS system network for the nominal groups determination depicted in Figure \ref{fig:ng-determination}. The nominal DEIXIS system network is described in detail in IFG4 at the nominal group section \citep[364--396]{Halliday2013}. 
+    
+    \begin{figure}[!ht]
+        \centering
+        \includegraphics[width=\linewidth]{Figures/SFL-grammar/determination-system.pdf}
+        \caption{The DEIXIS system network for the nominal group determination \citep[366]{Halliday2013}}
+        \label{fig:ng-determination}
+    \end{figure}
 
-%    * agency system from (elsewhere)
-%    * assessment extensions integrated 
-      
-%      SN developed during the development of the OCD corpus 
-     %todo continue 
+    This system network is relevant for the current work because determining the systemic selections for the entire network can be unambiguously done based on lexical information only. In Section \ref{sec:enrichment-stage} we will see a dictionary lookup method in addition to graph pattern matching to determine systemic selections. Next is briefly described the system network of TRANSITIVITY. 
       
 \subsection{TRANSITIVITY}
 \label{sec:transitivity}
-
-As explained in Section \ref{sec:functions-metafunctions} in SFL there are three metafunctions that are conflated with each other. This section briefly introduces the experiential metafunction and TRANSITIVITY as the main system that systematizes the experiential metafunction. 
+In Section \ref{sec:functions-metafunctions} I explained that SFL organises the lexicogrammar in three metafunctions conflated with each other. This section briefly reminds of the experiential metafunction and introduces the TRANSITIVITY system network that systematizes it.
 
 In this perspective, ``the clause construes a quantum of change in a flow of events as a \textit{figure}, or a configuration of a \textit{process}, \textit{participants} involved in it and any attendant \textit{circumstance}`` \citep[212]{Halliday2013}. 
 
@@ -326,12 +340,7 @@ In traditional grammar the term \textit{transitivity} refers to the property of 
 
 Sydney grammar makes a distinction between two types of experience: ``inner'' as experience inside ourselves and ``outer'' as experience in the world around us. The prototypical outer experience is that of actions and events. The inner experience is more difficult to sort but it is a kind of reply of the outer, recording it, reflecting on it, reacting on it etc. The two grammatical categories realizing the these sorts of experience are the \textit{material} process and \textit{mental} process.
 
-In addition to material and mental there is a third kind of process used in identifying, classifying and relating various kinds of experience. The grammatical category realizing this type of links is the \textit{relational} process. 
-
-Then using the combinations of the three main processes above, Halliday defines \textit{behavioural}, \textit{verbal} and \textit{existential} processes. 
-
-Cardiff grammar employs similar process types, that of \textit{action}, \textit{relational}, \textit{mental} and \textit{influential}. In addition it links these process types to realms of experience: \textit{physical}, \textit{social interaction}, \textit{psychological} and \textit{abstract}.
-Figure \ref{fig:cardiff-realm-processtype} provides the schematic connection between realms of experience and various process types that can realise that kind of experience \citep[37]{Fawcett2009}. 
+In addition to material and mental there is a third kind of process used in identifying, classifying and relating various kinds of experience. The grammatical category realizing this type of links is the \textit{relational} process. Then using the combinations of the three main processes above, Halliday defines \textit{behavioural}, \textit{verbal} and \textit{existential} processes. 
 
 \begin{figure}[!ht]
     \centering
@@ -367,26 +376,50 @@ Figure \ref{fig:cardiff-realm-processtype} provides the schematic connection bet
     \label{fig:cardiff-realm-processtype}
 \end{figure}
 
-%todo introduce Neale's work, and a few details about the processes, the participants 
-
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.7\linewidth]{Figures/SFL-grammar/Transitivity.pdf}
-    \caption{Cardiff grammar TRANSITIVITY}
+    \includegraphics[width=0.8\linewidth]{Figures/SFL-grammar/Transitivity.pdf}
+    \caption{Cardiff TRANSITIVITY system network}
     \label{fig:cardiff-transitivity}
 \end{figure}
 
-%todo continue
+Cardiff grammar employs similar process types, that of \textit{action}, \textit{relational}, \textit{mental} and \textit{influential}. In addition it links these process types to realms of experience: \textit{physical}, \textit{social interaction}, \textit{psychological} and \textit{abstract}.
+Figure \ref{fig:cardiff-realm-processtype} provides the schematic connection between realms of experience and various process types that can realise that kind of experience \citep[37]{Fawcett2009}. 
 
-\subsection{Process Type Database}
-\label{sec:ptdb}
-%todo
+\citet{Fawcett1973,Fawcett87-relational,Fawcett96} wrote the most on the TRANSITIVITY of Cardiff grammar. It is a model that evolved over time and is depicted in Figure \ref{fig:cardiff-transitivity} in its latest form. The first main process type is the \textit{action}. It has been called ``material process'' in the past, but Fawcett returned to use the term ``action'' because there are many actions that are non material, social for instance. The second main process is the \textit{relational} one that is subdivided into \textit{attributive}, \textit{posessive}, \textit{locational}, \textit{directional} and \textit{matching}.
+
+The third main distinctions is the \textit{mental} process that if fine-grained into \textit{emotion}, \textit{perception} and \textit{cognition} distinctions. \textit{Environmental} processes, even if very rare, are recognised as another main process type. \textit{Influential} processes are unique to Cardiff grammar and not accounted elsewhere in the TRANSITIVITY system. All these processes have a structural similarity, that of having an embedded event into the matrix process and which is somehow influenced. The last process type is that of \textit{event-relating} which is also very new and specific to Cardiff grammar. All the linguistic phenomena covered by this process are treated by Halliday as grammatical metaphors, but Fawcett considered that they shall be analysed as a distinct process type.
+
+The TRANSITIVITY system is highly dependent on the lexical semantics of the verbs. Therefore a vast account of verb senses and the participant configuration structure they command has to be provided in the grammar. \citet{Neale2002} has pioneered such work in her thesis which I next introduce. 
+
+\subsection{The Process Type Database}
+\label{sec:ptdb-description-technical}
+
+The Process Type Database (PTDB) \citep{Neale2002} is the key resource in the automatic Transitivity analysis addressed in Chapter \ref{ch:enrichment-stage}. It is also the source for creating the graph patterns used to enrich the constituency graph as described in the same chapter. PTDB provides information on what possible process types and participants can correspond to a particular verb meaning. The PTDB is a dictionary-like dataset of verbs bound to an exhaustive list of verb senses and the corresponding Process Configuration for each of them.
+
+In her work on PTDB \citet{Neale2002} improved the TRANSITIVITY system of the Cardiff Grammar by systematizing over 5400 senses (and process configurations) for  2750 most popular English verbs. Table \ref{tab:example-ptdb} presents a simplified sample of PTDB content.
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabulary}{\textwidth}{|C|C|c|c|}
+        \hline
+        \textbf{verb form} & \textbf{informal meaning} & \textbf{process type} & \textbf{configuration} \\ \hline
+        calculate & work out by mathematics (commission will then,calculate the number of casted votes) & cognition & Ag-Cog + Ph \\ \hline
+        & plan (newspaper articles were calculated to sway reader's opinions) & two role action & Ag + Cre \\ \hline
+        catch & run after and seize (a leopard unable to catch its normal prey) & possessive & Ag-Ca + Af-Pos \\ \hline
+        & fall ill (did you catch a cold?) & possessive & Ag-Ca + Af-Pos \\ \hline
+        catch (up with) & reach (Simon tried to catch up with others) & two role action & Ag + Ra \\ \hline
+    \end{tabulary}
+    \caption{An example of records ins PTDB}
+    \label{tab:example-ptdb}
+\end{table}
+
+
 
 \section{Concluding remarks}
 This chapter has described the grammatical units and the two system networks adopted in this work. They constitute a selection from from Sydney and Cardiff grammar implemented in the Parsimonious Vole parser.
 
 Because of its bottom up approach to unit structure, rank scale relaxation and accommodation of embedding as a general principle, Cardiff systemic functional theory is more suitable for parsing than the Sydney one. Nonetheless the unit definitions in the Cardiff grammar are deeply semantic in nature. Parsing with such units requires most of the time lexical-semantically informed decisions beyond merely syntactic variations. This is one of the reasons why the parsing attempts by \citet{ODonoghue1991a} and others in the COMMUNAL project were all based on a corpus. It is also the reason to adapt in this thesis Sydney unit structures as they are closer to traditional grammar syntax \citep{Quirk1985}.
-
 
 Next chapter lays the theoretical foundations of Dependency Grammar and introduces the Stanford dependency parser used as a departing point in current parsing pipeline. Because there is a transformation step from dependency to systemic functional consistency structure, the next chapter also covers a theoretical compatibility analysis and how such a transformation should in principle look like. 
 

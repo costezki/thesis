@@ -1,0 +1,736 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.2260061919504644
+,Recall,0.6488888888888888
+,F1,0.3352468427095293
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+10,33.015148038438355,"73, 108","40, 109",34,not especially attentive to my wife,I have been very busy lately and not especially attentive to my wife.,relational,relational
+7,0.0,"47, 51","47, 51",0,been,been,main,main
+14,0.0,"156, 160","156, 160",0,that,that,carrier,carrier
+13,0.0,"146, 150","146, 150",0,done,done,main,main
+16,1.0,"163, 171","163, 172",1,about it,about it.,attribute,attribute
+18,4.123105625617661,"156, 171","152, 172",5,that's about it,but that's about it.,attributive,attributive
+18,4.123105625617661,"156, 171","152, 172",5,that's about it,but that's about it.,relational,relational
+15,1.0,"161, 162","160, 162",1,s,'s,main,main
+23,0.0,"242, 244","242, 244",0,it,it,carrier,carrier
+20,0.0,"189, 192","189, 192",0,try,try,main,main
+19,2.0,"186, 188","184, 188",2,we,", we",agent,agent
+22,0.0,"175, 237","175, 237",0,"As always, we try to pack too much into the pre-Christmas time","As always, we try to pack too much into the pre-Christmas time",influential,influential
+26,4.123105625617661,"242, 261","238, 262",5,it's very stressful,and it's very stressful.,attributive,attributive
+26,4.123105625617661,"242, 261","238, 262",5,it's very stressful,and it's very stressful.,relational,relational
+25,1.0,"247, 261","247, 262",1,very stressful,very stressful.,attribute,attribute
+24,1.0,"245, 246","244, 246",1,s,'s,main,main
+21,0.0,"193, 237","193, 237",0,to pack too much into the pre-Christmas time,to pack too much into the pre-Christmas time,phenomenon,phenomenon
+30,2.0,"305, 329","303, 329",2,one of the main stresses,", one of the main stresses",carrier,carrier
+31,0.0,"330, 332","330, 332",0,is,is,main,main
+27,26.30589287593181,"265, 278","269, 304",28,For those who,"those who understand the reference,",affected-cognizant,affected-cognizant
+28,0.0,"279, 289","279, 289",0,understand,understand,main,main
+41,32.0,"429, 465","429, 433",32,what for us constitutes a real fight,what,possessed,possessed
+39,2.0,"422, 424","420, 424",2,we,", we",carrier,carrier
+198,0.0,"441, 452","441, 452",0,constitutes,constitutes,main,main
+40,0.0,"425, 428","425, 428",0,had,had,main,main
+42,1.0,"403, 465","403, 466",1,"Sunday a week ago, we had what for us constitutes a real fight","Sunday a week ago, we had what for us constitutes a real fight.",relational,relational
+42,1.0,"403, 465","403, 466",1,"Sunday a week ago, we had what for us constitutes a real fight","Sunday a week ago, we had what for us constitutes a real fight.",possessive,possessive
+44,0.0,"470, 473","470, 473",0,had,had,main,main
+46,0.0,"526, 527","526, 527",0,I,I,carrier,carrier
+47,0.0,"528, 531","528, 531",0,had,had,main,main
+50,4.123105625617661,"526, 550","522, 551",5,I had an evening meeting,and I had an evening meeting.,relational,relational
+50,4.123105625617661,"526, 550","522, 551",5,I had an evening meeting,and I had an evening meeting.,possessive,possessive
+45,0.0,"474, 521","474, 521",0,an afternoon Christmas party with her relatives,an afternoon Christmas party with her relatives,possessed,possessed
+48,1.0,"532, 550","532, 551",1,an evening meeting,an evening meeting.,possessed,possessed
+49,0.0,"467, 521","467, 521",0,We had an afternoon Christmas party with her relatives,We had an afternoon Christmas party with her relatives,relational,relational
+49,0.0,"467, 521","467, 521",0,We had an afternoon Christmas party with her relatives,We had an afternoon Christmas party with her relatives,possessive,possessive
+43,0.0,"467, 469","467, 469",0,We,We,carrier,carrier
+60,0.0,"628, 631","628, 631",0,was,was,main,main
+59,0.0,"625, 627","625, 627",0,it,it,carrier,carrier
+64,61.39218191268331,"565, 613","552, 673",73,I'd never put my meeting on our calendar at home,It turns out I'd never put my meeting on our calendar at home ( although it was on mine at work and in my portable one. ),locational,locational
+69,67.1863081289633,"726, 739","709, 804",82,how many cars,discussion about how many cars had to go ( because our son who lives near us needed to get back,agent,agent
+201,67.60177512462228,"768, 771","709, 804",92,who,discussion about how many cars had to go ( because our son who lives near us needed to get back,carrier,carrier
+72,16.1245154965971,"760, 785","768, 771",22,our son who lives near us,who,affected-carrier,affected-carrier
+81,63.0,"860, 877","860, 940",63,the way that went,the way that went it seemed to me she was aware we needed to get back early too.,action,action
+204,169.66437457521835,"768, 785","699, 940",224,who lives near us,there was discussion about how many cars had to go ( because our son who lives near us needed to get back from the party for an evening commitment himself ) and the way that went it seemed to me she was aware we needed to get back early too.,locational,locational
+77,192.89893727027115,"726, 749","699, 940",218,how many cars had to go,there was discussion about how many cars had to go ( because our son who lives near us needed to get back from the party for an evening commitment himself ) and the way that went it seemed to me she was aware we needed to get back early too.,action,action
+80,0.0,"873, 877","873, 877",0,went,went,main,main
+78,50.0,"760, 853","810, 853",50,our son who lives near us needed to get back from the party for an evening commitment himself,the party for an evening commitment himself,directional,directional
+78,50.0,"760, 853","810, 853",50,our son who lives near us needed to get back from the party for an evening commitment himself,the party for an evening commitment himself,relational,relational
+202,0.0,"772, 777","772, 777",0,lives,lives,main,main
+85,14.035668847618199,"894, 939","908, 940",15,she was aware we needed to get back early too,we needed to get back early too.,mental,mental
+67,0.0,"705, 708","705, 708",0,was,was,main,main
+74,5.830951894845301,"796, 804","793, 799",7,get back,to get,main,main
+57,10.04987562112089,"908, 939","918, 940",11,we needed to get back early too,to get back early too.,phenomenon,phenomenon
+83,0.0,"881, 887","881, 887",0,seemed,seemed,main,main
+86,1.0,"878, 939","878, 940",1,it seemed to me she was aware we needed to get back early too,it seemed to me she was aware we needed to get back early too.,mental,mental
+85,16.0312195418814,"894, 939","878, 940",17,she was aware we needed to get back early too,it seemed to me she was aware we needed to get back early too.,two-role-cognition,two-role-cognition
+71,3.0,"747, 749","744, 749",3,go,to go,main,main
+62,1.0,"894, 939","894, 940",1,she was aware we needed to get back early too,she was aware we needed to get back early too.,phenomenon,phenomenon
+104,0.0,"1031, 1038","1031, 1038",0,started,started,main,main
+100,0.0,"1004, 1008","1004, 1008",0,came,came,main,main
+105,31.0,"1039, 1060","1039, 1091",31,to set that in motion,to set that in motion ( good-byes are always long. ),created-phenomenon,created-phenomenon
+110,0.0,"1063, 1072","1063, 1072",0,good-byes,good-byes,carrier,carrier
+96,4.0,"949, 959","949, 955",4,turned out,turned,main,main
+111,0.0,"1073, 1076","1073, 1076",0,are,are,main,main
+113,3.605551275463989,"1063, 1088","1061, 1091",5,good-byes are always long,( good-byes are always long. ),relational,relational
+103,0.0,"1029, 1030","1029, 1030",0,I,I,agent,agent
+108,14.0,"995, 1024","1009, 1024",14,the time came for us to leave,for us to leave,action,action
+109,31.25699921617557,"1029, 1060","1025, 1091",35,I started to set that in motion,and I started to set that in motion ( good-byes are always long. ),influential,influential
+114,2.0,"1125, 1128","1123, 1128",2,she,", she",agent,agent
+127,10.04987562112089,"1236, 1261","1246, 1262",11,Christmas with her family,with her family.,affected,affected
+118,0.0,"1092, 1199","1092, 1199",0,"The next day among other things, she told me not to bother to go out and buy any Christmas presents for her","The next day among other things, she told me not to bother to go out and buy any Christmas presents for her",mental,mental
+118,0.0,"1092, 1199","1092, 1199",0,"The next day among other things, she told me not to bother to go out and buy any Christmas presents for her","The next day among other things, she told me not to bother to go out and buy any Christmas presents for her",three-role-cognition,three-role-cognition
+122,0.0,"1219, 1223","1219, 1223",0,them,them,affected,affected
+117,3.0,"1137, 1199","1134, 1199",3,not to bother to go out and buy any Christmas presents for her,me not to bother to go out and buy any Christmas presents for her,phenomenon,phenomenon
+128,2.23606797749979,"1225, 1261","1223, 1262",3,I'd ruined Christmas with her family,", I'd ruined Christmas with her family.",action,action
+119,2.0,"1201, 1204","1199, 1204",2,she,", she",agent,agent
+121,4.0,"1214, 1218","1210, 1218",4,open,n't open,main,main
+124,2.0,"1225, 1226","1223, 1226",2,I,", I",agent,agent
+115,0.0,"1129, 1133","1129, 1133",0,told,told,main,main
+126,0.0,"1229, 1235","1229, 1235",0,ruined,ruined,main,main
+130,0.0,"1267, 1270","1267, 1270",0,was,was,main,main
+131,1.0,"1271, 1293","1271, 1294",1,a tense couple of days,a tense couple of days.,attribute,attribute
+129,0.0,"1264, 1266","1264, 1266",0,It,It,carrier,carrier
+132,1.0,"1264, 1293","1264, 1294",1,It was a tense couple of days,It was a tense couple of days.,attributive,attributive
+132,1.0,"1264, 1293","1264, 1294",1,It was a tense couple of days,It was a tense couple of days.,relational,relational
+134,0.0,"1311, 1318","1311, 1318",0,happens,happens,main,main
+92,4.123105625617661,"1300, 1328","1296, 1329",5,guess what happens yesterday,"So, guess what happens yesterday?",mental,mental
+92,4.123105625617661,"1300, 1328","1296, 1329",5,guess what happens yesterday,"So, guess what happens yesterday?",two-role-cognition,two-role-cognition
+135,11.0,"1306, 1318","1306, 1329",11,what happens,what happens yesterday?,action,action
+133,0.0,"1306, 1310","1306, 1310",0,what,what,affected,affected
+90,0.0,"1300, 1305","1300, 1305",0,guess,guess,main,main
+91,1.0,"1306, 1328","1306, 1329",1,what happens yesterday,what happens yesterday?,phenomenon,phenomenon
+192,0.0,"1544, 1546","1544, 1546",0,be,be,main,main
+137,0.0,"1334, 1337","1334, 1337",0,had,had,main,main
+190,0.0,"1535, 1537","1535, 1537",0,it,it,carrier,carrier
+146,14.0,"1497, 1519","1483, 1519",14,the weather cleared up,to work until the weather cleared up,action,action
+154,4.123105625617661,"1571, 1600","1567, 1601",5,the road crews had gotten out,and the road crews had gotten out.,action,action
+147,0.0,"1522, 1527","1522, 1527",0,radar,radar,agent,agent
+149,0.0,"1535, 1563","1535, 1563",0,it would be in an hour or so,it would be in an hour or so,phenomenon,phenomenon
+153,4.0,"1590, 1600","1590, 1596",4,gotten out,gotten,main,main
+136,0.0,"1331, 1333","1331, 1333",0,We,We,carrier,carrier
+142,4.0,"1331, 1382","1331, 1386",4,We had some really bad weather early in the morning,We had some really bad weather early in the morning and,relational,relational
+142,4.0,"1331, 1382","1331, 1386",4,We had some really bad weather early in the morning,We had some really bad weather early in the morning and,possessive,possessive
+143,93.60555539069249,"1387, 1490","1476, 1519",80,"after looking at the traffic reports, we mutually agreed there was no point to my trying to get to work",to get to work until the weather cleared up,mental,mental
+143,93.60555539069249,"1387, 1490","1476, 1519",80,"after looking at the traffic reports, we mutually agreed there was no point to my trying to get to work",to get to work until the weather cleared up,two-role-cognition,two-role-cognition
+140,0.0,"1437, 1443","1437, 1443",0,agreed,agreed,main,main
+145,3.0,"1509, 1519","1509, 1516",3,cleared up,cleared,main,main
+150,2.8284271247461903,"1522, 1563","1520, 1565",4,radar showed it would be in an hour or so,( radar showed it would be in an hour or so ),mental,mental
+150,2.8284271247461903,"1522, 1563","1520, 1565",4,radar showed it would be in an hour or so,( radar showed it would be in an hour or so ),three-role-cognition,three-role-cognition
+151,0.0,"1571, 1585","1571, 1585",0,the road crews,the road crews,agent,agent
+148,0.0,"1528, 1534","1528, 1534",0,showed,showed,main,main
+141,43.18564576337837,"1444, 1490","1476, 1519",36,there was no point to my trying to get to work,to get to work until the weather cleared up,phenomenon,phenomenon
+144,44.384682042344295,"1497, 1508","1454, 1519",54,the weather,no point to my trying to get to work until the weather cleared up,agent,agent
+138,21.0,"1338, 1361","1338, 1382",21,some really bad weather,some really bad weather early in the morning,possessed,possessed
+94,0.0,"1450, 1453","1450, 1453",0,was,was,main,main
+156,0.0,"1605, 1609","1605, 1609",0,said,said,main,main
+162,1.0,"1643, 1658","1643, 1659",1,some more sleep,"some more sleep""",possessed,possessed
+159,2.0,"1633, 1634","1631, 1634",2,I,", I",agent-carrier,agent-carrier
+155,0.0,"1603, 1604","1603, 1604",0,I,I,agent,agent
+157,0.0,"1610, 1659","1610, 1659",0,"something like, ""good, I can get some more sleep""","something like, ""good, I can get some more sleep""",phenomenon,phenomenon
+158,1.0,"1603, 1659","1603, 1660",1,"I said something like, ""good, I can get some more sleep""","I said something like, ""good, I can get some more sleep"".",mental,mental
+158,1.0,"1603, 1659","1603, 1660",1,"I said something like, ""good, I can get some more sleep""","I said something like, ""good, I can get some more sleep"".",three-role-cognition,three-role-cognition
+161,0.0,"1639, 1642","1639, 1642",0,get,get,main,main
+170,9.0,"1694, 1708","1694, 1717",9,something else,"something else in mind""",phenomenon,phenomenon
+169,0.0,"1690, 1693","1690, 1693",0,had,had,main,main
+102,0.0,"1671, 1717","1671, 1717",0,"something like, ""I had something else in mind""","something like, ""I had something else in mind""",phenomenon,phenomenon
+167,2.0,"1662, 1717","1662, 1719",2,"She said something like, ""I had something else in mind""","She said something like, ""I had something else in mind"" .",mental,mental
+171,28.231188426986208,"1688, 1708","1662, 1719",37,I had something else,"She said something like, ""I had something else in mind"" .",two-role-cognition,two-role-cognition
+167,2.0,"1662, 1717","1662, 1719",2,"She said something like, ""I had something else in mind""","She said something like, ""I had something else in mind"" .",three-role-cognition,three-role-cognition
+165,0.0,"1666, 1670","1666, 1670",0,said,said,main,main
+164,0.0,"1662, 1665","1662, 1665",0,She,She,agent,agent
+177,1.0,"1745, 1749","1745, 1750",1,good,good.,attribute,attribute
+176,0.0,"1741, 1744","1741, 1744",0,was,was,main,main
+178,4.123105625617661,"1738, 1749","1734, 1750",5,it was good,And it was good.,attributive,attributive
+178,4.123105625617661,"1738, 1749","1734, 1750",5,it was good,And it was good.,relational,relational
+175,0.0,"1738, 1740","1738, 1740",0,it,it,carrier,carrier
+180,0.0,"1756, 1760","1756, 1760",0,know,know,main,main
+183,0.0,"1844, 1848","1844, 1848",0,that,that,carrier,carrier
+184,4.123105625617661,"1849, 1850","1848, 1854",5,s,'s not,main,main
+185,1.0,"1855, 1888","1855, 1889",1,the point of this particular post,the point of this particular post.,attribute,attribute
+187,0.0,"1769, 1772","1769, 1772",0,was,was,main,main
+189,4.123105625617661,"1844, 1888","1840, 1889",5,that's not the point of this particular post,but that's not the point of this particular post.,attributive,attributive
+189,4.123105625617661,"1844, 1888","1840, 1889",5,that's not the point of this particular post,but that's not the point of this particular post.,relational,relational
+181,36.24913792078372,"1767, 1805","1782, 1838",44,I was at fault leading up to the fight,"leading up to the fight, both generally and specifically",relational,relational
+204,169.66437457521835,"768, 785","699, 940",224,who lives near us,there was discussion about how many cars had to go ( because our son who lives near us needed to get back from the party for an evening commitment himself ) and the way that went it seemed to me she was aware we needed to get back early too.,relational,relational
+,
+,Manual mismatching all parsed (False Negative)
+4,"16, 36",I really am confused,relational
+4,"16, 36",I really am confused,attributive
+1,"16, 17",I,carrier
+2,"25, 27",am,main
+3,"28, 36",confused,attribute
+196,"40, 68",I have been very busy lately,relational
+196,"40, 68",I have been very busy lately,attributive
+5,"40, 41",I,carrier
+8,"52, 61",very busy,attribute
+10,"73, 108",not especially attentive to my wife,attributive
+9,"77, 108",especially attentive to my wife,attribute
+17,"112, 150","The necessary, routine things get done",action
+11,"112, 141","The necessary, routine things",affected
+33,"265, 303",For those who understand the reference,mental
+33,"265, 303",For those who understand the reference,two-role-cognition
+29,"290, 303",the reference,phenomenon
+34,"305, 352",one of the main stresses is the cookie marathon,event-relating
+32,"333, 352",the cookie marathon,phenomenon
+38,"354, 399",the other was getting the Christmas cards out,event-relating
+35,"354, 363",the other,carrier
+36,"364, 367",was,main
+37,"368, 399",getting the Christmas cards out,phenomenon
+200,"429, 465",what for us constitutes a real fight,relational
+200,"429, 465",what for us constitutes a real fight,attributive
+166,"429, 440",what for us,carrier
+199,"453, 465",a real fight,attribute
+63,"552, 613",It turns out I'd never put my meeting on our calendar at home,mental
+63,"552, 613",It turns out I'd never put my meeting on our calendar at home,three-role-cognition
+52,"555, 564",turns out,main
+64,"565, 613",I'd never put my meeting on our calendar at home,relational
+197,"565, 613",I'd never put my meeting on our calendar at home,phenomenon
+53,"565, 566",I,agent
+55,"575, 578",put,main
+56,"579, 589",my meeting,affected-carrier
+58,"590, 613",on our calendar at home,location
+65,"625, 670",it was on mine at work and in my portable one,relational
+65,"625, 670",it was on mine at work and in my portable one,locational
+61,"632, 670",on mine at work and in my portable one,location
+76,"675, 749",Leading up to the party there was discussion about how many cars had to go,relational
+76,"675, 749",Leading up to the party there was discussion about how many cars had to go,attributive
+66,"699, 704",there,carrier
+68,"709, 749",discussion about how many cars had to go,attribute
+203,"778, 785",near us,location
+75,"805, 819",from the party,source
+79,"860, 872",the way that,agent
+86,"878, 939",it seemed to me she was aware we needed to get back early too,three-role-cognition
+84,"888, 893",to me,affected-cognizant
+87,"894, 897",she,cognizant
+89,"902, 907",aware,main
+107,"946, 989",it turned out to be quite a surprise to her,mental
+107,"946, 989",it turned out to be quite a surprise to her,three-role-cognition
+98,"960, 989",to be quite a surprise to her,phenomenon
+99,"995, 1003",the time,agent
+113,"1063, 1088",good-byes are always long,attributive
+112,"1084, 1088",long,attribute
+116,"1134, 1136",me,affected-cognizant
+123,"1201, 1223",she wouldn't open them,action
+139,"1425, 1427",we,cognizant
+101,"1444, 1490",there was no point to my trying to get to work,relational
+101,"1444, 1490",there was no point to my trying to get to work,attributive
+93,"1444, 1449",there,carrier
+97,"1454, 1490",no point to my trying to get to work,attribute
+194,"1535, 1563",it would be in an hour or so,relational
+194,"1535, 1563",it would be in an hour or so,locational
+193,"1547, 1563",in an hour or so,location
+163,"1633, 1658",I can get some more sleep,relational
+163,"1633, 1658",I can get some more sleep,possessive
+171,"1688, 1708",I had something else,mental
+168,"1688, 1689",I,cognizant
+174,"1724, 1731",she did,mental
+174,"1724, 1731",she did,two-role-cognition
+172,"1724, 1727",she,cognizant
+182,"1754, 1805",I know where I was at fault leading up to the fight,mental
+182,"1754, 1805",I know where I was at fault leading up to the fight,two-role-cognition
+179,"1754, 1755",I,cognizant
+181,"1767, 1805",I was at fault leading up to the fight,attributive
+195,"1767, 1805",I was at fault leading up to the fight,phenomenon
+186,"1767, 1768",I,carrier
+188,"1773, 1781",at fault,attribute
+,
+,Parsed mismatching all manual (False Positives)
+28,"28, 36",confused,main
+52,"52, 109",very busy lately and not especially attentive to my wife.,affected-emoter
+52,"52, 109",very busy lately and not especially attentive to my wife.,affected-path
+52,"52, 109",very busy lately and not especially attentive to my wife.,affected-perceiver
+52,"52, 109",very busy lately and not especially attentive to my wife.,destination
+52,"52, 109",very busy lately and not especially attentive to my wife.,affected-cognizant
+52,"52, 109",very busy lately and not especially attentive to my wife.,affected-carrier
+52,"52, 109",very busy lately and not especially attentive to my wife.,affected-destination
+52,"52, 109",very busy lately and not especially attentive to my wife.,affected
+52,"52, 109",very busy lately and not especially attentive to my wife.,affected-possessed
+52,"52, 109",very busy lately and not especially attentive to my wife.,affected-source
+52,"52, 109",very busy lately and not especially attentive to my wife.,range
+40,"40, 109",I have been very busy lately and not especially attentive to my wife.,process
+40,"40, 109",I have been very busy lately and not especially attentive to my wife.,directional
+40,"40, 109",I have been very busy lately and not especially attentive to my wife.,two-role-action
+40,"40, 41",I,agent
+40,"40, 41",I,agent-cognizant
+40,"40, 41",I,agent-carrier
+40,"40, 41",I,agent-perceiver
+40,"40, 41",I,perceiver
+156,"156, 160",that,affected-carrier
+156,"156, 160",that,agent-carrier
+152,"152, 172",but that's about it.,process
+152,"152, 172",but that's about it.,one-role-action
+242,"242, 244",it,affected-carrier
+242,"242, 244",it,agent-carrier
+193,"193, 200",to pack,main
+184,"184, 188",", we",agent-cognizant
+184,"184, 188",", we",agent-carrier
+184,"184, 188",", we",agent-perceiver
+175,"175, 237","As always, we try to pack too much into the pre-Christmas time",process
+175,"175, 237","As always, we try to pack too much into the pre-Christmas time",tentative
+238,"238, 262",and it's very stressful.,process
+238,"238, 262",and it's very stressful.,locational
+247,"247, 262",very stressful.,location
+193,"193, 237",to pack too much into the pre-Christmas time,created-phenomenon
+303,"303, 329",", one of the main stresses",agent
+303,"303, 329",", one of the main stresses",agent-cognizant
+303,"303, 329",", one of the main stresses",affected-carrier
+303,"303, 329",", one of the main stresses",agent-carrier
+303,"303, 329",", one of the main stresses",agent-perceiver
+352,"352, 363",; the other,agent
+352,"352, 363",; the other,agent-cognizant
+352,"352, 363",; the other,agent-carrier
+352,"352, 363",; the other,agent-perceiver
+352,"352, 363",; the other,perceiver
+368,"368, 375",getting,main
+269,"269, 304","those who understand the reference,",affected-emoter
+269,"269, 304","those who understand the reference,",affected-path
+269,"269, 304","those who understand the reference,",affected-perceiver
+269,"269, 304","those who understand the reference,",location
+269,"269, 304","those who understand the reference,",affected-carrier
+269,"269, 304","those who understand the reference,",affected-destination
+269,"269, 304","those who understand the reference,",affected
+269,"269, 304","those who understand the reference,",affected-possessed
+269,"269, 304","those who understand the reference,",affected-source
+269,"269, 304","those who understand the reference,",range
+376,"376, 395",the Christmas cards,affected-emoter
+376,"376, 395",the Christmas cards,affected-path
+376,"376, 395",the Christmas cards,affected-perceiver
+376,"376, 395",the Christmas cards,source
+376,"376, 395",the Christmas cards,affected-cognizant
+376,"376, 395",the Christmas cards,affected-carrier
+376,"376, 395",the Christmas cards,affected-destination
+376,"376, 395",the Christmas cards,affected
+376,"376, 395",the Christmas cards,affected-possessed
+376,"376, 395",the Christmas cards,affected-source
+376,"376, 395",the Christmas cards,carrier
+352,"352, 400",; the other was getting the Christmas cards out.,process
+352,"352, 400",; the other was getting the Christmas cards out.,directional
+352,"352, 400",; the other was getting the Christmas cards out.,relational
+352,"352, 400",; the other was getting the Christmas cards out.,two-role-action
+352,"352, 400",; the other was getting the Christmas cards out.,action
+263,"263, 352","( For those who understand the reference, one of the main stresses is the cookie marathon",process
+263,"263, 352","( For those who understand the reference, one of the main stresses is the cookie marathon",locational
+263,"263, 352","( For those who understand the reference, one of the main stresses is the cookie marathon",relational
+263,"263, 352","( For those who understand the reference, one of the main stresses is the cookie marathon",two-role-action
+429,"429, 433",what,phenomenon
+429,"429, 433",what,affected-emoter
+429,"429, 433",what,created-phenomenon
+429,"429, 433",what,affected-path
+429,"429, 433",what,affected-perceiver
+429,"429, 433",what,affected-cognizant
+429,"429, 433",what,affected-carrier
+429,"429, 433",what,affected-destination
+429,"429, 433",what,affected
+429,"429, 433",what,affected-possessed
+429,"429, 433",what,affected-source
+429,"429, 433",what,created
+420,"420, 424",", we",agent
+420,"420, 424",", we",agent-cognizant
+420,"420, 424",", we",affected-carrier
+420,"420, 424",", we",affected
+420,"420, 424",", we",agent-carrier
+420,"420, 424",", we",agent-perceiver
+420,"420, 424",", we",perceiver
+403,"403, 466","Sunday a week ago, we had what for us constitutes a real fight.",process
+403,"403, 466","Sunday a week ago, we had what for us constitutes a real fight.",causative
+403,"403, 466","Sunday a week ago, we had what for us constitutes a real fight.",two-role-action
+403,"403, 466","Sunday a week ago, we had what for us constitutes a real fight.",action
+526,"526, 527",I,agent
+526,"526, 527",I,agent-cognizant
+526,"526, 527",I,affected-carrier
+526,"526, 527",I,affected
+526,"526, 527",I,agent-carrier
+526,"526, 527",I,agent-perceiver
+526,"526, 527",I,perceiver
+522,"522, 551",and I had an evening meeting.,process
+522,"522, 551",and I had an evening meeting.,causative
+522,"522, 551",and I had an evening meeting.,two-role-action
+522,"522, 551",and I had an evening meeting.,action
+474,"474, 521",an afternoon Christmas party with her relatives,affected
+474,"474, 521",an afternoon Christmas party with her relatives,affected-possessed
+532,"532, 551",an evening meeting.,phenomenon
+532,"532, 551",an evening meeting.,affected-emoter
+532,"532, 551",an evening meeting.,created-phenomenon
+532,"532, 551",an evening meeting.,affected-path
+532,"532, 551",an evening meeting.,affected-perceiver
+532,"532, 551",an evening meeting.,affected-cognizant
+532,"532, 551",an evening meeting.,affected-carrier
+532,"532, 551",an evening meeting.,affected-destination
+532,"532, 551",an evening meeting.,affected
+532,"532, 551",an evening meeting.,affected-possessed
+532,"532, 551",an evening meeting.,affected-source
+532,"532, 551",an evening meeting.,created
+467,"467, 521",We had an afternoon Christmas party with her relatives,process
+467,"467, 469",We,affected-carrier
+467,"467, 469",We,agent-carrier
+625,"625, 627",it,affected-carrier
+625,"625, 627",it,affected
+625,"625, 627",it,agent-carrier
+552,"552, 673",It turns out I'd never put my meeting on our calendar at home ( although it was on mine at work and in my portable one. ),process
+552,"552, 673",It turns out I'd never put my meeting on our calendar at home ( although it was on mine at work and in my portable one. ),action
+552,"552, 673",It turns out I'd never put my meeting on our calendar at home ( although it was on mine at work and in my portable one. ),one-role-action
+709,"709, 804",discussion about how many cars had to go ( because our son who lives near us needed to get back,affected-emoter
+709,"709, 804",discussion about how many cars had to go ( because our son who lives near us needed to get back,affected-path
+709,"709, 804",discussion about how many cars had to go ( because our son who lives near us needed to get back,affected-perceiver
+709,"709, 804",discussion about how many cars had to go ( because our son who lives near us needed to get back,affected-cognizant
+709,"709, 804",discussion about how many cars had to go ( because our son who lives near us needed to get back,affected-destination
+709,"709, 804",discussion about how many cars had to go ( because our son who lives near us needed to get back,affected
+709,"709, 804",discussion about how many cars had to go ( because our son who lives near us needed to get back,agent-carrier
+709,"709, 804",discussion about how many cars had to go ( because our son who lives near us needed to get back,affected-possessed
+709,"709, 804",discussion about how many cars had to go ( because our son who lives near us needed to get back,agent-perceiver
+709,"709, 804",discussion about how many cars had to go ( because our son who lives near us needed to get back,affected-source
+709,"709, 804",discussion about how many cars had to go ( because our son who lives near us needed to get back,perceiver
+786,"786, 792",needed,main
+911,"911, 917",needed,main
+908,"908, 910",we,affected-emoter
+908,"908, 910",we,emoter
+740,"740, 743",had,main
+768,"768, 771",who,affected-emoter
+768,"768, 771",who,affected-path
+768,"768, 771",who,affected-perceiver
+768,"768, 771",who,affected-cognizant
+768,"768, 771",who,affected-destination
+768,"768, 771",who,affected
+768,"768, 771",who,affected-possessed
+768,"768, 771",who,affected-source
+878,"878, 880",it,affected-carrier
+878,"878, 880",it,agent-carrier
+878,"878, 880",it,carrier
+860,"860, 940",the way that went it seemed to me she was aware we needed to get back early too.,process
+860,"860, 940",the way that went it seemed to me she was aware we needed to get back early too.,one-role-action
+699,"699, 940",there was discussion about how many cars had to go ( because our son who lives near us needed to get back from the party for an evening commitment himself ) and the way that went it seemed to me she was aware we needed to get back early too.,process
+699,"699, 940",there was discussion about how many cars had to go ( because our son who lives near us needed to get back from the party for an evening commitment himself ) and the way that went it seemed to me she was aware we needed to get back early too.,one-role-action
+846,"846, 853",himself,affected-emoter
+846,"846, 853",himself,affected-path
+846,"846, 853",himself,affected-perceiver
+846,"846, 853",himself,destination
+846,"846, 853",himself,affected-cognizant
+846,"846, 853",himself,affected-carrier
+846,"846, 853",himself,affected-destination
+846,"846, 853",himself,affected
+846,"846, 853",himself,affected-possessed
+846,"846, 853",himself,affected-source
+846,"846, 853",himself,possessed
+846,"846, 853",himself,range
+846,"846, 853",himself,carrier
+760,"760, 785",our son who lives near us,affected-emoter
+760,"760, 785",our son who lives near us,emoter
+810,"810, 853",the party for an evening commitment himself,process
+810,"810, 853",the party for an evening commitment himself,possessive
+810,"810, 853",the party for an evening commitment himself,two-role-action
+810,"810, 853",the party for an evening commitment himself,action
+810,"810, 853",the party for an evening commitment himself,phenomenon
+810,"810, 853",the party for an evening commitment himself,created-phenomenon
+918,"918, 924",to get,main
+675,"675, 682",Leading,main
+908,"908, 940",we needed to get back early too.,process
+908,"908, 940",we needed to get back early too.,desiderative
+898,"898, 901",was,main
+768,"768, 785",who lives near us,process
+768,"768, 785",who lives near us,action
+768,"768, 785",who lives near us,one-role-action
+918,"918, 940",to get back early too.,created-phenomenon
+888,"888, 893",to me,attribute
+878,"878, 940",it seemed to me she was aware we needed to get back early too.,process
+878,"878, 940",it seemed to me she was aware we needed to get back early too.,attributive
+750,"750, 804",( because our son who lives near us needed to get back,process
+750,"750, 804",( because our son who lives near us needed to get back,mental
+750,"750, 804",( because our son who lives near us needed to get back,desiderative
+894,"894, 940",she was aware we needed to get back early too.,created-phenomenon
+1039,"1039, 1091",to set that in motion ( good-byes are always long. ),phenomenon
+1039,"1039, 1091",to set that in motion ( good-byes are always long. ),created
+1063,"1063, 1072",good-byes,affected-carrier
+1063,"1063, 1072",good-byes,agent-carrier
+1077,"1077, 1089",always long.,location
+1051,"1051, 1060",in motion,location
+1039,"1039, 1060",to set that in motion,process
+1039,"1039, 1060",to set that in motion,locational
+1039,"1039, 1060",to set that in motion,relational
+1061,"1061, 1091",( good-byes are always long. ),process
+1061,"1061, 1091",( good-byes are always long. ),locational
+1013,"1013, 1015",us,agent
+1013,"1013, 1015",us,agent-cognizant
+1013,"1013, 1015",us,agent-carrier
+1013,"1013, 1015",us,agent-perceiver
+1016,"1016, 1024",to leave,main
+1029,"1029, 1030",I,affected-emoter
+1029,"1029, 1030",I,affected-path
+1029,"1029, 1030",I,affected-perceiver
+1029,"1029, 1030",I,agent-cognizant
+1029,"1029, 1030",I,affected-cognizant
+1029,"1029, 1030",I,affected-carrier
+1029,"1029, 1030",I,affected-destination
+1029,"1029, 1030",I,affected
+1029,"1029, 1030",I,agent-carrier
+1029,"1029, 1030",I,affected-possessed
+1029,"1029, 1030",I,agent-perceiver
+1029,"1029, 1030",I,affected-source
+1039,"1039, 1045",to set,main
+1009,"1009, 1024",for us to leave,process
+1009,"1009, 1024",for us to leave,one-role-action
+1025,"1025, 1091",and I started to set that in motion ( good-byes are always long. ),process
+1025,"1025, 1091",and I started to set that in motion ( good-byes are always long. ),starting
+960,"960, 965",to be,main
+1046,"1046, 1050",that,affected-carrier
+1046,"1046, 1050",that,affected
+1046,"1046, 1050",that,carrier
+1161,"1161, 1199",and buy any Christmas presents for her,process
+1161,"1161, 1199",and buy any Christmas presents for her,relational
+1161,"1161, 1199",and buy any Christmas presents for her,possessive
+1192,"1192, 1199",for her,affected-possessed
+1192,"1192, 1199",for her,possessed
+1123,"1123, 1128",", she",cognizant
+1123,"1123, 1128",", she",agent-cognizant
+1246,"1246, 1262",with her family.,affected-emoter
+1246,"1246, 1262",with her family.,affected-path
+1246,"1246, 1262",with her family.,affected-perceiver
+1246,"1246, 1262",with her family.,affected-cognizant
+1246,"1246, 1262",with her family.,affected-carrier
+1246,"1246, 1262",with her family.,affected-destination
+1246,"1246, 1262",with her family.,affected-possessed
+1246,"1246, 1262",with her family.,affected-source
+1092,"1092, 1199","The next day among other things, she told me not to bother to go out and buy any Christmas presents for her",process
+1219,"1219, 1223",them,affected-emoter
+1219,"1219, 1223",them,created-phenomenon
+1219,"1219, 1223",them,affected-path
+1219,"1219, 1223",them,affected-perceiver
+1219,"1219, 1223",them,affected-cognizant
+1219,"1219, 1223",them,affected-carrier
+1219,"1219, 1223",them,affected-destination
+1219,"1219, 1223",them,affected-possessed
+1219,"1219, 1223",them,affected-source
+1219,"1219, 1223",them,created
+1134,"1134, 1199",me not to bother to go out and buy any Christmas presents for her,created-phenomenon
+1137,"1137, 1150",not to bother,main
+1092,"1092, 1123",The next day among other things,matchee
+1223,"1223, 1262",", I'd ruined Christmas with her family.",process
+1223,"1223, 1262",", I'd ruined Christmas with her family.",two-role-action
+1151,"1151, 1160",to go out,process
+1151,"1151, 1160",to go out,directional
+1151,"1151, 1160",to go out,relational
+1151,"1151, 1160",to go out,action
+1151,"1151, 1160",to go out,one-role-action
+1236,"1236, 1245",Christmas,affected-emoter
+1236,"1236, 1245",Christmas,affected-path
+1236,"1236, 1245",Christmas,affected-perceiver
+1236,"1236, 1245",Christmas,affected-cognizant
+1236,"1236, 1245",Christmas,affected-carrier
+1236,"1236, 1245",Christmas,affected-destination
+1236,"1236, 1245",Christmas,affected
+1236,"1236, 1245",Christmas,affected-possessed
+1236,"1236, 1245",Christmas,affected-source
+1199,"1199, 1204",", she",agent-cognizant
+1199,"1199, 1204",", she",agent-carrier
+1199,"1199, 1204",", she",agent-perceiver
+1165,"1165, 1168",buy,main
+1223,"1223, 1226",", I",agent-cognizant
+1223,"1223, 1226",", I",agent-carrier
+1223,"1223, 1226",", I",agent-perceiver
+1151,"1151, 1156",to go,main
+1169,"1169, 1191",any Christmas presents,affected-possessed
+1169,"1169, 1191",any Christmas presents,possessed
+1271,"1271, 1294",a tense couple of days.,location
+1264,"1264, 1266",It,agent
+1264,"1264, 1266",It,affected-carrier
+1264,"1264, 1266",It,agent-carrier
+1264,"1264, 1266",It,agent-perceiver
+1264,"1264, 1266",It,perceiver
+1264,"1264, 1294",It was a tense couple of days.,process
+1264,"1264, 1294",It was a tense couple of days.,locational
+1296,"1296, 1329","So, guess what happens yesterday?",process
+1306,"1306, 1329",what happens yesterday?,process
+1306,"1306, 1329",what happens yesterday?,one-role-action
+1306,"1306, 1310",what,affected-emoter
+1306,"1306, 1310",what,affected-path
+1306,"1306, 1310",what,affected-perceiver
+1306,"1306, 1310",what,affected-cognizant
+1306,"1306, 1310",what,affected-carrier
+1306,"1306, 1310",what,affected-destination
+1306,"1306, 1310",what,affected-possessed
+1306,"1306, 1310",what,affected-source
+1306,"1306, 1329",what happens yesterday?,created-phenomenon
+1476,"1476, 1482",to get,main
+1535,"1535, 1537",it,affected-carrier
+1535,"1535, 1537",it,affected
+1535,"1535, 1537",it,agent-carrier
+1483,"1483, 1519",to work until the weather cleared up,process
+1483,"1483, 1519",to work until the weather cleared up,one-role-action
+1567,"1567, 1601",and the road crews had gotten out.,process
+1567,"1567, 1601",and the road crews had gotten out.,directional
+1567,"1567, 1601",and the road crews had gotten out.,relational
+1567,"1567, 1601",and the road crews had gotten out.,two-role-action
+1522,"1522, 1527",radar,agent-cognizant
+1522,"1522, 1527",radar,agent-carrier
+1522,"1522, 1527",radar,agent-perceiver
+1444,"1444, 1519",there was no point to my trying to get to work until the weather cleared up,process
+1444,"1444, 1519",there was no point to my trying to get to work until the weather cleared up,locational
+1444,"1444, 1519",there was no point to my trying to get to work until the weather cleared up,action
+1444,"1444, 1519",there was no point to my trying to get to work until the weather cleared up,one-role-action
+1535,"1535, 1563",it would be in an hour or so,created-phenomenon
+1331,"1331, 1333",We,agent
+1331,"1331, 1333",We,agent-cognizant
+1331,"1331, 1333",We,affected-carrier
+1331,"1331, 1333",We,affected
+1331,"1331, 1333",We,agent-carrier
+1331,"1331, 1333",We,agent-perceiver
+1331,"1331, 1333",We,perceiver
+1331,"1331, 1386",We had some really bad weather early in the morning and,process
+1331,"1331, 1386",We had some really bad weather early in the morning and,causative
+1331,"1331, 1386",We had some really bad weather early in the morning and,two-role-action
+1331,"1331, 1386",We had some really bad weather early in the morning and,action
+1476,"1476, 1519",to get to work until the weather cleared up,process
+1476,"1476, 1519",to get to work until the weather cleared up,causative
+1483,"1483, 1490",to work,main
+1520,"1520, 1565",( radar showed it would be in an hour or so ),process
+1520,"1520, 1565",( radar showed it would be in an hour or so ),three-role-perception
+1469,"1469, 1475",trying,main
+1469,"1469, 1519",trying to get to work until the weather cleared up,process
+1469,"1469, 1519",trying to get to work until the weather cleared up,tentative
+1469,"1469, 1519",trying to get to work until the weather cleared up,influential
+1393,"1393, 1400",looking,main
+1571,"1571, 1585",the road crews,agent-cognizant
+1571,"1571, 1585",the road crews,agent-carrier
+1571,"1571, 1585",the road crews,agent-perceiver
+1571,"1571, 1585",the road crews,perceiver
+1476,"1476, 1519",to get to work until the weather cleared up,created-phenomenon
+1483,"1483, 1519",to work until the weather cleared up,phenomenon
+1483,"1483, 1519",to work until the weather cleared up,created-phenomenon
+1483,"1483, 1519",to work until the weather cleared up,created
+1454,"1454, 1519",no point to my trying to get to work until the weather cleared up,affected-carrier
+1454,"1454, 1519",no point to my trying to get to work until the weather cleared up,affected
+1454,"1454, 1519",no point to my trying to get to work until the weather cleared up,agent-carrier
+1454,"1454, 1519",no point to my trying to get to work until the weather cleared up,agent-perceiver
+1454,"1454, 1519",no point to my trying to get to work until the weather cleared up,carrier
+1454,"1454, 1519",no point to my trying to get to work until the weather cleared up,perceiver
+1338,"1338, 1382",some really bad weather early in the morning,phenomenon
+1338,"1338, 1382",some really bad weather early in the morning,affected-emoter
+1338,"1338, 1382",some really bad weather early in the morning,created-phenomenon
+1338,"1338, 1382",some really bad weather early in the morning,affected-path
+1338,"1338, 1382",some really bad weather early in the morning,affected-perceiver
+1338,"1338, 1382",some really bad weather early in the morning,affected-cognizant
+1338,"1338, 1382",some really bad weather early in the morning,affected-carrier
+1338,"1338, 1382",some really bad weather early in the morning,affected-destination
+1338,"1338, 1382",some really bad weather early in the morning,affected
+1338,"1338, 1382",some really bad weather early in the morning,affected-possessed
+1338,"1338, 1382",some really bad weather early in the morning,affected-source
+1338,"1338, 1382",some really bad weather early in the morning,created
+1643,"1643, 1659","some more sleep""",attribute
+1643,"1643, 1659","some more sleep""",affected-emoter
+1643,"1643, 1659","some more sleep""",created-phenomenon
+1643,"1643, 1659","some more sleep""",affected-path
+1643,"1643, 1659","some more sleep""",affected-perceiver
+1643,"1643, 1659","some more sleep""",destination
+1643,"1643, 1659","some more sleep""",affected-cognizant
+1643,"1643, 1659","some more sleep""",affected-carrier
+1643,"1643, 1659","some more sleep""",affected-destination
+1643,"1643, 1659","some more sleep""",affected
+1643,"1643, 1659","some more sleep""",affected-possessed
+1643,"1643, 1659","some more sleep""",affected-source
+1643,"1643, 1659","some more sleep""",created
+1631,"1631, 1634",", I",agent
+1631,"1631, 1634",", I",cognizant
+1631,"1631, 1634",", I",agent-cognizant
+1631,"1631, 1634",", I",affected-cognizant
+1631,"1631, 1634",", I",affected-carrier
+1631,"1631, 1634",", I",affected
+1631,"1631, 1634",", I",agent-perceiver
+1631,"1631, 1634",", I",carrier
+1631,"1631, 1634",", I",perceiver
+1603,"1603, 1604",I,cognizant
+1603,"1603, 1604",I,agent-cognizant
+1603,"1603, 1604",I,affected-cognizant
+1603,"1603, 1604",I,agent-carrier
+1603,"1603, 1604",I,agent-perceiver
+1603,"1603, 1604",I,perceiver
+1610,"1610, 1659","something like, ""good, I can get some more sleep""",created-phenomenon
+1620,"1620, 1624",like,main
+1603,"1603, 1660","I said something like, ""good, I can get some more sleep"".",process
+1603,"1603, 1660","I said something like, ""good, I can get some more sleep"".",two-role-cognition
+1603,"1603, 1660","I said something like, ""good, I can get some more sleep"".",two-role-perception
+1694,"1694, 1717","something else in mind""",affected-emoter
+1694,"1694, 1717","something else in mind""",created-phenomenon
+1694,"1694, 1717","something else in mind""",affected-path
+1694,"1694, 1717","something else in mind""",affected-perceiver
+1694,"1694, 1717","something else in mind""",affected-cognizant
+1694,"1694, 1717","something else in mind""",affected-carrier
+1694,"1694, 1717","something else in mind""",affected-destination
+1694,"1694, 1717","something else in mind""",affected
+1694,"1694, 1717","something else in mind""",affected-possessed
+1694,"1694, 1717","something else in mind""",affected-source
+1694,"1694, 1717","something else in mind""",created
+1694,"1694, 1717","something else in mind""",possessed
+1687,"1687, 1717","""I had something else in mind""",process
+1687,"1687, 1717","""I had something else in mind""",causative
+1687,"1687, 1717","""I had something else in mind""",relational
+1687,"1687, 1717","""I had something else in mind""",possessive
+1687,"1687, 1717","""I had something else in mind""",two-role-action
+1687,"1687, 1717","""I had something else in mind""",action
+1671,"1671, 1717","something like, ""I had something else in mind""",created-phenomenon
+1662,"1662, 1719","She said something like, ""I had something else in mind"" .",process
+1662,"1662, 1719","She said something like, ""I had something else in mind"" .",two-role-perception
+1687,"1687, 1689","""I",agent
+1687,"1687, 1689","""I",agent-cognizant
+1687,"1687, 1689","""I",affected-carrier
+1687,"1687, 1689","""I",affected
+1687,"1687, 1689","""I",agent-carrier
+1687,"1687, 1689","""I",agent-perceiver
+1687,"1687, 1689","""I",carrier
+1687,"1687, 1689","""I",perceiver
+1662,"1662, 1665",She,cognizant
+1662,"1662, 1665",She,agent-cognizant
+1662,"1662, 1665",She,affected-cognizant
+1662,"1662, 1665",She,agent-carrier
+1662,"1662, 1665",She,agent-perceiver
+1662,"1662, 1665",She,perceiver
+1681,"1681, 1685",like,main
+1728,"1728, 1731",did,main
+1745,"1745, 1750",good.,location
+1734,"1734, 1750",And it was good.,process
+1734,"1734, 1750",And it was good.,locational
+1738,"1738, 1740",it,affected-carrier
+1738,"1738, 1740",it,agent-carrier
+1782,"1782, 1789",leading,main
+1793,"1793, 1811","to the fight, both",destination
+1793,"1793, 1811","to the fight, both",affected-destination
+1844,"1844, 1848",that,agent
+1844,"1844, 1848",that,agent-cognizant
+1844,"1844, 1848",that,affected-carrier
+1844,"1844, 1848",that,affected
+1844,"1844, 1848",that,agent-carrier
+1844,"1844, 1848",that,agent-perceiver
+1844,"1844, 1848",that,perceiver
+1767,"1767, 1768",I,agent
+1767,"1767, 1768",I,agent-cognizant
+1767,"1767, 1768",I,agent-carrier
+1767,"1767, 1768",I,agent-perceiver
+1855,"1855, 1889",the point of this particular post.,location
+1855,"1855, 1889",the point of this particular post.,range
+1761,"1761, 1766",where,affected-emoter
+1761,"1761, 1766",where,affected-path
+1761,"1761, 1766",where,affected-perceiver
+1761,"1761, 1766",where,affected-cognizant
+1761,"1761, 1766",where,affected-carrier
+1761,"1761, 1766",where,affected-destination
+1761,"1761, 1766",where,affected
+1761,"1761, 1766",where,affected-possessed
+1761,"1761, 1766",where,affected-source
+1761,"1761, 1766",where,range
+1773,"1773, 1838","at fault leading up to the fight, both generally and specifically",affected-emoter
+1773,"1773, 1838","at fault leading up to the fight, both generally and specifically",affected-path
+1773,"1773, 1838","at fault leading up to the fight, both generally and specifically",affected-perceiver
+1773,"1773, 1838","at fault leading up to the fight, both generally and specifically",affected-cognizant
+1773,"1773, 1838","at fault leading up to the fight, both generally and specifically",affected-carrier
+1773,"1773, 1838","at fault leading up to the fight, both generally and specifically",affected-destination
+1773,"1773, 1838","at fault leading up to the fight, both generally and specifically",affected
+1773,"1773, 1838","at fault leading up to the fight, both generally and specifically",affected-possessed
+1773,"1773, 1838","at fault leading up to the fight, both generally and specifically",affected-source
+1840,"1840, 1889",but that's not the point of this particular post.,process
+1840,"1840, 1889",but that's not the point of this particular post.,locational
+1840,"1840, 1889",but that's not the point of this particular post.,two-role-action
+1840,"1840, 1889",but that's not the point of this particular post.,action
+1782,"1782, 1838","leading up to the fight, both generally and specifically",process
+1782,"1782, 1838","leading up to the fight, both generally and specifically",directional
+1761,"1761, 1838","where I was at fault leading up to the fight, both generally and specifically",process
+1761,"1761, 1838","where I was at fault leading up to the fight, both generally and specifically",two-role-action
+1761,"1761, 1838","where I was at fault leading up to the fight, both generally and specifically",action
+709,"709, 804",discussion about how many cars had to go ( because our son who lives near us needed to get back,affected-carrier
+1643,"1643, 1659","some more sleep""",phenomenon

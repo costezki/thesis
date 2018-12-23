@@ -1,0 +1,180 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.775
+,Recall,0.9323308270676691
+,F1,0.8464163822525597
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+128,0.0,"68, 69","68, 69",0,I,I,participant-role,participant-role
+6,0.0,"62, 67","62, 67",0,seems,seems,main,main
+1,0.0,"21, 22","21, 22",0,I,I,participant-role,participant-role
+7,1.0,"68, 92","68, 93",1,I'm hurting those I love,I'm hurting those I love.,participant-role,participant-role
+132,1.0,"68, 92","68, 93",1,I'm hurting those I love,I'm hurting those I love.,configuration,configuration
+131,1.0,"80, 92","80, 93",1,those I love,those I love.,participant-role,participant-role
+8,4.123105625617661,"59, 92","55, 93",5,it seems I'm hurting those I love,and it seems I'm hurting those I love.,configuration,configuration
+4,0.0,"21, 54","21, 54",0,I'm really confused at the moment,I'm really confused at the moment,configuration,configuration
+5,0.0,"59, 61","59, 61",0,it,it,participant-role,participant-role
+130,0.0,"72, 79","72, 79",0,hurting,hurting,main,main
+14,0.0,"154, 158","154, 158",0,miss,miss,main,main
+9,0.0,"94, 117","94, 117",0,My boyfriend of 3 years,My boyfriend of 3 years,participant-role,participant-role
+11,5.0,"132, 134","127, 134",5,me,with me,participant-role,participant-role
+13,0.0,"152, 153","152, 153",0,I,I,participant-role,participant-role
+15,0.0,"159, 162","159, 162",0,him,him,participant-role,participant-role
+10,8.0,"118, 131","118, 123",8,broke up with,broke,main,main
+12,0.0,"94, 147","94, 147",0,My boyfriend of 3 years broke up with me 6 months ago,My boyfriend of 3 years broke up with me 6 months ago,configuration,configuration
+16,4.123105625617661,"152, 170","148, 171",5,I miss him so much,and I miss him so much.,configuration,configuration
+134,0.0,"222, 225","222, 225",0,was,was,main,main
+17,0.0,"172, 174","172, 174",0,We,We,participant-role,participant-role
+135,1.0,"226, 238","226, 239",1,my soul mate,my soul mate.,participant-role,participant-role
+20,9.0,"187, 204","187, 195",9,a future together,a future,participant-role,participant-role
+23,0.0,"211, 218","211, 218",0,thought,thought,main,main
+21,0.0,"172, 204","172, 204",0,We had planned a future together,We had planned a future together,configuration,configuration
+25,4.123105625617661,"209, 238","205, 239",5,I thought he was my soul mate,and I thought he was my soul mate.,configuration,configuration
+19,0.0,"179, 186","179, 186",0,planned,planned,main,main
+22,0.0,"209, 210","209, 210",0,I,I,participant-role,participant-role
+133,0.0,"219, 221","219, 221",0,he,he,participant-role,participant-role
+24,1.0,"219, 238","219, 239",1,he was my soul mate,he was my soul mate.,participant-role,participant-role
+136,1.0,"219, 238","219, 239",1,he was my soul mate,he was my soul mate.,configuration,configuration
+31,0.0,"290, 291","290, 291",0,I,I,participant-role,participant-role
+34,22.360679774997898,"290, 316","286, 338",26,I think about him everyday,"and I think about him everyday, I sometimes even cry",configuration,configuration
+32,6.0,"292, 303","292, 297",6,think about,think,main,main
+28,0.0,"245, 251","245, 251",0,having,having,main,main
+26,0.0,"240, 241","240, 241",0,I,I,participant-role,participant-role
+37,19.1049731745428,"318, 357","316, 338",21,I sometimes even cry to myself at night,", I sometimes even cry",configuration,configuration
+29,17.0,"252, 285","252, 268",17,a difficult time getting over him,a difficult time,participant-role,participant-role
+30,0.0,"240, 285","240, 285",0,I am having a difficult time getting over him,I am having a difficult time getting over him,configuration,configuration
+44,0.0,"412, 419","412, 419",0,started,started,main,main
+40,0.0,"378, 393","378, 393",0,a wonderful guy,a wonderful guy,participant-role,participant-role
+39,0.0,"374, 377","374, 377",0,met,met,main,main
+38,2.0,"372, 373","370, 373",2,I,", I",participant-role,participant-role
+46,4.123105625617661,"398, 426","394, 427",5,we have since started dating,and we have since started dating.,configuration,configuration
+45,1.0,"420, 426","420, 427",1,dating,dating.,participant-role,participant-role
+41,0.0,"359, 393","359, 393",0,"A month ago, I met a wonderful guy","A month ago, I met a wonderful guy",configuration,configuration
+42,0.0,"398, 400","398, 400",0,we,we,participant-role,participant-role
+49,1.0,"434, 484","434, 485",1,caring and thoughtful and completely understanding,caring and thoughtful and completely understanding.,participant-role,participant-role
+48,0.0,"431, 433","431, 433",0,is,is,main,main
+47,0.0,"428, 430","428, 430",0,He,He,participant-role,participant-role
+50,1.0,"428, 484","428, 485",1,He is caring and thoughtful and completely understanding,He is caring and thoughtful and completely understanding.,configuration,configuration
+137,0.0,"503, 504","503, 504",0,I,I,participant-role,participant-role
+144,0.0,"559, 566","559, 566",0,helping,helping,main,main
+56,3.0,"555, 557","552, 557",3,me,by me,participant-role,participant-role
+146,2.23606797749979,"559, 587","557, 588",3,helping me as much as he can,", helping me as much as he can.",configuration,configuration
+142,0.0,"581, 583","581, 583",0,he,he,participant-role,participant-role
+54,54.0,"486, 534","486, 588",54,He is aware that I still have feelings for my ex,"He is aware that I still have feelings for my ex and still stands by me, helping me as much as he can.",configuration,configuration
+138,0.0,"511, 515","511, 515",0,have,have,main,main
+145,0.0,"567, 569","567, 569",0,me,me,participant-role,participant-role
+52,6.0,"489, 497","489, 491",6,is aware,is,main,main
+139,9.0,"516, 534","525, 534",9,feelings for my ex,for my ex,participant-role,participant-role
+57,4.0,"539, 557","535, 557",4,still stands by me,and still stands by me,configuration,configuration
+51,0.0,"486, 488","486, 488",0,He,He,participant-role,participant-role
+55,3.0,"545, 554","545, 551",3,stands by,stands,main,main
+70,3.1622776601683795,"685, 690","682, 691",4,my ex,to my ex.,participant-role,participant-role
+65,0.0,"629, 632","629, 632",0,him,him,participant-role,participant-role
+68,0.0,"653, 667","653, 667",0,the other half,the other half,participant-role,participant-role
+60,0.0,"596, 608","596, 608",0,my boyfriend,my boyfriend,participant-role,participant-role
+67,42.190046219457976,"613, 649","609, 691",46,I'm only giving him half of my heart,but I'm only giving him half of my heart as the other half still belongs to my ex.,configuration,configuration
+69,3.0,"674, 684","674, 681",3,belongs to,belongs,main,main
+58,0.0,"589, 590","589, 590",0,I,I,participant-role,participant-role
+62,0.0,"613, 614","613, 614",0,I,I,participant-role,participant-role
+66,42.0,"633, 649","633, 691",42,half of my heart,half of my heart as the other half still belongs to my ex.,participant-role,participant-role
+64,0.0,"622, 628","622, 628",0,giving,giving,main,main
+71,12.041594578792296,"653, 690","641, 691",13,the other half still belongs to my ex,my heart as the other half still belongs to my ex.,configuration,configuration
+59,0.0,"591, 595","591, 595",0,love,love,main,main
+61,0.0,"589, 608","589, 608",0,I love my boyfriend,I love my boyfriend,configuration,configuration
+76,0.0,"718, 719","718, 719",0,I,I,participant-role,participant-role
+80,17.0,"758, 792","775, 792",17,start a new life with my boyfriend,with my boyfriend,participant-role,participant-role
+79,19.0,"718, 753","737, 753",19,I want to get over my ex completely,my ex completely,configuration,configuration
+86,13.038404810405298,"797, 843","810, 844",14,I can't seem to shake these feelings for my ex,to shake these feelings for my ex.,configuration,configuration
+85,9.055385138137417,"819, 843","810, 844",10,these feelings for my ex,to shake these feelings for my ex.,participant-role,participant-role
+141,3.0,"813, 818","810, 818",3,shake,to shake,main,main
+82,0.0,"797, 798","797, 798",0,I,I,participant-role,participant-role
+81,4.0,"758, 792","754, 792",4,start a new life with my boyfriend,and start a new life with my boyfriend,configuration,configuration
+73,1.0,"694, 695","693, 695",1,m,'m,main,main
+78,40.80441152620633,"725, 753","737, 792",44,to get over my ex completely,my ex completely and start a new life with my boyfriend,participant-role,participant-role
+72,0.0,"692, 693","692, 693",0,I,I,participant-role,participant-role
+77,0.0,"720, 724","720, 724",0,want,want,main,main
+94,0.0,"870, 877","870, 877",0,planned,planned,main,main
+87,0.0,"845, 849","845, 849",0,What,What,participant-role,participant-role
+91,2.0,"858, 862","856, 862",2,what,", what",participant-role,participant-role
+96,1.0,"887, 910","887, 911",1,how my trust was broken,how my trust was broken.,configuration,configuration
+97,0.0,"891, 899","891, 899",0,my trust,my trust,participant-role,participant-role
+95,36.40054944640259,"858, 877","845, 911",47,what we had planned,"What we had, what we had planned but also how my trust was broken.",configuration,configuration
+90,0.0,"845, 856","845, 856",0,What we had,What we had,configuration,configuration
+89,0.0,"853, 856","853, 856",0,had,had,main,main
+99,0.0,"904, 910","904, 910",0,broken,broken,main,main
+88,0.0,"850, 852","850, 852",0,we,we,participant-role,participant-role
+92,0.0,"863, 865","863, 865",0,we,we,participant-role,participant-role
+115,5.0,"1039, 1048","1039, 1043",5,take time,take,main,main
+114,0.0,"1026, 1038","1026, 1038",0,these things,these things,participant-role,participant-role
+117,2.0,"1050, 1051","1048, 1051",2,I,", I",participant-role,participant-role
+105,0.0,"979, 980","979, 980",0,I,I,participant-role,participant-role
+102,3.0,"916, 925","916, 922",3,scared of,scared,main,main
+113,11.0,"1019, 1048","1008, 1048",11,I know these things take time,", although I know these things take time",configuration,configuration
+104,79.0,"912, 969","912, 1048",79,I'm scared of getting too involved in my new relationship,"I'm scared of getting too involved in my new relationship, because I don't want to be hurt again, although I know these things take time",configuration,configuration
+124,0.0,"1114, 1127","1114, 1127",0,half my heart,half my heart,participant-role,participant-role
+120,7.0,"1050, 1091","1057, 1091",7,I want to make this new relationship work,to make this new relationship work,configuration,configuration
+112,0.0,"1026, 1048","1026, 1048",0,these things take time,these things take time,participant-role,participant-role
+116,0.0,"1026, 1048","1026, 1048",0,these things take time,these things take time,configuration,configuration
+109,42.05948168962618,"979, 1008","992, 1048",41,I don't want to be hurt again,"to be hurt again, although I know these things take time",configuration,configuration
+118,0.0,"1052, 1056","1052, 1056",0,want,want,main,main
+111,0.0,"1021, 1025","1021, 1025",0,know,know,main,main
+107,4.0,"987, 991","983, 991",4,want,n't want,main,main
+110,0.0,"1019, 1020","1019, 1020",0,I,I,participant-role,participant-role
+100,0.0,"912, 913","912, 913",0,I,I,participant-role,participant-role
+119,0.0,"1057, 1091","1057, 1091",0,to make this new relationship work,to make this new relationship work,participant-role,participant-role
+126,1.0,"1131, 1136","1131, 1137",1,black,black?,participant-role,participant-role
+108,40.0,"992, 1008","992, 1048",40,to be hurt again,"to be hurt again, although I know these things take time",participant-role,participant-role
+103,79.05694150420949,"926, 969","923, 1048",82,getting too involved in my new relationship,"of getting too involved in my new relationship, because I don't want to be hurt again, although I know these things take time",participant-role,participant-role
+53,16.401219466856727,"503, 534","516, 524",23,I still have feelings for my ex,feelings,participant-role,participant-role
+140,54.230987451824994,"503, 534","498, 588",59,I still have feelings for my ex,"that I still have feelings for my ex and still stands by me, helping me as much as he can.",configuration,configuration
+75,135.0,"692, 709","692, 844",135,I'm very confused,I'm very confused because I want to get over my ex completely and start a new life with my boyfriend but I can't seem to shake these feelings for my ex.,configuration,configuration
+123,189.2353032602532,"1099, 1108","912, 1137",216,how can I,"I'm scared of getting too involved in my new relationship, because I don't want to be hurt again, although I know these things take time, I want to make this new relationship work... but how can I when half my heart is black?",configuration,configuration
+,
+,Manual mismatching all parsed (False Negative)
+2,"23, 24",m,main
+3,"32, 40",confused,participant-role
+33,"304, 307",him,participant-role
+35,"318, 319",I,participant-role
+36,"335, 338",cry,main
+74,"696, 709",very confused,participant-role
+122,"1107, 1108",I,participant-role
+127,"1114, 1136",half my heart is black,configuration
+125,"1128, 1130",is,main
+,
+,Parsed mismatching all manual (False Positives)
+32,"32, 40",confused,main
+41,"41, 54",at the moment,participant-role
+88,"88, 92",love,main
+86,"86, 87",I,participant-role
+166,"166, 170",much,main
+269,"269, 276",getting,main
+349,"349, 358",at night.,participant-role
+282,"282, 285",him,participant-role
+420,"420, 426",dating,main
+492,"492, 497",aware,participant-role
+725,"725, 731",to get,main
+801,"801, 809",n't seem,main
+819,"819, 833",these feelings,participant-role
+834,"834, 844",for my ex.,participant-role
+758,"758, 763",start,main
+764,"764, 774",a new life,participant-role
+887,"887, 890",how,participant-role
+992,"992, 994",to,main
+1057,"1057, 1064",to make,main
+950,"950, 1048","my new relationship, because I don't want to be hurt again, although I know these things take time",configuration
+926,"926, 933",getting,main
+1044,"1044, 1048",time,participant-role
+86,"86, 93",I love.,configuration
+159,"159, 171",him so much.,participant-role
+159,"159, 171",him so much.,configuration
+269,"269, 285",getting over him,configuration
+420,"420, 427",dating.,configuration
+633,"633, 691",half of my heart as the other half still belongs to my ex.,configuration
+793,"793, 844",but I can't seem to shake these feelings for my ex.,participant-role
+737,"737, 792",my ex completely and start a new life with my boyfriend,configuration
+887,"887, 911",how my trust was broken.,participant-role
+926,"926, 1048","getting too involved in my new relationship, because I don't want to be hurt again, although I know these things take time",configuration
+1065,"1065, 1091",this new relationship work,participant-role
+947,"947, 1048","in my new relationship, because I don't want to be hurt again, although I know these things take time",participant-role
+912,"912, 1048","I'm scared of getting too involved in my new relationship, because I don't want to be hurt again, although I know these things take time",participant-role
+498,"498, 588","that I still have feelings for my ex and still stands by me, helping me as much as he can.",participant-role

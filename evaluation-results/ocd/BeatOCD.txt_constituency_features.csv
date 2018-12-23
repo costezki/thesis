@@ -1,0 +1,33 @@
+Name,Man N,Man %,Auto N,Auto %,Precision,Recall,F1
+,
+TOTAL,966,,7262,,0.12117873863949326,0.9109730848861284,0.21390374331550802
+,
+RANK,530,54.865424430641816,2686,36.98705590746351,0.1757259865971705,0.8905660377358491,0.29353233830845765
+clause,530,100.0,540,20.104244229337304,0.8740740740740741,0.8905660377358491,0.8822429906542056
+marker,0,0.0,395,14.705882352941178,0.0,-1,0.0
+group,0,0.0,1751,65.18987341772153,0.0,-1,0.0
+word,0,0.0,0,0.0,-1,-1,-1.0
+,
+INTERPERSONAL-FUNCTION,436,45.13457556935818,2773,38.18507298264941,0.14713306887847097,0.9357798165137615,0.2542848239326893
+finite,436,100.0,848,30.580598629642985,0.4811320754716981,0.9357798165137615,0.6355140186915889
+adjunct,0,0.0,356,12.838081500180309,0.0,-1,0.0
+subject,0,0.0,438,15.795167688424089,0.0,-1,0.0
+complement-direct,0,0.0,589,21.24053371799495,0.0,-1,0.0
+complement-indirect,0,0.0,0,0.0,-1,-1,-1.0
+predicator,0,0.0,542,19.545618463757663,0.0,-1,0.0
+,
+Mann <=> Auto Mapping,
+verbal-group,"v, e, r, b, a, l, -, g, r, o, u, p"
+clause,"c, l, a, u, s, e"
+complement-direct,"c, o, m, p, l, e, m, e, n, t, -, d, i, r, e, c, t"
+adverbial-group,"a, d, v, e, r, b, i, a, l, -, g, r, o, u, p"
+marker,"m, a, r, k, e, r"
+adjectival-group,"a, d, j, e, c, t, i, v, a, l, -, g, r, o, u, p"
+subject,"s, u, b, j, e, c, t"
+finite,"f, i, n, i, t, e"
+group,"g, r, o, u, p"
+prepositional-group,"p, r, e, p, o, s, i, t, i, o, n, a, l, -, g, r, o, u, p"
+adjunct,"a, d, j, u, n, c, t"
+mood-adjunct,"m, o, o, d, -, a, d, j, u, n, c, t"
+nominal-group,"n, o, m, i, n, a, l, -, g, r, o, u, p"
+predicator,"p, r, e, d, i, c, a, t, o, r"

@@ -1,0 +1,479 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.21662468513853905
+,Recall,0.5695364238410596
+,F1,0.31386861313868614
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+93,6.082762530298219,"101, 124","107, 125",7,to me I have a huge gut,I have a huge gut.,relational,relational
+93,6.082762530298219,"101, 124","107, 125",7,to me I have a huge gut,I have a huge gut.,possessive,possessive
+5,0.0,"51, 57","51, 57",0,weighs,weighs,main,main
+90,26.476404589747453,"25, 46","20, 72",31,I'm a 25 year old guy,Well I'm a 25 year old guy who weighs about 12 stone,attributive,attributive
+90,26.476404589747453,"25, 46","20, 72",31,I'm a 25 year old guy,Well I'm a 25 year old guy who weighs about 12 stone,relational,relational
+2,1.0,"27, 28","26, 28",1,m,'m,main,main
+4,0.0,"47, 50","47, 50",0,who,who,carrier,carrier
+6,0.0,"58, 72","58, 72",0,about 12 stone,about 12 stone,attribute,attribute
+10,1.0,"114, 124","114, 125",1,a huge gut,a huge gut.,possessed,possessed
+9,0.0,"109, 113","109, 113",0,have,have,main,main
+91,24.0,"47, 96","47, 72",24,"who weighs about 12 stone, not exactly overweight",who weighs about 12 stone,attributive,attributive
+91,24.0,"47, 96","47, 72",24,"who weighs about 12 stone, not exactly overweight",who weighs about 12 stone,relational,relational
+1,0.0,"25, 26","25, 26",0,I,I,carrier,carrier
+3,26.0,"29, 46","29, 72",26,a 25 year old guy,a 25 year old guy who weighs about 12 stone,attribute,attribute
+8,0.0,"107, 108","107, 108",0,I,I,carrier,carrier
+13,5.0,"137, 142","132, 142",5,doing,been doing,main,main
+52,0.0,"212, 217","212, 217",0,guess,guess,main,main
+16,3.0,"192, 199","192, 196",3,gave up,gave,main,main
+19,8.0,"226, 237","226, 229",8,put back on,put,main,main
+117,26.90724809414742,"253, 254","235, 274",38,I,on all the weight I had originally lost,affected-carrier,affected-carrier
+20,22.20360331117452,"238, 252","235, 274",25,all the weight,on all the weight I had originally lost,affected-possessed,affected-possessed
+22,0.0,"278, 282","278, 282",0,feel,feel,main,main
+96,22.0,"224, 252","224, 274",22,I put back on all the weight,I put back on all the weight I had originally lost,relational,relational
+96,22.0,"224, 252","224, 274",22,I put back on all the weight,I put back on all the weight I had originally lost,possessive,possessive
+118,0.0,"270, 274","270, 274",0,lost,lost,main,main
+121,0.0,"311, 315","311, 315",0,look,look,main,main
+68,0.0,"680, 689","680, 689",0,beginning,beginning,main,main
+28,12.0,"290, 320","290, 308",12,My friends tell me I look fine,My friends tell me,mental,mental
+61,0.0,"613, 619","613, 619",0,sounds,sounds,main,main
+60,4.0,"601, 603","597, 603",4,It,... It,carrier,carrier
+106,4.123105625617661,"674, 705","670, 706",5,it is beginning to ruin my life,but it is beginning to ruin my life.,influential,influential
+65,0.0,"649, 653","649, 653",0,what,what,phenomenon,phenomenon
+102,0.0,"654, 657","654, 657",0,you,you,emoter,emoter
+125,0.0,"457, 463","457, 463",0,anyone,anyone,emoter,emoter
+131,0.0,"585, 597","585, 597",0,what you see,what you see,phenomenon,phenomenon
+64,0.0,"644, 648","644, 648",0,type,type,main,main
+58,34.23448553724738,"601, 634","597, 668",38,It actually sounds quite humorous,... It actually sounds quite humorous when you type what you're feeling,attributive,attributive
+58,34.23448553724738,"601, 634","597, 668",38,It actually sounds quite humorous,... It actually sounds quite humorous when you type what you're feeling,relational,relational
+25,0.0,"301, 305","301, 305",0,tell,tell,main,main
+127,0.0,"470, 474","470, 474",0,want,want,main,main
+130,0.0,"580, 584","580, 584",0,hate,hate,main,main
+34,0.0,"371, 377","371, 377",0,no-one,no-one,agent-perceiver,agent-perceiver
+51,15.0,"518, 537","518, 522",15,take an interest in,take,main,main
+49,0.0,"505, 512","505, 512",0,someone,someone,agent,agent
+24,0.0,"290, 300","290, 300",0,My friends,My friends,agent,agent
+36,0.0,"382, 385","382, 385",0,see,see,main,main
+37,0.0,"386, 396","386, 396",0,my stomach,my stomach,phenomenon,phenomenon
+48,51.0,"541, 597","490, 597",51,I scream inside thinking my God you'll hate what you see,"this, and when someone does take an interest in me I scream inside thinking my God you'll hate what you see",action,action
+128,10.0,"475, 494","475, 484",10,to see me like this,to see me,phenomenon,phenomenon
+69,1.0,"690, 705","690, 706",1,to ruin my life,to ruin my life.,created-phenomenon,created-phenomenon
+104,0.0,"661, 668","661, 668",0,feeling,feeling,main,main
+55,7.0,"543, 556","543, 549",7,scream inside,scream,main,main
+38,2.0,"398, 400","396, 400",2,it,", it",agent-carrier,agent-carrier
+31,3.0,"327, 336","327, 333",3,breath in,breath,main,main
+56,16.0,"573, 597","557, 597",16,you'll hate what you see,thinking my God you'll hate what you see,mental,mental
+41,0.0,"417, 428","417, 428",0,my sex life,my sex life,affected-possessed,affected-possessed
+40,0.0,"409, 416","409, 416",0,ruining,ruining,main,main
+105,0.0,"649, 668","649, 668",0,what you're feeling,what you're feeling,mental,mental
+57,0.0,"573, 576","573, 576",0,you,you,emoter,emoter
+62,0.0,"620, 634","620, 634",0,quite humorous,quite humorous,attribute,attribute
+53,15.0,"538, 540","523, 540",15,me,an interest in me,affected,affected
+76,6.0,"763, 783","757, 783",6,throwing it up again,about throwing it up again,phenomenon,phenomenon
+81,0.0,"901, 905","901, 905",0,fail,fail,main,main
+74,2.0,"747, 748","745, 748",2,I,", I",cognizant,cognizant
+141,3.0,"804, 806","804, 809",3,is,isn't,main,main
+107,0.0,"734, 745","734, 745",0,feel guilty,feel guilty,attributive,attributive
+107,0.0,"734, 745","734, 745",0,feel guilty,feel guilty,relational,relational
+72,0.0,"734, 738","734, 738",0,feel,feel,main,main
+75,6.0,"749, 762","749, 756",6,thought about,thought,main,main
+108,40.0,"747, 783","707, 783",40,I thought about throwing it up again,"I pig out one day and then feel guilty, I thought about throwing it up again",mental,mental
+108,40.0,"747, 783","707, 783",40,I thought about throwing it up again,"I pig out one day and then feel guilty, I thought about throwing it up again",two-role-cognition,two-role-cognition
+73,0.0,"739, 745","739, 745",0,guilty,guilty,attribute,attribute
+77,0.0,"788, 795","788, 795",0,realise,realise,main,main
+71,4.0,"709, 716","709, 712",4,pig out,pig,main,main
+80,0.0,"827, 830","827, 830",0,try,try,main,main
+116,60.728905802755904,"928, 940","910, 998",76,I'm waffling,"Sorry guys I feel I'm waffling, I'd be interested in what any of you think or say 
+B/ S",action,action
+136,0.0,"979, 984","979, 984",0,think,think,main,main
+84,0.0,"923, 927","923, 927",0,feel,feel,main,main
+138,0.0,"988, 991","988, 991",0,say,say,main,main
+83,0.0,"921, 922","921, 922",0,I,I,emoter,emoter
+115,0.0,"932, 940","932, 940",0,waffling,waffling,main,main
+88,14.0,"946, 962","946, 948",14,be interested in,be,main,main
+85,0.0,"928, 940","928, 940",0,I'm waffling,I'm waffling,phenomenon,phenomenon
+111,11.0,"921, 940","910, 940",11,I feel I'm waffling,Sorry guys I feel I'm waffling,mental,mental
+134,0.0,"963, 967","963, 967",0,what,what,phenomenon,phenomenon
+45,26.92582403567252,"457, 494","482, 484",35,anyone would want to see me like this,me,phenomenon,phenomenon
+,
+,Manual mismatching all parsed (False Negative)
+94,"126, 184",I had been doing really well up until about two months ago,action
+11,"126, 127",I,agent
+14,"143, 154",really well,manner
+95,"190, 207",I gave up smoking,influential
+15,"190, 191",I,agent
+17,"200, 207",smoking,phenomenon
+7,"212, 222",guess what,mental
+7,"212, 222",guess what,two-role-cognition
+92,"218, 222",what,phenomenon
+18,"224, 225",I,affected-carrier
+119,"253, 274",I had originally lost,relational
+119,"253, 274",I had originally lost,possessive
+97,"276, 288",I feel awful,relational
+97,"276, 288",I feel awful,attributive
+21,"276, 277",I,carrier
+23,"283, 288",awful,attribute
+28,"290, 320",My friends tell me I look fine,three-role-cognition
+26,"306, 308",me,affected-cognizant
+27,"309, 320",I look fine,phenomenon
+123,"309, 320",I look fine,relational
+123,"309, 320",I look fine,attributive
+120,"309, 310",I,carrier
+122,"316, 320",fine,attribute
+29,"325, 344",I breath in all day,action
+30,"325, 326",I,agent
+98,"349, 367",wear baggy clothes,relational
+98,"349, 367",wear baggy clothes,possessive
+32,"349, 353",wear,main
+33,"354, 367",baggy clothes,possessed
+99,"371, 396",no-one can see my stomach,mental
+99,"371, 396",no-one can see my stomach,two-role-perception
+100,"398, 428",it is even ruining my sex life,relational
+100,"398, 428",it is even ruining my sex life,possessive
+46,"432, 494",I can't possibly believe anyone would want to see me like this,mental
+46,"432, 494",I can't possibly believe anyone would want to see me like this,two-role-cognition
+42,"432, 433",I,cognizant
+44,"449, 456",believe,main
+129,"457, 494",anyone would want to see me like this,mental
+47,"505, 540",someone does take an interest in me,action
+54,"541, 542",I,agent
+59,"640, 648",you type,action
+63,"640, 643",you,agent
+66,"674, 676",it,agent
+132,"707, 724",I pig out one day,action
+70,"707, 708",I,agent
+109,"788, 816",realise that it isn't for me,mental
+109,"788, 816",realise that it isn't for me,two-role-cognition
+78,"801, 816",it isn't for me,phenomenon
+143,"801, 816",it isn't for me,relational
+143,"801, 816",it isn't for me,attributive
+140,"801, 803",it,carrier
+142,"810, 816",for me,attribute
+110,"825, 886",I try to hardly eat anything else for the next couple of days,influential
+79,"825, 826",I,agent
+82,"831, 858",to hardly eat anything else,phenomenon
+133,"893, 905",usually fail,action
+113,"928, 929",I,agent
+112,"942, 991",I'd be interested in what any of you think or say,mental
+86,"942, 943",I,emoter
+89,"963, 991",what any of you think or say,phenomenon
+137,"963, 984",what any of you think,mental
+137,"963, 984",what any of you think,two-role-cognition
+135,"968, 978",any of you,cognizant
+139,"988, 991",say,mental
+139,"988, 991",say,three-role-cognition
+,
+,Parsed mismatching all manual (False Positives)
+107,"107, 125",I have a huge gut.,process
+107,"107, 125",I have a huge gut.,causative
+107,"107, 125",I have a huge gut.,two-role-action
+107,"107, 125",I have a huge gut.,action
+20,"20, 72",Well I'm a 25 year old guy who weighs about 12 stone,process
+20,"20, 72",Well I'm a 25 year old guy who weighs about 12 stone,locational
+47,"47, 50",who,agent
+47,"47, 50",who,agent-cognizant
+47,"47, 50",who,affected-carrier
+47,"47, 50",who,agent-carrier
+47,"47, 50",who,agent-perceiver
+58,"58, 72",about 12 stone,affected-emoter
+58,"58, 72",about 12 stone,affected-path
+58,"58, 72",about 12 stone,affected-perceiver
+58,"58, 72",about 12 stone,affected-cognizant
+58,"58, 72",about 12 stone,affected-carrier
+58,"58, 72",about 12 stone,affected-destination
+58,"58, 72",about 12 stone,affected
+58,"58, 72",about 12 stone,affected-possessed
+58,"58, 72",about 12 stone,affected-source
+114,"114, 125",a huge gut.,phenomenon
+114,"114, 125",a huge gut.,affected-emoter
+114,"114, 125",a huge gut.,created-phenomenon
+114,"114, 125",a huge gut.,affected-path
+114,"114, 125",a huge gut.,affected-perceiver
+114,"114, 125",a huge gut.,affected-cognizant
+114,"114, 125",a huge gut.,affected-carrier
+114,"114, 125",a huge gut.,affected-destination
+114,"114, 125",a huge gut.,affected
+114,"114, 125",a huge gut.,affected-possessed
+114,"114, 125",a huge gut.,affected-source
+114,"114, 125",a huge gut.,created
+47,"47, 72",who weighs about 12 stone,process
+47,"47, 72",who weighs about 12 stone,two-role-action
+25,"25, 26",I,affected-carrier
+25,"25, 26",I,agent-carrier
+29,"29, 72",a 25 year old guy who weighs about 12 stone,location
+107,"107, 108",I,agent
+107,"107, 108",I,agent-cognizant
+107,"107, 108",I,affected-carrier
+107,"107, 108",I,affected
+107,"107, 108",I,agent-carrier
+107,"107, 108",I,agent-perceiver
+107,"107, 108",I,perceiver
+224,"224, 225",I,agent
+224,"224, 225",I,agent-cognizant
+224,"224, 225",I,agent-carrier
+224,"224, 225",I,agent-perceiver
+224,"224, 225",I,perceiver
+235,"235, 274",on all the weight I had originally lost,affected-emoter
+235,"235, 274",on all the weight I had originally lost,created-phenomenon
+235,"235, 274",on all the weight I had originally lost,affected-path
+235,"235, 274",on all the weight I had originally lost,affected-perceiver
+235,"235, 274",on all the weight I had originally lost,affected-cognizant
+235,"235, 274",on all the weight I had originally lost,affected-destination
+235,"235, 274",on all the weight I had originally lost,affected
+235,"235, 274",on all the weight I had originally lost,affected-source
+235,"235, 274",on all the weight I had originally lost,created
+235,"235, 274",on all the weight I had originally lost,possessed
+235,"235, 274",on all the weight I had originally lost,range
+224,"224, 274",I put back on all the weight I had originally lost,process
+224,"224, 274",I put back on all the weight I had originally lost,two-role-action
+224,"224, 274",I put back on all the weight I had originally lost,action
+290,"290, 308",My friends tell me,process
+290,"290, 308",My friends tell me,two-role-perception
+690,"690, 697",to ruin,main
+436,"436, 439",n't,main
+690,"690, 706",to ruin my life.,process
+690,"690, 706",to ruin my life.,two-role-action
+690,"690, 706",to ruin my life.,action
+597,"597, 603",... It,agent
+597,"597, 603",... It,agent-cognizant
+597,"597, 603",... It,affected-carrier
+597,"597, 603",... It,agent-carrier
+597,"597, 603",... It,agent-perceiver
+670,"670, 706",but it is beginning to ruin my life.,process
+670,"670, 706",but it is beginning to ruin my life.,starting
+649,"649, 653",what,attribute
+649,"649, 653",what,created-phenomenon
+482,"482, 484",me,affected-emoter
+482,"482, 484",me,created-phenomenon
+482,"482, 484",me,affected-path
+482,"482, 484",me,affected-perceiver
+482,"482, 484",me,affected-cognizant
+482,"482, 484",me,affected-carrier
+482,"482, 484",me,affected-destination
+482,"482, 484",me,affected
+482,"482, 484",me,affected-possessed
+482,"482, 484",me,matchee
+482,"482, 484",me,affected-source
+482,"482, 484",me,created
+482,"482, 484",me,range
+594,"594, 597",see,main
+654,"654, 657",you,affected-emoter
+654,"654, 657",you,agent
+654,"654, 657",you,affected-perceiver
+654,"654, 657",you,affected-carrier
+654,"654, 657",you,agent-carrier
+654,"654, 657",you,agent-perceiver
+654,"654, 657",you,carrier
+654,"654, 657",you,perceiver
+316,"316, 320",fine,affected-emoter
+316,"316, 320",fine,affected-path
+316,"316, 320",fine,affected-perceiver
+316,"316, 320",fine,affected-cognizant
+316,"316, 320",fine,affected-carrier
+316,"316, 320",fine,affected-destination
+316,"316, 320",fine,affected
+316,"316, 320",fine,affected-possessed
+316,"316, 320",fine,affected-source
+457,"457, 463",anyone,affected-emoter
+309,"309, 320",I look fine,process
+309,"309, 320",I look fine,two-role-action
+309,"309, 320",I look fine,action
+585,"585, 597",what you see,created-phenomenon
+597,"597, 668",... It actually sounds quite humorous when you type what you're feeling,process
+597,"597, 668",... It actually sounds quite humorous when you type what you're feeling,two-role-action
+500,"500, 504",when,destination
+500,"500, 504",when,source
+500,"500, 504",when,affected-carrier
+500,"500, 504",when,affected-destination
+500,"500, 504",when,affected
+500,"500, 504",when,affected-possessed
+500,"500, 504",when,affected-source
+500,"500, 504",when,possessed
+500,"500, 504",when,carrier
+371,"371, 377",no-one,agent
+371,"371, 377",no-one,agent-cognizant
+371,"371, 377",no-one,agent-carrier
+371,"371, 377",no-one,perceiver
+505,"505, 512",someone,agent-cognizant
+505,"505, 512",someone,agent-carrier
+505,"505, 512",someone,agent-perceiver
+290,"290, 300",My friends,agent-perceiver
+290,"290, 300",My friends,perceiver
+386,"386, 396",my stomach,affected-emoter
+386,"386, 396",my stomach,created-phenomenon
+386,"386, 396",my stomach,affected-path
+386,"386, 396",my stomach,affected-perceiver
+386,"386, 396",my stomach,affected-cognizant
+386,"386, 396",my stomach,affected-carrier
+386,"386, 396",my stomach,affected-destination
+386,"386, 396",my stomach,affected
+386,"386, 396",my stomach,affected-possessed
+386,"386, 396",my stomach,matchee
+386,"386, 396",my stomach,affected-source
+386,"386, 396",my stomach,created
+386,"386, 396",my stomach,range
+585,"585, 597",what you see,process
+585,"585, 597",what you see,matching
+585,"585, 597",what you see,causative
+585,"585, 597",what you see,relational
+585,"585, 597",what you see,two-role-cognition
+585,"585, 597",what you see,two-role-perception
+585,"585, 597",what you see,two-role-action
+490,"490, 597","this, and when someone does take an interest in me I scream inside thinking my God you'll hate what you see",process
+490,"490, 597","this, and when someone does take an interest in me I scream inside thinking my God you'll hate what you see",two-role-action
+475,"475, 484",to see me,created-phenomenon
+698,"698, 706",my life.,affected-emoter
+698,"698, 706",my life.,affected-path
+698,"698, 706",my life.,affected-perceiver
+698,"698, 706",my life.,affected-cognizant
+698,"698, 706",my life.,affected-carrier
+698,"698, 706",my life.,affected-destination
+698,"698, 706",my life.,affected
+698,"698, 706",my life.,affected-possessed
+698,"698, 706",my life.,affected-source
+309,"309, 310",I,agent
+309,"309, 310",I,agent-cognizant
+309,"309, 310",I,agent-carrier
+309,"309, 310",I,agent-perceiver
+690,"690, 706",to ruin my life.,phenomenon
+690,"690, 706",to ruin my life.,created
+396,"396, 400",", it",agent
+396,"396, 400",", it",agent-cognizant
+396,"396, 400",", it",agent-perceiver
+475,"475, 481",to see,main
+557,"557, 597",thinking my God you'll hate what you see,process
+557,"557, 597",thinking my God you'll hate what you see,emotive
+417,"417, 428",my sex life,affected-emoter
+417,"417, 428",my sex life,affected-path
+417,"417, 428",my sex life,affected-perceiver
+417,"417, 428",my sex life,affected-cognizant
+417,"417, 428",my sex life,affected-carrier
+417,"417, 428",my sex life,affected-destination
+417,"417, 428",my sex life,affected
+417,"417, 428",my sex life,affected-source
+649,"649, 668",what you're feeling,process
+649,"649, 668",what you're feeling,attributive
+649,"649, 668",what you're feeling,two-role-perception
+649,"649, 668",what you're feeling,emotive
+573,"573, 576",you,affected-emoter
+620,"620, 634",quite humorous,range
+500,"500, 540",when someone does take an interest in me,process
+500,"500, 540",when someone does take an interest in me,directional
+500,"500, 540",when someone does take an interest in me,relational
+500,"500, 540",when someone does take an interest in me,possessive
+590,"590, 593",you,agent
+590,"590, 593",you,cognizant
+590,"590, 593",you,affected-perceiver
+590,"590, 593",you,agent-cognizant
+590,"590, 593",you,affected-cognizant
+590,"590, 593",you,affected
+590,"590, 593",you,agent-carrier
+590,"590, 593",you,agent-perceiver
+590,"590, 593",you,perceiver
+475,"475, 484",to see me,process
+475,"475, 484",to see me,matching
+475,"475, 484",to see me,causative
+475,"475, 484",to see me,relational
+475,"475, 484",to see me,two-role-action
+306,"306, 308",me,phenomenon
+306,"306, 308",me,created-phenomenon
+585,"585, 589",what,phenomenon
+585,"585, 589",what,affected-emoter
+585,"585, 589",what,created-phenomenon
+585,"585, 589",what,affected-path
+585,"585, 589",what,affected-perceiver
+585,"585, 589",what,affected-cognizant
+585,"585, 589",what,affected-carrier
+585,"585, 589",what,affected-destination
+585,"585, 589",what,affected
+585,"585, 589",what,affected-possessed
+585,"585, 589",what,matchee
+585,"585, 589",what,affected-source
+585,"585, 589",what,created
+585,"585, 589",what,range
+523,"523, 540",an interest in me,destination
+523,"523, 540",an interest in me,source
+523,"523, 540",an interest in me,affected-carrier
+523,"523, 540",an interest in me,affected-destination
+523,"523, 540",an interest in me,affected-possessed
+523,"523, 540",an interest in me,affected-source
+523,"523, 540",an interest in me,possessed
+523,"523, 540",an interest in me,carrier
+757,"757, 783",about throwing it up again,created-phenomenon
+745,"745, 748",", I",agent
+745,"745, 748",", I",agent-cognizant
+772,"772, 774",it,affected-emoter
+772,"772, 774",it,created-phenomenon
+772,"772, 774",it,affected-path
+772,"772, 774",it,affected-perceiver
+772,"772, 774",it,affected-cognizant
+772,"772, 774",it,affected-carrier
+772,"772, 774",it,affected-destination
+772,"772, 774",it,affected
+772,"772, 774",it,affected-possessed
+772,"772, 774",it,affected-source
+772,"772, 774",it,created
+772,"772, 774",it,possessed
+772,"772, 774",it,carrier
+763,"763, 783",throwing it up again,process
+763,"763, 783",throwing it up again,directional
+763,"763, 783",throwing it up again,relational
+763,"763, 783",throwing it up again,possessive
+763,"763, 783",throwing it up again,two-role-action
+763,"763, 783",throwing it up again,action
+763,"763, 771",throwing,main
+707,"707, 745",I pig out one day and then feel guilty,phenomenon
+707,"707, 745",I pig out one day and then feel guilty,created-phenomenon
+734,"734, 745",feel guilty,process
+845,"845, 886",anything else for the next couple of days,affected-emoter
+845,"845, 886",anything else for the next couple of days,affected-path
+845,"845, 886",anything else for the next couple of days,affected-perceiver
+845,"845, 886",anything else for the next couple of days,affected-cognizant
+845,"845, 886",anything else for the next couple of days,affected-carrier
+845,"845, 886",anything else for the next couple of days,affected-destination
+845,"845, 886",anything else for the next couple of days,affected
+845,"845, 886",anything else for the next couple of days,affected-possessed
+845,"845, 886",anything else for the next couple of days,affected-source
+707,"707, 783","I pig out one day and then feel guilty, I thought about throwing it up again",process
+831,"831, 886",to hardly eat anything else for the next couple of days,process
+831,"831, 886",to hardly eat anything else for the next couple of days,two-role-action
+831,"831, 886",to hardly eat anything else for the next couple of days,action
+831,"831, 833",to,main
+910,"910, 998","Sorry guys I feel I'm waffling, I'd be interested in what any of you think or say 
+B/ S",process
+910,"910, 998","Sorry guys I feel I'm waffling, I'd be interested in what any of you think or say 
+B/ S",attributive
+910,"910, 998","Sorry guys I feel I'm waffling, I'd be interested in what any of you think or say 
+B/ S",locational
+910,"910, 998","Sorry guys I feel I'm waffling, I'd be interested in what any of you think or say 
+B/ S",relational
+910,"910, 998","Sorry guys I feel I'm waffling, I'd be interested in what any of you think or say 
+B/ S",two-role-action
+994,"994, 998",B/ S,process
+994,"994, 998",B/ S,mental
+994,"994, 998",B/ S,three-role-cognition
+949,"949, 959",interested,attribute
+949,"949, 959",interested,location
+949,"949, 959",interested,range
+921,"921, 922",I,affected-emoter
+921,"921, 922",I,agent
+921,"921, 922",I,affected-perceiver
+921,"921, 922",I,agent-perceiver
+921,"921, 922",I,perceiver
+928,"928, 940",I'm waffling,created-phenomenon
+910,"910, 940",Sorry guys I feel I'm waffling,process
+910,"910, 940",Sorry guys I feel I'm waffling,two-role-perception
+910,"910, 940",Sorry guys I feel I'm waffling,emotive
+968,"968, 971",any,agent
+968,"968, 971",any,agent-cognizant
+968,"968, 971",any,agent-carrier
+968,"968, 971",any,agent-perceiver
+963,"963, 967",what,created-phenomenon
+994,"994, 998",B/ S,cognizant
+994,"994, 998",B/ S,affected-cognizant
+994,"994, 998",B/ S,affected
+940,"940, 943",", I",agent
+940,"940, 943",", I",agent-cognizant
+940,"940, 943",", I",affected-carrier
+940,"940, 943",", I",affected
+940,"940, 943",", I",agent-carrier
+940,"940, 943",", I",agent-perceiver
+940,"940, 943",", I",carrier
+940,"940, 943",", I",perceiver

@@ -1,0 +1,172 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.738562091503268
+,Recall,0.9416666666666667
+,F1,0.8278388278388278
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+6,0.0,"52, 103","52, 103",0,sharing your feelings after a break-up with your ex,sharing your feelings after a break-up with your ex,participant-role,participant-role
+9,1.0,"48, 122","48, 123",1,why sharing your feelings after a break-up with your ex is not recommended,why sharing your feelings after a break-up with your ex is not recommended?,configuration,configuration
+4,1.0,"41, 122","41, 123",1,to ask why sharing your feelings after a break-up with your ex is not recommended,to ask why sharing your feelings after a break-up with your ex is not recommended?,participant-role,participant-role
+5,18.027756377319946,"23, 122","41, 123",19,I would just like to ask why sharing your feelings after a break-up with your ex is not recommended,to ask why sharing your feelings after a break-up with your ex is not recommended?,configuration,configuration
+1,2.0,"23, 24","21, 24",2,I,", I",participant-role,participant-role
+3,0.0,"36, 40","36, 40",0,like,like,main,main
+18,0.0,"161, 165","161, 165",0,know,know,main,main
+140,21.0,"166, 178","166, 199",21,how you feel,how you feel after your break-up?,configuration,configuration
+19,1.0,"166, 198","166, 199",1,how you feel after your break-up,how you feel after your break-up?,participant-role,participant-role
+14,3.1622776601683795,"147, 198","144, 199",4,your ex would know how you feel after your break-up,if your ex would know how you feel after your break-up?,participant-role,participant-role
+139,0.0,"166, 169","166, 169",0,how,how,participant-role,participant-role
+138,0.0,"174, 178","174, 178",0,feel,feel,main,main
+11,0.0,"131, 133","131, 133",0,it,it,participant-role,participant-role
+16,0.0,"147, 154","147, 154",0,your ex,your ex,participant-role,participant-role
+12,0.0,"134, 136","134, 136",0,be,be,main,main
+137,0.0,"170, 173","170, 173",0,you,you,participant-role,participant-role
+13,0.0,"137, 143","137, 143",0,better,better,participant-role,participant-role
+20,0.0,"200, 201","200, 201",0,I,I,participant-role,participant-role
+23,18.0,"212, 235","212, 253",18,in an emotional turmoil,in an emotional turmoil for almost a year,participant-role,participant-role
+24,1.0,"200, 288","200, 289",1,I have been in an emotional turmoil for almost a year now after a separation from a girl,I have been in an emotional turmoil for almost a year now after a separation from a girl.,configuration,configuration
+22,0.0,"207, 211","207, 211",0,been,been,main,main
+26,0.0,"293, 298","293, 298",0,seems,seems,main,main
+25,0.0,"290, 292","290, 292",0,It,It,participant-role,participant-role
+28,1.0,"290, 319","290, 320",1,It seems that I can't recover,It seems that I can't recover.,configuration,configuration
+31,4.0,"312, 319","308, 319",4,recover,n't recover,main,main
+29,0.0,"304, 305","304, 305",0,I,I,participant-role,participant-role
+27,5.0990195135927845,"304, 319","299, 320",6,I can't recover,that I can't recover.,participant-role,participant-role
+32,5.0990195135927845,"304, 319","299, 320",6,I can't recover,that I can't recover.,configuration,configuration
+36,0.0,"321, 352","321, 352",0,I'm still in pain for this long,I'm still in pain for this long,configuration,configuration
+142,9.848857801796104,"389, 436","385, 427",13,tell her my utmost feelings of sadness and hate,and tell her my utmost feelings of sadness,configuration,configuration
+41,14.0,"356, 384","370, 384",14,I am planning to call her up,to call her up,configuration,configuration
+40,8.54400374531753,"370, 384","378, 381",11,to call her up,her,participant-role,participant-role
+39,0.0,"361, 369","361, 369",0,planning,planning,main,main
+35,14.0,"331, 338","331, 352",14,in pain,in pain for this long,participant-role,participant-role
+37,4.0,"356, 357","352, 357",4,I,... I,participant-role,participant-role
+141,12.727922061357855,"389, 436","398, 427",18,tell her my utmost feelings of sadness and hate,my utmost feelings of sadness,participant-role,participant-role
+33,0.0,"321, 322","321, 322",0,I,I,participant-role,participant-role
+34,1.0,"323, 324","322, 324",1,m,'m,main,main
+44,3.1622776601683795,"460, 463","457, 464",4,her,at her.,participant-role,participant-role
+42,0.0,"438, 439","438, 439",0,I,I,participant-role,participant-role
+45,1.0,"438, 463","438, 464",1,I'm actually angry at her,I'm actually angry at her.,configuration,configuration
+50,13.038404810405298,"465, 505","478, 506",14,I would like to tell her all my feelings,to tell her all my feelings.,configuration,configuration
+48,0.0,"473, 477","473, 477",0,like,like,main,main
+46,0.0,"465, 466","465, 466",0,I,I,participant-role,participant-role
+49,1.0,"478, 505","478, 506",1,to tell her all my feelings,to tell her all my feelings.,participant-role,participant-role
+56,0.0,"562, 567","562, 567",0,think,think,main,main
+87,0.0,"883, 889","883, 889",0,affect,affect,main,main
+130,0.0,"525, 527","525, 527",0,it,it,participant-role,participant-role
+75,0.0,"703, 707","703, 707",0,vent,vent,main,main
+68,0.0,"621, 623","621, 623",0,it,it,participant-role,participant-role
+76,0.0,"708, 710","708, 710",0,it,it,participant-role,participant-role
+73,0.0,"695, 696","695, 696",0,I,I,participant-role,participant-role
+64,0.0,"613, 614","613, 614",0,I,I,participant-role,participant-role
+52,0.0,"517, 519","517, 519",0,is,is,main,main
+71,13.0,"642, 691","642, 678",13,those gruesome feelings inside of me to disappear,those gruesome feelings inside of me,participant-role,participant-role
+133,0.0,"539, 545","539, 545",0,things,things,participant-role,participant-role
+63,17.029386365926403,"568, 607","585, 608",18,she doesn't know what I'm going through,"what I'm going through,",configuration,configuration
+55,0.0,"560, 561","560, 561",0,I,I,participant-role,participant-role
+80,32.14031735997639,"695, 770","692, 738",35,I would vent it out directly to her and not to some friends or other people,if I would vent it out directly to her and not,configuration,configuration
+65,0.0,"615, 620","615, 620",0,think,think,main,main
+81,0.0,"781, 782","781, 782",0,I,I,participant-role,participant-role
+79,48.662100242385755,"727, 730","679, 738",56,her,to disappear if I would vent it out directly to her and not,participant-role,participant-role
+93,5.0990195135927845,"903, 920","898, 921",6,I'm deteriorating,that I'm deteriorating.,configuration,configuration
+62,16.76305461424021,"585, 607","590, 591",21,what I'm going through,I,participant-role,participant-role
+88,0.0,"890, 897","890, 897",0,my life,my life,participant-role,participant-role
+66,47.0,"621, 691","621, 738",47,it would really make those gruesome feelings inside of me to disappear,it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not,participant-role,participant-role
+72,47.0,"621, 691","621, 738",47,it would really make those gruesome feelings inside of me to disappear,it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not,configuration,configuration
+90,0.0,"903, 904","903, 904",0,I,I,participant-role,participant-role
+83,15.0,"794, 815","794, 800",15,shared my feelings to,shared,main,main
+61,4.0,"580, 584","576, 584",4,know,n't know,main,main
+51,0.0,"507, 516","507, 516",0,My reason,My reason,participant-role,participant-role
+85,11.0,"781, 833","770, 833",11,I've already shared my feelings to others many times,; although I've already shared my feelings to others many times,configuration,configuration
+67,47.16990566028302,"613, 691","609, 738",51,I think it would really make those gruesome feelings inside of me to disappear,and I think it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not,configuration,configuration
+132,0.0,"534, 538","534, 538",0,make,make,main,main
+59,0.0,"568, 571","568, 571",0,she,she,participant-role,participant-role
+86,13.0,"839, 875","839, 862",13,those gruesome feelings inside of me,those gruesome feelings,participant-role,participant-role
+70,0.0,"637, 641","637, 641",0,make,make,main,main
+84,11.40175425099138,"816, 822","813, 833",14,others,to others many times,participant-role,participant-role
+97,3.0,"946, 954","943, 954",3,anything,on anything,participant-role,participant-role
+96,5.0,"937, 945","933, 942",7,focus on,n't focus,main,main
+94,0.0,"922, 923","922, 923",0,I,I,participant-role,participant-role
+102,1.0,"991, 993","991, 994",1,me,me.,participant-role,participant-role
+101,0.0,"983, 990","983, 990",0,killing,killing,main,main
+99,0.0,"978, 980","978, 980",0,It,It,participant-role,participant-role
+103,3.0,"978, 993","978, 996",3,It's killing me,It's killing me. ),configuration,configuration
+104,0.0,"997, 1001","997, 1001",0,What,What,participant-role,participant-role
+105,1.0,"1002, 1003","1001, 1003",1,s,'s,main,main
+107,1.0,"997, 1021","997, 1022",1,What's your take on this,What's your take on this?,configuration,configuration
+106,8.0,"1004, 1021","1004, 1013",8,your take on this,your take,participant-role,participant-role
+109,0.0,"1026, 1029","1026, 1029",0,you,you,participant-role,participant-role
+112,1.0,"1023, 1077","1023, 1078",1,Do you think it would make it easier for me to recover,Do you think it would make it easier for me to recover?,configuration,configuration
+116,0.0,"1050, 1052","1050, 1052",0,it,it,participant-role,participant-role
+117,3.1622776601683795,"1053, 1077","1050, 1078",4,easier for me to recover,it easier for me to recover?,participant-role,participant-role
+111,1.0,"1036, 1077","1036, 1078",1,it would make it easier for me to recover,it would make it easier for me to recover?,participant-role,participant-role
+118,1.0,"1036, 1077","1036, 1078",1,it would make it easier for me to recover,it would make it easier for me to recover?,configuration,configuration
+115,0.0,"1045, 1049","1045, 1049",0,make,make,main,main
+110,0.0,"1030, 1035","1030, 1035",0,think,think,main,main
+113,0.0,"1036, 1038","1036, 1038",0,it,it,participant-role,participant-role
+129,5.0,"1133, 1140","1129, 1137",7,move on,and move,configuration,configuration
+119,0.0,"1079, 1081","1079, 1081",0,It,It,participant-role,participant-role
+123,0.0,"1079, 1106","1079, 1106",0,It's been almost a year now,It's been almost a year now,configuration,configuration
+124,2.0,"1108, 1109","1106, 1109",2,I,", I",participant-role,participant-role
+128,3.0,"1133, 1140","1133, 1137",3,move on,move,main,main
+122,10.770329614269007,"1089, 1102","1079, 1106",14,almost a year,It's been almost a year now,participant-role,participant-role
+126,4.0,"1122, 1128","1126, 1128",4,let go,go,main,main
+121,0.0,"1084, 1088","1084, 1088",0,been,been,main,main
+58,24.351591323771842,"560, 607","568, 584",31,I think she doesn't know what I'm going through,she doesn't know,configuration,configuration
+53,187.06683297688022,"525, 551","520, 738",192,it would make things clear,"that it would make things clear because I think she doesn't know what I'm going through, and I think it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not",participant-role,participant-role
+134,187.06683297688022,"525, 551","520, 738",192,it would make things clear,"that it would make things clear because I think she doesn't know what I'm going through, and I think it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not",configuration,configuration
+89,41.617304093369626,"839, 897","873, 921",45,those gruesome feelings inside of me really affect my life,me really affect my life that I'm deteriorating.,configuration,configuration
+57,24.758836806279895,"568, 607","585, 589",35,she doesn't know what I'm going through,what,participant-role,participant-role
+54,189.71821209362056,"507, 551","539, 738",159,My reason is that it would make things clear,"things clear because I think she doesn't know what I'm going through, and I think it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not",configuration,configuration
+135,187.13097017864254,"546, 551","539, 738",194,clear,"things clear because I think she doesn't know what I'm going through, and I think it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not",participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+7,"104, 106",is,main
+8,"111, 122",recommended,participant-role
+15,"125, 143",Would it be better,configuration
+43,"451, 459",angry at,main
+92,"907, 920",deteriorating,main
+98,"922, 976",I really can't focus on anything now for almost a year,configuration
+127,"1108, 1128",I still can't let go,configuration
+,
+,Parsed mismatching all manual (False Positives)
+52,"52, 59",sharing,main
+107,"107, 122",not recommended,main
+41,"41, 47",to ask,main
+60,"60, 73",your feelings,participant-role
+48,"48, 51",why,participant-role
+144,"144, 199",if your ex would know how you feel after your break-up?,configuration
+258,"258, 289",after a separation from a girl.,participant-role
+428,"428, 437",and hate.,configuration
+370,"370, 377",to call,main
+389,"389, 393",tell,main
+370,"370, 437",to call her up and tell her my utmost feelings of sadness and hate.,configuration
+352,"352, 437",... I am planning to call her up and tell her my utmost feelings of sadness and hate.,configuration
+432,"432, 436",hate,main
+439,"439, 441",'m,main
+442,"442, 456",actually angry,participant-role
+478,"478, 485",to tell,main
+486,"486, 489",her,participant-role
+907,"907, 921",deteriorating.,participant-role
+801,"801, 812",my feelings,participant-role
+594,"594, 599",going,main
+742,"742, 770",some friends or other people,participant-role
+904,"904, 906",'m,main
+679,"679, 691",to disappear,main
+898,"898, 921",that I'm deteriorating.,participant-role
+1067,"1067, 1077",to recover,main
+1138,"1138, 1150","on... 
+Ted.",configuration
+52,"52, 103",sharing your feelings after a break-up with your ex,configuration
+74,"74, 103",after a break-up with your ex,participant-role
+179,"179, 199",after your break-up?,participant-role
+394,"394, 397",her,participant-role
+370,"370, 437",to call her up and tell her my utmost feelings of sadness and hate.,participant-role
+490,"490, 506",all my feelings.,participant-role
+568,"568, 738","she doesn't know what I'm going through, and I think it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not",participant-role
+679,"679, 738",to disappear if I would vent it out directly to her and not,configuration
+568,"568, 738","she doesn't know what I'm going through, and I think it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not",configuration
+873,"873, 875",me,participant-role
+1064,"1064, 1066",me,participant-role
+1050,"1050, 1078",it easier for me to recover?,configuration
+1118,"1118, 1125",n't let,main
+507,"507, 833","My reason is that it would make things clear because I think she doesn't know what I'm going through, and I think it would really make those gruesome feelings inside of me to disappear if I would vent it out directly to her and not to some friends or other people; although I've already shared my feelings to others many times",configuration

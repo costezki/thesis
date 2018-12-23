@@ -1,0 +1,200 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.712707182320442
+,Recall,0.9416058394160584
+,F1,0.8113207547169812
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+1,2.0,"22, 23","20, 23",2,I,", I",participant-role,participant-role
+138,7.0710678118654755,"22, 50","15, 51",8,I need your help desperately,"Girls, I need your help desperately.",configuration,configuration
+3,0.0,"29, 38","29, 38",0,your help,your help,participant-role,participant-role
+2,0.0,"24, 28","24, 28",0,need,need,main,main
+5,0.0,"54, 62","54, 62",0,realized,realized,main,main
+4,0.0,"52, 53","52, 53",0,I,I,participant-role,participant-role
+154,5.0,"82, 92","82, 87",5,taken over,taken,main,main
+155,5.0990195135927845,"93, 100","88, 101",6,my life,over my life.,participant-role,participant-role
+152,0.0,"74, 77","74, 77",0,mia,mia,participant-role,participant-role
+156,5.0990195135927845,"74, 100","69, 101",6,mia has taken over my life,that mia has taken over my life.,configuration,configuration
+7,1.0,"52, 100","52, 101",1,I realized today that mia has taken over my life,I realized today that mia has taken over my life.,configuration,configuration
+6,5.0990195135927845,"74, 100","69, 101",6,mia has taken over my life,that mia has taken over my life.,participant-role,participant-role
+13,2.0,"141, 142","139, 142",2,I,", I",participant-role,participant-role
+15,2.0,"145, 149","147, 149",2,"5'2""","2""",participant-role,participant-role
+19,0.0,"209, 210","209, 210",0,I,I,participant-role,participant-role
+10,0.0,"102, 111","102, 111",0,My weight,My weight,participant-role,participant-role
+21,1.0,"218, 223","218, 224",1,happy,happy.,participant-role,participant-role
+14,0.0,"142, 144","142, 144",0,'m,'m,main,main
+157,28.284271247461902,"167, 183","147, 203",40,my lowest weight,"2"" ) at the moment, my lowest weight at this height ever",participant-role,participant-role
+16,4.123105625617661,"209, 223","205, 224",5,I am not happy,but I am not happy.,configuration,configuration
+11,0.0,"112, 114","112, 114",0,is,is,main,main
+8,39.0,"102, 165","102, 204",39,"My weight is at a standstill ( 95 lbs, I'm 5'2"" ) at the moment","My weight is at a standstill ( 95 lbs, I'm 5'2"" ) at the moment, my lowest weight at this height ever,",configuration,configuration
+20,4.0,"211, 213","211, 217",4,am,am not,main,main
+9,10.44030650891055,"141, 149","131, 146",13,"I'm 5'2""","( 95 lbs, I'm 5",configuration,configuration
+24,0.0,"232, 238","232, 238",0,purged,purged,main,main
+18,1.0,"225, 294","225, 295",1,I have purged everyday up to 4 times since 3 days before Thanksgiving,I have purged everyday up to 4 times since 3 days before Thanksgiving.,configuration,configuration
+22,0.0,"225, 226","225, 226",0,I,I,participant-role,participant-role
+158,0.0,"315, 321","315, 321",0,purged,purged,main,main
+25,0.0,"296, 310","296, 310",0,Today I binged,Today I binged,configuration,configuration
+27,0.0,"304, 310","304, 310",0,binged,binged,main,main
+28,4.123105625617661,"315, 347","311, 348",5,purged on the same foods 3 times,and purged on the same foods 3 times.,configuration,configuration
+26,0.0,"302, 303","302, 303",0,I,I,participant-role,participant-role
+37,1.0,"413, 419","413, 420",1,myself,myself.,participant-role,participant-role
+139,22.20360331117452,"349, 368","362, 386",19,I've stopped eating,eating in between binged,configuration,configuration
+29,0.0,"349, 350","349, 350",0,I,I,participant-role,participant-role
+32,18.0,"362, 368","362, 386",18,eating,eating in between binged,participant-role,participant-role
+31,0.0,"354, 361","354, 361",0,stopped,stopped,main,main
+34,0.0,"395, 396","395, 396",0,I,I,participant-role,participant-role
+36,4.0,"405, 412","401, 412",4,control,not control,main,main
+141,8.0,"395, 420","387, 420",8,I can not control myself.,because I can not control myself.,configuration,configuration
+142,3.0,"424, 441","421, 441",3,I am going to eat,If I am going to eat,configuration,configuration
+42,2.0,"443, 444","441, 444",2,I,", I",participant-role,participant-role
+46,0.0,"467, 468","467, 468",0,I,I,participant-role,participant-role
+45,3.0,"457, 460","454, 460",3,eat,to eat,main,main
+144,0.0,"482, 496","482, 496",0,one more crumb,one more crumb,participant-role,participant-role
+38,0.0,"424, 425","424, 425",0,I,I,participant-role,participant-role
+48,4.0,"476, 481","472, 481",4,shove,not shove,main,main
+49,0.0,"497, 509","497, 509",0,into my body,into my body,participant-role,participant-role
+40,3.0,"438, 441","435, 441",3,eat,to eat,main,main
+145,6.082762530298219,"467, 526","461, 527",7,I cannot shove one more crumb into my body without bursting,until I cannot shove one more crumb into my body without bursting.,configuration,configuration
+52,24.0,"534, 544","534, 568",24,my bulimia,my bulimia to control my emotions.,participant-role,participant-role
+50,0.0,"528, 529","528, 529",0,I,I,participant-role,participant-role
+51,0.0,"530, 533","530, 533",0,use,use,main,main
+41,1.0,"528, 567","528, 568",1,I use my bulimia to control my emotions,I use my bulimia to control my emotions.,configuration,configuration
+87,5.0,"574, 585","569, 585",5,I'm anxious,When I'm anxious,configuration,configuration
+55,1.0,"576, 577","575, 577",1,m,'m,main,main
+88,17.029386365926403,"586, 593","569, 594",18,I binge,When I'm anxious I binge.,configuration,configuration
+58,0.0,"588, 593","588, 593",0,binge,binge,main,main
+54,0.0,"574, 575","574, 575",0,I,I,participant-role,participant-role
+57,0.0,"586, 587","586, 587",0,I,I,participant-role,participant-role
+63,0.0,"694, 702","694, 702",0,my mouth,my mouth,participant-role,participant-role
+61,3.0,"609, 620","609, 617",3,followed by,followed,main,main
+89,21.0,"595, 687","595, 708",21,"The eating is followed by an even more extreme anxiety and a ruthless, usually violent purge","The eating is followed by an even more extreme anxiety and a ruthless, usually violent purge until my mouth hurts",configuration,configuration
+67,0.0,"725, 731","725, 731",0,racing,racing,main,main
+62,38.118237105091836,"621, 687","618, 649",41,"an even more extreme anxiety and a ruthless, usually violent purge",by an even more extreme anxiety,participant-role,participant-role
+64,0.0,"703, 708","703, 708",0,hurts,hurts,main,main
+90,6.0,"694, 708","688, 708",6,my mouth hurts,until my mouth hurts,configuration,configuration
+91,4.123105625617661,"713, 731","709, 732",5,my heart is racing,and my heart is racing.,configuration,configuration
+65,0.0,"713, 721","713, 721",0,my heart,my heart,participant-role,participant-role
+59,0.0,"595, 605","595, 605",0,The eating,The eating,participant-role,participant-role
+70,0.0,"754, 764","754, 764",0,experience,experience,main,main
+92,127.01574705523721,"733, 917","846, 859",171,"In the past, I would experience a small high from the purge, a sort of sick relaxed feeling, sort of like a ""phew, that's over, now I don't have to do it for another few hours""-feeling",", that's over",configuration,configuration
+68,2.0,"746, 747","744, 747",2,I,", I",participant-role,participant-role
+71,87.0,"765, 917","765, 830",87,"a small high from the purge, a sort of sick relaxed feeling, sort of like a ""phew, that's over, now I don't have to do it for another few hours""-feeling","a small high from the purge, a sort of sick relaxed feeling, sort",participant-role,participant-role
+93,1.0,"932, 988","932, 989",1,Now my mind is consumed with paranoid obsessive thoughts,Now my mind is consumed with paranoid obsessive thoughts.,configuration,configuration
+72,0.0,"936, 943","936, 943",0,my mind,my mind,participant-role,participant-role
+75,5.0990195135927845,"961, 988","956, 989",6,paranoid obsessive thoughts,with paranoid obsessive thoughts.,participant-role,participant-role
+74,5.0,"947, 960","947, 955",5,consumed with,consumed,main,main
+77,0.0,"994, 995","994, 995",0,I,I,participant-role,participant-role
+78,0.0,"996, 999","996, 999",0,get,get,main,main
+79,4.0,"1000, 1006","1000, 1002",4,it all,it,participant-role,participant-role
+94,1.0,"990, 1010","990, 1011",1,Did I get it all out,Did I get it all out?,configuration,configuration
+85,8.06225774829855,"1020, 1073","1012, 1074",9,there is more food hiding in the depths of my stomach,What if there is more food hiding in the depths of my stomach?,configuration,configuration
+82,0.0,"1026, 1028","1026, 1028",0,is,is,main,main
+44,7.0710678118654755,"1039, 1073","1046, 1074",8,hiding in the depths of my stomach,in the depths of my stomach?,participant-role,participant-role
+99,1.0,"1075, 1115","1075, 1116",1,I'll be 20 pounds heavier in the morning,I'll be 20 pounds heavier in the morning!,configuration,configuration
+97,0.0,"1080, 1082","1080, 1082",0,be,be,main,main
+98,10.0,"1083, 1100","1093, 1100",10,20 pounds heavier,heavier,participant-role,participant-role
+95,0.0,"1075, 1076","1075, 1076",0,I,I,participant-role,participant-role
+160,0.0,"1173, 1183","1173, 1183",0,how I felt,how I felt,configuration,configuration
+146,32.202484376209235,"1199, 1253","1185, 1224",41,it might make one or more of you girls feel less alone,in hopes that it might make one or more,configuration,configuration
+53,0.0,"1173, 1176","1173, 1176",0,how,how,participant-role,participant-role
+103,0.0,"1199, 1201","1199, 1201",0,it,it,participant-role,participant-role
+107,24.839484696748443,"1213, 1253","1232, 1237",35,one or more of you girls feel less alone,girls,participant-role,participant-role
+84,0.0,"1177, 1178","1177, 1178",0,I,I,participant-role,participant-role
+101,0.0,"1155, 1161","1155, 1161",0,wanted,wanted,main,main
+86,0.0,"1179, 1183","1179, 1183",0,felt,felt,main,main
+140,14.0,"1148, 1183","1162, 1183",14,I just wanted to explain how I felt,to explain how I felt,configuration,configuration
+102,0.0,"1162, 1183","1162, 1183",0,to explain how I felt,to explain how I felt,participant-role,participant-role
+105,0.0,"1208, 1212","1208, 1212",0,make,make,main,main
+100,0.0,"1148, 1149","1148, 1149",0,I,I,participant-role,participant-role
+110,0.0,"1259, 1266","1259, 1266",0,feeling,feeling,main,main
+111,0.0,"1267, 1287","1267, 1287",0,pretty lonely myself,pretty lonely myself,participant-role,participant-role
+108,0.0,"1255, 1256","1255, 1256",0,I,I,participant-role,participant-role
+112,1.0,"1255, 1298","1255, 1299",1,I'm feeling pretty lonely myself these days,I'm feeling pretty lonely myself these days.,configuration,configuration
+114,0.0,"1310, 1313","1310, 1313",0,has,has,main,main
+117,2.0,"1351, 1355","1349, 1355",2,they,", they",participant-role,participant-role
+113,0.0,"1303, 1309","1303, 1309",0,anyone,anyone,participant-role,participant-role
+116,3.0,"1303, 1349","1300, 1349",3,anyone has any advice or tips for self control,If anyone has any advice or tips for self control,configuration,configuration
+147,51.0098029794274,"1351, 1376","1300, 1377",52,they are much appreciated,"If anyone has any advice or tips for self control, they are much appreciated.",configuration,configuration
+115,0.0,"1314, 1349","1314, 1349",0,any advice or tips for self control,any advice or tips for self control,participant-role,participant-role
+106,5.0,"1360, 1376","1365, 1376",5,much appreciated,appreciated,main,main
+149,25.019992006393608,"1403, 1440","1378, 1441",26,"loose another 5 pounds, no, 10 pounds","I will get past this and loose another 5 pounds, no, 10 pounds.",configuration,configuration
+126,20.024984394500787,"1409, 1440","1389, 1441",21,"another 5 pounds, no, 10 pounds","past this and loose another 5 pounds, no, 10 pounds.",participant-role,participant-role
+120,0.0,"1378, 1379","1378, 1379",0,I,I,participant-role,participant-role
+122,5.0,"1385, 1393","1385, 1388",5,get past,get,main,main
+151,10.63014581273465,"1508, 1547","1515, 1539",15,I need to keep reminding myself of that,to keep reminding myself,configuration,configuration
+150,5.0,"1468, 1506","1463, 1506",5,we cannot do with each others' support,that we cannot do with each others' support,configuration,configuration
+123,0.0,"1533, 1539","1533, 1539",0,myself,myself,participant-role,participant-role
+124,0.0,"1523, 1532","1523, 1532",0,reminding,reminding,main,main
+130,0.0,"1468, 1470","1468, 1470",0,we,we,participant-role,participant-role
+132,4.0,"1478, 1480","1474, 1480",4,do,not do,main,main
+129,0.0,"1454, 1462","1454, 1462",0,anything,anything,participant-role,participant-role
+128,3.0,"1448, 1450","1448, 1453",3,is,isn't,main,main
+134,2.0,"1508, 1509","1506, 1509",2,I,", I",participant-role,participant-role
+143,67.89698078707183,"443, 460","454, 527",61,I am going to eat,to eat until I cannot shove one more crumb into my body without bursting.,configuration,configuration
+83,36.0,"1029, 1038","1029, 1074",36,more food,more food hiding in the depths of my stomach?,participant-role,participant-role
+127,59.0,"1442, 1447","1442, 1506",59,There,There isn't anything that we cannot do with each others' support,participant-role,participant-role
+33,44.0,"1442, 1462","1442, 1506",44,There isn't anything,There isn't anything that we cannot do with each others' support,configuration,configuration
+,
+,Manual mismatching all parsed (False Negative)
+12,"115, 130",at a standstill,participant-role
+17,"167, 203",my lowest weight at this height ever,configuration
+56,"578, 585",anxious,participant-role
+81,"1020, 1025",there,participant-role
+148,"1378, 1398",I will get past this,configuration
+119,"1394, 1398",this,participant-role
+125,"1403, 1408",loose,main
+137,"1540, 1547",of that,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+133,"133, 139",95 lbs,participant-role
+275,"275, 295",before Thanksgiving.,participant-role
+239,"239, 274",everyday up to 4 times since 3 days,participant-role
+340,"340, 348",3 times.,participant-role
+322,"322, 339",on the same foods,participant-role
+372,"372, 386",between binged,participant-role
+362,"362, 368",eating,main
+518,"518, 527",bursting.,configuration
+510,"510, 527",without bursting.,participant-role
+435,"435, 441",to eat,participant-role
+435,"435, 441",to eat,configuration
+454,"454, 527",to eat until I cannot shove one more crumb into my body without bursting.,participant-role
+429,"429, 434",going,main
+448,"448, 453",going,main
+518,"518, 526",bursting,main
+556,"556, 568",my emotions.,participant-role
+545,"545, 555",to control,main
+569,"569, 573",When,participant-role
+736,"736, 744",the past,participant-role
+878,"878, 883",to do,main
+865,"865, 866",I,participant-role
+852,"852, 854",'s,main
+855,"855, 859",over,participant-role
+887,"887, 918","for another few hours""-feeling.",participant-role
+846,"846, 852",", that",participant-role
+869,"869, 877",n't have,main
+884,"884, 886",it,participant-role
+878,"878, 918","to do it for another few hours""-feeling.",participant-role
+1039,"1039, 1074",hiding in the depths of my stomach?,configuration
+1039,"1039, 1045",hiding,main
+1101,"1101, 1116",in the morning!,participant-role
+1162,"1162, 1172",to explain,main
+1238,"1238, 1242",feel,main
+1127,"1127, 1142",the weird entry,participant-role
+1481,"1481, 1506",with each others' support,participant-role
+1510,"1510, 1514",need,main
+1515,"1515, 1539",to keep reminding myself,participant-role
+1515,"1515, 1522",to keep,main
+1523,"1523, 1539",reminding myself,configuration
+1523,"1523, 1539",reminding myself,participant-role
+349,"349, 420",I've stopped eating in between binged because I can not control myself.,configuration
+545,"545, 568",to control my emotions.,configuration
+878,"878, 918","to do it for another few hours""-feeling.",configuration
+865,"865, 918","I don't have to do it for another few hours""-feeling.",configuration
+834,"834, 859","like a ""phew, that's over",participant-role
+1185,"1185, 1224",in hopes that it might make one or more,participant-role
+1213,"1213, 1224",one or more,participant-role
+1173,"1173, 1183",how I felt,participant-role
+1117,"1117, 1184","Sorry for the weird entry, but I just wanted to explain how I felt,",configuration
+1463,"1463, 1506",that we cannot do with each others' support,participant-role
+421,"421, 527","If I am going to eat, I am going to eat until I cannot shove one more crumb into my body without bursting.",configuration
+1442,"1442, 1548","There isn't anything that we cannot do with each others' support, I need to keep reminding myself of that.",configuration

@@ -13,13 +13,13 @@ The aim of this work is to design a reliable method for English text parsing wit
 
 In this process a primary milestone the first steps is the creation of constituency structure. Chapter \ref{ch:sfg} describes the essential theoretical foundations of two SFL schools, namely Sydney and Cardiff schools, and provides a critical analysis of the two to reconcile on the diverging points on rank scale, unit classes, the constituency structure, treatment of coordination, grammatical unit structure, clause boundaries, etc. and state the position adopted in this work. 
 
-In order to create the constituency structure from the dependency structure there needs to be a mechanism in place providing a theoretical and a practical mapping between the two. The theoretical account on the dependency grammar and how it is related to SFL is described in Chapter \ref{ch:dependecy-grappamr}. The practical aspects and concrete algorithms are described in Chapter \ref{ch:parsing-algorithm} together with the mapping rules used in the process. 
+In order to create the constituency structure from the dependency structure there needs to be a mechanism in place providing a theoretical and a practical mapping between the two. The theoretical account on the dependency grammar and how it is related to SFL is described in Chapter \ref{ch:dependecy-grammar}. The practical aspects and concrete algorithms are described in Chapter \ref{ch:parsing-algorithm} together with the mapping rules used in the process. 
 
 To make clear what are the basic ingredients and how the algorithms are cooked, Chapter \ref{ch:data-structures} introduces all the data structures and operations on them. These structures are defined from a computer scientific point of view emulating the needed SFL concepts. These range from a few graph types, simple attribute-value dictionaries and ordered lists with logical operators. In addition to that, a set of specific graph operations have been defined to perform pattern matching and system network traversals.
 
-Once the constituency structure is created, the second milestone is to enrich it with systemic features. Many features can be associated to or derived from the dependency and constituency graph fragments. Therefore graph pattern matching is a cornerstone operation used for inserting new or missing units and adding features to existing ones. I describe these operations in detail in the second part of \ref{ch:data-structures}. Then in Chapters \ref{ch:parsing-algorithm} and \ref{ch:semantic-parsing} I show how these operations are being used for enrichment of the syntactic backbone with systemic features.
+Once the constituency structure is created, the second milestone is to enrich it with systemic features. Many features can be associated to or derived from the dependency and constituency graph fragments. Therefore graph pattern matching is a cornerstone operation used for inserting new or missing units and adding features to existing ones. I describe these operations in detail in the second part of \ref{ch:data-structures}. Then in Chapters \ref{ch:parsing-algorithm} and \ref{ch:enrichment-stage} I show how these operations are being used for enrichment of the syntactic backbone with systemic features.
 
-The more precisely graph pattern is defined the less instances it will be matched to and thus decreasing the number of errors and increasing the accuracy. The semantic enrichment is performed via spotting instances of semantic graph patterns. It is often the case that the patterns, in their canonical form, list all the participants of a semantic configuration but in practice, instances of such configurations may miss a participant or two. If applied in their canonical form the patterns will not identify with such the instance. One solution would be to reduce the specificity of the patterns, which leads to a high increase in erroneous applications or populate where possible the covert participants to yield successful matches. It is the second approach that was implemented in this work. To identify and create the covert participants I turned to Government and Binding theory. Two more contributions I bring in this thesis is the theoretical mapping from GBT into dependency structures covered in Chapter \ref{ch:gbt} and then a concrete implementation described in Chapter \ref{ch:semantic-parsing}.
+The more precisely graph pattern is defined the less instances it will be matched to and thus decreasing the number of errors and increasing the accuracy. The semantic enrichment is performed via spotting instances of semantic graph patterns. It is often the case that the patterns, in their canonical form, list all the participants of a semantic configuration but in practice, instances of such configurations may miss a participant or two. If applied in their canonical form the patterns will not identify with such the instance. One solution would be to reduce the specificity of the patterns, which leads to a high increase in erroneous applications or populate where possible the covert participants to yield successful matches. It is the second approach that was implemented in this work. To identify and create the covert participants I turned to Government and Binding theory. Two more contributions I bring in this thesis is the theoretical mapping from GBT into dependency structures covered in Chapter \ref{ch:gbt} and then a concrete implementation described in Chapter \ref{ch:enrichment-stage}.
 
 In the last part of the thesis I describe the empirical evaluation I conducted in order to test the parser accuracy on various features. To conduct this evaluation I created together with Ela Oren a corpus using blog articles of OCD patients covering the Mood system and another corpus was provided to my by Anke Schultz covering the Transitivity system. The results show very good performance (0.6 -- 0.9 F1) on Mood features slightly decreasing as the delicacy of the features increases. On Transitivity features, the results are expectedly less precise (0.4 -- 0.8 F1) and constitute a good baseline for future improvements. 
 
@@ -42,6 +42,7 @@ All these tasks are needed for creating an intelligent interactive agent for var
 In marketing research, understanding the clients needs is one of the primary tasks. Mining intelligence from the unstructured data sources such as forums, customer reviews, social media posts is particularly difficult task. In such cases the more features are available in the analysis the better. With the help of  statistical methods feature correlations, predictive models and interpretations can be conveyed for task at hand such as satisfaction level, requirement or complaint discovery, etc.
 
 \section{Impact on future research}
+\label{sec:future-work}
 %\todo{The implication of the work for future research (i.e. Recommendations)}
 
 Pattern graphs and the matching methods developed in this work can be applied for expressing many more grammatic features than the ones presented in this work. They can serve as language for systematizing grammatical realizations especially that the realization statements play a vital role in SG grammars. The graph matching method itself can virtually be applied to any other languages than English. So similar parsers can be implemented for other languages and and respectively grammars. 
@@ -55,8 +56,8 @@ Linguists study various language properties, to do so they need to hand annotate
 %
 %
 %
-\section{Further work}
-\label{sec:future-work}
+%\section{Further work}
+
 This section describes improvements of the project that are desirable or at least worth considering along with major improvements that arouse in the process of theoretical development and parser implementation. 
 
 \subsection{Verbal group again: from syntactically towards semantically sound analysis}
@@ -179,16 +180,13 @@ Since, graph patterns can be expressed via first order functions and individuals
 
 This approach resembles the Vertical Strips (VS) of \citet{ODonoghue1991a}. The similarity is the probabilistic learning of patterns from the corpus. The difference is that VS patterns are syntactic segment chains from the root node down to tree leafs while with ML more complex patterns can be learned independently of their position in the syntactic tree. Moreover such patterns can be bound to specific feature set. 
 
-\todo{propose a natural language task classification based on the number of features needed as input and provided as output}
+%todo \todo{propose a natural language task classification based on the number of features needed as input and provided as output}
 
-
 %
-%
-%
-\section{Overall evaluations}
-\todo{A deduction made on the basis of the main body (i.e. Concluding statements)}
-\todo{The writer’s personal opinion on what has been discussed}
+%\section{Overall evaluations}
+%todo \todo{A deduction made on the basis of the main body (i.e. Concluding statements)}
+%todo \todo{The writer’s personal opinion on what has been discussed}
 
 
 \section{A final word}
-\todo{half to one page max}
+%todo \todo{half to one page max}

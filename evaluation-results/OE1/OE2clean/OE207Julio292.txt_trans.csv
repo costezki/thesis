@@ -1,0 +1,692 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.171900826446281
+,Recall,0.5777777777777777
+,F1,0.264968152866242
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+136,0.0,"81, 84","81, 84",0,saw,saw,main,main
+137,0.0,"85, 90","85, 90",0,my ad,my ad,phenomenon,phenomenon
+3,3.0,"47, 59","47, 56",3,contacted by,contacted,main,main
+135,0.0,"77, 80","77, 80",0,she,she,perceiver,perceiver
+138,6.082762530298219,"77, 118","71, 119",7,she saw my ad on an online personals site,after she saw my ad on an online personals site.,two-role-perception,two-role-perception
+9,0.0,"120, 122","120, 122",0,We,We,agent,agent
+8,12.0,"123, 138","123, 126",12,hit it off good,hit,main,main
+13,0.0,"170, 172","170, 172",0,IM,IM,main,main
+16,13.0,"188, 206","188, 193",13,speak on the phone,speak,main,main
+18,4.123105625617661,"188, 229","184, 230",5,speak on the phone over the next few days,and speak on the phone over the next few days.,action,action
+24,0.0,"274, 281","274, 281",0,invited,invited,main,main
+27,14.035668847618199,"268, 324","282, 325",15,I was invited to come over to her place the next weekend,to come over to her place the next weekend.,action,action
+20,0.0,"238, 241","238, 241",0,got,got,main,main
+30,0.0,"354, 358","354, 358",0,went,went,main,main
+33,5.0990195135927845,"331, 412","326, 413",6,"in one week's time, we went from total strangers to spending the weekend together","Yes, in one week's time, we went from total strangers to spending the weekend together.",directional,directional
+33,5.0990195135927845,"331, 412","326, 413",6,"in one week's time, we went from total strangers to spending the weekend together","Yes, in one week's time, we went from total strangers to spending the weekend together.",relational,relational
+29,2.0,"351, 353","349, 353",2,we,", we",agent-carrier,agent-carrier
+42,4.123105625617661,"447, 544","443, 545",5,from her photos and conversations I just knew I wouldn't be disappointed when we met face-to-face,but from her photos and conversations I just knew I wouldn't be disappointed when we met face-to-face.,mental,mental
+42,4.123105625617661,"447, 544","443, 545",5,from her photos and conversations I just knew I wouldn't be disappointed when we met face-to-face,but from her photos and conversations I just knew I wouldn't be disappointed when we met face-to-face.,two-role-cognition,two-role-cognition
+41,1.0,"493, 544","493, 545",1,I wouldn't be disappointed when we met face-to-face,I wouldn't be disappointed when we met face-to-face.,phenomenon,phenomenon
+37,1.0,"414, 441","414, 442",1,She lived ninety miles away,"She lived ninety miles away,",locational,locational
+35,0.0,"418, 423","418, 423",0,lived,lived,main,main
+141,13.601470508735444,"504, 506","500, 519",17,be,n't be disappointed,main,main
+145,0.0,"528, 531","528, 531",0,met,met,main,main
+40,0.0,"488, 492","488, 492",0,knew,knew,main,main
+34,0.0,"414, 417","414, 417",0,She,She,carrier,carrier
+146,5.0990195135927845,"525, 544","520, 545",6,we met face-to-face,when we met face-to-face.,action,action
+39,0.0,"481, 482","481, 482",0,I,I,cognizant,cognizant
+144,0.0,"525, 527","525, 527",0,we,we,agent,agent
+157,0.0,"620, 623","620, 623",0,she,she,carrier,carrier
+7,0.0,"553, 560","553, 560",0,arrived,arrived,main,main
+28,0.0,"578, 581","578, 581",0,she,she,agent,agent
+159,16.0,"628, 659","628, 643",16,more attractive than her photos,more attractive,attribute,attribute
+38,0.0,"582, 588","582, 588",0,opened,opened,main,main
+23,5.0,"551, 573","546, 573",5,I arrived at her place,When I arrived at her place,directional,directional
+23,5.0,"551, 573","546, 573",5,I arrived at her place,When I arrived at her place,relational,relational
+17,0.0,"561, 573","561, 573",0,at her place,at her place,destination,destination
+158,0.0,"624, 627","624, 627",0,was,was,main,main
+147,4.0,"578, 597","574, 597",4,she opened the door,and she opened the door,action,action
+160,1.0,"620, 659","620, 660",1,she was more attractive than her photos,she was more attractive than her photos!,attributive,attributive
+160,1.0,"620, 659","620, 660",1,she was more attractive than her photos,she was more attractive than her photos!,relational,relational
+43,0.0,"589, 597","589, 597",0,the door,the door,affected,affected
+47,7.0710678118654755,"613, 659","620, 660",8,to see she was more attractive than her photos,she was more attractive than her photos!,phenomenon,phenomenon
+52,74.32361670424818,"667, 826","697, 758",98,"we had a great time barbequing, going through a bottle of wine, slow dancing in the kitchen, and sharing some passionate kisses with a little groping thrown in",", going through a bottle of wine, slow dancing in the kitchen",action,action
+50,13.0,"670, 686","670, 673",13,had a great time,had,main,main
+51,2.0,"667, 669","665, 669",2,we,", we",agent,agent
+54,0.0,"831, 835","831, 835",0,were,were,main,main
+57,0.0,"859, 861","859, 861",0,We,We,agent,agent
+58,5.0,"862, 872","862, 867",5,wound down,wound,main,main
+62,1.0,"897, 908","897, 909",1,to her room,to her room.,destination,destination
+61,0.0,"892, 896","892, 896",0,went,went,main,main
+63,4.123105625617661,"892, 908","888, 909",5,went to her room,and went to her room.,directional,directional
+63,4.123105625617661,"892, 908","888, 909",5,went to her room,and went to her room.,relational,relational
+60,0.0,"859, 887","859, 887",0,We wound down about midnight,We wound down about midnight,action,action
+164,16.0,"931, 951","931, 935",16,some of the best sex,some,phenomenon,phenomenon
+65,0.0,"913, 922","913, 922",0,proceeded,proceeded,main,main
+163,0.0,"963, 971","963, 971",0,remember,remember,main,main
+161,0.0,"952, 953","952, 953",0,I,I,cognizant,cognizant
+64,13.038404810405298,"923, 978","936, 979",14,to have some of the best sex I can ever remember having,of the best sex I can ever remember having.,phenomenon,phenomenon
+70,1.0,"987, 996","987, 997",1,delicious,delicious.,attribute,attribute
+69,0.0,"983, 986","983, 986",0,was,was,main,main
+68,0.0,"980, 982","980, 982",0,It,It,carrier,carrier
+71,1.0,"980, 996","980, 997",1,It was delicious,It was delicious.,attributive,attributive
+71,1.0,"980, 996","980, 997",1,It was delicious,It was delicious.,relational,relational
+75,6.0,"998, 1024","998, 1030",6,The morning after was nice,"The morning after was nice, too.",relational,relational
+73,0.0,"1016, 1019","1016, 1019",0,was,was,main,main
+85,0.0,"1094, 1101","1094, 1101",0,thanked,thanked,main,main
+89,0.0,"1132, 1137","1132, 1137",0,split,split,main,main
+77,0.0,"1033, 1037","1033, 1037",0,made,made,main,main
+80,16.0,"1046, 1065","1046, 1049",16,had some small talk,had,main,main
+82,0.0,"1067, 1075","1067, 1075",0,finished,finished,main,main
+86,0.0,"1102, 1105","1102, 1105",0,her,her,affected-cognizant,affected-cognizant
+90,4.123105625617661,"1132, 1137","1128, 1138",5,split,and split.,action,action
+76,0.0,"1031, 1032","1031, 1032",0,I,I,agent,agent
+88,2.0,"1094, 1126","1092, 1126",2,thanked her for a wonderful time,", thanked her for a wonderful time",mental,mental
+88,2.0,"1094, 1126","1092, 1126",2,thanked her for a wonderful time,", thanked her for a wonderful time",three-role-cognition,three-role-cognition
+92,1.0,"1149, 1150","1148, 1150",1,s,'s,main,main
+94,5.0990195135927845,"1144, 1160","1139, 1161",6,here's the thing,"Now, here's the thing.",locational,locational
+97,4.0,"1173, 1179","1169, 1179",4,spoken,n't spoken,main,main
+106,0.0,"1220, 1222","1220, 1222",0,is,is,main,main
+167,0.0,"1215, 1219","1215, 1219",0,know,know,main,main
+120,45.0,"1313, 1397","1313, 1442",45,We both agreed that the sex we had was like making love with someone you cared about,We both agreed that the sex we had was like making love with someone you cared about; and we had a great time during the evening.,mental,mental
+113,0.0,"1321, 1327","1321, 1327",0,agreed,agreed,main,main
+116,0.0,"1403, 1405","1403, 1405",0,we,we,agent,agent
+151,5.0,"1348, 1356","1348, 1351",5,was like,was,main,main
+119,4.123105625617661,"1403, 1441","1399, 1442",5,we had a great time during the evening,and we had a great time during the evening.,action,action
+152,12.0,"1357, 1397","1369, 1397",12,making love with someone you cared about,with someone you cared about,phenomenon,phenomenon
+117,13.0,"1406, 1422","1406, 1409",13,had a great time,had,main,main
+122,0.0,"1452, 1456","1452, 1456",0,left,left,main,main
+121,4.0,"1443, 1451","1443, 1447",4,This all,This,agent,agent
+124,11.045361017187261,"1457, 1472","1468, 1473",12,me wanting more,more.,phenomenon,phenomenon
+128,5.0990195135927845,"1486, 1512","1481, 1513",6,a junkie hurting for a fix,like a junkie hurting for a fix.,attribute,attribute
+129,1.0,"1474, 1512","1474, 1513",1,I feel like a junkie hurting for a fix,I feel like a junkie hurting for a fix.,attributive,attributive
+129,1.0,"1474, 1512","1474, 1513",1,I feel like a junkie hurting for a fix,I feel like a junkie hurting for a fix.,relational,relational
+127,5.0,"1476, 1485","1476, 1480",5,feel like,feel,main,main
+126,0.0,"1474, 1475","1474, 1475",0,I,I,carrier,carrier
+130,0.0,"1514, 1515","1514, 1515",0,I,I,cognizant,cognizant
+156,1.0,"1538, 1567","1538, 1568",1,what is making her so distant,what is making her so distant.,influential,influential
+118,0.0,"1538, 1542","1538, 1542",0,what,what,agent,agent
+132,4.0,"1527, 1537","1523, 1537",4,understand,n't understand,main,main
+155,1.0,"1553, 1567","1553, 1568",1,her so distant,her so distant.,phenomenon,phenomenon
+154,0.0,"1546, 1552","1546, 1552",0,making,making,main,main
+133,1.0,"1538, 1567","1538, 1568",1,what is making her so distant,what is making her so distant.,phenomenon,phenomenon
+114,42.44997055358225,"1333, 1397","1364, 1368",60,the sex we had was like making love with someone you cared about,love,phenomenon,phenomenon
+,
+,Manual mismatching all parsed (False Negative)
+6,"41, 70",I was contacted by this woman,action
+1,"41, 42",I,affected
+4,"60, 70",this woman,agent
+138,"77, 118",she saw my ad on an online personals site,mental
+10,"120, 159",We hit it off good right from the start,action
+15,"161, 183",We would IM each other,action
+11,"161, 163",We,agent
+14,"173, 183",each other,affected
+22,"231, 262",Things got progressively hotter,relational
+22,"231, 262",Things got progressively hotter,attributive
+19,"231, 237",Things,carrier
+21,"242, 262",progressively hotter,attribute
+26,"268, 269",I,affected
+31,"359, 379",from total strangers,source
+32,"380, 412",to spending the weekend together,destination
+37,"414, 441",She lived ninety miles away,relational
+36,"424, 441",ninety miles away,location
+143,"493, 519",I wouldn't be disappointed,relational
+143,"493, 519",I wouldn't be disappointed,attributive
+139,"493, 494",I,carrier
+142,"507, 519",disappointed,attribute
+5,"551, 552",I,agent-carrier
+48,"599, 659",I was pleased to see she was more attractive than her photos,mental
+44,"599, 600",I,emoter
+46,"605, 612",pleased,main
+56,"828, 857",We were both very comfortable,relational
+56,"828, 857",We were both very comfortable,attributive
+53,"828, 830",We,carrier
+55,"841, 857",very comfortable,attribute
+67,"910, 978",We proceeded to have some of the best sex I can ever remember having,influential
+66,"910, 912",We,agent
+165,"931, 978",some of the best sex I can ever remember having,mental
+165,"931, 978",some of the best sex I can ever remember having,two-role-cognition
+75,"998, 1024",The morning after was nice,attributive
+72,"998, 1015",The morning after,carrier
+74,"1020, 1024",nice,attribute
+79,"1031, 1044",I made coffee,action
+78,"1038, 1044",coffee,created
+81,"1046, 1065",had some small talk,action
+84,"1067, 1092",finished my mug of coffee,action
+83,"1076, 1092",my mug of coffee,affected
+87,"1106, 1126",for a wonderful time,phenomenon
+94,"1144, 1160",here's the thing,relational
+91,"1144, 1148",here,location
+93,"1151, 1160",the thing,carrier
+100,"1162, 1191",She hasn't spoken to me since,action
+95,"1162, 1165",She,agent
+98,"1180, 1185",to me,affected
+104,"1197, 1207",I'm bugged,relational
+104,"1197, 1207",I'm bugged,attributive
+101,"1197, 1198",I,carrier
+102,"1199, 1200",m,main
+103,"1201, 1207",bugged,attribute
+108,"1209, 1297","All I know is that for whatever reason, she's not interested in any more contact with me",event-relating
+105,"1209, 1219",All I know,carrier
+169,"1209, 1219",All I know,mental
+169,"1209, 1219",All I know,two-role-cognition
+168,"1209, 1212",All,phenomenon
+166,"1213, 1214",I,cognizant
+107,"1228, 1297","for whatever reason, she's not interested in any more contact with me",phenomenon
+149,"1249, 1297",she's not interested in any more contact with me,mental
+49,"1249, 1252",she,emoter
+99,"1259, 1272",interested in,main
+148,"1273, 1297",any more contact with me,phenomenon
+112,"1299, 1311",I'm confused,relational
+112,"1299, 1311",I'm confused,attributive
+109,"1299, 1300",I,carrier
+110,"1301, 1302",m,main
+111,"1303, 1311",confused,attribute
+120,"1313, 1397",We both agreed that the sex we had was like making love with someone you cared about,two-role-cognition
+115,"1313, 1320",We both,cognizant
+153,"1333, 1397",the sex we had was like making love with someone you cared about,event-relating
+150,"1333, 1347",the sex we had,carrier
+125,"1443, 1472",This all left me wanting more,influential
+134,"1514, 1567",I just can't understand what is making her so distant,mental
+134,"1514, 1567",I just can't understand what is making her so distant,two-role-cognition
+,
+,Parsed mismatching all manual (False Positives)
+91,"91, 119",on an online personals site.,phenomenon
+91,"91, 119",on an online personals site.,affected-emoter
+91,"91, 119",on an online personals site.,created-phenomenon
+91,"91, 119",on an online personals site.,affected-path
+91,"91, 119",on an online personals site.,affected-perceiver
+91,"91, 119",on an online personals site.,destination
+91,"91, 119",on an online personals site.,affected-cognizant
+91,"91, 119",on an online personals site.,affected-carrier
+91,"91, 119",on an online personals site.,affected-destination
+91,"91, 119",on an online personals site.,affected
+91,"91, 119",on an online personals site.,affected-possessed
+91,"91, 119",on an online personals site.,affected-source
+91,"91, 119",on an online personals site.,created
+91,"91, 119",on an online personals site.,range
+85,"85, 90",my ad,affected-emoter
+85,"85, 90",my ad,created-phenomenon
+85,"85, 90",my ad,affected-path
+85,"85, 90",my ad,affected-perceiver
+85,"85, 90",my ad,affected-cognizant
+85,"85, 90",my ad,affected-carrier
+85,"85, 90",my ad,affected-destination
+85,"85, 90",my ad,affected
+85,"85, 90",my ad,affected-possessed
+85,"85, 90",my ad,matchee
+85,"85, 90",my ad,affected-source
+85,"85, 90",my ad,created
+85,"85, 90",my ad,range
+85,"85, 90",my ad,carrier
+77,"77, 80",she,agent
+77,"77, 80",she,cognizant
+77,"77, 80",she,affected-perceiver
+77,"77, 80",she,agent-cognizant
+77,"77, 80",she,affected-cognizant
+77,"77, 80",she,affected
+77,"77, 80",she,agent-carrier
+77,"77, 80",she,agent-perceiver
+71,"71, 119",after she saw my ad on an online personals site.,process
+71,"71, 119",after she saw my ad on an online personals site.,matching
+71,"71, 119",after she saw my ad on an online personals site.,directional
+71,"71, 119",after she saw my ad on an online personals site.,causative
+71,"71, 119",after she saw my ad on an online personals site.,relational
+71,"71, 119",after she saw my ad on an online personals site.,two-role-cognition
+71,"71, 119",after she saw my ad on an online personals site.,two-role-action
+71,"71, 119",after she saw my ad on an online personals site.,influential
+130,"130, 144",off good right,affected-emoter
+130,"130, 144",off good right,affected-path
+130,"130, 144",off good right,affected-perceiver
+130,"130, 144",off good right,affected-cognizant
+130,"130, 144",off good right,affected-carrier
+130,"130, 144",off good right,affected-destination
+130,"130, 144",off good right,affected
+130,"130, 144",off good right,affected-possessed
+130,"130, 144",off good right,affected-source
+127,"127, 129",it,affected-emoter
+127,"127, 129",it,affected-path
+127,"127, 129",it,affected-perceiver
+127,"127, 129",it,destination
+127,"127, 129",it,affected-cognizant
+127,"127, 129",it,affected-carrier
+127,"127, 129",it,affected-destination
+127,"127, 129",it,affected
+127,"127, 129",it,affected-possessed
+127,"127, 129",it,affected-source
+120,"120, 122",We,agent-cognizant
+120,"120, 122",We,affected-carrier
+120,"120, 122",We,affected
+120,"120, 122",We,agent-carrier
+120,"120, 122",We,agent-perceiver
+120,"120, 122",We,carrier
+120,"120, 160",We hit it off good right from the start.,process
+120,"120, 160",We hit it off good right from the start.,directional
+120,"120, 160",We hit it off good right from the start.,relational
+120,"120, 160",We hit it off good right from the start.,two-role-action
+145,"145, 160",from the start.,affected-emoter
+145,"145, 160",from the start.,affected-path
+145,"145, 160",from the start.,affected-perceiver
+145,"145, 160",from the start.,affected-cognizant
+145,"145, 160",from the start.,affected-carrier
+145,"145, 160",from the start.,affected-destination
+145,"145, 160",from the start.,affected
+145,"145, 160",from the start.,affected-possessed
+145,"145, 160",from the start.,affected-source
+194,"194, 230",on the phone over the next few days.,range
+184,"184, 230",and speak on the phone over the next few days.,process
+184,"184, 230",and speak on the phone over the next few days.,two-role-action
+184,"184, 230",and speak on the phone over the next few days.,one-role-action
+282,"282, 289",to come,main
+256,"256, 262",hotter,main
+282,"282, 325",to come over to her place the next weekend.,process
+282,"282, 325",to come over to her place the next weekend.,attributive
+282,"282, 325",to come over to her place the next weekend.,directional
+282,"282, 325",to come over to her place the next weekend.,one-role-action
+282,"282, 325",to come over to her place the next weekend.,starting
+295,"295, 307",to her place,phenomenon
+295,"295, 307",to her place,attribute
+295,"295, 307",to her place,created-phenomenon
+295,"295, 307",to her place,destination
+295,"295, 307",to her place,affected-destination
+295,"295, 307",to her place,created
+334,"334, 349",one week's time,destination
+334,"334, 349",one week's time,affected-destination
+334,"334, 349",one week's time,range
+383,"383, 391",spending,main
+326,"326, 413","Yes, in one week's time, we went from total strangers to spending the weekend together.",process
+326,"326, 413","Yes, in one week's time, we went from total strangers to spending the weekend together.",two-role-action
+326,"326, 413","Yes, in one week's time, we went from total strangers to spending the weekend together.",action
+349,"349, 353",", we",agent
+349,"349, 353",", we",agent-cognizant
+349,"349, 353",", we",affected-carrier
+349,"349, 353",", we",affected
+349,"349, 353",", we",agent-perceiver
+349,"349, 353",", we",carrier
+349,"349, 353",", we",perceiver
+392,"392, 403",the weekend,affected-possessed
+392,"392, 403",the weekend,possessed
+383,"383, 413",spending the weekend together.,process
+383,"383, 413",spending the weekend together.,relational
+383,"383, 413",spending the weekend together.,possessive
+443,"443, 545",but from her photos and conversations I just knew I wouldn't be disappointed when we met face-to-face.,process
+493,"493, 545",I wouldn't be disappointed when we met face-to-face.,created-phenomenon
+520,"520, 524",when,affected-emoter
+520,"520, 524",when,affected-path
+520,"520, 524",when,affected-perceiver
+520,"520, 524",when,affected-cognizant
+520,"520, 524",when,affected-carrier
+520,"520, 524",when,affected-destination
+520,"520, 524",when,affected
+520,"520, 524",when,affected-possessed
+520,"520, 524",when,matchee
+520,"520, 524",when,affected-source
+520,"520, 524",when,range
+414,"414, 442","She lived ninety miles away,",process
+414,"414, 442","She lived ninety miles away,",action
+414,"414, 442","She lived ninety miles away,",one-role-action
+414,"414, 417",She,agent
+414,"414, 417",She,affected-carrier
+414,"414, 417",She,agent-carrier
+414,"414, 417",She,agent-perceiver
+414,"414, 417",She,perceiver
+520,"520, 545",when we met face-to-face.,process
+520,"520, 545",when we met face-to-face.,matching
+520,"520, 545",when we met face-to-face.,relational
+520,"520, 545",when we met face-to-face.,two-role-action
+481,"481, 482",I,agent-cognizant
+481,"481, 482",I,affected-cognizant
+525,"525, 527",we,agent-cognizant
+525,"525, 527",we,affected-carrier
+525,"525, 527",we,agent-carrier
+525,"525, 527",we,agent-perceiver
+525,"525, 527",we,carrier
+620,"620, 623",she,affected-carrier
+620,"620, 623",she,agent-carrier
+551,"551, 552",I,agent
+551,"551, 552",I,affected-carrier
+551,"551, 552",I,affected
+551,"551, 552",I,agent-perceiver
+551,"551, 552",I,carrier
+551,"551, 552",I,perceiver
+613,"613, 619",to see,main
+578,"578, 581",she,agent-cognizant
+578,"578, 581",she,agent-carrier
+578,"578, 581",she,agent-perceiver
+628,"628, 643",more attractive,location
+546,"546, 573",When I arrived at her place,process
+601,"601, 604",was,main
+546,"546, 550",When,destination
+546,"546, 550",When,affected-destination
+613,"613, 660",to see she was more attractive than her photos!,process
+613,"613, 660",to see she was more attractive than her photos!,causative
+613,"613, 660",to see she was more attractive than her photos!,influential
+561,"561, 573",at her place,affected-destination
+644,"644, 660",than her photos!,attribute
+574,"574, 597",and she opened the door,process
+574,"574, 597",and she opened the door,two-role-action
+620,"620, 660",she was more attractive than her photos!,process
+620,"620, 660",she was more attractive than her photos!,locational
+589,"589, 597",the door,affected-emoter
+589,"589, 597",the door,created-phenomenon
+589,"589, 597",the door,affected-path
+589,"589, 597",the door,affected-perceiver
+589,"589, 597",the door,affected-cognizant
+589,"589, 597",the door,affected-carrier
+589,"589, 597",the door,affected-destination
+589,"589, 597",the door,affected-possessed
+589,"589, 597",the door,affected-source
+589,"589, 597",the door,created
+620,"620, 660",she was more attractive than her photos!,created-phenomenon
+620,"620, 660",she was more attractive than her photos!,created
+795,"795, 827",with a little groping thrown in.,affected-emoter
+795,"795, 827",with a little groping thrown in.,affected-path
+795,"795, 827",with a little groping thrown in.,affected-perceiver
+795,"795, 827",with a little groping thrown in.,affected-cognizant
+795,"795, 827",with a little groping thrown in.,affected-carrier
+795,"795, 827",with a little groping thrown in.,affected-destination
+795,"795, 827",with a little groping thrown in.,affected
+795,"795, 827",with a little groping thrown in.,affected-possessed
+795,"795, 827",with a little groping thrown in.,matchee
+795,"795, 827",with a little groping thrown in.,affected-source
+795,"795, 827",with a little groping thrown in.,carrier
+699,"699, 704",going,main
+697,"697, 758",", going through a bottle of wine, slow dancing in the kitchen",process
+697,"697, 758",", going through a bottle of wine, slow dancing in the kitchen",directional
+697,"697, 758",", going through a bottle of wine, slow dancing in the kitchen",two-role-action
+772,"772, 794",some passionate kisses,affected-emoter
+772,"772, 794",some passionate kisses,affected-path
+772,"772, 794",some passionate kisses,affected-perceiver
+772,"772, 794",some passionate kisses,affected-cognizant
+772,"772, 794",some passionate kisses,affected-carrier
+772,"772, 794",some passionate kisses,affected-destination
+772,"772, 794",some passionate kisses,affected
+772,"772, 794",some passionate kisses,affected-possessed
+772,"772, 794",some passionate kisses,affected-source
+772,"772, 794",some passionate kisses,possessed
+687,"687, 697",barbequing,main
+661,"661, 827","Well, we had a great time barbequing, going through a bottle of wine, slow dancing in the kitchen, and sharing some passionate kisses with a little groping thrown in.",process
+661,"661, 827","Well, we had a great time barbequing, going through a bottle of wine, slow dancing in the kitchen, and sharing some passionate kisses with a little groping thrown in.",causative
+661,"661, 827","Well, we had a great time barbequing, going through a bottle of wine, slow dancing in the kitchen, and sharing some passionate kisses with a little groping thrown in.",influential
+817,"817, 823",thrown,main
+760,"760, 827",and sharing some passionate kisses with a little groping thrown in.,process
+760,"760, 827",and sharing some passionate kisses with a little groping thrown in.,matching
+760,"760, 827",and sharing some passionate kisses with a little groping thrown in.,relational
+760,"760, 827",and sharing some passionate kisses with a little groping thrown in.,possessive
+760,"760, 827",and sharing some passionate kisses with a little groping thrown in.,two-role-action
+760,"760, 827",and sharing some passionate kisses with a little groping thrown in.,action
+665,"665, 669",", we",agent-cognizant
+665,"665, 669",", we",agent-carrier
+665,"665, 669",", we",agent-perceiver
+674,"674, 827","a great time barbequing, going through a bottle of wine, slow dancing in the kitchen, and sharing some passionate kisses with a little groping thrown in.",phenomenon
+674,"674, 827","a great time barbequing, going through a bottle of wine, slow dancing in the kitchen, and sharing some passionate kisses with a little groping thrown in.",created-phenomenon
+674,"674, 827","a great time barbequing, going through a bottle of wine, slow dancing in the kitchen, and sharing some passionate kisses with a little groping thrown in.",created
+764,"764, 771",sharing,main
+705,"705, 758","through a bottle of wine, slow dancing in the kitchen",affected-emoter
+705,"705, 758","through a bottle of wine, slow dancing in the kitchen",affected-path
+705,"705, 758","through a bottle of wine, slow dancing in the kitchen",affected-perceiver
+705,"705, 758","through a bottle of wine, slow dancing in the kitchen",affected-cognizant
+705,"705, 758","through a bottle of wine, slow dancing in the kitchen",affected-carrier
+705,"705, 758","through a bottle of wine, slow dancing in the kitchen",affected-destination
+705,"705, 758","through a bottle of wine, slow dancing in the kitchen",affected
+705,"705, 758","through a bottle of wine, slow dancing in the kitchen",affected-possessed
+705,"705, 758","through a bottle of wine, slow dancing in the kitchen",path
+705,"705, 758","through a bottle of wine, slow dancing in the kitchen",affected-source
+828,"828, 858",We were both very comfortable.,process
+828,"828, 858",We were both very comfortable.,two-role-action
+828,"828, 858",We were both very comfortable.,action
+828,"828, 830",We,agent
+828,"828, 830",We,agent-cognizant
+828,"828, 830",We,agent-carrier
+828,"828, 830",We,agent-perceiver
+841,"841, 858",very comfortable.,range
+859,"859, 861",We,affected-emoter
+859,"859, 861",We,affected-path
+859,"859, 861",We,affected-perceiver
+859,"859, 861",We,agent-cognizant
+859,"859, 861",We,affected-cognizant
+859,"859, 861",We,affected-carrier
+859,"859, 861",We,affected-destination
+859,"859, 861",We,affected
+859,"859, 861",We,agent-carrier
+859,"859, 861",We,affected-possessed
+859,"859, 861",We,agent-perceiver
+859,"859, 861",We,affected-source
+873,"873, 887",about midnight,affected-emoter
+873,"873, 887",about midnight,affected-path
+873,"873, 887",about midnight,affected-perceiver
+873,"873, 887",about midnight,affected-cognizant
+873,"873, 887",about midnight,affected-carrier
+873,"873, 887",about midnight,affected-destination
+873,"873, 887",about midnight,affected
+873,"873, 887",about midnight,affected-possessed
+873,"873, 887",about midnight,affected-source
+897,"897, 909",to her room.,attribute
+897,"897, 909",to her room.,affected-destination
+897,"897, 909",to her room.,matchee
+888,"888, 909",and went to her room.,process
+888,"888, 909",and went to her room.,attributive
+888,"888, 909",and went to her room.,matching
+888,"888, 909",and went to her room.,action
+888,"888, 909",and went to her room.,one-role-action
+859,"859, 887",We wound down about midnight,process
+859,"859, 887",We wound down about midnight,two-role-action
+859,"859, 887",We wound down about midnight,one-role-action
+931,"931, 935",some,affected-emoter
+931,"931, 935",some,created-phenomenon
+931,"931, 935",some,affected-path
+931,"931, 935",some,affected-perceiver
+931,"931, 935",some,affected-cognizant
+931,"931, 935",some,affected-carrier
+931,"931, 935",some,affected-destination
+931,"931, 935",some,affected
+931,"931, 935",some,affected-possessed
+931,"931, 935",some,affected-source
+931,"931, 935",some,created
+931,"931, 935",some,possessed
+931,"931, 935",some,carrier
+923,"923, 930",to have,main
+972,"972, 979",having.,created-phenomenon
+952,"952, 953",I,agent
+952,"952, 953",I,agent-cognizant
+952,"952, 953",I,affected-cognizant
+952,"952, 953",I,affected
+936,"936, 979",of the best sex I can ever remember having.,affected-emoter
+936,"936, 979",of the best sex I can ever remember having.,created-phenomenon
+936,"936, 979",of the best sex I can ever remember having.,affected-path
+936,"936, 979",of the best sex I can ever remember having.,affected-perceiver
+936,"936, 979",of the best sex I can ever remember having.,affected-cognizant
+936,"936, 979",of the best sex I can ever remember having.,affected-carrier
+936,"936, 979",of the best sex I can ever remember having.,affected-destination
+936,"936, 979",of the best sex I can ever remember having.,affected
+936,"936, 979",of the best sex I can ever remember having.,affected-possessed
+936,"936, 979",of the best sex I can ever remember having.,affected-source
+936,"936, 979",of the best sex I can ever remember having.,created
+936,"936, 979",of the best sex I can ever remember having.,possessed
+923,"923, 979",to have some of the best sex I can ever remember having.,process
+923,"923, 979",to have some of the best sex I can ever remember having.,causative
+923,"923, 979",to have some of the best sex I can ever remember having.,relational
+923,"923, 979",to have some of the best sex I can ever remember having.,possessive
+923,"923, 979",to have some of the best sex I can ever remember having.,two-role-action
+923,"923, 979",to have some of the best sex I can ever remember having.,action
+987,"987, 997",delicious.,location
+980,"980, 982",It,affected-carrier
+980,"980, 982",It,agent-carrier
+980,"980, 997",It was delicious.,process
+980,"980, 997",It was delicious.,locational
+998,"998, 1030","The morning after was nice, too.",process
+998,"998, 1030","The morning after was nice, too.",directional
+1020,"1020, 1030","nice, too.",destination
+1020,"1020, 1030","nice, too.",affected-destination
+998,"998, 1009",The morning,agent
+998,"998, 1009",The morning,agent-perceiver
+998,"998, 1009",The morning,perceiver
+1044,"1044, 1065",", had some small talk",process
+1044,"1044, 1065",", had some small talk",relational
+1044,"1044, 1065",", had some small talk",possessive
+1031,"1031, 1044",I made coffee,process
+1031,"1031, 1044",I made coffee,directional
+1031,"1031, 1044",I made coffee,relational
+1031,"1031, 1044",I made coffee,two-role-cognition
+1102,"1102, 1105",her,cognizant
+1102,"1102, 1105",her,affected
+1038,"1038, 1044",coffee,phenomenon
+1038,"1038, 1044",coffee,created-phenomenon
+1038,"1038, 1044",coffee,destination
+1038,"1038, 1044",coffee,affected-destination
+1128,"1128, 1138",and split.,process
+1128,"1128, 1138",and split.,two-role-action
+1050,"1050, 1065",some small talk,affected-carrier
+1050,"1050, 1065",some small talk,affected
+1050,"1050, 1065",some small talk,affected-possessed
+1050,"1050, 1065",some small talk,possessed
+1050,"1050, 1065",some small talk,carrier
+1031,"1031, 1032",I,cognizant
+1031,"1031, 1032",I,affected-cognizant
+1031,"1031, 1032",I,affected
+1031,"1031, 1032",I,agent-perceiver
+1031,"1031, 1032",I,perceiver
+1092,"1092, 1126",", thanked her for a wonderful time",process
+1151,"1151, 1161",the thing.,location
+1151,"1151, 1161",the thing.,range
+1139,"1139, 1161","Now, here's the thing.",process
+1139,"1139, 1161","Now, here's the thing.",two-role-action
+1139,"1139, 1161","Now, here's the thing.",action
+1201,"1201, 1207",bugged,main
+1247,"1247, 1252",", she",agent
+1247,"1247, 1252",", she",agent-cognizant
+1247,"1247, 1252",", she",affected-carrier
+1247,"1247, 1252",", she",affected
+1247,"1247, 1252",", she",agent-carrier
+1247,"1247, 1252",", she",agent-perceiver
+1247,"1247, 1252",", she",carrier
+1247,"1247, 1252",", she",perceiver
+1232,"1232, 1298","whatever reason, she's not interested in any more contact with me.",process
+1232,"1232, 1298","whatever reason, she's not interested in any more contact with me.",attributive
+1232,"1232, 1298","whatever reason, she's not interested in any more contact with me.",locational
+1232,"1232, 1298","whatever reason, she's not interested in any more contact with me.",relational
+1232,"1232, 1298","whatever reason, she's not interested in any more contact with me.",two-role-action
+1252,"1252, 1258",'s not,main
+1259,"1259, 1269",interested,attribute
+1259,"1259, 1269",interested,location
+1259,"1259, 1269",interested,range
+1232,"1232, 1247",whatever reason,attribute
+1232,"1232, 1247",whatever reason,location
+1232,"1232, 1247",whatever reason,range
+1270,"1270, 1298",in any more contact with me.,attribute
+1270,"1270, 1298",in any more contact with me.,location
+1270,"1270, 1298",in any more contact with me.,range
+1303,"1303, 1311",confused,main
+1357,"1357, 1363",making,main
+1313,"1313, 1315",We,agent
+1313,"1313, 1315",We,agent-cognizant
+1313,"1313, 1315",We,agent-carrier
+1313,"1313, 1315",We,agent-perceiver
+1357,"1357, 1397",making love with someone you cared about,process
+1357,"1357, 1397",making love with someone you cared about,attributive
+1357,"1357, 1397",making love with someone you cared about,directional
+1357,"1357, 1397",making love with someone you cared about,causative
+1357,"1357, 1397",making love with someone you cared about,relational
+1357,"1357, 1397",making love with someone you cared about,possessive
+1357,"1357, 1397",making love with someone you cared about,two-role-action
+1357,"1357, 1397",making love with someone you cared about,influential
+1386,"1386, 1391",cared,main
+1313,"1313, 1442",We both agreed that the sex we had was like making love with someone you cared about; and we had a great time during the evening.,process
+1313,"1313, 1442",We both agreed that the sex we had was like making love with someone you cared about; and we had a great time during the evening.,three-role-cognition
+1403,"1403, 1405",we,agent-cognizant
+1403,"1403, 1405",we,affected-carrier
+1403,"1403, 1405",we,affected
+1403,"1403, 1405",we,agent-carrier
+1403,"1403, 1405",we,agent-perceiver
+1403,"1403, 1405",we,carrier
+1403,"1403, 1405",we,perceiver
+1364,"1364, 1368",love,attribute
+1364,"1364, 1368",love,created-phenomenon
+1364,"1364, 1368",love,destination
+1364,"1364, 1368",love,affected-carrier
+1364,"1364, 1368",love,affected-destination
+1364,"1364, 1368",love,affected
+1364,"1364, 1368",love,affected-possessed
+1364,"1364, 1368",love,created
+1364,"1364, 1368",love,possessed
+1364,"1364, 1368",love,carrier
+1382,"1382, 1385",you,agent
+1382,"1382, 1385",you,agent-cognizant
+1382,"1382, 1385",you,agent-carrier
+1382,"1382, 1385",you,agent-perceiver
+1341,"1341, 1343",we,agent
+1341,"1341, 1343",we,agent-cognizant
+1341,"1341, 1343",we,agent-carrier
+1341,"1341, 1343",we,agent-perceiver
+1382,"1382, 1397",you cared about,process
+1382,"1382, 1397",you cared about,action
+1382,"1382, 1397",you cared about,one-role-action
+1410,"1410, 1442",a great time during the evening.,phenomenon
+1410,"1410, 1442",a great time during the evening.,affected-emoter
+1410,"1410, 1442",a great time during the evening.,created-phenomenon
+1410,"1410, 1442",a great time during the evening.,affected-path
+1410,"1410, 1442",a great time during the evening.,affected-perceiver
+1410,"1410, 1442",a great time during the evening.,affected-cognizant
+1410,"1410, 1442",a great time during the evening.,affected-carrier
+1410,"1410, 1442",a great time during the evening.,affected-destination
+1410,"1410, 1442",a great time during the evening.,affected
+1410,"1410, 1442",a great time during the evening.,affected-possessed
+1410,"1410, 1442",a great time during the evening.,affected-source
+1410,"1410, 1442",a great time during the evening.,created
+1410,"1410, 1442",a great time during the evening.,possessed
+1399,"1399, 1442",and we had a great time during the evening.,process
+1399,"1399, 1442",and we had a great time during the evening.,causative
+1399,"1399, 1442",and we had a great time during the evening.,relational
+1399,"1399, 1442",and we had a great time during the evening.,possessive
+1399,"1399, 1442",and we had a great time during the evening.,two-role-action
+1341,"1341, 1347",we had,process
+1341,"1341, 1347",we had,action
+1341,"1341, 1347",we had,one-role-action
+1328,"1328, 1442",that the sex we had was like making love with someone you cared about; and we had a great time during the evening.,created-phenomenon
+1344,"1344, 1347",had,main
+1369,"1369, 1397",with someone you cared about,attribute
+1369,"1369, 1397",with someone you cared about,created-phenomenon
+1369,"1369, 1397",with someone you cared about,affected-possessed
+1369,"1369, 1397",with someone you cared about,created
+1369,"1369, 1397",with someone you cared about,possessed
+1443,"1443, 1456",This all left,process
+1443,"1443, 1456",This all left,action
+1443,"1443, 1456",This all left,one-role-action
+1457,"1457, 1459",me,affected-emoter
+1457,"1457, 1459",me,emoter
+1457,"1457, 1473",me wanting more.,process
+1457,"1457, 1473",me wanting more.,mental
+1457,"1457, 1473",me wanting more.,desiderative
+1443,"1443, 1447",This,agent-cognizant
+1443,"1443, 1447",This,agent-carrier
+1443,"1443, 1447",This,agent-perceiver
+1468,"1468, 1473",more.,created-phenomenon
+1460,"1460, 1467",wanting,main
+1495,"1495, 1513",hurting for a fix.,process
+1495,"1495, 1513",hurting for a fix.,two-role-action
+1495,"1495, 1513",hurting for a fix.,action
+1495,"1495, 1513",hurting for a fix.,one-role-action
+1495,"1495, 1502",hurting,main
+1474,"1474, 1513",I feel like a junkie hurting for a fix.,process
+1503,"1503, 1513",for a fix.,affected-emoter
+1503,"1503, 1513",for a fix.,affected-path
+1503,"1503, 1513",for a fix.,affected-perceiver
+1503,"1503, 1513",for a fix.,affected-cognizant
+1503,"1503, 1513",for a fix.,affected-carrier
+1503,"1503, 1513",for a fix.,affected-destination
+1503,"1503, 1513",for a fix.,affected
+1503,"1503, 1513",for a fix.,affected-possessed
+1503,"1503, 1513",for a fix.,affected-source
+1474,"1474, 1475",I,affected-carrier
+1474,"1474, 1475",I,agent-carrier
+1514,"1514, 1515",I,affected-cognizant
+1514,"1514, 1515",I,affected
+1538,"1538, 1568",what is making her so distant.,process
+1538,"1538, 1568",what is making her so distant.,causative
+1538,"1538, 1542",what,agent-cognizant
+1538,"1538, 1542",what,agent-carrier
+1538,"1538, 1542",what,agent-perceiver
+1553,"1553, 1568",her so distant.,created-phenomenon
+1553,"1553, 1568",her so distant.,created
+1560,"1560, 1567",distant,main
+1538,"1538, 1568",what is making her so distant.,created-phenomenon
+972,"972, 979",having.,phenomenon
+1328,"1328, 1442",that the sex we had was like making love with someone you cared about; and we had a great time during the evening.,phenomenon

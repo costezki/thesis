@@ -1,0 +1,165 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.7297297297297297
+,Recall,0.9473684210526315
+,F1,0.8244274809160306
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+88,5.0990195135927845,"64, 82","59, 83",6,you are doing well,that you are doing well.,configuration,configuration
+123,5.0990195135927845,"64, 82","59, 83",6,you are doing well,that you are doing well.,participant-role,participant-role
+5,0.0,"64, 67","64, 67",0,you,you,participant-role,participant-role
+7,0.0,"72, 77","72, 77",0,doing,doing,main,main
+2,0.0,"47, 48","47, 48",0,I,I,participant-role,participant-role
+1,1.0,"47, 82","47, 83",1,I'm so glad that you are doing well,I'm so glad that you are doing well.,configuration,configuration
+11,0.0,"93, 95","93, 95",0,me,me,participant-role,participant-role
+89,24.0,"84, 100","84, 124",24,It gives me hope,It gives me hope that I can do the same.,configuration,configuration
+10,0.0,"87, 92","87, 92",0,gives,gives,main,main
+9,0.0,"84, 86","84, 86",0,It,It,participant-role,participant-role
+15,0.0,"112, 114","112, 114",0,do,do,main,main
+13,0.0,"106, 107","106, 107",0,I,I,participant-role,participant-role
+90,5.0990195135927845,"106, 123","101, 124",6,I can do the same,that I can do the same.,configuration,configuration
+16,1.0,"115, 123","115, 124",1,the same,the same.,participant-role,participant-role
+124,0.0,"190, 191","190, 191",0,I,I,participant-role,participant-role
+21,4.123105625617661,"211, 223","207, 224",5,it went well,and it went well.,configuration,configuration
+17,0.0,"125, 126","125, 126",0,I,I,participant-role,participant-role
+24,0.0,"211, 213","211, 213",0,it,it,participant-role,participant-role
+127,0.0,"190, 204","190, 204",0,I've ever done,I've ever done,configuration,configuration
+25,0.0,"214, 218","214, 218",0,went,went,main,main
+20,40.049968789001575,"165, 204","125, 206",42,first individual session I've ever done,I actually met with a therapist today ( first individual session I've ever done ),configuration,configuration
+18,5.0,"136, 144","136, 139",5,met with,met,main,main
+126,0.0,"200, 204","200, 204",0,done,done,main,main
+101,25.079872407968907,"165, 204","140, 206",27,first individual session I've ever done,with a therapist today ( first individual session I've ever done ),participant-role,participant-role
+27,0.0,"225, 228","225, 228",0,She,She,participant-role,participant-role
+31,1.0,"244, 275","244, 276",1,to get me into the program ASAP,to get me into the program ASAP.,participant-role,participant-role
+22,1.0,"225, 275","225, 276",1,She's going to try to get me into the program ASAP,She's going to try to get me into the program ASAP.,configuration,configuration
+30,3.0,"240, 243","237, 243",3,try,to try,main,main
+105,1.0,"277, 349","277, 350",1,"The strange thing about me, Jason, is that I never had any physical pain","The strange thing about me, Jason, is that I never had any physical pain.",configuration,configuration
+23,6.0,"328, 331","322, 331",6,had,never had,main,main
+104,5.0990195135927845,"320, 349","315, 350",6,I never had any physical pain,that I never had any physical pain.,participant-role,participant-role
+29,5.0990195135927845,"320, 349","315, 350",6,I never had any physical pain,that I never had any physical pain.,configuration,configuration
+34,0.0,"320, 321","320, 321",0,I,I,participant-role,participant-role
+102,7.0,"277, 303","277, 310",7,The strange thing about me,"The strange thing about me, Jason",participant-role,participant-role
+103,0.0,"312, 314","312, 314",0,is,is,main,main
+36,1.0,"332, 349","332, 350",1,any physical pain,any physical pain.,participant-role,participant-role
+37,0.0,"351, 359","351, 359",0,The food,The food,participant-role,participant-role
+32,1.0,"351, 405","351, 406",1,The food just comes up smoothly without any hesitation,The food just comes up smoothly without any hesitation.,configuration,configuration
+38,3.0,"365, 373","365, 370",3,comes up,comes,main,main
+45,0.0,"513, 515","513, 515",0,is,is,main,main
+39,2.0,"441, 446","439, 446",2,which,", which",participant-role,participant-role
+107,12.0,"472, 488","472, 476",12,have or have had,have,main,main
+46,1.0,"516, 550","516, 551",1,at the University of Iowa Hospital,at the University of Iowa Hospital.,participant-role,participant-role
+109,29.0,"468, 505","468, 476",29,who have or have had eating disorders,who have,configuration,configuration
+41,0.0,"409, 411","409, 411",0,go,go,main,main
+44,46.2709412050371,"450, 505","455, 551",51,open to all males who have or have had eating disorders,"to all males who have or have had eating disorders, which is at the University of Iowa Hospital.",participant-role,participant-role
+42,0.0,"412, 426","412, 426",0,to Men's group,to Men's group,participant-role,participant-role
+33,0.0,"407, 439","407, 439",0,I go to Men's group every Friday,I go to Men's group every Friday,configuration,configuration
+35,46.04345773288535,"441, 505","439, 551",48,which is open to all males who have or have had eating disorders,", which is open to all males who have or have had eating disorders, which is at the University of Iowa Hospital.",configuration,configuration
+92,2.23606797749979,"507, 550","505, 551",3,which is at the University of Iowa Hospital,", which is at the University of Iowa Hospital.",configuration,configuration
+110,2.0,"507, 512","505, 512",2,which,", which",participant-role,participant-role
+43,0.0,"447, 449","447, 449",0,is,is,main,main
+106,0.0,"468, 471","468, 471",0,who,who,participant-role,participant-role
+40,0.0,"407, 408","407, 408",0,I,I,participant-role,participant-role
+93,1.0,"552, 564","552, 565",1,It's awesome,It's awesome.,configuration,configuration
+48,1.0,"555, 556","554, 556",1,s,'s,main,main
+47,0.0,"552, 554","552, 554",0,It,It,participant-role,participant-role
+49,1.0,"557, 564","557, 565",1,awesome,awesome.,participant-role,participant-role
+94,3.0,"569, 592","566, 592",3,you're ever in the area,If you're ever in the area,configuration,configuration
+111,0.0,"594, 598","594, 598",0,join,join,main,main
+112,1.0,"599, 601","599, 602",1,us,us!,participant-role,participant-role
+113,28.0178514522438,"594, 601","566, 602",29,join us,"If you're ever in the area, join us!",configuration,configuration
+52,0.0,"581, 592","581, 592",0,in the area,in the area,participant-role,participant-role
+51,1.0,"573, 575","572, 575",1,re,'re,main,main
+50,0.0,"569, 572","569, 572",0,you,you,participant-role,participant-role
+115,0.0,"632, 634","632, 634",0,is,is,main,main
+117,1.0,"628, 699","628, 700",1,who is an absolute genius on the subject of males with eating disorders,who is an absolute genius on the subject of males with eating disorders.,configuration,configuration
+116,1.0,"635, 699","635, 700",1,an absolute genius on the subject of males with eating disorders,an absolute genius on the subject of males with eating disorders.,participant-role,participant-role
+68,1.0,"603, 699","603, 700",1,It's head by Dr Anderson who is an absolute genius on the subject of males with eating disorders,It's head by Dr Anderson who is an absolute genius on the subject of males with eating disorders.,configuration,configuration
+56,8.06225774829855,"616, 699","608, 700",9,Dr Anderson who is an absolute genius on the subject of males with eating disorders,head by Dr Anderson who is an absolute genius on the subject of males with eating disorders.,participant-role,participant-role
+114,0.0,"628, 631","628, 631",0,who,who,participant-role,participant-role
+53,0.0,"603, 605","603, 605",0,It,It,participant-role,participant-role
+57,0.0,"701, 703","701, 703",0,He,He,participant-role,participant-role
+59,0.0,"708, 715","708, 715",0,telling,telling,main,main
+118,0.0,"746, 750","746, 750",0,that,that,participant-role,participant-role
+119,0.0,"751, 759","751, 759",0,involves,involves,main,main
+61,1.0,"719, 796","719, 797",1,about a surgical procedure that involves putting a wrap ring around the valve,about a surgical procedure that involves putting a wrap ring around the valve.,participant-role,participant-role
+120,1.0,"760, 796","760, 797",1,putting a wrap ring around the valve,putting a wrap ring around the valve.,participant-role,participant-role
+121,1.0,"746, 796","746, 797",1,that involves putting a wrap ring around the valve,that involves putting a wrap ring around the valve.,configuration,configuration
+60,0.0,"716, 718","716, 718",0,me,me,participant-role,participant-role
+69,1.0,"701, 796","701, 797",1,He was telling me about a surgical procedure that involves putting a wrap ring around the valve,He was telling me about a surgical procedure that involves putting a wrap ring around the valve.,configuration,configuration
+95,1.0,"798, 841","798, 842",1,It's called the Laparoscopic Nissen surgery,It's called the Laparoscopic Nissen surgery.,configuration,configuration
+65,1.0,"810, 841","810, 842",1,the Laparoscopic Nissen surgery,the Laparoscopic Nissen surgery.,participant-role,participant-role
+62,0.0,"798, 800","798, 800",0,It,It,participant-role,participant-role
+64,0.0,"803, 809","803, 809",0,called,called,main,main
+71,3.1622776601683795,"870, 897","867, 898",4,impossible to bring up food,it impossible to bring up food.,participant-role,participant-role
+100,3.0,"862, 866","859, 866",3,make,to make,main,main
+66,0.0,"843, 847","843, 847",0,That,That,participant-role,participant-role
+122,1.0,"843, 897","843, 898",1,That's supposed to make it impossible to bring up food,That's supposed to make it impossible to bring up food.,configuration,configuration
+70,0.0,"867, 869","867, 869",0,it,it,participant-role,participant-role
+73,0.0,"904, 907","904, 907",0,you,you,participant-role,participant-role
+96,1.0,"899, 924","899, 925",1,Have you ever heard of it,Have you ever heard of it?,configuration,configuration
+75,3.1622776601683795,"922, 924","919, 925",4,it,of it?,participant-role,participant-role
+74,3.0,"913, 921","913, 918",3,heard of,heard,main,main
+98,3.1622776601683795,"967, 1001","964, 1002",4,I can't conquer it through therapy,if I can't conquer it through therapy.,configuration,configuration
+82,4.0,"975, 982","971, 982",4,conquer,n't conquer,main,main
+80,0.0,"967, 968","967, 968",0,I,I,participant-role,participant-role
+83,0.0,"983, 985","983, 985",0,it,it,participant-role,participant-role
+79,0.0,"948, 963","948, 963",0,the last resort,the last resort,participant-role,participant-role
+78,0.0,"945, 947","945, 947",0,be,be,main,main
+76,0.0,"926, 930","926, 930",0,This,This,participant-role,participant-role
+97,39.0,"926, 963","926, 1002",39,This will probably be the last resort,This will probably be the last resort if I can't conquer it through therapy.,configuration,configuration
+84,2.0,"1009, 1010","1007, 1010",2,I,", I",participant-role,participant-role
+86,5.0,"1027, 1035","1027, 1030",5,get back,get,main,main
+99,27.018512172212592,"1009, 1043","1036, 1044",28,I should probably get back to work,to work.,configuration,configuration
+87,1.0,"1036, 1043","1036, 1044",1,to work,to work.,participant-role,participant-role
+12,24.186773244895647,"96, 100","93, 124",27,hope,me hope that I can do the same.,participant-role,participant-role
+108,46.0,"489, 505","489, 551",46,eating disorders,"eating disorders, which is at the University of Iowa Hospital.",participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+4,"51, 58",so glad,main
+8,"78, 82",well,participant-role
+91,"125, 162",I actually met with a therapist today,configuration
+19,"145, 156",a therapist,participant-role
+26,"219, 223",well,participant-role
+55,"608, 612",head,main
+,
+,Parsed mismatching all manual (False Positives)
+42,"42, 46",you!,participant-role
+34,"34, 46",to meet you!,configuration
+34,"34, 46",to meet you!,participant-role
+34,"34, 41",to meet,main
+48,"48, 50",'m,main
+51,"51, 58",so glad,participant-role
+96,"96, 100",hope,main
+251,"251, 253",me,participant-role
+231,"231, 236",going,main
+244,"244, 250",to get,main
+244,"244, 276",to get me into the program ASAP.,configuration
+254,"254, 276",into the program ASAP.,participant-role
+383,"383, 406",without any hesitation.,participant-role
+485,"485, 488",had,main
+450,"450, 454",open,participant-role
+468,"468, 551","who have or have had eating disorders, which is at the University of Iowa Hospital.",configuration
+605,"605, 607",'s,main
+760,"760, 767",putting,main
+780,"780, 797",around the valve.,participant-role
+768,"768, 779",a wrap ring,participant-role
+870,"870, 880",impossible,main
+881,"881, 889",to bring,main
+867,"867, 898",it impossible to bring up food.,configuration
+881,"881, 898",to bring up food.,participant-role
+881,"881, 898",to bring up food.,configuration
+850,"850, 858",supposed,main
+893,"893, 898",food.,participant-role
+986,"986, 1002",through therapy.,participant-role
+1036,"1036, 1043",to work,main
+1045,"1045, 1049",Take,main
+1045,"1045, 1055",Take care!,configuration
+1050,"1050, 1055",care!,participant-role
+93,"93, 124",me hope that I can do the same.,configuration
+101,"101, 124",that I can do the same.,participant-role
+237,"237, 276",to try to get me into the program ASAP.,participant-role
+237,"237, 276",to try to get me into the program ASAP.,configuration
+477,"477, 551","or have had eating disorders, which is at the University of Iowa Hospital.",configuration
+760,"760, 797",putting a wrap ring around the valve.,configuration
+859,"859, 898",to make it impossible to bring up food.,configuration
+859,"859, 898",to make it impossible to bring up food.,participant-role

@@ -1,0 +1,208 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.6559139784946236
+,Recall,0.9312977099236641
+,F1,0.7697160883280758
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+91,13.038404810405298,"34, 55","21, 56",14,I'm new to this group,"Hello all, 
+I'm new to this group.",configuration,configuration
+1,4.0,"34, 35","30, 35",4,I,", 
+I",participant-role,participant-role
+2,1.0,"36, 37","35, 37",1,m,'m,main,main
+3,4.123105625617661,"38, 55","42, 56",5,new to this group,to this group.,participant-role,participant-role
+4,0.0,"58, 59","58, 59",0,I,I,participant-role,participant-role
+5,0.0,"60, 67","60, 67",0,believe,believe,main,main
+132,0.0,"68, 69","68, 69",0,I,I,participant-role,participant-role
+134,0.0,"73, 82","73, 82",0,developed,developed,main,main
+7,2.0,"133, 134","131, 134",2,I,", I",participant-role,participant-role
+136,0.0,"68, 130","68, 130",0,I've developed somewhat of an eating disorder ( binge eating ),I've developed somewhat of an eating disorder ( binge eating ),configuration,configuration
+92,0.0,"58, 130","58, 130",0,I believe I've developed somewhat of an eating disorder ( binge eating ),I believe I've developed somewhat of an eating disorder ( binge eating ),configuration,configuration
+8,0.0,"135, 140","135, 140",0,guess,guess,main,main
+6,0.0,"68, 130","68, 130",0,I've developed somewhat of an eating disorder ( binge eating ),I've developed somewhat of an eating disorder ( binge eating ),participant-role,participant-role
+135,9.0,"83, 130","92, 130",9,somewhat of an eating disorder ( binge eating ),of an eating disorder ( binge eating ),participant-role,participant-role
+10,0.0,"168, 169","168, 169",0,I,I,participant-role,participant-role
+94,1.0,"168, 224","168, 225",1,I'm not quite sure or not if it's a major problem or not,I'm not quite sure or not if it's a major problem or not.,configuration,configuration
+9,5.0990195135927845,"197, 224","202, 225",6,it's a major problem or not,a major problem or not.,participant-role,participant-role
+13,0.0,"197, 199","197, 199",0,it,it,participant-role,participant-role
+19,0.0,"355, 358","355, 358",0,had,had,main,main
+138,0.0,"384, 391","384, 391",0,believe,believe,main,main
+137,0.0,"382, 383","382, 383",0,I,I,participant-role,participant-role
+17,0.0,"273, 283","273, 283",0,remembered,remembered,main,main
+20,11.0,"359, 381","359, 392",11,a binge eating problem,a binge eating problem I believe.,participant-role,participant-role
+18,13.601470508735444,"284, 312","295, 304",19,overeating from time to time,from time,participant-role,participant-role
+96,0.0,"227, 337","227, 337",0,"For the longest time, prior to 2 years ago, I remembered overeating from time to time ( especially ice cream )","For the longest time, prior to 2 years ago, I remembered overeating from time to time ( especially ice cream )",configuration,configuration
+16,2.0,"271, 272","269, 272",2,I,", I",participant-role,participant-role
+140,13.038404810405298,"342, 391","355, 392",14,never really had a binge eating problem I believe,had a binge eating problem I believe.,configuration,configuration
+98,30.0,"394, 431","424, 431",30,"Though 2 years ago, I started running",running,configuration,configuration
+100,25.019992006393608,"475, 495","450, 496",26,lose a bit of weight,to get rid of my gut and lose a bit of weight.,configuration,configuration
+99,27.85677655436824,"441, 470","431, 496",36,I wanted to get rid of my gut,", because I wanted to get rid of my gut and lose a bit of weight.",configuration,configuration
+21,2.0,"414, 415","412, 415",2,I,", I",participant-role,participant-role
+25,0.0,"443, 449","443, 449",0,wanted,wanted,main,main
+24,0.0,"441, 442","441, 442",0,I,I,participant-role,participant-role
+23,0.0,"424, 431","424, 431",0,running,running,participant-role,participant-role
+22,0.0,"416, 423","416, 423",0,started,started,main,main
+28,5.0990195135927845,"475, 495","480, 496",6,lose a bit of weight,a bit of weight.,participant-role,participant-role
+31,22.0,"512, 529","512, 551",22,running regularly,running regularly and watching my diet.,participant-role,participant-role
+106,9.055385138137417,"534, 550","543, 551",10,watching my diet,my diet.,participant-role,participant-role
+30,0.0,"504, 511","504, 511",0,started,started,main,main
+29,2.0,"502, 503","500, 503",2,I,", I",participant-role,participant-role
+101,10.0,"502, 529","512, 529",10,I started running regularly,running regularly,configuration,configuration
+32,4.123105625617661,"534, 550","530, 551",5,watching my diet,and watching my diet.,configuration,configuration
+34,3.0,"555, 563","555, 560",3,ended up,ended,main,main
+33,0.0,"553, 554","553, 554",0,I,I,participant-role,participant-role
+102,1.0,"553, 586","553, 587",1,I ended up losing about 25-30 lbs,I ended up losing about 25-30 lbs.,configuration,configuration
+35,1.0,"564, 586","564, 587",1,losing about 25-30 lbs,losing about 25-30 lbs.,participant-role,participant-role
+27,0.0,"612, 630","612, 630",0,at an ideal weight,at an ideal weight,participant-role,participant-role
+123,5.0,"596, 630","596, 635",5,I'm pretty much at an ideal weight,I'm pretty much at an ideal weight now.,configuration,configuration
+103,1.0,"589, 634","589, 635",1,I know I'm pretty much at an ideal weight now,I know I'm pretty much at an ideal weight now.,configuration,configuration
+36,0.0,"589, 590","589, 590",0,I,I,participant-role,participant-role
+38,1.0,"596, 634","596, 635",1,I'm pretty much at an ideal weight now,I'm pretty much at an ideal weight now.,participant-role,participant-role
+121,1.0,"598, 599","597, 599",1,m,'m,main,main
+37,0.0,"591, 595","591, 595",0,know,know,main,main
+120,0.0,"596, 597","596, 597",0,I,I,participant-role,participant-role
+107,12.727922061357855,"740, 779","749, 770",18,obsessed with calorie counting and such,with calorie counting,participant-role,participant-role
+43,2.0,"719, 720","717, 720",2,I,", I",participant-role,participant-role
+42,12.0,"679, 717","667, 717",12,paying more close attention to my diet,running and paying more close attention to my diet,participant-role,participant-role
+40,0.0,"659, 666","659, 666",0,started,started,main,main
+108,21.02379604162864,"719, 779","740, 780",22,I have almost become obsessed with calorie counting and such,obsessed with calorie counting and such.,configuration,configuration
+105,7.0,"679, 717","686, 717",7,paying more close attention to my diet,more close attention to my diet,configuration,configuration
+39,0.0,"657, 658","657, 658",0,I,I,participant-role,participant-role
+45,0.0,"733, 739","733, 739",0,become,become,main,main
+46,0.0,"782, 783","782, 783",0,I,I,participant-role,participant-role
+128,0.0,"804, 808","804, 808",0,that,that,participant-role,participant-role
+48,63.0,"792, 835","792, 898",63,it was this that really started the problem,"it was this that really started the problem ( more so, the obsessive calorie counting than the running ) .",participant-role,participant-role
+124,0.0,"792, 794","792, 794",0,it,it,participant-role,participant-role
+131,63.0,"804, 835","804, 898",63,that really started the problem,"that really started the problem ( more so, the obsessive calorie counting than the running ) .",configuration,configuration
+130,63.0,"824, 835","824, 898",63,the problem,"the problem ( more so, the obsessive calorie counting than the running ) .",participant-role,participant-role
+47,0.0,"784, 791","784, 791",0,believe,believe,main,main
+109,63.0,"782, 835","782, 898",63,I believe it was this that really started the problem,"I believe it was this that really started the problem ( more so, the obsessive calorie counting than the running ) .",configuration,configuration
+125,0.0,"795, 798","795, 798",0,was,was,main,main
+126,95.0,"799, 803","799, 898",95,this,"this that really started the problem ( more so, the obsessive calorie counting than the running ) .",participant-role,participant-role
+129,0.0,"816, 823","816, 823",0,started,started,main,main
+110,55.00909015790027,"900, 1008","955, 1009",56,"Now, usually I can go fine for a week or a little less eating ""healthy"" and not eating the ""forbidden"" foods","eating ""healthy"" and not eating the ""forbidden"" foods.",configuration,configuration
+51,5.0,"919, 926","919, 921",5,go fine,go,main,main
+49,0.0,"913, 914","913, 914",0,I,I,participant-role,participant-role
+58,0.0,"1098, 1099","1098, 1099",0,I,I,participant-role,participant-role
+112,35.608987629529715,"1019, 1094","1041, 1066",50,"at the end of the week, usually starting Friday, I can never control myself",", usually starting Friday",configuration,configuration
+60,18.0,"1109, 1183","1109, 1165",18,a little bit of a sweet food like ice cream or something along those lines,a little bit of a sweet food like ice cream or something,participant-role,participant-role
+113,3.1622776601683795,"1098, 1183","1095, 1184",4,I even try a little bit of a sweet food like ice cream or something along those lines,if I even try a little bit of a sweet food like ice cream or something along those lines.,configuration,configuration
+57,0.0,"1088, 1094","1088, 1094",0,myself,myself,participant-role,participant-role
+54,2.0,"1068, 1069","1066, 1069",2,I,", I",participant-role,participant-role
+56,6.0,"1080, 1087","1074, 1087",6,control,never control,main,main
+59,0.0,"1105, 1108","1105, 1108",0,try,try,main,main
+62,3.0,"1188, 1194","1188, 1191",3,end up,end,main,main
+64,31.76476034853718,"1223, 1263","1195, 1248",40,eating a whole 1/2 gallon in one evening,"going overboard, often just eating a whole 1/2 gallon",participant-role,participant-role
+61,0.0,"1186, 1187","1186, 1187",0,I,I,participant-role,participant-role
+115,16.15549442140351,"1212, 1263","1218, 1248",21,often just eating a whole 1/2 gallon in one evening,just eating a whole 1/2 gallon,configuration,configuration
+114,11.40175425099138,"1186, 1210","1195, 1217",16,I end up going overboard,"going overboard, often",configuration,configuration
+66,0.0,"1271, 1273","1271, 1273",0,is,is,main,main
+65,0.0,"1266, 1270","1266, 1270",0,This,This,participant-role,participant-role
+68,0.0,"1289, 1290","1289, 1290",0,I,I,participant-role,participant-role
+67,10.04987562112089,"1274, 1329","1284, 1330",11,something that I've gotten a bit concerned about lately,that I've gotten a bit concerned about lately.,participant-role,participant-role
+117,5.0990195135927845,"1289, 1329","1284, 1330",6,I've gotten a bit concerned about lately,that I've gotten a bit concerned about lately.,configuration,configuration
+70,0.0,"1294, 1300","1294, 1300",0,gotten,gotten,main,main
+116,1.0,"1266, 1329","1266, 1330",1,This is something that I've gotten a bit concerned about lately,This is something that I've gotten a bit concerned about lately.,configuration,configuration
+73,1.0,"1334, 1335","1333, 1335",1,m,'m,main,main
+74,20.0,"1348, 1379","1336, 1363",28,"overweight, ( 5'6 and 132 lbs )","by no means overweight, ( 5",participant-role,participant-role
+52,6.082762530298219,"1412, 1428","1406, 1429",7,my eating habits,about my eating habits.,participant-role,participant-role
+77,7.810249675906654,"1391, 1411","1396, 1405",11,very concerned about,concerned,main,main
+119,4.123105625617661,"1386, 1428","1382, 1429",5,I am very concerned about my eating habits,but I am very concerned about my eating habits.,configuration,configuration
+72,0.0,"1332, 1333","1332, 1333",0,I,I,participant-role,participant-role
+75,0.0,"1386, 1387","1386, 1387",0,I,I,participant-role,participant-role
+118,2.0,"1332, 1379","1332, 1381",2,"I'm by no means overweight, ( 5'6 and 132 lbs )","I'm by no means overweight, ( 5'6 and 132 lbs ) ,",configuration,configuration
+79,7.0710678118654755,"1508, 1584","1501, 1585",8,go to the opposite extreme eating everything in sight that's not good for me,", then go to the opposite extreme eating everything in sight that's not good for me.",configuration,configuration
+122,1.0,"1431, 1584","1431, 1585",1,"It's like I can go from eating very healthy and eating the right foods, then go to the opposite extreme eating everything in sight that's not good for me","It's like I can go from eating very healthy and eating the right foods, then go to the opposite extreme eating everything in sight that's not good for me.",configuration,configuration
+78,30.4138126514911,"1441, 1501","1455, 1474",41,I can go from eating very healthy and eating the right foods,eating very healthy,configuration,configuration
+82,0.0,"1447, 1449","1447, 1449",0,go,go,main,main
+85,0.0,"1508, 1510","1508, 1510",0,go,go,main,main
+111,84.17244204607586,"1436, 1584","1450, 1501",97,"like I can go from eating very healthy and eating the right foods, then go to the opposite extreme eating everything in sight that's not good for me",from eating very healthy and eating the right foods,participant-role,participant-role
+83,1.0,"1434, 1435","1433, 1435",1,s,'s,main,main
+80,0.0,"1441, 1442","1441, 1442",0,I,I,participant-role,participant-role
+53,0.0,"1431, 1433","1431, 1433",0,It,It,participant-role,participant-role
+84,1.0,"1511, 1584","1511, 1585",1,to the opposite extreme eating everything in sight that's not good for me,to the opposite extreme eating everything in sight that's not good for me.,participant-role,participant-role
+90,4.123105625617661,"1591, 1639","1587, 1640",5,do I even begin to deal with something like this,How do I even begin to deal with something like this?,configuration,configuration
+89,10.0,"1607, 1639","1607, 1629",10,to deal with something like this,to deal with something,participant-role,participant-role
+87,0.0,"1594, 1595","1594, 1595",0,I,I,participant-role,participant-role
+88,0.0,"1601, 1606","1601, 1606",0,begin,begin,main,main
+93,75.0066663703967,"133, 165","58, 166",76,I guess over the last year or so,"I believe I've developed somewhat of an eating disorder ( binge eating ) , I guess over the last year or so.",configuration,configuration
+26,26.0,"450, 470","450, 496",26,to get rid of my gut,to get rid of my gut and lose a bit of weight.,participant-role,participant-role
+104,43.04648650006177,"646, 674","644, 717",45,ever since I started running,", ever since I started running and paying more close attention to my diet",configuration,configuration
+127,95.0,"792, 803","792, 898",95,it was this,"it was this that really started the problem ( more so, the obsessive calorie counting than the running ) .",configuration,configuration
+,
+,Manual mismatching all parsed (False Negative)
+12,"182, 186",sure,participant-role
+95,"197, 217",it's a major problem,configuration
+14,"200, 201",s,main
+15,"202, 217",a major problem,participant-role
+97,"342, 381",never really had a binge eating problem,configuration
+139,"342, 381",never really had a binge eating problem,participant-role
+41,"667, 674",running,participant-role
+63,"1195, 1210",going overboard,participant-role
+71,"1301, 1322",a bit concerned about,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+21,"21, 31","Hello all,",participant-role
+141,"141, 166",over the last year or so.,participant-role
+169,"169, 171",'m,main
+231,"231, 247",the longest time,participant-role
+284,"284, 294",overeating,main
+305,"305, 337",to time ( especially ice cream ),participant-role
+424,"424, 431",running,main
+512,"512, 519",running,main
+534,"534, 542",watching,main
+564,"564, 570",losing,main
+564,"564, 587",losing about 25-30 lbs.,configuration
+679,"679, 685",paying,main
+667,"667, 674",running,main
+740,"740, 748",obsessed,main
+707,"707, 717",to my diet,participant-role
+878,"878, 894",than the running,participant-role
+869,"869, 894",counting than the running,configuration
+869,"869, 877",counting,main
+845,"845, 860",", the obsessive",participant-role
+869,"869, 894",counting than the running,participant-role
+976,"976, 986",not eating,main
+955,"955, 1009","eating ""healthy"" and not eating the ""forbidden"" foods.",participant-role
+955,"955, 971","eating ""healthy""",configuration
+987,"987, 1009","the ""forbidden"" foods.",participant-role
+955,"955, 961",eating,main
+922,"922, 954",fine for a week or a little less,participant-role
+962,"962, 971","""healthy""",participant-role
+972,"972, 1009","and not eating the ""forbidden"" foods.",configuration
+1051,"1051, 1059",starting,main
+1022,"1022, 1066","the end of the week, usually starting Friday",participant-role
+1166,"1166, 1184",along those lines.,participant-role
+1223,"1223, 1229",eating,main
+1195,"1195, 1200",going,main
+1274,"1274, 1283",something,participant-role
+1455,"1455, 1461",eating,main
+1566,"1566, 1572",'s not,main
+1462,"1462, 1474",very healthy,participant-role
+1578,"1578, 1585",for me.,participant-role
+1479,"1479, 1485",eating,main
+1436,"1436, 1585","like I can go from eating very healthy and eating the right foods, then go to the opposite extreme eating everything in sight that's not good for me.",configuration
+1475,"1475, 1501",and eating the right foods,configuration
+1587,"1587, 1590",How,participant-role
+1607,"1607, 1629",to deal with something,configuration
+1615,"1615, 1629",with something,participant-role
+1607,"1607, 1614",to deal,main
+58,"58, 130",I believe I've developed somewhat of an eating disorder ( binge eating ),participant-role
+284,"284, 337",overeating from time to time ( especially ice cream ),participant-role
+284,"284, 337",overeating from time to time ( especially ice cream ),configuration
+382,"382, 392",I believe.,configuration
+394,"394, 496","Though 2 years ago, I started running, because I wanted to get rid of my gut and lose a bit of weight.",configuration
+498,"498, 551","So, I started running regularly and watching my diet.",configuration
+512,"512, 551",running regularly and watching my diet.,configuration
+571,"571, 587",about 25-30 lbs.,participant-role
+600,"600, 611",pretty much,participant-role
+686,"686, 706",more close attention,participant-role
+675,"675, 685",and paying,configuration
+667,"667, 717",running and paying more close attention to my diet,configuration
+1195,"1195, 1248","going overboard, often just eating a whole 1/2 gallon",configuration
+1186,"1186, 1264","I end up going overboard, often just eating a whole 1/2 gallon in one evening.",configuration
+1562,"1562, 1585",that's not good for me.,configuration
+1573,"1573, 1577",good,participant-role
+1486,"1486, 1501",the right foods,participant-role
+1562,"1562, 1566",that,participant-role
+637,"637, 739","However, ever since I started running and paying more close attention to my diet, I have almost become",configuration

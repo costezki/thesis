@@ -1,105 +1,249 @@
 \chapter{Enrichment of the constituency graph with systemic features}
-\label{ch:semantic-parsing}
+%\label{ch:semantic-parsing}
+\label{ch:enrichment-stage}
 
-%todo, rewrite this intro, for broader ferature enrichment, currently it is for SRL mainly
-Semantic Role labelling (SRL) is a well established task in the mainstream computational linguistics. Transitivity analysis is the SFL counterpart for SRL and constitutes the focus of this chapter. 
+The previous chapter describes how to create the systemic functional constituency structure which is the syntagmatic organization aimed at in this work. This chapter presents the mechanisms by which the paradigmatic account is provided through selection of systemic features at the level of each constituent. I present how constituency graph is enriched with features from two main system networks MOOD, introduced in Section \ref{sec:mood} and TRANSITIVITY, introduced in Section \ref{sec:transitivity}.
 
-The general approach is to first account for covert syntactic constituents and after assign process types and participant roles according to a given resource. In current case the account for empty constituents is implemented as described in Government and Binding Theory (GBT) \citep{Haegeman1991} and the employed verb database is called Process Type Database (PTDB) \citep{Neale2002}. 
+In the parsing process pipeline depicted in Figure \ref{fig:pipeline-overview} there is an phase called \textit{increasingly semantic graph enrichment}. The present chapter covers this phase entirely starting from Mood enrichment, to Null Element creation and finally Transitivity enrichment.
 
-Compared to SRL task, where the majority of implementations use probabilistic models trained on an annotated corpus, I employ a static data base based on which I assign a set of configurations that may be the case, or what are the possibilities, rather than the best single guess. For this reason I use the preparatory step of identifying covert constituents (i.e. Null Elements) which reduces the number of possible assignments taking the analysis close to the goal of a single ``correct'' configuration.
+The main method of enrichment is execution of update graph patterns (presented in Section \ref{sec:pattern-based-operations}) on the constituency graph. The MOOD graph patterns have been manually designed across various levels of delicacy. The patterns usually cover from one to four systemic selection from sibling or chained systems. Then the graph patterns are employed in the MOOD enrichment process provided  in Section \ref{sec:enrichment-stage}. 
+
+In SFL, Transitivity analysis roughly corresponds to what is known in mainstream computational linguistics as semantic analysis of text or \textit{semantic role labelling} (SRL), a well established task in the mainstream computational linguistics \citep{Carreras2005, Pradhan2007}. In this task the clause is assigned a semantic frame in which the predicate functions as the process and the participant constituents take frame dependent roles (or functions). The nodes that do not receive any participant role are adjuncts which act as circumstances and currently outside the scope of this thesis.
+
+Sometimes not all constituents are realised in the clause. Usually these constituents play semantic roles in the process configuration realised by the clause. This happens for one of two reasons: the participant is implicit and resolvable from the discourse structure or it is implicit and resolvable by a lookup outside the clause borders within the same sentence. The resolution from the discourse structure is outside the scope of the current work, the second resolution type, however, is implemented as it is based only on the sentence structure. In this work the account for empty constituents is implemented as described in Government and Binding Theory (GBT) \citep{Haegeman1991} introduced in Chapter \ref{ch:gbt}.
+
+Because the proposed task goes beyond the syntactic structure it needs to rely on additional external semantic resources. One such resource is the Process Type Database(PTDB) created by \citet{Neale2002} introduced in Section \ref{sec:ptdb-description-technical}. It is a table which listing possible configurations of semantic roles for each verb sense for over five thousands most popular verbs in English. This resource is then integrated into the current parser pipeline to automatically assignment semantic configurations and participant roles.
+
+%The current approach to TRANSITIVITY parsing is to first account for covert syntactic constituents and after assign process types and participant roles according to lexical-semantic database. In current case the account for empty constituents is implemented as described in Government and Binding Theory (GBT) \citep{Haegeman1991} introduced in Chapter \ref{ch:gbt} and the employed verb database is called Process Type Database (PTDB) \citep{Neale2002} introduced in Section \ref{sec:ptdb-description-technical}. 
+
+The majority of implementations for the SRL task use probabilistic models trained on an annotated corpus whose outcome is a single most probable assignment of semantic roles and the selection is based on the maximum likelihood. In the current work I employ a lexical data base containing sets of configurations for each verb sense. These configurations are interpreted as what may be the case, i.e. what are the possible semantic roles, and the result is a small set of possible semantic roles rather than the best single guess. In order to reduces the number of possible assignments taking the analysis close to the goal of a single ``correct'' configuration I use the preparatory step of identifying covert constituents (i.e. Null Elements).
+
+In the following sections I will explain the practical steps of enriching the CG with TRANSITIVITY features starting from how the PTDB has been normalised and made machine friendly, then how the graph patterns have been generated from the PTDB and finally how the patterns are matched onto the structural backbone enriching it with systemic features.
+
+
+
+\section{Creation the MOOD graph patterns}
+\label{sec:mood-patterns}
+In this section I describe a set of graph patterns that have been manually created and included into the parsing process of MOOD system. All of the MOOD features can be recovered from the constituency and dependency elements. Therefore the graph patterns provided below are relying on constituency information i.e. class and element and on dependency information such as POS, lemma, incoming and outgoing relation for the anchor node, order, etc. 
+
+This section describes how the patterns look like and how they were created. An extended representation of all the patterns is provided in the Annexe \ref{ch:graph-patterns-some}.
+
+The first two patterns depicted in Figure \ref{fig:polarity-pattern7} are used to determine POLARITY choices. The clause polarity in this work is considered to depend solely on the presence of a negation particle (this limitation is addressed in Section \ref{sec:mood}), which, in DG is represented by the \textit{neg} edge label and in CG is signalled by the presence of a negator element. The pattern in Figure \ref{fig:neg-pattern5} specifies that the root node is a clause and has a negator constituent. If this pattern is identified then the negative POLARITY feature selection is added to the clause node. Conversely, if the pattern from Figure \ref{fig:neg-pattern6}, where the negator element is marked to be missing, is successfully matched then the clause node is updated with positive POLARITY.
+
+    \begin{figure}[!ht]
+        \centering
+        \begin{subfigure}[t]{0.47\textwidth}
+            \centering
+            \begin{tikzpicture}[tree-style,level distance=3em,]
+            \node[pattern-node] {class:clause\\op:update\\
+                                arg:\{POLARITY:negative\}}
+            child {node[pattern-node] {element:negator} edge from parent node[right] {} }
+            ;
+            \end{tikzpicture}
+            \caption{Negative POLARITY}
+            \label{fig:neg-pattern5}
+        \end{subfigure}
+        \begin{subfigure}[t]{0.47\textwidth}
+            \centering
+            \begin{tikzpicture}[tree-style,level distance=3em,]
+            \node[pattern-node] {class:clause\\op:update\\
+                                arg:\{POLARITY:positive\}}
+            child {node[pattern-node-negative] {element:negator} edge from parent node[right] {} }
+            ;
+            \end{tikzpicture}
+            \caption{Positive POLARITY}
+            \label{fig:neg-pattern6}
+        \end{subfigure}
+        \caption{POLARITY detection graph patterns}
+        \label{fig:polarity-pattern7}
+        \end{figure}
+
+    A similar case holds for VOICE. Graph pattern in Figure \ref{fig:voice-pattern7} corresponds to the selection of passive voice. In DG it is captured by any of the four relations outgoing from a verb to another node. The dependency relations are: \textit{auxpass}, \textit{nsubjpass}, \textit{csubjpass}, \textit{agent} introducing either a passive auxiliary verb, a nominal subject, clausal subject or the agent in the complement position. If the pattern is matched in a dependency graph then it reflects passive voice otherwise, the voice is selected active. As the CG nodes have full awareness (described in Section \ref{sec:tight-coupling}) of DG nodes and edges the patterns can be written using the incoming relation (in-rel) special feature that represents all the incoming edges to the DG node corresponding to current constituent. 
+
+    \begin{figure}[!ht]
+        \centering
+        \begin{subfigure}[t]{0.47\textwidth}
+            \centering
+            \begin{tikzpicture}[tree-style,level distance=4em,level 1/.style={sibling distance=9em},]
+            \node[pattern-node] {class:clause\\op:update\\
+                arg:\{VOICE:passive\}}
+            child {node[pattern-node] {in-rel:$_{OR}$[auxpass, nsubjpass,\\csubjpass, agent]} edge from parent node[right] {} }
+            ;
+            \end{tikzpicture}
+            \caption{Passive voice}
+            \label{fig:voice-pattern5}
+        \end{subfigure}
+        \begin{subfigure}[t]{0.47\textwidth}
+            \centering
+            \begin{tikzpicture}[tree-style,level distance=4em,level 1/.style={sibling distance=9em},]
+            \node[pattern-node] {class:clause\\op:update\\
+                arg:\{VOICE:active\}}
+            child {node[pattern-node-negative] {in-rel:$_{OR}$[auxpass, nsubjpass,\\csubjpass, agent]} edge from parent node[right] {} }
+            ;
+            \end{tikzpicture}
+            \caption{Active voice}
+            \label{fig:voice-pattern6}
+        \end{subfigure}
+        \caption{Voice detection graph patterns}
+        \label{fig:voice-pattern7}
+    \end{figure}
+
+    The story is very similar for the rest of the patterns. There is a mixture of positive and negated nodes (in dashed boxes) described by constituency or (still) dependency special features. The reason for using GD features is that they already cover a rich syntactic variations that shall be exploited. As we move away towards patterns with higher in semantic information the DG features will no longer be used. 
+
+    \begin{figure}[!ht]
+        \centering
+        \begin{subfigure}[t]{0.47\textwidth}
+            \centering
+            \begin{tikzpicture}[tree-style,level distance=3em,]
+            \node[pattern-node] {pos:VBD, class:clause, op:update\\
+                arg:\{TIME:past,\\PROGRESSIVITY:non-progressive,\\PERFECTIVITY:non-perfect\}}
+            child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+            ;
+            \end{tikzpicture}
+            \caption{Simple past tense pattern}
+            \label{fig:past-tense-pattern1}
+        \end{subfigure}
+        \begin{subfigure}[t]{0.47\textwidth}
+            \centering
+            \begin{tikzpicture}[tree-style,level distance=3em,]
+            \node[pattern-node] {pos:VBD, class:clause, op:update\\
+                arg:\{TIME:present,\\PROGRESSIVITY:non-progressive,\\PERFECTIVITY:non-perfect\}}
+            child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+            ;
+            \end{tikzpicture}
+            \caption{Simple present tense pattern}
+            \label{fig:present-tense-pattern1}
+        \end{subfigure}
+        \begin{subfigure}[t]{0.47\textwidth}
+            \centering
+            \begin{tikzpicture}[tree-style,level distance=3em,level 1/.style={sibling distance=7em},]
+            \node[pattern-node] {pos:VBD, class:clause, op:update\\
+                arg:\{TIME:future,\\PROGRESSIVITY:non-progressive,\\PERFECTIVITY:non-perfect\}}
+            child {node[pattern-node] {lemma:will} edge from parent node[right] {} }
+            child {node[pattern-node, pattern-node-negative] {pos:$_{OR}$[MD,VB*]} edge from parent node[right] {} }
+            ;
+            \end{tikzpicture}
+            \caption{Simple future tense pattern}
+            \label{fig:future-tense-pattern1}
+        \end{subfigure}
+        \caption{Simple past, present and future tense patterns}
+        \label{fig:simple-tense-pattern1}
+    \end{figure}
+
+    In Figure \ref{fig:simple-tense-pattern1} is depicted a set of patterns for enriching the simple present, past and future tenses. They are presented as an additional example of graph patterns. They are mutually exclusive by design, but in principle no one can prevent a mistake to happen and more than one graph pattern to yield a positive outcome. This is, in fact, one of the limitations of the current parsing method. So for example if the negated described by pos:$_{OR}$[MD,VB*] is omitted from the pattern, then it will yield matched with situations when there is an auxiliary modal verb involved which is not correct because the intention is to capture clauses with a single verb. 
 
 \section{Enrichment with MOOD features}
-%todo, adapt the freshly copied content
 \label{sec:enrichment-stage}
-In this stage the CG nodes are assigned features from system networks. This is achieved by visiting each CG node in a bottom-up order and based on the node class and/or element function (also refereed to as triggers) the relevant system networks are being activated and executed. The relevancy criteria is established by system's precondition set. Each network has one or a set of selector functions associated to it and when the network is activated then the selector function is executed returning the systemic choices based on the visited node context in the CG graph and features (if any already assigned).
 
-Table \ref{tab:systemic-selection-activations} associates a list of triggers to a list of systemic networks. Table \ref{tab:system-to-function-mapping} associates systems with the choice making functions. Most of the selection criteria have been first implemented as hard-coded Python functions and latter transformed into the Graph patterns with update operations (see Section \ref{sec:pattern-based-operations} describing pattern based operations).
+In this stage the CG nodes are assigned system network features from graph patterns and a lexical-semantic dictionary. This is achieved by visiting each CG node in a bottom-up order and executing the enrichment functions. 
 
-Next I describe the enrichment algorithm and then treat some of the selection functions for some of the system networks. 
+The enrichment functions are provided via two rule tables. The first rule table (activation table) offers a pairing between element class and/or element (also called here the trigger) and an ordered set of system names. The second rule table is an association between a system name, an enrichment function (either matching or dictionary lookup) and a parameter that is either a set of graph patterns or a dictionary. Both tables have been manually created following the MOOD system network but also a few simple systems for nominal phrases.The graph patterns and dictionaries have been also manually complied following either traditional grammar sources, mainly \citet{Quirk1985}, or SFL sources, mainly IFG4 \citep{Halliday2013}. 
 
-\begin{algorithm}[!ht]
-    \Input {\cg, \dg}
-    \Begin {
-        \For{\node \KwTo list of  \cg nodes in DFS postorder}
-        {
-            \For{\network \KwTo activated networks for the \node} 
-            {
-                \function $\leftarrow$ the selector function associated to the \network \;
-                \elementType $\leftarrow$ if any get the \function parameter \;
-                \label{line:selector-function}\choices $\leftarrow$  execution result of \function for \node, \cg and \elementType \;
-                \label{line:enrich-function}add the \choices to the \node \;
-            }
-        }
-    }
-    \caption{Enriching CG with systemic features implemented as custom methods}
-    \label{alg:enrich-cg}
-\end{algorithm}
-
-The Algorithm \ref{alg:enrich-cg} shows how to enrich CG nodes with systemic choices using hard-coded selector functions (in the future, these hard coded selector functions will be replaced by verifying realization statements). The outer loop is a bottom-up iteration over the CG nodes in depth first (DFS) post-order. The inner loop iterates over the networks activated by the focus \node. Then a lookup in the Table \ref{tab:system-to-function-mapping} returns the function for choosing features from the system network and eventually a parameter (if the function requires it). This technique, involving a mapping table from SN to functions, is similar to the one in CG creation phase (Algorithm \ref{alg:phase-one}). The line \ref{line:selector-function} executes the selection function returning a set of choices. Then the last line assigns the choices to the \node in focus.
+%Table \ref{tab:systemic-selection-activations} associates a list of triggers to a list of systemic networks.
+The systems are provided in Table \ref{tab:systemic-selection-activations},in the right column, as ordered associations to the node class or function, in the left column. The list of systems from the MOOD network is partial because, as we will see next, the set of associated patterns, usually cover several systems at once, therefore the least delicate one serves as a marker for a portion of the system network. 
+%The left column represents activation triggers and the right column represents an ordered list of systems.
 
 \begin{table}[!ht]
     \centering
-    \begin{tabulary}{\textwidth}{|L|L|}
+    \begin{tabulary}{\textwidth}{|l|L|}
         \hline
-        \textit{Key} & \textit{System Activation Order}                                                \\ \hline
-        clause       & POLARITY,VOICE, AGENCY, MOOD TYPE, INDICATIVE TYPE, DEICTICITY, TENSE, MODALITY \\ \hline
+        \textit{Key} & \textit{System activation order}                                                \\ \hline
+        clause       & POLARITY, FINITNESS, MOOD TYPE, VOICE, TENSE, MODALITY TYPE\\ \hline
         nominal      & PERSON, ANIMACY, GENDER, NUMBER                                                 \\ \hline
-        deictic      & DETERMINATION                                                   				\\ 
+        deictic, pre-deictic      & DETERMINATION                                                   				\\ 
         \hline
-        pre-deictic  & DETERMINATION                                                                   \\ \hline
-        thing        & PERSON, ANIMACY, GENDER, NUMBER                                                 \\ \hline
-        possessor    & PERSON, ANIMACY, GENDER, NUMBER                                                 \\ \hline
+        %pre-deictic  & DETERMINATION                                                                   \\ \hline
+        thing, possessor        & PERSON, ANIMACY, GENDER, NUMBER                                                 \\ \hline
+        %possessor    & PERSON, ANIMACY, GENDER, NUMBER                                                 \\ \hline
     \end{tabulary}
-    \caption{System activation table depending on unit class or element type}
+    \caption{System activation table by unit class or element type}
     \label{tab:systemic-selection-activations}
 \end{table}
 
-Currently implemented networks are outlined in Table \ref{tab:systemic-selection-activations} as associations to the node class or function. The left column represents activation triggers and the right column represents an ordered list of systems.
+Table \ref{tab:system-to-function-mapping} associates systems with the enrichment functions and a parameter. 
+Currently there are two enrichment functions: one base on matching graph patterns and the other one based on a dictionary of lexical items paired to a set of features. Most of these associations have been first implemented as hard-coded Python functions and latter transformed into the graph patterns with update operations (see Section \ref{sec:pattern-based-operations} describing graph pattern based operations).
 
 \begin{table}[!ht]
     \centering
     \begin{tabulary}{\textwidth}{|L|L|L|}
         \hline
-        \textit{System Name} & \textit{Python Function}   & \textit{Additional Parameter} \\ \hline
-        POLARITY             & check\_polarity     &                               \\ \hline
-        VOICE                & check\_voice        &                               \\ \hline
-        AGENCY               & check\_agency       &                               \\ \hline
-        MOOD TYPE            & mood\_type          &                               \\ \hline
-        DEICTICITY           & check\_deicticity   &                               \\ \hline
-        TENSE                & check\_tense        &                               \\ \hline
-        MODALITY             & check\_modality     &                               \\ \hline
-        DETERMINATION        & dictionnary\_lookup & determination\_dict           \\ \hline
-        PERSON               & dictionnary\_lookup & person\_dict                  \\ \hline
-        ANIMACY              & dictionnary\_lookup & animacy\_dict                 \\ \hline
-        GENDER               & dictionnary\_lookup & gender\_dict                  \\ \hline
-        NUMBER               & check\_number       &                               \\ \hline
-        MOOD ADJUNCT TYPE    & dictionary\_lookup & mood\_adjunct\_dict           \\ \hline
+        \textit{System Name} & \textit{Function}   & \textit{Parameter} \\ \hline
+        POLARITY             & match all patterns& polarity set                  \\ \hline
+        VOICE                & match all patterns& voice set                   \\ \hline
+        FINITNESS            & match all patterns& finitness set                 \\ \hline
+        MOOD TYPE            & match all patterns& mood set                      \\ \hline
+        %INDICATIVE TYPE      & check deicticity   &                               \\ \hline
+        TENSE                & match all patterns& tense set                     \\ \hline
+        MODALITY TYPE        & match all patterns& modality set                  \\ \hline
+        DETERMINATION        & dictionary lookup & determination dictionary           \\ \hline
+        PERSON               & dictionary lookup & person dictionary                  \\ \hline
+        ANIMACY              & dictionary lookup & animacy dictionary                 \\ \hline
+        GENDER               & dictionary lookup & gender dictionary                  \\ \hline
+        NUMBER               & match all patterns& plurality set                 \\ \hline
+        %MOOD ADJUNCT TYPE    & dictionary lookup & mood adjunct dictionary           \\ \hline
     \end{tabulary}
-    \caption{Mapping systemic networks to selection functions}
+    \caption{Association of systemic networks to functions}
     \label{tab:system-to-function-mapping}
 \end{table}
+
+
+\begin{algorithm}[!ht]
+    \Input {\cg} %, \dg
+    \Begin {
+        \For{\node \KwTo list of  \cg nodes in DFS postorder}
+        {
+            \For{\network \KwTo activated networks for the \node class or element} 
+            {
+                \function $\leftarrow$ get associated function and parameter  \; % to the \network
+                %\elementType $\leftarrow$ if any get the \function parameter \;
+                \label{line:selector-function}run \function knowing \node, \cg and parameter\; 
+                %\label{line:enrich-function}add the \choices to the \node \;
+            }
+        }
+    }
+    \caption{Enriching CG with systemic features}
+    \label{alg:enrich-cg}
+\end{algorithm}
+
+Algorithm \ref{alg:enrich-cg} presents the pseudocode for enriching CG nodes with systemic choices using enrichment functions based on the two rule tables presented above. There is one loop nested into another. The outer one is a bottom-up iteration over the CG nodes in depth first (DFS) post-order. The inner loop iterates over the provided systems for the focus \node. Then a lookup in the Table \ref{tab:system-to-function-mapping} returns the enrichment function to be executed for that system network. 
+This technique of using a mapping table from system networks to functions is similar to the one employed in CG creation phase (Algorithm \ref{alg:phase-one}) presented in previous chapter. 
 
 %Once the system is activated its selector function (Table \ref{tab:system-to-function-mapping}) returns the set of choices.
 
 \begin{algorithm}[!ht]
-    \Input {\cg, \dg}
+    \Input {\node, \cg, \patterns}
     \Begin {
-        \For{\node \KwTo list of  \cg nodes in DFS postorder}
+        \For{\pattern \KwTo \patterns}
         {
-            \For{\network \KwTo activated networks for the \node} 
-            {
-                \function $\leftarrow$ the selector function associated to the \network \;
-                \elementType $\leftarrow$ if any get the \function parameter \;
-                \label{line:selector-function-dl}\choices $\leftarrow$  execution result of \function for \node, \cg and \elementType \;
-                \label{line:enrich-function-dl}add the \choices to the \node \;
-            }
+            execute \pattern based node update in \cg given \node context \;
         }
     }
-    \caption{Dictionary lookup selector function}
+    \caption{Match-all-patterns enrichment function}
+    \label{alg:match-all-patterns}
+\end{algorithm}
+
+Algorithm \ref{alg:match-all-patterns} takes a focus \node, the \cg it belongs to and a \patterns and executes for each \pattern the pattern based node update operation as described in Section \ref{sec:pattern-based-operations}. If multiple patterns match then multiple updates are applied one after the other. The second enrichment function is based on associations between lexical items and feature selections described below. 
+
+\begin{algorithm}[!ht]
+    \Input {\node, \cg, \dict}
+    \Begin {
+        \lexicalItem $\leftarrow$ get lexical item from the \node \;
+        find \lexicalItem in \dict \;
+        \choices $\leftarrow$ get the associated features + implied preselected features\;
+        add \choices to the \node \;
+    }
+    \caption{Dictionary-lookup enrichment function}
     \label{alg:dictionary-loockup}
 \end{algorithm}
 
-The \textit{dictionary\_lookup} function is a type of \textit{naive backwards induction} (Algorithm \ref{alg:backward-induction-naive}). It checks whether the word(s) of the \textit{cg\_node} are in a dictionary with preselected features. It is the only function that requires a parameter which is the lookup dictionary. An example of dictionary is presented in the Table \ref{tab:lookup-dict-example}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Figures/SFL-grammar/determination-non-specific.pdf}
+    \caption{The NON-SPECIFIC DETERMINATION system network}
+    \label{fig:non-specific-deicticity}
+\end{figure}
+
+The dictionary lookup function outlines in Algorithm \ref{alg:dictionary-loockup} checks whether the word(s) of the CG node are in a dictionary. If so then select the associated feature and all the features that need to be preselected for the current one. This works as a naive backwards induction of features from a delicate one up to the least delicate one at the root (see Algorithm \ref{alg:backward-induction-naive} in Section \ref{sec:system-networks-cs}). An example of dictionary is presented in the Table \ref{tab:lookup-dict-example} and the system network of NON-SPECIFIC determination in Figure \ref{fig:non-specific-deicticity}.
 
 \begin{table}[!ht]
     \centering
@@ -111,34 +255,34 @@ The \textit{dictionary\_lookup} function is a type of \textit{naive backwards in
         either                & partial-singular               \\ \hline
         that                  & non-plural                     \\ \hline
     \end{tabular}
-    \caption{Dictionary example for the DEICTICITY system network}
+    \caption{Dictionary example for the NON-SPECIFIC DETERMINATION system network}
     \label{tab:lookup-dict-example}
 \end{table}
 
+This section completed explanation of how the MOOD features are assigned to constituency graph. In the reminder of this chapter is addressed the task of assigning TRANSITIVITY process types and participant roles to the constituent units \citep{Costetchi2013}.  
 
 \section{Creation of the empty elements}
 \label{sec:creation-empty-elements}
-Sometimes a semantic participant is not mentioned (is elided) in a clause. It happens for one of two reasons: the participant mentions are contextually implicit and usually located outside the clause borders. So when they are implicit the resolution is contextual and required discourse structure awareness. This task is out of the current scope and constitutes a research field on its own. 
 
-However, when the participants are missing because they are syntactically recoverable in the sentence then they are inferred from the structure and reference nodes are created for the missing elements. This phenomena are described in GB theory specifically the \textit{Control and Binding} of empty elements \citep{Haegeman1991} which has been introduced in Section \ref{sec:null-elements-gbt}. The \textit{reference constituents} are important for increasing the completeness of semantic analysis by making the participants and their afferent label explicit.
+In the current work, when the participants are missing and are syntactically recoverable in the sentence then they are inferred from the structure and reference nodes are created for the missing elements. This phenomena is described in GB theory specifically the \textit{Control and Binding} of empty elements \citep{Haegeman1991} introduced in Section \ref{sec:null-elements-gbt}. The \textit{reference constituents} are important for increasing the completeness and accuracy of semantic analysis by making the participants and their afferent label explicit.
 
-This stage is particularly important for semantic role labelling because usually the missing elements are participant roles (theta roles) shaping the semantic configuration. The most frequent are the cases of \textit{control} where the understood subject of a clause is in the parent clause like in examples \ref{ex:ctrl1} \ref{ex:ctrl3} where \textit{Subj} is a pronominal subject placeholder.
+This stage is particularly important for semantic role labelling because usually the missing elements are participant roles (theta roles) shaping the semantic configuration. The most frequent are the cases of \textit{control} where the understood subject of a clause is in the parent clause like in Example \ref{ex:ctrl1}--\ref{ex:ctrl3} where \textit{Subj} is a generic subject placeholder introduced in Chapter \ref{ch:gbt} ad PRO, pro, t-trace and wh-trace.
+
 \begin{exe}
-	\ex\label{ex:ctrl1}Piotr is considering whether [\textit{Subj} to abandon the investigation].
+	\ex\label{ex:ctrl1}Poirot is considering whether [\textit{Subj} to abandon the investigation].
 	\ex\label{ex:ctrl2}Susan promised us [\textit{Subj} to help].
 	\ex\label{ex:ctrl3}They told you [\textit{Subj} to support the effort].
 \end{exe}
 
-There are also movement cases when a clause constituent receives no thematic role in higher clause but one in lower clause. The other case is of the non-overt constituents that are subjects in relative clauses and refer to head of the nominal group. This part of the algorithm is set up to detect cases of \textit{null elements} as described in the Chapter {ch:gbt} and create placeholder constituents for them which are in the next step enriched with semantic roles.
-
-In Section \ref{sec:placing-null-elements} I discuss how to relate GBT to Stanford Dependency Grammar. This section discusses how to relate GBT to Systemic Functional Grammar. Currently the NP traces and PRO subjects are created with a set of graph patterns while the Wh traces are created with an algorithm.
+There are also movement cases when a clause constituent receives no thematic role in higher clause but one in lower clause. The other case is of the non-overt constituents that are subjects in relative clauses and refer to head of the nominal group. This part of the algorithm is set up to detect cases of \textit{null elements} as described in the Section \ref{sec:placing-null-elements} which relates GBT to Dependency Grammar and create placeholder constituents for them which are in the next step enriched with semantic roles. Currently the NP traces and PRO subjects are created with a set of graph patterns while the Wh traces are created with an algorithm.
 
 \subsection{The PRO and NP-Trance Subjects}
+
 The \textit{xcomp} relation in DC can be encoded as an CG pattern graph (Figure \ref{fig:arb-control}) targeting the constituents that are non-finite clauses functioning as complement that have no subject constituent of their own and no ``if'' and ``for'' markers (according to generalization \ref{gen:4}). They shall receive a the PRO subject constituent (governed or not) by the parent clause subject.
 
 \begin{figure}[!ht]
 	\centering
-	\begin{tikzpicture}[tree-style] 
+	\begin{tikzpicture}[tree-style,level distance=3em,level 1/.style={sibling distance=7em},] 
 	\node[pattern-node, anchor=center] (vb1){class:clause}
 	%child {node[pattern-node] (subj1) {class:nominal,\\element:subject,\\id:subj1}}
 	child {node[pattern-node,below = 2em of vb1,] (vb2) {element:complement,\\class:clause,\\finiteness:non-finite}
@@ -150,14 +294,14 @@ The \textit{xcomp} relation in DC can be encoded as an CG pattern graph (Figure 
 	\label{fig:arb-control}
 \end{figure}
 
-%TODO either leave commented or rephrase
+%%TODO either leave commented or rephrase
 %In terms SFG terms, if there is an Complement in the higher clause it is likely that it is the controller of the PRO in lower clause. Three role cognition verbs like in Example \ref{ex:pro7} take two complements where one of them is the phenomenon and can be a nominal group or a non-finite clause with PRO subject controlled by the object in higher clause.
 
-The generalization \ref{gen:11} reflects criteria for selecting the controller of PRO based on its proximity in the higher clause. The schematic representation of the pattern for obligatory and subject object control is depicted in Figure \ref{fig:obj-control} and respectively \ref{fig:subj-control}. Please note that in case of Figure \ref{fig:subj-control} the prepositional complements do not affect subject control in any way since it specifies only the nominal complements this making it complementary to \ref{fig:obj-control} with respect to prepositional complements. 
+The generalization \ref{gen:11} reflects criteria for selecting the controller of PRO based on its proximity in the higher clause. The schematic representation of the pattern for obligatory and subject object control is depicted in Figure \ref{fig:obj-control} and respectively \ref{fig:subj-control}. In the case of Figure \ref{fig:subj-control} the prepositional complements do not affect subject control in any way since it specifies only the nominal complements this making it complementary to \ref{fig:obj-control} with respect to prepositional complements. 
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 	\centering
-	\begin{tikzpicture}[tree-style] 
+	\begin{tikzpicture}[tree-style,level distance=4em,level 1/.style={sibling distance=11em},] 
 	\node[pattern-node, anchor=center] (vb1){class:clause}
 	child {node[pattern-node] (subj1) {class:nominal,\\element:subject}}
 	child {node[pattern-node] (subj1) {class:nominal,\\element:complement,\\id:compl1}}
@@ -170,9 +314,9 @@ The generalization \ref{gen:11} reflects criteria for selecting the controller o
 	\label{fig:obj-control}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 	\centering
-	\begin{tikzpicture}[tree-style] 
+	\begin{tikzpicture}[tree-style,level distance=4em,level 1/.style={sibling distance=11em},] 
 	\node[pattern-node, anchor=center] (vb1){class:clause}
 	child {node[pattern-node] (subj1) {class:nominal,\\element:subject,\\id:subj1}}
 	child {node[pattern-node-negative] (subj1) {class:nominal,\\element:complement}}
@@ -187,23 +331,22 @@ The generalization \ref{gen:11} reflects criteria for selecting the controller o
 
 In dependency grammar the adjunct clauses are also introduced via \textit{xcomp} and \textit{prepc} relations, so syntactically there is not distinction between the two and patterns from Figures \ref{fig:obj-control} and \ref{fig:subj-control} are applicable.
 
-%TODO introduce properly the discussion below about distinguishing the PRO and NP and about pre-marking the constituents with their potential to semantic roles
+%%TODO introduce properly the discussion below about distinguishing the PRO and NP and about pre-marking the constituents with their potential to semantic roles
 
-%todo this is discussed in sec:np-traces
-Before discussing each approach I would like to state a technical detail. When the empty constituent is being created it requires two important details: (a) the antecedent constituent it is bound to and (b) the type of relationship to it's antecedent constituent or if none is available the type of empty element: t-trace or PRO. Now identifying the antecedent is quite easy and can be provided at the creation time but since the empty element type may not always be available then it may have to be marked as partially defined.
+%%todo this is discussed in sec:np-traces
+Before discussing each approach I would like to state a technical detail. When the empty constituent is being created it requires two important details: (a) the antecedent constituent it is bound to and (b) the type of relationship to its antecedent constituent or if none is available the type of empty element: t-trace or PRO. Now identifying the antecedent is quite easy and can be provided at the creation time but since the empty element type may not always be available then it may have to be marked as partially defined.
 
-The first solution is to create the empty subject constituents based only on syntactic criteria, ignoring for now element type (either PRO or \textit{t}-trace) and hence postponing it to semantic parsing phase. The advantage of doing so is a clear separation of syntactic and semantic analysis. The empty subject constituents are created in the places where they should be and so this leaves aside the semantic concern of how the thematic roles are distributed. The disadvantage is leaving the created constituents incomplete or under-defined. Moreover the thematic role distribution must be done within the clause limits but because of raising, this process must be broadened to a larger scope beyond clause boundaries. This of course is a dangerous approach as it might lead to unbounded dependencies and so unbounded complexity that needs to be addressed. 
-In the current work, however, the semantic roles are addressed within the clause borders following the principle of one main verb per clause, as will be explained later in the Chapter \ref{ch:semantic-parsing}, thus avoiding the above mentioned risk of unbounded complexity. 
+The first solution is to create the empty subject constituents based only on syntactic criteria, ignoring for now element type (either PRO or \textit{t}-trace) and hence postponing it to semantic parsing phase. The advantage of doing so is a clear separation of syntactic and semantic analysis. The empty subject constituents are created in the places where they should be and so this leaves aside the semantic concern of how the thematic roles are distributed. The disadvantage is leaving the created constituents incomplete or under-defined. Moreover the thematic role distribution must be done within the clause limits but because of raising, this process must be broadened to a larger scope beyond clause boundaries. This of course is an unwise approach as it might lead to unbounded dependencies and so unbounded complexity that needs to be addressed. 
 
-Since transitivity analysis is done based on pattern matching, the patterns rise in complexity as the scope is extended to two or more clauses thus excludes iteration over one clause at a time (which is desirable). 
+The second solution is to decide the element type before Transitivity analysis and remove the burdened of complex patterns that go beyond the clause borders. Also, all syntactic decisions would be made before semantic analysis and the empty constituents would be created fully defined with the binder and their type but that means delegating semantically related decision to syntactic level (in a way peeking ahead in the process pipeline).
 
-Otherwise, a second approach is to decide the element type before Transitivity analysis (semantic role labelling) and remove the burdened of complex patterns that go beyond the clause borders. Also, all syntactic decisions would be made before semantic analysis and the empty constituents would be created fully defined with the binder and their type but that means delegating semantically related decision to syntactic level (in a way peeking ahead in the process pipeline).
+In the current work, however, the semantic roles are addressed within the clause borders following the principle of one main verb per clause thus avoiding the above mentioned risk of unbounded complexity. Also, the transitivity analysis is done based on pattern matching. This means a tremendous rise in complexity as the scope of a graph pattern is extended to two or more clauses. Instead, a desirable solution is iteration over all the clauses in the CG (a sentence) and matching semantic patterns within the clause boundaries one at the time.
 
-The solution adopted here is mix of the two avoiding two issues: (a) increasing the complexity of patterns for transitivity analysis, (b) leaving undecided which constituents accept thematic role in the clause and which don't. 
+The solution adopted here is mix of the two described above and addresses the issues of: (a) increasing the complexity of patterns for transitivity analysis, (b) leaving undecided which constituents accept thematic role in the clause and which don't. 
 
-The process to distinguish the empty constituent type starts by (a)identifying the antecedent and the empty element (through matching the subject control pattern in Figure \ref{fig:subj-control}), (b) identifying the main verbs of higher and lower clauses and correspondingly the set of possible configurations for each clause(by inquiry to process type database(PTDB) described in the transitivity analysis Section \ref{sec:semantic-parsing}).
+The process to distinguish the empty constituent type starts by (a) identifying the antecedent and the empty element (through matching the subject control pattern in Figure \ref{fig:subj-control}), (b) identifying the main verbs of higher and lower clauses and correspondingly the set of possible configurations for each clause(by inquiry to process type database(PTDB) described in the transitivity analysis Section \ref{sec:semantic-parsing}).
 
-If conditions from generalization \ref{gen:trace-detection} are met then the empty constituent is a subject controlled \textit{t}-trace. Now we need a set of simple rules to mark which constituents shall receive a thematic role. These rules are  presented in the generalization \ref{gen:thematic-marking} below.
+If conditions from generalization \ref{gen:trace-detection} (from Section \ref{sec:np-traces}) are met then the empty constituent is a subject controlled \textit{t}-trace. Now we need a set of simple rules to mark which constituents shall receive a thematic role. These rules are  presented in the generalization \ref{gen:thematic-marking} below.
 
 \begin{generalization}\label{gen:thematic-marking}
     Constituents receiving thematic roles are marked with ``thematic-role'' label, those that do not receive a thematic role are marked with ``non-thematic-role'' and those that might receive thematic role with ``unknown-thematic-role''. So in each clause:
@@ -216,13 +359,11 @@ If conditions from generalization \ref{gen:trace-detection} are met then the emp
     \end{itemize}
 \end{generalization}
 
-%todo end copy to transitivity parsing. 
+According to Generalization \ref{gen:9} the PRO is optionally controlled in subject non-finite clauses. Since it is not possible to bind PRO solely on syntactic grounds in the Generalization \ref{gen:9} is proposed the arbitrary interpretation.
 
-According to generalization \ref{gen:9} the PRO is optionally controlled in subject non-finite clauses. Since it is not possible to bind PRO solely on syntactic grounds in the generalization \ref{gen:9} is proposed the arbitrary interpretation.
-
-\begin{figure}[H]
+\begin{figure}[!ht]
 	\centering
-	\begin{tikzpicture}[tree-style] 
+	\begin{tikzpicture}[tree-style,level distance=3em,level 1/.style={sibling distance=7em},] 
 	\node[pattern-node, anchor=center] (vb1){class:clause}
 	%	child {node[pattern-node] (subj1) {class:nominal,\\element:subject,\\id:subj1}}
 	%	child {node[pattern-node-negative] (subj1) {class:nominal,\\element:complement}}
@@ -237,148 +378,44 @@ According to generalization \ref{gen:9} the PRO is optionally controlled in subj
 The pattern for subject control in subject clause  is represented in Figure \ref{fig:subj-arbitrary-control}. This of course is an oversimplification and more rigorous binding rules can be be developed in a future work to cover binding scenarios exemplified in \ref{ex:pro12}-\ref{ex:pro15}.
 
 \subsection{Wh-trances}
+Creating constituents for Wh-traces involved a slightly larger number of scenarios and for the pragmatic reasons I have implemented the following algorithm rather than create the set of corresponding graph patterns. Nevertheless in the future work this shall be expressed as graph patterns in order to be consistent with the general approach of the thesis. Algorithm \ref{alg:create-wh-trace} shows how it is currently done.
 
-Creating constituents corresponding to Wh-traces involved a slightly larger number of scenarios and for the pragmatic reasons I have implemented the following algorithm rather than create the set of corresponding graph patterns. Nevertheless in the future this shall be expressed as graph patterns to be consistent with the general approach. The algorithm pseudo-code below shows how it is done. 
-
-%\todo{Reformat the wh-trace algorithm}
-%\todo{Remove function definition}
-
-\begin{algorithm}[H]
-	\Input { \dg, \cg}
+\begin{algorithm}[!ht]
+	\Input { \cg}
 	\Begin{
-		\For {\Element \KwTo list of Wh-elements in entire \cg}
-			{
-				identify the Wh-groups containing the \Element\;
-				identify the syntactic function of the Wh-element within the group\;
-				identify the function of Wh-group in the clause\;
-				check the number of clauses and which of clauses contains the Wh-group\;
-				\If {more than one clause in \cg}
-					{
-						\For(low to high){\Group \KwTo \cg}
-							{\If{Wh-group is \textbf{not} Subject \textbf{AND}\\ Wh-group is \textbf{not} in lowest embedded clause}
-								{
-								\eIf{Wh-group is Adjunct function}
-								{create Adjunct Wh-trace using \dg and \cg}
-								{create Theta Wh-trance using \dg and \cg}
-								}
-							}	
-					}
-			}
+        \If {more than one clause in \cg}
+        {
+       		\For {\Element \KwTo list of Wh-elements in \cg}
+       			{
+       				identify the Wh-groups containing the \Element\;
+       				identify the syntactic function of the Wh-element within the group\;
+       				identify the function of Wh-group in the clause\;
+       				%check the number of clauses and which of clauses contains the Wh-group\;
+    				\For(low to high){\Group \KwTo \cg}
+    					{\If{Wh-group is \textbf{not} Subject \textbf{AND}\\ Wh-group is \textbf{not} in lowest embedded clause}
+    						{
+    						\eIf{Wh-group is Adjunct function}
+    						{create Adjunct Wh-trace using \dg and \cg}
+    						{create Theta Wh-trance using \dg and \cg}
+    						}
+    					}	
+       			}
+		}
 	}
 	\caption{Creating the Wh-traces}
 	\label{alg:create-wh-trace}
 \end{algorithm}
 
+The first line of the algorithm checks if there are more than one clauses in the CG, otherwise it cannot continue. Then all the Wh-elements, their functions within the group and the clause shall be identified. Then iterate, from the lower to higher, over clauses and create the constituent corresponding to Wh-trace in the lower clause linked to the constituent in the parent clause. The pseudocode for creating the Adjunct or Theta Wh-traces are different and have been omitted in this section but are included in the Annexe \ref{ch:extra-pseudo-code}. 
 
-\begin{algorithm}[!ht]
-	\Input {\whGroup, \dg, \cg}
-	\Begin{
-		check the tense and modality for all the clauses\;
-		\For(from the clause of \whGroup to lowest){$clause$ \KwTo \cg}
-		{
-			\tcc{create the adjunct trace in the first clause that has non present simple tense}
-			\If{clause tense is \textbf{not} present simple}
-			{
-				create Adjunct Wh-trace for Wh-group\;
-				\Return
-			}
-		}  
-	}
-	\caption{Creating the Adjunct (circumstantial) Wh-traces}
-	\label{alg:create-wh-adjunct-trace}
-\end{algorithm}
+After the null elements are created the constituency graph is ready for the semantic enrichment stage semantic configuration are assigned to each clause. The next sections introduce first how the PTDB has been normalised and how the graph patterns are created from it and then proceed with the semantic enrichment algorithm.
 
+\section{Cleaning up the PTDB}
+The original version of the PTDB available on Neale's personal page\footnote{see \url{http://www.itri.brighton.ac.uk/~Amy.Neale/}} is not usable for computational purposes as such. It  contains records applying a couple of different notations and sometimes informal, comments for human understanding, which from a machine standpoint is noise and cannot be processed as such. In this section I explain now how the original PTDB was transformed into a machine friendly form in order to be used as a lexical database.
 
-
-\begin{algorithm}[H]
-	\Input {\whGroup, \dg, \cg}
-	\Begin{
-		get possible configurations for each clause from the PTDB\;
-		\tcc{check if the higher clause is a projection and and has an extra argument}
-		\ForEach{$config$ in higher clause configurations}
-		{\If{ ($config$ is two role cognition \textbf{and} $config$ takes expletive subject) \textbf{or} ($config$ is three role cognition \textbf{and} $clause$ is passive voice)}
-			{
-				higher is eligible $\leftarrow$ True\;
-				\textbf{break}\;
-			}
-		}
-		\tcc{check if the lower clauses might miss an argument}
-		\ForEach{$clause$ in lower clauses}
-		{
-			\ForEach{$config$ in clause configurations}
-			{\If{number of clause theta constituents $ < $ number of config arguments}
-				{
-					lower is eligible $\leftarrow$ True\;
-					break\;
-				}
-			}
-		}
-		\If{higher is eligible \textbf{and} lower is eligible}
-		{
-			\eIf{higher clause has ``that'' complementizer}
-			{create Object Wh-trace in the lowest clause}
-			% no there complementizer
-			{\eIf {Wh-group has case}
-				{
-					\eIf{Wh-group case is nominative(subjective)}	 
-					{create Subject Wh-trace in lowest clause}
-					{create Object Wh-trace in lowest clause}
-				}
-				% no case
-				{
-					create Wh-trace with Subject function and attempt to assign theta roles\;
-					\If{theta roles \textbf{not} successfully assigned in lower clause}
-					{change the Wh-trace to Object function and assign theta roles}
-				}
-			}
-		}
-	}
-	\caption{Creating the Theta (participant) Wh-traces}
-	\label{alg:create-wh-theta-trace}
-\end{algorithm}
-\todo{Discuss the wh trace creation algorithm}
-
-After the null elements are created the constituency graph is ready for the semantic enrichment stage semantic configuration are assigned to each clause. It is described in the next section.
-
-\section{Enrichment with TRANSITIVITY features}
-\label{sec:semantic-parsing}
-In this section is explained how the parser assigns Transitivity configurations to the constituency graph. Transitivity roughly corresponds to what is known in computational linguistics as semantic analysis of text or \textit{semantic role labelling}. In this task the clause is assigned a semantic frame called configuration in which predicate functions as the process and the participants take frame dependent roles (or functions). The nodes that do not receive any participant role are the adjuncts which act as circumstances.
-
-Because the proposed task goes beyond the syntactic structure it needs to rely on additional external semantic resources. One such resource is the Process Type Database(PTDB) created by \citet{Neale2002}. It is a table which listing possible configurations of semantic roles for each verb sense for over five thousands most popular verbs in English. This resource is then integrated into the current parser pipeline to automatically assignment semantic configurations and participant soles. How this is done is covered in the 
-
-In the following I will explain the the practical steps of generating Transitivity but not before introducing the PTDB. Then I explain how the automation of the semantic role labelling is performed and why it is important to identify and create references to empty elements. 
-%end chapter introduction
-
-\subsection{The Process Type Database}
-\label{sec:ptdb-description-technical}
-The Process Type Database (PTDB) \citep{Neale2002} is the key resource in the automatization of Transitivity Analysis. It is the source for creating a set of graph patterns which are then used to enrich the constituency graph as described in the Section \ref{sec:enrichment-stage}. 
-
-PTDB provides information on what possible process types and participants can correspond to a particular verb meaning. The PTDB is a dictionary-like dataset of verbs bound to an exhaustive list of verb senses and the corresponding Process Configuration for each of them.
-
-In her work on PTDB \citet{Neale2002} improved the TRANSITIVITY system of the Cardiff Grammar by systematizing over 5400 senses (and process configurations) for  2750 most popular English verbs. Table \ref{tab:example-ptdb} presents a simplified sample of PTDB content.
+The internal structure of the PTDB is detailed in Neale's PhD thesis \citep[193--231]{Neale2002}. Here I focus on three columns which are of interest for the parsing purpose: the \textit{verb form} (1^{st}), the Cardiff grammar \textit{process type} (6^{th}) and the participant role \textit{configuration} (8^{th}). Note that column numbers correspond to the original PTDB structure. After the transformation the PTDB column descriptions are as described in the Table \ref{tab:ptdb-comparison}. The field names in italic are the ones of interest and have been modified.
 
 \begin{table}[!ht]
-	\centering
-	\begin{tabulary}{\textwidth}{|C|C|c|c|}
-		\hline
-		\textbf{verb form} & \textbf{informal meaning} & \textbf{process type} & \textbf{configuration} \\ \hline
-		calculate & work out by mathematics (commission will then,calculate the number of casted votes) & cognition & Ag-Cog + Ph \\ \hline
-		& plan (newspaper articles were calculated to sway reader's opinions) & two role action & Ag + Cre \\ \hline
-		catch & run after and seize (a leopard unable to catch its normal prey) & possessive & Ag-Ca + Af-Pos \\ \hline
-		& fall ill (did you catch a cold?) & possessive & Ag-Ca + Af-Pos \\ \hline
-		catch (up with) & reach (Simon tried to catch up with others) & two role action & Ag + Ra \\ \hline
-	\end{tabulary}
-	\caption{An example of records ins PTDB}
-	\label{tab:example-ptdb}
-\end{table}
-
-\subsection{Cleaning up the PTDB}
-The original version of the PTDB available on Neale's personal page is not usable for computational purposes as such. It  contains records applying a couple of different notation notations and sometimes informal, human friendly comments which represent noise for the computer programs and cannot be processed as such. In this section I explain now how the original PTDB was transformed in order to be used as a parsing resource.     
-
-I focus on three columns which are of interest for the parsing purpose: the \textit{verb form} (1^{st}), the Cardiff grammar \textit{process type} (6^{th}) and the participant role \textit{configuration} (8^{th}) columns. Note that column numbers correspond to the original PTDB structure. 
-
-After the transformation the PTDB column descriptions are as described in the Table \ref{tab:ptdb-comparison}. 
-\begin{table}[]
 	\centering
 	\begin{tabulary}{\textwidth}{|l|L|L|}
 		\hline
@@ -399,93 +436,108 @@ After the transformation the PTDB column descriptions are as described in the Ta
 	\label{tab:ptdb-comparison}
 \end{table}
 
-Next I describe the transformed PTDB and how it be interpreted. For a start, the verb form column contains either base form of the verb (e.g. draw, take), base form plus a preposition (e.g. draw into, draw away, take apart, take away from) or base form plus a phraseologic expression (e.g draw to an end, take on board, take the view that, take a shower). The prepositions are either the verbal particles or the preposition introducing the prepositional phrase complement. Prepositions often influence the process type and the participant configuration. So they are good cues to be considered during the semantic role assignment. The verb forms that have the same process type and configuration but different prepositions often are grouped together delimited by a slash ``/'' (e.g. draw into/around, take off/on) or if optional (i.e. coincide with the meaning of the verb base form without any preposition) they are placed in round brackets ``()'' (e.g. flow (into/out/down) ).
+Next I describe the transformed PTDB and how it be interpreted. For a start, the verb form column contains either base form of the verb (e.g. draw, take), base form plus a preposition (e.g. draw into, draw away, take apart, take away from) or base form plus a phraseologic expression (e.g draw to an end, take on board, take the view that, take a shower). The prepositions are either the verbal particles or the preposition introducing the prepositional phrase complement. Prepositions often influence the process type and the participant configuration. So they are important cues to consider during the semantic role assignment. The verb forms that have the same process type and configuration but different prepositions often are grouped together delimited by a slash ``/'' (e.g. draw into/around, take off/on) or if optional (i.e. coincide with the meaning of the verb base form without any preposition) they are placed in round brackets ``()'' (e.g. flow (into/out/down) ).
 
-The process type column registers one feature in the PROCESS-TYPE systemic network depicted in Figure \ref{fig:transitivity-system}. 
+The process type column registers one feature from the PROCESS-TYPE systemic network depicted in Figure \ref{fig:transitivity-system}. 
 
-The participant configuration column contains the sequence of participant type abbreviations joined by plus sign ``+'' (e.g. Ag + Af, Em + Ph, Ag-Cog + Ph). The order of participants corresponds to the Active voice in Declarative mood also called the \textit{canonical form of a configuration}. Originally the configurations contained the ``Pro'' abbreviation signifying the place of the main verb/process. As all configurations are in canonical form, the Pro was redundant occurring always in the second position thus had been removed. So the first participant corresponds to the Subject, second to the first complement and third to the second complement. Some participants are optional for the meaning and are marked round brackets ``()'' (e.g. Ag + Af-Ca (+ Des) ) meaning that the participant may or may not be realized.
+The participant configuration column contains the sequence of participant type abbreviations joined by plus sign ``+'' (e.g. Ag + Af, Em + Ph, Ag-Cog + Ph). The order of participants corresponds to the Active voice in Declarative mood also called the \textit{canonical form of a configuration} described in \citet{Fawcett2009}. Originally the configurations contained the ``Pro'' abbreviation signifying the place of the main verb/process. As all configurations are in canonical form, the Pro was redundant occurring always in the second position thus had been removed. So the first participant, in canonical form, corresponds to the Subject, second to the first complement and third to the second complement. Some participants are optional for the meaning and are marked round brackets ``()'' (e.g. Ag + Af-Ca (+ Des) ) meaning that the participant may or may not be realized. Sometimes, for directional or locational process types the second or third participants may be functioning as Adjuncts, which currently complicates the matching process.
 
-Not all the records in the original resource fulfill the description above and needed corrections. For example when Neale had doubts during the making of PTDB, she marked uncertainties with question mark ``?''. Commas ``,'' and and ``\&'' sign are use with various meaning and inconsistently in all columns. Comments such as ``not in Cob'' were encountered across several columns. 
+Not all the records in the original resource fulfill the description above and needed corrections. For example when Neale had doubts during the making of PTDB, she marked uncertainties with question mark ``?''. In addition, ``,'' (comma) and ``\&'' (and) sign are use inconsistently with various meaning in all columns. Also, comments such as ``not in Cob'' were encountered in several columns. 
 
 Some records contain only prepositions listed in the verb form column which actually represent omissions of the main verb which is to be found in the immediately preceding records(s), this have been fixed by pre-pending the verb form to the preposition. 
 
 %The account of verb meanings in PTDB is not exhaustive. Compared to VerbNet or FrameNet there are considerably less meanings described. 
 
-Among the identified verb meanings in PTDB, there are some that do not contain configurations. These records missing a process type and configuration had not been suppressed. 
+Among the identified verb meanings in PTDB, there are some that do not contain configurations. These records missing a process type and configuration had been suppressed. 
 
 The process type feature column contained originally a second feature which had been removed, representing a compressed version of the participant configuration however it was redundant as the full configuration is registered in the next column. 
 
-In PTDB Neale uses a slightly different process type names than the ones adopted in this work. The process type features have been re-indexed and adapted to match exactly the feature labels in the PROCESS-TYPE systemic network (e.g. ``one role action'' became ``one-role-action''). Annexe \ref{ch:reindexing-ptdb} provides the mapping across the process type versions. 
+In PTDB Neale uses a slightly different process type names than the ones used in this work. The process type features have been re-indexed and adapted to match exactly the feature labels in the PROCESS-TYPE systemic network (e.g. ``one role action'' became ``one-role-action'', ``emotion plus xxx'' became ``emotive'', ``cognition xxx'' became ``two-role-cognition''). Annexe \ref{ch:reindexing-ptdb} provides the mapping across the process type versions. 
 
-Configuration column is one of the most important ones in PTDB. Checking it's consistency conform to Fawcett's Transitivity system revealed the need for some corrections. For example ``Af + Af'', ``Af-Ca + Pos + Ag'', ``Af-Cog + Ph + Ag'' are grammatically impossible configurations and were manually corrected to the closest likely configuration ``Ag + Af'', ``Ag + Af-Ca + Pos'', ``Ag + Af-Cog + Ph''.
+Configuration column is one of the most important ones in PTDB. Checking its consistency conform to Fawcett's Transitivity system revealed the need for some corrections. For example ``Af + Af'', ``Af-Ca + Pos + Ag'', ``Af-Cog + Ph + Ag'' are grammatically impossible configurations and were manually corrected to the closest likely configuration ``Ag + Af'', ``Ag + Af-Ca + Pos'', ``Ag + Af-Cog + Ph''.
 
-Other records, judged by the process type, were incomplete. For example instances of two role action registered only one of the role e.g. Af or Ca omitting the Ag participant. These records have been also manually corrected by perpending the Ag, Ag-Af or Cog roles depending on the case. 
+Other records, judged by the process type, were incomplete. For example instances of two role action registered only one of the role e.g. Af or Ca omitting the Ag participant. These records have been also manually corrected by prepending the Ag, Ag-Af or Cog roles depending on the case. 
+
+%\begin{figure}[!ht]
+%    \centering
+%    \includegraphics[width=0.7\linewidth]{Figures/SFL-grammar/Transitivity}
+%    \caption{TRANSITIVITY system network in Cardiff Grammar} %[TRANSITIVITY system network in Cardiff Grammar]
+%    \label{fig:transitivity-system}
+%\end{figure}
 
 The ``Dir'' participant is interpreted as direction is not registered/defined in the Cardiff Grammar. Nevertheless there is a ``Des'' participant which I believe is the closest match. Therefore all ``Dir'' occurrences had been changed to ``Des''. One may argue that the two have different meanings however grammatically they seem to behave the same (at least in the accounted configurations). 
 
-By contrast some process types had been changed from Action into either Locational or Directional because they contained either Loc (location), Des (destination) or So (source) participants which are not found in Action processes unless they function as Adjuncts which are out of the context of the current description.
+By contrast some process types had been changed from Action into either Locational or Directional because they contained either ``Loc'' (location), ``Des'' (destination) or ``So'' (source) participants which are not found in Action processes unless they function as adjuncts which are out of the context of the current description.
 
 A note worth making here is that the Locational, Movement specifically but also other spatial verbs are very difficult to assign roles correctly because their participants are Locations, Directions, Destinations etc. which can also serve as spatial adjuncts. This aspect has not been directly addressed in present work and is reflected by a lower accuracy for these classes of verbs. 
 
+The Cardiff features column indicates the process type selected in the TRANSITIVITY system corresponding to one of the top levels depicted in Figure \ref{fig:cardiff-transitivity} provided in Chapter \ref{ch:the-grammar}. Next follows a description of how the graph patterns are generated from the PTDB. 
+
+\section{Generation of the TRANSITIVITY graph patterns}
+\label{sec:gen-sem}
+The configuration pattern graphs are used for CG enrichment executed through graph matching operation described in Section \ref{sec:pattern-graph-matching}. In previous section we saw how the PTDB has been cleaned up and normalized to support automatic generation of the \textit{Configuration Graph Patterns} (CGP). These graph patterns represent a constrained syntactic structure that carry semantic features. The latter are to be applied if the graph pattern is identified the sentence CG. 
+
+CGPs are generated from the process type and participant configuration columns of the PTDB. Figure \ref{fig:general-configuration-canonic} depicts the prototypical template for generating three role CGP for canonic participant order that is active VOICE declarative MOOD. This pattern matches declarative clause with a subject and two complements and in case of success updates the constituents with process type and participant roles. When the configuration has only one or two participants the graph pattern indicates one or two negative complement nodes as depicted in Figure \ref{fig:general-configuration-canonic-one-partic}. In this section I do not aim at providing an exhaustive account of all the pattern forms but explain the principles by which they are automatically generated.
+
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.7\linewidth]{Figures/SFL-grammar/Transitivity}
-	\caption[Transitivity System in Cardiff Grammar]{Transitivity System in Cardiff Grammar}
-	\label{fig:transitivity-system}
-\end{figure}
-
-The Cardiff features column indicates the process type selected in the TRANSITIVITY system corresponding to one of the top levels depicted in Figure \ref{fig:transitivity-system}
-
-\subsection{Generation of the Configuration Graph Patterns}
-\label{sec:gen-sem}
-The configuration pattern graphs are used for CG enrichment executed through graph matching operation described in Section \ref{sec:pattern-graph-matching}. The PTDB has been cleaned up and normalized to support automatic generation of the \textit{Configuration Graph Patterns} (CGP). These graph patterns represent a constrained syntactic structure that carry semantic features. The latter are to be applied if the graph pattern is identified the sentence CG. 
-
-CGPs are generated from the process type and participant configuration columns of the PTDB. Figure \ref{fig:general-configuration-canonic} depicts the prototypical template for generating three role CGP for canonic participant order (indicative mood active voice). This part assigns the Clause constituent Process Type (i.e. configuration type) while Subject and Complement constituents receive participant roles. 
-
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[tree-style, level 1/.style={sibling distance=12em},] 
-	\node[pattern-node, anchor=center] (proc){class:clause,\\mood:declarative,\\operation:update,\\ arg1:\{configuration:configuration-type\}}
-	child{node[pattern-node]{element:subject,\\operation:update,\\ arg1:\{participant:Role1\}} edge from parent node[left] {}}
-	child{node[pattern-node]{element:complement,\\operation:update,\\ arg1:\{participant:Role2\}} edge from parent node[below] {}}
-	child{node[pattern-node]{element:complement,\\operation:update,\\ arg1:\{participant:Role3\}} edge from parent node[right] {}};
+	\begin{tikzpicture}[tree-style, level distance=4em, level 1/.style={sibling distance=12em},] 
+	\node[pattern-node, anchor=center] (proc){class:clause,\\MOOD:declarative, VOICE:active\\operation:update,\\ arg1:\{process:process-type\}}
+	child{node[pattern-node]{element:subject,\\operation:update,\\ arg1:\{participant:role1\}} edge from parent node[left] {}}
+	child{node[pattern-node]{element:complement,\\operation:update,\\ arg1:\{participant:role2\}} edge from parent node[below] {}}
+	child{node[pattern-node]{element:complement,\\operation:update,\\ arg1:\{participant:role3\}} edge from parent node[right] {}};
 	\end{tikzpicture}
-	\caption{Indicative mood and active voice configuration pattern with three participant roles}
+	\caption{Declarative MOOD and active VOICE graph pattern with three participant roles}
 	\label{fig:general-configuration-canonic}
 \end{figure}
 
-Besides the canonic CGP a set of variations are generated for each configurations by transforming the canonic configuration. The variations are function of the process type, participant roles, mood and voice. When each of the variants are supported by the process type and participant configuration the flowing CGP are generated: (1) the declarative
-active (2) the passive (3) the imperative and (4) Wh-interrogative (Wh-Subj/Wh-obj/Wh-adj especially important for locational and directions processes).
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}[tree-style, level distance=4em, level 1/.style={sibling distance=12em},] 
+    \node[pattern-node, anchor=center] (proc){class:clause,\\MOOD:declarative, VOICE:active\\operation:update,\\ arg1:\{process:process-type\}}
+    child{node[pattern-node]{element:subject,\\operation:update,\\ arg1:\{participant:role1\}} edge from parent node[left] {}}
+    child{node[pattern-node-negative]{element:complement} edge from parent node[below] {}}
+    child{node[pattern-node-negative]{element:complement} edge from parent node[right] {}};
+    \end{tikzpicture}
+    \caption{Declarative MOOD and active VOICE graph pattern with one participant role}
+    \label{fig:general-configuration-canonic-one-partic}
+\end{figure}
+
+
+Besides the canonic CGP a set of variations are generated for each configurations corresponding to yes-no and Wh-Subj/Wh-obj/Wh-adj interrogative forms, imperative form and to passive voice form. 
+%The variations are function of the process type, participant roles, mood and voice. 
+When each of the variants are supported by the process type and participant configuration the flowing CGP are generated: (1) the declarative active (2) the passive (3) the imperative and (4) Wh-interrogative (Wh-Subj/Wh-obj/Wh-adj especially important for locational and directions processes).
 
 %\explain{how do the process type influence the generated forms and also how the participant roles influence the forms?}
 %\explain{How do the CGP vary according to other features such as voice and mood}
 %\explain{What happens in Wh-Subj/Wh-obj/Wh-adj? what happens in Wh-YN, how are the patterns generated to cove those?}
 
-If the configuration accepts passive voice i.e. the first configuration role is not expletive ``there'' or pleonastic ``it'' and the last role is not Agent role then both active and passive voice CPG are generated.
+If the configuration accepts passive voice i.e. the first participant in the configuration is not the expletive ``there'' or the pleonastic ``it'' and the last role is not Agent role then both active and passive voice CPG are generated. Otherwise the passive form is not possible. 
 
-The imperative form CGP is generated if the first role of the configuration implies an active animate entity. Roles that accept imperative form are: Agent, Emoter, Cognizant, Perceiver and their compositional derivations (e.g. Agent-Carrier, Agent-Cognizant, Affected-Emoter etc.)
+The imperative form CGP is generated if the first role of the configuration implies an active animate entity. Thus the nominal features of the subject must be already provided. Roles that accept imperative form are: Agent, Emoter, Cognizant, Perceiver and their compositional derivations e.g. Agent-Carrier, Agent-Cognizant, Affected-Emoter etc. Clausal subjects are excluded. 
 
 The passive differs from active voice pattern by switching places of the first two roles resulting in the second role matched to the subject function and the first role one the first complement. In the case of imperative the first role  as well as the subject constituent are simply omitted.  
 
-Algorithm \ref{alg:generating-cpg} outlines how the CPGs are generated from the PTDB. The CPGs are represented as Python structures and are stored in a Python module. This way the graph patterns are accessible as native structures making it handy to instantiate the graph patterns. 
+Algorithm \ref{alg:generating-cpg} outlines how the CPGs are generated from the PTDB. The CPGs are represented as Python structures and are stored in a Python module. This way the graph patterns are accessible as native structures making it easy to instantiate and execute the graph patterns. 
 
+The process types are also grouped by the process type and number of participants which reduces the number of patterns be match per clause.  
 
-\begin{algorithm}[H]
+\begin{algorithm}[!ht]
 	\Input { PTDB }
 	\Begin{
 		generate unique set of process type + participant roles\;
 		generate unique set os process type\;
 		\For{process type \KwTo possible process type}
 		{
-			generate configuration set for given process type \;
+			%generate configuration set for given process type \;
 			\For{configuration \KwTo configuration set}
 			{
-				generate indicative active pattern graph \;
+				generate declarative active pattern graph \;
 				\If {no expletive in configuration}
 				{
 					\If{configuration accepts passive}
 					{
-						generate indicative passive pattern graph\;
+						generate declarative passive pattern graph\;
 					}
 					\If{configuration accepts imperative}
 					{
@@ -513,40 +565,40 @@ Algorithm \ref{alg:generating-cpg} outlines how the CPGs are generated from the 
 
 The first two lines of the algorithm synthesize the PTDB by grouping unique configurations for each process type. Then for each configuration of each process type is generated one to three pattern graphs depending on the configuration and process type specifics.
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 	\centering
-	\begin{tikzpicture}[tree-style, level 1/.style={sibling distance=12em},] 
-	\node[pattern-node, anchor=center] (proc){class:clause, \\operation:update,\\ arg1:\{process:Process-Type\}}
+	\begin{tikzpicture}[tree-style, level distance=4em, level 1/.style={sibling distance=12em},] 
+	\node[pattern-node, anchor=center] (proc){class:clause,\\MOOD:declarative, VOICE:passive\\operation:update,\\ arg1:\{process:process-type\}}
 	child{node[pattern-node]{element:subject,\\operation:update,\\ arg1:\{participant:Role2\}} edge from parent node[left] {}}
 	child{node[pattern-node]{element:complement,\\operation:update,\\ arg1:\{participant:Role1\}} edge from parent node[below] {}}
 	child{node[pattern-node]{element:complement,\\operation:update,\\ arg1:\{participant:Role3\}} edge from parent node[right] {}};
 	\end{tikzpicture}
-	\caption{Indicative mood and passive voice configuration pattern with three participant roles}
+	\caption{Declarative MOOD and passive VOICE graph pattern with three participant roles}
 	\label{fig:general-configuration-passive}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[!ht]
 	\centering
-	\begin{tikzpicture}[tree-style, level 1/.style={sibling distance=12em},] 
-	\node[pattern-node, anchor=center] (proc){class:clause, \\operation:update,\\ arg1:\{process:Process-Type\}}
+	\begin{tikzpicture}[tree-style, level distance=4em, level 1/.style={sibling distance=12em},] 
+	\node[pattern-node, anchor=center] (proc){class:clause,\\MOOD:imperative, operation:update,\\ arg1:\{process:process-type\}}
 	child{node[pattern-node-negative]{element:subject} edge from parent node[left] {}}
 	child{node[pattern-node]{element:complement,\\operation:update,\\ arg1:\{participant:Role2\}} edge from parent node[below] {}}
 	child{node[pattern-node]{element:complement,\\operation:update,\\ arg1:\{participant:Role3\}} edge from parent node[right] {}};
 	\end{tikzpicture}
-	\caption{Imperative mood configuration pattern with three participant roles}
+	\caption{Imperative MOOD graph pattern with three participant roles}
 	\label{fig:general-configuration-imperative}
 \end{figure}
 
 %\todo{Explain the rules by which are created variations on voice, mood (and other features) based on configuration type and participants}
-The indicative mood active voice pattern (depicted in Figure \ref{fig:general-configuration-canonic}) corresponding to the canonic form in PTDB is always generated. If the configuration does not contain an expletive and accepts passive voice then the corresponding pattern is generated with first and second roles switched like in Figure \ref{fig:general-configuration-passive}. If the configuration accepts imperatives then also a subjectless pattern graph is generated with first role omitted as depicted in Figure \ref{fig:general-configuration-imperative}. 
+The declarative MOOD active VOICE pattern (depicted in Figure \ref{fig:general-configuration-canonic}) corresponding to the canonic form in PTDB is always generated. If the configuration does not contain an expletive and accepts passive voice then the corresponding pattern is generated with first and second roles switched like in Figure \ref{fig:general-configuration-passive}. Note that the role2 is assigned to the subject and the role 1 to the first complement. If the configuration accepts imperatives then also a subject-less pattern graph is generated with first role omitted as depicted in Figure \ref{fig:general-configuration-imperative}. 
 
-Directional processes are rather a special case. Examples \ref{ex:directional2} to \ref{ex:directional4} are equally valid configurations. Example \ref{ex:directional5} is a generic representation highlighting the optionality of these participants. 
+Directional processes are a special case. Examples \ref{ex:directional2} to \ref{ex:directional4} are equally valid configurations. Example \ref{ex:directional5} is a generic representation highlighting the optionality of these participants. 
 %\todo{Discuss Neale/Fawcett possible configurations}
 \begin{exe}
-	\ex\label{ex:directional2} The parcel traveled from London[So].
-	\ex\label{ex:directional3} The parcel traveled via Poland[Pa].
-	\ex\label{ex:directional4} The parcel traveled to Moscow[Des].
-	\ex\label{ex:directional5} The parcel traveled (from London[So]) (via Poland[Pa]) (to Moscow[Des]).
+	\ex\label{ex:directional2} The parcel travelled from London[So].
+	\ex\label{ex:directional3} The parcel travelled via Poland[Pa].
+	\ex\label{ex:directional4} The parcel travelled to Moscow[Des].
+	\ex\label{ex:directional5} The parcel travelled (from London[So]) (via Poland[Pa]) (to Moscow[Des]).
 \end{exe}
 
 So in Directional configurations second, third and fourth participants are optional and may occur in any order but at least one of them should be present. Therefore So, Pa and Des participants patterns should be generated for all combinations as presented in the Table \ref{tab:directional-partic-variations} below.
@@ -568,53 +620,55 @@ So in Directional configurations second, third and fourth participants are optio
 	\label{tab:directional-partic-variations}
 \end{table}
 
-Finally, the CPGs are grouped by process type. This alleviates the burden of selecting the number of patterns to test for a certain clause. The python structure looks as represented in Listing \ref{lst:config-pattern-set}
+Finally, the CPGs are grouped by process type. This alleviates the burden of selecting the number of patterns to test for a certain clause. 
 
-\begin{lstlisting}[language=json,firstnumber=1, caption={Configuration Pattern Set as a Python dictionary structure},label={lst:config-pattern-set}]
-configuration_pattern_set = {
-	process_type1 : {
-		config1 : [pattern1, panttern2,...],
-		config2 : [pattern3, panttern4,...],
-	},
-	process_type2 : {
-		config3 : [pattern5, panttern6,...],
-		config4 : [pattern7, panttern8,...],
-	}
-	...
-}
-\end{lstlisting}
+%The python structure looks as represented in Listing \ref{lst:config-pattern-set}
+%\begin{lstlisting}[language=json,firstnumber=1, caption={Configuration Pattern Set as a Python dictionary structure},label={lst:config-pattern-set}]
+%configuration_pattern_set = {
+%	process_type1 : {
+%		config1 : [pattern1, panttern2,...],
+%		config2 : [pattern3, panttern4,...],
+%	},
+%	process_type2 : {
+%		config3 : [pattern5, panttern6,...],
+%		config4 : [pattern7, panttern8,...],
+%	}
+%	...
+%}
+%\end{lstlisting}
 
-\subsection{Transitivity parsing algorithm}
-Transitivity enrichment is performed on the constituency graph after it has been enriched with Mood features and the null elements had been identified and appended. 
+The patterns are generated in advance and su at the runtime they are ready for execution. This decreases the execution time. Next follows the description how the generated configuration graph patterns are used in TRANSITIVITY enrichment phase.
 
+\section{Enrichment with TRANSITIVITY features}
+\label{sec:semantic-parsing}
 
-\begin{algorithm}[H]
-	\Input { \cg, \dg }
-	\Begin
-	{
-		\For{ clause \KwTo clauses in mcg}
-		{
-			select from PTDB candidate process types and configurations\;
-			filter configurations fitting the clause \;
-			\For{config \KwTo valid possible configurations}
-			{
-				filter pre-generated pattern graphs of the config fitting the clause\;
-				\For{pattern \KwTo filtered pattern graph set}
-				{
-					\label{line:enrich-from-pattern} enrich clause using pattern and mcg filtered by role constraints\;
-				}
-			}
-		}
-	}
-	\caption{Transitivity parsing}
-	\label{alg:transitivity-parsing}
+Once the constituency graph has been enriched with MOOD and nominal DEIXIS features and the null elements created it is ready to be enriched with TRANSITIVITY features. The algorithm identifies, in each clause, the main verb and the potential participant constituents and searches in the PTDB the lexical item matching the main verb and any of its extensions and filters (based on the clause constituency) the possible configurations for the verb (comprising all the verb meanings). Then all the graph patterns corresponding to the possible configurations are executed on the clause, which, if matched will enrich the clause CG. 
+
+\begin{algorithm}[!ht]
+    \Input { \cg, \dg }
+    \Begin
+    {
+        \For{ clause \KwTo clauses in mcg}
+        {
+            select from PTDB candidate process types and configurations\;
+            filter configurations fitting the clause \;
+            \For{config \KwTo valid possible configurations}
+            {
+                filter pre-generated pattern graphs of the config fitting the clause\;
+                \For{pattern \KwTo filtered pattern graph set}
+                {
+                    \label{line:enrich-from-pattern} enrich clause using pattern and mcg filtered by role constraints\;
+                }
+            }
+        }
+    }
+    \caption{Transitivity parsing}
+    \label{alg:transitivity-parsing}
 \end{algorithm}
 
-Algorithm \ref{alg:transitivity-parsing} outlines the semantic parsing process implemented in the current parser which is a cascade of three loops. 
+Algorithm \ref{alg:transitivity-parsing} outlines the semantic parsing process implemented in the current parser which is a cascade of three loops. The first loop iterates through clauses in the mood constituency graph and for each the candidate process types are identified by considering: (a) the main verb, (b) the prepositions connected to it (either prepositional particles, or prepositions introducing a complement or adjunct prepositional phrase listed in Table \ref{tab:participant-roles-constraints}) or (c) phrasal expressions such as "take a shower" which are explained in Section \ref{sec:ptdb-description-technical}.
 
-The first loop iterates through clauses in the mood constituency graph and for each the candidate process types are identified by considering: (a) the main verb, (b) the prepositions connected to it (either prepositional particles, or prepositions introducing a complement or adjunct prepositional phrase listed in Table \ref{tab:participant-roles-constraints}) or (c) phrasal expressions such as "take a shower" which are explained in Section \ref{sec:ptdb-description-technical}.
-
-\begin{table}[]
+\begin{table}[!ht]
 	\centering
 	\begin{tabular}{|l|l|}
 		\hline
@@ -636,13 +690,14 @@ The first loop iterates through clauses in the mood constituency graph and for e
 \end{table}
 
 
+
 The second loop iterates through the candidate configurations for each candidate process type and selects the graph patterns that shall be matched to the current clause. Then iteratively, each of the retrieved graph patterns (in the third loop) are applied to the clause graph. Line \ref{line:enrich-from-pattern} enriches CG nodes with new features of the pattern graph each time they are successfully matched. 
 Before enrichment the CG nodes are checked against an additional set of condition (captured by Algorithm \ref{alg:role-constraint-check}) which were omitted in the pattern graph. These conditions may prevent the enrichment even if the pattern has been identified. 
 
 %\explain{What is the selection/filtering based on ? probably subj/role, preposition/role constraints} The last set of checks is an attempt to reduce the false positive assignments. 
 %%For example if the complement is a clause then it can take only Phenomena role otherwise the entire
 
-\begin{algorithm}[]
+\begin{algorithm}[!ht]
 	\Input {\node, role, \dg }
 	\Begin
 	{
@@ -666,16 +721,15 @@ Before enrichment the CG nodes are checked against an additional set of conditio
 	\label{alg:role-constraint-check}
 \end{algorithm}
 
-The Transitivity parsing results in multiple process configurations being assigned to clauses introducing uncertainty. This uncertainty, laying within the reasonable limits, is not dealt with by the current parser but shall be further resolved through deeper semantic and pragmatic means. 
+The Transitivity parsing results in multiple process configurations being assigned to clauses decreasing, in a way, precision and or introducing uncertainty. Because the final result contains few possibilities without knowing which one is the case. This uncertainty, decreased with several heuristics, is not dealt with by the current parser and shall be addressed in the future work. 
 
 \section{Discussion}
+%todo larger section
 
-This chapter describes how the semantic role labelling from Transitivity system network is performed on top of the constituency graph. 
+This chapter describes how the constituency backbone is enriched with syntactic and semantic features from MOOD and TRANSITIVITY system networks using graph patterns. Besides the core sections describing the enrichment algorithms this chapter provides multiple explanations about the graph pattern creation, CG extension with null elements and the clean-up of PTDB
 
 First null elements are identified and filled with proxy constituents. This process ensures higher accuracy of semantic role assignments from the configuration patterns in the second step. 
 
-The configuration patterns have been generated from the PTDB - a verb database accounting for Transitivity patterns in Cardiff grammar. In order to generate these patterns the PTDB had to be first cleaned up, unified and aligned to the present Transitivity system. Then for each configuration were generated a set of possible patterns varying based on mood, voice, process type and participants. 
+The configuration patterns have been generated from the PTDB - a verb database accounting for Transitivity patterns in Cardiff grammar. In order to generate these patterns the PTDB had to be first cleaned up, unified and aligned to the present Transitivity system. Then for each configuration were generated a set of possible patterns varying based on mood, voice, process type and participants. Finally the semantic role labelling step employs the same pattern based enrichment mechanism as the one used in Section \ref{sec:enrichment-stage}
 
-Finally the semantic role labelling step employs the same pattern based enrichment mechanism as the one used in Section \ref{sec:enrichment-stage}
-
-The Algorithms can be improved a great deal by externalization of constraints and conditions. Some of them however are too complex to check to be completely removed but in the next iterations the tendency should definitely be towards higher abstraction and separating the grammatic constraint as realization rules from the code. 
+The Algorithms can be improved by externalization of constraints and conditions. Some of them however are too complex to check to be completely removed but in the next iterations the tendency should be towards higher abstraction and separation between the grammatical constraints (in SFL represented as systemic realization rules) from the algorithm.

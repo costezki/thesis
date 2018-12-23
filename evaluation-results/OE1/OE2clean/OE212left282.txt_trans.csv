@@ -1,0 +1,569 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.18421052631578946
+,Recall,0.5870967741935483
+,F1,0.28043143297380585
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+7,4.0,"54, 75","50, 75",4,"I was the ""other"" guy","and I was the ""other"" guy",attributive,attributive
+7,4.0,"54, 75","50, 75",4,"I was the ""other"" guy","and I was the ""other"" guy",relational,relational
+4,0.0,"54, 55","54, 55",0,I,I,carrier,carrier
+2,0.0,"31, 36","31, 36",0,dated,dated,main,main
+6,0.0,"60, 75","60, 75",0,"the ""other"" guy","the ""other"" guy",attribute,attribute
+5,0.0,"56, 59","56, 59",0,was,was,main,main
+9,9.0,"83, 96","83, 87",9,made a choice,made,main,main
+15,5.830951894845301,"126, 135","123, 130",8,pass away,to pass,main,main
+16,12.0,"111, 135","123, 135",12,He happened to pass away,to pass away,action,action
+18,4.0,"144, 152","148, 152",4,was left,left,main,main
+35,0.0,"293, 297","293, 297",0,love,love,main,main
+36,1.0,"298, 301","298, 302",1,her,her.,phenomenon,phenomenon
+34,0.0,"285, 286","285, 286",0,I,I,emoter,emoter
+29,74.51845409024533,"220, 254","163, 302",105,to seek my support would be unfair,She took on another man to help her with the grieving as to seek my support would be unfair which I disagree with because I truly love her.,relational,relational
+24,86.0,"163, 216","163, 302",86,She took on another man to help her with the grieving,She took on another man to help her with the grieving as to seek my support would be unfair which I disagree with because I truly love her.,action,action
+32,5.0,"263, 276","263, 271",5,disagree with,disagree,main,main
+37,8.06225774829855,"285, 301","277, 302",9,I truly love her,because I truly love her.,mental,mental
+21,0.0,"163, 166","163, 166",0,She,She,agent,agent
+27,0.0,"245, 247","245, 247",0,be,be,main,main
+23,3.0,"175, 186","172, 186",3,another man,on another man,affected,affected
+22,3.0,"167, 174","167, 171",3,took on,took,main,main
+44,0.0,"357, 360","357, 360",0,him,him,affected,affected
+39,0.0,"307, 310","307, 310",0,had,had,main,main
+49,0.0,"378, 381","378, 381",0,she,she,agent-carrier,agent-carrier
+51,3.1622776601683795,"390, 392","387, 393",4,me,to me.,destination,destination
+40,14.0,"311, 323","311, 337",14,two children,two children with this man,possessed,possessed
+41,0.0,"303, 337","303, 337",0,She had two children with this man,She had two children with this man,relational,relational
+41,0.0,"303, 337","303, 337",0,She had two children with this man,She had two children with this man,possessive,possessive
+45,4.0,"342, 360","338, 360",4,has since left him,and has since left him,action,action
+43,0.0,"352, 356","352, 356",0,left,left,main,main
+38,0.0,"303, 306","303, 306",0,She,She,carrier,carrier
+52,1.0,"378, 392","378, 393",1,she came to me,she came to me.,directional,directional
+50,3.0,"382, 389","382, 386",3,came to,came,main,main
+58,0.0,"427, 433","427, 433",0,lasted,lasted,main,main
+53,0.0,"394, 396","394, 396",0,We,We,agent,agent
+54,0.0,"397, 404","397, 404",0,started,started,main,main
+55,0.0,"405, 419","405, 419",0,a relationship,a relationship,created-phenomenon,created-phenomenon
+60,0.0,"457, 467","457, 467",0,Everything,Everything,carrier,carrier
+61,0.0,"468, 471","468, 471",0,was,was,main,main
+62,0.0,"472, 477","472, 477",0,great,great,attribute,attribute
+63,1.0,"457, 504","457, 505",1,Everything was great up until the last 6 months,Everything was great up until the last 6 months.,attributive,attributive
+63,1.0,"457, 504","457, 505",1,Everything was great up until the last 6 months,Everything was great up until the last 6 months.,relational,relational
+66,1.0,"506, 550","506, 551",1,We never even had a fight for the first year,We never even had a fight for the first year.,action,action
+64,0.0,"506, 508","506, 508",0,We,We,agent,agent
+72,0.0,"597, 600","597, 600",0,was,was,main,main
+71,4.0,"584, 596","580, 596",4,the fighting,... the fighting,carrier,carrier
+70,20.0,"552, 580","572, 580",20,Two weeks ago I had to leave,to leave,action,action
+78,43.68065933568311,"643, 658","601, 670",54,subjected to it,so bad and the children didn't need to be subjected to it any longer.,attribute,attribute
+69,3.0,"575, 580","572, 580",3,leave,to leave,main,main
+79,32.01562118716424,"612, 669","580, 670",33,the children didn't need to be subjected to it any longer,... the fighting was so bad and the children didn't need to be subjected to it any longer.,attributive,attributive
+79,32.01562118716424,"612, 669","580, 670",33,the children didn't need to be subjected to it any longer,... the fighting was so bad and the children didn't need to be subjected to it any longer.,relational,relational
+67,0.0,"566, 567","566, 567",0,I,I,agent,agent
+87,29.274562336608895,"720, 766","716, 737",33,have some answers thanks to mars venus dot com,and have some answers,relational,relational
+87,29.274562336608895,"720, 766","716, 737",33,have some answers thanks to mars venus dot com,and have some answers,possessive,possessive
+85,0.0,"720, 724","720, 724",0,have,have,main,main
+89,0.0,"777, 779","777, 779",0,is,is,main,main
+90,1.0,"780, 797","780, 798",1,another situation,another situation.,carrier,carrier
+86,0.0,"725, 737","725, 737",0,some answers,some answers,possessed,possessed
+91,4.123105625617661,"771, 797","767, 798",5,there is another situation,but there is another situation.,locational,locational
+82,13.0,"684, 703","684, 690",13,gained insight into,gained,main,main
+113,33.015148038438355,"980, 1032","1013, 1033",34,I have caught her lying about it to save my feelings,to save my feelings.,influential,influential
+97,0.0,"898, 905","898, 905",0,insists,insists,main,main
+101,3.0,"923, 931","923, 928",3,going on,going,main,main
+106,0.0,"956, 960","956, 960",0,want,want,main,main
+107,0.0,"961, 975","961, 975",0,to believe her,to believe her,phenomenon,phenomenon
+108,4.0,"936, 975","940, 975",4,for the most part I want to believe her,the most part I want to believe her,mental,mental
+111,0.0,"987, 993","987, 993",0,caught,caught,main,main
+105,0.0,"954, 955","954, 955",0,I,I,emoter,emoter
+93,5.0,"807, 819","807, 814",5,latched onto,latched,main,main
+115,12.0,"1038, 1055","1038, 1043",12,shows interest in,shows,main,main
+157,5.0,"1146, 1150","1141, 1150",5,done,have done,main,main
+118,34.713109915419565,"1083, 1164","1090, 1130",41,trying to work through our relationship the way we should have done to begin with,to work through our relationship the way,phenomenon,phenomenon
+121,0.0,"1171, 1178","1171, 1178",0,entails,entails,main,main
+146,4.0,"1436, 1440","1432, 1440",4,What,... What,phenomenon,phenomenon
+150,4.123105625617661,"1436, 1453","1432, 1454",5,What do you think,... What do you think?,mental,mental
+150,4.123105625617661,"1436, 1453","1432, 1454",5,What do you think,... What do you think?,two-role-cognition,two-role-cognition
+137,6.708203932499369,"1340, 1346","1334, 1349",9,I left,until I left...,action,action
+139,0.0,"1370, 1372","1370, 1372",0,is,is,main,main
+149,0.0,"1448, 1453","1448, 1453",0,think,think,main,main
+135,0.0,"1340, 1341","1340, 1341",0,I,I,agent,agent
+134,9.0,"1322, 1333","1313, 1333",9,I loved her,how much I loved her,mental,mental
+148,0.0,"1444, 1447","1444, 1447",0,you,you,cognizant,cognizant
+131,0.0,"1322, 1323","1322, 1323",0,I,I,emoter,emoter
+132,0.0,"1324, 1329","1324, 1329",0,loved,loved,main,main
+136,0.0,"1342, 1346","1342, 1346",0,left,left,main,main
+141,16.0,"1366, 1390","1350, 1390",16,she is with someone else,and not because she is with someone else,relational,relational
+128,4.0,"1308, 1312","1304, 1312",4,know,n't know,main,main
+143,13.0,"1411, 1428","1411, 1415",13,feel in love with,feel,main,main
+133,0.0,"1330, 1333","1330, 1333",0,her,her,phenomenon,phenomenon
+154,14.212670403551895,"1455, 1491","1464, 1480",20,Anything to clear the fog would help,to clear the fog,action,action
+153,0.0,"1487, 1491","1487, 1491",0,help,help,main,main
+,
+,Manual mismatching all parsed (False Negative)
+3,"17, 49",Shelley and I dated 13 years ago,action
+1,"17, 30",Shelley and I,agent
+12,"79, 109",she made a choice then for him,mental
+8,"79, 82",she,emoter
+11,"106, 109",him,phenomenon
+13,"111, 113",He,affected
+20,"140, 161",she was left grieving,influential
+19,"153, 161",grieving,created-phenomenon
+29,"220, 254",to seek my support would be unfair,attributive
+25,"220, 238",to seek my support,carrier
+28,"248, 254",unfair,attribute
+33,"255, 276",which I disagree with,mental
+30,"255, 260",which,phenomenon
+31,"261, 262",I,emoter
+48,"370, 377",she did,action
+46,"370, 373",she,agent
+52,"378, 392",she came to me,relational
+56,"394, 419",We started a relationship,influential
+59,"424, 455",it lasted approximately 3 years,action
+57,"424, 426",it,agent
+65,"520, 531",had a fight,main
+74,"584, 607",the fighting was so bad,relational
+74,"584, 607",the fighting was so bad,attributive
+73,"601, 607",so bad,attribute
+75,"612, 624",the children,carrier
+77,"640, 642",be,main
+84,"671, 715",I have since gained insight into the problem,mental
+84,"671, 715",I have since gained insight into the problem,two-role-cognition
+80,"671, 672",I,cognizant
+83,"704, 715",the problem,phenomenon
+91,"771, 797",there is another situation,relational
+88,"771, 776",there,location
+96,"799, 893",She has latched onto one of my guy friends as her friend to confide her feelings and talk with,action
+95,"799, 802",She,agent
+92,"820, 841",one of my guy friends,affected
+99,"898, 931",insists there is nothing going on,mental
+99,"898, 931",insists there is nothing going on,two-role-cognition
+98,"906, 931",there is nothing going on,phenomenon
+104,"906, 931",there is nothing going on,action
+102,"915, 922",nothing,phenomenon
+109,"980, 981",I,agent
+112,"994, 1012",her lying about it,created-phenomenon
+117,"1034, 1078",She shows interest in going back a few steps,mental
+114,"1034, 1037",She,emoter
+116,"1056, 1078",going back a few steps,phenomenon
+119,"1083, 1164",trying to work through our relationship the way we should have done to begin with,mental
+158,"1131, 1150",we should have done,action
+17,"1131, 1133",we,agent
+123,"1166, 1235",This entails spending time learning to read each others communication,event-relating
+120,"1166, 1170",This,carrier
+122,"1179, 1192",spending time,created-phenomenon
+125,"1240, 1297",spending some hours each week discussing our relationship,event-relating
+124,"1240, 1269",spending some hours each week,created-phenomenon
+130,"1299, 1333",I didn't know how much I loved her,mental
+130,"1299, 1333",I didn't know how much I loved her,two-role-cognition
+126,"1299, 1300",I,cognizant
+129,"1313, 1333",how much I loved her,phenomenon
+141,"1366, 1390",she is with someone else,attributive
+138,"1366, 1369",she,carrier
+140,"1373, 1390",with someone else,attribute
+145,"1403, 1432",I still feel in love with her,mental
+142,"1403, 1404",I,emoter
+144,"1429, 1432",her,phenomenon
+151,"1455, 1480",Anything to clear the fog,created-phenomenon
+,
+,Parsed mismatching all manual (False Positives)
+50,"50, 75","and I was the ""other"" guy",process
+50,"50, 75","and I was the ""other"" guy",locational
+54,"54, 55",I,affected-carrier
+54,"54, 55",I,agent-carrier
+102,"102, 110",for him.,affected-possessed
+102,"102, 110",for him.,possessed
+75,"75, 110",... she made a choice then for him.,process
+75,"75, 110",... she made a choice then for him.,directional
+75,"75, 110",... she made a choice then for him.,relational
+75,"75, 110",... she made a choice then for him.,possessive
+60,"60, 75","the ""other"" guy",location
+75,"75, 82",... she,agent
+75,"75, 82",... she,affected-carrier
+75,"75, 82",... she,agent-carrier
+75,"75, 82",... she,agent-perceiver
+75,"75, 82",... she,carrier
+75,"75, 82",... she,perceiver
+88,"88, 96",a choice,destination
+88,"88, 96",a choice,affected-destination
+88,"88, 96",a choice,affected-possessed
+88,"88, 96",a choice,possessed
+153,"153, 161",grieving,main
+114,"114, 122",happened,main
+123,"123, 135",to pass away,process
+123,"123, 135",to pass away,one-role-action
+255,"255, 260",which,matchee
+298,"298, 302",her.,created-phenomenon
+195,"195, 198",her,phenomenon
+195,"195, 198",her,affected-emoter
+195,"195, 198",her,created-phenomenon
+195,"195, 198",her,affected-path
+195,"195, 198",her,affected-perceiver
+195,"195, 198",her,affected-cognizant
+195,"195, 198",her,affected-carrier
+195,"195, 198",her,affected-destination
+195,"195, 198",her,affected
+195,"195, 198",her,affected-possessed
+195,"195, 198",her,affected-source
+195,"195, 198",her,carrier
+285,"285, 286",I,affected-emoter
+199,"199, 216",with the grieving,affected-emoter
+199,"199, 216",with the grieving,affected-path
+199,"199, 216",with the grieving,affected-perceiver
+199,"199, 216",with the grieving,affected-cognizant
+199,"199, 216",with the grieving,affected-carrier
+199,"199, 216",with the grieving,affected-destination
+199,"199, 216",with the grieving,affected
+199,"199, 216",with the grieving,affected-possessed
+199,"199, 216",with the grieving,affected-source
+199,"199, 216",with the grieving,possessed
+220,"220, 238",to seek my support,process
+220,"220, 238",to seek my support,mental
+220,"220, 238",to seek my support,two-role-cognition
+187,"187, 194",to help,main
+187,"187, 302",to help her with the grieving as to seek my support would be unfair which I disagree with because I truly love her.,process
+187,"187, 302",to help her with the grieving as to seek my support would be unfair which I disagree with because I truly love her.,possessive
+187,"187, 302",to help her with the grieving as to seek my support would be unfair which I disagree with because I truly love her.,two-role-action
+187,"187, 302",to help her with the grieving as to seek my support would be unfair which I disagree with because I truly love her.,influential
+187,"187, 302",to help her with the grieving as to seek my support would be unfair which I disagree with because I truly love her.,preventive
+163,"163, 302",She took on another man to help her with the grieving as to seek my support would be unfair which I disagree with because I truly love her.,process
+163,"163, 302",She took on another man to help her with the grieving as to seek my support would be unfair which I disagree with because I truly love her.,possessive
+163,"163, 302",She took on another man to help her with the grieving as to seek my support would be unfair which I disagree with because I truly love her.,two-role-action
+277,"277, 302",because I truly love her.,process
+277,"277, 302",because I truly love her.,emotive
+255,"255, 302",which I disagree with because I truly love her.,process
+255,"255, 302",which I disagree with because I truly love her.,matching
+255,"255, 302",which I disagree with because I truly love her.,relational
+220,"220, 227",to seek,main
+163,"163, 166",She,agent-cognizant
+163,"163, 166",She,affected-carrier
+163,"163, 166",She,agent-carrier
+163,"163, 166",She,agent-perceiver
+163,"163, 166",She,carrier
+228,"228, 238",my support,phenomenon
+228,"228, 238",my support,created-phenomenon
+261,"261, 262",I,agent
+261,"261, 262",I,affected-carrier
+261,"261, 262",I,agent-carrier
+261,"261, 262",I,agent-perceiver
+261,"261, 262",I,carrier
+261,"261, 262",I,perceiver
+172,"172, 186",on another man,affected-emoter
+172,"172, 186",on another man,affected-path
+172,"172, 186",on another man,affected-perceiver
+172,"172, 186",on another man,affected-cognizant
+172,"172, 186",on another man,affected-carrier
+172,"172, 186",on another man,affected-destination
+172,"172, 186",on another man,affected-possessed
+172,"172, 186",on another man,affected-source
+172,"172, 186",on another man,possessed
+172,"172, 186",on another man,range
+357,"357, 360",him,affected-emoter
+357,"357, 360",him,affected-path
+357,"357, 360",him,affected-perceiver
+357,"357, 360",him,source
+357,"357, 360",him,location
+357,"357, 360",him,affected-cognizant
+357,"357, 360",him,affected-carrier
+357,"357, 360",him,affected-destination
+357,"357, 360",him,affected-possessed
+357,"357, 360",him,affected-source
+378,"378, 381",she,affected-emoter
+378,"378, 381",she,affected-path
+378,"378, 381",she,affected-perceiver
+378,"378, 381",she,affected-cognizant
+378,"378, 381",she,affected-carrier
+378,"378, 381",she,affected-destination
+378,"378, 381",she,affected
+378,"378, 381",she,affected-possessed
+378,"378, 381",she,affected-source
+378,"378, 381",she,carrier
+387,"387, 393",to me.,phenomenon
+387,"387, 393",to me.,attribute
+387,"387, 393",to me.,created-phenomenon
+387,"387, 393",to me.,affected-destination
+387,"387, 393",to me.,created
+311,"311, 337",two children with this man,phenomenon
+311,"311, 337",two children with this man,affected-emoter
+311,"311, 337",two children with this man,created-phenomenon
+311,"311, 337",two children with this man,affected-path
+311,"311, 337",two children with this man,affected-perceiver
+311,"311, 337",two children with this man,affected-cognizant
+311,"311, 337",two children with this man,affected-carrier
+311,"311, 337",two children with this man,affected-destination
+311,"311, 337",two children with this man,affected
+311,"311, 337",two children with this man,affected-possessed
+311,"311, 337",two children with this man,affected-source
+311,"311, 337",two children with this man,created
+303,"303, 337",She had two children with this man,process
+303,"303, 337",She had two children with this man,causative
+303,"303, 337",She had two children with this man,two-role-action
+303,"303, 337",She had two children with this man,action
+338,"338, 360",and has since left him,process
+338,"338, 360",and has since left him,locational
+338,"338, 360",and has since left him,directional
+338,"338, 360",and has since left him,two-role-action
+303,"303, 306",She,agent
+303,"303, 306",She,agent-cognizant
+303,"303, 306",She,affected-carrier
+303,"303, 306",She,affected
+303,"303, 306",She,agent-carrier
+303,"303, 306",She,agent-perceiver
+303,"303, 306",She,perceiver
+378,"378, 393",she came to me.,process
+378,"378, 393",she came to me.,attributive
+378,"378, 393",she came to me.,action
+378,"378, 393",she came to me.,one-role-action
+378,"378, 393",she came to me.,starting
+374,"374, 377",did,main
+394,"394, 419",We started a relationship,process
+394,"394, 419",We started a relationship,two-role-action
+394,"394, 419",We started a relationship,action
+394,"394, 419",We started a relationship,starting
+394,"394, 396",We,affected-emoter
+394,"394, 396",We,affected-path
+394,"394, 396",We,affected-perceiver
+394,"394, 396",We,agent-cognizant
+394,"394, 396",We,affected-cognizant
+394,"394, 396",We,affected-carrier
+394,"394, 396",We,affected-destination
+394,"394, 396",We,affected
+394,"394, 396",We,agent-carrier
+394,"394, 396",We,affected-possessed
+394,"394, 396",We,agent-perceiver
+394,"394, 396",We,affected-source
+424,"424, 426",it,affected-carrier
+424,"424, 426",it,agent-carrier
+424,"424, 426",it,carrier
+405,"405, 419",a relationship,phenomenon
+405,"405, 419",a relationship,created
+420,"420, 456",and it lasted approximately 3 years.,process
+420,"420, 456",and it lasted approximately 3 years.,locational
+420,"420, 456",and it lasted approximately 3 years.,relational
+481,"481, 505",until the last 6 months.,attribute
+457,"457, 467",Everything,affected-carrier
+457,"457, 467",Everything,agent-carrier
+472,"472, 477",great,location
+457,"457, 505",Everything was great up until the last 6 months.,process
+457,"457, 505",Everything was great up until the last 6 months.,locational
+506,"506, 551",We never even had a fight for the first year.,process
+506,"506, 551",We never even had a fight for the first year.,causative
+506,"506, 551",We never even had a fight for the first year.,relational
+506,"506, 551",We never even had a fight for the first year.,possessive
+506,"506, 551",We never even had a fight for the first year.,two-role-action
+524,"524, 551",a fight for the first year.,phenomenon
+524,"524, 551",a fight for the first year.,affected-emoter
+524,"524, 551",a fight for the first year.,created-phenomenon
+524,"524, 551",a fight for the first year.,affected-path
+524,"524, 551",a fight for the first year.,affected-perceiver
+524,"524, 551",a fight for the first year.,affected-cognizant
+524,"524, 551",a fight for the first year.,affected-carrier
+524,"524, 551",a fight for the first year.,affected-destination
+524,"524, 551",a fight for the first year.,affected
+524,"524, 551",a fight for the first year.,affected-possessed
+524,"524, 551",a fight for the first year.,affected-source
+524,"524, 551",a fight for the first year.,created
+524,"524, 551",a fight for the first year.,possessed
+506,"506, 508",We,agent-cognizant
+506,"506, 508",We,affected-carrier
+506,"506, 508",We,affected
+506,"506, 508",We,agent-carrier
+506,"506, 508",We,agent-perceiver
+506,"506, 508",We,carrier
+506,"506, 508",We,perceiver
+509,"509, 514",never,main
+580,"580, 596",... the fighting,affected-carrier
+580,"580, 596",... the fighting,agent-carrier
+568,"568, 571",had,main
+572,"572, 580",to leave,process
+572,"572, 580",to leave,one-role-action
+601,"601, 670",so bad and the children didn't need to be subjected to it any longer.,location
+552,"552, 580",Two weeks ago I had to leave,process
+552,"552, 580",Two weeks ago I had to leave,causative
+552,"552, 580",Two weeks ago I had to leave,influential
+572,"572, 580",to leave,phenomenon
+572,"572, 580",to leave,created-phenomenon
+572,"572, 580",to leave,created
+580,"580, 670",... the fighting was so bad and the children didn't need to be subjected to it any longer.,process
+580,"580, 670",... the fighting was so bad and the children didn't need to be subjected to it any longer.,locational
+637,"637, 639",to,main
+566,"566, 567",I,agent-cognizant
+566,"566, 567",I,agent-carrier
+566,"566, 567",I,agent-perceiver
+716,"716, 737",and have some answers,process
+716,"716, 737",and have some answers,causative
+716,"716, 737",and have some answers,two-role-action
+716,"716, 737",and have some answers,action
+671,"671, 715",I have since gained insight into the problem,process
+671,"671, 715",I have since gained insight into the problem,relational
+671,"671, 715",I have since gained insight into the problem,possessive
+759,"759, 762",dot,main
+780,"780, 798",another situation.,affected-carrier
+780,"780, 798",another situation.,agent-carrier
+691,"691, 698",insight,affected-possessed
+691,"691, 698",insight,possessed
+671,"671, 672",I,affected-carrier
+671,"671, 672",I,affected
+671,"671, 672",I,carrier
+725,"725, 737",some answers,phenomenon
+725,"725, 737",some answers,affected-emoter
+725,"725, 737",some answers,created-phenomenon
+725,"725, 737",some answers,affected-path
+725,"725, 737",some answers,affected-perceiver
+725,"725, 737",some answers,affected-cognizant
+725,"725, 737",some answers,affected-carrier
+725,"725, 737",some answers,affected-destination
+725,"725, 737",some answers,affected
+725,"725, 737",some answers,affected-possessed
+725,"725, 737",some answers,affected-source
+725,"725, 737",some answers,created
+748,"748, 758",mars venus,affected-possessed
+748,"748, 758",mars venus,possessed
+699,"699, 715",into the problem,affected-possessed
+699,"699, 715",into the problem,possessed
+767,"767, 798",but there is another situation.,process
+767,"767, 798",but there is another situation.,action
+767,"767, 798",but there is another situation.,one-role-action
+1013,"1013, 1033",to save my feelings.,process
+1013,"1013, 1033",to save my feelings.,two-role-action
+1013,"1013, 1033",to save my feelings.,preventive
+961,"961, 975",to believe her,created-phenomenon
+940,"940, 953",the most part,phenomenon
+940,"940, 953",the most part,created-phenomenon
+998,"998, 1003",lying,main
+940,"940, 975",the most part I want to believe her,process
+940,"940, 975",the most part I want to believe her,desiderative
+1013,"1013, 1020",to save,main
+856,"856, 866",to confide,main
+954,"954, 955",I,affected-emoter
+1021,"1021, 1033",my feelings.,phenomenon
+1021,"1021, 1033",my feelings.,affected-emoter
+1021,"1021, 1033",my feelings.,created-phenomenon
+1021,"1021, 1033",my feelings.,affected-path
+1021,"1021, 1033",my feelings.,affected-perceiver
+1021,"1021, 1033",my feelings.,affected-cognizant
+1021,"1021, 1033",my feelings.,affected-carrier
+1021,"1021, 1033",my feelings.,affected-destination
+1021,"1021, 1033",my feelings.,affected
+1021,"1021, 1033",my feelings.,affected-possessed
+1021,"1021, 1033",my feelings.,affected-source
+1021,"1021, 1033",my feelings.,created
+961,"961, 971",to believe,main
+884,"884, 888",talk,main
+1090,"1090, 1097",to work,main
+1044,"1044, 1052",interest,phenomenon
+1044,"1044, 1052",interest,affected-emoter
+1044,"1044, 1052",interest,created-phenomenon
+1044,"1044, 1052",interest,affected-path
+1044,"1044, 1052",interest,affected-perceiver
+1044,"1044, 1052",interest,affected-cognizant
+1044,"1044, 1052",interest,affected-carrier
+1044,"1044, 1052",interest,affected-destination
+1044,"1044, 1052",interest,affected
+1044,"1044, 1052",interest,affected-possessed
+1044,"1044, 1052",interest,affected-source
+1044,"1044, 1052",interest,range
+1067,"1067, 1078",a few steps,destination
+1067,"1067, 1078",a few steps,affected-destination
+1056,"1056, 1078",going back a few steps,process
+1056,"1056, 1078",going back a few steps,directional
+1056,"1056, 1078",going back a few steps,relational
+1151,"1151, 1159",to begin,main
+1034,"1034, 1130",She shows interest in going back a few steps and trying to work through our relationship the way,process
+1034,"1034, 1130",She shows interest in going back a few steps and trying to work through our relationship the way,three-role-perception
+1034,"1034, 1130",She shows interest in going back a few steps and trying to work through our relationship the way,three-role-cognition
+1034,"1034, 1130",She shows interest in going back a few steps and trying to work through our relationship the way,two-role-action
+1034,"1034, 1130",She shows interest in going back a few steps and trying to work through our relationship the way,action
+1079,"1079, 1130",and trying to work through our relationship the way,process
+1079,"1079, 1130",and trying to work through our relationship the way,tentative
+1079,"1079, 1130",and trying to work through our relationship the way,influential
+1034,"1034, 1037",She,agent
+1034,"1034, 1037",She,agent-cognizant
+1034,"1034, 1037",She,agent-carrier
+1034,"1034, 1037",She,agent-perceiver
+1056,"1056, 1061",going,main
+1098,"1098, 1130",through our relationship the way,affected-emoter
+1098,"1098, 1130",through our relationship the way,affected-path
+1098,"1098, 1130",through our relationship the way,affected-perceiver
+1098,"1098, 1130",through our relationship the way,affected-cognizant
+1098,"1098, 1130",through our relationship the way,affected-carrier
+1098,"1098, 1130",through our relationship the way,affected-destination
+1098,"1098, 1130",through our relationship the way,affected
+1098,"1098, 1130",through our relationship the way,affected-possessed
+1098,"1098, 1130",through our relationship the way,path
+1098,"1098, 1130",through our relationship the way,affected-source
+1090,"1090, 1130",to work through our relationship the way,process
+1090,"1090, 1130",to work through our relationship the way,directional
+1090,"1090, 1130",to work through our relationship the way,relational
+1090,"1090, 1130",to work through our relationship the way,two-role-action
+1090,"1090, 1130",to work through our relationship the way,one-role-action
+1083,"1083, 1089",trying,main
+1090,"1090, 1130",to work through our relationship the way,created-phenomenon
+1151,"1151, 1165",to begin with.,process
+1151,"1151, 1165",to begin with.,action
+1151,"1151, 1165",to begin with.,one-role-action
+1249,"1249, 1259",some hours,affected-possessed
+1249,"1249, 1259",some hours,possessed
+1193,"1193, 1201",learning,main
+1193,"1193, 1235",learning to read each others communication,process
+1193,"1193, 1235",learning to read each others communication,mental
+1193,"1193, 1235",learning to read each others communication,two-role-cognition
+1202,"1202, 1209",to read,main
+1270,"1270, 1298",discussing our relationship.,process
+1270,"1270, 1298",discussing our relationship.,mental
+1270,"1270, 1298",discussing our relationship.,two-role-cognition
+1202,"1202, 1235",to read each others communication,process
+1202,"1202, 1235",to read each others communication,mental
+1202,"1202, 1235",to read each others communication,two-role-perception
+1202,"1202, 1235",to read each others communication,three-role-cognition
+1202,"1202, 1235",to read each others communication,two-role-action
+1202,"1202, 1235",to read each others communication,phenomenon
+1202,"1202, 1235",to read each others communication,created-phenomenon
+1281,"1281, 1298",our relationship.,phenomenon
+1281,"1281, 1298",our relationship.,created-phenomenon
+1236,"1236, 1269",and spending some hours each week,process
+1236,"1236, 1269",and spending some hours each week,relational
+1236,"1236, 1269",and spending some hours each week,possessive
+1210,"1210, 1235",each others communication,phenomenon
+1210,"1210, 1235",each others communication,created-phenomenon
+1210,"1210, 1235",each others communication,range
+1270,"1270, 1280",discussing,main
+1240,"1240, 1248",spending,main
+1403,"1403, 1404",I,affected-carrier
+1403,"1403, 1404",I,agent-carrier
+1403,"1403, 1404",I,carrier
+1366,"1366, 1369",she,agent
+1366,"1366, 1369",she,agent-perceiver
+1366,"1366, 1369",she,perceiver
+1432,"1432, 1440",... What,created-phenomenon
+1432,"1432, 1454",... What do you think?,process
+1334,"1334, 1349",until I left...,process
+1334,"1334, 1349",until I left...,one-role-action
+1391,"1391, 1432",but because I still feel in love with her,process
+1391,"1391, 1432",but because I still feel in love with her,attributive
+1391,"1391, 1432",but because I still feel in love with her,relational
+1340,"1340, 1341",I,agent-cognizant
+1340,"1340, 1341",I,agent-carrier
+1340,"1340, 1341",I,agent-perceiver
+1313,"1313, 1333",how much I loved her,process
+1313,"1313, 1333",how much I loved her,emotive
+1444,"1444, 1447",you,agent
+1444,"1444, 1447",you,agent-cognizant
+1444,"1444, 1447",you,affected-cognizant
+1444,"1444, 1447",you,affected
+1322,"1322, 1323",I,affected-emoter
+1373,"1373, 1390",with someone else,matchee
+1416,"1416, 1423",in love,attribute
+1350,"1350, 1390",and not because she is with someone else,process
+1350,"1350, 1390",and not because she is with someone else,matching
+1424,"1424, 1432",with her,attribute
+1330,"1330, 1333",her,created-phenomenon
+1464,"1464, 1480",to clear the fog,process
+1464,"1464, 1480",to clear the fog,two-role-action
+1464,"1464, 1472",to clear,main
+1473,"1473, 1480",the fog,affected-emoter
+1473,"1473, 1480",the fog,affected-path
+1473,"1473, 1480",the fog,affected-perceiver
+1473,"1473, 1480",the fog,affected-cognizant
+1473,"1473, 1480",the fog,affected-carrier
+1473,"1473, 1480",the fog,affected-destination
+1473,"1473, 1480",the fog,affected
+1473,"1473, 1480",the fog,affected-possessed
+1473,"1473, 1480",the fog,affected-source

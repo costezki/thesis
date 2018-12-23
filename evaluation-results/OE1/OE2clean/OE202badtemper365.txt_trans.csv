@@ -1,0 +1,804 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.21807747489239598
+,Recall,0.6129032258064516
+,F1,0.3216931216931217
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+19,1.0,"22, 62","22, 63",1,My wife of 5 years has a very bad temper,My wife of 5 years has a very bad temper.,relational,relational
+19,1.0,"22, 62","22, 63",1,My wife of 5 years has a very bad temper,My wife of 5 years has a very bad temper.,possessive,possessive
+3,1.0,"45, 62","45, 63",1,a very bad temper,a very bad temper.,possessed,possessed
+1,0.0,"22, 40","22, 40",0,My wife of 5 years,My wife of 5 years,carrier,carrier
+2,0.0,"41, 44","41, 44",0,has,has,main,main
+26,0.0,"182, 189","182, 189",0,smashes,smashes,main,main
+5,0.0,"73, 77","73, 77",0,gets,gets,main,main
+10,0.0,"111, 114","111, 114",0,she,she,emoter,emoter
+14,0.0,"129, 134","129, 134",0,wants,wants,main,main
+25,4.0,"150, 180","146, 180",4,throws her wedding rings at me,and throws her wedding rings at me,directional,directional
+25,4.0,"150, 180","146, 180",4,throws her wedding rings at me,and throws her wedding rings at me,relational,relational
+13,2.0,"125, 128","123, 128",2,she,", she",emoter,emoter
+15,0.0,"135, 144","135, 144",0,a divorce,a divorce,phenomenon,phenomenon
+12,0.0,"121, 123","121, 123",0,me,me,phenomenon,phenomenon
+17,0.0,"157, 174","157, 174",0,her wedding rings,her wedding rings,affected-carrier,affected-carrier
+8,10.0,"88, 105","98, 105",10,yells and screams,screams,main,main
+21,20.024984394500787,"84, 144","64, 145",21,"she yells and screams that she hates me, she wants a divorce","When she gets angry she yells and screams that she hates me, she wants a divorce,",mental,mental
+28,5.385164807134504,"182, 204","180, 209",7,smashes wedding photos,", smashes wedding photos etc.",action,action
+11,0.0,"115, 120","115, 120",0,hates,hates,main,main
+27,5.0,"190, 204","190, 209",5,wedding photos,wedding photos etc.,affected,affected
+18,0.0,"175, 180","175, 180",0,at me,at me,affected-destination,affected-destination
+16,0.0,"150, 156","150, 156",0,throws,throws,main,main
+23,5.0,"111, 123","106, 123",5,she hates me,that she hates me,mental,mental
+37,6.082762530298219,"248, 267","242, 268",7,we've been together,since we've been together.,relational,relational
+35,0.0,"254, 258","254, 258",0,been,been,main,main
+31,0.0,"219, 227","219, 227",0,happened,happened,main,main
+33,27.0,"210, 241","210, 268",27,This has happened some 50 times,This has happened some 50 times since we've been together.,action,action
+90,1.0,"310, 339","310, 340",1,her to take back her comments,her to take back her comments.,phenomenon,phenomenon
+22,0.0,"302, 309","302, 309",0,begging,begging,main,main
+40,11.0,"287, 289","287, 300",11,be,be devastated,main,main
+49,3.0,"372, 384","369, 384",3,it continued,As it continued,action,action
+58,0.0,"487, 488","487, 488",0,I,I,agent,agent
+56,8.0,"452, 466","460, 466",8,letting it end,it end,phenomenon,phenomenon
+53,112.29425630903836,"386, 416","369, 527",128,I became more and more distant,"As it continued, I became more and more distant to the point where now I feel like letting it end but for some reason I always attempt to make peace with her.",attributive,attributive
+53,112.29425630903836,"386, 416","369, 527",128,I became more and more distant,"As it continued, I became more and more distant to the point where now I feel like letting it end but for some reason I always attempt to make peace with her.",relational,relational
+60,1.0,"504, 526","504, 527",1,to make peace with her,to make peace with her.,phenomenon,phenomenon
+59,0.0,"496, 503","496, 503",0,attempt,attempt,main,main
+55,5.0,"442, 451","442, 446",5,feel like,feel,main,main
+54,0.0,"440, 441","440, 441",0,I,I,emoter,emoter
+52,0.0,"395, 416","395, 416",0,more and more distant,more and more distant,attribute,attribute
+50,2.0,"386, 387","384, 387",2,I,", I",affected-carrier,affected-carrier
+61,4.123105625617661,"471, 526","475, 527",5,for some reason I always attempt to make peace with her,some reason I always attempt to make peace with her.,influential,influential
+51,0.0,"388, 394","388, 394",0,became,became,main,main
+48,0.0,"375, 384","375, 384",0,continued,continued,main,main
+63,1.4142135623730951,"536, 542","537, 541",2,"""love""",love,main,main
+68,4.0,"563, 567","559, 567",4,want,n't want,main,main
+64,0.0,"543, 550","543, 550",0,my wife,my wife,phenomenon,phenomenon
+69,0.0,"568, 593","568, 593",0,this kind of relationship,this kind of relationship,phenomenon,phenomenon
+70,1.0,"555, 601","555, 602",1,I don't want this kind of relationship anymore,I don't want this kind of relationship anymore.,mental,mental
+65,4.0,"528, 550","528, 554",4,"I still ""love"" my wife","I still ""love"" my wife but",mental,mental
+66,0.0,"555, 556","555, 556",0,I,I,emoter,emoter
+62,0.0,"528, 529","528, 529",0,I,I,emoter,emoter
+71,0.0,"603, 606","603, 606",0,She,She,carrier,carrier
+73,20.0,"609, 611","609, 631",20,31,31 and wants kids NOW.,attribute,attribute
+72,1.0,"607, 608","606, 608",1,s,'s,main,main
+76,20.0,"603, 611","603, 631",20,She's 31,She's 31 and wants kids NOW.,attributive,attributive
+76,20.0,"603, 611","603, 631",20,She's 31,She's 31 and wants kids NOW.,relational,relational
+256,4.0,"719, 724","715, 724",4,bring,n't bring,main,main
+80,3.0,"653, 661","650, 661",3,continue,to continue,main,main
+83,10.63014581273465,"725, 747","732, 739",15,myself to move forward,to move,main,main
+87,0.0,"758, 762","758, 762",0,feel,feel,main,main
+92,8.06225774829855,"756, 784","748, 785",9,I feel we are doomed to fail,because I feel we are doomed to fail.,mental,mental
+96,1.0,"763, 784","763, 785",1,we are doomed to fail,we are doomed to fail.,phenomenon,phenomenon
+115,1.0,"907, 911","907, 912",1,kids,kids.,phenomenon,phenomenon
+110,0.0,"882, 887","882, 887",0,hates,hates,main,main
+116,4.123105625617661,"897, 911","893, 912",5,I do want kids,but I do want kids.,mental,mental
+104,0.0,"864, 867","864, 867",0,mom,mom,agent,agent
+99,4.0,"794, 798","790, 798",4,want,n't want,main,main
+102,52.49761899362675,"839, 857","799, 891",74,grow up in a house,kids to go through the upcoming mess or grow up in a house where mom tells dad she hates him,phenomenon,phenomenon
+107,0.0,"878, 891","878, 891",0,she hates him,she hates him,mental,mental
+84,4.0,"878, 891","874, 891",4,she hates him,dad she hates him,phenomenon,phenomenon
+106,14.0,"874, 877","874, 891",14,dad,dad she hates him,affected-cognizant,affected-cognizant
+111,0.0,"888, 891","888, 891",0,him,him,phenomenon,phenomenon
+108,6.0,"864, 891","858, 891",6,mom tells dad she hates him,where mom tells dad she hates him,mental,mental
+108,6.0,"864, 891","858, 891",6,mom tells dad she hates him,where mom tells dad she hates him,three-role-cognition,three-role-cognition
+109,0.0,"878, 881","878, 881",0,she,she,emoter,emoter
+105,0.0,"868, 873","868, 873",0,tells,tells,main,main
+101,57.0,"786, 835","786, 892",57,I don't want kids to go through the upcoming mess,"I don't want kids to go through the upcoming mess or grow up in a house where mom tells dad she hates him,",mental,mental
+97,0.0,"786, 787","786, 787",0,I,I,emoter,emoter
+114,0.0,"902, 906","902, 906",0,want,want,main,main
+117,0.0,"921, 922","921, 922",0,I,I,agent-cognizant,agent-cognizant
+122,0.0,"975, 977","975, 977",0,is,is,main,main
+119,68.0,"929, 1020","929, 952",68,one of the main reasons my wife stays with me is that she knows I would make an awesome dad,one of the main reasons,phenomenon,phenomenon
+120,57.0087712549569,"921, 1020","978, 1021",58,I think one of the main reasons my wife stays with me is that she knows I would make an awesome dad,that she knows I would make an awesome dad.,mental,mental
+120,57.0087712549569,"921, 1020","978, 1021",58,I think one of the main reasons my wife stays with me is that she knows I would make an awesome dad,that she knows I would make an awesome dad.,two-role-cognition,two-role-cognition
+118,0.0,"923, 928","923, 928",0,think,think,main,main
+123,10.04987562112089,"983, 1020","993, 1021",11,she knows I would make an awesome dad,I would make an awesome dad.,phenomenon,phenomenon
+144,0.0,"1097, 1100","1097, 1100",0,she,she,agent,agent
+143,24.0,"1071, 1093","1071, 1117",24,having kids impossible,having kids impossible if she doesn't act now.,created-phenomenon,created-phenomenon
+135,1.0,"1026, 1027","1025, 1027",1,s,'s,main,main
+147,19.026297590440446,"1097, 1116","1078, 1117",20,she doesn't act now,kids impossible if she doesn't act now.,action,action
+134,0.0,"1022, 1025","1022, 1025",0,She,She,carrier,carrier
+146,4.0,"1109, 1112","1105, 1112",4,act,n't act,main,main
+150,27.784887978899608,"1057, 1093","1071, 1117",38,that may make having kids impossible,having kids impossible if she doesn't act now.,influential,influential
+142,0.0,"1066, 1070","1066, 1070",0,make,make,main,main
+140,0.0,"1057, 1061","1057, 1061",0,that,that,agent,agent
+148,87.0,"1022, 1030","1022, 1117",87,She's 31,She's 31 and has had health issues that may make having kids impossible if she doesn't act now.,attributive,attributive
+149,62.369864518050704,"1035, 1056","1022, 1117",74,has had health issues,She's 31 and has had health issues that may make having kids impossible if she doesn't act now.,relational,relational
+136,87.0,"1028, 1030","1028, 1117",87,31,31 and has had health issues that may make having kids impossible if she doesn't act now.,attribute,attribute
+152,0.0,"1120, 1124","1120, 1124",0,feel,feel,main,main
+169,1.0,"1297, 1314","1297, 1315",1,to do this to her,to do this to her.,phenomenon,phenomenon
+168,4.0,"1292, 1296","1288, 1296",4,want,n't want,main,main
+166,0.0,"1284, 1285","1284, 1285",0,I,I,emoter,emoter
+170,1.0,"1284, 1314","1284, 1315",1,I don't want to do this to her,I don't want to do this to her.,mental,mental
+173,0.0,"1321, 1326","1321, 1326",0,asked,asked,main,main
+177,0.0,"1384, 1391","1384, 1391",0,refuses,refuses,main,main
+187,0.0,"1477, 1485","1477, 1485",0,resulted,resulted,main,main
+189,1.0,"1440, 1500","1440, 1501",1,Each of these requests of course has resulted in huge fights,Each of these requests of course has resulted in huge fights.,event-relating,event-relating
+185,18.0,"1440, 1462","1440, 1444",18,Each of these requests,Each,carrier,carrier
+192,0.0,"1513, 1516","1513, 1516",0,you,you,agent,agent
+193,0.0,"1517, 1519","1517, 1519",0,do,do,main,main
+201,1.0,"1566, 1567","1565, 1567",1,m,'m,main,main
+205,0.0,"1564, 1565","1564, 1565",0,I,I,carrier,carrier
+196,5.0,"1539, 1548","1539, 1543",5,feel like,feel,main,main
+204,3.0,"1552, 1563","1549, 1563",3,I leave her,if I leave her,action,action
+206,20.024984394500787,"1564, 1588","1544, 1589",21,I'm a self-centered jerk,like if I leave her I'm a self-centered jerk.,attributive,attributive
+206,20.024984394500787,"1564, 1588","1544, 1589",21,I'm a self-centered jerk,like if I leave her I'm a self-centered jerk.,relational,relational
+200,0.0,"1554, 1559","1554, 1559",0,leave,leave,main,main
+202,1.0,"1568, 1588","1568, 1589",1,a self-centered jerk,a self-centered jerk.,attribute,attribute
+203,0.0,"1560, 1563","1560, 1563",0,her,her,affected,affected
+199,0.0,"1552, 1553","1552, 1553",0,I,I,agent,agent
+216,0.0,"1651, 1653","1651, 1653",0,is,is,main,main
+212,0.0,"1618, 1620","1618, 1620",0,is,is,main,main
+217,4.123105625617661,"1647, 1661","1643, 1662",5,she is to them,and she is to them.,relational,relational
+209,0.0,"1614, 1641","1614, 1641",0,she is super sweet and nice,she is super sweet and nice,phenomenon,phenomenon
+214,0.0,"1614, 1641","1614, 1641",0,she is super sweet and nice,she is super sweet and nice,relational,relational
+208,0.0,"1607, 1613","1607, 1613",0,thinks,thinks,main,main
+207,0.0,"1590, 1606","1590, 1606",0,Everyone we know,Everyone we know,cognizant,cognizant
+210,1.0,"1590, 1641","1590, 1642",1,Everyone we know thinks she is super sweet and nice,"Everyone we know thinks she is super sweet and nice,",mental,mental
+210,1.0,"1590, 1641","1590, 1642",1,Everyone we know thinks she is super sweet and nice,"Everyone we know thinks she is super sweet and nice,",two-role-cognition,two-role-cognition
+218,0.0,"1668, 1669","1668, 1669",0,I,I,agent,agent
+219,0.0,"1670, 1674","1670, 1674",0,tell,tell,main,main
+127,0.0,"1757, 1786","1757, 1786",0,"""but I have to live with you""","""but I have to live with you""",phenomenon,phenomenon
+241,99.02019995940222,"1762, 1785","1663, 1787",101,I have to live with you,"When I tell her, she's not treating me with the decency she would treat someone else she says ""but I have to live with you"".",relational,relational
+239,3.0,"1772, 1776","1769, 1776",3,live,to live,main,main
+225,4.0,"1690, 1698","1686, 1698",4,treating,not treating,main,main
+237,0.0,"1748, 1786","1748, 1786",0,"she says ""but I have to live with you""","she says ""but I have to live with you""",mental,mental
+237,0.0,"1748, 1786","1748, 1786",0,"she says ""but I have to live with you""","she says ""but I have to live with you""",three-role-cognition,three-role-cognition
+227,39.0,"1702, 1747","1702, 1786",39,with the decency she would treat someone else,"with the decency she would treat someone else she says ""but I have to live with you""",manner,manner
+222,69.18092222571191,"1668, 1747","1663, 1678",68,"I tell her, she's not treating me with the decency she would treat someone else",When I tell her,mental,mental
+222,69.18092222571191,"1668, 1747","1663, 1678",68,"I tell her, she's not treating me with the decency she would treat someone else",When I tell her,three-role-cognition,three-role-cognition
+223,2.0,"1680, 1683","1678, 1683",2,she,", she",agent,agent
+234,0.0,"1748, 1751","1748, 1751",0,she,she,agent,agent
+226,0.0,"1699, 1701","1699, 1701",0,me,me,affected,affected
+220,0.0,"1675, 1678","1675, 1678",0,her,her,affected-cognizant,affected-cognizant
+235,0.0,"1752, 1756","1752, 1756",0,says,says,main,main
+243,5.0,"1790, 1799","1790, 1794",5,feel like,feel,main,main
+248,0.0,"1804, 1810","1804, 1810",0,faking,faking,main,main
+251,0.0,"1832, 1833","1832, 1833",0,I,I,agent,agent
+128,0.0,"1844, 1852","1844, 1852",0,avoiding,avoiding,main,main
+253,1.0,"1853, 1862","1853, 1863",1,the issue,the issue.,phenomenon,phenomenon
+254,1.0,"1832, 1862","1832, 1863",1,I just keep avoiding the issue,I just keep avoiding the issue.,influential,influential
+,
+,Manual mismatching all parsed (False Negative)
+20,"69, 83",she gets angry,relational
+20,"69, 83",she gets angry,attributive
+4,"69, 72",she,carrier
+6,"78, 83",angry,attribute
+21,"84, 144","she yells and screams that she hates me, she wants a divorce",three-role-cognition
+7,"84, 87",she,agent
+9,"111, 144","she hates me, she wants a divorce",phenomenon
+24,"125, 144",she wants a divorce,mental
+29,"210, 214",This,affected
+37,"248, 267",we've been together,attributive
+32,"248, 250",we,carrier
+36,"259, 267",together,attribute
+42,"279, 300",I would be devastated,relational
+42,"279, 300",I would be devastated,attributive
+38,"279, 280",I,carrier
+41,"290, 300",devastated,attribute
+91,"302, 339",begging her to take back her comments,influential
+46,"341, 367",Rarely would she apologize,action
+44,"354, 357",she,agent
+45,"358, 367",apologize,main
+47,"372, 374",it,agent
+57,"440, 466",I feel like letting it end,mental
+77,"616, 630",wants kids NOW,mental
+74,"616, 621",wants,main
+75,"622, 626",kids,phenomenon
+89,"632, 708",I seem to be able to continue the relationship in its current state of limbo,action
+78,"632, 633",I,agent
+81,"662, 708",the relationship in its current state of limbo,affected
+85,"713, 747",can't bring myself to move forward,influential
+92,"756, 784",I feel we are doomed to fail,two-role-cognition
+86,"756, 757",I,cognizant
+88,"763, 784",we are doomed to fail,relational
+88,"763, 784",we are doomed to fail,attributive
+93,"763, 765",we,carrier
+94,"766, 769",are,main
+95,"770, 784",doomed to fail,attribute
+100,"799, 835",kids to go through the upcoming mess,phenomenon
+103,"839, 857",grow up in a house,mental
+112,"897, 898",I,emoter
+124,"929, 1020",one of the main reasons my wife stays with me is that she knows I would make an awesome dad,event-relating
+121,"929, 974",one of the main reasons my wife stays with me,carrier
+148,"1022, 1030",She's 31,relational
+149,"1035, 1056",has had health issues,possessive
+138,"1039, 1042",had,main
+139,"1043, 1056",health issues,possessed
+163,"1118, 1191",I feel that by splitting up with her I'd end her chances to have children,mental
+163,"1118, 1191",I feel that by splitting up with her I'd end her chances to have children,two-role-cognition
+151,"1118, 1119",I,cognizant
+153,"1130, 1191",by splitting up with her I'd end her chances to have children,phenomenon
+164,"1155, 1191",I'd end her chances to have children,influential
+154,"1155, 1156",I,agent
+156,"1159, 1162",end,main
+157,"1163, 1191",her chances to have children,phenomenon
+158,"1196, 1282",by staying with her and sitting the fence I'm also ending her chances to have children,phenomenon
+125,"1196, 1282",by staying with her and sitting the fence I'm also ending her chances to have children,mental
+125,"1196, 1282",by staying with her and sitting the fence I'm also ending her chances to have children,two-role-cognition
+165,"1238, 1282",I'm also ending her chances to have children,influential
+159,"1238, 1239",I,agent
+161,"1247, 1253",ending,main
+162,"1254, 1282",her chances to have children,phenomenon
+178,"1316, 1375",I've asked my wife many times to go to marriage counselling,mental
+178,"1316, 1375",I've asked my wife many times to go to marriage counselling,three-role-cognition
+171,"1316, 1317",I,agent
+174,"1327, 1334",my wife,affected-cognizant
+175,"1346, 1375",to go to marriage counselling,phenomenon
+179,"1380, 1391",she refuses,action
+176,"1380, 1383",she,agent
+184,"1393, 1438",she won't even buy a book on anger management,relational
+184,"1393, 1438",she won't even buy a book on anger management,possessive
+180,"1393, 1396",she,agent-carrier
+182,"1408, 1411",buy,main
+183,"1412, 1438",a book on anger management,possessed
+188,"1486, 1500",in huge fights,created-phenomenon
+194,"1502, 1535",What would you do in my situation,action
+190,"1502, 1506",What,range
+198,"1537, 1588",I feel like if I leave her I'm a self-centered jerk,mental
+198,"1537, 1588",I feel like if I leave her I'm a self-centered jerk,two-role-cognition
+195,"1537, 1538",I,cognizant
+126,"1564, 1588",I'm a self-centered jerk,phenomenon
+214,"1614, 1641",she is super sweet and nice,attributive
+211,"1614, 1617",she,carrier
+213,"1621, 1641",super sweet and nice,attribute
+217,"1647, 1661",she is to them,attributive
+215,"1647, 1650",she,carrier
+221,"1680, 1747",she's not treating me with the decency she would treat someone else,phenomenon
+228,"1680, 1747",she's not treating me with the decency she would treat someone else,action
+241,"1762, 1785",I have to live with you,locational
+236,"1762, 1763",I,carrier
+240,"1777, 1785",with you,location
+245,"1788, 1830",I feel like I'm faking it staying with her,mental
+245,"1788, 1830",I feel like I'm faking it staying with her,two-role-cognition
+242,"1788, 1789",I,cognizant
+244,"1800, 1830",I'm faking it staying with her,phenomenon
+250,"1800, 1813",I'm faking it,action
+246,"1800, 1801",I,agent
+249,"1811, 1813",it,created
+,
+,Parsed mismatching all manual (False Positives)
+22,"22, 63",My wife of 5 years has a very bad temper.,process
+22,"22, 63",My wife of 5 years has a very bad temper.,causative
+22,"22, 63",My wife of 5 years has a very bad temper.,two-role-action
+22,"22, 63",My wife of 5 years has a very bad temper.,action
+45,"45, 63",a very bad temper.,phenomenon
+45,"45, 63",a very bad temper.,affected-emoter
+45,"45, 63",a very bad temper.,created-phenomenon
+45,"45, 63",a very bad temper.,affected-path
+45,"45, 63",a very bad temper.,affected-perceiver
+45,"45, 63",a very bad temper.,affected-cognizant
+45,"45, 63",a very bad temper.,affected-carrier
+45,"45, 63",a very bad temper.,affected-destination
+45,"45, 63",a very bad temper.,affected
+45,"45, 63",a very bad temper.,affected-possessed
+45,"45, 63",a very bad temper.,affected-source
+45,"45, 63",a very bad temper.,created
+22,"22, 40",My wife of 5 years,agent
+22,"22, 40",My wife of 5 years,agent-cognizant
+22,"22, 40",My wife of 5 years,affected-carrier
+22,"22, 40",My wife of 5 years,affected
+22,"22, 40",My wife of 5 years,agent-carrier
+22,"22, 40",My wife of 5 years,agent-perceiver
+22,"22, 40",My wife of 5 years,perceiver
+111,"111, 114",she,affected-emoter
+146,"146, 180",and throws her wedding rings at me,process
+123,"123, 128",", she",affected-emoter
+135,"135, 144",a divorce,created-phenomenon
+121,"121, 123",me,created-phenomenon
+157,"157, 174",her wedding rings,affected
+157,"157, 174",her wedding rings,carrier
+88,"88, 93",yells,main
+64,"64, 145","When she gets angry she yells and screams that she hates me, she wants a divorce,",process
+64,"64, 145","When she gets angry she yells and screams that she hates me, she wants a divorce,",desiderative
+180,"180, 209",", smashes wedding photos etc.",process
+180,"180, 209",", smashes wedding photos etc.",two-role-action
+190,"190, 209",wedding photos etc.,affected-emoter
+190,"190, 209",wedding photos etc.,affected-path
+190,"190, 209",wedding photos etc.,affected-perceiver
+190,"190, 209",wedding photos etc.,affected-cognizant
+190,"190, 209",wedding photos etc.,affected-carrier
+190,"190, 209",wedding photos etc.,affected-destination
+190,"190, 209",wedding photos etc.,affected-possessed
+190,"190, 209",wedding photos etc.,affected-source
+175,"175, 180",at me,destination
+78,"78, 83",angry,main
+106,"106, 123",that she hates me,process
+106,"106, 123",that she hates me,emotive
+242,"242, 268",since we've been together.,process
+242,"242, 268",since we've been together.,directional
+248,"248, 250",we,agent
+248,"248, 250",we,agent-perceiver
+248,"248, 250",we,perceiver
+259,"259, 268",together.,destination
+259,"259, 268",together.,affected-destination
+228,"228, 241",some 50 times,affected-emoter
+228,"228, 241",some 50 times,affected-path
+228,"228, 241",some 50 times,affected-perceiver
+228,"228, 241",some 50 times,affected-cognizant
+228,"228, 241",some 50 times,affected-carrier
+228,"228, 241",some 50 times,affected-destination
+228,"228, 241",some 50 times,affected
+228,"228, 241",some 50 times,affected-possessed
+228,"228, 241",some 50 times,affected-source
+210,"210, 214",This,agent
+210,"210, 214",This,agent-cognizant
+210,"210, 214",This,agent-carrier
+210,"210, 214",This,agent-perceiver
+210,"210, 268",This has happened some 50 times since we've been together.,process
+210,"210, 268",This has happened some 50 times since we've been together.,two-role-action
+327,"327, 340",her comments.,affected-possessed
+327,"327, 340",her comments.,possessed
+310,"310, 340",her to take back her comments.,process
+310,"310, 340",her to take back her comments.,relational
+310,"310, 340",her to take back her comments.,possessive
+310,"310, 340",her to take back her comments.,created-phenomenon
+310,"310, 313",her,agent
+310,"310, 313",her,agent-perceiver
+310,"310, 313",her,perceiver
+314,"314, 321",to take,main
+300,"300, 340",", begging her to take back her comments.",process
+300,"300, 340",", begging her to take back her comments.",mental
+300,"300, 340",", begging her to take back her comments.",three-role-cognition
+463,"463, 466",end,main
+417,"417, 429",to the point,attribute
+369,"369, 384",As it continued,process
+369,"369, 384",As it continued,one-role-action
+460,"460, 466",it end,process
+460,"460, 466",it end,action
+460,"460, 466",it end,one-role-action
+487,"487, 488",I,agent-cognizant
+487,"487, 488",I,agent-carrier
+487,"487, 488",I,agent-perceiver
+452,"452, 459",letting,main
+460,"460, 466",it end,created-phenomenon
+460,"460, 466",it end,created
+430,"430, 466",where now I feel like letting it end,process
+430,"430, 466",where now I feel like letting it end,attributive
+430,"430, 466",where now I feel like letting it end,relational
+430,"430, 466",where now I feel like letting it end,desiderative
+452,"452, 466",letting it end,process
+452,"452, 466",letting it end,permissive
+452,"452, 466",letting it end,influential
+369,"369, 527","As it continued, I became more and more distant to the point where now I feel like letting it end but for some reason I always attempt to make peace with her.",process
+504,"504, 527",to make peace with her.,created-phenomenon
+372,"372, 374",it,range
+504,"504, 527",to make peace with her.,process
+504,"504, 527",to make peace with her.,attributive
+504,"504, 527",to make peace with her.,directional
+504,"504, 527",to make peace with her.,causative
+504,"504, 527",to make peace with her.,relational
+504,"504, 527",to make peace with her.,possessive
+504,"504, 527",to make peace with her.,two-role-action
+475,"475, 486",some reason,phenomenon
+475,"475, 486",some reason,created-phenomenon
+440,"440, 441",I,affected-emoter
+440,"440, 441",I,affected-carrier
+440,"440, 441",I,agent-carrier
+440,"440, 441",I,carrier
+430,"430, 435",where,phenomenon
+430,"430, 435",where,attribute
+430,"430, 435",where,created-phenomenon
+460,"460, 462",it,affected-emoter
+460,"460, 462",it,affected-path
+460,"460, 462",it,affected-perceiver
+460,"460, 462",it,affected-cognizant
+460,"460, 462",it,affected-carrier
+460,"460, 462",it,affected-destination
+460,"460, 462",it,affected
+460,"460, 462",it,affected-possessed
+460,"460, 462",it,affected-source
+384,"384, 387",", I",affected
+384,"384, 387",", I",carrier
+504,"504, 511",to make,main
+518,"518, 527",with her.,phenomenon
+518,"518, 527",with her.,attribute
+518,"518, 527",with her.,created-phenomenon
+518,"518, 527",with her.,affected-possessed
+518,"518, 527",with her.,created
+518,"518, 527",with her.,possessed
+475,"475, 527",some reason I always attempt to make peace with her.,process
+475,"475, 527",some reason I always attempt to make peace with her.,tentative
+512,"512, 517",peace,phenomenon
+512,"512, 517",peace,attribute
+512,"512, 517",peace,created-phenomenon
+512,"512, 517",peace,destination
+512,"512, 517",peace,affected-carrier
+512,"512, 517",peace,affected-destination
+512,"512, 517",peace,affected
+512,"512, 517",peace,affected-possessed
+512,"512, 517",peace,created
+512,"512, 517",peace,possessed
+512,"512, 517",peace,carrier
+543,"543, 550",my wife,created-phenomenon
+568,"568, 593",this kind of relationship,created-phenomenon
+555,"555, 602",I don't want this kind of relationship anymore.,process
+555,"555, 602",I don't want this kind of relationship anymore.,desiderative
+528,"528, 554","I still ""love"" my wife but",process
+528,"528, 554","I still ""love"" my wife but",emotive
+555,"555, 556",I,affected-emoter
+528,"528, 529",I,affected-emoter
+603,"603, 606",She,affected-carrier
+603,"603, 606",She,agent-carrier
+609,"609, 631",31 and wants kids NOW.,location
+603,"603, 631",She's 31 and wants kids NOW.,process
+603,"603, 631",She's 31 and wants kids NOW.,locational
+770,"770, 776",doomed,main
+756,"756, 757",I,affected-emoter
+756,"756, 757",I,agent
+756,"756, 757",I,affected-perceiver
+756,"756, 757",I,agent-perceiver
+756,"756, 757",I,emoter
+756,"756, 757",I,perceiver
+639,"639, 644",to be,main
+639,"639, 708",to be able to continue the relationship in its current state of limbo,phenomenon
+639,"639, 708",to be able to continue the relationship in its current state of limbo,created-phenomenon
+777,"777, 785",to fail.,process
+777,"777, 785",to fail.,action
+777,"777, 785",to fail.,one-role-action
+725,"725, 731",myself,affected-emoter
+725,"725, 731",myself,agent
+725,"725, 731",myself,affected-path
+725,"725, 731",myself,affected-perceiver
+725,"725, 731",myself,agent-cognizant
+725,"725, 731",myself,affected-cognizant
+725,"725, 731",myself,affected-carrier
+725,"725, 731",myself,affected-destination
+725,"725, 731",myself,affected
+725,"725, 731",myself,agent-carrier
+725,"725, 731",myself,affected-possessed
+725,"725, 731",myself,agent-perceiver
+725,"725, 731",myself,affected-source
+725,"725, 731",myself,carrier
+634,"634, 638",seem,main
+662,"662, 678",the relationship,phenomenon
+662,"662, 678",the relationship,created-phenomenon
+662,"662, 678",the relationship,range
+777,"777, 784",to fail,main
+748,"748, 785",because I feel we are doomed to fail.,process
+748,"748, 785",because I feel we are doomed to fail.,two-role-perception
+748,"748, 785",because I feel we are doomed to fail.,emotive
+725,"725, 785",myself to move forward because I feel we are doomed to fail.,process
+725,"725, 785",myself to move forward because I feel we are doomed to fail.,action
+725,"725, 785",myself to move forward because I feel we are doomed to fail.,one-role-action
+763,"763, 785",we are doomed to fail.,created-phenomenon
+679,"679, 708",in its current state of limbo,range
+632,"632, 633",I,cognizant
+632,"632, 633",I,agent-cognizant
+632,"632, 633",I,affected-cognizant
+650,"650, 708",to continue the relationship in its current state of limbo,process
+650,"650, 708",to continue the relationship in its current state of limbo,mental
+650,"650, 708",to continue the relationship in its current state of limbo,three-role-cognition
+650,"650, 708",to continue the relationship in its current state of limbo,continuing
+650,"650, 708",to continue the relationship in its current state of limbo,two-role-action
+632,"632, 708",I seem to be able to continue the relationship in its current state of limbo,process
+632,"632, 708",I seem to be able to continue the relationship in its current state of limbo,mental
+632,"632, 708",I seem to be able to continue the relationship in its current state of limbo,two-role-cognition
+907,"907, 912",kids.,created-phenomenon
+804,"804, 809",to go,main
+893,"893, 912",but I do want kids.,process
+893,"893, 912",but I do want kids.,desiderative
+864,"864, 867",mom,cognizant
+864,"864, 867",mom,agent-cognizant
+864,"864, 867",mom,agent-carrier
+864,"864, 867",mom,agent-perceiver
+799,"799, 835",kids to go through the upcoming mess,process
+799,"799, 835",kids to go through the upcoming mess,directional
+799,"799, 835",kids to go through the upcoming mess,two-role-action
+799,"799, 835",kids to go through the upcoming mess,action
+799,"799, 835",kids to go through the upcoming mess,one-role-action
+799,"799, 891",kids to go through the upcoming mess or grow up in a house where mom tells dad she hates him,created-phenomenon
+847,"847, 857",in a house,attribute
+847,"847, 857",in a house,affected-emoter
+847,"847, 857",in a house,affected-path
+847,"847, 857",in a house,affected-perceiver
+847,"847, 857",in a house,location
+847,"847, 857",in a house,affected-cognizant
+847,"847, 857",in a house,affected-carrier
+847,"847, 857",in a house,affected-destination
+847,"847, 857",in a house,affected
+847,"847, 857",in a house,affected-possessed
+847,"847, 857",in a house,affected-source
+878,"878, 891",she hates him,process
+878,"878, 891",she hates him,emotive
+874,"874, 891",dad she hates him,created-phenomenon
+874,"874, 891",dad she hates him,cognizant
+874,"874, 891",dad she hates him,affected
+874,"874, 891",dad she hates him,matchee
+839,"839, 843",grow,main
+888,"888, 891",him,created-phenomenon
+858,"858, 891",where mom tells dad she hates him,process
+878,"878, 881",she,affected-emoter
+836,"836, 891",or grow up in a house where mom tells dad she hates him,process
+836,"836, 891",or grow up in a house where mom tells dad she hates him,attributive
+836,"836, 891",or grow up in a house where mom tells dad she hates him,locational
+836,"836, 891",or grow up in a house where mom tells dad she hates him,relational
+836,"836, 891",or grow up in a house where mom tells dad she hates him,two-role-action
+836,"836, 891",or grow up in a house where mom tells dad she hates him,one-role-action
+799,"799, 803",kids,affected-emoter
+799,"799, 803",kids,agent
+799,"799, 803",kids,affected-path
+799,"799, 803",kids,affected-perceiver
+799,"799, 803",kids,agent-cognizant
+799,"799, 803",kids,affected-cognizant
+799,"799, 803",kids,affected-carrier
+799,"799, 803",kids,affected-destination
+799,"799, 803",kids,affected
+799,"799, 803",kids,agent-carrier
+799,"799, 803",kids,affected-possessed
+799,"799, 803",kids,agent-perceiver
+799,"799, 803",kids,affected-source
+799,"799, 803",kids,perceiver
+858,"858, 863",where,phenomenon
+858,"858, 863",where,created-phenomenon
+858,"858, 863",where,matchee
+786,"786, 892","I don't want kids to go through the upcoming mess or grow up in a house where mom tells dad she hates him,",process
+786,"786, 892","I don't want kids to go through the upcoming mess or grow up in a house where mom tells dad she hates him,",desiderative
+786,"786, 787",I,affected-emoter
+810,"810, 835",through the upcoming mess,affected-emoter
+810,"810, 835",through the upcoming mess,affected-path
+810,"810, 835",through the upcoming mess,affected-perceiver
+810,"810, 835",through the upcoming mess,affected-cognizant
+810,"810, 835",through the upcoming mess,affected-carrier
+810,"810, 835",through the upcoming mess,affected-destination
+810,"810, 835",through the upcoming mess,affected
+810,"810, 835",through the upcoming mess,affected-possessed
+810,"810, 835",through the upcoming mess,path
+810,"810, 835",through the upcoming mess,affected-source
+1001,"1001, 1005",make,main
+987,"987, 992",knows,main
+921,"921, 922",I,agent
+921,"921, 922",I,cognizant
+921,"921, 922",I,affected-cognizant
+921,"921, 922",I,affected
+1006,"1006, 1021",an awesome dad.,attribute
+1006,"1006, 1021",an awesome dad.,created-phenomenon
+1006,"1006, 1021",an awesome dad.,destination
+1006,"1006, 1021",an awesome dad.,affected-destination
+1006,"1006, 1021",an awesome dad.,affected-possessed
+1006,"1006, 1021",an awesome dad.,created
+1006,"1006, 1021",an awesome dad.,possessed
+993,"993, 994",I,agent
+993,"993, 994",I,agent-cognizant
+993,"993, 994",I,affected-carrier
+993,"993, 994",I,agent-carrier
+993,"993, 994",I,agent-perceiver
+993,"993, 994",I,carrier
+993,"993, 994",I,perceiver
+929,"929, 952",one of the main reasons,created-phenomenon
+961,"961, 966",stays,main
+978,"978, 1021",that she knows I would make an awesome dad.,process
+913,"913, 952",In fact I think one of the main reasons,process
+913,"913, 952",In fact I think one of the main reasons,mental
+913,"913, 952",In fact I think one of the main reasons,two-role-cognition
+993,"993, 1021",I would make an awesome dad.,created-phenomenon
+983,"983, 986",she,cognizant
+983,"983, 986",she,agent-cognizant
+983,"983, 986",she,affected-cognizant
+1097,"1097, 1100",she,agent-cognizant
+1097,"1097, 1100",she,agent-carrier
+1097,"1097, 1100",she,agent-perceiver
+1071,"1071, 1117",having kids impossible if she doesn't act now.,phenomenon
+1071,"1071, 1117",having kids impossible if she doesn't act now.,created
+1078,"1078, 1117",kids impossible if she doesn't act now.,process
+1078,"1078, 1117",kids impossible if she doesn't act now.,two-role-action
+1022,"1022, 1025",She,affected-carrier
+1022,"1022, 1025",She,agent-carrier
+1071,"1071, 1117",having kids impossible if she doesn't act now.,process
+1071,"1071, 1117",having kids impossible if she doesn't act now.,causative
+1078,"1078, 1082",kids,manner
+1078,"1078, 1117",kids impossible if she doesn't act now.,phenomenon
+1078,"1078, 1117",kids impossible if she doesn't act now.,created-phenomenon
+1078,"1078, 1117",kids impossible if she doesn't act now.,created
+1057,"1057, 1061",that,agent-cognizant
+1057,"1057, 1061",that,agent-carrier
+1057,"1057, 1061",that,agent-perceiver
+1022,"1022, 1117",She's 31 and has had health issues that may make having kids impossible if she doesn't act now.,process
+1022,"1022, 1117",She's 31 and has had health issues that may make having kids impossible if she doesn't act now.,locational
+1028,"1028, 1117",31 and has had health issues that may make having kids impossible if she doesn't act now.,location
+1071,"1071, 1077",having,main
+1297,"1297, 1315",to do this to her.,created-phenomenon
+1284,"1284, 1285",I,affected-emoter
+1284,"1284, 1315",I don't want to do this to her.,process
+1284,"1284, 1315",I don't want to do this to her.,desiderative
+1303,"1303, 1307",this,manner
+1303,"1303, 1307",this,range
+1308,"1308, 1315",to her.,manner
+1297,"1297, 1315",to do this to her.,process
+1297,"1297, 1315",to do this to her.,two-role-action
+1297,"1297, 1315",to do this to her.,action
+1297,"1297, 1302",to do,main
+1346,"1346, 1375",to go to marriage counselling,process
+1346,"1346, 1375",to go to marriage counselling,attributive
+1346,"1346, 1375",to go to marriage counselling,matching
+1346,"1346, 1375",to go to marriage counselling,directional
+1346,"1346, 1375",to go to marriage counselling,relational
+1346,"1346, 1375",to go to marriage counselling,action
+1346,"1346, 1375",to go to marriage counselling,one-role-action
+1346,"1346, 1351",to go,main
+1399,"1399, 1402",n't,main
+1352,"1352, 1375",to marriage counselling,attribute
+1352,"1352, 1375",to marriage counselling,destination
+1352,"1352, 1375",to marriage counselling,affected-destination
+1352,"1352, 1375",to marriage counselling,matchee
+1486,"1486, 1501",in huge fights.,range
+1440,"1440, 1501",Each of these requests of course has resulted in huge fights.,process
+1440,"1440, 1444",Each,affected-carrier
+1440,"1440, 1444",Each,agent-carrier
+1513,"1513, 1516",you,agent-cognizant
+1513,"1513, 1516",you,agent-carrier
+1513,"1513, 1516",you,agent-perceiver
+1520,"1520, 1536",in my situation?,affected-emoter
+1520,"1520, 1536",in my situation?,affected-path
+1520,"1520, 1536",in my situation?,affected-perceiver
+1520,"1520, 1536",in my situation?,affected-cognizant
+1520,"1520, 1536",in my situation?,affected-carrier
+1520,"1520, 1536",in my situation?,affected-destination
+1520,"1520, 1536",in my situation?,affected
+1520,"1520, 1536",in my situation?,affected-possessed
+1520,"1520, 1536",in my situation?,affected-source
+1502,"1502, 1506",What,affected-emoter
+1502,"1502, 1506",What,affected-path
+1502,"1502, 1506",What,affected-perceiver
+1502,"1502, 1506",What,affected-cognizant
+1502,"1502, 1506",What,affected-carrier
+1502,"1502, 1506",What,affected-destination
+1502,"1502, 1506",What,affected
+1502,"1502, 1506",What,affected-possessed
+1502,"1502, 1506",What,affected-source
+1564,"1564, 1565",I,affected-carrier
+1564,"1564, 1565",I,agent-carrier
+1549,"1549, 1563",if I leave her,process
+1549,"1549, 1563",if I leave her,locational
+1549,"1549, 1563",if I leave her,directional
+1549,"1549, 1563",if I leave her,two-role-action
+1544,"1544, 1589",like if I leave her I'm a self-centered jerk.,process
+1544,"1544, 1589",like if I leave her I'm a self-centered jerk.,locational
+1568,"1568, 1589",a self-centered jerk.,location
+1560,"1560, 1563",her,affected-emoter
+1560,"1560, 1563",her,affected-path
+1560,"1560, 1563",her,affected-perceiver
+1560,"1560, 1563",her,source
+1560,"1560, 1563",her,location
+1560,"1560, 1563",her,affected-cognizant
+1560,"1560, 1563",her,affected-carrier
+1560,"1560, 1563",her,affected-destination
+1560,"1560, 1563",her,affected-possessed
+1560,"1560, 1563",her,affected-source
+1552,"1552, 1553",I,agent-cognizant
+1552,"1552, 1553",I,agent-carrier
+1552,"1552, 1553",I,agent-perceiver
+1552,"1552, 1553",I,perceiver
+1614,"1614, 1617",she,agent
+1614,"1614, 1617",she,agent-perceiver
+1614,"1614, 1617",she,perceiver
+1602,"1602, 1606",know,main
+1643,"1643, 1662",and she is to them.,process
+1643,"1643, 1662",and she is to them.,directional
+1621,"1621, 1641",super sweet and nice,location
+1614,"1614, 1641",she is super sweet and nice,created-phenomenon
+1614,"1614, 1641",she is super sweet and nice,process
+1614,"1614, 1641",she is super sweet and nice,locational
+1647,"1647, 1650",she,agent
+1647,"1647, 1650",she,agent-perceiver
+1647,"1647, 1650",she,perceiver
+1654,"1654, 1662",to them.,destination
+1654,"1654, 1662",to them.,affected-destination
+1590,"1590, 1606",Everyone we know,agent
+1590,"1590, 1606",Everyone we know,agent-cognizant
+1590,"1590, 1606",Everyone we know,affected-cognizant
+1590,"1590, 1606",Everyone we know,affected
+1590,"1590, 1642","Everyone we know thinks she is super sweet and nice,",process
+1668,"1668, 1669",I,cognizant
+1668,"1668, 1669",I,agent-cognizant
+1668,"1668, 1669",I,agent-carrier
+1668,"1668, 1669",I,agent-perceiver
+1663,"1663, 1667",When,phenomenon
+1663,"1663, 1667",When,created-phenomenon
+1663,"1663, 1667",When,matchee
+1757,"1757, 1786","""but I have to live with you""",created-phenomenon
+1719,"1719, 1722",she,agent
+1719,"1719, 1722",she,agent-cognizant
+1719,"1719, 1722",she,agent-carrier
+1719,"1719, 1722",she,agent-perceiver
+1757,"1757, 1786","""but I have to live with you""",process
+1757,"1757, 1786","""but I have to live with you""",causative
+1757,"1757, 1786","""but I have to live with you""",influential
+1663,"1663, 1787","When I tell her, she's not treating me with the decency she would treat someone else she says ""but I have to live with you"".",process
+1663,"1663, 1787","When I tell her, she's not treating me with the decency she would treat someone else she says ""but I have to live with you"".",possessive
+1663,"1663, 1787","When I tell her, she's not treating me with the decency she would treat someone else she says ""but I have to live with you"".",three-role-action
+1663,"1663, 1787","When I tell her, she's not treating me with the decency she would treat someone else she says ""but I have to live with you"".",two-role-action
+1764,"1764, 1768",have,main
+1769,"1769, 1786","to live with you""",phenomenon
+1769,"1769, 1786","to live with you""",created-phenomenon
+1769,"1769, 1786","to live with you""",created
+1762,"1762, 1763",I,agent
+1762,"1762, 1763",I,agent-cognizant
+1762,"1762, 1763",I,agent-carrier
+1762,"1762, 1763",I,agent-perceiver
+1769,"1769, 1786","to live with you""",process
+1769,"1769, 1786","to live with you""",two-role-action
+1769,"1769, 1786","to live with you""",action
+1748,"1748, 1786","she says ""but I have to live with you""",process
+1748,"1748, 1786","she says ""but I have to live with you""",two-role-cognition
+1748,"1748, 1786","she says ""but I have to live with you""",two-role-perception
+1702,"1702, 1786","with the decency she would treat someone else she says ""but I have to live with you""",affected-emoter
+1702,"1702, 1786","with the decency she would treat someone else she says ""but I have to live with you""",affected-path
+1702,"1702, 1786","with the decency she would treat someone else she says ""but I have to live with you""",affected-perceiver
+1702,"1702, 1786","with the decency she would treat someone else she says ""but I have to live with you""",affected-cognizant
+1702,"1702, 1786","with the decency she would treat someone else she says ""but I have to live with you""",affected-carrier
+1702,"1702, 1786","with the decency she would treat someone else she says ""but I have to live with you""",affected-destination
+1702,"1702, 1786","with the decency she would treat someone else she says ""but I have to live with you""",affected
+1702,"1702, 1786","with the decency she would treat someone else she says ""but I have to live with you""",affected-possessed
+1702,"1702, 1786","with the decency she would treat someone else she says ""but I have to live with you""",affected-source
+1702,"1702, 1786","with the decency she would treat someone else she says ""but I have to live with you""",possessed
+1663,"1663, 1678",When I tell her,process
+1729,"1729, 1734",treat,main
+1678,"1678, 1683",", she",agent-cognizant
+1678,"1678, 1683",", she",agent-carrier
+1678,"1678, 1683",", she",agent-perceiver
+1748,"1748, 1751",she,cognizant
+1748,"1748, 1751",she,agent-cognizant
+1748,"1748, 1751",she,affected-cognizant
+1748,"1748, 1751",she,agent-carrier
+1748,"1748, 1751",she,agent-perceiver
+1748,"1748, 1751",she,perceiver
+1699,"1699, 1701",me,affected-emoter
+1699,"1699, 1701",me,affected-path
+1699,"1699, 1701",me,affected-perceiver
+1699,"1699, 1701",me,affected-cognizant
+1699,"1699, 1701",me,affected-carrier
+1699,"1699, 1701",me,affected-destination
+1699,"1699, 1701",me,affected-possessed
+1699,"1699, 1701",me,affected-source
+1699,"1699, 1701",me,carrier
+1777,"1777, 1786","with you""",affected-emoter
+1777,"1777, 1786","with you""",affected-path
+1777,"1777, 1786","with you""",affected-perceiver
+1777,"1777, 1786","with you""",affected-cognizant
+1777,"1777, 1786","with you""",affected-carrier
+1777,"1777, 1786","with you""",affected-destination
+1777,"1777, 1786","with you""",affected
+1777,"1777, 1786","with you""",affected-possessed
+1777,"1777, 1786","with you""",affected-source
+1675,"1675, 1678",her,phenomenon
+1675,"1675, 1678",her,created-phenomenon
+1675,"1675, 1678",her,cognizant
+1675,"1675, 1678",her,affected
+1675,"1675, 1678",her,matchee
+1735,"1735, 1786","someone else she says ""but I have to live with you""",affected-emoter
+1735,"1735, 1786","someone else she says ""but I have to live with you""",affected-path
+1735,"1735, 1786","someone else she says ""but I have to live with you""",affected-perceiver
+1735,"1735, 1786","someone else she says ""but I have to live with you""",affected-cognizant
+1735,"1735, 1786","someone else she says ""but I have to live with you""",affected-carrier
+1735,"1735, 1786","someone else she says ""but I have to live with you""",affected-destination
+1735,"1735, 1786","someone else she says ""but I have to live with you""",affected
+1735,"1735, 1786","someone else she says ""but I have to live with you""",affected-possessed
+1735,"1735, 1786","someone else she says ""but I have to live with you""",affected-source
+1814,"1814, 1821",staying,main
+1844,"1844, 1863",avoiding the issue.,created-phenomenon
+1832,"1832, 1833",I,agent-cognizant
+1832,"1832, 1833",I,agent-carrier
+1832,"1832, 1833",I,agent-perceiver
+1844,"1844, 1863",avoiding the issue.,process
+1844,"1844, 1863",avoiding the issue.,directional
+1844,"1844, 1863",avoiding the issue.,two-role-action
+1844,"1844, 1863",avoiding the issue.,action
+1844,"1844, 1863",avoiding the issue.,preventive
+1853,"1853, 1863",the issue.,affected-emoter
+1853,"1853, 1863",the issue.,created-phenomenon
+1853,"1853, 1863",the issue.,affected-path
+1853,"1853, 1863",the issue.,affected-perceiver
+1853,"1853, 1863",the issue.,affected-cognizant
+1853,"1853, 1863",the issue.,affected-carrier
+1853,"1853, 1863",the issue.,affected-destination
+1853,"1853, 1863",the issue.,affected
+1853,"1853, 1863",the issue.,affected-possessed
+1853,"1853, 1863",the issue.,path
+1853,"1853, 1863",the issue.,affected-source
+1853,"1853, 1863",the issue.,created
+1832,"1832, 1863",I just keep avoiding the issue.,process
+1832,"1832, 1863",I just keep avoiding the issue.,continuing
+1839,"1839, 1843",keep,main
+504,"504, 527",to make peace with her.,influential
+1006,"1006, 1021",an awesome dad.,phenomenon
+1844,"1844, 1863",avoiding the issue.,phenomenon

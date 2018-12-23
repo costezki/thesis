@@ -1,0 +1,540 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.18820861678004536
+,Recall,0.4853801169590643
+,F1,0.27124183006535946
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+3,0.0,"29, 35","29, 35",0,having,having,main,main
+19,0.0,"210, 214","210, 214",0,says,says,main,main
+157,14.0,"71, 93","71, 107",14,I'd spend my life with,I'd spend my life with is moving out,phenomenon,phenomenon
+16,0.0,"176, 185","176, 185",0,arranging,arranging,main,main
+6,26.0,"53, 93","53, 119",26,The man I thought I'd spend my life with,The man I thought I'd spend my life with is moving out of our home,agent-carrier,agent-carrier
+158,16.1245154965971,"53, 93","61, 107",22,The man I thought I'd spend my life with,I thought I'd spend my life with is moving out,mental,mental
+158,16.1245154965971,"53, 93","61, 107",22,The man I thought I'd spend my life with,I thought I'd spend my life with is moving out,two-role-cognition,two-role-cognition
+36,0.0,"61, 62","61, 62",0,I,I,cognizant,cognizant
+152,5.0,"225, 227","225, 232",5,be,be gone,main,main
+8,7.0,"97, 110","97, 103",7,moving out of,moving,main,main
+20,1.0,"215, 255","215, 256",1,he should be gone by the end of the week,he should be gone by the end of the week.,phenomenon,phenomenon
+14,2.0,"121, 168","119, 168",2,he has all his things packed in the living room,", he has all his things packed in the living room",relational,relational
+156,0.0,"63, 70","63, 70",0,thought,thought,main,main
+10,21.633307652783937,"53, 119","71, 107",30,The man I thought I'd spend my life with is moving out of our home,I'd spend my life with is moving out,relational,relational
+150,0.0,"215, 217","215, 217",0,he,he,carrier,carrier
+22,0.0,"257, 258","257, 258",0,I,I,agent,agent
+42,0.0,"421, 428","421, 428",0,believe,believe,main,main
+31,0.0,"346, 348","346, 348",0,he,he,carrier,carrier
+39,11.0,"381, 396","381, 385",11,make it through,make,main,main
+26,1.0,"257, 330","257, 331",1,"I'm trying to be brave about it, businesslike, calm, wishing him the best","I'm trying to be brave about it, businesslike, calm, wishing him the best,",influential,influential
+32,0.0,"349, 352","349, 352",0,was,was,main,main
+45,7.211102550927978,"421, 460","415, 464",10,"believe me, we've made it through a lot","( and believe me, we've made it through a lot ) .",mental,mental
+24,0.0,"261, 267","261, 267",0,trying,trying,main,main
+37,0.0,"372, 374","372, 374",0,we,we,agent,agent
+28,0.0,"338, 345","338, 345",0,thought,thought,main,main
+44,4.0,"433, 460","429, 460",4,we've made it through a lot,"me, we've made it through a lot",phenomenon,phenomenon
+25,42.0,"268, 288","268, 330",42,to be brave about it,"to be brave about it, businesslike, calm, wishing him the best",phenomenon,phenomenon
+51,50.0,"465, 481","465, 531",50,All I want to do,All I want to do is fall into his arms and beg him to stay and let,carrier,carrier
+160,3.0,"471, 478","471, 475",3,want to,want,main,main
+159,0.0,"469, 470","469, 470",0,I,I,emoter,emoter
+162,50.15974481593781,"465, 481","469, 531",51,All I want to do,I want to do is fall into his arms and beg him to stay and let,mental,mental
+161,50.08991914547278,"479, 481","476, 531",53,do,to do is fall into his arms and beg him to stay and let,phenomenon,phenomenon
+52,19.235384061671343,"485, 548","476, 531",26,fall into his arms and beg him to stay and let's be happy again,to do is fall into his arms and beg him to stay and let,created-phenomenon,created-phenomenon
+58,94.00531899844816,"559, 578","465, 579",95,it were that simple,"All I want to do is fall into his arms and beg him to stay and let's be happy again , if only it were that simple!",attributive,attributive
+58,94.00531899844816,"559, 578","465, 579",95,it were that simple,"All I want to do is fall into his arms and beg him to stay and let's be happy again , if only it were that simple!",relational,relational
+56,0.0,"562, 566","562, 566",0,were,were,main,main
+59,0.0,"580, 582","580, 582",0,We,We,agent,agent
+62,0.0,"603, 640","603, 640",0,we still love and care for each other,we still love and care for each other,phenomenon,phenomenon
+72,8.06225774829855,"648, 657","647, 649",9,s evident,'s,main,main
+65,0.0,"612, 616","612, 616",0,love,love,main,main
+75,3.0,"661, 670","664, 670",3,re caught,caught,main,main
+67,4.0,"621, 629","621, 625",4,care for,care,main,main
+69,18.0,"621, 640","603, 640",18,care for each other,we still love and care for each other,mental,mental
+63,23.0,"580, 640","603, 640",23,We have both said that we still love and care for each other,we still love and care for each other,three-role-cognition,three-role-cognition
+77,0.0,"658, 691","658, 691",0,we're caught in a downward spiral,we're caught in a downward spiral,relational,relational
+79,8.94427190999916,"702, 715","698, 707",11,reach the top,n't reach,main,main
+61,0.0,"593, 597","593, 597",0,said,said,main,main
+74,0.0,"658, 660","658, 660",0,we,we,carrier,carrier
+112,14.035668847618199,"967, 987","981, 988",15,I have to let him go,him go.,action,action
+100,0.0,"909, 916","909, 916",0,salvage,salvage,main,main
+95,55.47071299343465,"819, 848","788, 894",77,he would give it one more try,"whether before he moves out if he would give it one more try, even go away together for a week or two just",action,action
+88,4.0,"806, 815","806, 811",4,moves out,moves,main,main
+107,0.0,"967, 968","967, 968",0,I,I,agent,agent
+109,3.0,"977, 980","974, 980",3,let,to let,main,main
+166,0.0,"926, 928","926, 928",0,he,he,agent,agent
+110,0.0,"981, 984","981, 984",0,him,him,affected,affected
+92,0.0,"828, 832","828, 832",0,give,give,main,main
+90,0.0,"819, 821","819, 821",0,he,he,agent,agent
+165,5.0,"890, 921","895, 921",5,"just see if we can salvage ""us""","see if we can salvage ""us""",mental,mental
+165,5.0,"890, 921","895, 921",5,"just see if we can salvage ""us""","see if we can salvage ""us""",two-role-cognition,two-role-cognition
+96,5.0,"855, 862","855, 857",5,go away,go,main,main
+93,0.0,"833, 835","833, 835",0,it,it,affected,affected
+83,0.0,"731, 734","731, 734",0,ask,ask,main,main
+127,0.0,"1114, 1118","1114, 1118",0,felt,felt,main,main
+129,0.0,"1119, 1120","1119, 1120",0,I,I,agent,agent
+134,0.0,"1154, 1155","1154, 1155",0,I,I,emoter,emoter
+135,0.0,"1156, 1160","1156, 1160",0,hope,hope,main,main
+155,83.2946576918352,"1107, 1146","1024, 1153",90,I just felt I had to express it somehow,"Anyway, as I'm having to be brave in front of him but I'm really crumbling inside, I just felt I had to express it somehow and so",mental,mental
+140,4.0,"1171, 1175","1167, 1175",4,mind,n't mind,main,main
+131,3.0,"1128, 1135","1125, 1135",3,express,to express,main,main
+137,1.0,"1154, 1192","1154, 1193",1,I hope you don't mind me doing so here,I hope you don't mind me doing so here!,mental,mental
+136,1.0,"1161, 1192","1161, 1193",1,you don't mind me doing so here,you don't mind me doing so here!,phenomenon,phenomenon
+124,0.0,"1089, 1098","1089, 1098",0,crumbling,crumbling,main,main
+119,3.0,"1049, 1051","1046, 1051",3,be,to be,main,main
+128,0.0,"1119, 1146","1119, 1146",0,I had to express it somehow,I had to express it somehow,phenomenon,phenomenon
+148,43.01162633521314,"1262, 1289","1219, 1290",44,to not be a big snotty mess,a rather nasty flu so very much struggling to not be a big snotty mess!,created-phenomenon,created-phenomenon
+145,53.0,"1219, 1237","1219, 1290",53,a rather nasty flu,a rather nasty flu so very much struggling to not be a big snotty mess!,possessed,possessed
+143,2.0,"1212, 1213","1210, 1213",2,I,", I",carrier,carrier
+146,55.97320787662612,"1212, 1237","1194, 1290",71,I have a rather nasty flu,"On top of it all, I have a rather nasty flu so very much struggling to not be a big snotty mess!",relational,relational
+146,55.97320787662612,"1212, 1237","1194, 1290",71,I have a rather nasty flu,"On top of it all, I have a rather nasty flu so very much struggling to not be a big snotty mess!",possessive,possessive
+144,0.0,"1214, 1218","1214, 1218",0,have,have,main,main
+147,0.0,"1251, 1261","1251, 1261",0,struggling,struggling,main,main
+132,13.601470508735444,"1136, 1138","1125, 1146",19,it,to express it somehow,phenomenon,phenomenon
+,
+,Manual mismatching all parsed (False Negative)
+5,"25, 51",I'm having a sad day today,relational
+5,"25, 51",I'm having a sad day today,possessive
+1,"25, 26",I,carrier
+4,"36, 45",a sad day,possessed
+10,"53, 119",The man I thought I'd spend my life with is moving out of our home,directional
+9,"111, 119",our home,source
+14,"121, 168",he has all his things packed in the living room,possessive
+11,"121, 123",he,carrier
+12,"124, 127",has,main
+13,"128, 149",all his things packed,possessed
+18,"173, 208",is arranging viewings on properties,action
+17,"186, 208",viewings on properties,created
+21,"210, 255",says he should be gone by the end of the week,mental
+21,"210, 255",says he should be gone by the end of the week,three-role-cognition
+154,"215, 232",he should be gone,relational
+154,"215, 232",he should be gone,attributive
+153,"228, 232",gone,attribute
+30,"336, 362","I thought he was ""the one""",mental
+30,"336, 362","I thought he was ""the one""",two-role-cognition
+27,"336, 337",I,cognizant
+29,"346, 362","he was ""the one""",phenomenon
+34,"346, 362","he was ""the one""",relational
+34,"346, 362","he was ""the one""",attributive
+33,"353, 362","""the one""",attribute
+41,"372, 414",we could make it through anything together,action
+35,"372, 414",we could make it through anything together,phenomenon
+40,"397, 405",anything,range
+45,"421, 460","believe me, we've made it through a lot",three-role-cognition
+43,"429, 431",me,agent
+50,"433, 460",we've made it through a lot,action
+46,"433, 435",we,agent
+48,"439, 454",made it through,main
+49,"455, 460",a lot,range
+54,"465, 548",All I want to do is fall into his arms and beg him to stay and let's be happy again,event-relating
+53,"482, 484",is,main
+55,"559, 561",it,carrier
+57,"567, 578",that simple,attribute
+63,"580, 640",We have both said that we still love and care for each other,mental
+66,"603, 616",we still love,mental
+64,"603, 605",we,emoter
+68,"630, 640",each other,phenomenon
+71,"645, 723",it's evident we're caught in a downward spiral and can't reach the top anymore,mental
+71,"645, 723",it's evident we're caught in a downward spiral and can't reach the top anymore,two-role-cognition
+73,"658, 723",we're caught in a downward spiral and can't reach the top anymore,phenomenon
+77,"658, 691",we're caught in a downward spiral,locational
+76,"671, 691",in a downward spiral,location
+80,"696, 723",can't reach the top anymore,action
+86,"725, 848",I did ask him in the most loving and calm way I possibly could whether before he moves out if he would give it one more try,mental
+86,"725, 848",I did ask him in the most loving and calm way I possibly could whether before he moves out if he would give it one more try,three-role-cognition
+81,"725, 726",I,agent
+84,"735, 738",him,affected-cognizant
+171,"771, 787",I possibly could,mental
+171,"771, 787",I possibly could,three-role-cognition
+169,"771, 772",I,agent
+89,"803, 815",he moves out,action
+87,"803, 805",he,agent
+85,"819, 848",he would give it one more try,phenomenon
+97,"855, 889",go away together for a week or two,action
+163,"895, 898",see,cognizant
+102,"902, 921","we can salvage ""us""",action
+164,"902, 921","we can salvage ""us""",phenomenon
+98,"902, 904",we,agent
+101,"917, 921","""us""",affected
+168,"926, 942",he won't / can't,action
+167,"929, 942",won't / can't,main
+106,"944, 959",he's moving out,action
+103,"944, 946",he,agent
+105,"947, 948",s,main
+104,"949, 959",moving out,main
+116,"989, 1014",Five years amount to this,relational
+116,"989, 1014",Five years amount to this,attributive
+113,"989, 999",Five years,carrier
+114,"1000, 1009",amount to,main
+115,"1010, 1014",this,attribute
+121,"1035, 1073",I'm having to be brave in front of him,relational
+121,"1035, 1073",I'm having to be brave in front of him,attributive
+117,"1035, 1036",I,carrier
+120,"1052, 1057",brave,attribute
+125,"1078, 1105",I'm really crumbling inside,action
+122,"1078, 1079",I,affected
+155,"1107, 1146",I just felt I had to express it somehow,two-role-cognition
+126,"1107, 1108",I,cognizant
+133,"1119, 1146",I had to express it somehow,mental
+133,"1119, 1146",I had to express it somehow,three-role-cognition
+142,"1161, 1192",you don't mind me doing so here,mental
+138,"1161, 1164",you,emoter
+141,"1176, 1192",me doing so here,phenomenon
+149,"1241, 1289",very much struggling to not be a big snotty mess,influential
+,
+,Parsed mismatching all manual (False Positives)
+23,"23, 26",", I",agent
+23,"23, 26",", I",agent-cognizant
+23,"23, 26",", I",agent-carrier
+23,"23, 26",", I",agent-perceiver
+15,"15, 17",Hi,main
+15,"15, 23",Hi there,phenomenon
+15,"15, 23",Hi there,created-phenomenon
+15,"15, 23",Hi there,created
+15,"15, 52","Hi there, I'm having a sad day today.",process
+15,"15, 52","Hi there, I'm having a sad day today.",causative
+15,"15, 52","Hi there, I'm having a sad day today.",influential
+143,"143, 149",packed,main
+119,"119, 123",", he",agent
+119,"119, 123",", he",agent-cognizant
+119,"119, 123",", he",agent-carrier
+119,"119, 123",", he",agent-perceiver
+186,"186, 194",viewings,phenomenon
+186,"186, 194",viewings,affected-emoter
+186,"186, 194",viewings,created-phenomenon
+186,"186, 194",viewings,affected-path
+186,"186, 194",viewings,affected-perceiver
+186,"186, 194",viewings,affected-cognizant
+186,"186, 194",viewings,affected-carrier
+186,"186, 194",viewings,affected-destination
+186,"186, 194",viewings,affected
+186,"186, 194",viewings,affected-possessed
+186,"186, 194",viewings,affected-source
+71,"71, 72",I,agent
+71,"71, 72",I,agent-perceiver
+71,"71, 72",I,perceiver
+81,"81, 88",my life,affected-possessed
+81,"81, 88",my life,possessed
+150,"150, 168",in the living room,destination
+150,"150, 168",in the living room,affected-destination
+71,"71, 107",I'd spend my life with is moving out,created-phenomenon
+53,"53, 119",The man I thought I'd spend my life with is moving out of our home,agent
+53,"53, 119",The man I thought I'd spend my life with is moving out of our home,agent-cognizant
+53,"53, 119",The man I thought I'd spend my life with is moving out of our home,affected-cognizant
+53,"53, 119",The man I thought I'd spend my life with is moving out of our home,agent-perceiver
+53,"53, 119",The man I thought I'd spend my life with is moving out of our home,perceiver
+61,"61, 107",I thought I'd spend my life with is moving out,process
+61,"61, 62",I,agent
+61,"61, 62",I,agent-cognizant
+61,"61, 62",I,affected-cognizant
+61,"61, 62",I,affected
+233,"233, 256",by the end of the week.,agent
+233,"233, 256",by the end of the week.,agent-cognizant
+233,"233, 256",by the end of the week.,agent-carrier
+233,"233, 256",by the end of the week.,agent-perceiver
+233,"233, 256",by the end of the week.,perceiver
+128,"128, 142",all his things,affected-carrier
+128,"128, 142",all his things,affected
+128,"128, 142",all his things,carrier
+169,"169, 208",and is arranging viewings on properties,process
+169,"169, 208",and is arranging viewings on properties,mental
+169,"169, 208",and is arranging viewings on properties,three-role-cognition
+169,"169, 208",and is arranging viewings on properties,two-role-action
+215,"215, 256",he should be gone by the end of the week.,created-phenomenon
+119,"119, 168",", he has all his things packed in the living room",process
+119,"119, 168",", he has all his things packed in the living room",directional
+195,"195, 208",on properties,affected-emoter
+195,"195, 208",on properties,affected-path
+195,"195, 208",on properties,affected-perceiver
+195,"195, 208",on properties,affected-cognizant
+195,"195, 208",on properties,affected-carrier
+195,"195, 208",on properties,affected-destination
+195,"195, 208",on properties,affected
+195,"195, 208",on properties,affected-possessed
+195,"195, 208",on properties,affected-source
+75,"75, 80",spend,main
+71,"71, 107",I'd spend my life with is moving out,process
+71,"71, 107",I'd spend my life with is moving out,possessive
+53,"53, 119",The man I thought I'd spend my life with is moving out of our home,process
+53,"53, 119",The man I thought I'd spend my life with is moving out of our home,mental
+53,"53, 119",The man I thought I'd spend my life with is moving out of our home,two-role-cognition
+53,"53, 119",The man I thought I'd spend my life with is moving out of our home,two-role-perception
+53,"53, 119",The man I thought I'd spend my life with is moving out of our home,three-role-cognition
+215,"215, 217",he,affected-emoter
+215,"215, 217",he,affected-path
+215,"215, 217",he,affected-perceiver
+215,"215, 217",he,destination
+215,"215, 217",he,affected-cognizant
+215,"215, 217",he,affected-carrier
+215,"215, 217",he,affected-destination
+215,"215, 217",he,affected
+215,"215, 217",he,agent-carrier
+215,"215, 217",he,affected-possessed
+215,"215, 217",he,affected-source
+215,"215, 217",he,range
+257,"257, 258",I,agent-cognizant
+257,"257, 258",I,agent-carrier
+257,"257, 258",I,agent-perceiver
+310,"310, 317",wishing,main
+389,"389, 405",through anything,attribute
+346,"346, 348",he,affected-carrier
+346,"346, 348",he,agent-carrier
+257,"257, 331","I'm trying to be brave about it, businesslike, calm, wishing him the best,",process
+257,"257, 331","I'm trying to be brave about it, businesslike, calm, wishing him the best,",tentative
+268,"268, 273",to be,main
+346,"346, 352",he was,process
+346,"346, 352",he was,action
+346,"346, 352",he was,one-role-action
+386,"386, 388",it,attribute
+386,"386, 388",it,affected-carrier
+386,"386, 388",it,affected
+386,"386, 388",it,carrier
+367,"367, 371",that,attribute
+367,"367, 371",that,affected-carrier
+367,"367, 371",that,affected
+367,"367, 371",that,carrier
+415,"415, 464","( and believe me, we've made it through a lot ) .",process
+415,"415, 464","( and believe me, we've made it through a lot ) .",two-role-cognition
+415,"415, 464","( and believe me, we've made it through a lot ) .",emotive
+372,"372, 374",we,agent-cognizant
+372,"372, 374",we,agent-carrier
+372,"372, 374",we,agent-perceiver
+429,"429, 460","me, we've made it through a lot",created-phenomenon
+274,"274, 279",brave,attribute
+274,"274, 279",brave,affected-path
+274,"274, 279",brave,path
+326,"326, 330",best,main
+268,"268, 330","to be brave about it, businesslike, calm, wishing him the best",process
+268,"268, 330","to be brave about it, businesslike, calm, wishing him the best",attributive
+268,"268, 330","to be brave about it, businesslike, calm, wishing him the best",directional
+268,"268, 330","to be brave about it, businesslike, calm, wishing him the best",relational
+268,"268, 330","to be brave about it, businesslike, calm, wishing him the best",created-phenomenon
+559,"559, 561",it,agent
+559,"559, 561",it,agent-cognizant
+559,"559, 561",it,agent-carrier
+559,"559, 561",it,agent-perceiver
+516,"516, 523",to stay,main
+485,"485, 489",fall,main
+534,"534, 536",be,main
+465,"465, 531",All I want to do is fall into his arms and beg him to stay and let,agent
+465,"465, 531",All I want to do is fall into his arms and beg him to stay and let,agent-cognizant
+465,"465, 531",All I want to do is fall into his arms and beg him to stay and let,affected-carrier
+465,"465, 531",All I want to do is fall into his arms and beg him to stay and let,affected
+465,"465, 531",All I want to do is fall into his arms and beg him to stay and let,agent-carrier
+465,"465, 531",All I want to do is fall into his arms and beg him to stay and let,agent-perceiver
+465,"465, 531",All I want to do is fall into his arms and beg him to stay and let,perceiver
+476,"476, 481",to do,main
+549,"549, 579",", if only it were that simple!",process
+549,"549, 579",", if only it were that simple!",two-role-action
+549,"549, 579",", if only it were that simple!",action
+504,"504, 531",and beg him to stay and let,process
+504,"504, 531",and beg him to stay and let,mental
+504,"504, 531",and beg him to stay and let,three-role-cognition
+469,"469, 470",I,affected-emoter
+469,"469, 531",I want to do is fall into his arms and beg him to stay and let,process
+469,"469, 531",I want to do is fall into his arms and beg him to stay and let,desiderative
+537,"537, 548",happy again,attribute
+537,"537, 548",happy again,location
+537,"537, 548",happy again,range
+512,"512, 531",him to stay and let,phenomenon
+508,"508, 511",beg,main
+465,"465, 579","All I want to do is fall into his arms and beg him to stay and let's be happy again , if only it were that simple!",process
+465,"465, 579","All I want to do is fall into his arms and beg him to stay and let's be happy again , if only it were that simple!",locational
+465,"465, 579","All I want to do is fall into his arms and beg him to stay and let's be happy again , if only it were that simple!",two-role-action
+465,"465, 579","All I want to do is fall into his arms and beg him to stay and let's be happy again , if only it were that simple!",action
+528,"528, 531",let,main
+567,"567, 579",that simple!,affected-emoter
+567,"567, 579",that simple!,affected-path
+567,"567, 579",that simple!,affected-perceiver
+567,"567, 579",that simple!,affected-cognizant
+567,"567, 579",that simple!,affected-carrier
+567,"567, 579",that simple!,affected-destination
+567,"567, 579",that simple!,affected
+567,"567, 579",that simple!,affected-possessed
+567,"567, 579",that simple!,affected-source
+567,"567, 579",that simple!,range
+580,"580, 582",We,agent-cognizant
+580,"580, 582",We,affected-carrier
+580,"580, 582",We,affected
+580,"580, 582",We,agent-carrier
+580,"580, 582",We,agent-perceiver
+580,"580, 582",We,carrier
+580,"580, 582",We,perceiver
+603,"603, 640",we still love and care for each other,created-phenomenon
+580,"580, 640",We have both said that we still love and care for each other,process
+580,"580, 640",We have both said that we still love and care for each other,causative
+580,"580, 640",We have both said that we still love and care for each other,relational
+580,"580, 640",We have both said that we still love and care for each other,possessive
+580,"580, 640",We have both said that we still love and care for each other,two-role-action
+580,"580, 640",We have both said that we still love and care for each other,action
+583,"583, 587",have,main
+671,"671, 691",in a downward spiral,affected
+671,"671, 691",in a downward spiral,affected-possessed
+671,"671, 691",in a downward spiral,possessed
+603,"603, 640",we still love and care for each other,affected-emoter
+603,"603, 640",we still love and care for each other,affected-path
+603,"603, 640",we still love and care for each other,affected-perceiver
+603,"603, 640",we still love and care for each other,affected-cognizant
+603,"603, 640",we still love and care for each other,affected-carrier
+603,"603, 640",we still love and care for each other,affected-destination
+603,"603, 640",we still love and care for each other,affected
+603,"603, 640",we still love and care for each other,affected-possessed
+603,"603, 640",we still love and care for each other,affected-source
+603,"603, 640",we still love and care for each other,created
+603,"603, 640",we still love and care for each other,possessed
+603,"603, 640",we still love and care for each other,process
+603,"603, 640",we still love and care for each other,two-role-cognition
+603,"603, 640",we still love and care for each other,two-role-perception
+658,"658, 691",we're caught in a downward spiral,process
+658,"658, 691",we're caught in a downward spiral,possessive
+708,"708, 715",the top,destination
+708,"708, 715",the top,affected-destination
+658,"658, 660",we,agent
+658,"658, 660",we,affected-carrier
+658,"658, 660",we,affected
+658,"658, 660",we,agent-perceiver
+658,"658, 660",we,perceiver
+981,"981, 988",him go.,process
+981,"981, 988",him go.,directional
+981,"981, 988",him go.,one-role-action
+969,"969, 973",have,main
+836,"836, 848",one more try,affected-carrier
+836,"836, 848",one more try,affected
+836,"836, 848",one more try,affected-possessed
+836,"836, 848",one more try,possessed
+836,"836, 848",one more try,carrier
+974,"974, 988",to let him go.,process
+974,"974, 988",to let him go.,permissive
+974,"974, 988",to let him go.,influential
+788,"788, 894","whether before he moves out if he would give it one more try, even go away together for a week or two just",process
+788,"788, 894","whether before he moves out if he would give it one more try, even go away together for a week or two just",two-role-action
+788,"788, 894","whether before he moves out if he would give it one more try, even go away together for a week or two just",one-role-action
+981,"981, 988",him go.,phenomenon
+981,"981, 988",him go.,created-phenomenon
+981,"981, 988",him go.,created
+967,"967, 968",I,agent-cognizant
+967,"967, 968",I,agent-carrier
+967,"967, 968",I,agent-perceiver
+872,"872, 889",for a week or two,affected-emoter
+872,"872, 889",for a week or two,affected-path
+872,"872, 889",for a week or two,affected-perceiver
+872,"872, 889",for a week or two,affected-cognizant
+872,"872, 889",for a week or two,affected-carrier
+872,"872, 889",for a week or two,affected-destination
+872,"872, 889",for a week or two,affected
+872,"872, 889",for a week or two,affected-possessed
+872,"872, 889",for a week or two,affected-source
+926,"926, 928",he,affected-emoter
+926,"926, 928",he,affected-path
+926,"926, 928",he,affected-perceiver
+926,"926, 928",he,agent-cognizant
+926,"926, 928",he,affected-cognizant
+926,"926, 928",he,affected-carrier
+926,"926, 928",he,affected-destination
+926,"926, 928",he,affected
+926,"926, 928",he,agent-carrier
+926,"926, 928",he,affected-possessed
+926,"926, 928",he,agent-perceiver
+926,"926, 928",he,affected-source
+960,"960, 988",and so I have to let him go.,process
+960,"960, 988",and so I have to let him go.,causative
+960,"960, 988",and so I have to let him go.,influential
+974,"974, 988",to let him go.,phenomenon
+974,"974, 988",to let him go.,created-phenomenon
+974,"974, 988",to let him go.,created
+981,"981, 984",him,affected-emoter
+981,"981, 984",him,agent
+981,"981, 984",him,affected-path
+981,"981, 984",him,affected-perceiver
+981,"981, 984",him,agent-cognizant
+981,"981, 984",him,affected-cognizant
+981,"981, 984",him,affected-carrier
+981,"981, 984",him,affected-destination
+981,"981, 984",him,agent-carrier
+981,"981, 984",him,affected-possessed
+981,"981, 984",him,agent-perceiver
+981,"981, 984",him,affected-source
+981,"981, 984",him,carrier
+981,"981, 984",him,perceiver
+819,"819, 821",he,agent-cognizant
+819,"819, 821",he,agent-carrier
+819,"819, 821",he,agent-perceiver
+895,"895, 898",see,main
+895,"895, 921","see if we can salvage ""us""",process
+727,"727, 730",did,main
+985,"985, 987",go,main
+833,"833, 835",it,affected-carrier
+833,"833, 835",it,affected-possessed
+833,"833, 835",it,possessed
+833,"833, 835",it,carrier
+1119,"1119, 1146",I had to express it somehow,process
+1119,"1119, 1146",I had to express it somehow,causative
+1119,"1119, 1146",I had to express it somehow,influential
+1105,"1105, 1108",", I",affected-emoter
+1105,"1105, 1108",", I",agent
+1105,"1105, 1108",", I",affected-perceiver
+1105,"1105, 1108",", I",agent-perceiver
+1105,"1105, 1108",", I",emoter
+1105,"1105, 1108",", I",perceiver
+1119,"1119, 1120",I,agent-cognizant
+1119,"1119, 1120",I,agent-carrier
+1119,"1119, 1120",I,agent-perceiver
+1154,"1154, 1155",I,affected-emoter
+1035,"1035, 1036",I,agent
+1035,"1035, 1036",I,agent-cognizant
+1035,"1035, 1036",I,agent-carrier
+1035,"1035, 1036",I,agent-perceiver
+1039,"1039, 1045",having,main
+1024,"1024, 1153","Anyway, as I'm having to be brave in front of him but I'm really crumbling inside, I just felt I had to express it somehow and so",process
+1024,"1024, 1153","Anyway, as I'm having to be brave in front of him but I'm really crumbling inside, I just felt I had to express it somehow and so",two-role-perception
+1024,"1024, 1153","Anyway, as I'm having to be brave in front of him but I'm really crumbling inside, I just felt I had to express it somehow and so",emotive
+1121,"1121, 1124",had,main
+1154,"1154, 1193",I hope you don't mind me doing so here!,process
+1154,"1154, 1193",I hope you don't mind me doing so here!,desiderative
+1161,"1161, 1193",you don't mind me doing so here!,created-phenomenon
+1070,"1070, 1105",him but I'm really crumbling inside,phenomenon
+1070,"1070, 1105",him but I'm really crumbling inside,created-phenomenon
+1070,"1070, 1105",him but I'm really crumbling inside,created
+1125,"1125, 1146",to express it somehow,created-phenomenon
+1125,"1125, 1146",to express it somehow,created
+1119,"1119, 1146",I had to express it somehow,created-phenomenon
+1179,"1179, 1184",doing,main
+1030,"1030, 1057",", as I'm having to be brave",process
+1030,"1030, 1057",", as I'm having to be brave",causative
+1030,"1030, 1057",", as I'm having to be brave",influential
+1219,"1219, 1290",a rather nasty flu so very much struggling to not be a big snotty mess!,phenomenon
+1219,"1219, 1290",a rather nasty flu so very much struggling to not be a big snotty mess!,affected-emoter
+1219,"1219, 1290",a rather nasty flu so very much struggling to not be a big snotty mess!,affected-path
+1219,"1219, 1290",a rather nasty flu so very much struggling to not be a big snotty mess!,affected-perceiver
+1219,"1219, 1290",a rather nasty flu so very much struggling to not be a big snotty mess!,affected-cognizant
+1219,"1219, 1290",a rather nasty flu so very much struggling to not be a big snotty mess!,affected-carrier
+1219,"1219, 1290",a rather nasty flu so very much struggling to not be a big snotty mess!,affected-destination
+1219,"1219, 1290",a rather nasty flu so very much struggling to not be a big snotty mess!,affected
+1219,"1219, 1290",a rather nasty flu so very much struggling to not be a big snotty mess!,affected-possessed
+1219,"1219, 1290",a rather nasty flu so very much struggling to not be a big snotty mess!,affected-source
+1219,"1219, 1290",a rather nasty flu so very much struggling to not be a big snotty mess!,created
+1219,"1219, 1290",a rather nasty flu so very much struggling to not be a big snotty mess!,carrier
+1210,"1210, 1213",", I",agent
+1210,"1210, 1213",", I",agent-cognizant
+1210,"1210, 1213",", I",affected-carrier
+1210,"1210, 1213",", I",affected
+1210,"1210, 1213",", I",agent-carrier
+1210,"1210, 1213",", I",agent-perceiver
+1210,"1210, 1213",", I",perceiver
+1194,"1194, 1290","On top of it all, I have a rather nasty flu so very much struggling to not be a big snotty mess!",process
+1194,"1194, 1290","On top of it all, I have a rather nasty flu so very much struggling to not be a big snotty mess!",causative
+1194,"1194, 1290","On top of it all, I have a rather nasty flu so very much struggling to not be a big snotty mess!",two-role-action
+1194,"1194, 1290","On top of it all, I have a rather nasty flu so very much struggling to not be a big snotty mess!",action
+1262,"1262, 1271",to not be,main
+1204,"1204, 1210",it all,phenomenon
+1204,"1204, 1210",it all,affected-emoter
+1204,"1204, 1210",it all,created-phenomenon
+1204,"1204, 1210",it all,affected-path
+1204,"1204, 1210",it all,affected-perceiver
+1204,"1204, 1210",it all,affected-cognizant
+1204,"1204, 1210",it all,affected-carrier
+1204,"1204, 1210",it all,affected-destination
+1204,"1204, 1210",it all,affected
+1204,"1204, 1210",it all,affected-possessed
+1204,"1204, 1210",it all,affected-source
+1204,"1204, 1210",it all,created
+1204,"1204, 1210",it all,possessed
+53,"53, 119",The man I thought I'd spend my life with is moving out of our home,cognizant
+512,"512, 531",him to stay and let,created-phenomenon

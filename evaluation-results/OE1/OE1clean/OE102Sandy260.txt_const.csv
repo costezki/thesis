@@ -1,0 +1,192 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.7763975155279503
+,Recall,0.8992805755395683
+,F1,0.8333333333333334
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+6,0.0,"70, 84","70, 84",0,"to say ""hello""","to say ""hello""",participant-role,participant-role
+7,12.0,"58, 84","70, 84",12,"just wanted to say ""hello""","to say ""hello""",configuration,configuration
+5,0.0,"63, 69","63, 69",0,wanted,wanted,main,main
+3,9.848857801796104,"37, 53","41, 62",13,new to the group,to the group and just,participant-role,participant-role
+4,9.0,"32, 53","32, 62",9,I am new to the group,I am new to the group and just,configuration,configuration
+2,0.0,"34, 36","34, 36",0,am,am,main,main
+1,0.0,"32, 33","32, 33",0,I,I,participant-role,participant-role
+11,0.0,"94, 98","94, 98",0,tell,tell,main,main
+16,1.0,"141, 151","141, 152",1,this group,this group?,participant-role,participant-role
+17,0.0,"129, 132","129, 132",0,you,you,participant-role,participant-role
+12,0.0,"90, 93","90, 93",0,you,you,participant-role,participant-role
+20,7.0,"160, 164","160, 171",7,been,been eating,main,main
+18,19.026297590440446,"153, 201","172, 202",20,I have been eating disordered for about 23 years,disordered for about 23 years.,configuration,configuration
+22,0.0,"153, 154","153, 154",0,I,I,participant-role,participant-role
+23,6.082762530298219,"209, 223","203, 224",7,I'm old ( 38 ),"Yeah, I'm old ( 38 ).",configuration,configuration
+25,7.0,"213, 223","213, 216",7,old ( 38 ),old,participant-role,participant-role
+24,1.0,"211, 212","210, 212",1,m,'m,main,main
+26,2.0,"209, 210","207, 210",2,I,", I",participant-role,participant-role
+29,8.0,"232, 236","232, 244",8,been,been married,main,main
+31,0.0,"225, 226","225, 226",0,I,I,participant-role,participant-role
+27,1.0,"225, 257","225, 258",1,I have been married for 13 years,I have been married for 13 years.,configuration,configuration
+35,0.0,"260, 265","260, 265",0,My DH,My DH,participant-role,participant-role
+34,4.0,"273, 277","269, 277",4,know,n't know,main,main
+36,9.0,"278, 304","287, 304",9,anything about my being ED,about my being ED,participant-role,participant-role
+32,1.0,"260, 322","260, 323",1,"My DH didn't know anything about my being ED, till last summer","My DH didn't know anything about my being ED, till last summer.",configuration,configuration
+40,0.0,"325, 326","325, 326",0,I,I,participant-role,participant-role
+37,36.0,"325, 368","325, 404",36,I had been living with the ED and not by it,"I had been living with the ED and not by it, since just before we were married.",configuration,configuration
+39,5.0,"336, 347","336, 342",5,living with,living,main,main
+49,0.0,"467, 474","467, 474",0,dropped,dropped,main,main
+46,4.123105625617661,"453, 498","449, 499",5,my weight has dropped from a stable 110 to 88,and my weight has dropped from a stable 110 to 88.,configuration,configuration
+42,9.0,"415, 448","406, 448",9,"I was triggered anew, 3 years ago","However, I was triggered anew, 3 years ago",configuration,configuration
+45,0.0,"421, 430","421, 430",0,triggered,triggered,main,main
+47,0.0,"453, 462","453, 462",0,my weight,my weight,participant-role,participant-role
+43,2.0,"415, 416","413, 416",2,I,", I",participant-role,participant-role
+51,0.0,"500, 501","500, 501",0,I,I,participant-role,participant-role
+50,1.0,"500, 510","500, 511",1,"I am 5' 7""","I am 5' 7"".",configuration,configuration
+53,3.0,"505, 510","508, 510",3,"5' 7""","7""",participant-role,participant-role
+52,0.0,"502, 504","502, 504",0,am,am,main,main
+54,0.0,"512, 582","512, 582",0,"Last July my hubby, his parents ( and my mother) did an ""intervention""","Last July my hubby, his parents ( and my mother) did an ""intervention""",configuration,configuration
+56,18.0,"561, 582","561, 564",18,"did an ""intervention""",did,main,main
+60,0.0,"587, 593","587, 593",0,forced,forced,main,main
+58,4.123105625617661,"587, 611","583, 612",5,forced me into treatment,and forced me into treatment.,configuration,configuration
+55,8.0,"522, 560","530, 560",8,"my hubby, his parents ( and my mother)",", his parents ( and my mother)",participant-role,participant-role
+59,0.0,"594, 596","594, 596",0,me,me,participant-role,participant-role
+65,8.06225774829855,"644, 666","636, 667",9,I was 3 1/2 hours away,because I was 3 1/2 hours away.,configuration,configuration
+64,0.0,"620, 635","620, 635",0,a horrible time,a horrible time,participant-role,participant-role
+61,32.0,"613, 635","613, 667",32,It was a horrible time,It was a horrible time because I was 3 1/2 hours away.,configuration,configuration
+63,0.0,"616, 619","616, 619",0,was,was,main,main
+66,0.0,"644, 645","644, 645",0,I,I,participant-role,participant-role
+67,0.0,"646, 649","646, 649",0,was,was,main,main
+62,0.0,"613, 615","613, 615",0,It,It,participant-role,participant-role
+72,0.0,"683, 698","683, 698",0,my 6 young kids,my 6 young kids,participant-role,participant-role
+69,0.0,"668, 698","668, 698",0,I had to leave my 6 young kids,I had to leave my 6 young kids,configuration,configuration
+76,0.0,"715, 722","715, 722",0,nursing,nursing,main,main
+78,0.0,"703, 704","703, 704",0,I,I,participant-role,participant-role
+77,1.0,"723, 745","723, 746",1,my 19 months old twins,my 19 months old twins.,participant-role,participant-role
+71,3.0,"677, 682","674, 682",3,leave,to leave,main,main
+74,4.123105625617661,"703, 745","699, 746",5,I was still nursing my 19 months old twins,and I was still nursing my 19 months old twins.,configuration,configuration
+73,0.0,"668, 669","668, 669",0,I,I,participant-role,participant-role
+87,7.0710678118654755,"829, 851","822, 852",8,they asked me to leave,", till they asked me to leave.",configuration,configuration
+91,3.1622776601683795,"843, 851","840, 852",4,to leave,me to leave.,participant-role,participant-role
+83,2.0,"764, 765","762, 765",2,I,", I",participant-role,participant-role
+90,0.0,"840, 842","840, 842",0,me,me,participant-role,participant-role
+81,4.0,"774, 781","770, 781",4,wanting,not wanting,main,main
+79,17.0,"764, 791","747, 791",17,I was not wanting to change,"Needless to say, I was not wanting to change",configuration,configuration
+85,4.0,"798, 806","798, 802",4,held out,held,main,main
+86,0.0,"796, 797","796, 797",0,I,I,participant-role,participant-role
+84,30.265491900843113,"796, 822","792, 852",34,I held out for 5 1/2 weeks,"and I held out for 5 1/2 weeks, till they asked me to leave.",configuration,configuration
+89,0.0,"834, 839","834, 839",0,asked,asked,main,main
+82,0.0,"782, 791","782, 791",0,to change,to change,participant-role,participant-role
+88,0.0,"829, 833","829, 833",0,they,they,participant-role,participant-role
+143,7.0,"890, 907","883, 907",7,most of the 6 lbs,except most of the 6 lbs,participant-role,participant-role
+156,0.0,"912, 916","912, 916",0,lost,lost,main,main
+92,26.0,"853, 881","853, 907",26,I did not restore any weight,"I did not restore any weight, except most of the 6 lbs",configuration,configuration
+96,0.0,"853, 854","853, 854",0,I,I,participant-role,participant-role
+95,0.0,"871, 881","871, 881",0,any weight,any weight,participant-role,participant-role
+94,4.0,"863, 870","859, 870",4,restore,not restore,main,main
+144,0.0,"908, 909","908, 909",0,I,I,participant-role,participant-role
+142,18.027756377319946,"890, 928","908, 929",19,most of the 6 lbs I'd lost while there,I'd lost while there.,configuration,configuration
+149,0.0,"964, 968","964, 968",0,live,live,main,main
+147,0.0,"951, 959","951, 959",0,a person,a person,participant-role,participant-role
+150,0.0,"969, 976","969, 976",0,healthy,healthy,participant-role,participant-role
+98,0.0,"930, 931","930, 931",0,I,I,participant-role,participant-role
+100,0.0,"951, 1007","951, 1007",0,"a person can live healthy, as the ""enlightened anorexic""","a person can live healthy, as the ""enlightened anorexic""",participant-role,participant-role
+99,0.0,"943, 950","943, 950",0,believe,believe,main,main
+97,1.0,"930, 1007","930, 1008",1,"I personally believe a person can live healthy, as the ""enlightened anorexic""","I personally believe a person can live healthy, as the ""enlightened anorexic"".",configuration,configuration
+101,6.082762530298219,"1015, 1066","1009, 1067",7,I'd love to give up the negative behaviours someday,"Yeah, I'd love to give up the negative behaviours someday.",configuration,configuration
+105,2.0,"1015, 1016","1013, 1016",2,I,", I",participant-role,participant-role
+103,0.0,"1019, 1023","1019, 1023",0,love,love,main,main
+104,9.0,"1024, 1058","1024, 1067",9,to give up the negative behaviours,to give up the negative behaviours someday.,participant-role,participant-role
+109,0.0,"1068, 1069","1068, 1069",0,I,I,participant-role,participant-role
+106,1.0,"1068, 1090","1068, 1091",1,I know it is my choice,I know it is my choice.,configuration,configuration
+108,0.0,"1070, 1074","1070, 1074",0,know,know,main,main
+155,1.0,"1075, 1090","1075, 1091",1,it is my choice,it is my choice.,configuration,configuration
+154,1.0,"1081, 1090","1081, 1091",1,my choice,my choice.,participant-role,participant-role
+152,0.0,"1075, 1077","1075, 1077",0,it,it,participant-role,participant-role
+107,1.0,"1075, 1090","1075, 1091",1,it is my choice,it is my choice.,participant-role,participant-role
+153,0.0,"1078, 1080","1078, 1080",0,is,is,main,main
+111,0.0,"1094, 1100","1094, 1100",0,remain,remain,main,main
+113,0.0,"1092, 1093","1092, 1093",0,I,I,participant-role,participant-role
+110,0.0,"1092, 1106","1092, 1106",0,I remain at 88,I remain at 88,configuration,configuration
+114,4.123105625617661,"1111, 1136","1107, 1137",5,am terrified of being FAT,and am terrified of being FAT!,configuration,configuration
+116,3.1622776601683795,"1127, 1136","1124, 1137",4,being FAT,of being FAT!,participant-role,participant-role
+112,0.0,"1101, 1106","1101, 1106",0,at 88,at 88,participant-role,participant-role
+118,12.041594578792296,"1150, 1169","1138, 1170",13,your pics are great,"By the way, your pics are great.",configuration,configuration
+121,2.0,"1150, 1159","1148, 1159",2,your pics,", your pics",participant-role,participant-role
+120,1.0,"1164, 1169","1164, 1170",1,great,great.,participant-role,participant-role
+119,0.0,"1160, 1163","1160, 1163",0,are,are,main,main
+124,0.0,"1175, 1178","1175, 1178",0,are,are,main,main
+125,1.0,"1179, 1188","1179, 1189",1,beautiful,beautiful!,participant-role,participant-role
+122,1.0,"1171, 1188","1171, 1189",1,You are beautiful,You are beautiful!,configuration,configuration
+123,0.0,"1171, 1174","1171, 1174",0,You,You,participant-role,participant-role
+127,0.0,"1199, 1206","1199, 1206",0,reminds,reminds,main,main
+128,0.0,"1194, 1198","1194, 1198",0,Mike,Mike,participant-role,participant-role
+129,0.0,"1207, 1209","1207, 1209",0,me,me,participant-role,participant-role
+126,4.47213595499958,"1194, 1249","1190, 1251",6,Mike reminds me much of my brothers ( dark curly hair ),And Mike reminds me much of my brothers ( dark curly hair ) .,configuration,configuration
+134,1.0,"1297, 1304","1297, 1305",1,so long,so long.,participant-role,participant-role
+132,34.0,"1288, 1292","1254, 1292",34,this,"Warm regards 
+Mary 
+Well, sorry this",participant-role,participant-role
+133,0.0,"1293, 1296","1293, 1296",0,was,was,main,main
+131,34.0147027033899,"1288, 1304","1254, 1305",35,this was so long,"Warm regards 
+Mary 
+Well, sorry this was so long.",configuration,configuration
+139,0.0,"1311, 1312","1311, 1312",0,I,I,participant-role,participant-role
+137,4.0,"1319, 1329","1315, 1329",4,experience,n't experience,main,main
+135,5.0990195135927845,"1311, 1349","1306, 1350",6,I don't experience any health problems,Just I don't experience any health problems.,configuration,configuration
+138,1.0,"1330, 1349","1330, 1350",1,any health problems,any health problems.,participant-role,participant-role
+151,31.0,"951, 976","951, 1007",31,a person can live healthy,"a person can live healthy, as the ""enlightened anorexic""",configuration,configuration
+,
+,Manual mismatching all parsed (False Negative)
+8,"86, 120",Can you tell me a little about you,configuration
+13,"99, 101",me,participant-role
+14,"102, 120",a little about you,participant-role
+9,"125, 151",why you started this group,configuration
+15,"133, 140",started,main
+21,"165, 182",eating disordered,participant-role
+30,"237, 244",married,participant-role
+140,"348, 368",the ED and not by it,participant-role
+141,"370, 403",since just before we were married,configuration
+57,"388, 390",we,participant-role
+145,"396, 403",married,main
+68,"650, 666",3 1/2 hours away,participant-role
+117,"1114, 1126",terrified of,main
+130,"1210, 1229",much of my brothers,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+70,"70, 76",to say,main
+125,"125, 128",why,participant-role
+172,"172, 182",disordered,main
+153,"153, 171",I have been eating,configuration
+183,"183, 202",for about 23 years.,participant-role
+245,"245, 258",for 13 years.,participant-role
+306,"306, 323",till last summer.,participant-role
+475,"475, 499",from a stable 110 to 88.,participant-role
+565,"565, 582","an ""intervention""",participant-role
+597,"597, 612",into treatment.,participant-role
+670,"670, 673",had,main
+674,"674, 698",to leave my 6 young kids,participant-role
+674,"674, 698",to leave my 6 young kids,configuration
+840,"840, 852",me to leave.,configuration
+782,"782, 791",to change,main
+756,"756, 762",to say,main
+807,"807, 822",for 5 1/2 weeks,participant-role
+756,"756, 762",to say,configuration
+756,"756, 762",to say,participant-role
+843,"843, 851",to leave,main
+978,"978, 1007","as the ""enlightened anorexic""",participant-role
+1024,"1024, 1067",to give up the negative behaviours someday.,configuration
+1024,"1024, 1031",to give,main
+1127,"1127, 1137",being FAT!,configuration
+1114,"1114, 1123",terrified,participant-role
+1111,"1111, 1113",am,main
+1127,"1127, 1132",being,main
+1141,"1141, 1148",the way,participant-role
+17,"17, 62","Hi Alexandra 
+I am new to the group and just",participant-role
+37,"37, 40",new,participant-role
+17,"17, 85","Hi Alexandra 
+I am new to the group and just wanted to say ""hello"".",configuration
+278,"278, 286",anything,participant-role
+512,"512, 530",Last July my hubby,participant-role
+782,"782, 791",to change,configuration
+1035,"1035, 1058",the negative behaviours,participant-role
+1133,"1133, 1137",FAT!,participant-role

@@ -1,0 +1,172 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.6736111111111112
+,Recall,0.8660714285714286
+,F1,0.7578125
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+5,0.0,"59, 65","59, 65",0,things,things,participant-role,participant-role
+7,8.94427190999916,"73, 86","69, 78",11,going so well,n't going,main,main
+8,4.123105625617661,"59, 86","55, 87",5,things aren't going so well,and things aren't going so well.,configuration,configuration
+3,4.0,"36, 42","32, 42",4,posted,n't posted,main,main
+81,10.04987562112089,"26, 53","16, 54",11,I haven't posted in a while,"Hi Guys,
+I haven't posted in a while,",configuration,configuration
+1,3.0,"26, 27","23, 27",3,I,",
+I",participant-role,participant-role
+4,0.0,"103, 109","103, 109",0,purged,purged,main,main
+11,1.0,"96, 125","96, 126",1,I have purged twice this week,I have purged twice this week.,configuration,configuration
+9,0.0,"96, 97","96, 97",0,I,I,participant-role,participant-role
+13,0.0,"128, 129","128, 129",0,I,I,participant-role,participant-role
+82,1.0,"128, 158","128, 159",1,I haven't really binged though,I haven't really binged though.,configuration,configuration
+16,0.0,"161, 162","161, 162",0,I,I,participant-role,participant-role
+83,25.0,"161, 210","161, 185",25,I have just been feeling stressed out over school,I have just been feeling,configuration,configuration
+19,5.0,"178, 185","173, 185",5,feeling,been feeling,main,main
+20,13.038404810405298,"186, 210","199, 211",14,stressed out over school,over school.,participant-role,participant-role
+12,0.0,"221, 229","221, 229",0,my logic,my logic,participant-role,participant-role
+25,25.019992006393608,"233, 299","258, 300",26,"if I'm going to be stupid, I sure as hell don't want to be fat too",", I sure as hell don't want to be fat too.",participant-role,participant-role
+122,1.0,"221, 299","221, 300",1,"my logic is if I'm going to be stupid, I sure as hell don't want to be fat too","my logic is if I'm going to be stupid, I sure as hell don't want to be fat too.",configuration,configuration
+22,0.0,"215, 220","215, 220",0,guess,guess,main,main
+23,1.0,"221, 299","221, 300",1,"my logic is if I'm going to be stupid, I sure as hell don't want to be fat too","my logic is if I'm going to be stupid, I sure as hell don't want to be fat too.",participant-role,participant-role
+24,0.0,"230, 232","230, 232",0,is,is,main,main
+21,0.0,"213, 214","213, 214",0,I,I,participant-role,participant-role
+84,1.0,"213, 299","213, 300",1,"I guess my logic is if I'm going to be stupid, I sure as hell don't want to be fat too","I guess my logic is if I'm going to be stupid, I sure as hell don't want to be fat too.",configuration,configuration
+88,1.0,"302, 318","302, 319",1,Know what I mean,Know what I mean?,configuration,configuration
+34,0.0,"312, 313","312, 313",0,I,I,participant-role,participant-role
+33,5.0,"307, 311","302, 311",5,what,Know what,participant-role,participant-role
+35,0.0,"314, 318","314, 318",0,mean,mean,main,main
+29,1.0,"331, 332","330, 332",1,s,'s,main,main
+44,0.0,"364, 371","364, 371",0,logical,logical,participant-role,participant-role
+31,0.0,"328, 338","328, 338",0,it's crazy,it's crazy,configuration,configuration
+41,0.0,"353, 357","353, 357",0,this,this,participant-role,participant-role
+42,4.123105625617661,"344, 377","340, 378",5,at times this seems logical to me,but at times this seems logical to me.,configuration,configuration
+30,0.0,"333, 338","333, 338",0,crazy,crazy,participant-role,participant-role
+38,0.0,"328, 338","328, 338",0,it's crazy,it's crazy,participant-role,participant-role
+36,0.0,"321, 322","321, 322",0,I,I,participant-role,participant-role
+37,0.0,"323, 327","323, 327",0,know,know,main,main
+28,0.0,"328, 330","328, 330",0,it,it,participant-role,participant-role
+39,1.0,"321, 338","321, 339",1,I know it's crazy,"I know it's crazy,",configuration,configuration
+40,0.0,"358, 363","358, 363",0,seems,seems,main,main
+111,3.1622776601683795,"430, 439","427, 440",4,I am full,if I am full.,configuration,configuration
+85,0.0,"405, 406","405, 406",0,I,I,participant-role,participant-role
+45,0.0,"393, 394","393, 394",0,I,I,participant-role,participant-role
+46,5.0,"395, 404","395, 399",5,feel like,feel,main,main
+43,7.0710678118654755,"393, 439","400, 440",8,I feel like I can't be productive if I am full,like I can't be productive if I am full.,configuration,configuration
+108,0.0,"430, 431","430, 431",0,I,I,participant-role,participant-role
+110,1.0,"435, 439","435, 440",1,full,full.,participant-role,participant-role
+107,28.653097563788805,"405, 426","380, 440",39,I can't be productive,"Also, lately I feel like I can't be productive if I am full.",configuration,configuration
+106,0.0,"416, 426","416, 426",0,productive,productive,participant-role,participant-role
+87,4.0,"413, 415","409, 415",4,be,n't be,main,main
+112,36.0,"495, 545","531, 545",36,I couldn't work on my paper anymore until tomorrow,until tomorrow,participant-role,participant-role
+54,0.0,"558, 561","558, 561",0,was,was,main,main
+95,8.06225774829855,"585, 595","577, 596",9,I was full,because I was full.,configuration,configuration
+48,0.0,"453, 454","453, 454",0,I,I,participant-role,participant-role
+94,21.18962010041709,"552, 576","545, 596",27,today was already a flop,", that today was already a flop because I was full.",configuration,configuration
+93,51.24451190127583,"495, 545","490, 596",56,I couldn't work on my paper anymore until tomorrow,"that I couldn't work on my paper anymore until tomorrow, that today was already a flop because I was full.",configuration,configuration
+56,0.0,"585, 586","585, 586",0,I,I,participant-role,participant-role
+52,0.0,"514, 522","514, 522",0,my paper,my paper,participant-role,participant-role
+49,0.0,"455, 458","455, 458",0,was,was,main,main
+58,1.0,"591, 595","591, 596",1,full,full.,participant-role,participant-role
+113,64.81512169239521,"482, 545","442, 596",91,decided that I couldn't work on my paper anymore until tomorrow,"Like today I was a little full and then decided that I couldn't work on my paper anymore until tomorrow, that today was already a flop because I was full.",configuration,configuration
+57,0.0,"587, 590","587, 590",0,was,was,main,main
+90,0.0,"495, 496","495, 496",0,I,I,participant-role,participant-role
+55,0.0,"570, 576","570, 576",0,a flop,a flop,participant-role,participant-role
+53,0.0,"552, 557","552, 557",0,today,today,participant-role,participant-role
+92,5.0,"506, 513","502, 510",7,work on,n't work,main,main
+96,0.0,"614, 615","614, 615",0,I,I,participant-role,participant-role
+65,16.278820596099706,"707, 715","704, 731",19,my paper,on my paper for five hours.,participant-role,participant-role
+98,4.0,"625, 631","621, 631",4,afford,n't afford,main,main
+62,0.0,"679, 680","679, 680",0,I,I,participant-role,participant-role
+100,0.0,"679, 687","679, 687",0,I purged,I purged,configuration,configuration
+115,7.211102550927978,"604, 674","598, 678",10,I decided I couldn't afford to skip working on my paper this afternoon,"Then, I decided I couldn't afford to skip working on my paper this afternoon, so",configuration,configuration
+114,0.0,"614, 674","614, 674",0,I couldn't afford to skip working on my paper this afternoon,I couldn't afford to skip working on my paper this afternoon,participant-role,participant-role
+99,0.0,"614, 674","614, 674",0,I couldn't afford to skip working on my paper this afternoon,I couldn't afford to skip working on my paper this afternoon,configuration,configuration
+61,0.0,"632, 674","632, 674",0,to skip working on my paper this afternoon,to skip working on my paper this afternoon,participant-role,participant-role
+59,2.0,"604, 605","602, 605",2,I,", I",participant-role,participant-role
+64,3.0,"697, 706","697, 703",3,worked on,worked,main,main
+63,0.0,"681, 687","681, 687",0,purged,purged,main,main
+116,9.055385138137417,"697, 730","688, 731",10,worked on my paper for five hours,and then worked on my paper for five hours.,configuration,configuration
+60,0.0,"606, 613","606, 613",0,decided,decided,main,main
+120,1.0,"829, 838","829, 839",1,a failure,a failure.,participant-role,participant-role
+119,1.0,"819, 820","818, 820",1,m,'m,main,main
+105,8.06225774829855,"809, 838","801, 839",9,I think I'm already a failure,because I think I'm already a failure.,configuration,configuration
+118,0.0,"817, 818","817, 818",0,I,I,participant-role,participant-role
+69,0.0,"755, 756","755, 756",0,I,I,participant-role,participant-role
+104,67.42403132415029,"788, 800","733, 839",94,I do nothing,"Either I'm hungry and I work too much, or I'm full and I do nothing because I think I'm already a failure.",configuration,configuration
+76,0.0,"793, 800","793, 800",0,nothing,nothing,participant-role,participant-role
+79,1.0,"817, 838","817, 839",1,I'm already a failure,I'm already a failure.,participant-role,participant-role
+121,1.0,"817, 838","817, 839",1,I'm already a failure,I'm already a failure.,configuration,configuration
+77,0.0,"809, 810","809, 810",0,I,I,participant-role,participant-role
+71,0.0,"775, 776","775, 776",0,I,I,participant-role,participant-role
+67,0.0,"741, 743","741, 743",0,'m,'m,main,main
+74,0.0,"788, 789","788, 789",0,I,I,participant-role,participant-role
+78,0.0,"811, 816","811, 816",0,think,think,main,main
+66,0.0,"740, 741","740, 741",0,I,I,participant-role,participant-role
+50,124.32618388738553,"459, 472","468, 596",115,a little full,"full and then decided that I couldn't work on my paper anymore until tomorrow, that today was already a flop because I was full.",participant-role,participant-role
+73,56.0,"779, 783","779, 839",56,full,full and I do nothing because I think I'm already a failure.,participant-role,participant-role
+68,89.0,"744, 750","744, 839",89,hungry,"hungry and I work too much, or I'm full and I do nothing because I think I'm already a failure.",participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+15,"145, 151",binged,main
+32,"302, 306",Know,main
+26,"307, 318",what I mean,participant-role
+27,"307, 318",what I mean,configuration
+47,"405, 439",I can't be productive if I am full,participant-role
+89,"442, 472",Like today I was a little full,configuration
+51,"482, 489",decided,main
+101,"740, 750",I'm hungry,configuration
+102,"755, 770",I work too much,configuration
+70,"757, 761",work,main
+103,"775, 783",I'm full,configuration
+72,"777, 778",m,main
+75,"790, 792",do,main
+80,"841, 850",So stupid,configuration
+117,"841, 850",So stupid,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+43,"43, 53",in a while,participant-role
+16,"16, 18",Hi,main
+16,"16, 23",Hi Guys,participant-role
+16,"16, 23",Hi Guys,configuration
+19,"19, 23",Guys,participant-role
+134,"134, 137",n't,main
+186,"186, 211",stressed out over school.,configuration
+186,"186, 194",stressed,main
+246,"246, 251",to be,main
+240,"240, 245",going,main
+277,"277, 285",n't want,main
+292,"292, 300",fat too.,participant-role
+286,"286, 300",to be fat too.,configuration
+286,"286, 291",to be,main
+258,"258, 261",", I",participant-role
+286,"286, 300",to be fat too.,participant-role
+236,"236, 237",I,participant-role
+372,"372, 378",to me.,participant-role
+344,"344, 352",at times,participant-role
+432,"432, 434",am,main
+442,"442, 452",Like today,participant-role
+632,"632, 674",to skip working on my paper this afternoon,configuration
+632,"632, 639",to skip,main
+640,"640, 647",working,main
+660,"660, 674",this afternoon,participant-role
+648,"648, 659",on my paper,participant-role
+640,"640, 674",working on my paper this afternoon,participant-role
+762,"762, 770",too much,participant-role
+877,"877, 879",me,participant-role
+869,"869, 879",letting me,configuration
+880,"880, 884",rant,main
+856,"856, 879",", thanks for letting me",participant-role
+869,"869, 876",letting,main
+865,"865, 879",for letting me,participant-role
+852,"852, 885","Well, thanks for letting me rant.",configuration
+891,"891, 905",care everyone.,participant-role
+886,"886, 905",Take care everyone.,configuration
+886,"886, 890",Take,main
+258,"258, 300",", I sure as hell don't want to be fat too.",configuration
+270,"270, 274",hell,participant-role
+246,"246, 258",to be stupid,participant-role
+233,"233, 300","if I'm going to be stupid, I sure as hell don't want to be fat too.",configuration
+252,"252, 258",stupid,participant-role
+246,"246, 258",to be stupid,configuration
+490,"490, 596","that I couldn't work on my paper anymore until tomorrow, that today was already a flop because I was full.",participant-role
+545,"545, 596",", that today was already a flop because I was full.",participant-role
+640,"640, 674",working on my paper this afternoon,configuration

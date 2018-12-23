@@ -1,0 +1,537 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.25327510917030566
+,Recall,0.6304347826086957
+,F1,0.36137071651090336
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+2,0.0,"32, 34","32, 34",0,is,is,main,main
+11,0.0,"75, 80","75, 80",0,being,being,main,main
+6,0.0,"56, 61","56, 61",0,think,think,main,main
+13,1.0,"62, 111","62, 112",1,my spouse is being unfaithful to our relationship,my spouse is being unfaithful to our relationship.,relational,relational
+5,0.0,"54, 55","54, 55",0,I,I,cognizant,cognizant
+8,1.0,"54, 111","54, 112",1,I think my spouse is being unfaithful to our relationship,I think my spouse is being unfaithful to our relationship.,mental,mental
+8,1.0,"54, 111","54, 112",1,I think my spouse is being unfaithful to our relationship,I think my spouse is being unfaithful to our relationship.,two-role-cognition,two-role-cognition
+7,1.0,"62, 111","62, 112",1,my spouse is being unfaithful to our relationship,my spouse is being unfaithful to our relationship.,phenomenon,phenomenon
+18,0.0,"146, 147","146, 147",0,I,I,carrier,carrier
+15,0.0,"135, 137","135, 137",0,is,is,main,main
+187,55.10898293381942,"124, 134","113, 188",65,I say this,The reason I say this is because I had a hunch and read some of her emails.,mental,mental
+187,55.10898293381942,"124, 134","113, 188",65,I say this,The reason I say this is because I had a hunch and read some of her emails.,three-role-cognition,three-role-cognition
+19,0.0,"148, 151","148, 151",0,had,had,main,main
+20,0.0,"152, 159","152, 159",0,a hunch,a hunch,possessed,possessed
+16,16.0312195418814,"146, 187","130, 188",17,I had a hunch and read some of her emails,this is because I had a hunch and read some of her emails.,phenomenon,phenomenon
+22,0.0,"164, 168","164, 168",0,read,read,main,main
+185,0.0,"126, 129","126, 129",0,say,say,main,main
+23,14.0,"169, 187","169, 173",14,some of her emails,some,range,range
+184,11.0,"124, 125","113, 125",11,I,The reason I,agent,agent
+21,8.0,"146, 159","138, 159",8,I had a hunch,because I had a hunch,relational,relational
+21,8.0,"146, 159","138, 159",8,I had a hunch,because I had a hunch,possessive,possessive
+25,0.0,"203, 206","203, 206",0,she,she,agent,agent
+29,0.0,"189, 235","189, 235",0,In her emails she was talking with another man,In her emails she was talking with another man,action,action
+27,5.0,"211, 223","211, 218",5,talking with,talking,main,main
+28,5.0,"224, 235","219, 235",5,another man,with another man,affected,affected
+34,4.0,"240, 272","236, 272",4,they were using sexual innuendos,and they were using sexual innuendos,action,action
+40,0.0,"290, 297","290, 297",0,spelled,spelled,main,main
+30,0.0,"240, 244","240, 244",0,they,they,agent,agent
+32,0.0,"250, 255","250, 255",0,using,using,main,main
+36,4.0,"280, 284","276, 284",4,know,n't know,main,main
+48,0.0,"358, 361","358, 361",0,are,are,main,main
+45,11.0,"320, 331","320, 342",11,this person,this person about once,affected,affected
+43,0.0,"311, 314","311, 314",0,She,She,agent,agent
+47,0.0,"353, 357","353, 357",0,they,they,carrier,carrier
+44,0.0,"315, 319","315, 319",0,sees,sees,main,main
+72,1.0,"476, 478","476, 479",1,me,me.,affected,affected
+57,0.0,"405, 406","405, 406",0,I,I,agent,agent
+65,0.0,"447, 448","447, 448",0,I,I,agent,agent
+55,7.0,"405, 421","412, 421",7,I read her email,her email,phenomenon,phenomenon
+59,0.0,"412, 421","412, 421",0,her email,her email,range,range
+69,0.0,"460, 463","460, 463",0,she,she,agent,agent
+56,60.440052945046304,"388, 421","405, 479",58,I can't tell her I read her email,I read her email because if she found out I was spying she would leave me.,three-role-cognition,three-role-cognition
+51,0.0,"388, 389","388, 389",0,I,I,agent,agent
+68,0.0,"447, 459","447, 459",0,I was spying,I was spying,action,action
+61,0.0,"433, 436","433, 436",0,she,she,cognizant,cognizant
+64,3.0,"433, 459","430, 459",3,she found out I was spying,if she found out I was spying,mental,mental
+64,3.0,"433, 459","430, 459",3,she found out I was spying,if she found out I was spying,two-role-cognition,two-role-cognition
+62,4.0,"437, 446","437, 442",4,found out,found,main,main
+58,0.0,"407, 411","407, 411",0,read,read,main,main
+53,4.0,"396, 400","392, 400",4,tell,n't tell,main,main
+71,0.0,"470, 475","470, 475",0,leave,leave,main,main
+63,0.0,"447, 459","447, 459",0,I was spying,I was spying,phenomenon,phenomenon
+188,70.06425622241343,"500, 522","497, 592",73,something was going on,if something was going on being very selective about how so that she wouldn't suspect anything.,action,action
+182,5.0,"510, 522","514, 519",7,was going on,going,main,main
+76,0.0,"487, 492","487, 492",0,asked,asked,main,main
+74,0.0,"480, 481","480, 481",0,I,I,agent,agent
+85,4.0,"575, 582","571, 582",4,suspect,n't suspect,main,main
+77,0.0,"493, 496","493, 496",0,her,her,affected-cognizant,affected-cognizant
+86,1.0,"583, 591","583, 592",1,anything,anything.,phenomenon,phenomenon
+79,70.0,"480, 522","480, 592",70,I have asked her if something was going on,I have asked her if something was going on being very selective about how so that she wouldn't suspect anything.,mental,mental
+79,70.0,"480, 522","480, 592",70,I have asked her if something was going on,I have asked her if something was going on being very selective about how so that she wouldn't suspect anything.,three-role-cognition,three-role-cognition
+93,0.0,"642, 649","642, 649",0,started,started,main,main
+94,18.788294228055936,"625, 661","617, 678",25,our relationship started 5 years ago,because our relationship started 5 years ago when she cheated,action,action
+89,5.0,"595, 604","595, 599",5,feel like,feel,main,main
+90,5.0,"605, 616","600, 616",5,such a fool,like such a fool,attribute,attribute
+96,3.0,"671, 681","671, 678",3,cheated on,cheated,main,main
+91,81.0,"593, 616","593, 697",81,I feel like such a fool,I feel like such a fool because our relationship started 5 years ago when she cheated on her ex with me.,attributive,attributive
+91,81.0,"593, 616","593, 697",81,I feel like such a fool,I feel like such a fool because our relationship started 5 years ago when she cheated on her ex with me.,relational,relational
+88,0.0,"593, 594","593, 594",0,I,I,carrier,carrier
+92,0.0,"625, 641","625, 641",0,our relationship,our relationship,created-phenomenon,created-phenomenon
+101,5.0,"712, 717","707, 717",5,known,have known,main,main
+107,0.0,"756, 761","756, 761",0,chose,chose,main,main
+112,8.06225774829855,"800, 850","808, 851",9,"we have a child whom we both love very, very, much","a child whom we both love very, very, much.",created-phenomenon,created-phenomenon
+116,1.0,"808, 850","808, 851",1,"a child whom we both love very, very, much","a child whom we both love very, very, much.",possessed,possessed
+117,5.0990195135927845,"800, 850","795, 851",6,"we have a child whom we both love very, very, much","that we have a child whom we both love very, very, much.",relational,relational
+117,5.0990195135927845,"800, 850","795, 851",6,"we have a child whom we both love very, very, much","that we have a child whom we both love very, very, much.",possessive,possessive
+111,0.0,"792, 794","792, 794",0,is,is,main,main
+115,0.0,"803, 807","803, 807",0,have,have,main,main
+114,0.0,"800, 802","800, 802",0,we,we,carrier,carrier
+125,0.0,"875, 878","875, 878",0,she,she,agent,agent
+124,25.079872407968907,"852, 908","875, 898",33,I am afraid if I leave she will take our child and leave,she will take our child,mental,mental
+130,0.0,"903, 908","903, 908",0,leave,leave,main,main
+131,4.123105625617661,"903, 908","899, 909",5,leave,and leave.,action,action
+122,0.0,"869, 874","869, 874",0,leave,leave,main,main
+120,17.204650534085253,"875, 908","889, 898",24,she will take our child and leave,our child,phenomenon,phenomenon
+128,0.0,"889, 898","889, 898",0,our child,our child,affected,affected
+127,0.0,"884, 888","884, 888",0,take,take,main,main
+151,17.69180601295413,"978, 1014","991, 1026",25,she may know I am reading her emails,I am reading her emails because she,mental,mental
+141,7.0,"944, 955","944, 948",7,what I know,what,phenomenon,phenomenon
+142,17.0,"927, 955","944, 955",17,I can't tell her what I know,what I know,mental,mental
+149,0.0,"986, 990","986, 990",0,know,know,main,main
+146,13.416407864998739,"970, 1014","964, 1026",18,I think she may know I am reading her emails,a way I think she may know I am reading her emails because she,mental,mental
+146,13.416407864998739,"970, 1014","964, 1026",18,I think she may know I am reading her emails,a way I think she may know I am reading her emails because she,two-role-cognition,two-role-cognition
+156,4.123105625617661,"1023, 1077","1027, 1078",5,she and this gentleman have stopped speaking via email,and this gentleman have stopped speaking via email.,influential,influential
+154,0.0,"1051, 1058","1051, 1058",0,stopped,stopped,main,main
+139,4.0,"935, 939","931, 939",4,tell,n't tell,main,main
+133,0.0,"913, 918","913, 918",0,kills,kills,main,main
+155,1.0,"1059, 1077","1059, 1078",1,speaking via email,speaking via email.,phenomenon,phenomenon
+137,0.0,"927, 928","927, 928",0,I,I,agent,agent
+147,0.0,"978, 981","978, 981",0,she,she,cognizant,cognizant
+143,0.0,"970, 971","970, 971",0,I,I,cognizant,cognizant
+135,5.0,"927, 955","922, 955",5,I can't tell her what I know,that I can't tell her what I know,phenomenon,phenomenon
+150,12.0,"991, 1014","991, 1026",12,I am reading her emails,I am reading her emails because she,phenomenon,phenomenon
+144,0.0,"972, 977","972, 977",0,think,think,main,main
+152,8.0,"1023, 1045","1031, 1045",8,she and this gentleman,this gentleman,agent,agent
+145,12.0,"978, 1014","978, 1026",12,she may know I am reading her emails,she may know I am reading her emails because she,phenomenon,phenomenon
+159,0.0,"1102, 1118","1102, 1118",0,be communicating,be communicating,main,main
+162,7.0,"1140, 1151","1140, 1144",7,play soccer,play,main,main
+180,29.732137494637012,"1240, 1252","1218, 1272",42,I will leave,"but if she's cheating I will leave, no second chances.",action,action
+176,3.0,"1225, 1239","1222, 1239",3,she's cheating,if she's cheating,action,action
+173,0.0,"1225, 1228","1225, 1228",0,she,she,agent,agent
+177,0.0,"1240, 1241","1240, 1241",0,I,I,agent,agent
+179,0.0,"1247, 1252","1247, 1252",0,leave,leave,main,main
+170,4.0,"1181, 1185","1177, 1185",4,want,n't want,main,main
+175,0.0,"1231, 1239","1231, 1239",0,cheating,cheating,main,main
+56,60.440052945046304,"388, 421","405, 479",58,I can't tell her I read her email,I read her email because if she found out I was spying she would leave me.,mental,mental
+,
+,Manual mismatching all parsed (False Negative)
+4,"27, 52",this is really hard to do,relational
+4,"27, 52",this is really hard to do,attributive
+1,"27, 31",this,carrier
+3,"42, 52",hard to do,attribute
+13,"62, 111",my spouse is being unfaithful to our relationship,attributive
+9,"62, 71",my spouse,carrier
+12,"81, 111",unfaithful to our relationship,attribute
+17,"113, 187",The reason I say this is because I had a hunch and read some of her emails,event-relating
+14,"113, 134",The reason I say this,carrier
+186,"130, 134",this,phenomenon
+24,"164, 187",read some of her emails,action
+33,"256, 272",sexual innuendos,range
+38,"274, 306",don't know if I spelled it right,mental
+38,"274, 306",don't know if I spelled it right,two-role-cognition
+42,"288, 306",I spelled it right,action
+37,"288, 306",I spelled it right,phenomenon
+39,"288, 289",I,agent
+41,"298, 300",it,range
+46,"311, 349",She sees this person about once a week,action
+50,"353, 386",they are on a similar sports team,relational
+50,"353, 386",they are on a similar sports team,attributive
+49,"362, 386",on a similar sports team,attribute
+54,"401, 404",her,affected-cognizant
+60,"405, 421",I read her email,action
+67,"453, 459",spying,main
+73,"460, 478",she would leave me,action
+78,"500, 522",something was going on,phenomenon
+181,"500, 509",something,agent
+87,"562, 591",she wouldn't suspect anything,mental
+87,"562, 591",she wouldn't suspect anything,two-role-cognition
+83,"562, 565",she,cognizant
+98,"667, 696",she cheated on her ex with me,action
+95,"667, 670",she,agent
+97,"682, 688",her ex,affected
+102,"698, 722",I should have known then,mental
+102,"698, 722",I should have known then,two-role-cognition
+99,"698, 699",I,cognizant
+106,"728, 751",I was much younger then,relational
+106,"728, 751",I was much younger then,attributive
+103,"728, 729",I,carrier
+104,"730, 733",was,main
+105,"734, 746",much younger,attribute
+109,"756, 774",chose to ignore it,influential
+108,"762, 774",to ignore it,phenomenon
+113,"776, 850","The problem now is that we have a child whom we both love very, very, much",event-relating
+110,"776, 787",The problem,carrier
+118,"852, 853",I,emoter
+119,"857, 863",afraid,main
+123,"867, 874",I leave,action
+121,"867, 868",I,agent
+129,"875, 898",she will take our child,action
+136,"910, 955",It kills me that I can't tell her what I know,mental
+134,"919, 921",me,emoter
+142,"927, 955",I can't tell her what I know,three-role-cognition
+140,"940, 943",her,affected-cognizant
+151,"978, 1014",she may know I am reading her emails,two-role-cognition
+160,"1087, 1118",they may still be communicating,action
+157,"1087, 1091",they,agent
+163,"1135, 1151",they play soccer,action
+161,"1135, 1139",they,agent
+167,"1153, 1171",I am very confused,relational
+167,"1153, 1171",I am very confused,attributive
+164,"1153, 1154",I,carrier
+165,"1155, 1157",am,main
+166,"1158, 1171",very confused,attribute
+172,"1173, 1217",I don't want to loose my wife or my daughter,mental
+168,"1173, 1174",I,emoter
+171,"1186, 1217",to loose my wife or my daughter,phenomenon
+,
+,Parsed mismatching all manual (False Positives)
+47,"47, 52",to do,main
+62,"62, 112",my spouse is being unfaithful to our relationship.,process
+62,"62, 112",my spouse is being unfaithful to our relationship.,directional
+54,"54, 55",I,agent
+54,"54, 55",I,agent-cognizant
+54,"54, 55",I,affected-cognizant
+54,"54, 55",I,affected
+92,"92, 112",to our relationship.,destination
+92,"92, 112",to our relationship.,affected-destination
+54,"54, 112",I think my spouse is being unfaithful to our relationship.,process
+62,"62, 71",my spouse,agent
+62,"62, 71",my spouse,agent-perceiver
+62,"62, 71",my spouse,perceiver
+62,"62, 112",my spouse is being unfaithful to our relationship.,created-phenomenon
+81,"81, 91",unfaithful,destination
+81,"81, 91",unfaithful,affected-destination
+146,"146, 147",I,agent
+146,"146, 147",I,agent-cognizant
+146,"146, 147",I,affected-carrier
+146,"146, 147",I,affected
+146,"146, 147",I,agent-carrier
+146,"146, 147",I,agent-perceiver
+146,"146, 147",I,perceiver
+174,"174, 188",of her emails.,affected-carrier
+174,"174, 188",of her emails.,affected
+174,"174, 188",of her emails.,carrier
+113,"113, 188",The reason I say this is because I had a hunch and read some of her emails.,process
+113,"113, 188",The reason I say this is because I had a hunch and read some of her emails.,two-role-cognition
+113,"113, 188",The reason I say this is because I had a hunch and read some of her emails.,two-role-perception
+160,"160, 188",and read some of her emails.,process
+160,"160, 188",and read some of her emails.,mental
+160,"160, 188",and read some of her emails.,three-role-cognition
+160,"160, 188",and read some of her emails.,two-role-action
+152,"152, 159",a hunch,affected-emoter
+152,"152, 159",a hunch,created-phenomenon
+152,"152, 159",a hunch,affected-path
+152,"152, 159",a hunch,affected-perceiver
+152,"152, 159",a hunch,affected-cognizant
+152,"152, 159",a hunch,affected-carrier
+152,"152, 159",a hunch,affected-destination
+152,"152, 159",a hunch,affected
+152,"152, 159",a hunch,affected-possessed
+152,"152, 159",a hunch,affected-source
+152,"152, 159",a hunch,created
+130,"130, 188",this is because I had a hunch and read some of her emails.,created-phenomenon
+169,"169, 173",some,phenomenon
+169,"169, 173",some,created-phenomenon
+113,"113, 125",The reason I,cognizant
+113,"113, 125",The reason I,agent-cognizant
+113,"113, 125",The reason I,affected-cognizant
+113,"113, 125",The reason I,agent-carrier
+113,"113, 125",The reason I,agent-perceiver
+113,"113, 125",The reason I,perceiver
+138,"138, 159",because I had a hunch,process
+138,"138, 159",because I had a hunch,causative
+138,"138, 159",because I had a hunch,two-role-action
+138,"138, 159",because I had a hunch,action
+203,"203, 206",she,agent-cognizant
+203,"203, 206",she,agent-carrier
+203,"203, 206",she,agent-perceiver
+192,"192, 202",her emails,affected-emoter
+192,"192, 202",her emails,affected-path
+192,"192, 202",her emails,affected-perceiver
+192,"192, 202",her emails,affected-cognizant
+192,"192, 202",her emails,affected-carrier
+192,"192, 202",her emails,affected-destination
+192,"192, 202",her emails,affected
+192,"192, 202",her emails,affected-possessed
+192,"192, 202",her emails,affected-source
+189,"189, 235",In her emails she was talking with another man,process
+189,"189, 235",In her emails she was talking with another man,two-role-action
+219,"219, 235",with another man,affected-emoter
+219,"219, 235",with another man,affected-path
+219,"219, 235",with another man,affected-perceiver
+219,"219, 235",with another man,affected-cognizant
+219,"219, 235",with another man,affected-carrier
+219,"219, 235",with another man,affected-destination
+219,"219, 235",with another man,affected-possessed
+219,"219, 235",with another man,affected-source
+236,"236, 272",and they were using sexual innuendos,process
+236,"236, 272",and they were using sexual innuendos,two-role-action
+240,"240, 244",they,agent-cognizant
+240,"240, 244",they,agent-carrier
+240,"240, 244",they,agent-perceiver
+256,"256, 272",sexual innuendos,affected-emoter
+256,"256, 272",sexual innuendos,affected-path
+256,"256, 272",sexual innuendos,affected-perceiver
+256,"256, 272",sexual innuendos,affected-cognizant
+256,"256, 272",sexual innuendos,affected-carrier
+256,"256, 272",sexual innuendos,affected-destination
+256,"256, 272",sexual innuendos,affected
+256,"256, 272",sexual innuendos,affected-possessed
+256,"256, 272",sexual innuendos,affected-source
+320,"320, 342",this person about once,phenomenon
+320,"320, 342",this person about once,affected-emoter
+320,"320, 342",this person about once,created-phenomenon
+320,"320, 342",this person about once,affected-path
+320,"320, 342",this person about once,affected-perceiver
+320,"320, 342",this person about once,affected-cognizant
+320,"320, 342",this person about once,affected-carrier
+320,"320, 342",this person about once,affected-destination
+320,"320, 342",this person about once,affected-possessed
+320,"320, 342",this person about once,affected-source
+320,"320, 342",this person about once,created
+311,"311, 387",She sees this person about once a week as they are on a similar sports team.,process
+311,"311, 387",She sees this person about once a week as they are on a similar sports team.,causative
+311,"311, 387",She sees this person about once a week as they are on a similar sports team.,two-role-action
+311,"311, 387",She sees this person about once a week as they are on a similar sports team.,influential
+311,"311, 314",She,agent-cognizant
+311,"311, 314",She,agent-carrier
+311,"311, 314",She,agent-perceiver
+353,"353, 357",they,affected-carrier
+353,"353, 357",they,agent-carrier
+350,"350, 387",as they are on a similar sports team.,process
+350,"350, 387",as they are on a similar sports team.,locational
+350,"350, 387",as they are on a similar sports team.,action
+350,"350, 387",as they are on a similar sports team.,one-role-action
+362,"362, 387",on a similar sports team.,location
+476,"476, 479",me.,affected-emoter
+476,"476, 479",me.,affected-path
+476,"476, 479",me.,affected-perceiver
+476,"476, 479",me.,source
+476,"476, 479",me.,location
+476,"476, 479",me.,affected-cognizant
+476,"476, 479",me.,affected-carrier
+476,"476, 479",me.,affected-destination
+476,"476, 479",me.,affected-possessed
+476,"476, 479",me.,affected-source
+449,"449, 452",was,main
+405,"405, 406",I,agent-cognizant
+405,"405, 406",I,agent-carrier
+405,"405, 406",I,agent-perceiver
+405,"405, 406",I,perceiver
+447,"447, 448",I,agent-cognizant
+447,"447, 448",I,affected-carrier
+447,"447, 448",I,affected
+447,"447, 448",I,agent-carrier
+447,"447, 448",I,agent-perceiver
+447,"447, 448",I,carrier
+447,"447, 448",I,perceiver
+412,"412, 421",her email,created-phenomenon
+460,"460, 463",she,agent-cognizant
+460,"460, 463",she,agent-carrier
+460,"460, 463",she,agent-perceiver
+460,"460, 463",she,perceiver
+401,"401, 404",her,phenomenon
+401,"401, 404",her,created-phenomenon
+405,"405, 479",I read her email because if she found out I was spying she would leave me.,process
+405,"405, 479",I read her email because if she found out I was spying she would leave me.,two-role-perception
+405,"405, 479",I read her email because if she found out I was spying she would leave me.,two-role-action
+388,"388, 389",I,agent-perceiver
+388,"388, 389",I,perceiver
+447,"447, 459",I was spying,process
+447,"447, 459",I was spying,attributive
+447,"447, 459",I was spying,locational
+447,"447, 459",I was spying,relational
+447,"447, 459",I was spying,two-role-action
+433,"433, 436",she,agent-cognizant
+433,"433, 436",she,affected-cognizant
+430,"430, 459",if she found out I was spying,process
+453,"453, 459",spying,attribute
+453,"453, 459",spying,location
+453,"453, 459",spying,range
+447,"447, 459",I was spying,created-phenomenon
+497,"497, 592",if something was going on being very selective about how so that she wouldn't suspect anything.,process
+497,"497, 592",if something was going on being very selective about how so that she wouldn't suspect anything.,one-role-action
+523,"523, 553",being very selective about how,process
+523,"523, 553",being very selective about how,attributive
+523,"523, 553",being very selective about how,directional
+523,"523, 553",being very selective about how,relational
+562,"562, 565",she,affected-perceiver
+562,"562, 565",she,agent-perceiver
+562,"562, 565",she,perceiver
+480,"480, 481",I,agent-cognizant
+480,"480, 481",I,agent-carrier
+480,"480, 481",I,agent-perceiver
+493,"493, 496",her,phenomenon
+493,"493, 496",her,created-phenomenon
+493,"493, 496",her,cognizant
+493,"493, 496",her,affected
+500,"500, 509",something,affected-emoter
+500,"500, 509",something,affected-path
+500,"500, 509",something,affected-perceiver
+500,"500, 509",something,affected-cognizant
+500,"500, 509",something,affected-carrier
+500,"500, 509",something,affected-destination
+500,"500, 509",something,affected
+500,"500, 509",something,agent-carrier
+500,"500, 509",something,affected-possessed
+500,"500, 509",something,affected-source
+500,"500, 509",something,carrier
+583,"583, 592",anything.,created-phenomenon
+480,"480, 592",I have asked her if something was going on being very selective about how so that she wouldn't suspect anything.,process
+529,"529, 543",very selective,attribute
+529,"529, 543",very selective,affected-path
+529,"529, 543",very selective,path
+523,"523, 528",being,main
+617,"617, 678",because our relationship started 5 years ago when she cheated,process
+617,"617, 678",because our relationship started 5 years ago when she cheated,one-role-action
+593,"593, 697",I feel like such a fool because our relationship started 5 years ago when she cheated on her ex with me.,process
+593,"593, 594",I,affected-carrier
+593,"593, 594",I,agent-carrier
+625,"625, 641",our relationship,created
+772,"772, 775",it.,affected-emoter
+772,"772, 775",it.,affected-path
+772,"772, 775",it.,affected-perceiver
+772,"772, 775",it.,affected-cognizant
+772,"772, 775",it.,affected-carrier
+772,"772, 775",it.,affected-destination
+772,"772, 775",it.,affected
+772,"772, 775",it.,affected-possessed
+772,"772, 775",it.,affected-source
+762,"762, 775",to ignore it.,process
+762,"762, 775",to ignore it.,two-role-action
+762,"762, 775",to ignore it.,action
+739,"739, 746",younger,main
+762,"762, 771",to ignore,main
+808,"808, 851","a child whom we both love very, very, much.",phenomenon
+808,"808, 851","a child whom we both love very, very, much.",affected-emoter
+808,"808, 851","a child whom we both love very, very, much.",affected-path
+808,"808, 851","a child whom we both love very, very, much.",affected-perceiver
+808,"808, 851","a child whom we both love very, very, much.",affected-cognizant
+808,"808, 851","a child whom we both love very, very, much.",affected-carrier
+808,"808, 851","a child whom we both love very, very, much.",affected-destination
+808,"808, 851","a child whom we both love very, very, much.",affected
+808,"808, 851","a child whom we both love very, very, much.",affected-possessed
+808,"808, 851","a child whom we both love very, very, much.",affected-source
+808,"808, 851","a child whom we both love very, very, much.",created
+795,"795, 851","that we have a child whom we both love very, very, much.",process
+795,"795, 851","that we have a child whom we both love very, very, much.",causative
+795,"795, 851","that we have a child whom we both love very, very, much.",two-role-action
+795,"795, 851","that we have a child whom we both love very, very, much.",action
+800,"800, 802",we,agent
+800,"800, 802",we,agent-cognizant
+800,"800, 802",we,affected-carrier
+800,"800, 802",we,affected
+800,"800, 802",we,agent-carrier
+800,"800, 802",we,agent-perceiver
+800,"800, 802",we,perceiver
+829,"829, 833",love,main
+875,"875, 878",she,affected-emoter
+875,"875, 878",she,cognizant
+875,"875, 878",she,agent-cognizant
+875,"875, 878",she,affected-carrier
+875,"875, 878",she,agent-carrier
+875,"875, 878",she,agent-perceiver
+875,"875, 878",she,emoter
+875,"875, 878",she,carrier
+875,"875, 878",she,perceiver
+875,"875, 898",she will take our child,process
+875,"875, 898",she will take our child,locational
+875,"875, 898",she will take our child,possessive
+875,"875, 898",she will take our child,two-role-cognition
+875,"875, 898",she will take our child,two-role-perception
+875,"875, 898",she will take our child,emotive
+875,"875, 898",she will take our child,two-role-action
+854,"854, 856",am,main
+899,"899, 909",and leave.,process
+899,"899, 909",and leave.,locational
+899,"899, 909",and leave.,directional
+899,"899, 909",and leave.,two-role-action
+889,"889, 898",our child,affected-emoter
+889,"889, 898",our child,created-phenomenon
+889,"889, 898",our child,affected-path
+889,"889, 898",our child,affected-perceiver
+889,"889, 898",our child,location
+889,"889, 898",our child,affected-cognizant
+889,"889, 898",our child,affected-carrier
+889,"889, 898",our child,affected-destination
+889,"889, 898",our child,affected-possessed
+889,"889, 898",our child,affected-source
+889,"889, 898",our child,possessed
+889,"889, 898",our child,range
+949,"949, 950",I,cognizant
+949,"949, 950",I,agent-cognizant
+949,"949, 950",I,affected-cognizant
+991,"991, 1026",I am reading her emails because she,process
+991,"991, 1026",I am reading her emails because she,two-role-perception
+991,"991, 1026",I am reading her emails because she,three-role-cognition
+991,"991, 1026",I am reading her emails because she,two-role-action
+944,"944, 948",what,created-phenomenon
+944,"944, 955",what I know,process
+944,"944, 955",what I know,two-role-cognition
+910,"910, 956","It kills me that I can't tell her what I know,",process
+910,"910, 956","It kills me that I can't tell her what I know,",ceasing
+910,"910, 956","It kills me that I can't tell her what I know,",influential
+940,"940, 943",her,created-phenomenon
+991,"991, 992",I,agent
+991,"991, 992",I,agent-cognizant
+991,"991, 992",I,agent-carrier
+991,"991, 992",I,agent-perceiver
+991,"991, 992",I,perceiver
+964,"964, 969",a way,phenomenon
+964,"964, 969",a way,created-phenomenon
+964,"964, 1026",a way I think she may know I am reading her emails because she,process
+1004,"1004, 1014",her emails,created-phenomenon
+1004,"1004, 1014",her emails,range
+1027,"1027, 1078",and this gentleman have stopped speaking via email.,process
+1027,"1027, 1078",and this gentleman have stopped speaking via email.,preventive
+1059,"1059, 1067",speaking,main
+1059,"1059, 1078",speaking via email.,created-phenomenon
+1059,"1059, 1078",speaking via email.,created
+1015,"1015, 1026",because she,affected-carrier
+1015,"1015, 1026",because she,affected
+1015,"1015, 1026",because she,carrier
+927,"927, 928",I,agent-perceiver
+927,"927, 928",I,perceiver
+919,"919, 921",me,agent
+919,"919, 921",me,agent-cognizant
+919,"919, 921",me,agent-carrier
+919,"919, 921",me,agent-perceiver
+978,"978, 981",she,agent-cognizant
+978,"978, 981",she,affected-cognizant
+970,"970, 971",I,agent
+970,"970, 971",I,agent-cognizant
+970,"970, 971",I,affected-cognizant
+970,"970, 971",I,affected
+922,"922, 955",that I can't tell her what I know,created-phenomenon
+991,"991, 1026",I am reading her emails because she,created-phenomenon
+1031,"1031, 1045",this gentleman,agent-cognizant
+1031,"1031, 1045",this gentleman,agent-carrier
+1031,"1031, 1045",this gentleman,agent-perceiver
+1059,"1059, 1078",speaking via email.,process
+1059,"1059, 1078",speaking via email.,action
+1059,"1059, 1078",speaking via email.,one-role-action
+951,"951, 955",know,main
+978,"978, 1026",she may know I am reading her emails because she,created-phenomenon
+996,"996, 1003",reading,main
+1163,"1163, 1171",confused,main
+1218,"1218, 1272","but if she's cheating I will leave, no second chances.",process
+1218,"1218, 1272","but if she's cheating I will leave, no second chances.",one-role-action
+1222,"1222, 1239",if she's cheating,process
+1222,"1222, 1239",if she's cheating,one-role-action
+1225,"1225, 1228",she,agent-cognizant
+1225,"1225, 1228",she,agent-carrier
+1225,"1225, 1228",she,agent-perceiver
+1240,"1240, 1241",I,agent-cognizant
+1240,"1240, 1241",I,agent-carrier
+1240,"1240, 1241",I,agent-perceiver
+152,"152, 159",a hunch,phenomenon
+940,"940, 943",her,phenomenon
+1004,"1004, 1014",her emails,phenomenon

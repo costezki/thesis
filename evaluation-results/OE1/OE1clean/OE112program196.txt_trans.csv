@@ -1,0 +1,479 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.17675544794188863
+,Recall,0.5703125
+,F1,0.2698706099815157
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+7,0.0,"72, 77","72, 77",0,doing,doing,main,main
+10,0.0,"87, 92","87, 92",0,gives,gives,main,main
+15,0.0,"112, 114","112, 114",0,do,do,main,main
+13,0.0,"106, 107","106, 107",0,I,I,agent,agent
+16,1.0,"115, 123","115, 124",1,the same,the same.,range,range
+21,4.123105625617661,"211, 223","207, 224",5,it went well,and it went well.,action,action
+17,0.0,"125, 126","125, 126",0,I,I,agent,agent
+24,0.0,"211, 213","211, 213",0,it,it,agent,agent
+25,0.0,"214, 218","214, 218",0,went,went,main,main
+20,40.049968789001575,"165, 204","125, 206",42,first individual session I've ever done,I actually met with a therapist today ( first individual session I've ever done ),relational,relational
+18,5.0,"136, 144","136, 139",5,met with,met,main,main
+126,0.0,"200, 204","200, 204",0,done,done,main,main
+19,50.24937810560445,"145, 156","140, 206",55,a therapist,with a therapist today ( first individual session I've ever done ),affected,affected
+22,12.041594578792296,"225, 275","237, 276",13,She's going to try to get me into the program ASAP,to try to get me into the program ASAP.,influential,influential
+31,1.0,"244, 275","244, 276",1,to get me into the program ASAP,to get me into the program ASAP.,phenomenon,phenomenon
+30,3.0,"240, 243","237, 243",3,try,to try,main,main
+23,6.0,"328, 331","322, 331",6,had,never had,main,main
+34,0.0,"320, 321","320, 321",0,I,I,perceiver,perceiver
+103,0.0,"312, 314","312, 314",0,is,is,main,main
+36,1.0,"332, 349","332, 350",1,any physical pain,any physical pain.,phenomenon,phenomenon
+37,0.0,"351, 359","351, 359",0,The food,The food,agent,agent
+32,1.0,"351, 405","351, 406",1,The food just comes up smoothly without any hesitation,The food just comes up smoothly without any hesitation.,action,action
+38,3.0,"365, 373","365, 370",3,comes up,comes,main,main
+45,0.0,"513, 515","513, 515",0,is,is,main,main
+107,12.0,"472, 488","472, 476",12,have or have had,have,main,main
+41,0.0,"409, 411","409, 411",0,go,go,main,main
+42,0.0,"412, 426","412, 426",0,to Men's group,to Men's group,destination,destination
+92,30.01666203960727,"507, 550","477, 551",31,which is at the University of Iowa Hospital,"or have had eating disorders, which is at the University of Iowa Hospital.",relational,relational
+109,46.87216658103186,"468, 505","477, 551",55,who have or have had eating disorders,"or have had eating disorders, which is at the University of Iowa Hospital.",possessive,possessive
+108,46.0,"489, 505","489, 551",46,eating disorders,"eating disorders, which is at the University of Iowa Hospital.",possessed,possessed
+33,0.0,"407, 439","407, 439",0,I go to Men's group every Friday,I go to Men's group every Friday,directional,directional
+33,0.0,"407, 439","407, 439",0,I go to Men's group every Friday,I go to Men's group every Friday,relational,relational
+35,46.04345773288535,"441, 505","439, 551",48,which is open to all males who have or have had eating disorders,", which is open to all males who have or have had eating disorders, which is at the University of Iowa Hospital.",relational,relational
+43,0.0,"447, 449","447, 449",0,is,is,main,main
+40,0.0,"407, 408","407, 408",0,I,I,carrier,carrier
+93,1.0,"552, 564","552, 565",1,It's awesome,It's awesome.,attributive,attributive
+93,1.0,"552, 564","552, 565",1,It's awesome,It's awesome.,relational,relational
+48,1.0,"555, 556","554, 556",1,s,'s,main,main
+47,0.0,"552, 554","552, 554",0,It,It,carrier,carrier
+49,1.0,"557, 564","557, 565",1,awesome,awesome.,attribute,attribute
+94,3.0,"569, 592","566, 592",3,you're ever in the area,If you're ever in the area,locational,locational
+94,3.0,"569, 592","566, 592",3,you're ever in the area,If you're ever in the area,relational,relational
+111,0.0,"594, 598","594, 598",0,join,join,main,main
+112,1.0,"599, 601","599, 602",1,us,us!,affected,affected
+52,0.0,"581, 592","581, 592",0,in the area,in the area,location,location
+51,1.0,"573, 575","572, 575",1,re,'re,main,main
+50,0.0,"569, 572","569, 572",0,you,you,carrier,carrier
+115,0.0,"632, 634","632, 634",0,is,is,main,main
+116,1.0,"635, 699","635, 700",1,an absolute genius on the subject of males with eating disorders,an absolute genius on the subject of males with eating disorders.,attribute,attribute
+56,69.05070600652827,"616, 699","628, 631",80,Dr Anderson who is an absolute genius on the subject of males with eating disorders,who,agent,agent
+114,0.0,"628, 631","628, 631",0,who,who,carrier,carrier
+117,1.0,"628, 699","628, 700",1,who is an absolute genius on the subject of males with eating disorders,who is an absolute genius on the subject of males with eating disorders.,attributive,attributive
+117,1.0,"628, 699","628, 700",1,who is an absolute genius on the subject of males with eating disorders,who is an absolute genius on the subject of males with eating disorders.,relational,relational
+57,0.0,"701, 703","701, 703",0,He,He,agent,agent
+59,0.0,"708, 715","708, 715",0,telling,telling,main,main
+119,0.0,"751, 759","751, 759",0,involves,involves,main,main
+61,1.0,"719, 796","719, 797",1,about a surgical procedure that involves putting a wrap ring around the valve,about a surgical procedure that involves putting a wrap ring around the valve.,phenomenon,phenomenon
+60,0.0,"716, 718","716, 718",0,me,me,affected-cognizant,affected-cognizant
+69,1.0,"701, 796","701, 797",1,He was telling me about a surgical procedure that involves putting a wrap ring around the valve,He was telling me about a surgical procedure that involves putting a wrap ring around the valve.,mental,mental
+69,1.0,"701, 796","701, 797",1,He was telling me about a surgical procedure that involves putting a wrap ring around the valve,He was telling me about a surgical procedure that involves putting a wrap ring around the valve.,three-role-cognition,three-role-cognition
+120,18.788294228055936,"760, 796","768, 779",25,putting a wrap ring around the valve,a wrap ring,phenomenon,phenomenon
+64,0.0,"803, 809","803, 809",0,called,called,main,main
+100,3.0,"862, 866","859, 866",3,make,to make,main,main
+74,3.0,"913, 921","913, 918",3,heard of,heard,main,main
+82,4.0,"975, 982","971, 982",4,conquer,n't conquer,main,main
+80,0.0,"967, 968","967, 968",0,I,I,agent,agent
+83,0.0,"983, 985","983, 985",0,it,it,affected,affected
+79,0.0,"948, 963","948, 963",0,the last resort,the last resort,attribute,attribute
+78,0.0,"945, 947","945, 947",0,be,be,main,main
+76,0.0,"926, 930","926, 930",0,This,This,carrier,carrier
+97,39.0,"926, 963","926, 1002",39,This will probably be the last resort,This will probably be the last resort if I can't conquer it through therapy.,attributive,attributive
+97,39.0,"926, 963","926, 1002",39,This will probably be the last resort,This will probably be the last resort if I can't conquer it through therapy.,relational,relational
+86,5.0,"1027, 1035","1027, 1030",5,get back,get,main,main
+,
+,Manual mismatching all parsed (False Negative)
+1,"47, 82",I'm so glad that you are doing well,mental
+2,"47, 48",I,emoter
+4,"51, 58",so glad,main
+88,"64, 82",you are doing well,action
+123,"64, 82",you are doing well,phenomenon
+5,"64, 67",you,agent
+8,"78, 82",well,manner
+89,"84, 100",It gives me hope,relational
+89,"84, 100",It gives me hope,possessive
+9,"84, 86",It,agent
+11,"93, 95",me,affected-carrier
+12,"96, 100",hope,affected-possessed
+90,"106, 123",I can do the same,action
+91,"125, 162",I actually met with a therapist today,action
+20,"165, 204",first individual session I've ever done,attributive
+101,"165, 204",first individual session I've ever done,attribute
+127,"190, 204",I've ever done,action
+124,"190, 191",I,agent
+26,"219, 223",well,manner
+27,"225, 228",She,agent
+105,"277, 349","The strange thing about me, Jason, is that I never had any physical pain",event-relating
+102,"277, 303",The strange thing about me,carrier
+29,"320, 349",I never had any physical pain,mental
+29,"320, 349",I never had any physical pain,two-role-perception
+104,"320, 349",I never had any physical pain,phenomenon
+35,"441, 505",which is open to all males who have or have had eating disorders,attributive
+39,"441, 446",which,carrier
+44,"450, 505",open to all males who have or have had eating disorders,attribute
+109,"468, 505",who have or have had eating disorders,relational
+106,"468, 471",who,carrier
+92,"507, 550",which is at the University of Iowa Hospital,locational
+110,"507, 512",which,carrier
+46,"516, 550",at the University of Iowa Hospital,location
+113,"594, 601",join us,action
+68,"603, 699",It's head by Dr Anderson who is an absolute genius on the subject of males with eating disorders,action
+53,"603, 605",It,affected
+55,"608, 612",head,main
+121,"746, 796",that involves putting a wrap ring around the valve,event-relating
+118,"746, 750",that,carrier
+95,"798, 841",It's called the Laparoscopic Nissen surgery,relational
+95,"798, 841",It's called the Laparoscopic Nissen surgery,attributive
+62,"798, 800",It,affected-carrier
+65,"810, 841",the Laparoscopic Nissen surgery,attribute
+122,"843, 897",That's supposed to make it impossible to bring up food,relational
+122,"843, 897",That's supposed to make it impossible to bring up food,attributive
+66,"843, 847",That,agent
+71,"870, 897",impossible to bring up food,attribute
+96,"899, 924",Have you ever heard of it,mental
+96,"899, 924",Have you ever heard of it,two-role-cognition
+73,"904, 907",you,cognizant
+75,"922, 924",it,phenomenon
+98,"967, 1001",I can't conquer it through therapy,action
+99,"1009, 1043",I should probably get back to work,influential
+84,"1009, 1010",I,agent
+87,"1036, 1043",to work,phenomenon
+,
+,Parsed mismatching all manual (False Positives)
+42,"42, 46",you!,affected-emoter
+42,"42, 46",you!,affected-path
+42,"42, 46",you!,affected-perceiver
+42,"42, 46",you!,affected-cognizant
+42,"42, 46",you!,affected-carrier
+42,"42, 46",you!,affected-destination
+42,"42, 46",you!,affected
+42,"42, 46",you!,affected-possessed
+42,"42, 46",you!,affected-source
+42,"42, 46",you!,range
+34,"34, 46",to meet you!,process
+34,"34, 46",to meet you!,two-role-action
+34,"34, 46",to meet you!,action
+34,"34, 41",to meet,main
+48,"48, 50",'m,main
+96,"96, 100",hope,main
+93,"93, 124",me hope that I can do the same.,process
+93,"93, 124",me hope that I can do the same.,mental
+93,"93, 124",me hope that I can do the same.,desiderative
+93,"93, 95",me,affected-emoter
+93,"93, 95",me,emoter
+106,"106, 107",I,agent-cognizant
+106,"106, 107",I,agent-carrier
+106,"106, 107",I,agent-perceiver
+101,"101, 124",that I can do the same.,phenomenon
+101,"101, 124",that I can do the same.,created-phenomenon
+115,"115, 124",the same.,manner
+207,"207, 224",and it went well.,process
+207,"207, 224",and it went well.,directional
+207,"207, 224",and it went well.,one-role-action
+125,"125, 126",I,agent-cognizant
+125,"125, 126",I,affected-carrier
+125,"125, 126",I,agent-carrier
+125,"125, 126",I,agent-perceiver
+125,"125, 126",I,carrier
+211,"211, 213",it,affected-emoter
+211,"211, 213",it,affected-path
+211,"211, 213",it,affected-perceiver
+211,"211, 213",it,agent-cognizant
+211,"211, 213",it,affected-cognizant
+211,"211, 213",it,affected-carrier
+211,"211, 213",it,affected-destination
+211,"211, 213",it,affected
+211,"211, 213",it,agent-carrier
+211,"211, 213",it,affected-possessed
+211,"211, 213",it,agent-perceiver
+211,"211, 213",it,affected-source
+211,"211, 213",it,carrier
+211,"211, 213",it,perceiver
+125,"125, 206",I actually met with a therapist today ( first individual session I've ever done ),process
+125,"125, 206",I actually met with a therapist today ( first individual session I've ever done ),matching
+125,"125, 206",I actually met with a therapist today ( first individual session I've ever done ),two-role-action
+125,"125, 206",I actually met with a therapist today ( first individual session I've ever done ),one-role-action
+140,"140, 206",with a therapist today ( first individual session I've ever done ),affected-emoter
+140,"140, 206",with a therapist today ( first individual session I've ever done ),affected-path
+140,"140, 206",with a therapist today ( first individual session I've ever done ),affected-perceiver
+140,"140, 206",with a therapist today ( first individual session I've ever done ),affected-cognizant
+140,"140, 206",with a therapist today ( first individual session I've ever done ),affected-carrier
+140,"140, 206",with a therapist today ( first individual session I've ever done ),affected-destination
+140,"140, 206",with a therapist today ( first individual session I've ever done ),affected-possessed
+140,"140, 206",with a therapist today ( first individual session I've ever done ),matchee
+140,"140, 206",with a therapist today ( first individual session I've ever done ),affected-source
+251,"251, 253",me,destination
+251,"251, 253",me,affected-destination
+251,"251, 253",me,range
+231,"231, 236",going,main
+244,"244, 250",to get,main
+237,"237, 276",to try to get me into the program ASAP.,process
+237,"237, 276",to try to get me into the program ASAP.,tentative
+244,"244, 276",to get me into the program ASAP.,created-phenomenon
+244,"244, 276",to get me into the program ASAP.,process
+244,"244, 276",to get me into the program ASAP.,directional
+244,"244, 276",to get me into the program ASAP.,two-role-action
+244,"244, 276",to get me into the program ASAP.,action
+320,"320, 321",I,agent
+320,"320, 321",I,agent-cognizant
+320,"320, 321",I,affected-carrier
+320,"320, 321",I,affected
+320,"320, 321",I,agent-carrier
+320,"320, 321",I,agent-perceiver
+320,"320, 321",I,carrier
+315,"315, 350",that I never had any physical pain.,process
+315,"315, 350",that I never had any physical pain.,causative
+315,"315, 350",that I never had any physical pain.,relational
+315,"315, 350",that I never had any physical pain.,possessive
+315,"315, 350",that I never had any physical pain.,two-role-action
+315,"315, 350",that I never had any physical pain.,action
+332,"332, 350",any physical pain.,affected-emoter
+332,"332, 350",any physical pain.,created-phenomenon
+332,"332, 350",any physical pain.,affected-path
+332,"332, 350",any physical pain.,affected-perceiver
+332,"332, 350",any physical pain.,affected-cognizant
+332,"332, 350",any physical pain.,affected-carrier
+332,"332, 350",any physical pain.,affected-destination
+332,"332, 350",any physical pain.,affected
+332,"332, 350",any physical pain.,affected-possessed
+332,"332, 350",any physical pain.,affected-source
+332,"332, 350",any physical pain.,created
+332,"332, 350",any physical pain.,possessed
+351,"351, 359",The food,affected-emoter
+351,"351, 359",The food,affected-path
+351,"351, 359",The food,affected-perceiver
+351,"351, 359",The food,affected-cognizant
+351,"351, 359",The food,affected-carrier
+351,"351, 359",The food,affected-destination
+351,"351, 359",The food,affected
+351,"351, 359",The food,agent-carrier
+351,"351, 359",The food,affected-possessed
+351,"351, 359",The food,agent-perceiver
+351,"351, 359",The food,affected-source
+351,"351, 359",The food,carrier
+351,"351, 359",The food,perceiver
+351,"351, 406",The food just comes up smoothly without any hesitation.,process
+351,"351, 406",The food just comes up smoothly without any hesitation.,directional
+351,"351, 406",The food just comes up smoothly without any hesitation.,relational
+351,"351, 406",The food just comes up smoothly without any hesitation.,one-role-action
+439,"439, 446",", which",agent
+439,"439, 446",", which",agent-perceiver
+439,"439, 446",", which",perceiver
+516,"516, 551",at the University of Iowa Hospital.,affected-emoter
+516,"516, 551",at the University of Iowa Hospital.,affected-path
+516,"516, 551",at the University of Iowa Hospital.,affected-perceiver
+516,"516, 551",at the University of Iowa Hospital.,affected-cognizant
+516,"516, 551",at the University of Iowa Hospital.,affected-carrier
+516,"516, 551",at the University of Iowa Hospital.,affected-destination
+516,"516, 551",at the University of Iowa Hospital.,affected
+516,"516, 551",at the University of Iowa Hospital.,affected-possessed
+516,"516, 551",at the University of Iowa Hospital.,affected-source
+468,"468, 476",who have,process
+468,"468, 476",who have,action
+468,"468, 476",who have,one-role-action
+455,"455, 551","to all males who have or have had eating disorders, which is at the University of Iowa Hospital.",destination
+455,"455, 551","to all males who have or have had eating disorders, which is at the University of Iowa Hospital.",affected-destination
+412,"412, 426",to Men's group,attribute
+412,"412, 426",to Men's group,affected-destination
+412,"412, 426",to Men's group,matchee
+477,"477, 551","or have had eating disorders, which is at the University of Iowa Hospital.",process
+477,"477, 551","or have had eating disorders, which is at the University of Iowa Hospital.",causative
+477,"477, 551","or have had eating disorders, which is at the University of Iowa Hospital.",two-role-action
+477,"477, 551","or have had eating disorders, which is at the University of Iowa Hospital.",action
+489,"489, 551","eating disorders, which is at the University of Iowa Hospital.",phenomenon
+489,"489, 551","eating disorders, which is at the University of Iowa Hospital.",affected-emoter
+489,"489, 551","eating disorders, which is at the University of Iowa Hospital.",created-phenomenon
+489,"489, 551","eating disorders, which is at the University of Iowa Hospital.",affected-path
+489,"489, 551","eating disorders, which is at the University of Iowa Hospital.",affected-perceiver
+489,"489, 551","eating disorders, which is at the University of Iowa Hospital.",affected-cognizant
+489,"489, 551","eating disorders, which is at the University of Iowa Hospital.",affected-carrier
+489,"489, 551","eating disorders, which is at the University of Iowa Hospital.",affected-destination
+489,"489, 551","eating disorders, which is at the University of Iowa Hospital.",affected
+489,"489, 551","eating disorders, which is at the University of Iowa Hospital.",affected-possessed
+489,"489, 551","eating disorders, which is at the University of Iowa Hospital.",affected-source
+489,"489, 551","eating disorders, which is at the University of Iowa Hospital.",created
+407,"407, 439",I go to Men's group every Friday,process
+407,"407, 439",I go to Men's group every Friday,attributive
+407,"407, 439",I go to Men's group every Friday,matching
+407,"407, 439",I go to Men's group every Friday,action
+407,"407, 439",I go to Men's group every Friday,one-role-action
+485,"485, 488",had,main
+450,"450, 454",open,destination
+450,"450, 454",open,affected-destination
+439,"439, 551",", which is open to all males who have or have had eating disorders, which is at the University of Iowa Hospital.",process
+439,"439, 551",", which is open to all males who have or have had eating disorders, which is at the University of Iowa Hospital.",directional
+505,"505, 512",", which",agent
+505,"505, 512",", which",agent-cognizant
+505,"505, 512",", which",agent-carrier
+505,"505, 512",", which",agent-perceiver
+468,"468, 471",who,agent
+468,"468, 471",who,agent-cognizant
+468,"468, 471",who,agent-carrier
+468,"468, 471",who,agent-perceiver
+407,"407, 408",I,affected-emoter
+407,"407, 408",I,agent
+407,"407, 408",I,affected-path
+407,"407, 408",I,affected-perceiver
+407,"407, 408",I,agent-cognizant
+407,"407, 408",I,affected-cognizant
+407,"407, 408",I,affected-carrier
+407,"407, 408",I,affected-destination
+407,"407, 408",I,affected
+407,"407, 408",I,agent-carrier
+407,"407, 408",I,affected-possessed
+407,"407, 408",I,agent-perceiver
+407,"407, 408",I,affected-source
+407,"407, 408",I,perceiver
+505,"505, 551",", which is at the University of Iowa Hospital.",process
+505,"505, 551",", which is at the University of Iowa Hospital.",two-role-action
+505,"505, 551",", which is at the University of Iowa Hospital.",action
+552,"552, 565",It's awesome.,process
+552,"552, 565",It's awesome.,locational
+552,"552, 554",It,affected-carrier
+552,"552, 554",It,agent-carrier
+557,"557, 565",awesome.,location
+566,"566, 592",If you're ever in the area,process
+566,"566, 592",If you're ever in the area,attributive
+566,"566, 592",If you're ever in the area,two-role-action
+566,"566, 592",If you're ever in the area,action
+566,"566, 592",If you're ever in the area,one-role-action
+599,"599, 602",us!,affected-emoter
+599,"599, 602",us!,affected-path
+599,"599, 602",us!,affected-perceiver
+599,"599, 602",us!,location
+599,"599, 602",us!,affected-cognizant
+599,"599, 602",us!,affected-carrier
+599,"599, 602",us!,affected-destination
+599,"599, 602",us!,affected-possessed
+599,"599, 602",us!,affected-source
+599,"599, 602",us!,range
+566,"566, 602","If you're ever in the area, join us!",process
+566,"566, 602","If you're ever in the area, join us!",locational
+566,"566, 602","If you're ever in the area, join us!",relational
+566,"566, 602","If you're ever in the area, join us!",two-role-action
+581,"581, 592",in the area,attribute
+581,"581, 592",in the area,range
+569,"569, 572",you,agent
+569,"569, 572",you,agent-cognizant
+569,"569, 572",you,affected-carrier
+569,"569, 572",you,affected
+569,"569, 572",you,agent-carrier
+569,"569, 572",you,agent-perceiver
+569,"569, 572",you,perceiver
+605,"605, 607",'s,main
+635,"635, 700",an absolute genius on the subject of males with eating disorders.,affected-emoter
+635,"635, 700",an absolute genius on the subject of males with eating disorders.,affected-path
+635,"635, 700",an absolute genius on the subject of males with eating disorders.,affected-perceiver
+635,"635, 700",an absolute genius on the subject of males with eating disorders.,location
+635,"635, 700",an absolute genius on the subject of males with eating disorders.,affected-cognizant
+635,"635, 700",an absolute genius on the subject of males with eating disorders.,affected-carrier
+635,"635, 700",an absolute genius on the subject of males with eating disorders.,affected-destination
+635,"635, 700",an absolute genius on the subject of males with eating disorders.,affected
+635,"635, 700",an absolute genius on the subject of males with eating disorders.,affected-possessed
+635,"635, 700",an absolute genius on the subject of males with eating disorders.,matchee
+635,"635, 700",an absolute genius on the subject of males with eating disorders.,affected-source
+635,"635, 700",an absolute genius on the subject of males with eating disorders.,range
+603,"603, 700",It's head by Dr Anderson who is an absolute genius on the subject of males with eating disorders.,process
+603,"603, 700",It's head by Dr Anderson who is an absolute genius on the subject of males with eating disorders.,locational
+608,"608, 700",head by Dr Anderson who is an absolute genius on the subject of males with eating disorders.,location
+628,"628, 631",who,agent-cognizant
+628,"628, 631",who,affected-carrier
+628,"628, 631",who,affected
+628,"628, 631",who,agent-carrier
+628,"628, 631",who,agent-perceiver
+628,"628, 631",who,perceiver
+628,"628, 700",who is an absolute genius on the subject of males with eating disorders.,process
+628,"628, 700",who is an absolute genius on the subject of males with eating disorders.,matching
+628,"628, 700",who is an absolute genius on the subject of males with eating disorders.,locational
+628,"628, 700",who is an absolute genius on the subject of males with eating disorders.,two-role-action
+603,"603, 605",It,agent
+603,"603, 605",It,affected-carrier
+603,"603, 605",It,agent-carrier
+603,"603, 605",It,agent-perceiver
+603,"603, 605",It,carrier
+603,"603, 605",It,perceiver
+701,"701, 703",He,agent-cognizant
+701,"701, 703",He,agent-carrier
+701,"701, 703",He,agent-perceiver
+701,"701, 703",He,perceiver
+760,"760, 797",putting a wrap ring around the valve.,process
+760,"760, 767",putting,main
+719,"719, 797",about a surgical procedure that involves putting a wrap ring around the valve.,created-phenomenon
+716,"716, 718",me,phenomenon
+716,"716, 718",me,created-phenomenon
+716,"716, 718",me,cognizant
+716,"716, 718",me,affected
+701,"701, 797",He was telling me about a surgical procedure that involves putting a wrap ring around the valve.,process
+701,"701, 797",He was telling me about a surgical procedure that involves putting a wrap ring around the valve.,two-role-perception
+768,"768, 779",a wrap ring,created-phenomenon
+859,"859, 898",to make it impossible to bring up food.,process
+859,"859, 898",to make it impossible to bring up food.,causative
+859,"859, 898",to make it impossible to bring up food.,influential
+870,"870, 880",impossible,main
+881,"881, 889",to bring,main
+867,"867, 898",it impossible to bring up food.,phenomenon
+867,"867, 898",it impossible to bring up food.,created-phenomenon
+867,"867, 898",it impossible to bring up food.,created
+881,"881, 898",to bring up food.,process
+881,"881, 898",to bring up food.,two-role-action
+881,"881, 898",to bring up food.,action
+850,"850, 858",supposed,main
+893,"893, 898",food.,affected-emoter
+893,"893, 898",food.,affected-path
+893,"893, 898",food.,affected-perceiver
+893,"893, 898",food.,affected-cognizant
+893,"893, 898",food.,affected-carrier
+893,"893, 898",food.,affected-destination
+893,"893, 898",food.,affected
+893,"893, 898",food.,affected-possessed
+893,"893, 898",food.,affected-source
+986,"986, 1002",through therapy.,affected-emoter
+986,"986, 1002",through therapy.,affected-path
+986,"986, 1002",through therapy.,affected-perceiver
+986,"986, 1002",through therapy.,affected-cognizant
+986,"986, 1002",through therapy.,affected-carrier
+986,"986, 1002",through therapy.,affected-destination
+986,"986, 1002",through therapy.,affected
+986,"986, 1002",through therapy.,affected-possessed
+986,"986, 1002",through therapy.,affected-source
+967,"967, 968",I,agent-cognizant
+967,"967, 968",I,agent-carrier
+967,"967, 968",I,agent-perceiver
+983,"983, 985",it,affected-emoter
+983,"983, 985",it,affected-path
+983,"983, 985",it,affected-perceiver
+983,"983, 985",it,affected-cognizant
+983,"983, 985",it,affected-carrier
+983,"983, 985",it,affected-destination
+983,"983, 985",it,affected-possessed
+983,"983, 985",it,affected-source
+948,"948, 963",the last resort,location
+926,"926, 930",This,affected-carrier
+926,"926, 930",This,agent-carrier
+926,"926, 1002",This will probably be the last resort if I can't conquer it through therapy.,process
+926,"926, 1002",This will probably be the last resort if I can't conquer it through therapy.,locational
+1036,"1036, 1043",to work,main
+1036,"1036, 1044",to work.,process
+1036,"1036, 1044",to work.,action
+1036,"1036, 1044",to work.,one-role-action
+1045,"1045, 1049",Take,main
+1045,"1045, 1055",Take care!,process
+1045,"1045, 1055",Take care!,mental
+1045,"1045, 1055",Take care!,possessive
+1045,"1045, 1055",Take care!,two-role-cognition
+1045,"1045, 1055",Take care!,two-role-perception
+1045,"1045, 1055",Take care!,emotive
+1045,"1045, 1055",Take care!,two-role-action
+1050,"1050, 1055",care!,phenomenon
+1050,"1050, 1055",care!,affected-emoter
+1050,"1050, 1055",care!,created-phenomenon
+1050,"1050, 1055",care!,affected-path
+1050,"1050, 1055",care!,affected-perceiver
+1050,"1050, 1055",care!,affected-cognizant
+1050,"1050, 1055",care!,affected-carrier
+1050,"1050, 1055",care!,affected-destination
+1050,"1050, 1055",care!,affected
+1050,"1050, 1055",care!,affected-possessed
+1050,"1050, 1055",care!,affected-source
+1050,"1050, 1055",care!,possessed
+1050,"1050, 1055",care!,range
+603,"603, 700",It's head by Dr Anderson who is an absolute genius on the subject of males with eating disorders.,relational
+760,"760, 797",putting a wrap ring around the valve.,mental
+760,"760, 797",putting a wrap ring around the valve.,three-role-cognition

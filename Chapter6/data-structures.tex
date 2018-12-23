@@ -171,13 +171,13 @@ Please note that the edges are defined to carry feature structures. This capacit
 
 \begin{figure}[!ht]
 \centering
-\begin{tikzpicture}[tree-style,level distance=8em,]
+\begin{tikzpicture}[tree-style,level distance=5em,]
 \node[pattern-node] {word:gave,\\lemma:give,\\pos:VBD}
- child {node[pattern-node] {word:He,\\lemma:he,\\pos:PRP} edge from parent node[left] {\{rel:nsubj\}} }
+ child {node[pattern-node] {word:He,\\lemma:he,\\pos:PRP} edge from parent node[left] {nsubj} }
  child {node[pattern-node]{word:cakes,\\lemma:cake\\pos:NN} 
- 	child { node[pattern-node]{word:the,\\lemma:the,\\pos:DT} edge from parent node[right] {\{rel:det\}}} 
- 	edge from parent node[above right] {\{rel:dobj\}} }
- child {node[pattern-node] {word:away,\\lemma:away,\\pos:RB} edge from parent node[right] {\{rel:advmod\}}};
+ 	child { node[pattern-node]{word:the,\\lemma:the,\\pos:DT} edge from parent node[right] {det}} 
+ 	edge from parent node[above right] {dobj} }
+ child {node[pattern-node] {word:away,\\lemma:away,\\pos:RB} edge from parent node[right] {advmod}};
 \end{tikzpicture}
 \caption{Dependency graph example with FS nodes and edges}
 \label{fig:dep-graph}
@@ -467,10 +467,10 @@ In this pattern the main lexical verb is \textit{present participle} indicated v
 
 \begin{figure}[!ht]
     \centering
-    \begin{tikzpicture}[tree-style]
+    \begin{tikzpicture}[tree-style,level distance=5em,]
     \node[pattern-node, anchor=center] (vb1){pos:VBG}
-    child {node[pattern-node] {lemma:be\\pos:VBN} edge from parent node[left] {rel:$_{OR}$[aux,auxpass]} }
-    child {node[pattern-node] {lemma:have\\pos:$_{OR}$[VBZ,VBP]} edge from parent node[right] {rel:aux}};
+    child {node[pattern-node] {lemma:be\\pos:VBN} edge from parent node[left] {$_{OR}$[aux,auxpass]} }
+    child {node[pattern-node] {lemma:have\\pos:$_{OR}$[VBZ,VBP]} edge from parent node[right] {aux}};
     \end{tikzpicture}
     \caption{The graph pattern capturing features of the present perfect continuous tense}
     \label{fig:gp1}
@@ -489,7 +489,7 @@ Another way to specify node order is through relative precedence, for which the 
 
 	\begin{figure}[!ht]%{0.4\textwidth}
 		\centering
-		\begin{tikzpicture}[tree-style,]
+		\begin{tikzpicture}[tree-style,,level distance=4em,]
 		\node (cla) [pattern-node] {class:clause}
 		child { node (sub)[pattern-node] {element:subject,\\position:1}}		
 		child { node (f)[pattern-node] {element:finite,\\position:2}};
@@ -499,7 +499,7 @@ Another way to specify node order is through relative precedence, for which the 
 	\end{figure}
 	\begin{figure}[!ht]%{0.4\textwidth}
 		\centering
-		\begin{tikzpicture}[tree-style,]
+		\begin{tikzpicture}[tree-style,,level distance=4em,]
 		\node (cla) [pattern-node] {class:clause}
 		child { node (sub)[pattern-node] {element:subject,\\id:s1, precede:f1}}		
 		child { node (f)[pattern-node] {element:finite,\\id:f1}};
@@ -509,7 +509,7 @@ Another way to specify node order is through relative precedence, for which the 
 	\end{figure}
     \begin{figure}[!ht]
     	\centering
-    	\begin{tikzpicture}[tree-style,]
+    	\begin{tikzpicture}[tree-style,,level distance=4em,]
     	\node (cla) [pattern-node] {class:clause}
     	child { node (f)[pattern-node] {element:finite,\\id:f1, precede:s1}}
     	child { node (sub)[pattern-node] {element:subject,\\id:s1}}	;	
@@ -926,7 +926,7 @@ He              & gave               & her                & the               & 
 \begin{figure}[hbtp]
 \centering
 \scalebox{0.8}{
-\begin{tikzpicture}[tree-style, level 1/.style={sibling distance=12em},]
+\begin{tikzpicture}[tree-style,level distance=5em, level 1/.style={sibling distance=12.5em},]
 \node[pattern-node, anchor=center](vb1){element:clause}
 	child {node[pattern-node,xshift=0em] {element:subject,\\operation:update,\\ arg1:\{participant:agent\}} edge from parent node[above] {}}
 	child {node[pattern-node,xshift=0em] {element:complement,\\operation:update,\\ arg1:\{participant:posessed\}} edge from parent node[below right] {}}
@@ -985,7 +985,7 @@ Albert          & asked              & \textit{Albert}           & to           
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[tree-style] 
+\begin{tikzpicture}[tree-style,level distance=5em,] 
 \node[pattern-node, anchor=center] (vb1){class:clause}
 	child {node[pattern-node] (subj1) {element:subject,\\id:subj1}}
 	child {node[pattern-node] (vb2) {element:complement,\\class:clause}
@@ -1007,6 +1007,7 @@ In operational terms, the insertion operation means that the whole pattern will 
 This section concludes our journey in the world of graph patterns, isomorphisms and graph based operations. Leaving only one more important data structure to cover: the system networks. 
 
 \section{Systems and Systemic Networks}
+\label{sec:system-networks-cs}
 In the Section \ref{sec:system} I presented the basic definition of \textit{system} and \textit{system network} and the notations as formulated in the SF theory of grammar. In this work the system networks are simplified to hierarchies of disjoint features maintaining the entry conditions. This corresponds to the type logic component  described in \citep{ODonnell1993} where the syntagmatic organisation is restricted to a single functional layer. The reason behind this simplification is because the hierarchy of disjoint feature structures are perfectly suitable to correctly derive the complete set of parent features from a one or several manual selections. Moreover the systemic networks are not interconnected into an uniform grammar but separate modules describing selected aspects of language. Once the complete set of features is derived then it is associated with a graph pattern. This pattern graph is then used in the parse graph enrichment process described in Section \ref{sec:architecture}. Next I define the necessary concepts serving the current work.  
 
 First I would like to introduce abstract concept of \textit{hierarchy} defined in a computer science fashion by \citet[30]{Pollard1987}  which is a formal rephrasing of Definition \ref{def:hierarchy} stating that the hierarchy is a sort of logical precedence among the terms of a system. 
@@ -1278,6 +1279,23 @@ The selection path is generated by traversal of the feature network from a given
 
 When the system networks define more than one feature in the precondition it leads to split paths it means that there is more than one feature needs to or can be preselected. If the edge is a continuous line (depicted  in Figure \ref{fig:feature-network-example1}) the both variants are part of the same selection path. In case the edge is a dashed line (depicted  in Figure \ref{fig:feature-network-example2}) the paths are considered alternative and further decision making mechanism shall be employed to reduce the disjunction to a single variant. In the current work no such mechanism is employed and the parse result is presented with both alternatives. In most cases the entry condition is constituted of a single feature, when there are multiple ones, usually they are conjuncted and only in a small minority of cases entry condition is a disjunction of features.
 
+\begin{algorithm}[!ht]
+    \Input {\feature, \snet}
+    \Begin {
+        add \feature to empty selection path \;
+        \For{\systemm \KwTo traversal path to the root of \snet}
+        {
+            get entry condition features of \systemm \;
+            add entry condition features to the selection path \;
+        }
+        \Return{selection path}
+    }
+    \caption{Naive backwards induction of a selection path}
+    \label{alg:backward-induction-naive}
+\end{algorithm}
+
+The pseudo code for creating a selection path as described above is outlined in Algorithm \ref{alg:backward-induction-naive}. Given a system network a random non root feature belonging to the network, it traverses the networks, one by one, towards the root and collects the entry conditions of each system into a selection path.
+
 \section{On realisation rules}
 \label{sec:realisation-reules}
 The previous section explains that in the current work systemic networks are simplified to a taxonomy of features and no realisation rules are considered. This section explains how the pattern graphs are a substitute to the realisation rules and how they relate to each other.
@@ -1302,7 +1320,7 @@ In this work the graph patterns can be considered as bundles of realisation rule
 \begin{figure}[!ht]
     \centering
     \scalebox{0.7}{
-    \begin{tikzpicture}[tree-style] 
+    \begin{tikzpicture}[tree-style,level distance=5em,] 
     \node[pattern-node, anchor=center] (c) {class:clause, STATUS:major}
     child {node[pattern-node] (subj1) {element:Main Verb}};
     \end{tikzpicture}
@@ -1316,7 +1334,7 @@ In Figure \ref{fig:mood-fragment-indicative} is depicted the pattern graph corre
 \begin{figure}[!ht]
     \centering
     \scalebox{0.7}{
-    \begin{tikzpicture}[tree-style] 
+    \begin{tikzpicture}[tree-style,level distance=5em,] 
     \node[pattern-node, anchor=center] (c) {class:clause, STATUS:major, FREEDOM:free,\\MOOD-TYPE:indicative }
     child {node[pattern-node] (subj1) {element:Main Verb}}
     child {node[pattern-node] (subj1) {element:Subject}}
@@ -1331,7 +1349,7 @@ In Figure \ref{fig:mood-fragment-indicative} is depicted the pattern graph corre
 \begin{figure}[!ht]
     \centering
     \scalebox{0.7}{
-    \begin{tikzpicture}[tree-style] 
+    \begin{tikzpicture}[tree-style,level distance=5em,] 
     \node[pattern-node, anchor=center] (c) {class:clause, STATUS:major, FREEDOM:free,\\ MOOD-TYPE:indicative, INDICATIVE-TYPE:declarative }
     child {node[pattern-node] (subj1) {element:Main Verb}}
     child {node[pattern-node] (subj1) {element:Subject,\\precede:fnt}}
@@ -1348,7 +1366,7 @@ In Figure \ref{fig:mood-fragment-declarative} the selection is taken one step fu
 \begin{figure}[!ht]
     \centering
     \scalebox{0.7}{
-    \begin{tikzpicture}[tree-style] 
+    \begin{tikzpicture}[tree-style,level distance=5em,] 
     \node[pattern-node, anchor=center] (c) {MOOD-TYPE:indicative, INDICATIVE-TYPE:declarative }
     child {node[pattern-node] (subj1) {element:Subject,\\precede:fnt}}
     child {node[pattern-node] (subj1) {id:fnt,\\element:Finite}}
@@ -1364,7 +1382,7 @@ The pattern does not need to refer to the complete selection path but can be lim
 One limitation, however, of the graph patterns is dealing with conflation phenomena. For example, the cases of the Main Verb conflated with Finite elements have to be accounted by with pattern graphs where one constituent has two functions instead of pattern graphs with two separate constituent each with the corresponding function. This limitation can be addressed in the future by manipulating the definition of the feature structure matcher described in Section \ref{sec:graph-matching}.
 
 \section{Discussion}
-This chapter described from a computer science perspective the SFL concepts introduced in Chapter \ref{ch:sfl} and prepares the ground for the following chapters that address the implementation details of the Parsimonious Vole parser.  
+This chapter described from a computer science perspective the SFL concepts introduced in Chapter \ref{ch:sfg} and prepares the ground for the following chapters that address the implementation details of the Parsimonious Vole parser.  
 
 A central theme covered here are the graphs and graph patterns. They play the key role in identifying grammatical features in dependency and constituency structures. They are also an excellent candidate for expressing \textit{systemic realizations} which have not been considered in the current work as being associated to the systemic features.  
 

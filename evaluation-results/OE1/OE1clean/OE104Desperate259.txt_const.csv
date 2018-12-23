@@ -1,0 +1,153 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.7898550724637681
+,Recall,0.9646017699115044
+,F1,0.8685258964143426
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+125,5.0,"30, 41","25, 41",5,the subject,", as the subject",participant-role,participant-role
+5,27.018512172212592,"48, 106","21, 107",28,I am looking for advice and/or help with an eating problem,"Okay, as the subject says, I am looking for advice and/or help with an eating problem.",configuration,configuration
+4,35.22782990761707,"65, 106","61, 71",35,advice and/or help with an eating problem,for advice,participant-role,participant-role
+126,0.0,"42, 46","42, 46",0,says,says,main,main
+3,4.0,"53, 64","53, 60",4,looking for,looking,main,main
+127,18.027756377319946,"27, 29","21, 46",23,as,"Okay, as the subject says",participant-role,participant-role
+128,6.0,"27, 46","21, 46",6,as the subject says,"Okay, as the subject says",configuration,configuration
+1,2.0,"48, 49","46, 49",2,I,", I",participant-role,participant-role
+8,4.0,"117, 123","113, 123",4,having,not having,main,main
+9,16.0,"124, 149","140, 149",16,trouble putting on weight,on weight,participant-role,participant-role
+6,0.0,"108, 109","108, 109",0,I,I,participant-role,participant-role
+103,4.123105625617661,"155, 190","151, 191",5,certainly not having trouble eating,and certainly not having trouble eating.,configuration,configuration
+11,18.0,"108, 149","108, 131",18,I am not having trouble putting on weight,I am not having trouble,configuration,configuration
+10,4.0,"169, 175","165, 175",4,having,not having,main,main
+12,1.0,"176, 190","176, 191",1,trouble eating,trouble eating.,participant-role,participant-role
+14,0.0,"194, 198","194, 198",0,have,have,main,main
+15,1.0,"199, 219","199, 220",1,the opposite problem,the opposite problem.,participant-role,participant-role
+16,1.0,"192, 219","192, 220",1,I have the opposite problem,I have the opposite problem.,configuration,configuration
+13,0.0,"192, 193","192, 193",0,I,I,participant-role,participant-role
+22,18.027756377319946,"250, 308","232, 309",19,asking if there was a NG or place to talk about this issue,here a while back asking if there was a NG or place to talk about this issue.,configuration,configuration
+111,3.1622776601683795,"260, 308","257, 309",4,there was a NG or place to talk about this issue,if there was a NG or place to talk about this issue.,configuration,configuration
+19,0.0,"250, 256","250, 256",0,asking,asking,main,main
+17,0.0,"221, 222","221, 222",0,I,I,participant-role,participant-role
+20,31.016124838541646,"260, 308","229, 309",32,there was a NG or place to talk about this issue,in here a while back asking if there was a NG or place to talk about this issue.,participant-role,participant-role
+109,0.0,"266, 269","266, 269",0,was,was,main,main
+110,1.0,"270, 308","270, 309",1,a NG or place to talk about this issue,a NG or place to talk about this issue.,participant-role,participant-role
+18,0.0,"223, 228","223, 228",0,wrote,wrote,main,main
+23,0.0,"310, 311","310, 311",0,I,I,participant-role,participant-role
+26,19.0,"327, 343","327, 362",19,anything helpful,anything helpful online or offline.,participant-role,participant-role
+25,4.0,"321, 326","317, 326",4,found,not found,main,main
+27,1.0,"310, 361","310, 362",1,I have not found anything helpful online or offline,I have not found anything helpful online or offline.,configuration,configuration
+112,0.0,"451, 452","451, 452",0,I,I,participant-role,participant-role
+30,0.0,"368, 399","368, 399",0,in a really bad way emotionally,in a really bad way emotionally,participant-role,participant-role
+31,0.0,"418, 419","418, 419",0,I,I,participant-role,participant-role
+115,0.0,"463, 465","463, 465",0,it,it,participant-role,participant-role
+114,4.0,"460, 462","456, 462",4,do,not do,main,main
+36,4.123105625617661,"418, 479","414, 480",5,I am admitting/ yelling out that I cannot do it alone anymore,and I am admitting/ yelling out that I cannot do it alone anymore.,configuration,configuration
+35,0.0,"363, 413","363, 413",0,I am in a really bad way emotionally with this now,I am in a really bad way emotionally with this now,configuration,configuration
+28,0.0,"363, 364","363, 364",0,I,I,participant-role,participant-role
+34,5.0990195135927845,"451, 479","446, 480",6,I cannot do it alone anymore,that I cannot do it alone anymore.,participant-role,participant-role
+116,5.0990195135927845,"451, 479","446, 480",6,I cannot do it alone anymore,that I cannot do it alone anymore.,configuration,configuration
+33,11.704699910719626,"423, 445","434, 441",15,admitting/ yelling out,yelling,main,main
+29,0.0,"365, 367","365, 367",0,am,am,main,main
+40,3.0,"499, 518","496, 518",3,"an ""Obesity Clinic""","to an ""Obesity Clinic""",participant-role,participant-role
+37,0.0,"481, 482","481, 482",0,I,I,participant-role,participant-role
+43,1.0,"551, 575","551, 576",1,"just fat, but very obese","just fat, but very obese.",participant-role,participant-role
+42,4.0,"544, 546","544, 550",4,am,am not,main,main
+45,8.06225774829855,"542, 575","534, 576",9,"I am not just fat, but very obese","because I am not just fat, but very obese.",configuration,configuration
+41,0.0,"542, 543","542, 543",0,I,I,participant-role,participant-role
+44,43.0,"481, 533","481, 576",43,"I was referred to an ""Obesity Clinic"" back in August","I was referred to an ""Obesity Clinic"" back in August because I am not just fat, but very obese.",configuration,configuration
+39,3.0,"487, 498","487, 495",3,referred to,referred,main,main
+50,1.0,"577, 637","577, 638",1,"I need to lose weight for health reasons, not just for looks","I need to lose weight for health reasons, not just for looks.",configuration,configuration
+49,8.06225774829855,"592, 637","584, 638",9,"weight for health reasons, not just for looks","to lose weight for health reasons, not just for looks.",participant-role,participant-role
+46,0.0,"577, 578","577, 578",0,I,I,participant-role,participant-role
+48,3.0,"587, 591","584, 591",3,lose,to lose,main,main
+59,8.06225774829855,"693, 731","685, 732",9,I am going backwards very very quickly,but now I am going backwards very very quickly.,configuration,configuration
+117,1.0,"639, 683","639, 684",1,I was doing really well the first 2-3 months,"I was doing really well the first 2-3 months,",configuration,configuration
+57,10.0,"698, 713","698, 703",10,going backwards,going,main,main
+53,0.0,"645, 650","645, 650",0,doing,doing,main,main
+51,0.0,"639, 640","639, 640",0,I,I,participant-role,participant-role
+55,0.0,"693, 694","693, 694",0,I,I,participant-role,participant-role
+63,0.0,"772, 773","772, 773",0,I,I,participant-role,participant-role
+73,0.0,"868, 869","868, 869",0,I,I,participant-role,participant-role
+71,0.0,"836, 839","836, 839",0,was,was,main,main
+75,0.0,"876, 883","876, 883",0,consume,consume,main,main
+72,3.0,"772, 796","769, 796",3,I was before this Clinic,as I was before this Clinic,configuration,configuration
+64,0.0,"802, 804","802, 804",0,it,it,participant-role,participant-role
+77,48.25971404805462,"802, 861","829, 901",53,it is getting to the point that I was at in about 1994-1995,that I was at in about 1994-1995 where I would consume packets of things,configuration,configuration
+66,0.0,"808, 815","808, 815",0,getting,getting,main,main
+58,0.0,"834, 835","834, 835",0,I,I,participant-role,participant-role
+78,67.26812023536856,"868, 968","862, 901",73,"I would consume packets of things, not just a few sweets, but the whole bag, sometimes a few packets",where I would consume packets of things,configuration,configuration
+67,27.0,"816, 861","843, 861",27,to the point that I was at in about 1994-1995,in about 1994-1995,participant-role,participant-role
+68,8.0,"761, 768","753, 768",8,rubbish,as much rubbish,participant-role,participant-role
+60,0.0,"733, 734","733, 734",0,I,I,participant-role,participant-role
+118,60.01666435249463,"840, 842","829, 901",70,at,that I was at in about 1994-1995 where I would consume packets of things,participant-role,participant-role
+76,67.0,"884, 968","884, 901",67,"packets of things, not just a few sweets, but the whole bag, sometimes a few packets",packets of things,participant-role,participant-role
+62,4.0,"743, 752","739, 752",4,be eating,not be eating,main,main
+81,14.0,"976, 995","976, 1009",14,"a ""binging partner""","a ""binging partner"" at one stage.",participant-role,participant-role
+82,1.0,"970, 1008","970, 1009",1,"I had a ""binging partner"" at one stage","I had a ""binging partner"" at one stage.",configuration,configuration
+80,0.0,"972, 975","972, 975",0,had,had,main,main
+79,0.0,"970, 971","970, 971",0,I,I,participant-role,participant-role
+84,0.0,"1012, 1015","1012, 1015",0,was,was,main,main
+89,8.06225774829855,"1073, 1121","1065, 1122",9,a few very large bags of sweets and other things,through a few very large bags of sweets and other things.,participant-role,participant-role
+85,10.0,"1016, 1035","1016, 1025",10,in year 7 at school,in year 7,participant-role,participant-role
+86,14.0,"1040, 1055","1054, 1055",14,my friend and I,I,participant-role,participant-role
+90,14.0,"1010, 1035","1010, 1049",14,I was in year 7 at school,I was in year 7 at school and my friend,configuration,configuration
+88,8.0,"1062, 1072","1062, 1064",8,go through,go,main,main
+83,0.0,"1010, 1011","1010, 1011",0,I,I,participant-role,participant-role
+92,2.0,"1131, 1132","1129, 1132",2,I,", I",participant-role,participant-role
+104,4.0,"1154, 1161","1154, 1157",4,you all,you,participant-role,participant-role
+96,8.0,"1162, 1188","1162, 1180",8,with my life story anymore,with my life story,participant-role,participant-role
+120,11.0,"1206, 1223","1206, 1212",11,"anyone, anywhere,",anyone,participant-role,participant-role
+122,15.811388300841896,"1230, 1259","1243, 1250",22,"what I can do, where I can go",", where",participant-role,participant-role
+105,16.76305461424021,"1194, 1259","1199, 1243",21,"just ask if anyone, anywhere, knows what I can do, where I can go","ask if anyone, anywhere, knows what I can do",configuration,configuration
+123,16.278820596099706,"1206, 1259","1203, 1243",19,"anyone, anywhere, knows what I can do, where I can go","if anyone, anywhere, knows what I can do",configuration,configuration
+94,3.0,"1149, 1153","1146, 1153",3,bore,to bore,main,main
+121,0.0,"1224, 1229","1224, 1229",0,knows,knows,main,main
+95,15.033296378372908,"1131, 1188","1146, 1189",16,I am not going to bore you all with my life story anymore,"to bore you all with my life story anymore,",configuration,configuration
+106,0.0,"1199, 1202","1199, 1202",0,ask,ask,main,main
+101,0.0,"1292, 1297","1292, 1297",0,helps,helps,main,main
+98,0.0,"1263, 1265","1263, 1265",0,am,am,main,main
+102,15.0,"1261, 1283","1261, 1298",15,"I am in NSW, Australia","I am in NSW, Australia if that helps.",configuration,configuration
+124,3.1622776601683795,"1287, 1297","1284, 1298",4,that helps,if that helps.,configuration,configuration
+97,0.0,"1261, 1262","1261, 1262",0,I,I,participant-role,participant-role
+100,0.0,"1287, 1291","1287, 1291",0,that,that,participant-role,participant-role
+99,0.0,"1266, 1283","1266, 1283",0,"in NSW, Australia","in NSW, Australia",participant-role,participant-role
+21,60.0,"221, 249","221, 309",60,I wrote in here a while back,I wrote in here a while back asking if there was a NG or place to talk about this issue.,configuration,configuration
+119,130.728726758888,"829, 842","798, 969",158,that I was at,"but it is getting to the point that I was at in about 1994-1995 where I would consume packets of things, not just a few sweets, but the whole bag, sometimes a few packets.",configuration,configuration
+107,28.844410203711913,"1206, 1259","1230, 1243",40,"anyone, anywhere, knows what I can do, where I can go",what I can do,participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+108,"260, 265",there,participant-role
+54,"651, 662",really well,participant-role
+69,"733, 768",I may not be eating as much rubbish,configuration
+91,"1040, 1121",my friend and I would go through a few very large bags of sweets and other things,configuration
+,
+,Parsed mismatching all manual (False Positives)
+132,"132, 139",putting,main
+124,"124, 131",trouble,participant-role
+284,"284, 309",to talk about this issue.,configuration
+284,"284, 291",to talk,main
+524,"524, 533",in August,participant-role
+584,"584, 638","to lose weight for health reasons, not just for looks.",configuration
+579,"579, 583",need,main
+599,"599, 617",for health reasons,participant-role
+816,"816, 828",to the point,participant-role
+774,"774, 777",was,main
+862,"862, 867",where,participant-role
+778,"778, 796",before this Clinic,participant-role
+1026,"1026, 1049",at school and my friend,participant-role
+1241,"1241, 1243",do,main
+1257,"1257, 1259",go,main
+1146,"1146, 1243","to bore you all with my life story anymore, but just ask if anyone, anywhere, knows what I can do",participant-role
+1123,"1123, 1260","Anyway, I am not going to bore you all with my life story anymore, but just ask if anyone, anywhere, knows what I can do, where I can go?",configuration
+1136,"1136, 1145",not going,main
+1251,"1251, 1252",I,participant-role
+1243,"1243, 1260",", where I can go?",configuration
+132,"132, 150","putting on weight,",configuration
+292,"292, 309",about this issue.,participant-role
+434,"434, 480",yelling out that I cannot do it alone anymore.,configuration
+423,"423, 432",admitting,main
+592,"592, 598",weight,participant-role
+1230,"1230, 1243",what I can do,configuration
+1235,"1235, 1236",I,participant-role
+1146,"1146, 1243","to bore you all with my life story anymore, but just ask if anyone, anywhere, knows what I can do",configuration
+1230,"1230, 1234",what,participant-role

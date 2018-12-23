@@ -1,0 +1,409 @@
+\chapter{The Empirical Evaluation}
+\label{ch:evaluation}
+%todo: add chapter introduction
+
+\section{Evaluation settings}
+%how it is done, what is it compared to?
+
+There are several well established annotated corpora such as Penn or Prague Tree-Banks for phrase structure, dependency and other grammars that serve as training and evaluation data sets. To date I am not aware of any open corpus annotated with Cardiff or Sydney grammars that would play the role of the gold standard for SFL parsers. 
+
+% To overcome this problem I created a small evaluation corpus ocmprising two pars. The first one was created together with Ela Oren covering basic Sydney Mood constituency structure which I describe in detail in Section \ref{sec:}. The Second part is the PhD dataset of Anke Shultz covering Cardiff Transitivity analysis. %The current evaluation is based on these two datasets.
+
+% The parser is evaluated by comparing manually annotated text to automatically generated analyses.
+% The datasets have not been developed for the purpose of evaluating current parser however they are compatible and can be adapted to evaluate identification of constituent boundaries and how is being assigned a limited set of features. 
+% The first dataset represents Transitivity analysis of 31 files spanning over 1466 clauses and 20864 words created by Anke Schultz as part of her PhD project and is mainly used to evaluate semantic parsing. The second dataset represents Constituency and Mood analysis of blog text spanning over 988 clauses and 8605 words. hTis dataset was created by Ela Oren as a part of her project on analysing texts of people with obsessive compulsive disorder (OCD) and is mainly used to evaluate the syntactic parsing.  
+
+% Both datasets were created with UAM Corpus Tool authored by \citet{ODonnell2008,ODonnell2008a}. It stores annotations as segments with their corresponding start and end positions in the text together with set of features(selected from a systemic network) attributed to that segment without any proper constituency relations among segments. Below is a XML representation of an annotation segment for Transitivity.
+
+% \begin{verbatim}
+% <segment id="4" start="20" end="27" features="configuration;
+%  relational; attributive" state="active"/>
+% \end{verbatim}
+
+% To make manual and automatic analyses comparable constituency graphs (CG) are transformed into a set of segments the evaluation task being reduced to find matches or near-matches between two segment bundles. This task is almost the same as know problem in computer science called Stable Marriage Problem. Because the problem formulation slightly differs from the standard one I implement Gale-Shapley algorithm \citep{Gale1962} one of the most efficient algorithms with the corresponding extra requirements. 
+
+% The standard stable marriage problem is formulated such that there is a group of men and a group of women and each individual from each group expresses their preferences for every individual from the opposite group as an ordered list. The assumption is that every individual expressed preferences as an ordering of individuals from the opposite group from the most preferred one to the least preferred one. Thus the preferences must be \textit{complete} and \textit{fully ordered}. None of the last two constraints could be fulfilled in the context of the present evaluation and I explain why by exploring and explaining the identity criteria between two segments. 
+
+% Leaving aside the features and focusing only on the segment span we can say that two segments are identical when their start and end indexes are identical. However it is not always the case and there are situations when we would like to consider two segments identical even if their spans differ. 
+
+% Firstly, there is an encoding problem. Some text files start with a BOM or contain non printable characters resulting in a technical problem of mismatch between how UAM Coprus Tool reads files and how the parser evaluation module reads them introducing two types of text-segment mismatch: (a) shifted text and (b) shrieked/enlarged text span. This problem has been overcome by an extra module which indexes CG words and sentences (as word collections) in the raw text. This helps re-indexing the parse segments in such a way that their text ``coincides'' with the text in the CT annotations and readjusting their indexes. 
+
+%\begin{tabular}{|c|c|c|c|c|c|}
+%	\hline CT text & parser text & CT span & parser span & parser text & notes \\ 
+%	\hline So two weeks ago & -BOM-So two weeks ago & 0,16 & 0,16 & xxxxSo two weeks & the non-printablecharacters shift the text rigth \\ 
+%	\hline  So two weeks    ago &  & 0,20 & 1,17 &  & the extra spaces and tabs in text do not appear in the parser segments \\ 
+%	\hline  &  &  &  &  &  \\ 
+%	\hline  &  &  &  &  &  \\ 
+%	\hline 
+%\end{tabular} 
+
+% Secondly, there is a feature comparison problem. Provided that two segments have identical spans and textual content but two different sets of features. To overcome this problem I force segments to carry only one feature. The consequence are multiple segments with the same span (Figure \ref{fig:segment-simple}) for each feature instead of single segment with multiple features (Figure \ref{fig:segment-multiple}).
+
+% \begin{figure}[H]
+% \centering
+% \begin{minipage}{0.45\linewidth}
+% 	\centering
+% 	\begin{tikzpicture}[pattern-node]
+% 	\node[pattern-node] (start) {20};
+% 	\node[pattern-node, right = 7em of start] (end) {27};
+% 	\draw[edge-style] (start) -- (end) node[midway, above]{configuration;\\relational;\\attributive};
+% 	\end{tikzpicture}
+% 	\caption{A segment with a set of features}
+% 	\label{fig:segment-multiple}
+% \end{minipage}
+% \quad
+% \begin{minipage}{0.45\linewidth}
+% 	\centering
+% 	\begin{tikzpicture}[pattern-node] 
+% 	\node[pattern-node] (start1) {20};
+% 	\node[pattern-node, right = 7em of start1] (end1) {27};
+% 	\draw[edge-style] (start1) -- (end1) node[midway, above]{configuration};
+
+% 	\node[pattern-node, below = 1em of start1] (start2) {20};
+% 	\node[pattern-node, right = 7em of start2] (end2) {27};
+% 	\draw[edge-style] (start2) -- (end2) node[midway, above]{relational};
+	
+% 	\node[pattern-node, below = 1em of start2] (start3) {20};
+% 	\node[pattern-node, right = 7em of start3] (end3) {27};
+% 	\draw[edge-style] (start3) -- (end3) node[midway, above]{attributive};	
+% 	\end{tikzpicture}
+% 	\caption{A set of segments with single features}
+% 	\label{fig:segment-simple}
+% \end{minipage}
+% \end{figure}
+
+% When each segment contains exactly one feature the evaluation can be focused on one or a set of features of interest by selecting segments that contain exactly those. 
+
+\section{Syntactic Evaluation}
+
+% The syntactic evaluation is based on the corpus produced together with Ela Oren focused on Constituency and clause Mood analysis. The text represents a blog article of a person diagnosed with OCD writing about the challenge of overcoming OCG. 
+
+% I first present few differences in how corpus has been annotated as compared to parser output, then present segmentation statistics followed by featured statistics.  
+
+%The differences to parser
+% In the corpus, punctuation marks such as commas, semicolons, three dots and full stops are not included into the constituent segments while the parser includes them usually at the end of each segment. Neither the conjunctions (and, but, so , etc.) are included into the corpus segments because they are considered markers in the clause/group complexes. The parser, on the other hand, includes them into the segments. Moreover the conjunct spans differ as well. Instead of being annotated in parallel segments as represented in Figure \ref{fig:segment-conjunction-paralel} they are subsumed in a cascade from the former to the latter as depicted in Figure \ref{fig:segment-conjunction-subsumed}. 
+
+% \begin{figure}[H]
+% 	\centering
+% 	\begin{minipage}{0.45\linewidth}
+% 		\centering
+% 		\begin{tikzpicture}[pattern-node]
+% 		\node[pattern-node] (start) {};
+% 		\node[pattern-node, right = 5em of start] (end) {};
+% 		\draw[edge-style] (start) -- (end) node[midway, above]{conjunct 1};
+		
+% 		\node[pattern-node, right = .5em of end] (conj) {and};
+		
+% 		\node[pattern-node, right = .5em of conj] (start1) {};
+% 		\node[pattern-node, right = 5em of start1] (end1) {};
+% 		\draw[edge-style] (start1) -- (end1) node[midway, above]{conjunct 2};
+		
+% 		\end{tikzpicture}
+% 		\caption{Conjuncts annotated as parallel segments}
+% 		\label{fig:segment-conjunction-paralel}
+% 	\end{minipage}
+% 	\quad
+% 	\begin{minipage}{0.45\linewidth}
+% 		\centering
+% 		\begin{tikzpicture}[pattern-node] 
+% 		\node[pattern-node] (start) {};
+% 		\node[pattern-node, right = 5em of start, yshift=-2em] (conj) {and};
+		
+% 		\node[pattern-node, right = .5em of conj] (start1) {};
+% 		\node[pattern-node, right = 5em of start1] (end1) {};
+% 		\draw[edge-style] (start1) -- (end1) node[midway, below]{conjunct 2};
+
+% 		\node[pattern-node, right =0em of end1,yshift=2em] (end) {};
+% 		\draw[edge-style] (start) -- (end) node[midway, above]{conjunct 1};
+
+% 		\end{tikzpicture}
+% 		\caption{Conjuncts annotated as subsumed segments}
+% 		\label{fig:segment-conjunction-subsumed}
+% 	\end{minipage}
+% \end{figure}
+
+Another difference is the way verbs and verb groups are handled. In the parser is implemented the Sydney Grammar's Finite and Predicate constituents while the corpus is annotated according to Cardiff Grammar with Main Verbs, Finite, Auxiliary, Negation Particles etc. as explained in Section \ref{sec:discussion-unit-classes}. % and Appendix \ref{ch:syntax-overview}.
+
+% %The segmentation statistics 
+% The above described differences in annotation rules are inevitably reflected in segmentation differences. Let's compare now the corpus and parser segmentation. I use geometric distance ($ d= \sqrt{\varDelta start ^{2}+\varDelta end ^{2}} $) to measure the difference between the segments matched with Gale-Shapley algorithm. Figure \ref{fig:segment-distance-distribution} represents distribution of matches according to the distance. 71.11\% of the segments have identical spans while the rest of 28.8\% have minor to major differences of which 19\% are distanced 1-5 characters due to differences in (a) punctuation, (b) conjunction and (c)verbal group treatment described above. The rest 9.9\% of long and very long distances (6-182 characters) are due to differences in verbal group treatment, subsumed conjuncts (clause and group conjunctions) and erroneous prepositional phrase attachment (treated as Qualifier instead of Complement/Adjunct or vice versa).
+
+% \begin{figure}[!ht]
+% 	\centering
+% 	\begin{tikzpicture}[pattern-node] 
+% 	\begin{axis}[
+% 	scale only axis,
+% 	axis y line*=left,
+% 	axis x line*=bottom,
+% 	xlabel=$Geometric Distance$,
+% 	ylabel=$Count$,
+% 	ylabel near ticks,
+% 	xlabel near ticks]
+% 	\addplot[color=black, mark = x] coordinates {
+% 		(0,	3433)
+% 		(5,	919)
+% 		(10,	135)
+% 		(15,	74)
+% 		(20,	50)
+% 		(25,	33)
+% 		(30,	33)
+% 		(35,	27)
+% 		(40,	21)
+% 		(45,	24)
+% 		(50,	9)
+% 		(55,	11)
+% 		(60,	15)
+% 		(65,	8)
+% 		(70,	15)
+% 		(75,	3)
+% 		(80,18)
+% 	};
+% 	\end{axis}
+	
+% 	\begin{axis}[
+% 	scale only axis,
+% 	axis y line*=right,
+% 	hide x axis,
+% 	ylabel=$Distribution$,
+% 	ylabel near ticks]
+% 	\addplot[color=black, mark = x] coordinates {		
+% 		(0,		.7110604805)
+% 		(5,		.1903479702)
+% 		(10,	.02796188898)
+% 		(15,	.01532725766)
+% 		(20,	.01035625518)
+% 		(25,	.00683512842)
+% 		(30,	.00683512842)
+% 		(35,	.0055923778)
+% 		(40,	.00434962717)
+% 		(45,	.00497100249)
+% 		(50,	.00186412593)
+% 		(55,	.00227837614)
+% 		(60,	.00310687655)
+% 		(65,	.00165700083)
+% 		(70,	.00310687655)
+% 		(75,	.00062137531)
+% 		(80,	.00372825186)
+% 	};
+% 	\end{axis}
+% 	\end{tikzpicture}
+% 	\caption{Segment distance distribution}
+% 	\label{fig:segment-distance-distribution}
+% \end{figure}
+
+%The featurered statistics
+Next I present evaluation data for systemic features and systems overall annotated in the corpus and parser. In the tables below are presented the following statistics for features and systems (in upper caps): number of segments in corpus containing the feature (M/N) percentage of the in corpus (M/\%), number of segments generated by the parser (A/N) and corresponding percentage (A/\%), precision, recall and F_{1} measures. 
+
+Table \ref{tab:rank-statistics} contains evaluation statistics for the rank system. In this evaluation only group and clause level features have been taken into account excluding those at the word rank which are missing in the corpus. Clause and group constituents are identified with 0.88 and 0.9 F_{1} scores. 
+
+The marker feature is used for functional words such as prepositions, verbal prepositional particles, coordinating and subordinations conjunctions. However the prepositional phrases in the corpus do not contain the marker segment as the parser generates and only conjunctions and verbal particles are marked leading to low precision of 0.38. Overall the rank constituents are identified with 0.82 F_{1} score.
+
+\begin{table}[H]
+	\centering
+	\begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
+		\hline
+		\textit{Name} & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ \hline
+		%&                &                 &                 &                  &                    &                 &             \\ \hline
+		RANK          & 2455       & 26.922          & 4052        & 36.156           & 0.716              & 0.902           & 0.762       \\ \hline
+		clause        & 529        & 21.548          & 545         & 13.450           & 
+		0.875              & 0.902           & 0.888       \\ \hline
+		group         & 1699       & 69.206          & 1760        & 43.435           & 0.886              & 0.918           & 0.902       \\ \hline
+		marker        & 224        & 9.124           & 396         & 9.773            & 0.389              & 0.688           & 0.497       \\ \hline
+		word          & 3          & 0.122           & 1351        & 33.342           & -              & -           & -      \\ \hline
+	\end{tabulary}
+	\caption{Rank system evaluation statistics}
+	\label{tab:rank-statistics}
+\end{table}
+
+The clause elements are systematized in Interpersonal function system whose evaluation statistics are contained in the Table \ref{tab:interpersonal-statistics}. Subjects and Predicators have the highest F_{1} scores of 0.889 and 0.888. Indirect objects have been perfectly identified but they are very few and do not have a statistical significance. Adjuncts and Complements (direct objects) have a lower precision and higher recall scoring 0.628 and 0.661 F_{1}. This is in part due to the fact that the parser annotates prepositional phrases that follow a predicate as both Complement and Adjunct being unable to syntactically distinguish between the two and this task being overtaken during the semantic analysis. The Finite elements are distinguished in the corpus only when they stand alone thus are not conflated with the predicator as in Example \ref{ex:non-conflated-finite}. But when the finite is conflated with the Predicator as in Example \ref{ex:conflated-finite} it has not been annotated in the corpus but it should be and further corrections of the corpus shall be implemented. For this reason there is a big difference between precision and recall 0.172 and 0.980 because most Finites in corpus have been identified by the parser and most of them are missing from the corpus. 
+
+\begin{exe}
+	\ex \label{ex:non-conflated-finite} He may (Finite) go (Predicator) home latter.
+	\ex \label{ex:conflated-finite} He already went (Finite/Predicator) home. 
+\end{exe}
+
+\begin{table}[H]
+	\centering
+	\begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
+		\hline
+		\textit{Name}          & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ \hline
+		%&                &                 &                 &                  &                    &                 &             \\ \hline
+		INTERPERSONAL-FUNCTION & 1681       & 18.434          & 2793        & 24.922           & 0.659              & 0.910           & 0.726       \\ \hline
+		finite                 & 150        & 8.923           & 855         & 30.612           & 0.172              & 0.980           & 0.293       \\ \hline
+		adjunct                & 266        & 15.824          & 358         & 12.818           & 0.547              & 0.737           & 0.628       \\ \hline
+		subject                & 389        & 23.141          & 439         & 15.718           & 0.838              & 0.946           & 0.889       \\ \hline
+		complement-direct      & 347        & 20.642          & 594         & 21.267           & 0.524              & 0.896           & 0.661       \\ \hline
+		complement-indirect    & 2          & 0.119           & 2           & 0.072            & 1              & 1           & 1      \\ \hline
+		predicator             & 527        & 31.350          & 545         & 19.513           & 0.873              & 0.903           & 0.888       \\ \hline
+	\end{tabulary}
+	\caption{Mood clause elements evaluation statistics}
+	\label{tab:interpersonal-statistics}
+\end{table}
+
+In Table \ref{tab:group-type-statistics} are presented evaluation statistics for Group Type system meaning how well are identified grammatical classes at the group level. Nominal and Verbal groups are parsed with 0.9 precision followed by prepositional, adverbial and adjectival groups with 0.72, 0.6 and 0.55 scores.
+
+\begin{table}[H]
+	\centering
+	\begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
+		\hline
+		\textit{Name}       & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ \hline
+		&              &              &              &              &               &              &             \\ \hline
+		GROUP-TYPE          & 1698     & 18.620       & 1728     & 15.419       & 0.838         & 0.853        & 0.845       \\ \hline
+		nominal-group       & 648      & 38.163       & 622      & 35.995       & 0.905         & 0.869        & 0.887       \\ \hline
+		verbal-group        & 678      & 39.929       & 705      & 40.799       & 0.894         & 0.929        & 0.911       \\ \hline
+		prepositional-group & 120      & 7.067        & 124      & 7.176        & 0.726         & 0.750        & 0.738       \\ \hline
+		adverbial-group     & 187      & 11.013       & 218      & 12.616       & 0.606         & 0.706        & 0.652       \\ \hline
+		adjectival-group    & 65       & 3.828        & 59       & 3.414        & 0.559         & 0.508        & 0.532       \\ \hline
+	\end{tabulary}
+	\caption{Evaluation statistics for group types}
+	\label{tab:group-type-statistics}
+\end{table}
+
+
+%\begin{table}[h]
+%	\centering
+%	\begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
+%		\hline
+%		\textit{Name}       & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ \hline
+%		&              &               &              &               &               &              &             \\ \hline
+%		ADJUNCT-TYPE        & 253      & 2.774         & 86       & 0.767         & 0.733         & 0.249        & 0.372       \\ \hline
+%		mood-adjunct        & 108      & 42.688        & 86       & 100       & 0.733         & 0.583        & 0.649       \\ \hline
+%		comment-adjunct     & 21       & 8.300         & 0        & 0         & -1        & 0        & 0       \\ \hline
+%		conjunctive-adjunct & 14       & 5.534         & 0        & 0         & -1        & 0        & 0       \\ \hline
+%		other-adjunct       & 110      & 43.478        & 0        & 0         & -1        & 0        & 0       \\ \hline
+%	\end{tabulary}
+%	\caption{My caption}
+%	\label{my-label}
+%\end{table}
+%
+%\begin{table}[h]
+%	\centering
+%	\begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
+%		\hline
+%		\textit{Name}     & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ \hline
+%		&              &               &              &               &               &              &             \\ \hline
+%		MOOD-ADJUNCT-TYPE & 108      & 1.184         & 120      & 1.071         & 0.467         & 0.519        & 0.491       \\ \hline
+%		temporality       & 43       & 39.815        & 54       & 45        & 0.537         & 0.674        & 0.598       \\ \hline
+%		modality          & 36       & 33.333        & 20       & 16.667        & 0.650         & 0.361        & 0.464       \\ \hline
+%		intensity         & 29       & 26.852        & 46       & 38.333        & 0.304         & 0.483        & 0.373       \\ \hline
+%	\end{tabulary}
+%	\caption{My caption}
+%	\label{my-label}
+%\end{table}
+%
+%
+%
+%\begin{table}[h]
+%	\centering
+%	\begin{tabulary}{\textwidth}{|L|l|l|l|l|l|l|l|}
+%		\hline
+%		\textit{Name} & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ \hline
+%		&              &               &              &               &               &              &             \\ \hline
+%		TOTAL         & 9119.000     &               & 11207.000    &               & 0.469         & 0.576        & 0.517       \\ \hline
+%	\end{tabulary}
+%	\caption{My caption}
+%	\label{my-label}
+%\end{table}
+
+\section{Semantic Evaluation}
+For the semantic evaluation has been used a corpus created by Anke Schultz for her PhD project annotated with Transitivity features i.e Configuration, Process and Participant which from constituency point of view correspond to the Clause, Predicator and Participants(predicate arguments) to Subjects and Complements cumulated. 
+
+\begin{table}[H]
+	\centering
+	\begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
+		\hline
+		\textit{Name} & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ 
+		%\hline
+		%&                &                 &                 &                  &                    &                 &             \\ \hline
+		Configuration          & 1466       & -          & 1833        & -           & 0.736              & 0.915           & 0.814       \\ \hline
+		Process        & 1423        & -          & 1814         & -           & 
+		0.707              & 0.902           & 0.791       \\ \hline
+		Participant         & 2652       & -          & 3398        & -           & 0.732              & 0.925           & 0.816       \\ \hline
+	\end{tabulary}
+	\caption{Transitivity System evaluation statistics}
+	\label{tab:transitivity-statistics}
+\end{table}
+
+Transitivity analysis is semantic in nature and poses challenges in meaning selection beyond constituent class or function. Current parser does not select one meaning but rather proposes a set of possible configurations for each clause. If top level Transitivity features correspond fairly to the number of syntactic constituents, the more delicate features are parsed with an average of 2.7 proposed features for each manually annotated one.
+
+\begin{table}[H]
+	\centering
+	\begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
+		\hline
+		\textit{Name} & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ \hline
+		%&                &                 &                 &                  &                    &                 &             \\ \hline
+		%\hline 
+		\rule[-2ex]{0pt}{5.5ex} CONFIGURATION-TYPE
+		& 1466
+		& 23.12
+		& 1308
+		& 7.57 & 0.542
+		& 0.483
+		& 0.508
+		\\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} action
+		& 359
+		& 24.82
+		& 453
+		& 33.99
+		& 0.315
+		& 0.409
+		& 0.333
+		\\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} relational
+		& 546
+		& 37.79
+		& 445
+		& 34.77
+		& 0.645
+		& 0.530
+		& 0.574
+		\\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} mental
+		& 452
+		& 29.86
+		& 318
+		& 24.27
+		& 0.744
+		& 0.530
+		& 0.605
+		\\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} influential
+		& 81
+		& 6.69
+		& 91
+		& 7.39
+		& 0.556
+		& 0.519
+		& 0.484
+		\\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} event-relating
+		& 28
+		& 3.48
+		& 1
+		& 1.85
+		& 1.0 & 0.5 & 0.667
+		\\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} environmental
+		& 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+		\hline \rule[-2ex]{0pt}{5.5ex} other & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+		%\hline \rule[-2ex]{0pt}{5.5ex}  &  &  &  &  &  &  &  \\ 
+		\hline 
+	\end{tabulary}
+	\caption{Configuration type evaluation statistics}
+	\label{tab:configuration-statistics}
+\end{table}
+
+The semantic evaluation yields surprisingly positive results for relational and metal processes. At the same time, actions would have been expected to score a high accuracy but as seen in the results it is not the case. Despite a high number of them both in the corpus (24\%) and in the parses (33\%) they seem to be misaligned and perhaps not matched in the process. Further investigation should be conducted to spot the source of such a low score. Next I present a short critical discussion of the overall evaluation. 
+
+% \section{Discussion}
+% \label{sec:evaluation-discussion}
+% Further investigation shall be conducted to determine the error types, shortcomings in the corpus and the parser. But beyond the simple improvement to the corpus such as adding the missing Finite elements it would benefit tremendously from a second annotator in order to evaluate reliability of the annotation itself and how much of a gold standard it can be considered for the current work. 
+
+% Also the corpus size is very small and many features are missing or severely underrepresented and bear no statistical significance. For example event relating, environmental and other processes are missing from the corpus. Also the number of other features that the parser provides are missing from the manual analysis and it would be interesting to add some of them to study how varies the accuracy distribution as the delicacy of features increases. 
+
+% Since for both syntactic and semantic annotations there is only a single author annotation available, the results shall be considered indicative and by no means representative for the parser performance. Nevertheless they can already be considered as a good feedback for looking into certain areas of the grammar with considerably low performance in order identify the potential problems. 
+
+
+
+
+

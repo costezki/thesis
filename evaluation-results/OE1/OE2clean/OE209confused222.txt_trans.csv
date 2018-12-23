@@ -1,0 +1,542 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.2012448132780083
+,Recall,0.6643835616438356
+,F1,0.30891719745222934
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+128,0.0,"68, 69","68, 69",0,I,I,agent,agent
+6,0.0,"62, 67","62, 67",0,seems,seems,main,main
+7,1.0,"68, 92","68, 93",1,I'm hurting those I love,I'm hurting those I love.,phenomenon,phenomenon
+131,1.0,"80, 92","80, 93",1,those I love,those I love.,affected,affected
+132,1.0,"68, 92","68, 93",1,I'm hurting those I love,I'm hurting those I love.,action,action
+130,0.0,"72, 79","72, 79",0,hurting,hurting,main,main
+15,9.0,"159, 162","159, 171",9,him,him so much.,phenomenon,phenomenon
+14,0.0,"154, 158","154, 158",0,miss,miss,main,main
+9,0.0,"94, 117","94, 117",0,My boyfriend of 3 years,My boyfriend of 3 years,agent,agent
+11,5.0,"132, 134","127, 134",5,me,with me,affected,affected
+13,0.0,"152, 153","152, 153",0,I,I,emoter,emoter
+10,8.0,"118, 131","118, 123",8,broke up with,broke,main,main
+16,4.123105625617661,"152, 170","148, 171",5,I miss him so much,and I miss him so much.,mental,mental
+134,0.0,"222, 225","222, 225",0,was,was,main,main
+17,0.0,"172, 174","172, 174",0,We,We,agent,agent
+20,9.0,"187, 204","187, 195",9,a future together,a future,created-phenomenon,created-phenomenon
+23,0.0,"211, 218","211, 218",0,thought,thought,main,main
+25,4.123105625617661,"209, 238","205, 239",5,I thought he was my soul mate,and I thought he was my soul mate.,mental,mental
+25,4.123105625617661,"209, 238","205, 239",5,I thought he was my soul mate,and I thought he was my soul mate.,two-role-cognition,two-role-cognition
+19,0.0,"179, 186","179, 186",0,planned,planned,main,main
+22,0.0,"209, 210","209, 210",0,I,I,cognizant,cognizant
+24,1.0,"219, 238","219, 239",1,he was my soul mate,he was my soul mate.,phenomenon,phenomenon
+37,37.21558813185679,"318, 357","286, 338",40,I sometimes even cry to myself at night,"and I think about him everyday, I sometimes even cry",action,action
+32,6.0,"292, 303","292, 297",6,think about,think,main,main
+28,0.0,"245, 251","245, 251",0,having,having,main,main
+26,0.0,"240, 241","240, 241",0,I,I,affected-carrier,affected-carrier
+29,17.0,"252, 285","252, 268",17,a difficult time getting over him,a difficult time,possessed,possessed
+30,0.0,"240, 285","240, 285",0,I am having a difficult time getting over him,I am having a difficult time getting over him,relational,relational
+30,0.0,"240, 285","240, 285",0,I am having a difficult time getting over him,I am having a difficult time getting over him,possessive,possessive
+44,0.0,"412, 419","412, 419",0,started,started,main,main
+40,0.0,"378, 393","378, 393",0,a wonderful guy,a wonderful guy,affected,affected
+39,0.0,"374, 377","374, 377",0,met,met,main,main
+38,2.0,"372, 373","370, 373",2,I,", I",agent,agent
+46,4.123105625617661,"398, 426","394, 427",5,we have since started dating,and we have since started dating.,influential,influential
+45,1.0,"420, 426","420, 427",1,dating,dating.,created-phenomenon,created-phenomenon
+41,0.0,"359, 393","359, 393",0,"A month ago, I met a wonderful guy","A month ago, I met a wonderful guy",action,action
+42,0.0,"398, 400","398, 400",0,we,we,agent,agent
+49,1.0,"434, 484","434, 485",1,caring and thoughtful and completely understanding,caring and thoughtful and completely understanding.,attribute,attribute
+48,0.0,"431, 433","431, 433",0,is,is,main,main
+47,0.0,"428, 430","428, 430",0,He,He,carrier,carrier
+50,1.0,"428, 484","428, 485",1,He is caring and thoughtful and completely understanding,He is caring and thoughtful and completely understanding.,attributive,attributive
+50,1.0,"428, 484","428, 485",1,He is caring and thoughtful and completely understanding,He is caring and thoughtful and completely understanding.,relational,relational
+137,0.0,"503, 504","503, 504",0,I,I,carrier,carrier
+144,0.0,"559, 566","559, 566",0,helping,helping,main,main
+53,16.401219466856727,"503, 534","516, 524",23,I still have feelings for my ex,feelings,phenomenon,phenomenon
+56,3.0,"555, 557","552, 557",3,me,by me,affected,affected
+146,2.23606797749979,"559, 587","557, 588",3,helping me as much as he can,", helping me as much as he can.",action,action
+138,0.0,"511, 515","511, 515",0,have,have,main,main
+145,0.0,"567, 569","567, 569",0,me,me,affected,affected
+52,6.0,"489, 497","489, 491",6,is aware,is,main,main
+139,9.0,"516, 534","525, 534",9,feelings for my ex,for my ex,possessed,possessed
+57,4.0,"539, 557","535, 557",4,still stands by me,and still stands by me,action,action
+55,3.0,"545, 554","545, 551",3,stands by,stands,main,main
+70,3.1622776601683795,"685, 690","682, 691",4,my ex,to my ex.,carrier,carrier
+68,0.0,"653, 667","653, 667",0,the other half,the other half,possessed,possessed
+60,0.0,"596, 608","596, 608",0,my boyfriend,my boyfriend,phenomenon,phenomenon
+69,3.0,"674, 684","674, 681",3,belongs to,belongs,main,main
+58,0.0,"589, 590","589, 590",0,I,I,emoter,emoter
+64,0.0,"622, 628","622, 628",0,giving,giving,main,main
+71,12.041594578792296,"653, 690","641, 691",13,the other half still belongs to my ex,my heart as the other half still belongs to my ex.,relational,relational
+71,12.041594578792296,"653, 690","641, 691",13,the other half still belongs to my ex,my heart as the other half still belongs to my ex.,possessive,possessive
+59,0.0,"591, 595","591, 595",0,love,love,main,main
+61,0.0,"589, 608","589, 608",0,I love my boyfriend,I love my boyfriend,mental,mental
+76,0.0,"718, 719","718, 719",0,I,I,emoter,emoter
+80,17.0,"758, 792","775, 792",17,start a new life with my boyfriend,with my boyfriend,phenomenon,phenomenon
+81,21.0,"758, 792","737, 792",21,start a new life with my boyfriend,my ex completely and start a new life with my boyfriend,mental,mental
+86,13.038404810405298,"797, 843","810, 844",14,I can't seem to shake these feelings for my ex,to shake these feelings for my ex.,action,action
+85,10.0,"819, 843","819, 833",10,these feelings for my ex,these feelings,affected,affected
+141,3.0,"813, 818","810, 818",3,shake,to shake,main,main
+73,1.0,"694, 695","693, 695",1,m,'m,main,main
+78,40.80441152620633,"725, 753","737, 792",44,to get over my ex completely,my ex completely and start a new life with my boyfriend,phenomenon,phenomenon
+77,0.0,"720, 724","720, 724",0,want,want,main,main
+94,0.0,"870, 877","870, 877",0,planned,planned,main,main
+87,0.0,"845, 849","845, 849",0,What,What,possessed,possessed
+91,2.0,"858, 862","856, 862",2,what,", what",created-phenomenon,created-phenomenon
+89,0.0,"853, 856","853, 856",0,had,had,main,main
+96,1.0,"887, 910","887, 911",1,how my trust was broken,how my trust was broken.,action,action
+99,0.0,"904, 910","904, 910",0,broken,broken,main,main
+88,0.0,"850, 852","850, 852",0,we,we,carrier,carrier
+92,0.0,"863, 865","863, 865",0,we,we,agent,agent
+90,0.0,"845, 856","845, 856",0,What we had,What we had,relational,relational
+90,0.0,"845, 856","845, 856",0,What we had,What we had,possessive,possessive
+115,5.0,"1039, 1048","1039, 1043",5,take time,take,main,main
+114,0.0,"1026, 1038","1026, 1038",0,these things,these things,agent,agent
+105,0.0,"979, 980","979, 980",0,I,I,emoter,emoter
+102,3.0,"916, 925","916, 922",3,scared of,scared,main,main
+113,11.0,"1019, 1048","1008, 1048",11,I know these things take time,", although I know these things take time",mental,mental
+113,11.0,"1019, 1048","1008, 1048",11,I know these things take time,", although I know these things take time",two-role-cognition,two-role-cognition
+112,0.0,"1026, 1048","1026, 1048",0,these things take time,these things take time,phenomenon,phenomenon
+119,8.0,"1057, 1091","1065, 1091",8,to make this new relationship work,this new relationship work,phenomenon,phenomenon
+118,0.0,"1052, 1056","1052, 1056",0,want,want,main,main
+109,49.4064773081425,"979, 1008","950, 1048",69,I don't want to be hurt again,"my new relationship, because I don't want to be hurt again, although I know these things take time",mental,mental
+111,0.0,"1021, 1025","1021, 1025",0,know,know,main,main
+107,4.0,"987, 991","983, 991",4,want,n't want,main,main
+110,0.0,"1019, 1020","1019, 1020",0,I,I,cognizant,cognizant
+116,0.0,"1026, 1048","1026, 1048",0,these things take time,these things take time,action,action
+108,40.0,"992, 1008","992, 1048",40,to be hurt again,"to be hurt again, although I know these things take time",phenomenon,phenomenon
+,
+,Manual mismatching all parsed (False Negative)
+4,"21, 54",I'm really confused at the moment,relational
+4,"21, 54",I'm really confused at the moment,attributive
+1,"21, 22",I,carrier
+2,"23, 24",m,main
+3,"32, 40",confused,attribute
+8,"59, 92",it seems I'm hurting those I love,influential
+12,"94, 147",My boyfriend of 3 years broke up with me 6 months ago,action
+21,"172, 204",We had planned a future together,influential
+136,"219, 238",he was my soul mate,relational
+136,"219, 238",he was my soul mate,attributive
+133,"219, 221",he,carrier
+135,"226, 238",my soul mate,attribute
+34,"290, 316",I think about him everyday,mental
+34,"290, 316",I think about him everyday,two-role-cognition
+31,"290, 291",I,cognizant
+33,"304, 307",him,phenomenon
+35,"318, 319",I,agent
+36,"335, 338",cry,main
+54,"486, 534",He is aware that I still have feelings for my ex,mental
+54,"486, 534",He is aware that I still have feelings for my ex,two-role-cognition
+51,"486, 488",He,cognizant
+140,"503, 534",I still have feelings for my ex,relational
+140,"503, 534",I still have feelings for my ex,possessive
+142,"581, 583",he,agent
+67,"613, 649",I'm only giving him half of my heart,relational
+67,"613, 649",I'm only giving him half of my heart,possessive
+62,"613, 614",I,agent
+65,"629, 632",him,affected-carrier
+66,"633, 649",half of my heart,possessed
+75,"692, 709",I'm very confused,relational
+75,"692, 709",I'm very confused,attributive
+72,"692, 693",I,carrier
+74,"696, 709",very confused,attribute
+79,"718, 753",I want to get over my ex completely,mental
+82,"797, 798",I,agent
+95,"858, 877",what we had planned,influential
+97,"891, 899",my trust,affected
+104,"912, 969",I'm scared of getting too involved in my new relationship,mental
+100,"912, 913",I,emoter
+103,"926, 969",getting too involved in my new relationship,phenomenon
+120,"1050, 1091",I want to make this new relationship work,mental
+117,"1050, 1051",I,emoter
+123,"1099, 1108",how can I,action
+122,"1107, 1108",I,agent
+127,"1114, 1136",half my heart is black,relational
+127,"1114, 1136",half my heart is black,attributive
+124,"1114, 1127",half my heart,carrier
+125,"1128, 1130",is,main
+126,"1131, 1136",black,attribute
+,
+,Parsed mismatching all manual (False Positives)
+32,"32, 40",confused,main
+68,"68, 69",I,agent-cognizant
+68,"68, 69",I,agent-carrier
+68,"68, 69",I,agent-perceiver
+88,"88, 92",love,main
+68,"68, 93",I'm hurting those I love.,created-phenomenon
+80,"80, 93",those I love.,affected-emoter
+80,"80, 93",those I love.,affected-path
+80,"80, 93",those I love.,affected-perceiver
+80,"80, 93",those I love.,affected-cognizant
+80,"80, 93",those I love.,affected-carrier
+80,"80, 93",those I love.,affected-destination
+80,"80, 93",those I love.,affected-possessed
+80,"80, 93",those I love.,affected-source
+55,"55, 93",and it seems I'm hurting those I love.,process
+55,"55, 93",and it seems I'm hurting those I love.,mental
+55,"55, 93",and it seems I'm hurting those I love.,two-role-cognition
+68,"68, 93",I'm hurting those I love.,process
+68,"68, 93",I'm hurting those I love.,two-role-action
+159,"159, 171",him so much.,created-phenomenon
+94,"94, 117",My boyfriend of 3 years,affected-emoter
+94,"94, 117",My boyfriend of 3 years,affected-path
+94,"94, 117",My boyfriend of 3 years,affected-perceiver
+94,"94, 117",My boyfriend of 3 years,agent-cognizant
+94,"94, 117",My boyfriend of 3 years,affected-cognizant
+94,"94, 117",My boyfriend of 3 years,affected-carrier
+94,"94, 117",My boyfriend of 3 years,affected-destination
+94,"94, 117",My boyfriend of 3 years,affected
+94,"94, 117",My boyfriend of 3 years,agent-carrier
+94,"94, 117",My boyfriend of 3 years,affected-possessed
+94,"94, 117",My boyfriend of 3 years,agent-perceiver
+94,"94, 117",My boyfriend of 3 years,affected-source
+94,"94, 117",My boyfriend of 3 years,perceiver
+127,"127, 134",with me,affected-emoter
+127,"127, 134",with me,affected-path
+127,"127, 134",with me,affected-perceiver
+127,"127, 134",with me,affected-cognizant
+127,"127, 134",with me,affected-carrier
+127,"127, 134",with me,affected-destination
+127,"127, 134",with me,affected-possessed
+127,"127, 134",with me,matchee
+127,"127, 134",with me,affected-source
+152,"152, 153",I,affected-emoter
+166,"166, 170",much,main
+94,"94, 147",My boyfriend of 3 years broke up with me 6 months ago,process
+94,"94, 147",My boyfriend of 3 years broke up with me 6 months ago,matching
+94,"94, 147",My boyfriend of 3 years broke up with me 6 months ago,relational
+94,"94, 147",My boyfriend of 3 years broke up with me 6 months ago,two-role-action
+94,"94, 147",My boyfriend of 3 years broke up with me 6 months ago,one-role-action
+148,"148, 171",and I miss him so much.,process
+148,"148, 171",and I miss him so much.,emotive
+172,"172, 174",We,cognizant
+172,"172, 174",We,agent-cognizant
+172,"172, 174",We,agent-carrier
+172,"172, 174",We,agent-perceiver
+226,"226, 239",my soul mate.,affected-emoter
+226,"226, 239",my soul mate.,affected-path
+226,"226, 239",my soul mate.,affected-perceiver
+226,"226, 239",my soul mate.,affected-cognizant
+226,"226, 239",my soul mate.,affected-carrier
+226,"226, 239",my soul mate.,affected-destination
+226,"226, 239",my soul mate.,affected
+226,"226, 239",my soul mate.,affected-possessed
+226,"226, 239",my soul mate.,affected-source
+226,"226, 239",my soul mate.,range
+187,"187, 195",a future,phenomenon
+187,"187, 195",a future,created
+187,"187, 195",a future,range
+172,"172, 204",We had planned a future together,process
+172,"172, 204",We had planned a future together,mental
+172,"172, 204",We had planned a future together,two-role-cognition
+172,"172, 204",We had planned a future together,two-role-action
+172,"172, 204",We had planned a future together,action
+205,"205, 239",and I thought he was my soul mate.,process
+209,"209, 210",I,agent
+209,"209, 210",I,agent-cognizant
+209,"209, 210",I,affected-cognizant
+209,"209, 210",I,affected
+219,"219, 221",he,agent
+219,"219, 221",he,agent-cognizant
+219,"219, 221",he,agent-carrier
+219,"219, 221",he,agent-perceiver
+219,"219, 239",he was my soul mate.,created-phenomenon
+219,"219, 239",he was my soul mate.,process
+219,"219, 239",he was my soul mate.,two-role-action
+219,"219, 239",he was my soul mate.,action
+290,"290, 291",I,agent
+290,"290, 291",I,agent-cognizant
+290,"290, 291",I,agent-carrier
+290,"290, 291",I,agent-perceiver
+286,"286, 338","and I think about him everyday, I sometimes even cry",process
+286,"286, 338","and I think about him everyday, I sometimes even cry",one-role-action
+269,"269, 285",getting over him,process
+269,"269, 285",getting over him,directional
+269,"269, 285",getting over him,two-role-action
+269,"269, 276",getting,main
+240,"240, 241",I,agent
+240,"240, 241",I,agent-cognizant
+240,"240, 241",I,affected
+240,"240, 241",I,agent-carrier
+240,"240, 241",I,agent-perceiver
+240,"240, 241",I,carrier
+240,"240, 241",I,perceiver
+252,"252, 268",a difficult time,phenomenon
+252,"252, 268",a difficult time,affected-emoter
+252,"252, 268",a difficult time,created-phenomenon
+252,"252, 268",a difficult time,affected-path
+252,"252, 268",a difficult time,affected-perceiver
+252,"252, 268",a difficult time,affected-cognizant
+252,"252, 268",a difficult time,affected-carrier
+252,"252, 268",a difficult time,affected-destination
+252,"252, 268",a difficult time,affected
+252,"252, 268",a difficult time,affected-possessed
+252,"252, 268",a difficult time,affected-source
+252,"252, 268",a difficult time,created
+282,"282, 285",him,destination
+282,"282, 285",him,affected-destination
+282,"282, 285",him,range
+240,"240, 285",I am having a difficult time getting over him,process
+240,"240, 285",I am having a difficult time getting over him,causative
+240,"240, 285",I am having a difficult time getting over him,two-role-action
+240,"240, 285",I am having a difficult time getting over him,action
+378,"378, 393",a wonderful guy,affected-emoter
+378,"378, 393",a wonderful guy,affected-path
+378,"378, 393",a wonderful guy,affected-perceiver
+378,"378, 393",a wonderful guy,affected-cognizant
+378,"378, 393",a wonderful guy,affected-carrier
+378,"378, 393",a wonderful guy,affected-destination
+378,"378, 393",a wonderful guy,affected-possessed
+378,"378, 393",a wonderful guy,matchee
+378,"378, 393",a wonderful guy,affected-source
+378,"378, 393",a wonderful guy,range
+370,"370, 373",", I",agent-cognizant
+370,"370, 373",", I",affected-carrier
+370,"370, 373",", I",agent-carrier
+370,"370, 373",", I",agent-perceiver
+370,"370, 373",", I",carrier
+394,"394, 427",and we have since started dating.,process
+394,"394, 427",and we have since started dating.,starting
+420,"420, 427",dating.,phenomenon
+420,"420, 427",dating.,created
+359,"359, 393","A month ago, I met a wonderful guy",process
+359,"359, 393","A month ago, I met a wonderful guy",matching
+359,"359, 393","A month ago, I met a wonderful guy",relational
+359,"359, 393","A month ago, I met a wonderful guy",two-role-action
+420,"420, 426",dating,main
+398,"398, 400",we,affected-emoter
+398,"398, 400",we,affected-path
+398,"398, 400",we,affected-perceiver
+398,"398, 400",we,agent-cognizant
+398,"398, 400",we,affected-cognizant
+398,"398, 400",we,affected-carrier
+398,"398, 400",we,affected-destination
+398,"398, 400",we,affected
+398,"398, 400",we,agent-carrier
+398,"398, 400",we,affected-possessed
+398,"398, 400",we,agent-perceiver
+398,"398, 400",we,affected-source
+434,"434, 485",caring and thoughtful and completely understanding.,location
+434,"434, 485",caring and thoughtful and completely understanding.,range
+428,"428, 430",He,agent
+428,"428, 430",He,agent-cognizant
+428,"428, 430",He,affected-carrier
+428,"428, 430",He,affected
+428,"428, 430",He,agent-carrier
+428,"428, 430",He,agent-perceiver
+428,"428, 430",He,perceiver
+428,"428, 485",He is caring and thoughtful and completely understanding.,process
+428,"428, 485",He is caring and thoughtful and completely understanding.,locational
+428,"428, 485",He is caring and thoughtful and completely understanding.,two-role-action
+428,"428, 485",He is caring and thoughtful and completely understanding.,action
+503,"503, 504",I,agent
+503,"503, 504",I,agent-cognizant
+503,"503, 504",I,affected-carrier
+503,"503, 504",I,affected
+503,"503, 504",I,agent-carrier
+503,"503, 504",I,agent-perceiver
+503,"503, 504",I,perceiver
+516,"516, 524",feelings,affected-emoter
+516,"516, 524",feelings,created-phenomenon
+516,"516, 524",feelings,affected-path
+516,"516, 524",feelings,affected-perceiver
+516,"516, 524",feelings,affected-cognizant
+516,"516, 524",feelings,affected-carrier
+516,"516, 524",feelings,affected-destination
+516,"516, 524",feelings,affected
+516,"516, 524",feelings,affected-possessed
+516,"516, 524",feelings,affected-source
+516,"516, 524",feelings,created
+516,"516, 524",feelings,carrier
+552,"552, 557",by me,affected-emoter
+552,"552, 557",by me,affected-path
+552,"552, 557",by me,affected-perceiver
+552,"552, 557",by me,affected-cognizant
+552,"552, 557",by me,affected-carrier
+552,"552, 557",by me,affected-destination
+552,"552, 557",by me,affected-possessed
+552,"552, 557",by me,affected-source
+557,"557, 588",", helping me as much as he can.",process
+557,"557, 588",", helping me as much as he can.",causative
+557,"557, 588",", helping me as much as he can.",relational
+557,"557, 588",", helping me as much as he can.",possessive
+557,"557, 588",", helping me as much as he can.",two-role-action
+567,"567, 569",me,phenomenon
+567,"567, 569",me,affected-emoter
+567,"567, 569",me,created-phenomenon
+567,"567, 569",me,affected-path
+567,"567, 569",me,affected-perceiver
+567,"567, 569",me,affected-cognizant
+567,"567, 569",me,affected-carrier
+567,"567, 569",me,affected-destination
+567,"567, 569",me,affected-possessed
+567,"567, 569",me,affected-source
+525,"525, 534",for my ex,phenomenon
+525,"525, 534",for my ex,affected-emoter
+525,"525, 534",for my ex,created-phenomenon
+525,"525, 534",for my ex,affected-path
+525,"525, 534",for my ex,affected-perceiver
+525,"525, 534",for my ex,affected-cognizant
+525,"525, 534",for my ex,affected-carrier
+525,"525, 534",for my ex,affected-destination
+525,"525, 534",for my ex,affected
+525,"525, 534",for my ex,affected-possessed
+525,"525, 534",for my ex,affected-source
+525,"525, 534",for my ex,created
+535,"535, 557",and still stands by me,process
+535,"535, 557",and still stands by me,two-role-action
+535,"535, 557",and still stands by me,one-role-action
+557,"557, 588",", helping me as much as he can.",influential
+557,"557, 588",", helping me as much as he can.",preventive
+682,"682, 691",to my ex.,affected-carrier
+682,"682, 691",to my ex.,agent-carrier
+653,"653, 667",the other half,affected-possessed
+596,"596, 608",my boyfriend,created-phenomenon
+589,"589, 590",I,affected-emoter
+641,"641, 691",my heart as the other half still belongs to my ex.,process
+589,"589, 608",I love my boyfriend,process
+589,"589, 608",I love my boyfriend,emotive
+725,"725, 731",to get,main
+718,"718, 719",I,affected-emoter
+775,"775, 792",with my boyfriend,created-phenomenon
+775,"775, 792",with my boyfriend,created
+801,"801, 809",n't seem,main
+737,"737, 792",my ex completely and start a new life with my boyfriend,process
+737,"737, 792",my ex completely and start a new life with my boyfriend,desiderative
+810,"810, 844",to shake these feelings for my ex.,process
+810,"810, 844",to shake these feelings for my ex.,two-role-action
+810,"810, 844",to shake these feelings for my ex.,phenomenon
+810,"810, 844",to shake these feelings for my ex.,created-phenomenon
+819,"819, 833",these feelings,affected-emoter
+819,"819, 833",these feelings,affected-path
+819,"819, 833",these feelings,affected-perceiver
+819,"819, 833",these feelings,affected-cognizant
+819,"819, 833",these feelings,affected-carrier
+819,"819, 833",these feelings,affected-destination
+819,"819, 833",these feelings,affected-possessed
+819,"819, 833",these feelings,affected-source
+819,"819, 833",these feelings,range
+797,"797, 798",I,cognizant
+797,"797, 798",I,agent-cognizant
+797,"797, 798",I,affected-cognizant
+754,"754, 792",and start a new life with my boyfriend,process
+754,"754, 792",and start a new life with my boyfriend,two-role-action
+754,"754, 792",and start a new life with my boyfriend,action
+754,"754, 792",and start a new life with my boyfriend,starting
+737,"737, 792",my ex completely and start a new life with my boyfriend,created-phenomenon
+834,"834, 844",for my ex.,affected-emoter
+834,"834, 844",for my ex.,affected-path
+834,"834, 844",for my ex.,affected-perceiver
+834,"834, 844",for my ex.,affected-cognizant
+834,"834, 844",for my ex.,affected-carrier
+834,"834, 844",for my ex.,affected-destination
+834,"834, 844",for my ex.,affected
+834,"834, 844",for my ex.,affected-possessed
+834,"834, 844",for my ex.,affected-source
+758,"758, 763",start,main
+764,"764, 774",a new life,phenomenon
+764,"764, 774",a new life,created-phenomenon
+764,"764, 774",a new life,created
+887,"887, 890",how,affected-emoter
+887,"887, 890",how,affected-path
+887,"887, 890",how,affected-perceiver
+887,"887, 890",how,affected-cognizant
+887,"887, 890",how,affected-carrier
+887,"887, 890",how,affected-destination
+887,"887, 890",how,affected
+887,"887, 890",how,affected-possessed
+887,"887, 890",how,affected-source
+845,"845, 849",What,phenomenon
+845,"845, 849",What,affected-emoter
+845,"845, 849",What,created-phenomenon
+845,"845, 849",What,affected-path
+845,"845, 849",What,affected-perceiver
+845,"845, 849",What,affected-cognizant
+845,"845, 849",What,affected-carrier
+845,"845, 849",What,affected-destination
+845,"845, 849",What,affected
+845,"845, 849",What,affected-possessed
+845,"845, 849",What,affected-source
+845,"845, 849",What,created
+856,"856, 862",", what",phenomenon
+856,"856, 862",", what",created
+856,"856, 862",", what",range
+887,"887, 911",how my trust was broken.,phenomenon
+887,"887, 911",how my trust was broken.,created-phenomenon
+891,"891, 899",my trust,agent
+891,"891, 899",my trust,agent-cognizant
+891,"891, 899",my trust,agent-carrier
+891,"891, 899",my trust,agent-perceiver
+845,"845, 911","What we had, what we had planned but also how my trust was broken.",process
+845,"845, 911","What we had, what we had planned but also how my trust was broken.",mental
+845,"845, 911","What we had, what we had planned but also how my trust was broken.",two-role-cognition
+845,"845, 911","What we had, what we had planned but also how my trust was broken.",two-role-action
+887,"887, 911",how my trust was broken.,process
+887,"887, 911",how my trust was broken.,two-role-action
+850,"850, 852",we,agent
+850,"850, 852",we,agent-cognizant
+850,"850, 852",we,affected-carrier
+850,"850, 852",we,affected
+850,"850, 852",we,agent-carrier
+850,"850, 852",we,agent-perceiver
+850,"850, 852",we,perceiver
+863,"863, 865",we,cognizant
+863,"863, 865",we,agent-cognizant
+863,"863, 865",we,agent-carrier
+863,"863, 865",we,agent-perceiver
+845,"845, 856",What we had,process
+845,"845, 856",What we had,causative
+845,"845, 856",What we had,two-role-action
+845,"845, 856",What we had,action
+1026,"1026, 1038",these things,agent-cognizant
+1026,"1026, 1038",these things,affected-carrier
+1026,"1026, 1038",these things,agent-carrier
+1026,"1026, 1038",these things,agent-perceiver
+1026,"1026, 1038",these things,carrier
+1026,"1026, 1038",these things,perceiver
+979,"979, 980",I,affected-emoter
+992,"992, 994",to,main
+1008,"1008, 1048",", although I know these things take time",process
+1057,"1057, 1091",to make this new relationship work,process
+1057,"1057, 1091",to make this new relationship work,attributive
+1057,"1057, 1091",to make this new relationship work,directional
+1057,"1057, 1091",to make this new relationship work,causative
+1057,"1057, 1091",to make this new relationship work,relational
+1057,"1057, 1091",to make this new relationship work,possessive
+1057,"1057, 1091",to make this new relationship work,two-role-action
+1057,"1057, 1091",to make this new relationship work,influential
+1057,"1057, 1064",to make,main
+1026,"1026, 1048",these things take time,created-phenomenon
+1065,"1065, 1091",this new relationship work,attribute
+1065,"1065, 1091",this new relationship work,created-phenomenon
+1065,"1065, 1091",this new relationship work,destination
+1065,"1065, 1091",this new relationship work,affected-destination
+1065,"1065, 1091",this new relationship work,affected-possessed
+1065,"1065, 1091",this new relationship work,created
+1065,"1065, 1091",this new relationship work,possessed
+992,"992, 1048","to be hurt again, although I know these things take time",process
+992,"992, 1048","to be hurt again, although I know these things take time",one-role-action
+950,"950, 1048","my new relationship, because I don't want to be hurt again, although I know these things take time",process
+950,"950, 1048","my new relationship, because I don't want to be hurt again, although I know these things take time",desiderative
+926,"926, 933",getting,main
+1019,"1019, 1020",I,agent-cognizant
+1019,"1019, 1020",I,affected-cognizant
+1044,"1044, 1048",time,affected-emoter
+1044,"1044, 1048",time,affected-path
+1044,"1044, 1048",time,affected-perceiver
+1044,"1044, 1048",time,location
+1044,"1044, 1048",time,affected-cognizant
+1044,"1044, 1048",time,affected-carrier
+1044,"1044, 1048",time,affected-destination
+1044,"1044, 1048",time,affected
+1044,"1044, 1048",time,affected-possessed
+1044,"1044, 1048",time,affected-source
+1044,"1044, 1048",time,possessed
+1044,"1044, 1048",time,range
+1026,"1026, 1048",these things take time,process
+1026,"1026, 1048",these things take time,locational
+1026,"1026, 1048",these things take time,relational
+1026,"1026, 1048",these things take time,possessive
+1026,"1026, 1048",these things take time,two-role-action
+992,"992, 1048","to be hurt again, although I know these things take time",created-phenomenon
+269,"269, 285",getting over him,relational
+516,"516, 524",feelings,possessed
+845,"845, 911","What we had, what we had planned but also how my trust was broken.",action
+992,"992, 1048","to be hurt again, although I know these things take time",action

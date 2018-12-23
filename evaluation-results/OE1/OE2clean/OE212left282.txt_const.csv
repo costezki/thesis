@@ -1,0 +1,228 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.6428571428571429
+,Recall,0.9507042253521126
+,F1,0.7670454545454545
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+7,4.0,"54, 75","50, 75",4,"I was the ""other"" guy","and I was the ""other"" guy",configuration,configuration
+4,0.0,"54, 55","54, 55",0,I,I,participant-role,participant-role
+2,0.0,"31, 36","31, 36",0,dated,dated,main,main
+11,4.123105625617661,"106, 109","102, 110",5,him,for him.,participant-role,participant-role
+12,4.123105625617661,"79, 109","75, 110",5,she made a choice then for him,... she made a choice then for him.,configuration,configuration
+6,0.0,"60, 75","60, 75",0,"the ""other"" guy","the ""other"" guy",participant-role,participant-role
+8,4.0,"79, 82","75, 82",4,she,... she,participant-role,participant-role
+3,0.0,"17, 49","17, 49",0,Shelley and I dated 13 years ago,Shelley and I dated 13 years ago,configuration,configuration
+5,0.0,"56, 59","56, 59",0,was,was,main,main
+9,9.0,"83, 96","83, 87",9,made a choice,made,main,main
+1,0.0,"17, 30","17, 30",0,Shelley and I,Shelley and I,participant-role,participant-role
+16,0.0,"111, 135","111, 135",0,He happened to pass away,He happened to pass away,configuration,configuration
+15,5.830951894845301,"126, 135","123, 130",8,pass away,to pass,main,main
+13,0.0,"111, 113","111, 113",0,He,He,participant-role,participant-role
+20,4.123105625617661,"140, 161","136, 162",5,she was left grieving,and she was left grieving.,configuration,configuration
+19,1.0,"153, 161","153, 162",1,grieving,grieving.,participant-role,participant-role
+18,4.0,"144, 152","148, 152",4,was left,left,main,main
+30,0.0,"255, 260","255, 260",0,which,which,participant-role,participant-role
+35,0.0,"293, 297","293, 297",0,love,love,main,main
+25,0.0,"220, 238","220, 238",0,to seek my support,to seek my support,participant-role,participant-role
+29,16.0,"220, 254","220, 238",16,to seek my support would be unfair,to seek my support,configuration,configuration
+33,26.0,"255, 276","255, 302",26,which I disagree with,which I disagree with because I truly love her.,configuration,configuration
+28,0.0,"248, 254","248, 254",0,unfair,unfair,participant-role,participant-role
+36,1.0,"298, 301","298, 302",1,her,her.,participant-role,participant-role
+34,0.0,"285, 286","285, 286",0,I,I,participant-role,participant-role
+24,86.0,"163, 216","163, 302",86,She took on another man to help her with the grieving,She took on another man to help her with the grieving as to seek my support would be unfair which I disagree with because I truly love her.,configuration,configuration
+32,5.0,"263, 276","263, 271",5,disagree with,disagree,main,main
+37,8.06225774829855,"285, 301","277, 302",9,I truly love her,because I truly love her.,configuration,configuration
+21,0.0,"163, 166","163, 166",0,She,She,participant-role,participant-role
+27,0.0,"245, 247","245, 247",0,be,be,main,main
+31,0.0,"261, 262","261, 262",0,I,I,participant-role,participant-role
+23,3.0,"175, 186","172, 186",3,another man,on another man,participant-role,participant-role
+22,3.0,"167, 174","167, 171",3,took on,took,main,main
+44,0.0,"357, 360","357, 360",0,him,him,participant-role,participant-role
+39,0.0,"307, 310","307, 310",0,had,had,main,main
+46,0.0,"370, 373","370, 373",0,she,she,participant-role,participant-role
+49,0.0,"378, 381","378, 381",0,she,she,participant-role,participant-role
+51,3.1622776601683795,"390, 392","387, 393",4,me,to me.,participant-role,participant-role
+40,14.0,"311, 323","311, 337",14,two children,two children with this man,participant-role,participant-role
+41,0.0,"303, 337","303, 337",0,She had two children with this man,She had two children with this man,configuration,configuration
+45,4.0,"342, 360","338, 360",4,has since left him,and has since left him,configuration,configuration
+43,0.0,"352, 356","352, 356",0,left,left,main,main
+52,1.0,"378, 392","378, 393",1,she came to me,she came to me.,configuration,configuration
+38,0.0,"303, 306","303, 306",0,She,She,participant-role,participant-role
+50,3.0,"382, 389","382, 386",3,came to,came,main,main
+56,0.0,"394, 419","394, 419",0,We started a relationship,We started a relationship,configuration,configuration
+58,0.0,"427, 433","427, 433",0,lasted,lasted,main,main
+53,0.0,"394, 396","394, 396",0,We,We,participant-role,participant-role
+54,0.0,"397, 404","397, 404",0,started,started,main,main
+57,0.0,"424, 426","424, 426",0,it,it,participant-role,participant-role
+55,0.0,"405, 419","405, 419",0,a relationship,a relationship,participant-role,participant-role
+59,4.123105625617661,"424, 455","420, 456",5,it lasted approximately 3 years,and it lasted approximately 3 years.,configuration,configuration
+60,0.0,"457, 467","457, 467",0,Everything,Everything,participant-role,participant-role
+61,0.0,"468, 471","468, 471",0,was,was,main,main
+62,0.0,"472, 477","472, 477",0,great,great,participant-role,participant-role
+63,1.0,"457, 504","457, 505",1,Everything was great up until the last 6 months,Everything was great up until the last 6 months.,configuration,configuration
+66,1.0,"506, 550","506, 551",1,We never even had a fight for the first year,We never even had a fight for the first year.,configuration,configuration
+64,0.0,"506, 508","506, 508",0,We,We,participant-role,participant-role
+72,0.0,"597, 600","597, 600",0,was,was,main,main
+71,4.0,"584, 596","580, 596",4,the fighting,... the fighting,participant-role,participant-role
+75,0.0,"612, 624","612, 624",0,the children,the children,participant-role,participant-role
+78,10.0,"643, 658","653, 658",10,subjected to it,to it,participant-role,participant-role
+73,63.0,"601, 607","601, 670",63,so bad,so bad and the children didn't need to be subjected to it any longer.,participant-role,participant-role
+70,0.0,"552, 580","552, 580",0,Two weeks ago I had to leave,Two weeks ago I had to leave,configuration,configuration
+69,3.0,"575, 580","572, 580",3,leave,to leave,main,main
+79,25.019992006393608,"612, 669","637, 670",26,the children didn't need to be subjected to it any longer,to be subjected to it any longer.,configuration,configuration
+74,63.12685640834652,"584, 607","580, 670",67,the fighting was so bad,... the fighting was so bad and the children didn't need to be subjected to it any longer.,configuration,configuration
+67,0.0,"566, 567","566, 567",0,I,I,participant-role,participant-role
+87,29.274562336608895,"720, 766","716, 737",33,have some answers thanks to mars venus dot com,and have some answers,configuration,configuration
+85,0.0,"720, 724","720, 724",0,have,have,main,main
+84,0.0,"671, 715","671, 715",0,I have since gained insight into the problem,I have since gained insight into the problem,configuration,configuration
+89,0.0,"777, 779","777, 779",0,is,is,main,main
+90,1.0,"780, 797","780, 798",1,another situation,another situation.,participant-role,participant-role
+80,0.0,"671, 672","671, 672",0,I,I,participant-role,participant-role
+86,0.0,"725, 737","725, 737",0,some answers,some answers,participant-role,participant-role
+83,5.0,"704, 715","699, 715",5,the problem,into the problem,participant-role,participant-role
+91,4.123105625617661,"771, 797","767, 798",5,there is another situation,but there is another situation.,configuration,configuration
+82,13.0,"684, 703","684, 690",13,gained insight into,gained,main,main
+109,0.0,"980, 981","980, 981",0,I,I,participant-role,participant-role
+112,10.0,"994, 1012","1004, 1012",10,her lying about it,about it,participant-role,participant-role
+98,0.0,"906, 931","906, 931",0,there is nothing going on,there is nothing going on,participant-role,participant-role
+104,0.0,"906, 931","906, 931",0,there is nothing going on,there is nothing going on,configuration,configuration
+97,0.0,"898, 905","898, 905",0,insists,insists,main,main
+101,3.0,"923, 931","923, 928",3,going on,going,main,main
+106,0.0,"956, 960","956, 960",0,want,want,main,main
+107,0.0,"961, 975","961, 975",0,to believe her,to believe her,participant-role,participant-role
+92,5.0,"820, 841","815, 841",5,one of my guy friends,onto one of my guy friends,participant-role,participant-role
+99,4.0,"898, 931","894, 931",4,insists there is nothing going on,and insists there is nothing going on,configuration,configuration
+95,0.0,"799, 802","799, 802",0,She,She,participant-role,participant-role
+108,4.0,"936, 975","940, 975",4,for the most part I want to believe her,the most part I want to believe her,configuration,configuration
+111,0.0,"987, 993","987, 993",0,caught,caught,main,main
+113,14.035668847618199,"980, 1032","994, 1033",15,I have caught her lying about it to save my feelings,her lying about it to save my feelings.,configuration,configuration
+105,0.0,"954, 955","954, 955",0,I,I,participant-role,participant-role
+96,0.0,"799, 893","799, 893",0,She has latched onto one of my guy friends as her friend to confide her feelings and talk with,She has latched onto one of my guy friends as her friend to confide her feelings and talk with,configuration,configuration
+93,5.0,"807, 819","807, 814",5,latched onto,latched,main,main
+17,0.0,"1131, 1133","1131, 1133",0,we,we,participant-role,participant-role
+116,11.0,"1056, 1078","1067, 1078",11,going back a few steps,a few steps,participant-role,participant-role
+117,22.0,"1034, 1078","1056, 1078",22,She shows interest in going back a few steps,going back a few steps,configuration,configuration
+119,34.23448553724738,"1083, 1164","1079, 1130",38,trying to work through our relationship the way we should have done to begin with,and trying to work through our relationship the way,configuration,configuration
+114,0.0,"1034, 1037","1034, 1037",0,She,She,participant-role,participant-role
+115,12.0,"1038, 1055","1038, 1043",12,shows interest in,shows,main,main
+157,5.0,"1146, 1150","1141, 1150",5,done,have done,main,main
+118,34.713109915419565,"1083, 1164","1090, 1130",41,trying to work through our relationship the way we should have done to begin with,to work through our relationship the way,participant-role,participant-role
+124,13.45362404707371,"1240, 1269","1249, 1259",19,spending some hours each week,some hours,participant-role,participant-role
+123,27.0,"1166, 1235","1193, 1235",27,This entails spending time learning to read each others communication,learning to read each others communication,configuration,configuration
+121,0.0,"1171, 1178","1171, 1178",0,entails,entails,main,main
+120,0.0,"1166, 1170","1166, 1170",0,This,This,participant-role,participant-role
+125,28.284271247461902,"1240, 1297","1236, 1269",32,spending some hours each week discussing our relationship,and spending some hours each week,configuration,configuration
+122,106.0,"1179, 1192","1179, 1298",106,spending time,spending time learning to read each others communication and spending some hours each week discussing our relationship.,participant-role,participant-role
+142,0.0,"1403, 1404","1403, 1404",0,I,I,participant-role,participant-role
+138,0.0,"1366, 1369","1366, 1369",0,she,she,participant-role,participant-role
+146,4.0,"1436, 1440","1432, 1440",4,What,... What,participant-role,participant-role
+150,4.123105625617661,"1436, 1453","1432, 1454",5,What do you think,... What do you think?,configuration,configuration
+137,6.708203932499369,"1340, 1346","1334, 1349",9,I left,until I left...,configuration,configuration
+139,0.0,"1370, 1372","1370, 1372",0,is,is,main,main
+126,0.0,"1299, 1300","1299, 1300",0,I,I,participant-role,participant-role
+149,0.0,"1448, 1453","1448, 1453",0,think,think,main,main
+145,12.0,"1403, 1432","1391, 1432",12,I still feel in love with her,but because I still feel in love with her,configuration,configuration
+135,0.0,"1340, 1341","1340, 1341",0,I,I,participant-role,participant-role
+134,9.0,"1322, 1333","1313, 1333",9,I loved her,how much I loved her,configuration,configuration
+148,0.0,"1444, 1447","1444, 1447",0,you,you,participant-role,participant-role
+131,0.0,"1322, 1323","1322, 1323",0,I,I,participant-role,participant-role
+132,0.0,"1324, 1329","1324, 1329",0,loved,loved,main,main
+136,0.0,"1342, 1346","1342, 1346",0,left,left,main,main
+140,0.0,"1373, 1390","1373, 1390",0,with someone else,with someone else,participant-role,participant-role
+141,16.0,"1366, 1390","1350, 1390",16,she is with someone else,and not because she is with someone else,configuration,configuration
+128,4.0,"1308, 1312","1304, 1312",4,know,n't know,main,main
+144,5.0,"1429, 1432","1424, 1432",5,her,with her,participant-role,participant-role
+143,13.0,"1411, 1428","1411, 1415",13,feel in love with,feel,main,main
+130,21.0,"1299, 1333","1299, 1312",21,I didn't know how much I loved her,I didn't know,configuration,configuration
+133,0.0,"1330, 1333","1330, 1333",0,her,her,participant-role,participant-role
+154,14.212670403551895,"1455, 1491","1464, 1480",20,Anything to clear the fog would help,to clear the fog,configuration,configuration
+151,0.0,"1455, 1480","1455, 1480",0,Anything to clear the fog,Anything to clear the fog,participant-role,participant-role
+153,0.0,"1487, 1491","1487, 1491",0,help,help,main,main
+48,18.35755975068582,"370, 377","361, 393",25,she did,but when she did she came to me.,configuration,configuration
+,
+,Manual mismatching all parsed (False Negative)
+65,"520, 531",had a fight,main
+77,"640, 642",be,main
+88,"771, 776",there,participant-role
+103,"906, 911",there,participant-role
+102,"915, 922",nothing,participant-role
+158,"1131, 1150",we should have done,configuration
+129,"1313, 1333",how much I loved her,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+88,"88, 96",a choice,participant-role
+153,"153, 161",grieving,main
+114,"114, 122",happened,main
+140,"140, 143",she,participant-role
+123,"123, 135",to pass away,configuration
+123,"123, 135",to pass away,participant-role
+195,"195, 198",her,participant-role
+199,"199, 216",with the grieving,participant-role
+187,"187, 194",to help,main
+187,"187, 302",to help her with the grieving as to seek my support would be unfair which I disagree with because I truly love her.,participant-role
+220,"220, 227",to seek,main
+228,"228, 238",my support,participant-role
+217,"217, 302",as to seek my support would be unfair which I disagree with because I truly love her.,configuration
+378,"378, 393",she came to me.,participant-role
+365,"365, 369",when,participant-role
+374,"374, 377",did,main
+481,"481, 505",until the last 6 months.,participant-role
+524,"524, 551",a fight for the first year.,participant-role
+509,"509, 514",never,main
+568,"568, 571",had,main
+572,"572, 580",to leave,participant-role
+637,"637, 670",to be subjected to it any longer.,participant-role
+637,"637, 639",to,main
+763,"763, 766",com,participant-role
+759,"759, 762",dot,main
+691,"691, 698",insight,participant-role
+748,"748, 758",mars venus,participant-role
+759,"759, 766",dot com,configuration
+867,"867, 879",her feelings,participant-role
+994,"994, 997",her,participant-role
+940,"940, 953",the most part,participant-role
+998,"998, 1003",lying,main
+856,"856, 879",to confide her feelings,configuration
+976,"976, 993",but I have caught,configuration
+1013,"1013, 1020",to save,main
+856,"856, 866",to confide,main
+1021,"1021, 1033",my feelings.,participant-role
+961,"961, 971",to believe,main
+884,"884, 888",talk,main
+1013,"1013, 1033",to save my feelings.,participant-role
+842,"842, 893",as her friend to confide her feelings and talk with,participant-role
+1090,"1090, 1097",to work,main
+1044,"1044, 1052",interest,participant-role
+1151,"1151, 1159",to begin,main
+1151,"1151, 1165",to begin with.,participant-role
+1151,"1151, 1165",to begin with.,configuration
+1056,"1056, 1061",going,main
+1090,"1090, 1130",to work through our relationship the way,configuration
+1083,"1083, 1089",trying,main
+1193,"1193, 1201",learning,main
+1202,"1202, 1209",to read,main
+1202,"1202, 1235",to read each others communication,configuration
+1202,"1202, 1235",to read each others communication,participant-role
+1281,"1281, 1298",our relationship.,participant-role
+1210,"1210, 1235",each others communication,participant-role
+1270,"1270, 1280",discussing,main
+1240,"1240, 1248",spending,main
+1416,"1416, 1423",in love,participant-role
+1464,"1464, 1472",to clear,main
+153,"153, 162",grieving.,configuration
+272,"272, 302",with because I truly love her.,participant-role
+187,"187, 302",to help her with the grieving as to seek my support would be unfair which I disagree with because I truly love her.,configuration
+255,"255, 302",which I disagree with because I truly love her.,participant-role
+572,"572, 580",to leave,configuration
+880,"880, 893",and talk with,configuration
+972,"972, 975",her,participant-role
+961,"961, 975",to believe her,configuration
+1013,"1013, 1033",to save my feelings.,configuration
+856,"856, 893",to confide her feelings and talk with,configuration
+1034,"1034, 1130",She shows interest in going back a few steps and trying to work through our relationship the way,configuration
+1053,"1053, 1130",in going back a few steps and trying to work through our relationship the way,participant-role
+1098,"1098, 1130",through our relationship the way,participant-role
+1166,"1166, 1298",This entails spending time learning to read each others communication and spending some hours each week discussing our relationship.,configuration
+1270,"1270, 1298",discussing our relationship.,configuration
+1473,"1473, 1480",the fog,participant-role

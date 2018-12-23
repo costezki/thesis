@@ -1,0 +1,422 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.2958579881656805
+,Recall,0.5780346820809249
+,F1,0.39138943248532293
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+2,0.0,"30, 32","30, 32",0,am,am,main,main
+7,77.0,"65, 83","65, 160",77,a 29 year old male,a 29 year old male and I have been dating a 30 year old female for more than a year and a half.,attribute,attribute
+8,78.26237921249263,"60, 83","46, 160",91,I am a 29 year old male,"To start off, I am a 29 year old male and I have been dating a 30 year old female for more than a year and a half.",attributive,attributive
+8,78.26237921249263,"60, 83","46, 160",91,I am a 29 year old male,"To start off, I am a 29 year old male and I have been dating a 30 year old female for more than a year and a half.",relational,relational
+6,0.0,"62, 64","62, 64",0,am,am,main,main
+5,2.0,"60, 61","58, 61",2,I,", I",carrier,carrier
+22,0.0,"235, 240","235, 240",0,lived,lived,main,main
+15,0.0,"176, 179","176, 179",0,was,was,main,main
+32,0.0,"322, 323","322, 323",0,I,I,carrier,carrier
+26,0.0,"282, 285","282, 285",0,had,had,main,main
+33,0.0,"324, 327","324, 327",0,was,was,main,main
+38,15.033296378372908,"348, 353","333, 354",16,great,everything was great.,attribute,attribute
+25,0.0,"279, 281","279, 281",0,We,We,carrier,carrier
+30,0.0,"307, 312","307, 312",0,moved,moved,main,main
+27,0.0,"286, 297","286, 297",0,some issues,some issues,possessed,possessed
+31,7.0,"305, 312","298, 312",7,I moved,before I moved,action,action
+28,0.0,"279, 297","279, 297",0,We had some issues,We had some issues,relational,relational
+28,0.0,"279, 297","279, 297",0,We had some issues,We had some issues,possessive,possessive
+29,0.0,"305, 306","305, 306",0,I,I,agent,agent
+39,20.024984394500787,"333, 353","313, 354",21,everything was great,and once I was here everything was great.,attributive,attributive
+35,22.360679774997898,"317, 332","313, 354",26,once I was here,and once I was here everything was great.,locational,locational
+39,20.024984394500787,"333, 353","313, 354",21,everything was great,and once I was here everything was great.,relational,relational
+37,0.0,"344, 347","344, 347",0,was,was,main,main
+42,1.0,"392, 398","392, 399",1,to die,to die.,phenomenon,phenomenon
+40,0.0,"372, 383","372, 383",0,the passion,the passion,affected,affected
+41,0.0,"384, 391","384, 391",0,started,started,main,main
+43,1.0,"355, 398","355, 399",1,A few months ago the passion started to die,A few months ago the passion started to die.,influential,influential
+45,0.0,"403, 406","403, 406",0,are,are,main,main
+47,57.0,"400, 428","400, 485",57,We are together all the time,We are together all the time and spend most nights together one or the other's place.,relational,relational
+53,49.0,"497, 511","497, 560",49,more irritable,"more irritable about little things, but we never really argued.",attribute,attribute
+51,0.0,"486, 489","486, 489",0,She,She,affected-carrier,affected-carrier
+52,0.0,"490, 496","490, 496",0,became,became,main,main
+54,29.0,"486, 531","486, 560",29,She became more irritable about little things,"She became more irritable about little things, but we never really argued.",attributive,attributive
+54,29.0,"486, 531","486, 560",29,She became more irritable about little things,"She became more irritable about little things, but we never really argued.",relational,relational
+59,14.0,"563, 581","563, 567",14,went with the flow,went,main,main
+60,0.0,"561, 581","561, 581",0,I went with the flow,I went with the flow,action,action
+63,0.0,"599, 602","599, 602",0,her,her,affected,affected
+62,4.0,"594, 598","590, 598",4,push,not push,main,main
+66,0.0,"613, 616","613, 616",0,was,was,main,main
+58,0.0,"561, 562","561, 562",0,I,I,agent,agent
+69,0.0,"653, 654","653, 654",0,I,I,agent,agent
+70,5.0,"655, 666","655, 661",5,agreed with,agreed,main,main
+77,17.029386365926403,"676, 702","693, 703",18,something needed to change,to change.,action,action
+76,3.0,"696, 702","693, 702",3,change,to change,main,main
+71,5.0,"667, 670","662, 670",5,her,with her,affected-cognizant,affected-cognizant
+72,5.0990195135927845,"676, 702","671, 703",6,something needed to change,that something needed to change.,phenomenon,phenomenon
+73,1.0,"653, 702","653, 703",1,I agreed with her that something needed to change,I agreed with her that something needed to change.,three-role-cognition,three-role-cognition
+80,5.0990195135927845,"718, 757","713, 758",6,she loves me but is not in love with me,that she loves me but is not in love with me.,phenomenon,phenomenon
+78,0.0,"704, 707","704, 707",0,She,She,agent,agent
+84,0.0,"728, 730","728, 730",0,me,me,phenomenon,phenomenon
+83,0.0,"722, 727","722, 727",0,loves,loves,main,main
+82,0.0,"718, 721","718, 721",0,she,she,emoter,emoter
+81,1.0,"704, 757","704, 758",1,She says that she loves me but is not in love with me,She says that she loves me but is not in love with me.,mental,mental
+81,1.0,"704, 757","704, 758",1,She says that she loves me but is not in love with me,She says that she loves me but is not in love with me.,three-role-cognition,three-role-cognition
+85,5.0,"718, 730","713, 730",5,she loves me,that she loves me,mental,mental
+79,0.0,"708, 712","708, 712",0,says,says,main,main
+86,4.0,"735, 737","735, 741",4,is,is not,main,main
+102,0.0,"829, 831","829, 831",0,is,is,main,main
+101,0.0,"818, 828","818, 828",0,the answer,the answer,carrier,carrier
+92,4.0,"771, 775","767, 775",4,know,n't know,main,main
+103,3.1622776601683795,"813, 831","810, 832",4,what the answer is,or what the answer is.,attributive,attributive
+103,3.1622776601683795,"813, 831","810, 832",4,what the answer is,or what the answer is.,relational,relational
+100,0.0,"813, 817","813, 817",0,what,what,attribute,attribute
+111,9.0,"868, 900","859, 900",9,I know something needs to change,although I know something needs to change,mental,mental
+111,9.0,"868, 900","859, 900",9,I know something needs to change,although I know something needs to change,two-role-cognition,two-role-cognition
+108,0.0,"868, 869","868, 869",0,I,I,cognizant,cognizant
+109,0.0,"870, 874","870, 874",0,know,know,main,main
+114,3.0,"894, 900","891, 900",3,change,to change,main,main
+115,16.0,"875, 900","891, 900",16,something needs to change,to change,action,action
+107,61.0,"833, 854","833, 915",61,She is my best friend,"She is my best friend and although I know something needs to change, I am crushed!",attributive,attributive
+107,61.0,"833, 854","833, 915",61,She is my best friend,"She is my best friend and although I know something needs to change, I am crushed!",relational,relational
+104,0.0,"833, 836","833, 836",0,She,She,carrier,carrier
+105,0.0,"837, 839","837, 839",0,is,is,main,main
+110,0.0,"875, 900","875, 900",0,something needs to change,something needs to change,phenomenon,phenomenon
+125,0.0,"934, 939","934, 939",0,needs,needs,main,main
+121,0.0,"920, 929","920, 929",0,concluded,concluded,main,main
+131,0.0,"972, 977","972, 977",0,react,react,main,main
+139,10.04987562112089,"1033, 1057","1023, 1058",11,how much she means to me,even more how much she means to me.,phenomenon,phenomenon
+137,0.0,"1013, 1014","1013, 1014",0,I,I,cognizant,cognizant
+140,4.123105625617661,"1013, 1057","1009, 1058",5,I realize even more how much she means to me,but I realize even more how much she means to me.,mental,mental
+140,4.123105625617661,"1013, 1057","1009, 1058",5,I realize even more how much she means to me,but I realize even more how much she means to me.,two-role-cognition,two-role-cognition
+134,4.0,"987, 991","983, 991",4,want,n't want,main,main
+138,0.0,"1015, 1022","1015, 1022",0,realize,realize,main,main
+136,1.0,"979, 1007","979, 1008",1,I don't want to pressure her,"I don't want to pressure her,",mental,mental
+135,0.0,"992, 1007","992, 1007",0,to pressure her,to pressure her,phenomenon,phenomenon
+132,0.0,"979, 980","979, 980",0,I,I,emoter,emoter
+143,0.0,"1070, 1074","1070, 1074",0,make,make,main,main
+144,1.0,"1075, 1105","1075, 1106",1,her lose the attraction for me,her lose the attraction for me?,created-phenomenon,created-phenomenon
+141,0.0,"1059, 1063","1059, 1063",0,What,What,agent,agent
+146,0.0,"1107, 1108","1107, 1108",0,I,I,cognizant,cognizant
+149,33.0,"1107, 1157","1107, 1190",33,I know she is frustrated with me not loving my job,"I know she is frustrated with me not loving my job, because she is very successful.",mental,mental
+149,33.0,"1107, 1157","1107, 1190",33,I know she is frustrated with me not loving my job,"I know she is frustrated with me not loving my job, because she is very successful.",two-role-cognition,two-role-cognition
+147,0.0,"1109, 1113","1109, 1113",0,know,know,main,main
+156,0.0,"1171, 1173","1171, 1173",0,is,is,main,main
+148,33.0,"1114, 1157","1114, 1190",33,she is frustrated with me not loving my job,"she is frustrated with me not loving my job, because she is very successful.",phenomenon,phenomenon
+155,0.0,"1167, 1170","1167, 1170",0,she,she,carrier,carrier
+158,10.04987562112089,"1167, 1189","1157, 1190",11,she is very successful,", because she is very successful.",attributive,attributive
+158,10.04987562112089,"1167, 1189","1157, 1190",11,she is very successful,", because she is very successful.",relational,relational
+157,1.0,"1174, 1189","1174, 1190",1,very successful,very successful.,attribute,attribute
+161,0.0,"1208, 1212","1208, 1212",0,help,help,main,main
+,
+,Manual mismatching all parsed (False Negative)
+4,"28, 44",I am new to this,relational
+4,"28, 44",I am new to this,attributive
+1,"28, 29",I,carrier
+3,"33, 44",new to this,attribute
+13,"88, 159",I have been dating a 30 year old female for more than a year and a half,action
+9,"88, 89",I,agent
+11,"100, 106",dating,main
+12,"107, 127",a 30 year old female,affected
+17,"161, 209",The first year was long distance ( 200 + miles ),relational
+17,"161, 209",The first year was long distance ( 200 + miles ),attributive
+14,"161, 175",The first year,carrier
+16,"180, 209",long distance ( 200 + miles ),attribute
+20,"214, 221",I moved,action
+18,"214, 215",I,agent
+19,"216, 221",moved,main
+24,"226, 277",now have lived near her for the past 7 months or so,relational
+24,"226, 277",now have lived near her for the past 7 months or so,locational
+23,"241, 249",near her,location
+35,"317, 332",once I was here,relational
+34,"328, 332",here,location
+36,"333, 343",everything,carrier
+47,"400, 428",We are together all the time,attributive
+44,"400, 402",We,agent-carrier
+46,"407, 415",together,attribute
+50,"433, 484",spend most nights together one or the other's place,action
+48,"433, 450",spend most nights,main
+49,"451, 459",together,manner
+57,"537, 559",we never really argued,action
+55,"537, 539",we,agent
+56,"553, 559",argued,main
+64,"586, 602",did not push her,action
+68,"607, 651",there was basically no physical relationship,relational
+68,"607, 651",there was basically no physical relationship,attributive
+65,"607, 612",there,carrier
+67,"627, 651",no physical relationship,attribute
+73,"653, 702",I agreed with her that something needed to change,mental
+74,"676, 685",something,affected
+89,"735, 757",is not in love with me,mental
+88,"755, 757",me,phenomenon
+94,"759, 831",She doesn't know if she needs to date other people or what the answer is,mental
+94,"759, 831",She doesn't know if she needs to date other people or what the answer is,two-role-cognition
+90,"759, 762",She,cognizant
+93,"779, 831",she needs to date other people or what the answer is,phenomenon
+99,"779, 809",she needs to date other people,action
+95,"779, 782",she,agent
+97,"792, 796",date,main
+98,"797, 809",other people,affected
+106,"840, 854",my best friend,attribute
+112,"875, 884",something,affected
+119,"902, 914",I am crushed,action
+116,"902, 903",I,affected
+118,"907, 914",crushed,main
+123,"916, 961",She concluded she needs time to figure it out,mental
+123,"916, 961",She concluded she needs time to figure it out,two-role-cognition
+120,"916, 919",She,cognizant
+122,"930, 961",she needs time to figure it out,phenomenon
+127,"930, 961",she needs time to figure it out,relational
+127,"930, 961",she needs time to figure it out,possessive
+124,"930, 933",she,carrier
+126,"940, 961",time to figure it out,possessed
+128,"963, 977",How do I react,action
+130,"970, 971",I,agent
+166,"1042, 1057",she means to me,mental
+163,"1042, 1045",she,phenomenon
+164,"1046, 1054",means to,main
+165,"1055, 1057",me,emoter
+145,"1059, 1105",What could make her lose the attraction for me,influential
+154,"1114, 1157",she is frustrated with me not loving my job,mental
+150,"1114, 1117",she,emoter
+152,"1121, 1136",frustrated with,main
+153,"1137, 1157",me not loving my job,phenomenon
+162,"1191, 1212",Any advice would help,action
+159,"1191, 1201",Any advice,agent
+,
+,Parsed mismatching all manual (False Positives)
+20,"20, 22",Hi,main
+65,"65, 160",a 29 year old male and I have been dating a 30 year old female for more than a year and a half.,location
+46,"46, 54",To start,main
+46,"46, 160","To start off, I am a 29 year old male and I have been dating a 30 year old female for more than a year and a half.",process
+46,"46, 160","To start off, I am a 29 year old male and I have been dating a 30 year old female for more than a year and a half.",locational
+58,"58, 61",", I",affected-carrier
+58,"58, 61",", I",agent-carrier
+322,"322, 323",I,affected-carrier
+322,"322, 323",I,agent-carrier
+333,"333, 354",everything was great.,location
+279,"279, 281",We,agent
+279,"279, 281",We,agent-cognizant
+279,"279, 281",We,affected-carrier
+279,"279, 281",We,affected
+279,"279, 281",We,agent-carrier
+279,"279, 281",We,agent-perceiver
+279,"279, 281",We,perceiver
+348,"348, 354",great.,affected-emoter
+348,"348, 354",great.,affected-path
+348,"348, 354",great.,affected-perceiver
+348,"348, 354",great.,affected-cognizant
+348,"348, 354",great.,affected-carrier
+348,"348, 354",great.,affected-destination
+348,"348, 354",great.,affected
+348,"348, 354",great.,affected-possessed
+348,"348, 354",great.,affected-source
+348,"348, 354",great.,range
+286,"286, 297",some issues,phenomenon
+286,"286, 297",some issues,affected-emoter
+286,"286, 297",some issues,created-phenomenon
+286,"286, 297",some issues,affected-path
+286,"286, 297",some issues,affected-perceiver
+286,"286, 297",some issues,affected-cognizant
+286,"286, 297",some issues,affected-carrier
+286,"286, 297",some issues,affected-destination
+286,"286, 297",some issues,affected
+286,"286, 297",some issues,affected-possessed
+286,"286, 297",some issues,affected-source
+286,"286, 297",some issues,created
+298,"298, 312",before I moved,process
+298,"298, 312",before I moved,continuing
+298,"298, 312",before I moved,one-role-action
+279,"279, 297",We had some issues,process
+279,"279, 297",We had some issues,causative
+279,"279, 297",We had some issues,two-role-action
+279,"279, 297",We had some issues,action
+305,"305, 306",I,affected-emoter
+305,"305, 306",I,affected-path
+305,"305, 306",I,affected-perceiver
+305,"305, 306",I,agent-cognizant
+305,"305, 306",I,affected-cognizant
+305,"305, 306",I,affected-carrier
+305,"305, 306",I,affected-destination
+305,"305, 306",I,affected
+305,"305, 306",I,agent-carrier
+305,"305, 306",I,affected-possessed
+305,"305, 306",I,agent-perceiver
+305,"305, 306",I,affected-source
+305,"305, 306",I,carrier
+313,"313, 354",and once I was here everything was great.,process
+344,"344, 354",was great.,process
+344,"344, 354",was great.,two-role-action
+344,"344, 354",was great.,action
+392,"392, 398",to die,main
+392,"392, 399",to die.,created-phenomenon
+392,"392, 399",to die.,created
+372,"372, 383",the passion,affected-emoter
+372,"372, 383",the passion,agent
+372,"372, 383",the passion,affected-path
+372,"372, 383",the passion,affected-perceiver
+372,"372, 383",the passion,agent-cognizant
+372,"372, 383",the passion,affected-cognizant
+372,"372, 383",the passion,affected-carrier
+372,"372, 383",the passion,affected-destination
+372,"372, 383",the passion,agent-carrier
+372,"372, 383",the passion,affected-possessed
+372,"372, 383",the passion,agent-perceiver
+372,"372, 383",the passion,affected-source
+355,"355, 399",A few months ago the passion started to die.,process
+355,"355, 399",A few months ago the passion started to die.,starting
+392,"392, 399",to die.,process
+392,"392, 399",to die.,action
+392,"392, 399",to die.,one-role-action
+400,"400, 402",We,agent
+400,"400, 402",We,agent-perceiver
+400,"400, 402",We,perceiver
+400,"400, 485",We are together all the time and spend most nights together one or the other's place.,process
+400,"400, 485",We are together all the time and spend most nights together one or the other's place.,directional
+420,"420, 485",the time and spend most nights together one or the other's place.,destination
+420,"420, 485",the time and spend most nights together one or the other's place.,affected-destination
+486,"486, 489",She,affected
+486,"486, 489",She,carrier
+486,"486, 560","She became more irritable about little things, but we never really argued.",process
+582,"582, 602",and did not push her,process
+582,"582, 602",and did not push her,directional
+582,"582, 602",and did not push her,relational
+582,"582, 602",and did not push her,two-role-action
+561,"561, 581",I went with the flow,process
+561,"561, 581",I went with the flow,matching
+561,"561, 581",I went with the flow,two-role-action
+599,"599, 602",her,affected-emoter
+599,"599, 602",her,affected-path
+599,"599, 602",her,affected-perceiver
+599,"599, 602",her,destination
+599,"599, 602",her,affected-cognizant
+599,"599, 602",her,affected-carrier
+599,"599, 602",her,affected-destination
+599,"599, 602",her,affected-possessed
+599,"599, 602",her,affected-source
+627,"627, 652",no physical relationship.,affected-carrier
+627,"627, 652",no physical relationship.,agent-carrier
+627,"627, 652",no physical relationship.,carrier
+568,"568, 581",with the flow,affected-emoter
+568,"568, 581",with the flow,affected-path
+568,"568, 581",with the flow,affected-perceiver
+568,"568, 581",with the flow,affected-cognizant
+568,"568, 581",with the flow,affected-carrier
+568,"568, 581",with the flow,affected-destination
+568,"568, 581",with the flow,affected
+568,"568, 581",with the flow,affected-possessed
+568,"568, 581",with the flow,matchee
+568,"568, 581",with the flow,affected-source
+603,"603, 652",and there was basically no physical relationship.,process
+603,"603, 652",and there was basically no physical relationship.,locational
+603,"603, 652",and there was basically no physical relationship.,action
+603,"603, 652",and there was basically no physical relationship.,one-role-action
+561,"561, 562",I,agent-cognizant
+561,"561, 562",I,affected-carrier
+561,"561, 562",I,agent-carrier
+561,"561, 562",I,agent-perceiver
+561,"561, 562",I,carrier
+653,"653, 654",I,agent-cognizant
+653,"653, 654",I,affected-carrier
+653,"653, 654",I,agent-carrier
+653,"653, 654",I,agent-perceiver
+653,"653, 654",I,carrier
+693,"693, 703",to change.,process
+693,"693, 703",to change.,one-role-action
+662,"662, 670",with her,cognizant
+662,"662, 670",with her,affected
+662,"662, 670",with her,matchee
+671,"671, 703",that something needed to change.,created-phenomenon
+653,"653, 703",I agreed with her that something needed to change.,process
+653,"653, 703",I agreed with her that something needed to change.,matching
+653,"653, 703",I agreed with her that something needed to change.,relational
+686,"686, 692",needed,main
+713,"713, 758",that she loves me but is not in love with me.,created-phenomenon
+731,"731, 758",but is not in love with me.,process
+731,"731, 758",but is not in love with me.,attributive
+731,"731, 758",but is not in love with me.,locational
+731,"731, 758",but is not in love with me.,relational
+731,"731, 758",but is not in love with me.,two-role-action
+731,"731, 758",but is not in love with me.,action
+731,"731, 758",but is not in love with me.,one-role-action
+704,"704, 707",She,cognizant
+704,"704, 707",She,agent-cognizant
+704,"704, 707",She,affected-cognizant
+704,"704, 707",She,agent-carrier
+704,"704, 707",She,agent-perceiver
+704,"704, 707",She,perceiver
+728,"728, 730",me,created-phenomenon
+718,"718, 721",she,affected-emoter
+704,"704, 758",She says that she loves me but is not in love with me.,process
+704,"704, 758",She says that she loves me but is not in love with me.,two-role-cognition
+704,"704, 758",She says that she loves me but is not in love with me.,two-role-perception
+713,"713, 730",that she loves me,process
+713,"713, 730",that she loves me,emotive
+742,"742, 758",in love with me.,attribute
+742,"742, 758",in love with me.,location
+742,"742, 758",in love with me.,range
+818,"818, 828",the answer,affected-carrier
+818,"818, 828",the answer,agent-carrier
+783,"783, 788",needs,main
+810,"810, 832",or what the answer is.,process
+810,"810, 832",or what the answer is.,locational
+813,"813, 817",what,location
+859,"859, 900",although I know something needs to change,process
+868,"868, 869",I,agent-cognizant
+868,"868, 869",I,affected-cognizant
+891,"891, 900",to change,process
+891,"891, 900",to change,one-role-action
+859,"859, 915","although I know something needs to change, I am crushed!",attribute
+859,"859, 915","although I know something needs to change, I am crushed!",location
+833,"833, 915","She is my best friend and although I know something needs to change, I am crushed!",process
+833,"833, 915","She is my best friend and although I know something needs to change, I am crushed!",locational
+833,"833, 836",She,affected-carrier
+833,"833, 836",She,agent-carrier
+885,"885, 890",needs,main
+875,"875, 900",something needs to change,created-phenomenon
+945,"945, 954",to figure,main
+1023,"1023, 1058",even more how much she means to me.,created-phenomenon
+1023,"1023, 1058",even more how much she means to me.,created
+1023,"1023, 1058",even more how much she means to me.,range
+1013,"1013, 1014",I,agent
+1013,"1013, 1014",I,agent-cognizant
+1013,"1013, 1014",I,affected-cognizant
+1013,"1013, 1014",I,affected
+1013,"1013, 1014",I,agent-carrier
+1013,"1013, 1014",I,agent-perceiver
+992,"992, 1003",to pressure,main
+1009,"1009, 1058",but I realize even more how much she means to me.,process
+1009,"1009, 1058",but I realize even more how much she means to me.,two-role-action
+1009,"1009, 1058",but I realize even more how much she means to me.,action
+979,"979, 1008","I don't want to pressure her,",process
+979,"979, 1008","I don't want to pressure her,",desiderative
+992,"992, 1007",to pressure her,created-phenomenon
+979,"979, 980",I,affected-emoter
+1075,"1075, 1078",her,agent
+1075,"1075, 1078",her,agent-cognizant
+1075,"1075, 1078",her,affected-carrier
+1075,"1075, 1078",her,affected
+1075,"1075, 1078",her,agent-carrier
+1075,"1075, 1078",her,agent-perceiver
+1075,"1075, 1078",her,carrier
+1084,"1084, 1106",the attraction for me?,affected-possessed
+1084,"1084, 1106",the attraction for me?,possessed
+1084,"1084, 1106",the attraction for me?,range
+1079,"1079, 1083",lose,main
+1075,"1075, 1106",her lose the attraction for me?,process
+1075,"1075, 1106",her lose the attraction for me?,possessive
+1075,"1075, 1106",her lose the attraction for me?,two-role-action
+1075,"1075, 1106",her lose the attraction for me?,action
+1075,"1075, 1106",her lose the attraction for me?,phenomenon
+1075,"1075, 1106",her lose the attraction for me?,created
+1059,"1059, 1063",What,agent-cognizant
+1059,"1059, 1063",What,agent-carrier
+1059,"1059, 1063",What,agent-perceiver
+1107,"1107, 1108",I,agent-cognizant
+1107,"1107, 1108",I,affected-cognizant
+1118,"1118, 1120",is,main
+1107,"1107, 1190","I know she is frustrated with me not loving my job, because she is very successful.",process
+1140,"1140, 1150",not loving,main
+1114,"1114, 1190","she is frustrated with me not loving my job, because she is very successful.",created-phenomenon
+1167,"1167, 1170",she,affected-carrier
+1167,"1167, 1170",she,agent-carrier
+1157,"1157, 1190",", because she is very successful.",process
+1157,"1157, 1190",", because she is very successful.",locational
+1174,"1174, 1190",very successful.,location

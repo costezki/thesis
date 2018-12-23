@@ -1,0 +1,1020 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.2340909090909091
+,Recall,0.6149253731343284
+,F1,0.3390946502057613
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+1,0.0,"18, 20","18, 20",0,Is,Is,main,main
+3,1.0,"24, 30","24, 31",1,afraid,afraid?,attribute,attribute
+2,0.0,"21, 23","21, 23",0,he,he,carrier,carrier
+51,1.0,"18, 30","18, 31",1,Is he afraid,Is he afraid?,attributive,attributive
+51,1.0,"18, 30","18, 31",1,Is he afraid,Is he afraid?,relational,relational
+5,0.0,"36, 39","36, 39",0,was,was,main,main
+52,1.0,"34, 85","34, 86",1,I was in a long-term relationship with my boyfriend,I was in a long-term relationship with my boyfriend.,locational,locational
+52,1.0,"34, 85","34, 86",1,I was in a long-term relationship with my boyfriend,I was in a long-term relationship with my boyfriend.,relational,relational
+4,0.0,"34, 35","34, 35",0,I,I,carrier,carrier
+6,1.0,"40, 85","40, 86",1,in a long-term relationship with my boyfriend,in a long-term relationship with my boyfriend.,location,location
+12,2.0,"139, 140","137, 140",2,I,", I",cognizant,cognizant
+11,0.0,"132, 137","132, 137",0,ended,ended,main,main
+55,15.033296378372908,"139, 186","124, 187",16,I thought that I would never fall in love again,"when it ended, I thought that I would never fall in love again.",mental,mental
+55,15.033296378372908,"139, 186","124, 187",16,I thought that I would never fall in love again,"when it ended, I thought that I would never fall in love again.",two-role-cognition,two-role-cognition
+8,0.0,"90, 94","90, 94",0,were,were,main,main
+13,0.0,"141, 148","141, 148",0,thought,thought,main,main
+14,5.0990195135927845,"154, 186","149, 187",6,I would never fall in love again,that I would never fall in love again.,phenomenon,phenomenon
+59,10.0,"168, 180","162, 172",11,fall in love,never fall,main,main
+17,1.0,"232, 252","232, 253",1,in a local chat room,in a local chat room.,location,location
+61,6.082762530298219,"194, 252","188, 253",7,"one Friday night last December, I was in a local chat room","Then, one Friday night last December, I was in a local chat room.",locational,locational
+61,6.082762530298219,"194, 252","188, 253",7,"one Friday night last December, I was in a local chat room","Then, one Friday night last December, I was in a local chat room.",relational,relational
+15,2.0,"226, 227","224, 227",2,I,", I",carrier,carrier
+16,0.0,"228, 231","228, 231",0,was,was,main,main
+67,0.0,"318, 322","318, 322",0,meet,meet,main,main
+26,0.0,"342, 345","342, 345",0,was,was,main,main
+23,0.0,"302, 309","302, 309",0,decided,decided,main,main
+76,0.0,"399, 403","399, 403",0,hurt,hurt,main,main
+31,0.0,"377, 384","377, 384",0,figured,figured,main,main
+39,0.0,"450, 452","450, 452",0,be,be,main,main
+35,0.0,"419, 423","419, 423",0,make,make,main,main
+36,0.0,"424, 436","424, 436",0,a new friend,a new friend,possessed,possessed
+33,0.0,"405, 406","405, 406",0,I,I,carrier,carrier
+43,0.0,"503, 507","503, 507",0,sent,sent,main,main
+44,0.0,"508, 510","508, 510",0,me,me,affected-carrier,affected-carrier
+47,0.0,"544, 547","544, 547",0,was,was,main,main
+80,0.0,"496, 520","496, 520",0,He had sent me a picture,He had sent me a picture,relational,relational
+41,0.0,"496, 498","496, 498",0,He,He,agent,agent
+49,0.0,"556, 559","556, 559",0,was,was,main,main
+83,2.0,"588, 590","586, 590",2,we,", we",agent,agent
+84,0.0,"591, 594","591, 594",0,met,met,main,main
+86,1.0,"576, 594","576, 595",1,"That night, we met","That night, we met.",action,action
+100,29.017236257093817,"653, 707","682, 708",30,she was the one that thought he was drop dead gorgeous,he was drop dead gorgeous.,attributive,attributive
+93,0.0,"657, 660","657, 660",0,was,was,main,main
+92,0.0,"653, 656","653, 656",0,she,she,carrier,carrier
+89,0.0,"606, 620","606, 620",0,my best friend,my best friend,affected,affected
+88,0.0,"598, 605","598, 605",0,brought,brought,main,main
+100,1.0,"653, 707","653, 708",1,she was the one that thought he was drop dead gorgeous,she was the one that thought he was drop dead gorgeous.,relational,relational
+87,0.0,"596, 597","596, 597",0,I,I,agent,agent
+98,0.0,"596, 628","596, 628",0,I brought my best friend with me,I brought my best friend with me,action,action
+94,28.0178514522438,"661, 707","689, 708",29,the one that thought he was drop dead gorgeous,drop dead gorgeous.,attribute,attribute
+91,0.0,"649, 652","649, 652",0,was,was,main,main
+108,0.0,"755, 758","755, 758",0,say,say,main,main
+115,7.0,"793, 803","793, 796",7,hit it off,hit,main,main
+110,3.0,"772, 779","772, 776",3,wore on,wore,main,main
+113,3.0,"762, 779","759, 779",3,the night wore on,as the night wore on,action,action
+119,0.0,"808, 814","808, 814",0,talked,talked,main,main
+122,0.0,"847, 851","847, 851",0,went,went,main,main
+121,1.0,"805, 836","805, 837",1,We talked over pizza and a beer,"We talked over pizza and a beer,",action,action
+118,0.0,"805, 807","805, 807",0,We,We,agent,agent
+139,4.0,"943, 947","939, 947",4,want,n't want,main,main
+141,1.0,"934, 973","934, 974",1,I didn't want the night to end so early,I didn't want the night to end so early.,mental,mental
+136,45.0111097397076,"927, 973","882, 974",46,I knew I didn't want the night to end so early,"When Beth decided that it was time to leave, I knew I didn't want the night to end so early.",mental,mental
+136,45.0111097397076,"927, 973","882, 974",46,I knew I didn't want the night to end so early,"When Beth decided that it was time to leave, I knew I didn't want the night to end so early.",two-role-cognition,two-role-cognition
+133,2.0,"927, 928","925, 928",2,I,", I",cognizant,cognizant
+134,0.0,"929, 933","929, 933",0,knew,knew,main,main
+126,0.0,"892, 899","892, 899",0,decided,decided,main,main
+135,1.0,"934, 973","934, 974",1,I didn't want the night to end so early,I didn't want the night to end so early.,phenomenon,phenomenon
+140,10.04987562112089,"948, 973","958, 974",11,the night to end so early,to end so early.,phenomenon,phenomenon
+137,0.0,"934, 935","934, 935",0,I,I,emoter,emoter
+143,0.0,"981, 988","981, 988",0,invited,invited,main,main
+60,1.0,"1026, 1027","1025, 1027",1,s,'s,main,main
+149,0.0,"1036, 1039","1036, 1039",0,had,had,main,main
+150,0.0,"1040, 1054","1040, 1054",0,our first kiss,our first kiss,affected-possessed,affected-possessed
+155,4.123105625617661,"1059, 1083","1055, 1084",5,I fell instantly in love,and I fell instantly in love.,action,action
+153,0.0,"1061, 1065","1061, 1065",0,fell,fell,main,main
+151,5.0,"1033, 1054","1028, 1054",5,we had our first kiss,when we had our first kiss,relational,relational
+151,5.0,"1033, 1054","1028, 1054",5,we had our first kiss,when we had our first kiss,possessive,possessive
+173,0.0,"1152, 1153","1152, 1153",0,I,I,emoter,emoter
+169,0.0,"1145, 1146","1145, 1146",0,I,I,cognizant,cognizant
+177,1.0,"1166, 1199","1166, 1200",1,anyone else to kiss me ever again,anyone else to kiss me ever again.,phenomenon,phenomenon
+168,11.0,"1121, 1144","1132, 1144",11,the minute he kissed me,he kissed me,action,action
+175,4.0,"1161, 1165","1157, 1165",4,want,n't want,main,main
+159,0.0,"1101, 1103","1101, 1103",0,it,it,phenomenon,phenomenon
+156,0.0,"1085, 1086","1085, 1086",0,I,I,agent,agent
+166,0.0,"1135, 1141","1135, 1141",0,kissed,kissed,main,main
+165,0.0,"1132, 1134","1132, 1134",0,he,he,agent,agent
+158,4.0,"1093, 1100","1089, 1100",4,explain,n't explain,main,main
+162,0.0,"1108, 1111","1108, 1111",0,was,was,main,main
+163,0.0,"1112, 1119","1112, 1119",0,magical,magical,attribute,attribute
+167,0.0,"1142, 1144","1142, 1144",0,me,me,affected,affected
+170,0.0,"1147, 1151","1147, 1151",0,knew,knew,main,main
+176,1.0,"1152, 1199","1152, 1200",1,I didn't want anyone else to kiss me ever again,I didn't want anyone else to kiss me ever again.,mental,mental
+172,24.020824298928627,"1121, 1199","1145, 1200",25,the minute he kissed me I knew I didn't want anyone else to kiss me ever again,I knew I didn't want anyone else to kiss me ever again.,mental,mental
+172,24.020824298928627,"1121, 1199","1145, 1200",25,the minute he kissed me I knew I didn't want anyone else to kiss me ever again,I knew I didn't want anyone else to kiss me ever again.,two-role-cognition,two-role-cognition
+171,1.0,"1152, 1199","1152, 1200",1,I didn't want anyone else to kiss me ever again,I didn't want anyone else to kiss me ever again.,phenomenon,phenomenon
+164,81.02468759581859,"1105, 1119","1103, 1200",83,it was magical,"; it was magical, the minute he kissed me I knew I didn't want anyone else to kiss me ever again.",attributive,attributive
+164,81.02468759581859,"1105, 1119","1103, 1200",83,it was magical,"; it was magical, the minute he kissed me I knew I didn't want anyone else to kiss me ever again.",relational,relational
+97,5.0990195135927845,"1240, 1259","1245, 1260",6,it's where I belong,where I belong.,locational,locational
+97,5.0990195135927845,"1240, 1259","1245, 1260",6,it's where I belong,where I belong.,relational,relational
+178,0.0,"1210, 1211","1210, 1211",0,I,I,carrier,carrier
+95,1.0,"1243, 1244","1242, 1244",1,s,'s,main,main
+181,9.0,"1210, 1226","1201, 1226",9,I am in his arms,Whenever I am in his arms,locational,locational
+181,9.0,"1210, 1226","1201, 1226",9,I am in his arms,Whenever I am in his arms,relational,relational
+96,9.0,"1245, 1259","1245, 1250",9,where I belong,where,location,location
+182,2.0,"1228, 1229","1226, 1229",2,I,", I",cognizant,cognizant
+185,27.018512172212592,"1228, 1259","1201, 1260",28,I know that it's where I belong,"Whenever I am in his arms, I know that it's where I belong.",mental,mental
+185,27.018512172212592,"1228, 1259","1201, 1260",28,I know that it's where I belong,"Whenever I am in his arms, I know that it's where I belong.",two-role-cognition,two-role-cognition
+183,0.0,"1230, 1234","1230, 1234",0,know,know,main,main
+184,5.0990195135927845,"1240, 1259","1235, 1260",6,it's where I belong,that it's where I belong.,phenomenon,phenomenon
+179,0.0,"1212, 1214","1212, 1214",0,am,am,main,main
+180,0.0,"1215, 1226","1215, 1226",0,in his arms,in his arms,location,location
+200,0.0,"1338, 1343","1338, 1343",0,Frank,Frank,matchee,matchee
+203,0.0,"1359, 1361","1359, 1361",0,am,am,main,main
+197,67.94115100585212,"1311, 1343","1261, 1389",96,didn't realize until I met Frank,"I thought I knew what being in love was like, but didn't realize until I met Frank because when I am with him, I am truly happy.",mental,mental
+197,67.94115100585212,"1311, 1343","1261, 1389",96,didn't realize until I met Frank,"I thought I knew what being in love was like, but didn't realize until I met Frank because when I am with him, I am truly happy.",two-role-cognition,two-role-cognition
+208,1.0,"1377, 1388","1377, 1389",1,truly happy,truly happy.,attribute,attribute
+198,0.0,"1332, 1333","1332, 1333",0,I,I,agent-carrier,agent-carrier
+199,0.0,"1334, 1337","1334, 1337",0,met,met,main,main
+191,0.0,"1273, 1277","1273, 1277",0,knew,knew,main,main
+192,0.0,"1278, 1305","1278, 1305",0,what being in love was like,what being in love was like,phenomenon,phenomenon
+187,0.0,"1263, 1270","1263, 1270",0,thought,thought,main,main
+209,28.0178514522438,"1372, 1388","1344, 1389",29,I am truly happy,"because when I am with him, I am truly happy.",attributive,attributive
+205,23.021728866442675,"1357, 1370","1344, 1389",32,I am with him,"because when I am with him, I am truly happy.",relational,relational
+205,5.0,"1357, 1370","1352, 1370",5,I am with him,when I am with him,locational,locational
+186,0.0,"1261, 1262","1261, 1262",0,I,I,cognizant,cognizant
+207,0.0,"1374, 1376","1374, 1376",0,am,am,main,main
+193,1.0,"1271, 1305","1271, 1306",1,I knew what being in love was like,"I knew what being in love was like,",mental,mental
+193,1.0,"1271, 1305","1271, 1306",1,I knew what being in love was like,"I knew what being in love was like,",two-role-cognition,two-role-cognition
+190,0.0,"1271, 1272","1271, 1272",0,I,I,cognizant,cognizant
+202,0.0,"1357, 1358","1357, 1358",0,I,I,carrier,carrier
+195,4.0,"1318, 1325","1314, 1325",4,realize,n't realize,main,main
+196,76.40026177965623,"1332, 1343","1271, 1389",107,I met Frank,"I knew what being in love was like, but didn't realize until I met Frank because when I am with him, I am truly happy.",phenomenon,phenomenon
+206,2.0,"1372, 1373","1370, 1373",2,I,", I",carrier,carrier
+201,46.389654018972806,"1332, 1343","1326, 1389",52,I met Frank,"until I met Frank because when I am with him, I am truly happy.",matching,matching
+209,46.010868281309364,"1372, 1388","1326, 1389",47,I am truly happy,"until I met Frank because when I am with him, I am truly happy.",relational,relational
+215,4.123105625617661,"1426, 1427","1425, 1431",5,s,'s not,main,main
+211,5.0,"1413, 1422","1413, 1417",5,feel like,feel,main,main
+217,33.015148038438355,"1423, 1451","1390, 1452",34,it's not just one-way either,"In some strange way, I feel like it's not just one-way either.",attributive,attributive
+217,5.0990195135927845,"1423, 1451","1418, 1452",6,it's not just one-way either,like it's not just one-way either.,relational,relational
+214,0.0,"1423, 1425","1423, 1425",0,it,it,carrier,carrier
+219,0.0,"1497, 1500","1497, 1500",0,saw,saw,main,main
+221,62.0,"1453, 1528","1453, 1590",62,"Over the course of December and January, we saw a good amount of each other","Over the course of December and January, we saw a good amount of each other and the harder I tried not to fall for him, the harder I did.",two-role-perception,two-role-perception
+218,2.0,"1494, 1496","1492, 1496",2,we,", we",perceiver,perceiver
+222,0.0,"1544, 1545","1544, 1545",0,I,I,agent,agent
+223,0.0,"1546, 1551","1546, 1551",0,tried,tried,main,main
+227,11.0,"1544, 1571","1533, 1571",11,I tried not to fall for him,the harder I tried not to fall for him,influential,influential
+224,4.0,"1556, 1571","1552, 1571",4,to fall for him,not to fall for him,phenomenon,phenomenon
+234,13.0,"1618, 1633","1618, 1620",13,am in love with,am,main,main
+229,2.0,"1596, 1606","1594, 1606",2,my problem,", my problem",carrier,carrier
+232,2.23606797749979,"1596, 1615","1594, 1614",3,"my problem is this,",", my problem is this",attributive,attributive
+232,2.23606797749979,"1596, 1615","1594, 1614",3,"my problem is this,",", my problem is this",relational,relational
+230,0.0,"1607, 1609","1607, 1609",0,is,is,main,main
+231,1.0,"1610, 1615","1610, 1614",1,"this,",this,attribute,attribute
+120,1.0,"1644, 1667","1644, 1668",1,Head over heels in love,Head over heels in love.,relational,relational
+247,0.0,"1729, 1740","1729, 1740",0,my thoughts,my thoughts,carrier,carrier
+240,3.0,"1671, 1682","1674, 1682",3,go to sleep,to sleep,main,main
+248,6.0,"1741, 1744","1741, 1750",6,are,are never,main,main
+249,9.055385138137417,"1751, 1763","1760, 1764",10,far from him,him.,location,location
+250,13.601470508735444,"1729, 1763","1725, 1750",17,my thoughts are never far from him,and my thoughts are never,locational,locational
+250,13.601470508735444,"1729, 1763","1725, 1750",17,my thoughts are never far from him,and my thoughts are never,relational,relational
+255,37.0,"1820, 1855","1820, 1892",37,he doesn't see us going any further,he doesn't see us going any further and that I am not the women for him.,phenomenon,phenomenon
+253,0.0,"1812, 1816","1812, 1816",0,told,told,main,main
+254,0.0,"1817, 1819","1817, 1819",0,me,me,affected-cognizant,affected-cognizant
+266,4.0,"1867, 1869","1867, 1873",4,am,am not,main,main
+264,21.0,"1820, 1855","1820, 1834",21,he doesn't see us going any further,he doesn't see,mental,mental
+257,37.33630940518894,"1770, 1855","1765, 1892",42,"over the course of the last month, he has told me he doesn't see us going any further","But, over the course of the last month, he has told me he doesn't see us going any further and that I am not the women for him.",mental,mental
+257,37.33630940518894,"1770, 1855","1765, 1892",42,"over the course of the last month, he has told me he doesn't see us going any further","But, over the course of the last month, he has told me he doesn't see us going any further and that I am not the women for him.",three-role-cognition,three-role-cognition
+261,4.0,"1831, 1834","1827, 1834",4,see,n't see,main,main
+251,2.0,"1805, 1807","1803, 1807",2,he,", he",agent,agent
+271,15.0,"1906, 1928","1906, 1913",15,the way he looks at me,the way,phenomenon,phenomenon
+276,3.0,"1917, 1925","1917, 1922",3,looks at,looks,main,main
+269,0.0,"1900, 1901","1900, 1901",0,I,I,affected-cognizant,affected-cognizant
+274,16.55294535724685,"1900, 1928","1893, 1913",22,I see the way he looks at me,Though I see the way,two-role-cognition,two-role-cognition
+270,0.0,"1902, 1905","1902, 1905",0,see,see,main,main
+281,0.0,"1957, 1960","1957, 1960",0,say,say,main,main
+103,0.0,"1972, 1978","1972, 1978",0,afraid,afraid,attribute,attribute
+282,46.2709412050371,"1966, 1978","1961, 2024",51,he is afraid,"that he is afraid, maybe because of the 14-year age difference.",phenomenon,phenomenon
+104,46.2709412050371,"1966, 1978","1961, 2024",51,he is afraid,"that he is afraid, maybe because of the 14-year age difference.",attributive,attributive
+104,46.2709412050371,"1966, 1978","1961, 2024",51,he is afraid,"that he is afraid, maybe because of the 14-year age difference.",relational,relational
+102,0.0,"1969, 1971","1969, 1971",0,is,is,main,main
+101,0.0,"1966, 1968","1966, 1968",0,he,he,carrier,carrier
+280,0.0,"1952, 1956","1952, 1956",0,They,They,agent,agent
+283,46.0,"1952, 1978","1952, 2024",46,They say that he is afraid,"They say that he is afraid, maybe because of the 14-year age difference.",mental,mental
+283,46.0,"1952, 1978","1952, 2024",46,They say that he is afraid,"They say that he is afraid, maybe because of the 14-year age difference.",three-role-cognition,three-role-cognition
+295,7.0,"2094, 2103","2094, 2096",7,am afraid,am,main,main
+293,1.0,"2051, 2086","2051, 2087",1,I don't want to lose him altogether,"I don't want to lose him altogether,",mental,mental
+292,0.0,"2064, 2086","2064, 2086",0,to lose him altogether,to lose him altogether,phenomenon,phenomenon
+297,0.0,"2109, 2110","2109, 2110",0,I,I,emoter,emoter
+289,0.0,"2051, 2052","2051, 2052",0,I,I,emoter,emoter
+300,0.0,"2123, 2127","2123, 2127",0,love,love,main,main
+302,5.0990195135927845,"2109, 2131","2104, 2132",6,I will always love him,that I will always love him.,mental,mental
+291,4.0,"2059, 2063","2055, 2063",4,want,n't want,main,main
+301,1.0,"2128, 2131","2128, 2132",1,him,him.,phenomenon,phenomenon
+303,0.0,"2133, 2134","2133, 2134",0,I,I,cognizant,cognizant
+307,0.0,"2157, 2159","2157, 2159",0,is,is,main,main
+305,18.0,"2141, 2219","2141, 2201",18,"my question is, is it possible for him to see me differently or is it hopeless","my question is, is it possible for him to see me differently",phenomenon,phenomenon
+312,0.0,"2205, 2207","2205, 2207",0,is,is,main,main
+306,18.0,"2133, 2219","2133, 2201",18,"I guess my question is, is it possible for him to see me differently or is it hopeless","I guess my question is, is it possible for him to see me differently",mental,mental
+306,18.0,"2133, 2219","2133, 2201",18,"I guess my question is, is it possible for him to see me differently or is it hopeless","I guess my question is, is it possible for him to see me differently",two-role-cognition,two-role-cognition
+314,1.0,"2211, 2219","2211, 2220",1,hopeless,hopeless.,attribute,attribute
+315,3.1622776601683795,"2205, 2219","2202, 2220",4,is it hopeless,or is it hopeless.,attributive,attributive
+315,3.1622776601683795,"2205, 2219","2202, 2220",4,is it hopeless,or is it hopeless.,relational,relational
+304,0.0,"2135, 2140","2135, 2140",0,guess,guess,main,main
+311,15.0,"2157, 2201","2172, 2201",15,is it possible for him to see me differently,for him to see me differently,relational,relational
+99,49.01020301937138,"633, 707","682, 708",50,the funny thing was she was the one that thought he was drop dead gorgeous,he was drop dead gorgeous.,relational,relational
+228,131.00381673829202,"1584, 1589","1453, 1590",132,I did,"Over the course of December and January, we saw a good amount of each other and the harder I tried not to fall for him, the harder I did.",influential,influential
+,
+,Manual mismatching all parsed (False Negative)
+53,"87, 119",We were together for seven years,relational
+53,"87, 119",We were together for seven years,attributive
+7,"87, 89",We,carrier
+9,"95, 103",together,attribute
+54,"129, 137",it ended,action
+10,"129, 131",it,affected
+58,"154, 186",I would never fall in love again,action
+56,"154, 155",I,agent
+64,"254, 337","Being bored and feeling a little adventurous, I decided I would meet this older man",mental
+64,"254, 337","Being bored and feeling a little adventurous, I decided I would meet this older man",two-role-cognition
+22,"300, 301",I,agent-cognizant
+24,"310, 337",I would meet this older man,phenomenon
+69,"310, 337",I would meet this older man,action
+65,"310, 311",I,agent
+68,"323, 337",this older man,affected
+70,"340, 360",I was 23 at the time,relational
+70,"340, 360",I was 23 at the time,attributive
+25,"340, 341",I,carrier
+27,"346, 348",23,attribute
+71,"365, 370",he 37,relational
+71,"365, 370",he 37,attributive
+28,"365, 367",he,carrier
+29,"368, 370",37,attribute
+72,"375, 403",I figured what could it hurt,mental
+72,"375, 403",I figured what could it hurt,two-role-cognition
+30,"375, 376",I,cognizant
+32,"385, 403",what could it hurt,phenomenon
+77,"385, 403",what could it hurt,action
+73,"385, 389",what,agent
+78,"405, 436",I would maybe make a new friend,relational
+78,"405, 436",I would maybe make a new friend,possessive
+79,"441, 494",it would be a great story to tell years down the road,relational
+79,"441, 494",it would be a great story to tell years down the road,attributive
+37,"441, 443",it,carrier
+40,"453, 474",a great story to tell,attribute
+80,"496, 520",He had sent me a picture,possessive
+45,"511, 520",a picture,possessed
+81,"525, 574",my initial thought was that he was too old for me,relational
+81,"525, 574",my initial thought was that he was too old for me,attributive
+46,"525, 543",my initial thought,carrier
+18,"553, 574",he was too old for me,attribute
+82,"553, 574",he was too old for me,relational
+82,"553, 574",he was too old for me,attributive
+48,"553, 555",he,carrier
+50,"560, 574",too old for me,attribute
+99,"633, 707",the funny thing was she was the one that thought he was drop dead gorgeous,attributive
+90,"633, 648",the funny thing,carrier
+19,"653, 707",she was the one that thought he was drop dead gorgeous,attribute
+112,"748, 803","I will say as the night wore on, Frank and I hit it off",mental
+112,"748, 803","I will say as the night wore on, Frank and I hit it off",three-role-cognition
+106,"748, 749",I,agent
+20,"759, 803","as the night wore on, Frank and I hit it off",phenomenon
+109,"762, 771",the night,agent
+116,"781, 803",Frank and I hit it off,action
+114,"781, 792",Frank and I,agent
+124,"847, 880",went to shoot pool with my friend,influential
+123,"852, 880",to shoot pool with my friend,created-phenomenon
+128,"887, 925",Beth decided that it was time to leave,mental
+128,"887, 925",Beth decided that it was time to leave,two-role-cognition
+125,"887, 891",Beth,agent-cognizant
+127,"905, 925",it was time to leave,phenomenon
+132,"905, 925",it was time to leave,relational
+132,"905, 925",it was time to leave,attributive
+129,"905, 907",it,carrier
+130,"908, 911",was,main
+131,"912, 925",time to leave,attribute
+147,"979, 1019",I invited him in for a drink at my place,action
+142,"979, 980",I,agent
+144,"989, 992",him,affected
+63,"1021, 1083",That's when we had our first kiss and I fell instantly in love,event-relating
+21,"1021, 1025",That,carrier
+62,"1028, 1083",when we had our first kiss and I fell instantly in love,phenomenon
+148,"1033, 1035",we,affected-carrier
+152,"1059, 1060",I,agent
+160,"1085, 1103",I can't explain it,mental
+160,"1085, 1103",I can't explain it,three-role-cognition
+161,"1105, 1107",it,carrier
+85,"1240, 1242",it,carrier
+189,"1261, 1305",I thought I knew what being in love was like,mental
+189,"1261, 1305",I thought I knew what being in love was like,two-role-cognition
+188,"1271, 1305",I knew what being in love was like,phenomenon
+201,"1332, 1343",I met Frank,relational
+204,"1362, 1370",with him,location
+213,"1390, 1451","In some strange way, I feel like it's not just one-way either",mental
+213,"1390, 1451","In some strange way, I feel like it's not just one-way either",two-role-cognition
+210,"1411, 1412",I,cognizant
+212,"1423, 1451",it's not just one-way either,phenomenon
+216,"1437, 1444",one-way,attribute
+221,"1453, 1528","Over the course of December and January, we saw a good amount of each other",mental
+220,"1501, 1528",a good amount of each other,phenomenon
+225,"1584, 1585",I,agent
+237,"1616, 1642",I am in love with this man,mental
+233,"1616, 1617",I,emoter
+236,"1634, 1642",this man,phenomenon
+117,"1644, 1667",Head over heels in love,attribute
+120,"1644, 1667",Head over heels in love,attributive
+242,"1669, 1698",I go to sleep thinking of him,action
+238,"1669, 1670",I,agent
+246,"1700, 1723",I awake thinking of him,action
+243,"1700, 1701",I,agent
+244,"1702, 1707",awake,main
+259,"1820, 1822",he,emoter
+263,"1835, 1855",us going any further,phenomenon
+256,"1865, 1891",I am not the women for him,phenomenon
+258,"1865, 1891",I am not the women for him,mental
+268,"1865, 1891",I am not the women for him,relational
+268,"1865, 1891",I am not the women for him,attributive
+265,"1865, 1866",I,carrier
+267,"1874, 1891",the women for him,attribute
+274,"1900, 1928",I see the way he looks at me,mental
+278,"1914, 1928",he looks at me,mental
+278,"1914, 1928",he looks at me,two-role-perception
+275,"1914, 1916",he,agent-perceiver
+277,"1926, 1928",me,phenomenon
+279,"1933, 1946",my friends do,mental
+279,"1933, 1946",my friends do,two-role-cognition
+272,"1933, 1943",my friends,affected-cognizant
+288,"2025, 2049",I am not sure what to do,mental
+288,"2025, 2049",I am not sure what to do,two-role-cognition
+284,"2025, 2026",I,cognizant
+286,"2034, 2038",sure,main
+287,"2039, 2049",what to do,phenomenon
+298,"2092, 2131",I am afraid that I will always love him,mental
+294,"2092, 2093",I,emoter
+105,"2109, 2131",I will always love him,phenomenon
+311,"2157, 2201",is it possible for him to see me differently,attributive
+111,"2160, 2162",it,carrier
+309,"2163, 2201",possible for him to see me differently,attribute
+313,"2208, 2210",it,carrier
+,
+,Parsed mismatching all manual (False Positives)
+24,"24, 31",afraid?,location
+21,"21, 23",he,affected-carrier
+21,"21, 23",he,agent-carrier
+18,"18, 31",Is he afraid?,process
+18,"18, 31",Is he afraid?,locational
+34,"34, 86",I was in a long-term relationship with my boyfriend.,process
+34,"34, 86",I was in a long-term relationship with my boyfriend.,attributive
+34,"34, 86",I was in a long-term relationship with my boyfriend.,two-role-action
+34,"34, 86",I was in a long-term relationship with my boyfriend.,action
+34,"34, 86",I was in a long-term relationship with my boyfriend.,one-role-action
+34,"34, 35",I,agent
+34,"34, 35",I,agent-cognizant
+34,"34, 35",I,affected-carrier
+34,"34, 35",I,affected
+34,"34, 35",I,agent-carrier
+34,"34, 35",I,agent-perceiver
+34,"34, 35",I,perceiver
+40,"40, 86",in a long-term relationship with my boyfriend.,attribute
+40,"40, 86",in a long-term relationship with my boyfriend.,range
+154,"154, 155",I,affected-emoter
+154,"154, 155",I,affected-path
+154,"154, 155",I,affected-perceiver
+154,"154, 155",I,affected-cognizant
+154,"154, 155",I,affected-carrier
+154,"154, 155",I,affected-destination
+154,"154, 155",I,affected
+154,"154, 155",I,affected-possessed
+154,"154, 155",I,affected-source
+137,"137, 140",", I",agent
+137,"137, 140",", I",agent-cognizant
+137,"137, 140",", I",affected-cognizant
+137,"137, 140",", I",affected
+124,"124, 137",when it ended,process
+124,"124, 137",when it ended,locational
+124,"124, 137",when it ended,relational
+124,"124, 137",when it ended,ceasing
+124,"124, 128",when,phenomenon
+124,"124, 128",when,created-phenomenon
+124,"124, 128",when,location
+129,"129, 131",it,agent
+129,"129, 131",it,agent-cognizant
+129,"129, 131",it,affected-carrier
+129,"129, 131",it,agent-carrier
+129,"129, 131",it,agent-perceiver
+129,"129, 131",it,carrier
+124,"124, 187","when it ended, I thought that I would never fall in love again.",process
+149,"149, 187",that I would never fall in love again.,created-phenomenon
+188,"188, 224","Then, one Friday night last December",attribute
+188,"188, 224","Then, one Friday night last December",location
+188,"188, 224","Then, one Friday night last December",range
+232,"232, 253",in a local chat room.,attribute
+232,"232, 253",in a local chat room.,range
+188,"188, 253","Then, one Friday night last December, I was in a local chat room.",process
+188,"188, 253","Then, one Friday night last December, I was in a local chat room.",attributive
+188,"188, 253","Then, one Friday night last December, I was in a local chat room.",two-role-action
+188,"188, 253","Then, one Friday night last December, I was in a local chat room.",action
+224,"224, 227",", I",agent
+224,"224, 227",", I",agent-cognizant
+224,"224, 227",", I",affected-carrier
+224,"224, 227",", I",affected
+224,"224, 227",", I",agent-carrier
+224,"224, 227",", I",agent-perceiver
+224,"224, 227",", I",perceiver
+340,"340, 341",I,agent
+340,"340, 341",I,agent-cognizant
+340,"340, 341",I,agent-carrier
+340,"340, 341",I,agent-perceiver
+338,"338, 374",( I was 23 at the time and he 37 ) .,process
+338,"338, 374",( I was 23 at the time and he 37 ) .,two-role-action
+338,"338, 374",( I was 23 at the time and he 37 ) .,action
+254,"254, 259",Being,main
+346,"346, 370",23 at the time and he 37,affected-emoter
+346,"346, 370",23 at the time and he 37,affected-path
+346,"346, 370",23 at the time and he 37,affected-perceiver
+346,"346, 370",23 at the time and he 37,affected-cognizant
+346,"346, 370",23 at the time and he 37,affected-carrier
+346,"346, 370",23 at the time and he 37,affected-destination
+346,"346, 370",23 at the time and he 37,affected
+346,"346, 370",23 at the time and he 37,affected-possessed
+346,"346, 370",23 at the time and he 37,affected-source
+346,"346, 370",23 at the time and he 37,range
+396,"396, 398",it,agent
+396,"396, 398",it,agent-cognizant
+396,"396, 398",it,agent-carrier
+396,"396, 398",it,agent-perceiver
+385,"385, 389",what,affected-emoter
+385,"385, 389",what,affected-path
+385,"385, 389",what,affected-perceiver
+385,"385, 389",what,affected-cognizant
+385,"385, 389",what,affected-carrier
+385,"385, 389",what,affected-destination
+385,"385, 389",what,affected
+385,"385, 389",what,affected-possessed
+385,"385, 389",what,affected-source
+424,"424, 436",a new friend,phenomenon
+424,"424, 436",a new friend,attribute
+424,"424, 436",a new friend,created-phenomenon
+424,"424, 436",a new friend,destination
+424,"424, 436",a new friend,affected-destination
+424,"424, 436",a new friend,affected-possessed
+424,"424, 436",a new friend,created
+405,"405, 406",I,agent
+405,"405, 406",I,agent-cognizant
+405,"405, 406",I,affected-carrier
+405,"405, 406",I,agent-carrier
+405,"405, 406",I,agent-perceiver
+405,"405, 406",I,perceiver
+467,"467, 474",to tell,main
+441,"441, 443",it,agent
+441,"441, 443",it,agent-cognizant
+441,"441, 443",it,agent-carrier
+441,"441, 443",it,agent-perceiver
+441,"441, 443",it,perceiver
+453,"453, 466",a great story,affected-emoter
+453,"453, 466",a great story,affected-path
+453,"453, 466",a great story,affected-perceiver
+453,"453, 466",a great story,destination
+453,"453, 466",a great story,affected-cognizant
+453,"453, 466",a great story,affected-carrier
+453,"453, 466",a great story,affected-destination
+453,"453, 466",a great story,affected
+453,"453, 466",a great story,affected-possessed
+453,"453, 466",a great story,affected-source
+453,"453, 466",a great story,range
+508,"508, 510",me,affected
+508,"508, 510",me,carrier
+553,"553, 555",he,agent
+553,"553, 555",he,agent-cognizant
+553,"553, 555",he,agent-carrier
+553,"553, 555",he,agent-perceiver
+511,"511, 520",a picture,destination
+511,"511, 520",a picture,affected-destination
+548,"548, 575",that he was too old for me.,process
+548,"548, 575",that he was too old for me.,two-role-action
+548,"548, 575",that he was too old for me.,action
+496,"496, 520",He had sent me a picture,process
+496,"496, 520",He had sent me a picture,directional
+496,"496, 498",He,agent-cognizant
+496,"496, 498",He,agent-carrier
+496,"496, 498",He,agent-perceiver
+560,"560, 567",too old,range
+586,"586, 590",", we",agent-cognizant
+586,"586, 590",", we",affected-carrier
+586,"586, 590",", we",agent-carrier
+586,"586, 590",", we",agent-perceiver
+586,"586, 590",", we",carrier
+576,"576, 595","That night, we met.",process
+576,"576, 595","That night, we met.",two-role-action
+576,"576, 595","That night, we met.",one-role-action
+661,"661, 708",the one that thought he was drop dead gorgeous.,location
+674,"674, 681",thought,main
+685,"685, 688",was,main
+682,"682, 708",he was drop dead gorgeous.,process
+682,"682, 708",he was drop dead gorgeous.,locational
+653,"653, 656",she,affected-carrier
+653,"653, 656",she,agent-carrier
+606,"606, 620",my best friend,affected-emoter
+606,"606, 620",my best friend,affected-path
+606,"606, 620",my best friend,affected-perceiver
+606,"606, 620",my best friend,destination
+606,"606, 620",my best friend,affected-cognizant
+606,"606, 620",my best friend,affected-carrier
+606,"606, 620",my best friend,affected-destination
+606,"606, 620",my best friend,affected-possessed
+606,"606, 620",my best friend,affected-source
+606,"606, 620",my best friend,carrier
+621,"621, 628",with me,affected-emoter
+621,"621, 628",with me,affected-path
+621,"621, 628",with me,affected-perceiver
+621,"621, 628",with me,affected-cognizant
+621,"621, 628",with me,affected-carrier
+621,"621, 628",with me,affected-destination
+621,"621, 628",with me,affected
+621,"621, 628",with me,affected-possessed
+621,"621, 628",with me,affected-source
+621,"621, 628",with me,possessed
+653,"653, 708",she was the one that thought he was drop dead gorgeous.,process
+653,"653, 708",she was the one that thought he was drop dead gorgeous.,locational
+596,"596, 597",I,agent-cognizant
+596,"596, 597",I,affected-carrier
+596,"596, 597",I,agent-carrier
+596,"596, 597",I,agent-perceiver
+596,"596, 597",I,carrier
+682,"682, 684",he,affected-carrier
+682,"682, 684",he,agent-carrier
+682,"682, 684",he,carrier
+596,"596, 628",I brought my best friend with me,process
+596,"596, 628",I brought my best friend with me,directional
+596,"596, 628",I brought my best friend with me,relational
+596,"596, 628",I brought my best friend with me,possessive
+596,"596, 628",I brought my best friend with me,two-role-action
+689,"689, 708",drop dead gorgeous.,location
+713,"713, 746",", to make a very long story short",process
+713,"713, 746",", to make a very long story short",directional
+713,"713, 746",", to make a very long story short",causative
+713,"713, 746",", to make a very long story short",relational
+713,"713, 746",", to make a very long story short",possessive
+713,"713, 746",", to make a very long story short",two-role-action
+713,"713, 746",", to make a very long story short",influential
+715,"715, 722",to make,main
+759,"759, 779",as the night wore on,process
+759,"759, 779",as the night wore on,one-role-action
+762,"762, 771",the night,affected-emoter
+762,"762, 771",the night,affected-path
+762,"762, 771",the night,affected-perceiver
+762,"762, 771",the night,affected-cognizant
+762,"762, 771",the night,affected-carrier
+762,"762, 771",the night,affected-destination
+762,"762, 771",the night,affected
+762,"762, 771",the night,affected-possessed
+762,"762, 771",the night,affected-source
+723,"723, 740",a very long story,phenomenon
+723,"723, 740",a very long story,created-phenomenon
+723,"723, 740",a very long story,destination
+723,"723, 740",a very long story,affected-destination
+723,"723, 740",a very long story,affected-possessed
+723,"723, 740",a very long story,created
+723,"723, 740",a very long story,possessed
+815,"815, 836",over pizza and a beer,affected-emoter
+815,"815, 836",over pizza and a beer,affected-path
+815,"815, 836",over pizza and a beer,affected-perceiver
+815,"815, 836",over pizza and a beer,affected-cognizant
+815,"815, 836",over pizza and a beer,affected-carrier
+815,"815, 836",over pizza and a beer,affected-destination
+815,"815, 836",over pizza and a beer,affected
+815,"815, 836",over pizza and a beer,affected-possessed
+815,"815, 836",over pizza and a beer,affected-source
+805,"805, 837","We talked over pizza and a beer,",process
+805,"805, 837","We talked over pizza and a beer,",two-role-action
+852,"852, 860",to shoot,main
+805,"805, 807",We,agent-cognizant
+805,"805, 807",We,agent-carrier
+805,"805, 807",We,agent-perceiver
+934,"934, 974",I didn't want the night to end so early.,process
+934,"934, 974",I didn't want the night to end so early.,desiderative
+917,"917, 925",to leave,process
+917,"917, 925",to leave,action
+917,"917, 925",to leave,one-role-action
+882,"882, 974","When Beth decided that it was time to leave, I knew I didn't want the night to end so early.",process
+958,"958, 964",to end,main
+925,"925, 928",", I",agent-cognizant
+925,"925, 928",", I",affected-cognizant
+958,"958, 974",to end so early.,process
+958,"958, 974",to end so early.,action
+958,"958, 974",to end so early.,one-role-action
+934,"934, 974",I didn't want the night to end so early.,created-phenomenon
+917,"917, 925",to leave,main
+958,"958, 974",to end so early.,created-phenomenon
+934,"934, 935",I,affected-emoter
+1033,"1033, 1035",we,agent
+1033,"1033, 1035",we,agent-cognizant
+1033,"1033, 1035",we,agent-carrier
+1033,"1033, 1035",we,agent-perceiver
+1040,"1040, 1054",our first kiss,affected-carrier
+1040,"1040, 1054",our first kiss,affected
+1040,"1040, 1054",our first kiss,possessed
+1040,"1040, 1054",our first kiss,carrier
+1055,"1055, 1084",and I fell instantly in love.,process
+1055,"1055, 1084",and I fell instantly in love.,one-role-action
+1028,"1028, 1032",when,affected-carrier
+1028,"1028, 1032",when,affected
+1028,"1028, 1032",when,affected-possessed
+1028,"1028, 1032",when,possessed
+1028,"1028, 1032",when,carrier
+1059,"1059, 1060",I,affected-emoter
+1059,"1059, 1060",I,affected-path
+1059,"1059, 1060",I,affected-perceiver
+1059,"1059, 1060",I,affected-cognizant
+1059,"1059, 1060",I,affected-carrier
+1059,"1059, 1060",I,affected-destination
+1059,"1059, 1060",I,affected
+1059,"1059, 1060",I,affected-possessed
+1059,"1059, 1060",I,affected-source
+1028,"1028, 1054",when we had our first kiss,process
+1152,"1152, 1153",I,affected-emoter
+1145,"1145, 1146",I,agent-cognizant
+1145,"1145, 1146",I,affected-cognizant
+1119,"1119, 1200",", the minute he kissed me I knew I didn't want anyone else to kiss me ever again.",attribute
+1119,"1119, 1200",", the minute he kissed me I knew I didn't want anyone else to kiss me ever again.",agent-cognizant
+1119,"1119, 1200",", the minute he kissed me I knew I didn't want anyone else to kiss me ever again.",affected-carrier
+1119,"1119, 1200",", the minute he kissed me I knew I didn't want anyone else to kiss me ever again.",agent-carrier
+1119,"1119, 1200",", the minute he kissed me I knew I didn't want anyone else to kiss me ever again.",agent-perceiver
+1119,"1119, 1200",", the minute he kissed me I knew I didn't want anyone else to kiss me ever again.",range
+1119,"1119, 1200",", the minute he kissed me I knew I didn't want anyone else to kiss me ever again.",carrier
+1166,"1166, 1200",anyone else to kiss me ever again.,process
+1166,"1166, 1200",anyone else to kiss me ever again.,two-role-action
+1166,"1166, 1200",anyone else to kiss me ever again.,action
+1166,"1166, 1200",anyone else to kiss me ever again.,created-phenomenon
+1132,"1132, 1144",he kissed me,process
+1132,"1132, 1144",he kissed me,two-role-action
+1101,"1101, 1103",it,created-phenomenon
+1166,"1166, 1177",anyone else,agent
+1166,"1166, 1177",anyone else,agent-cognizant
+1166,"1166, 1177",anyone else,agent-carrier
+1166,"1166, 1177",anyone else,agent-perceiver
+1085,"1085, 1086",I,agent-cognizant
+1085,"1085, 1086",I,agent-carrier
+1085,"1085, 1086",I,agent-perceiver
+1132,"1132, 1134",he,agent-cognizant
+1132,"1132, 1134",he,agent-carrier
+1132,"1132, 1134",he,agent-perceiver
+1186,"1186, 1188",me,affected-emoter
+1186,"1186, 1188",me,affected-path
+1186,"1186, 1188",me,affected-perceiver
+1186,"1186, 1188",me,affected-cognizant
+1186,"1186, 1188",me,affected-carrier
+1186,"1186, 1188",me,affected-destination
+1186,"1186, 1188",me,affected
+1186,"1186, 1188",me,affected-possessed
+1186,"1186, 1188",me,affected-source
+1112,"1112, 1119",magical,agent
+1112,"1112, 1119",magical,agent-cognizant
+1112,"1112, 1119",magical,affected-carrier
+1112,"1112, 1119",magical,agent-carrier
+1112,"1112, 1119",magical,agent-perceiver
+1112,"1112, 1119",magical,range
+1112,"1112, 1119",magical,carrier
+1178,"1178, 1185",to kiss,main
+1142,"1142, 1144",me,affected-emoter
+1142,"1142, 1144",me,affected-path
+1142,"1142, 1144",me,affected-perceiver
+1142,"1142, 1144",me,affected-cognizant
+1142,"1142, 1144",me,affected-carrier
+1142,"1142, 1144",me,affected-destination
+1142,"1142, 1144",me,affected-possessed
+1142,"1142, 1144",me,affected-source
+1152,"1152, 1200",I didn't want anyone else to kiss me ever again.,process
+1152,"1152, 1200",I didn't want anyone else to kiss me ever again.,desiderative
+1145,"1145, 1200",I knew I didn't want anyone else to kiss me ever again.,process
+1152,"1152, 1200",I didn't want anyone else to kiss me ever again.,created-phenomenon
+1103,"1103, 1200","; it was magical, the minute he kissed me I knew I didn't want anyone else to kiss me ever again.",process
+1103,"1103, 1200","; it was magical, the minute he kissed me I knew I didn't want anyone else to kiss me ever again.",two-role-action
+1245,"1245, 1260",where I belong.,process
+1245,"1245, 1260",where I belong.,possessive
+1251,"1251, 1252",I,affected-carrier
+1251,"1251, 1252",I,agent-carrier
+1251,"1251, 1252",I,affected-possessed
+1251,"1251, 1252",I,possessed
+1251,"1251, 1252",I,carrier
+1201,"1201, 1209",Whenever,attribute
+1201,"1201, 1209",Whenever,location
+1201,"1201, 1209",Whenever,range
+1210,"1210, 1211",I,agent
+1210,"1210, 1211",I,agent-cognizant
+1210,"1210, 1211",I,affected-carrier
+1210,"1210, 1211",I,affected
+1210,"1210, 1211",I,agent-carrier
+1210,"1210, 1211",I,agent-perceiver
+1210,"1210, 1211",I,perceiver
+1201,"1201, 1226",Whenever I am in his arms,process
+1201,"1201, 1226",Whenever I am in his arms,attributive
+1201,"1201, 1226",Whenever I am in his arms,two-role-action
+1201,"1201, 1226",Whenever I am in his arms,action
+1253,"1253, 1259",belong,main
+1245,"1245, 1250",where,affected-carrier
+1245,"1245, 1250",where,agent-carrier
+1245,"1245, 1250",where,carrier
+1226,"1226, 1229",", I",agent-cognizant
+1226,"1226, 1229",", I",affected-cognizant
+1201,"1201, 1260","Whenever I am in his arms, I know that it's where I belong.",process
+1235,"1235, 1260",that it's where I belong.,created-phenomenon
+1215,"1215, 1226",in his arms,attribute
+1215,"1215, 1226",in his arms,range
+1297,"1297, 1300",was,main
+1307,"1307, 1389","but didn't realize until I met Frank because when I am with him, I am truly happy.",process
+1307,"1307, 1389","but didn't realize until I met Frank because when I am with him, I am truly happy.",two-role-action
+1307,"1307, 1389","but didn't realize until I met Frank because when I am with him, I am truly happy.",action
+1338,"1338, 1343",Frank,affected-emoter
+1338,"1338, 1343",Frank,affected-path
+1338,"1338, 1343",Frank,affected-perceiver
+1338,"1338, 1343",Frank,affected-cognizant
+1338,"1338, 1343",Frank,affected-carrier
+1338,"1338, 1343",Frank,affected-destination
+1338,"1338, 1343",Frank,affected
+1338,"1338, 1343",Frank,affected-possessed
+1338,"1338, 1343",Frank,affected-source
+1338,"1338, 1343",Frank,range
+1261,"1261, 1389","I thought I knew what being in love was like, but didn't realize until I met Frank because when I am with him, I am truly happy.",process
+1362,"1362, 1370",with him,matchee
+1377,"1377, 1389",truly happy.,location
+1332,"1332, 1333",I,agent
+1332,"1332, 1333",I,agent-cognizant
+1332,"1332, 1333",I,affected-carrier
+1332,"1332, 1333",I,agent-perceiver
+1332,"1332, 1333",I,carrier
+1278,"1278, 1305",what being in love was like,created-phenomenon
+1289,"1289, 1296",in love,location
+1289,"1289, 1296",in love,range
+1344,"1344, 1389","because when I am with him, I am truly happy.",process
+1352,"1352, 1370",when I am with him,process
+1352,"1352, 1370",when I am with him,matching
+1352,"1352, 1370",when I am with him,mental
+1352,"1352, 1370",when I am with him,two-role-cognition
+1261,"1261, 1262",I,agent
+1261,"1261, 1262",I,agent-cognizant
+1261,"1261, 1262",I,affected-cognizant
+1261,"1261, 1262",I,affected
+1283,"1283, 1296",being in love,process
+1283,"1283, 1296",being in love,locational
+1283,"1283, 1296",being in love,two-role-action
+1283,"1283, 1296",being in love,action
+1271,"1271, 1306","I knew what being in love was like,",process
+1271,"1271, 1272",I,agent-cognizant
+1271,"1271, 1272",I,affected-cognizant
+1357,"1357, 1358",I,agent
+1357,"1357, 1358",I,cognizant
+1357,"1357, 1358",I,agent-cognizant
+1357,"1357, 1358",I,affected-cognizant
+1357,"1357, 1358",I,affected-carrier
+1357,"1357, 1358",I,agent-carrier
+1357,"1357, 1358",I,agent-perceiver
+1357,"1357, 1358",I,perceiver
+1352,"1352, 1356",when,phenomenon
+1352,"1352, 1356",when,created-phenomenon
+1352,"1352, 1356",when,location
+1352,"1352, 1356",when,matchee
+1271,"1271, 1389","I knew what being in love was like, but didn't realize until I met Frank because when I am with him, I am truly happy.",created-phenomenon
+1370,"1370, 1373",", I",affected-carrier
+1370,"1370, 1373",", I",agent-carrier
+1326,"1326, 1389","until I met Frank because when I am with him, I am truly happy.",process
+1326,"1326, 1389","until I met Frank because when I am with him, I am truly happy.",two-role-action
+1326,"1326, 1389","until I met Frank because when I am with him, I am truly happy.",action
+1283,"1283, 1288",being,main
+1390,"1390, 1452","In some strange way, I feel like it's not just one-way either.",process
+1390,"1390, 1452","In some strange way, I feel like it's not just one-way either.",desiderative
+1418,"1418, 1452",like it's not just one-way either.,process
+1418,"1418, 1452",like it's not just one-way either.,locational
+1432,"1432, 1452",just one-way either.,location
+1423,"1423, 1425",it,affected-carrier
+1423,"1423, 1425",it,agent-carrier
+1409,"1409, 1412",", I",affected-emoter
+1409,"1409, 1412",", I",affected-carrier
+1409,"1409, 1412",", I",agent-carrier
+1409,"1409, 1412",", I",emoter
+1409,"1409, 1412",", I",carrier
+1393,"1393, 1409",some strange way,phenomenon
+1393,"1393, 1409",some strange way,attribute
+1393,"1393, 1409",some strange way,created-phenomenon
+1453,"1453, 1590","Over the course of December and January, we saw a good amount of each other and the harder I tried not to fall for him, the harder I did.",process
+1453,"1453, 1590","Over the course of December and January, we saw a good amount of each other and the harder I tried not to fall for him, the harder I did.",matching
+1453,"1453, 1590","Over the course of December and January, we saw a good amount of each other and the harder I tried not to fall for him, the harder I did.",directional
+1453,"1453, 1590","Over the course of December and January, we saw a good amount of each other and the harder I tried not to fall for him, the harder I did.",causative
+1453,"1453, 1590","Over the course of December and January, we saw a good amount of each other and the harder I tried not to fall for him, the harder I did.",relational
+1453,"1453, 1590","Over the course of December and January, we saw a good amount of each other and the harder I tried not to fall for him, the harder I did.",two-role-cognition
+1453,"1453, 1590","Over the course of December and January, we saw a good amount of each other and the harder I tried not to fall for him, the harder I did.",two-role-action
+1492,"1492, 1496",", we",agent
+1492,"1492, 1496",", we",cognizant
+1492,"1492, 1496",", we",affected-perceiver
+1492,"1492, 1496",", we",agent-cognizant
+1492,"1492, 1496",", we",affected-cognizant
+1492,"1492, 1496",", we",affected
+1492,"1492, 1496",", we",agent-carrier
+1492,"1492, 1496",", we",agent-perceiver
+1544,"1544, 1545",I,agent-cognizant
+1544,"1544, 1545",I,agent-carrier
+1544,"1544, 1545",I,agent-perceiver
+1552,"1552, 1563",not to fall,main
+1458,"1458, 1492",the course of December and January,phenomenon
+1458,"1458, 1492",the course of December and January,affected-emoter
+1458,"1458, 1492",the course of December and January,created-phenomenon
+1458,"1458, 1492",the course of December and January,affected-path
+1458,"1458, 1492",the course of December and January,affected-perceiver
+1458,"1458, 1492",the course of December and January,destination
+1458,"1458, 1492",the course of December and January,affected-cognizant
+1458,"1458, 1492",the course of December and January,affected-carrier
+1458,"1458, 1492",the course of December and January,affected-destination
+1458,"1458, 1492",the course of December and January,affected
+1458,"1458, 1492",the course of December and January,affected-possessed
+1458,"1458, 1492",the course of December and January,matchee
+1458,"1458, 1492",the course of December and January,affected-source
+1458,"1458, 1492",the course of December and January,created
+1458,"1458, 1492",the course of December and January,range
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",affected-emoter
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",created-phenomenon
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",affected-path
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",affected-perceiver
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",affected-cognizant
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",affected-carrier
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",affected-destination
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",affected
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",affected-possessed
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",matchee
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",affected-source
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",created
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",range
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",carrier
+1533,"1533, 1571",the harder I tried not to fall for him,process
+1533,"1533, 1571",the harder I tried not to fall for him,tentative
+1552,"1552, 1571",not to fall for him,created-phenomenon
+1594,"1594, 1606",", my problem",affected-carrier
+1594,"1594, 1606",", my problem",agent-carrier
+1594,"1594, 1614",", my problem is this",process
+1594,"1594, 1614",", my problem is this",locational
+1614,"1614, 1617",", I",agent
+1614,"1614, 1617",", I",agent-cognizant
+1614,"1614, 1617",", I",affected-carrier
+1614,"1614, 1617",", I",affected
+1614,"1614, 1617",", I",agent-carrier
+1614,"1614, 1617",", I",agent-perceiver
+1614,"1614, 1617",", I",carrier
+1614,"1614, 1617",", I",perceiver
+1610,"1610, 1614",this,location
+1621,"1621, 1643",in love with this man.,attribute
+1621,"1621, 1643",in love with this man.,location
+1621,"1621, 1643",in love with this man.,range
+1614,"1614, 1643",", I am in love with this man.",process
+1614,"1614, 1643",", I am in love with this man.",attributive
+1614,"1614, 1643",", I am in love with this man.",locational
+1614,"1614, 1643",", I am in love with this man.",relational
+1614,"1614, 1643",", I am in love with this man.",two-role-action
+1614,"1614, 1643",", I am in love with this man.",action
+1614,"1614, 1643",", I am in love with this man.",one-role-action
+1644,"1644, 1648",Head,main
+1654,"1654, 1668",heels in love.,affected-emoter
+1654,"1654, 1668",heels in love.,affected-path
+1654,"1654, 1668",heels in love.,affected-perceiver
+1654,"1654, 1668",heels in love.,destination
+1654,"1654, 1668",heels in love.,affected-cognizant
+1654,"1654, 1668",heels in love.,affected-carrier
+1654,"1654, 1668",heels in love.,affected-destination
+1654,"1654, 1668",heels in love.,affected
+1654,"1654, 1668",heels in love.,affected-possessed
+1654,"1654, 1668",heels in love.,affected-source
+1644,"1644, 1668",Head over heels in love.,process
+1644,"1644, 1668",Head over heels in love.,directional
+1644,"1644, 1668",Head over heels in love.,two-role-action
+1729,"1729, 1740",my thoughts,affected-carrier
+1729,"1729, 1740",my thoughts,agent-carrier
+1708,"1708, 1716",thinking,main
+1760,"1760, 1764",him.,attribute
+1725,"1725, 1750",and my thoughts are never,process
+1725,"1725, 1750",and my thoughts are never,attributive
+1838,"1838, 1843",going,main
+1820,"1820, 1892",he doesn't see us going any further and that I am not the women for him.,created-phenomenon
+1817,"1817, 1819",me,phenomenon
+1817,"1817, 1819",me,created-phenomenon
+1817,"1817, 1819",me,cognizant
+1817,"1817, 1819",me,affected
+1817,"1817, 1819",me,matchee
+1856,"1856, 1892",and that I am not the women for him.,process
+1856,"1856, 1892",and that I am not the women for him.,two-role-action
+1856,"1856, 1892",and that I am not the women for him.,action
+1775,"1775, 1803",the course of the last month,phenomenon
+1775,"1775, 1803",the course of the last month,created-phenomenon
+1775,"1775, 1803",the course of the last month,matchee
+1820,"1820, 1834",he doesn't see,process
+1820,"1820, 1834",he doesn't see,two-role-cognition
+1820,"1820, 1822",he,cognizant
+1820,"1820, 1822",he,affected-cognizant
+1820,"1820, 1822",he,affected
+1765,"1765, 1892","But, over the course of the last month, he has told me he doesn't see us going any further and that I am not the women for him.",process
+1835,"1835, 1855",us going any further,process
+1835,"1835, 1855",us going any further,two-role-action
+1835,"1835, 1855",us going any further,action
+1803,"1803, 1807",", he",cognizant
+1803,"1803, 1807",", he",agent-cognizant
+1803,"1803, 1807",", he",agent-carrier
+1803,"1803, 1807",", he",agent-perceiver
+1835,"1835, 1837",us,agent
+1835,"1835, 1837",us,agent-cognizant
+1835,"1835, 1837",us,agent-carrier
+1835,"1835, 1837",us,agent-perceiver
+1865,"1865, 1866",I,agent
+1865,"1865, 1866",I,agent-cognizant
+1865,"1865, 1866",I,agent-carrier
+1865,"1865, 1866",I,agent-perceiver
+1874,"1874, 1892",the women for him.,range
+1844,"1844, 1855",any further,range
+1906,"1906, 1913",the way,affected-emoter
+1906,"1906, 1913",the way,created-phenomenon
+1906,"1906, 1913",the way,affected-path
+1906,"1906, 1913",the way,affected-perceiver
+1906,"1906, 1913",the way,affected-cognizant
+1906,"1906, 1913",the way,affected-carrier
+1906,"1906, 1913",the way,affected-destination
+1906,"1906, 1913",the way,affected
+1906,"1906, 1913",the way,affected-possessed
+1906,"1906, 1913",the way,matchee
+1906,"1906, 1913",the way,affected-source
+1906,"1906, 1913",the way,created
+1906,"1906, 1913",the way,range
+1900,"1900, 1901",I,agent
+1900,"1900, 1901",I,cognizant
+1900,"1900, 1901",I,affected-perceiver
+1900,"1900, 1901",I,agent-cognizant
+1900,"1900, 1901",I,affected
+1900,"1900, 1901",I,agent-carrier
+1900,"1900, 1901",I,agent-perceiver
+1900,"1900, 1901",I,perceiver
+1893,"1893, 1913",Though I see the way,process
+1893,"1893, 1913",Though I see the way,matching
+1893,"1893, 1913",Though I see the way,causative
+1893,"1893, 1913",Though I see the way,relational
+1893,"1893, 1913",Though I see the way,two-role-perception
+1893,"1893, 1913",Though I see the way,two-role-action
+1944,"1944, 1946",do,main
+1961,"1961, 2024","that he is afraid, maybe because of the 14-year age difference.",created-phenomenon
+1961,"1961, 2024","that he is afraid, maybe because of the 14-year age difference.",process
+1966,"1966, 1968",he,affected-carrier
+1966,"1966, 1968",he,agent-carrier
+1952,"1952, 1956",They,agent-cognizant
+1952,"1952, 1956",They,agent-carrier
+1952,"1952, 1956",They,agent-perceiver
+1952,"1952, 2024","They say that he is afraid, maybe because of the 14-year age difference.",process
+2044,"2044, 2049",to do,main
+2027,"2027, 2033",am not,main
+2051,"2051, 2087","I don't want to lose him altogether,",process
+2051,"2051, 2087","I don't want to lose him altogether,",desiderative
+2064,"2064, 2086",to lose him altogether,created-phenomenon
+2109,"2109, 2110",I,affected-emoter
+2051,"2051, 2052",I,affected-emoter
+2072,"2072, 2075",him,affected-possessed
+2072,"2072, 2075",him,possessed
+2072,"2072, 2075",him,range
+2064,"2064, 2086",to lose him altogether,process
+2064,"2064, 2086",to lose him altogether,possessive
+2064,"2064, 2086",to lose him altogether,two-role-action
+2064,"2064, 2086",to lose him altogether,action
+2064,"2064, 2071",to lose,main
+2104,"2104, 2132",that I will always love him.,process
+2104,"2104, 2132",that I will always love him.,emotive
+2128,"2128, 2132",him.,created-phenomenon
+2163,"2163, 2171",possible,range
+2133,"2133, 2134",I,agent
+2133,"2133, 2134",I,agent-cognizant
+2133,"2133, 2134",I,affected-cognizant
+2153,"2153, 2155",is,main
+2141,"2141, 2201","my question is, is it possible for him to see me differently",created-phenomenon
+2133,"2133, 2201","I guess my question is, is it possible for him to see me differently",process
+2160,"2160, 2162",it,agent
+2160,"2160, 2162",it,agent-cognizant
+2160,"2160, 2162",it,agent-carrier
+2160,"2160, 2162",it,agent-perceiver
+2187,"2187, 2189",me,phenomenon
+2187,"2187, 2189",me,affected-emoter
+2187,"2187, 2189",me,created-phenomenon
+2187,"2187, 2189",me,affected-path
+2187,"2187, 2189",me,affected-perceiver
+2187,"2187, 2189",me,affected-cognizant
+2187,"2187, 2189",me,affected-carrier
+2187,"2187, 2189",me,affected-destination
+2187,"2187, 2189",me,affected
+2187,"2187, 2189",me,affected-possessed
+2187,"2187, 2189",me,matchee
+2187,"2187, 2189",me,affected-source
+2187,"2187, 2189",me,created
+2187,"2187, 2189",me,range
+2176,"2176, 2179",him,agent
+2176,"2176, 2179",him,cognizant
+2176,"2176, 2179",him,affected-perceiver
+2176,"2176, 2179",him,agent-cognizant
+2176,"2176, 2179",him,affected-cognizant
+2176,"2176, 2179",him,affected
+2176,"2176, 2179",him,agent-carrier
+2176,"2176, 2179",him,agent-perceiver
+2176,"2176, 2179",him,perceiver
+2211,"2211, 2220",hopeless.,location
+2155,"2155, 2171",", is it possible",process
+2155,"2155, 2171",", is it possible",two-role-action
+2155,"2155, 2171",", is it possible",action
+2202,"2202, 2220",or is it hopeless.,process
+2202,"2202, 2220",or is it hopeless.,locational
+2180,"2180, 2186",to see,main
+2172,"2172, 2201",for him to see me differently,process
+2172,"2172, 2201",for him to see me differently,matching
+2172,"2172, 2201",for him to see me differently,causative
+2172,"2172, 2201",for him to see me differently,two-role-cognition
+2172,"2172, 2201",for him to see me differently,two-role-perception
+2172,"2172, 2201",for him to see me differently,two-role-action
+1119,"1119, 1200",", the minute he kissed me I knew I didn't want anyone else to kiss me ever again.",agent
+1344,"1344, 1389","because when I am with him, I am truly happy.",locational
+1390,"1390, 1452","In some strange way, I feel like it's not just one-way either.",relational
+1533,"1533, 1590","the harder I tried not to fall for him, the harder I did.",phenomenon
+1671,"1671, 1673",go,main

@@ -156,6 +156,22 @@
 \SetKwData{function}{selector function}
 \SetKwData{choices}{systemic choices}
 
+\SetKwData{dict}{dictionary}
+\SetKwData{patterns}{pattern set}
+\SetKwData{pattern}{pattern}
+\SetKwData{lexicalItem}{lexical item}
+\SetKwData{feature}{feature}
+\SetKwData{snet}{system network}
+\SetKwData{systemm}{system}
+
+\SetKwData{word}{word}
+\SetKwData{text}{text}
+
+\SetKwData{as}{aut}
+\SetKwData{ms}{man}
+\SetKwData{aslist}{aut segments}
+\SetKwData{mslist}{man segments}
+
 %\SetKwFunction{enrich}{enrich\_mcg}
 %\SetKwFunction{whtrace}{create\_wh\_traces}
 %\SetKwFunction{whtraceadjunct}{create\_adjunct\_wh\_traces}
@@ -228,4 +244,28 @@
 	{\}}{{{\color{delim}{\}}}}}{1}
 	{[}{{{\color{delim}{[}}}}{1}
 	{]}{{{\color{delim}{]}}}}{1},
+}
+
+\lstdefinelanguage{XML}
+{
+    basicstyle=\ttfamily\footnotesize,
+    morestring=[b]",
+    moredelim=[s][\bfseries\color{Maroon}]{<}{\ },
+    moredelim=[s][\bfseries\color{Maroon}]{</}{>},
+    moredelim=[l][\bfseries\color{Maroon}]{/>},
+    moredelim=[l][\bfseries\color{Maroon}]{>},
+    morecomment=[s]{<?}{?>},
+    morecomment=[s]{<!--}{-->},
+    commentstyle=\color{DarkOliveGreen},
+    stringstyle=\color{blue},
+    identifierstyle=\color{red}
+    %    copied from the JSON definition
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},    
 }

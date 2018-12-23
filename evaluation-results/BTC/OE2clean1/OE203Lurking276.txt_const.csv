@@ -1,0 +1,280 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.6403162055335968
+,Recall,0.9101123595505618
+,F1,0.7517401392111368
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+7,1.0,"70, 71","69, 71",1,m,'m,verb,verb
+8,0.0,"72, 84","72, 84",0,experiencing,experiencing,main,main
+8,0.0,"72, 84","72, 84",0,experiencing,experiencing,verb,verb
+4,5.0,"41, 48","36, 48",5,lurking,been lurking,main,main
+4,5.0,"41, 48","36, 48",5,lurking,been lurking,verb,verb
+9,15.0,"85, 113","85, 98",15,some problems in my marriage,some problems,participant-role,participant-role
+6,0.0,"68, 69","68, 69",0,I,I,participant-role,participant-role
+1,0.0,"31, 32","31, 32",0,I,I,participant-role,participant-role
+2,5.0990195135927845,"33, 40","32, 35",6,ve been,'ve,verb,verb
+13,1.0,"120, 121","119, 121",1,s,'s,main,main
+13,1.0,"120, 121","119, 121",1,s,'s,verb,verb
+12,0.0,"115, 119","115, 119",0,Here,Here,participant-role,participant-role
+14,1.0,"122, 147","122, 148",1,a quick bit of background,a quick bit of background.,participant-role,participant-role
+18,0.0,"153, 166","153, 166",0,a married man,a married man,participant-role,participant-role
+19,8.0,"168, 172","168, 180",8,been,been married,main,main
+19,8.0,"168, 172","168, 180",8,been,been married,verb,verb
+17,1.0,"151, 152","150, 152",1,m,'m,main,main
+17,1.0,"151, 152","150, 152",1,m,'m,verb,verb
+16,0.0,"149, 150","149, 150",0,I,I,participant-role,participant-role
+25,17.0,"201, 232","201, 215",17,"three children, aged 6, 4 and 2",three children,participant-role,participant-role
+24,0.0,"196, 200","196, 200",0,have,have,verb,verb
+23,0.0,"194, 195","194, 195",0,I,I,participant-role,participant-role
+30,5.0,"243, 253","243, 248",5,deals with,deals,main,main
+30,5.0,"243, 253","243, 248",5,deals with,deals,verb,verb
+29,0.0,"234, 242","234, 242",0,My issue,My issue,participant-role,participant-role
+34,0.0,"321, 324","321, 324",0,was,was,main,main
+34,0.0,"321, 324","321, 324",0,was,was,verb,verb
+38,0.0,"358, 362","358, 362",0,been,been,main,main
+38,0.0,"358, 362","358, 362",0,been,been,verb,verb
+35,0.0,"325, 332","325, 332",0,younger,younger,participant-role,participant-role
+37,0.0,"353, 357","353, 357",0,have,have,verb,verb
+39,1.0,"363, 369","363, 370",1,female,female.,participant-role,participant-role
+36,2.0,"334, 352","332, 352",2,most of my friends,", most of my friends",participant-role,participant-role
+33,0.0,"319, 320","319, 320",0,I,I,participant-role,participant-role
+44,0.0,"384, 388","384, 388",0,this,this,participant-role,participant-role
+43,0.0,"379, 383","379, 383",0,knew,knew,main,main
+43,0.0,"379, 383","379, 383",0,knew,knew,verb,verb
+42,0.0,"371, 378","371, 378",0,My wife,My wife,participant-role,participant-role
+48,10.0,"402, 422","402, 412",10,no problem with this,no problem,participant-role,participant-role
+47,0.0,"398, 401","398, 401",0,had,had,main,main
+47,0.0,"398, 401","398, 401",0,had,had,verb,verb
+46,0.0,"394, 397","394, 397",0,has,has,verb,verb
+54,2.0,"495, 498","493, 498",2,who,", who",participant-role,participant-role
+50,0.0,"446, 447","446, 447",0,I,I,participant-role,participant-role
+51,1.0,"448, 450","447, 450",1,ve,'ve,verb,verb
+58,1.0,"518, 524","518, 525",1,female,female.,participant-role,participant-role
+56,0.0,"512, 517","512, 517",0,to be,to be,main,main
+56,0.0,"512, 517","512, 517",0,to be,to be,verb,verb
+53,32.0,"465, 493","465, 525",32,a mutual friend of 6 + years,"a mutual friend of 6 + years, who also happens to be female.",participant-role,participant-role
+52,0.0,"451, 464","451, 464",0,been visiting,been visiting,main,main
+52,0.0,"451, 464","451, 464",0,been visiting,been visiting,verb,verb
+55,0.0,"504, 511","504, 511",0,happens,happens,verb,verb
+64,0.0,"586, 589","586, 589",0,are,are,main,main
+64,0.0,"586, 589","586, 589",0,are,are,verb,verb
+63,0.0,"577, 585","577, 585",0,the kids,the kids,participant-role,participant-role
+60,0.0,"526, 535","526, 535",0,My visits,My visits,participant-role,participant-role
+61,3.0,"536, 546","536, 543",3,consist of,consist,main,main
+61,3.0,"536, 546","536, 543",3,consist of,consist,verb,verb
+65,0.0,"590, 596","590, 596",0,asleep,asleep,participant-role,participant-role
+76,8.0,"671, 683","671, 691",8,other people,other people present,participant-role,participant-role
+70,0.0,"622, 632","622, 632",0,The visits,The visits,participant-role,participant-role
+75,0.0,"667, 670","667, 670",0,are,are,main,main
+75,0.0,"667, 670","667, 670",0,are,are,verb,verb
+71,0.0,"633, 636","633, 636",0,are,are,main,main
+71,0.0,"633, 636","633, 636",0,are,are,verb,verb
+72,6.0,"637, 654","637, 660",6,strictly platonic,"strictly platonic, plus",participant-role,participant-role
+80,0.0,"712, 717","712, 717",0,feels,feels,main,main
+80,0.0,"712, 717","712, 717",0,feels,feels,verb,verb
+85,4.0,"748, 752","744, 752",4,have,not have,main,main
+85,4.0,"748, 752","744, 752",4,have,not have,verb,verb
+84,0.0,"737, 743","737, 743",0,should,should,verb,verb
+88,0.0,"776, 780","776, 780",0,they,they,participant-role,participant-role
+81,34.36568055487916,"723, 767","718, 801",39,a married man should not have female friends,"that a married man should not have female friends, unless they are married as well.",participant-role,participant-role
+83,0.0,"723, 736","723, 736",0,a married man,a married man,participant-role,participant-role
+79,0.0,"704, 711","704, 711",0,My wife,My wife,participant-role,participant-role
+89,0.0,"781, 784","781, 784",0,are,are,verb,verb
+86,0.0,"753, 767","753, 767",0,female friends,female friends,participant-role,participant-role
+99,2.0,"885, 888","883, 888",2,she,", she",participant-role,participant-role
+93,0.0,"806, 810","806, 810",0,says,says,main,main
+93,0.0,"806, 810","806, 810",0,says,says,verb,verb
+104,0.0,"913, 915","913, 915",0,we,we,participant-role,participant-role
+102,21.0,"902, 909","902, 930",21,present,present or we must separate.,participant-role,participant-role
+96,0.0,"821, 825","821, 825",0,wish,wish,main,main
+96,0.0,"821, 825","821, 825",0,wish,wish,verb,verb
+95,0.0,"819, 820","819, 820",0,I,I,participant-role,participant-role
+100,0.0,"889, 893","889, 893",0,must,must,verb,verb
+92,0.0,"802, 805","802, 805",0,She,She,participant-role,participant-role
+3,10.04987562112089,"821, 929","811, 930",11,"wish to continue seeing this friend or any other female friend, she must also be present or we must separate","that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate.",participant-role,participant-role
+101,0.0,"899, 901","899, 901",0,be,be,main,main
+101,0.0,"899, 901","899, 901",0,be,be,verb,verb
+97,0.0,"826, 883","826, 883",0,to continue seeing this friend or any other female friend,to continue seeing this friend or any other female friend,participant-role,participant-role
+114,25.019992006393608,"998, 1015","973, 1016",26,home with my wife,", every other night I am home with my wife.",participant-role,participant-role
+112,0.0,"993, 994","993, 994",0,I,I,participant-role,participant-role
+108,0.0,"931, 940","931, 940",0,My visits,My visits,participant-role,participant-role
+113,0.0,"995, 997","995, 997",0,am,am,main,main
+113,0.0,"995, 997","995, 997",0,am,am,verb,verb
+109,0.0,"941, 944","941, 944",0,are,are,verb,verb
+69,1.0,"1144, 1151","1144, 1152",1,my wife,my wife.,participant-role,participant-role
+128,0.0,"1099, 1106","1099, 1106",0,discuss,discuss,main,main
+128,0.0,"1099, 1106","1099, 1106",0,discuss,discuss,verb,verb
+121,0.0,"1054, 1059","1054, 1059",0,watch,watch,main,main
+121,0.0,"1054, 1059","1054, 1059",0,watch,watch,verb,verb
+116,0.0,"1022, 1023","1022, 1023",0,I,I,participant-role,participant-role
+66,16.0,"1122, 1143","1122, 1127",16,bores the heck out of,bores,main,main
+66,16.0,"1122, 1143","1122, 1127",16,bores the heck out of,bores,verb,verb
+117,0.0,"1024, 1029","1024, 1029",0,visit,visit,main,main
+117,0.0,"1024, 1029","1024, 1029",0,visit,visit,verb,verb
+120,2.0,"1043, 1045","1041, 1045",2,we,", we",participant-role,participant-role
+125,4.0,"1090, 1094","1086, 1094",4,like,not like,main,main
+125,4.0,"1090, 1094","1086, 1094",4,like,not like,verb,verb
+26,0.0,"1067, 1072","1067, 1072",0,which,which,participant-role,participant-role
+118,0.0,"1030, 1041","1030, 1041",0,this friend,this friend,participant-role,participant-role
+28,0.0,"1116, 1121","1116, 1121",0,which,which,participant-role,participant-role
+123,0.0,"1073, 1080","1073, 1080",0,my wife,my wife,participant-role,participant-role
+124,0.0,"1081, 1085","1081, 1085",0,does,does,verb,verb
+132,0.0,"1155, 1160","1155, 1160",0,think,think,main,main
+132,0.0,"1155, 1160","1155, 1160",0,think,think,verb,verb
+137,7.0,"1167, 1184","1167, 1177",7,reasonable for me,reasonable,participant-role,participant-role
+131,0.0,"1153, 1154","1153, 1154",0,I,I,participant-role,participant-role
+145,0.0,"1251, 1257","1251, 1257",0,trusts,trusts,main,main
+145,0.0,"1251, 1257","1251, 1257",0,trusts,trusts,verb,verb
+144,0.0,"1247, 1250","1247, 1250",0,she,she,participant-role,participant-role
+141,0.0,"1233, 1241","1233, 1241",0,stresses,stresses,main,main
+141,0.0,"1233, 1241","1233, 1241",0,stresses,stresses,verb,verb
+146,1.0,"1258, 1284","1258, 1285",1,I am not seeking an affair,I am not seeking an affair.,participant-role,participant-role
+142,5.0990195135927845,"1247, 1284","1242, 1285",6,she trusts I am not seeking an affair,that she trusts I am not seeking an affair.,participant-role,participant-role
+140,0.0,"1225, 1232","1225, 1232",0,my wife,my wife,participant-role,participant-role
+136,0.0,"1164, 1166","1164, 1166",0,is,is,main,main
+136,0.0,"1164, 1166","1164, 1166",0,is,is,verb,verb
+138,0.0,"1185, 1207","1185, 1207",0,to have female friends,to have female friends,participant-role,participant-role
+135,0.0,"1161, 1163","1161, 1163",0,it,it,participant-role,participant-role
+133,32.0,"1161, 1207","1193, 1207",32,it is reasonable for me to have female friends,female friends,participant-role,participant-role
+153,0.0,"1305, 1307","1305, 1307",0,am,am,main,main
+153,0.0,"1305, 1307","1305, 1307",0,am,am,verb,verb
+156,0.0,"1323, 1325","1323, 1325",0,is,is,main,main
+156,0.0,"1323, 1325","1323, 1325",0,is,is,verb,verb
+150,0.0,"1298, 1303","1298, 1303",0,think,think,main,main
+150,0.0,"1298, 1303","1298, 1303",0,think,think,verb,verb
+157,0.0,"1326, 1329","1326, 1329",0,she,she,participant-role,participant-role
+152,0.0,"1308, 1309","1308, 1309",0,I,I,participant-role,participant-role
+149,0.0,"1294, 1297","1294, 1297",0,you,you,participant-role,participant-role
+159,0.0,"1334, 1337","1334, 1337",0,are,are,main,main
+159,0.0,"1334, 1337","1334, 1337",0,are,are,verb,verb
+148,0.0,"1286, 1290","1286, 1290",0,What,What,participant-role,participant-role
+160,5.0,"1338, 1345","1338, 1340",5,we both,we,participant-role,participant-role
+179,0.0,"1291, 1293","1291, 1293",0,do,do,verb,verb
+163,0.0,"1350, 1354","1350, 1354",0,want,want,main,main
+163,0.0,"1350, 1354","1350, 1354",0,want,want,verb,verb
+162,0.0,"1348, 1349","1348, 1349",0,I,I,participant-role,participant-role
+171,0.0,"1425, 1426","1425, 1426",0,I,I,participant-role,participant-role
+172,0.0,"1427, 1430","1427, 1430",0,can,can,verb,verb
+167,4.0,"1413, 1419","1409, 1419",4,appear,n't appear,main,main
+167,4.0,"1413, 1419","1409, 1419",4,appear,n't appear,verb,verb
+169,5.0990195135927845,"1425, 1448","1420, 1449",6,I can have both anymore,that I can have both anymore.,participant-role,participant-role
+165,0.0,"1402, 1404","1402, 1404",0,it,it,participant-role,participant-role
+173,0.0,"1431, 1435","1431, 1435",0,have,have,main,main
+173,0.0,"1431, 1435","1431, 1435",0,have,have,verb,verb
+166,0.0,"1405, 1409","1405, 1409",0,does,does,verb,verb
+164,23.0,"1355, 1397","1355, 1374",23,to keep my marriage as well as friendships,to keep my marriage,participant-role,participant-role
+174,0.0,"1436, 1440","1436, 1440",0,both,both,participant-role,participant-role
+129,21.0,"1107, 1115","1107, 1136",21,religion,religion which bores the heck,participant-role,participant-role
+122,70.0,"1060, 1066","1060, 1136",70,movies,"movies which my wife does not like, or discuss religion which bores the heck",participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+5,"49, 53",here,participant-role
+20,"173, 180",married,participant-role
+24,"196, 200",have,main
+31,"254, 295",friendship getting in the way of marriage,participant-role
+62,"547, 565",going to her house,participant-role
+177,"601, 620",staying rather late,participant-role
+74,"661, 666",there,participant-role
+77,"684, 691",present,participant-role
+89,"781, 784",are,main
+90,"785, 792",married,participant-role
+105,"916, 920",must,verb
+106,"921, 929",separate,verb
+106,"921, 929",separate,main
+109,"941, 944",are,main
+110,"945, 973",limited to about once a week,participant-role
+154,"1310, 1321",out of line,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+22,"22, 28",folks!,participant-role
+19,"19, 21",Hi,main
+19,"19, 21",Hi,verb
+19,"19, 28",Hi folks!,process
+60,"60, 114",because I'm experiencing some problems in my marriage.,process
+31,"31, 114",I've been lurking here a bit because I'm experiencing some problems in my marriage.,process
+115,"115, 148",Here's a quick bit of background.,process
+149,"149, 193","I'm a married man, been married for 7 years.",process
+166,"166, 193",", been married for 7 years.",process
+217,"217, 221",aged,main
+217,"217, 221",aged,verb
+194,"194, 233","I have three children, aged 6, 4 and 2.",process
+265,"265, 272",getting,main
+265,"265, 272",getting,verb
+265,"265, 312","getting in the way of marriage, and vice-versa.",process
+234,"234, 312","My issue deals with friendship getting in the way of marriage, and vice-versa.",process
+313,"313, 332",Since I was younger,process
+313,"313, 370","Since I was younger, most of my friends have been female.",process
+390,"390, 412",and has had no problem,process
+371,"371, 389","My wife knew this,",process
+439,"439, 525","Lately I've been visiting a mutual friend of 6 + years, who also happens to be female.",process
+512,"512, 525",to be female.,process
+493,"493, 525",", who also happens to be female.",process
+504,"504, 511",happens,main
+512,"512, 525",to be female.,participant-role
+547,"547, 596",going to her house well after the kids are asleep,process
+566,"566, 596",well after the kids are asleep,process
+526,"526, 621",My visits consist of going to her house well after the kids are asleep and staying rather late.,process
+601,"601, 608",staying,main
+601,"601, 608",staying,verb
+547,"547, 552",going,main
+547,"547, 552",going,verb
+597,"597, 621",and staying rather late.,process
+661,"661, 703",there are other people present every time.,process
+692,"692, 703",every time.,participant-role
+622,"622, 660","The visits are strictly platonic, plus",process
+767,"767, 801",", unless they are married as well.",process
+785,"785, 792",married,main
+785,"785, 792",married,verb
+704,"704, 801","My wife feels that a married man should not have female friends, unless they are married as well.",process
+718,"718, 801","that a married man should not have female friends, unless they are married as well.",process
+838,"838, 883",seeing this friend or any other female friend,process
+802,"802, 930","She says that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate.",process
+826,"826, 837",to continue,main
+826,"826, 837",to continue,verb
+838,"838, 844",seeing,main
+838,"838, 844",seeing,verb
+816,"816, 883",if I wish to continue seeing this friend or any other female friend,process
+826,"826, 883",to continue seeing this friend or any other female friend,process
+811,"811, 930","that if I wish to continue seeing this friend or any other female friend, she must also be present or we must separate.",process
+993,"993, 1016",I am home with my wife.,process
+931,"931, 1016","My visits are limited to about once a week, every other night I am home with my wife.",process
+945,"945, 952",limited,main
+945,"945, 952",limited,verb
+1116,"1116, 1136",which bores the heck,process
+1096,"1096, 1136",or discuss religion which bores the heck,process
+1067,"1067, 1095","which my wife does not like,",process
+1067,"1067, 1136","which my wife does not like, or discuss religion which bores the heck",process
+1017,"1017, 1021",When,participant-role
+1017,"1017, 1152","When I visit this friend, we usually watch movies which my wife does not like, or discuss religion which bores the heck out of my wife.",process
+1017,"1017, 1041",When I visit this friend,process
+1207,"1207, 1224",", especially when",participant-role
+1263,"1263, 1274",not seeking,main
+1263,"1263, 1274",not seeking,verb
+1207,"1207, 1285",", especially when my wife stresses that she trusts I am not seeking an affair.",process
+1258,"1258, 1285",I am not seeking an affair.,process
+1153,"1153, 1285","I think it is reasonable for me to have female friends, especially when my wife stresses that she trusts I am not seeking an affair.",process
+1260,"1260, 1262",am,verb
+1185,"1185, 1192",to have,main
+1185,"1185, 1192",to have,verb
+1242,"1242, 1285",that she trusts I am not seeking an affair.,process
+1161,"1161, 1285","it is reasonable for me to have female friends, especially when my wife stresses that she trusts I am not seeking an affair.",process
+1185,"1185, 1207",to have female friends,process
+1258,"1258, 1259",I,participant-role
+1286,"1286, 1303",What do you think,process
+1331,"1331, 1340",or are we,process
+1303,"1303, 1309",", am I",process
+1321,"1321, 1330",", is she,",process
+1355,"1355, 1374",to keep my marriage,process
+1348,"1348, 1397",I want to keep my marriage as well as friendships,process
+1398,"1398, 1449",but it doesn't appear that I can have both anymore.,process
+1420,"1420, 1449",that I can have both anymore.,process
+1355,"1355, 1362",to keep,main
+1355,"1355, 1362",to keep,verb
+54,"54, 114",a bit because I'm experiencing some problems in my marriage.,participant-role
+222,"222, 233","6, 4 and 2.",participant-role
+845,"845, 883",this friend or any other female friend,participant-role
+838,"838, 883",seeing this friend or any other female friend,participant-role
+1275,"1275, 1285",an affair.,participant-role
+1161,"1161, 1285","it is reasonable for me to have female friends, especially when my wife stresses that she trusts I am not seeking an affair.",participant-role
+1363,"1363, 1374",my marriage,participant-role

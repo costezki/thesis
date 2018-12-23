@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1 Tiny//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd'>
+<svg width='1263' height='487' xmlns='http://www.w3.org/2000/svg'>
+    <text x='10' y='329' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>nominal-group</text>
+    <text x='123' y='321' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>DEIXIS</text>
+    <text x='186' y='232' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>specific</text>
+    <text x='278' y='144' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>DEIXIS-</text>
+    <text x='278' y='160' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>TYPE</text>
+    <text x='346' y='92' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>posessive</text>
+    <text x='467' y='84' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>PERSON</text>
+    <text x='546' y='48' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>interactant</text>
+    <text x='630' y='39' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>INTERACTANT-</text>
+    <text x='630' y='55' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>TYPE</text>
+    <text x='760' y='25' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>speaker</text>
+    <text x='760' y='48' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>speaker-plus</text>
+    <text x='760' y='71' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>addressee</text>
+    <text x='546' y='137' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>non-interactant</text>
+    <text x='662' y='128' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>NON-</text>
+    <text x='662' y='144' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>INTERACTANT-TYPE</text>
+    <text x='835' y='111' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>one-referent</text>
+    <text x='931' y='102' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>ONE-</text>
+    <text x='931' y='118' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>REFERENT-TYPE</text>
+    <text x='1078' y='94' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>non-conscious</text>
+    <text x='1078' y='128' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>conscious</text>
+    <text x='1160' y='119' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>SEX-</text>
+    <text x='1160' y='135' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>TYPE</text>
+    <text x='1213' y='117' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>male</text>
+    <text x='1213' y='140' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>female</text>
+    <text x='835' y='163' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>plural-referent</text>
+    <text x='346' y='214' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>demonstrative</text>
+    <text x='471' y='206' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>SELECTION</text>
+    <text x='573' y='186' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>non-selective</text>
+    <text x='573' y='243' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>selective</text>
+    <text x='646' y='234' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>SELECTION-</text>
+    <text x='646' y='250' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>TYPE</text>
+    <text x='753' y='220' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>plurality</text>
+    <text x='819' y='211' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>PLURALITY-</text>
+    <text x='819' y='227' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>TYPE</text>
+    <text x='923' y='209' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>plural</text>
+    <text x='923' y='232' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>non-plural</text>
+    <text x='753' y='266' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>proximity</text>
+    <text x='827' y='257' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>PROXIMITY-</text>
+    <text x='827' y='273' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>TYPE</text>
+    <text x='930' y='255' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>near</text>
+    <text x='930' y='278' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>far</text>
+    <text x='278' y='303' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>DEIXIS-</text>
+    <text x='278' y='319' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>MOOD</text>
+    <text x='346' y='301' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>determinative</text>
+    <text x='346' y='324' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>interrogative</text>
+    <text x='186' y='427' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>non-specific</text>
+    <text x='282' y='418' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>NON-</text>
+    <text x='282' y='434' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>SPECIFIC-TYPE</text>
+    <text x='415' y='370' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>total</text>
+    <text x='455' y='361' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>TOTAL-</text>
+    <text x='455' y='377' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>TYPE</text>
+    <text x='522' y='347' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>positive-singular</text>
+    <text x='522' y='370' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>positive-plural</text>
+    <text x='522' y='393' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>negative</text>
+    <text x='415' y='427' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>partial-selective</text>
+    <text x='537' y='418' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>PARTIAL-</text>
+    <text x='537' y='434' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>SELECTIVE-TYPE</text>
+    <text x='685' y='416' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>partial-non-singular</text>
+    <text x='685' y='439' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>partial-singular</text>
+    <text x='415' y='462' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>partial-non-selective-singular</text>
+    <text x='415' y='485' style='stroke-width: 0; font-family: Liberation Sans; font-size: 11pt;'>unrestricted</text>
+    <polyline points='124.0 322.0 181.0 322.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='181.0 225.0 181.0 421.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='279.0 146.0 341.0 146.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='341.0 85.0 341.0 208.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <text x='452' y='93' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>}</text>
+    <polyline points='468.0 85.0 541.0 85.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='541.0 41.0 541.0 131.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='631.0 41.0 755.0 41.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='755.0 18.0 755.0 65.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='759.0 18.0 755.0 18.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='759.0 41.0 755.0 41.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='759.0 64.0 755.0 64.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='625.0 41.0 631.0 41.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='545.0 41.0 541.0 41.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='663.0 130.0 830.0 130.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='830.0 104.0 830.0 157.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='932.0 104.0 1073.0 104.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='1073.0 87.0 1073.0 122.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='1077.0 87.0 1073.0 87.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='1161.0 121.0 1208.0 121.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='1208.0 110.0 1208.0 134.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='1212.0 110.0 1208.0 110.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='1212.0 133.0 1208.0 133.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='1155.0 121.0 1161.0 121.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='1077.0 121.0 1073.0 121.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='926.0 104.0 932.0 104.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='834.0 104.0 830.0 104.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='834.0 156.0 830.0 156.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='657.0 130.0 663.0 130.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='545.0 130.0 541.0 130.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='423.0 85.0 453.0 82.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='345.0 85.0 341.0 85.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <text x='456' y='215' style='stroke-width: 0; font-family: Liberation Sans; font-size: 18pt;'>}</text>
+    <polyline points='472.0 207.0 568.0 207.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='568.0 179.0 568.0 237.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='572.0 179.0 568.0 179.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='647.0 236.0 748.0 236.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='748.0 213.0 748.0 260.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='820.0 213.0 918.0 213.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='918.0 202.0 918.0 226.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='922.0 202.0 918.0 202.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='922.0 225.0 918.0 225.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='814.0 213.0 820.0 213.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='752.0 213.0 748.0 213.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='828.0 259.0 925.0 259.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='925.0 248.0 925.0 272.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='929.0 248.0 925.0 248.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='929.0 271.0 925.0 271.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='822.0 259.0 828.0 259.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='752.0 259.0 748.0 259.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='641.0 236.0 647.0 236.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='572.0 236.0 568.0 236.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='451.0 207.0 457.0 204.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='345.0 207.0 341.0 207.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='279.0 305.0 341.0 305.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='341.0 294.0 341.0 318.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='447.0 294.0 453.0 88.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='447.0 294.0 457.0 210.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='345.0 294.0 341.0 294.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='345.0 317.0 341.0 317.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <path d='M 248.0 225.5 Q 258.5 220.5 263.5 168.75' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <path d='M 263.5 168.75 Q 268.5 117.0 279.0 112.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <path d='M 248.0 225.5 Q 258.5 230.5 263.5 282.25' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <path d='M 263.5 282.25 Q 268.5 334.0 279.0 339.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='185.0 225.0 181.0 225.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='283.0 420.0 410.0 420.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='410.0 363.0 410.0 479.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='456.0 363.0 517.0 363.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='517.0 340.0 517.0 387.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='521.0 340.0 517.0 340.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='521.0 363.0 517.0 363.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='521.0 386.0 517.0 386.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='450.0 363.0 456.0 363.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='414.0 363.0 410.0 363.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='538.0 420.0 680.0 420.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='680.0 409.0 680.0 433.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='684.0 409.0 680.0 409.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='684.0 432.0 680.0 432.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='532.0 420.0 538.0 420.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='414.0 420.0 410.0 420.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='414.0 455.0 410.0 455.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='414.0 478.0 410.0 478.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='277.0 420.0 283.0 420.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='185.0 420.0 181.0 420.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+    <polyline points='118.0 322.0 124.0 322.0' style='stroke: black; stroke-width: 1.0; stroke-linejoin: round; fill: none;'/>
+</svg>

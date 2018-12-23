@@ -1,0 +1,290 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.7837837837837838
+,Recall,0.9103139013452914
+,F1,0.8423236514522822
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+7,3.0,"42, 69","39, 69",3,I hope you can bear with me,so I hope you can bear with me,configuration,configuration
+4,0.0,"42, 43","42, 43",0,I,I,participant-role,participant-role
+6,0.0,"49, 69","49, 69",0,you can bear with me,you can bear with me,participant-role,participant-role
+12,0.0,"49, 69","49, 69",0,you can bear with me,you can bear with me,configuration,configuration
+5,0.0,"44, 48","44, 48",0,hope,hope,main,main
+2,12.0,"23, 38","23, 26",12,new to all this,new,participant-role,participant-role
+8,0.0,"49, 52","49, 52",0,you,you,participant-role,participant-role
+3,32.57299494980466,"20, 38","30, 69",30,am new to all this,all this so I hope you can bear with me,configuration,configuration
+10,5.0,"57, 66","57, 61",5,bear with,bear,main,main
+11,5.0,"67, 69","62, 69",5,me,with me,participant-role,participant-role
+1,0.0,"20, 22","20, 22",0,am,am,main,main
+16,0.0,"93, 100","93, 100",0,I am 23,I am 23,configuration,configuration
+13,0.0,"93, 94","93, 94",0,I,I,participant-role,participant-role
+20,9.055385138137417,"102, 117","93, 118",10,my fiancé is 37,"I am 23, my fiancé is 37.",configuration,configuration
+19,1.0,"115, 117","115, 118",1,37,37.,participant-role,participant-role
+17,2.23606797749979,"102, 111","100, 112",3,my fiancé,", my fiancé ",participant-role,participant-role
+15,0.0,"98, 100","98, 100",0,23,23,participant-role,participant-role
+14,0.0,"95, 97","95, 97",0,am,am,main,main
+18,0.0,"112, 114","112, 114",0,is,is,main,main
+21,0.0,"119, 120","119, 120",0,I,I,participant-role,participant-role
+22,0.0,"121, 125","121, 125",0,have,have,main,main
+23,35.0,"126, 138","126, 173",35,a 3 year old,a 3 year old from my last marriage ( I know ) .,participant-role,participant-role
+24,13.0,"119, 160","119, 173",13,I have a 3 year old from my last marriage,I have a 3 year old from my last marriage ( I know ) .,configuration,configuration
+32,0.0,"220, 228","220, 228",0,40 miles,40 miles,participant-role,participant-role
+33,22.02271554554524,"207, 243","229, 244",23,I just moved 40 miles to be with him,to be with him.,configuration,configuration
+30,0.0,"207, 208","207, 208",0,I,I,participant-role,participant-role
+27,0.0,"182, 186","182, 186",0,been,been,main,main
+25,0.0,"174, 176","174, 176",0,We,We,participant-role,participant-role
+29,42.0,"174, 202","174, 244",42,We have been together a year,We have been together a year and I just moved 40 miles to be with him.,configuration,configuration
+48,0.0,"315, 318","315, 318",0,she,she,participant-role,participant-role
+40,5.0,"264, 270","259, 270",5,we met,when we met,configuration,configuration
+35,0.0,"248, 253","248, 253",0,hated,hated,main,main
+39,0.0,"267, 270","267, 270",0,met,met,main,main
+43,4.0,"275, 292","271, 292",4,now loves my girl,but now loves my girl,configuration,configuration
+42,0.0,"285, 292","285, 292",0,my girl,my girl,participant-role,participant-role
+38,0.0,"264, 266","264, 266",0,we,we,participant-role,participant-role
+49,0.0,"319, 324","319, 324",0,loves,loves,main,main
+44,0.0,"299, 302","299, 302",0,she,she,participant-role,participant-role
+45,0.0,"303, 306","303, 306",0,was,was,main,main
+46,4.0,"307, 314","311, 314",4,his own,own,participant-role,participant-role
+47,3.0,"299, 314","296, 314",3,she was his own,if she was his own,configuration,configuration
+36,34.0,"254, 258","254, 292",34,kids,kids when we met but now loves my girl,participant-role,participant-role
+34,0.0,"245, 247","245, 247",0,He,He,participant-role,participant-role
+50,0.0,"325, 328","325, 328",0,him,him,participant-role,participant-role
+41,0.0,"279, 284","279, 284",0,loves,loves,main,main
+228,0.0,"356, 357","356, 357",0,I,I,participant-role,participant-role
+229,0.0,"358, 362","358, 362",0,feel,feel,main,main
+63,3.0,"423, 432","423, 429",3,scared of,scared,main,main
+52,0.0,"344, 345","344, 345",0,I,I,participant-role,participant-role
+231,3.0,"356, 391","353, 391",3,I feel threatened by what they have,if I feel threatened by what they have,configuration,configuration
+64,3.1622776601683795,"433, 477","430, 478",4,putting my daughter through another break-up,of putting my daughter through another break-up.,participant-role,participant-role
+61,6.0,"398, 415","392, 415",6,I want to get out,or if I want to get out,configuration,configuration
+60,0.0,"405, 415","405, 415",0,to get out,to get out,participant-role,participant-role
+230,0.0,"363, 391","363, 391",0,threatened by what they have,threatened by what they have,participant-role,participant-role
+55,49.73932046178355,"398, 477","441, 452",68,I want to get out but am scared of putting my daughter through another break-up,my daughter,participant-role,participant-role
+56,39.0,"334, 391","334, 352",39,Sometimes I wonder if I feel threatened by what they have,Sometimes I wonder,configuration,configuration
+65,4.123105625617661,"420, 477","416, 478",5,am scared of putting my daughter through another break-up,but am scared of putting my daughter through another break-up.,configuration,configuration
+59,0.0,"400, 404","400, 404",0,want,want,main,main
+53,0.0,"346, 352","346, 352",0,wonder,wonder,main,main
+58,0.0,"398, 399","398, 399",0,I,I,participant-role,participant-role
+54,18.0,"356, 391","374, 391",18,I feel threatened by what they have,by what they have,participant-role,participant-role
+72,5.0,"543, 547","538, 547",5,work,from work,participant-role,participant-role
+67,0.0,"482, 484","482, 484",0,is,is,main,main
+78,18.027756377319946,"578, 585","560, 586",19,candles,a bath and lights candles.,participant-role,participant-role
+74,0.0,"552, 554","552, 554",0,he,he,participant-role,participant-role
+69,27.0,"479, 524","506, 524",27,He is a wonderful man kind caring considerate,caring considerate,configuration,configuration
+66,0.0,"479, 481","479, 481",0,He,He,participant-role,participant-role
+73,61.07372593840988,"526, 547","479, 586",86,I come home from work,"He is a wonderful man kind caring considerate, I come home from work and he runs a bath and lights candles.",configuration,configuration
+68,28.0,"485, 524","513, 524",28,a wonderful man kind caring considerate,considerate,participant-role,participant-role
+70,2.0,"526, 527","524, 527",2,I,", I",participant-role,participant-role
+80,0.0,"605, 617","605, 617",0,our sex life,our sex life,participant-role,participant-role
+85,0.0,"631, 635","631, 635",0,mean,mean,main,main
+86,1.0,"636, 639","636, 640",1,HOT,HOT!,participant-role,participant-role
+84,2.0,"629, 630","627, 630",2,I,", I",participant-role,participant-role
+83,13.0,"587, 627","587, 640",13,Up until recently our sex life was great,"Up until recently our sex life was great, I mean HOT!",configuration,configuration
+102,1.0,"711, 714","711, 715",1,him,him.,participant-role,participant-role
+101,0.0,"705, 710","705, 710",0,hurts,hurts,main,main
+100,0.0,"702, 704","702, 704",0,it,it,participant-role,participant-role
+92,0.0,"641, 669","641, 669",0,Now I don't want him near me,Now I don't want him near me,configuration,configuration
+99,5.0990195135927845,"687, 714","682, 715",6,I see how much it hurts him,when I see how much it hurts him.,configuration,configuration
+90,4.0,"653, 657","649, 657",4,want,n't want,main,main
+94,0.0,"673, 677","673, 677",0,feel,feel,main,main
+96,0.0,"687, 688","687, 688",0,I,I,participant-role,participant-role
+232,45.34313619501854,"671, 681","641, 715",64,I feel bad,"Now I don't want him near me, I feel bad when I see how much it hurts him.",configuration,configuration
+93,2.0,"671, 672","669, 672",2,I,", I",participant-role,participant-role
+103,9.055385138137417,"702, 714","693, 715",10,it hurts him,how much it hurts him.,configuration,configuration
+97,0.0,"689, 692","689, 692",0,see,see,main,main
+88,0.0,"645, 646","645, 646",0,I,I,participant-role,participant-role
+91,4.0,"658, 669","662, 669",4,him near me,near me,participant-role,participant-role
+95,0.0,"678, 681","678, 681",0,bad,bad,participant-role,participant-role
+98,1.0,"693, 714","693, 715",1,how much it hurts him,how much it hurts him.,participant-role,participant-role
+104,0.0,"716, 717","716, 717",0,I,I,participant-role,participant-role
+105,0.0,"718, 722","718, 722",0,feel,feel,main,main
+107,1.0,"716, 739","716, 740",1,I feel so low and alone,I feel so low and alone.,configuration,configuration
+119,1.0,"778, 791","778, 792",1,I want to cry,I want to cry.,configuration,configuration
+115,15.0,"759, 777","759, 792",15,I love him so much,I love him so much I want to cry.,configuration,configuration
+109,0.0,"753, 758","753, 758",0,think,think,main,main
+117,0.0,"780, 784","780, 784",0,want,want,main,main
+110,1.0,"759, 791","759, 792",1,I love him so much I want to cry,I love him so much I want to cry.,participant-role,participant-role
+113,0.0,"761, 765","761, 765",0,love,love,main,main
+112,0.0,"759, 760","759, 760",0,I,I,participant-role,participant-role
+111,1.0,"741, 791","741, 792",1,Sometimes I think I love him so much I want to cry,Sometimes I think I love him so much I want to cry.,configuration,configuration
+118,1.0,"785, 791","785, 792",1,to cry,to cry.,participant-role,participant-role
+114,0.0,"766, 769","766, 769",0,him,him,participant-role,participant-role
+108,0.0,"751, 752","751, 752",0,I,I,participant-role,participant-role
+116,0.0,"778, 779","778, 779",0,I,I,participant-role,participant-role
+135,12.0,"843, 878","855, 878",12,other times I just need to be alone,I just need to be alone,configuration,configuration
+128,0.0,"830, 833","830, 833",0,are,are,main,main
+139,2.23606797749979,"880, 893","878, 894",3,am I horrible,", am I horrible?",configuration,configuration
+120,0.0,"793, 794","793, 794",0,I,I,participant-role,participant-role
+136,0.0,"880, 882","880, 882",0,am,am,main,main
+130,36.22154055254967,"827, 842","823, 878",40,we are together,why we are together other times I just need to be alone,configuration,configuration
+133,0.0,"873, 878","873, 878",0,alone,alone,participant-role,participant-role
+126,36.22154055254967,"816, 842","812, 878",40,wonder why we are together,and wonder why we are together other times I just need to be alone,configuration,configuration
+137,0.0,"883, 884","883, 884",0,I,I,participant-role,participant-role
+123,0.0,"793, 811","793, 811",0,I just look at him,I just look at him,configuration,configuration
+138,1.0,"885, 893","885, 894",1,horrible,horrible?,participant-role,participant-role
+121,3.0,"800, 807","800, 804",3,look at,look,main,main
+134,3.0,"870, 872","867, 872",3,be,to be,main,main
+124,0.0,"816, 822","816, 822",0,wonder,wonder,main,main
+131,0.0,"855, 856","855, 856",0,I,I,participant-role,participant-role
+122,3.0,"808, 811","805, 811",3,him,at him,participant-role,participant-role
+125,16.0,"823, 842","823, 826",16,why we are together,why,participant-role,participant-role
+127,0.0,"827, 829","827, 829",0,we,we,participant-role,participant-role
+233,0.0,"916, 920","916, 920",0,this,this,participant-role,participant-role
+145,3.0,"955, 958","955, 961",3,are,aren't,main,main
+236,23.194827009486403,"916, 947","913, 970",26,this is a Mars / Venus question,if this is a Mars / Venus question... why aren't I happy?,configuration,configuration
+144,23.0,"895, 947","895, 970",23,I don't even know if this is a Mars / Venus question,I don't even know if this is a Mars / Venus question... why aren't I happy?,configuration,configuration
+234,0.0,"921, 923","921, 923",0,is,is,main,main
+235,23.0,"924, 947","924, 970",23,a Mars / Venus question,a Mars / Venus question... why aren't I happy?,participant-role,participant-role
+148,4.123105625617661,"951, 969","947, 970",5,why aren't I happy,... why aren't I happy?,configuration,configuration
+147,2.23606797749979,"964, 969","962, 970",3,happy,I happy?,participant-role,participant-role
+140,0.0,"895, 896","895, 896",0,I,I,participant-role,participant-role
+156,0.0,"1000, 1006","1000, 1006",0,wanted,wanted,main,main
+154,0.0,"988, 989","988, 989",0,I,I,participant-role,participant-role
+151,1.0,"977, 1006","977, 1007",1,everything I have ever wanted,everything I have ever wanted.,participant-role,participant-role
+157,11.045361017187261,"977, 1006","988, 1007",12,everything I have ever wanted,I have ever wanted.,configuration,configuration
+150,0.0,"974, 976","974, 976",0,is,is,main,main
+152,1.0,"971, 1006","971, 1007",1,He is everything I have ever wanted,He is everything I have ever wanted.,configuration,configuration
+149,0.0,"971, 973","971, 973",0,He,He,participant-role,participant-role
+171,0.0,"1044, 1089","1044, 1089",0,we don't go anyplace other than food shopping,we don't go anyplace other than food shopping,configuration,configuration
+170,15.0,"1056, 1089","1071, 1089",15,anyplace other than food shopping,than food shopping,participant-role,participant-role
+179,1.0,"1139, 1144","1139, 1145",1,sport,sport.,participant-role,participant-role
+169,4.0,"1053, 1055","1049, 1055",4,go,n't go,main,main
+175,29.274562336608895,"1095, 1116","1091, 1145",33,he likes to stay home,but he likes to stay home unless he is watching sport.,configuration,configuration
+180,7.0710678118654755,"1124, 1144","1117, 1145",8,he is watching sport,unless he is watching sport.,configuration,configuration
+172,0.0,"1095, 1097","1095, 1097",0,he,he,participant-role,participant-role
+165,0.0,"1044, 1089","1044, 1089",0,we don't go anyplace other than food shopping,we don't go anyplace other than food shopping,participant-role,participant-role
+166,0.0,"1037, 1089","1037, 1089",0,I mean we don't go anyplace other than food shopping,I mean we don't go anyplace other than food shopping,configuration,configuration
+162,15.0,"1008, 1036","1023, 1036",15,He has stopped wooing me now,wooing me now,configuration,configuration
+176,0.0,"1124, 1126","1124, 1126",0,he,he,participant-role,participant-role
+173,0.0,"1098, 1103","1098, 1103",0,likes,likes,main,main
+178,0.0,"1130, 1138","1130, 1138",0,watching,watching,main,main
+163,0.0,"1037, 1038","1037, 1038",0,I,I,participant-role,participant-role
+160,4.0,"1023, 1032","1023, 1036",4,wooing me,wooing me now,participant-role,participant-role
+164,0.0,"1039, 1043","1039, 1043",0,mean,mean,main,main
+159,0.0,"1015, 1022","1015, 1022",0,stopped,stopped,main,main
+174,8.0,"1104, 1116","1112, 1116",8,to stay home,home,participant-role,participant-role
+158,0.0,"1008, 1010","1008, 1010",0,He,He,participant-role,participant-role
+167,0.0,"1044, 1046","1044, 1046",0,we,we,participant-role,participant-role
+182,5.0,"1154, 1163","1154, 1158",5,goes away,goes,main,main
+183,19.6468827043885,"1151, 1175","1146, 1194",24,he goes away at weekends,Then he goes away at weekends or out after work.,configuration,configuration
+181,0.0,"1151, 1153","1151, 1153",0,he,he,participant-role,participant-role
+194,5.0990195135927845,"1210, 1224","1205, 1225",6,he has a hobby,that he has a hobby.,configuration,configuration
+190,1.0,"1195, 1224","1195, 1225",1,It's good that he has a hobby,It's good that he has a hobby.,configuration,configuration
+189,1.0,"1205, 1224","1205, 1225",1,that he has a hobby,that he has a hobby.,participant-role,participant-role
+191,0.0,"1210, 1212","1210, 1212",0,he,he,participant-role,participant-role
+187,1.0,"1198, 1199","1197, 1199",1,s,'s,main,main
+188,0.0,"1200, 1204","1200, 1204",0,good,good,participant-role,participant-role
+193,1.0,"1217, 1224","1217, 1225",1,a hobby,a hobby.,participant-role,participant-role
+192,0.0,"1213, 1216","1213, 1216",0,has,has,main,main
+186,0.0,"1195, 1197","1195, 1197",0,It,It,participant-role,participant-role
+196,5.0,"1228, 1237","1228, 1232",5,feel like,feel,main,main
+201,15.556349186104045,"1247, 1270","1258, 1259",22,the person I used to be,I,participant-role,participant-role
+206,0.0,"1276, 1277","1276, 1277",0,I,I,participant-role,participant-role
+199,0.0,"1238, 1239","1238, 1239",0,I,I,participant-role,participant-role
+198,30.0,"1226, 1270","1226, 1300",30,I feel like I am not the person I used to be,I feel like I am not the person I used to be like I have lost my identity.,configuration,configuration
+205,1.0,"1271, 1299","1271, 1300",1,like I have lost my identity,like I have lost my identity.,configuration,configuration
+208,0.0,"1283, 1287","1283, 1287",0,lost,lost,main,main
+202,30.4138126514911,"1238, 1270","1233, 1300",35,I am not the person I used to be,like I am not the person I used to be like I have lost my identity.,configuration,configuration
+204,11.045361017187261,"1276, 1299","1265, 1300",12,I have lost my identity,to be like I have lost my identity.,participant-role,participant-role
+209,1.0,"1288, 1299","1288, 1300",1,my identity,my identity.,participant-role,participant-role
+200,4.0,"1240, 1242","1240, 1246",4,am,am not,main,main
+195,0.0,"1226, 1227","1226, 1227",0,I,I,participant-role,participant-role
+216,0.0,"1340, 1343","1340, 1343",0,met,met,main,main
+211,0.0,"1301, 1302","1301, 1302",0,I,I,participant-role,participant-role
+215,0.0,"1337, 1339","1337, 1339",0,he,he,participant-role,participant-role
+218,5.0,"1337, 1346","1332, 1346",5,he met me,when he met me,configuration,configuration
+217,0.0,"1344, 1346","1344, 1346",0,me,me,participant-role,participant-role
+221,5.0990195135927845,"1368, 1379","1363, 1380",6,an old maid,like an old maid.,participant-role,participant-role
+222,1.0,"1356, 1379","1356, 1380",1,I feel like an old maid,I feel like an old maid.,configuration,configuration
+219,0.0,"1356, 1357","1356, 1357",0,I,I,participant-role,participant-role
+220,5.0,"1358, 1367","1358, 1362",5,feel like,feel,main,main
+224,1.0,"1386, 1387","1385, 1387",1,s,'s,main,main
+226,5.0990195135927845,"1399, 1401","1394, 1402",6,me,with me?,participant-role,participant-role
+227,1.0,"1381, 1401","1381, 1402",1,What's wrong with me,What's wrong with me?,configuration,configuration
+223,0.0,"1381, 1385","1381, 1385",0,What,What,participant-role,participant-role
+225,5.0,"1388, 1398","1388, 1393",5,wrong with,wrong,participant-role,participant-role
+51,22.02271554554524,"315, 332","293, 333",23,she loves him too,as if she was his own she loves him too.,configuration,configuration
+57,35.014282800023196,"398, 477","433, 478",36,I want to get out but am scared of putting my daughter through another break-up,putting my daughter through another break-up.,configuration,configuration
+210,11.045361017187261,"1276, 1299","1265, 1300",12,I have lost my identity,to be like I have lost my identity.,configuration,configuration
+197,31.32091952673165,"1238, 1270","1247, 1300",39,I am not the person I used to be,the person I used to be like I have lost my identity.,participant-role,participant-role
+37,75.0,"245, 258","245, 333",75,He hated kids,He hated kids when we met but now loves my girl as if she was his own she loves him too.,configuration,configuration
+,
+,Manual mismatching all parsed (False Negative)
+28,"187, 195",together,participant-role
+31,"214, 219",moved,main
+71,"528, 542",come home from,main
+76,"552, 566",he runs a bath,configuration
+75,"555, 566",runs a bath,main
+79,"571, 585",lights candles,configuration
+77,"571, 577",lights,main
+81,"618, 621",was,main
+82,"622, 627",great,participant-role
+87,"629, 639",I mean HOT,configuration
+106,"723, 739",so low and alone,participant-role
+129,"834, 842",together,participant-role
+142,"908, 912",know,main
+143,"916, 947",this is a Mars / Venus question,participant-role
+146,"962, 963",I,participant-role
+153,"977, 987",everything,participant-role
+185,"1179, 1193",out after work,configuration
+214,"1301, 1331",I was a interesting fun person,configuration
+212,"1303, 1306",was,main
+213,"1307, 1331",a interesting fun person,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+73,"73, 76",gee,main
+83,"83, 91",to start,main
+77,"77, 82",where,participant-role
+77,"77, 92",where to start.,participant-role
+77,"77, 92",where to start.,configuration
+161,"161, 173",( I know ) .,configuration
+163,"163, 164",I,participant-role
+165,"165, 169",know,main
+235,"235, 244",with him.,participant-role
+229,"229, 234",to be,main
+229,"229, 244",to be with him.,participant-role
+196,"196, 244",a year and I just moved 40 miles to be with him.,participant-role
+259,"259, 263",when,participant-role
+387,"387, 391",have,main
+433,"433, 440",putting,main
+405,"405, 411",to get,main
+506,"506, 512",caring,main
+533,"533, 537",home,participant-role
+596,"596, 604",recently,participant-role
+682,"682, 686",when,participant-role
+773,"773, 777",much,main
+766,"766, 792",him so much I want to cry.,configuration
+785,"785, 791",to cry,main
+867,"867, 878",to be alone,configuration
+862,"862, 866",need,main
+947,"947, 954",... why,participant-role
+899,"899, 902",n't,main
+1104,"1104, 1111",to stay,main
+1056,"1056, 1070",anyplace other,participant-role
+1023,"1023, 1029",wooing,main
+1008,"1008, 1090","He has stopped wooing me now I mean we don't go anyplace other than food shopping,",configuration
+1265,"1265, 1270",to be,main
+1260,"1260, 1264",used,main
+1332,"1332, 1336",when,participant-role
+16,"16, 92","Hi, am new to all this so I hope you can bear with me... gee where to start.",configuration
+30,"30, 69",all this so I hope you can bear with me,participant-role
+93,"93, 100",I am 23,participant-role
+259,"259, 292",when we met but now loves my girl,configuration
+453,"453, 478",through another break-up.,participant-role
+382,"382, 386",they,participant-role
+377,"377, 391",what they have,configuration
+377,"377, 381",what,participant-role
+524,"524, 586",", I come home from work and he runs a bath and lights candles.",participant-role
+641,"641, 669",Now I don't want him near me,participant-role
+658,"658, 661",him,participant-role
+785,"785, 792",to cry.,configuration
+778,"778, 792",I want to cry.,participant-role
+766,"766, 792",him so much I want to cry.,participant-role
+867,"867, 878",to be alone,participant-role
+843,"843, 878",other times I just need to be alone,participant-role
+1104,"1104, 1145",to stay home unless he is watching sport.,configuration
+1104,"1104, 1145",to stay home unless he is watching sport.,participant-role
+1030,"1030, 1032",me,participant-role
+1037,"1037, 1089",I mean we don't go anyplace other than food shopping,participant-role
+405,"405, 415",to get out,configuration
+1258,"1258, 1300",I used to be like I have lost my identity.,configuration

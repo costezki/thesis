@@ -1,0 +1,169 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.8214285714285714
+,Recall,0.8646616541353384
+,F1,0.8424908424908425
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+4,4.123105625617661,"20, 27","16, 28",5,I'm new,"Hi, I'm new.",configuration,configuration
+2,1.0,"22, 23","21, 23",1,m,'m,main,main
+1,2.0,"20, 21","18, 21",2,I,", I",participant-role,participant-role
+137,10.0,"50, 88","60, 88",10,qualified as having an eating disorder,as having an eating disorder,participant-role,participant-role
+5,0.0,"29, 30","29, 30",0,I,I,participant-role,participant-role
+8,25.0,"45, 88","70, 88",25,I am qualified as having an eating disorder,an eating disorder,participant-role,participant-role
+113,0.0,"45, 46","45, 46",0,I,I,participant-role,participant-role
+13,5.0990195135927845,"123, 162","118, 163",6,food and my weight and my big fat belly,with food and my weight and my big fat belly.,participant-role,participant-role
+14,65.00769185258002,"94, 162","29, 163",66,I am certainly obsessed with food and my weight and my big fat belly,"I'm not sure if I am qualified as having an eating disorder, but I am certainly obsessed with food and my weight and my big fat belly.",configuration,configuration
+10,0.0,"94, 95","94, 95",0,I,I,participant-role,participant-role
+138,3.0,"45, 88","42, 88",3,I am qualified as having an eating disorder,if I am qualified as having an eating disorder,configuration,configuration
+16,0.0,"164, 165","164, 165",0,I,I,participant-role,participant-role
+20,0.0,"175, 193","175, 193",0,a bout of anorexia,a bout of anorexia,participant-role,participant-role
+17,0.0,"170, 174","170, 174",0,have,have,main,main
+22,0.0,"213, 217","213, 217",0,that,that,participant-role,participant-role
+23,0.0,"218, 220","218, 220",0,is,is,main,main
+15,6.082762530298219,"164, 207","170, 208",7,I did have a bout of anorexia as a teenager,"have a bout of anorexia as a teenager,",configuration,configuration
+25,1.0,"231, 239","231, 240",1,the case,the case.,participant-role,participant-role
+21,4.123105625617661,"213, 239","209, 240",5,that is no longer the case,but that is no longer the case.,configuration,configuration
+130,0.0,"307, 310","307, 310",0,was,was,main,main
+32,29.68164415931166,"257, 289","241, 314",41,am still having these obsessions,I am now 32 and am still having these obsessions as I did since I was 13.,configuration,configuration
+36,0.0,"293, 294","293, 294",0,I,I,participant-role,participant-role
+125,0.0,"241, 242","241, 242",0,I,I,participant-role,participant-role
+131,1.0,"311, 313","311, 314",1,13,13.,participant-role,participant-role
+34,6.082762530298219,"305, 313","299, 314",7,I was 13,since I was 13.,configuration,configuration
+127,0.0,"243, 245","243, 245",0,am,am,main,main
+39,0.0,"273, 289","273, 289",0,these obsessions,these obsessions,participant-role,participant-role
+129,0.0,"305, 306","305, 306",0,I,I,participant-role,participant-role
+40,0.0,"315, 316","315, 316",0,I,I,participant-role,participant-role
+48,63.0317380372777,"357, 370","315, 417",89,use laxatives,"I exercise 1 and 1/2 to 2 hours a day and use laxatives, but not overuse, just the recommended dosage.",configuration,configuration
+45,0.0,"317, 325","317, 325",0,exercise,exercise,main,main
+42,35.014282800023196,"361, 370","326, 371",36,laxatives,"1 and 1/2 to 2 hours a day and use laxatives,",participant-role,participant-role
+50,3.0,"433, 441","433, 438",3,throw up,throw,main,main
+51,1.0,"442, 449","442, 450",1,my food,"my food,",participant-role,participant-role
+53,21.0,"418, 449","418, 470",21,I occasionally throw up my food,"I occasionally throw up my food, but not that often.",configuration,configuration
+49,0.0,"418, 419","418, 419",0,I,I,participant-role,participant-role
+57,1.0,"471, 492","471, 493",1,I also use diet pills,I also use diet pills.,configuration,configuration
+56,1.0,"482, 492","482, 493",1,diet pills,diet pills.,participant-role,participant-role
+54,0.0,"471, 472","471, 472",0,I,I,participant-role,participant-role
+55,0.0,"478, 481","478, 481",0,use,use,main,main
+58,0.0,"494, 495","494, 495",0,I,I,participant-role,participant-role
+60,0.0,"514, 520","514, 520",0,myself,myself,participant-role,participant-role
+24,0.0,"506, 513","506, 513",0,measure,measure,main,main
+59,0.0,"496, 501","496, 501",0,weigh,weigh,main,main
+41,4.123105625617661,"506, 540","502, 541",5,measure myself several times a day,and measure myself several times a day.,configuration,configuration
+19,0.0,"494, 501","494, 501",0,I weigh,I weigh,configuration,configuration
+73,18.027756377319946,"611, 654","629, 655",19,I am at home with the food most of the time,the food most of the time.,configuration,configuration
+64,0.0,"544, 546","544, 546",0,am,am,main,main
+68,0.0,"592, 597","592, 597",0,leave,leave,main,main
+70,0.0,"611, 612","611, 612",0,I,I,participant-role,participant-role
+134,19.4164878389476,"592, 607","581, 623",27,leave the house,and rarely leave the house so I am at home,configuration,configuration
+71,0.0,"613, 615","613, 615",0,am,am,main,main
+69,0.0,"598, 607","598, 607",0,the house,the house,participant-role,participant-role
+63,0.0,"542, 543","542, 543",0,I,I,participant-role,participant-role
+65,59.21148537234985,"552, 564","547, 623",64,mentally ill,also mentally ill and cannot work and rarely leave the house so I am at home,participant-role,participant-role
+76,3.0,"678, 701","675, 701",3,having snacks available,on having snacks available,participant-role,participant-role
+85,25.317977802344327,"706, 720","702, 745",29,I love to cook,and I love to cook so we always have plenty,configuration,configuration
+84,0.0,"708, 712","708, 712",0,love,love,main,main
+81,17.204650534085253,"739, 753","749, 767",15,plenty of food,food in the house.,participant-role,participant-role
+86,21.213203435596427,"724, 766","721, 745",24,we always have plenty of food in the house,so we always have plenty,configuration,configuration
+83,0.0,"656, 701","656, 701",0,My husband insists on having snacks available,My husband insists on having snacks available,configuration,configuration
+75,3.0,"667, 677","667, 674",3,insists on,insists,main,main
+77,0.0,"706, 707","706, 707",0,I,I,participant-role,participant-role
+79,0.0,"724, 726","724, 726",0,we,we,participant-role,participant-role
+80,0.0,"734, 738","734, 738",0,have,have,main,main
+74,0.0,"656, 666","656, 666",0,My husband,My husband,participant-role,participant-role
+87,0.0,"768, 778","768, 778",0,My problem,My problem,participant-role,participant-role
+89,1.0,"782, 804","782, 805",1,with compulsive eating,with compulsive eating.,participant-role,participant-role
+90,1.0,"768, 804","768, 805",1,My problem is with compulsive eating,My problem is with compulsive eating.,configuration,configuration
+88,0.0,"779, 781","779, 781",0,is,is,main,main
+93,0.0,"812, 827","812, 827",0,to limit myself,to limit myself,participant-role,participant-role
+44,0.0,"919, 920","919, 920",0,I,I,participant-role,participant-role
+92,0.0,"808, 811","808, 811",0,try,try,main,main
+94,1.0,"806, 827","806, 828",1,I try to limit myself,"I try to limit myself,",configuration,configuration
+99,4.0,"902, 913","902, 909",4,waiting for,waiting,main,main
+82,1.0,"902, 934","902, 935",1,waiting for when I can eat again,waiting for when I can eat again.,configuration,configuration
+72,4.123105625617661,"914, 934","910, 935",5,when I can eat again,for when I can eat again.,participant-role,participant-role
+97,0.0,"838, 847","838, 847",0,so hungry,so hungry,participant-role,participant-role
+96,0.0,"835, 837","835, 837",0,am,am,main,main
+103,3.0,"887, 891","884, 891",3,food,of food,participant-role,participant-role
+91,0.0,"806, 807","806, 807",0,I,I,participant-role,participant-role
+104,58.7962583843564,"868, 891","829, 935",83,always thinking of food,"but I am so hungry all of the time and always thinking of food, and just waiting for when I can eat again.",configuration,configuration
+95,0.0,"833, 834","833, 834",0,I,I,participant-role,participant-role
+133,0.0,"925, 928","925, 928",0,eat,eat,main,main
+107,0.0,"939, 941","939, 941",0,is,is,main,main
+109,1.0,"936, 954","936, 955",1,It is like torture,It is like torture.,configuration,configuration
+108,1.0,"942, 954","942, 955",1,like torture,like torture.,participant-role,participant-role
+106,0.0,"936, 938","936, 938",0,It,It,participant-role,participant-role
+101,3.0,"990, 998","987, 998",3,restrict,to restrict,main,main
+111,0.0,"958, 962","958, 962",0,want,want,main,main
+100,0.0,"956, 975","956, 975",0,I want food so much,I want food so much,configuration,configuration
+116,1.0,"999, 1005","999, 1006",1,myself,myself.,participant-role,participant-role
+114,0.0,"980, 981","980, 981",0,I,I,participant-role,participant-role
+112,0.0,"963, 967","963, 967",0,food,food,participant-role,participant-role
+117,4.123105625617661,"980, 1005","976, 1006",5,I have to restrict myself,and I have to restrict myself.,configuration,configuration
+110,0.0,"956, 957","956, 957",0,I,I,participant-role,participant-role
+120,0.0,"1012, 1055","1012, 1055",0,at the high end of the healthy weight range,at the high end of the healthy weight range,participant-role,participant-role
+141,0.0,"1082, 1084","1082, 1084",0,is,is,main,main
+143,3.1622776601683795,"1076, 1094","1073, 1095",4,there is a problem,if there is a problem.,configuration,configuration
+118,0.0,"1007, 1008","1007, 1008",0,I,I,participant-role,participant-role
+121,0.0,"1060, 1061","1060, 1061",0,I,I,participant-role,participant-role
+126,4.0,"1007, 1055","1007, 1059",4,I am at the high end of the healthy weight range,"I am at the high end of the healthy weight range, so",configuration,configuration
+124,1.0,"1060, 1094","1060, 1095",1,I don't know if there is a problem,I don't know if there is a problem.,configuration,configuration
+142,1.0,"1085, 1094","1085, 1095",1,a problem,a problem.,participant-role,participant-role
+123,4.0,"1068, 1072","1064, 1072",4,know,n't know,main,main
+119,0.0,"1009, 1011","1009, 1011",0,am,am,main,main
+28,0.0,"1104, 1107","1104, 1107",0,you,you,participant-role,participant-role
+30,0.0,"1096, 1100","1096, 1100",0,What,What,participant-role,participant-role
+26,1.0,"1096, 1113","1096, 1114",1,What do you think,What do you think?,configuration,configuration
+29,0.0,"1108, 1113","1108, 1113",0,think,think,main,main
+9,34.0,"29, 88","63, 88",34,I'm not sure if I am qualified as having an eating disorder,having an eating disorder,configuration,configuration
+33,16.278820596099706,"293, 298","290, 314",19,I did,as I did since I was 13.,configuration,configuration
+128,62.0,"250, 252","250, 314",62,32,32 and am still having these obsessions as I did since I was 13.,participant-role,participant-role
+62,79.71198153351854,"569, 580","542, 655",102,cannot work,I am also mentally ill and cannot work and rarely leave the house so I am at home with the food most of the time.,configuration,configuration
+78,25.0,"713, 720","713, 745",25,to cook,to cook so we always have plenty,participant-role,participant-role
+,
+,Manual mismatching all parsed (False Negative)
+3,"24, 27",new,participant-role
+7,"37, 41",sure,main
+136,"47, 49",am,main
+12,"109, 122",obsessed with,main
+31,"241, 252",I am now 32,configuration
+38,"266, 272",having,main
+47,"315, 352",I exercise 1 and 1/2 to 2 hours a day,configuration
+46,"357, 360",use,main
+132,"380, 416","overuse, just the recommended dosage",configuration
+43,"380, 387",overuse,main
+61,"542, 564",I am also mentally ill,configuration
+67,"576, 580",work,main
+135,"616, 623",at home,participant-role
+102,"833, 863",I am so hungry all of the time,configuration
+98,"875, 886",thinking of,main
+139,"919, 934",I can eat again,configuration
+122,"1076, 1094",there is a problem,participant-role
+140,"1076, 1081",there,participant-role
+,
+,Parsed mismatching all manual (False Positives)
+16,"16, 19","Hi,",participant-role
+63,"63, 69",having,main
+30,"30, 36",'m not,main
+50,"50, 59",qualified,main
+194,"194, 207",as a teenager,participant-role
+166,"166, 169",did,main
+295,"295, 298",did,main
+521,"521, 541",several times a day.,participant-role
+629,"629, 642",the food most,participant-role
+643,"643, 655",of the time.,participant-role
+713,"713, 720",to cook,main
+692,"692, 701",available,participant-role
+678,"678, 691",having snacks,main
+821,"821, 827",myself,participant-role
+812,"812, 820",to limit,main
+982,"982, 986",have,main
+88,"88, 163",", but I am certainly obsessed with food and my weight and my big fat belly.",participant-role
+164,"164, 169",I did,configuration
+713,"713, 745",to cook so we always have plenty,configuration
+678,"678, 701",having snacks available,configuration
+812,"812, 827",to limit myself,configuration
+914,"914, 918",when,participant-role
+852,"852, 935","of the time and always thinking of food, and just waiting for when I can eat again.",participant-role
+987,"987, 1006",to restrict myself.,participant-role
+987,"987, 1006",to restrict myself.,configuration

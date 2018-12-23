@@ -1,7 +1,9 @@
 \chapter{Creating the systemic functional constituency structure}
 \label{ch:parsing-algorithm}
 
-The considered input into the parsing pipeline are Stanford dependency parse graphs. These graphs are then rewritten into systemic constituency graphs. The process by which this happens is the focus of the current chapter. Dependency graphs are sometimes erroneous or treat certain linguistic phenomena in an incompatible way with current approach. Therefore a preprocessing stage is needed to correct and canonicalise the dependency graphs which is covered in the first two sections of the chapter. Then in the last section I present in detail the process by which the systemic functional constituency parse graph is created. 
+The previous chapter introduced the building blocs for the parser pipeline algorithm depicted in Figure \ref{fig:pipeline-overview}. This chapter covers the entire first phase of the of the algorithm called ``graph building''. 
+
+The considered input into the parsing pipeline are Stanford dependency parse graphs. The dependency graphs are sometimes erroneous or treat certain linguistic phenomena in an incompatible way with current approach. Therefore a preprocessing stage is needed to correct and canonicalise the dependency graphs which is covered in Section \ref{sec:preprocessing1} and \ref{sec:preprocessing2}. Then these graphs are rewritten into systemic constituency graphs. The process by which this happens is covered in Section \ref{sec:creation-constituency-graph}.
 
 \section{Canonicalisation of dependency graphs}
 \label{sec:preprocessing1}
@@ -363,7 +365,9 @@ To accommodate such cases the dependency graph is changed from pattern in Figure
 \end{figure}
 
 \section{Correction of errors in dependency graphs}
-%TODO group errors by operation type
+\label{sec:preprocessing2}
+%%TODO group errors by operation type
+
 The Stanford Parser applies various machine learning(ML) techniques to parsing. It's accuracy increased over time to $\approx92\%$ for unlabelled attachments and $\approx89\%$ for labelled ones (in the version 3.5.1). This section addresses known error classes of wrongly attached nodes or wrongly labelled edges and nodes. These errors have been discovered during the development of Parsimonious Vole parser and are corrected to increase the result accuracy. 
 
 As the Stanford parser evolved, some error classes changed from one version to another (v2.0.3 -- v3.2.0 -- 3.5.1). Also the set of dependency labels for English initially described in \citep{Marneffe2008, Marneffe2008a} changed to a cross-linguistic one (starting from v3.3.0) described in \citep{Marneffe2014}.
@@ -804,7 +808,7 @@ The algorithm is looking for the cases of multiple subjects (represented in figu
 %        VB1 has no children 
 %        then ccomp->aux
 %    """
-%TODO: explain
+%%TODO: explain
 
 Sometimes the auxiliary verb in the interrogative clauses (examples \ref{ex:inter1} and \ref{ex:inter2}) is mistakenly used as a clause main verb. Instead of \textit{aux} relation from the main verb to the auxiliary there is a clausal complement relation from the auxiliary to the main verb.
 
@@ -920,9 +924,8 @@ Second, the CG nodes receive a horizontal span over DG nodes enabling exploratio
 
 Constituency Graphs are created through a top-down breadth-first walk of dependency graph. During the top-down breadth-first walk of DG each visited node triggers execution of a \textit{generative operation} on the growing CG on the side. To know what operation to execute a rule table is used where the edge, head and tail nodes are mapped to a generative operation and eventually a parameter (specifying the element type if a constituent is to be created).
 
-A simplified example of the rule table is presented in Table \ref{tab:rule-table}. It can be regarded as an attribute value matrix (implemented as a Python dictionary) where the left column, the \textit{key}, contains a unique \textit{dependency graph context} serving as a rule trigger; while the left side column, the \textit{value}, contains the operation to be executed within the given context. 
+A simplified example of the rule table is presented in Table \ref{tab:rule-table}. The full table is provided in the Appendix \ref{ch:rule-table-transformation}. It can be regarded as an attribute value matrix (implemented as a Python dictionary) where the left column, the \textit{key}, contains a unique \textit{dependency graph context} serving as a rule trigger; while the left side column, the \textit{value}, contains the operation to be executed within the given context. 
 
-%TODO refer to teh full rule tables in Appendix
 \begin{table}[!ht]
 	\centering
 	\begin{tabular}{|l|c|l|l|}
@@ -1253,16 +1256,14 @@ The second part of algorithm creates head nodes for every non leaf constituent a
 After the second stage, all the DG nodes must be covered by CG nodes. Moreover the CG nodes build up to a constituency graph that at this stage is always a tree. Provided the class and element type the nodes are ready to be enriched with choices from systemic networks described in the next chapter. 
 
 \section{Discussion}
-In this Chapter is described in detail a set of transformations on DGs from Stanford parser and a tree rewriting algorithm. The DG transformations are there to correct known errors in Stanford parser version 3.5.1 and to adjust treatment of certain linguistic features such as copulas, conjunction and others. The final section of the chapter describes how the DG is rewritten into a CG using create and extend operations upon graph traversal and tight coupleing between the CG and DG nodes.
+In this Chapter is described in detail a set of transformations on DGs from Stanford parser and a tree rewriting algorithm. The DG transformations are there to correct known errors in Stanford parser version 3.5.1 and to adjust treatment of certain linguistic features such as copulas, conjunction and others. The final section of the chapter describes how the DG is rewritten into a CG using create and extend operations upon graph traversal and tight coupling between the CG and DG nodes.
 
 There are state of the art algorithms for graph rewriting with proven efficiency. The current work does not intend to be neither generic nor efficient rewriting algorithm but rather explore the process by which a DG can be rewritten into a SFL CG. In the future, to increase the speed performance, the current algorithm would have to be rewritten using for example a graph programming language or a graph rewriting formalism building. 
 
 Now that it has been described how to construct the the systemic functional constituency graph, the backbone, we can turn our attention to fleshing out this backbone with systemic features selected from system networks. Or, as we will see, preselected and bundled into graph patterns in order to be attached in batches once the graph pattern has been matched. 
 
-%todo, write the conclussions
-%todo, * replace hard coded selector functions with constraint checking 
-
-%todo, assign feature with a certain probability and allow assignments of mutually exclusive features; this would require the next step of more general constraint checking employing many more other sources such as semantic, phonetics, situation etc.  
-
-%todo, use of logical notations (OR, XOR, AND sets)
+%%todo, write the conclussions
+%%todo, * replace hard coded selector functions with constraint checking 
+%%todo, assign feature with a certain probability and allow assignments of mutually exclusive features; this would require the next step of more general constraint checking employing many more other sources such as semantic, phonetics, situation etc.  
+%%todo, use of logical notations (OR, XOR, AND sets)
 

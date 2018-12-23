@@ -1,0 +1,74 @@
+\chapter{Algorithms with lesser importance}
+\label{ch:extra-pseudo-code}
+
+The Algorithm \ref{alg:create-wh-adjunct-trace} and \ref{alg:create-wh-theta-trace} below are part of the Algorithm \ref{alg:create-wh-trace} for creating the Wh null elements. 
+
+\begin{algorithm}[!ht]
+    \Input {\whGroup, \dg, \cg}
+    \Begin{
+        check the tense and modality for all the clauses\;
+        \For(from the clause of \whGroup to lowest){$clause$ \KwTo \cg}
+        {
+            \tcc{create the adjunct trace in the first clause that has non present simple tense}
+            \If{clause tense is \textbf{not} present simple}
+            {
+                create Adjunct Wh-trace for Wh-group\;
+                \Return
+            }
+        }  
+    }
+    \caption{Creating the Adjunct (circumstantial) Wh-traces}
+    \label{alg:create-wh-adjunct-trace}
+\end{algorithm}
+
+
+
+\begin{algorithm}[H]
+    \Input {\whGroup, \dg, \cg}
+    \Begin{
+        get possible configurations for each clause from the PTDB\;
+        \tcc{check if the higher clause is a projection and and has an extra argument}
+        \For {$config$ \KwTo higher clause configurations}
+        %\ForEach{$config$ in higher clause configurations }
+        {\If{ ($config$ is two role cognition \textbf{and} $config$ takes expletive subject) \textbf{or} ($config$ is three role cognition \textbf{and} $clause$ is passive voice)}
+            {
+                higher is eligible $\leftarrow$ True\;
+                \textbf{break}\;
+            }
+        }
+        \tcc{check if the lower clauses might miss an argument}
+        \For {$clause$ \KwTo lower clauses}
+        %\ForEach{$clause$ in lower clauses }
+        {
+            \For {$config$ \KwTo clause configurations}
+            %\ForEach{$config$ in clause configurations}
+            {\If{number of clause theta constituents $ < $ number of config arguments}
+                {
+                    lower is eligible $\leftarrow$ True\;
+                    \textbf{break}\;
+                }
+            }
+        }
+        \If{higher is eligible \textbf{and} lower is eligible}
+        {
+            \eIf{higher clause has ``that'' complementizer}
+            {create Object Wh-trace in the lowest clause}
+            % no there complementizer
+            {\eIf {Wh-group has case}
+                {
+                    \eIf{Wh-group case is nominative(subjective)}	 
+                    {create Subject Wh-trace in lowest clause}
+                    {create Object Wh-trace in lowest clause}
+                }
+                % no case
+                {
+                    create Wh-trace with Subject function and attempt to assign theta roles\;
+                    \If{theta roles \textbf{not} successfully assigned in lower clause}
+                    {change the Wh-trace to Object function and assign theta roles}
+                }
+            }
+        }
+    }
+    \caption{Creating the Theta (participant) Wh-traces}
+    \label{alg:create-wh-theta-trace}
+\end{algorithm}

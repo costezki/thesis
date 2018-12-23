@@ -1,0 +1,2123 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.7526041666666666
+,Recall,0.8827122785583384
+,F1,0.8124824290132133
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+1,1.0,"0, 62","0, 63",1,So two weeks ago I started my new work schedule: 3 days a week,So two weeks ago I started my new work schedule: 3 days a week.,clause,clause
+10,0.0,"0, 2","0, 2",0,So,So,marker,marker
+9,0.0,"3, 16","3, 16",0,two weeks ago,two weeks ago,group,group
+9,0.0,"3, 16","3, 16",0,two weeks ago,two weeks ago,adjunct,adjunct
+2,0.0,"17, 18","17, 18",0,I,I,subject,subject
+2,0.0,"17, 18","17, 18",0,I,I,group,group
+2,0.0,"17, 18","17, 18",0,I,I,nominal-group,nominal-group
+3,0.0,"19, 26","19, 26",0,started,started,verbal-group,verbal-group
+3,0.0,"19, 26","19, 26",0,started,started,group,group
+3,0.0,"19, 26","19, 26",0,started,started,predicator,predicator
+4,1.0,"27, 62","27, 63",1,my new work schedule: 3 days a week,my new work schedule: 3 days a week.,complement-direct,complement-direct
+4,1.0,"27, 62","27, 63",1,my new work schedule: 3 days a week,my new work schedule: 3 days a week.,group,group
+4,1.0,"27, 62","27, 63",1,my new work schedule: 3 days a week,my new work schedule: 3 days a week.,nominal-group,nominal-group
+5,0.0,"65, 87","65, 87",0,"In theory, it's great.","In theory, it's great.",clause,clause
+11,0.0,"65, 74","65, 74",0,In theory,In theory,group,group
+11,0.0,"65, 74","65, 74",0,In theory,In theory,prepositional-group,prepositional-group
+11,0.0,"65, 74","65, 74",0,In theory,In theory,adjunct,adjunct
+8,2.0,"76, 78","74, 78",2,it,", it",subject,subject
+8,2.0,"76, 78","74, 78",2,it,", it",group,group
+8,2.0,"76, 78","74, 78",2,it,", it",nominal-group,nominal-group
+6,0.0,"78, 80","78, 80",0,'s,'s,verbal-group,verbal-group
+6,0.0,"78, 80","78, 80",0,'s,'s,group,group
+6,0.0,"78, 80","78, 80",0,'s,'s,predicator,predicator
+7,1.0,"81, 86","81, 87",1,great,great.,complement-direct,complement-direct
+7,1.0,"81, 86","81, 87",1,great,great.,adjectival-group,adjectival-group
+7,1.0,"81, 86","81, 87",1,great,great.,group,group
+12,1.0,"89, 132","89, 133",1,"Well, actually, in practice it's great, too","Well, actually, in practice it's great, too.",clause,clause
+18,0.0,"105, 116","105, 116",0,in practice,in practice,group,group
+18,0.0,"105, 116","105, 116",0,in practice,in practice,prepositional-group,prepositional-group
+18,0.0,"105, 116","105, 116",0,in practice,in practice,adjunct,adjunct
+13,0.0,"117, 119","117, 119",0,it,it,subject,subject
+13,0.0,"117, 119","117, 119",0,it,it,group,group
+13,0.0,"117, 119","117, 119",0,it,it,nominal-group,nominal-group
+14,0.0,"119, 121","119, 121",0,'s,'s,verbal-group,verbal-group
+14,0.0,"119, 121","119, 121",0,'s,'s,group,group
+14,0.0,"119, 121","119, 121",0,'s,'s,predicator,predicator
+15,6.0,"122, 127","122, 133",6,great,"great, too.",complement-direct,complement-direct
+15,6.0,"122, 127","122, 133",6,great,"great, too.",adjectival-group,adjectival-group
+15,6.0,"122, 127","122, 133",6,great,"great, too.",group,group
+19,1.0,"135, 176","135, 177",1,But for some reason I still feel too busy,But for some reason I still feel too busy.,clause,clause
+24,0.0,"135, 138","135, 138",0,But,But,marker,marker
+25,4.47213595499958,"139, 154","143, 156",6,for some reason,some reason I,group,group
+25,4.47213595499958,"139, 154","143, 156",6,for some reason,some reason I,prepositional-group,prepositional-group
+25,4.47213595499958,"139, 154","143, 156",6,for some reason,some reason I,adjunct,adjunct
+22,0.0,"157, 162","157, 162",0,still,still,adverbial-group,adverbial-group
+22,0.0,"157, 162","157, 162",0,still,still,group,group
+22,0.0,"157, 162","157, 162",0,still,still,adjunct,adjunct
+22,0.0,"157, 162","157, 162",0,still,still,mood-adjunct,mood-adjunct
+21,0.0,"163, 167","163, 167",0,feel,feel,verbal-group,verbal-group
+21,0.0,"163, 167","163, 167",0,feel,feel,group,group
+21,0.0,"163, 167","163, 167",0,feel,feel,predicator,predicator
+23,1.0,"168, 176","168, 177",1,too busy,too busy.,complement-direct,complement-direct
+23,1.0,"168, 176","168, 177",1,too busy,too busy.,group,group
+26,1.0,"179, 271","179, 272",1,I think I had this idea that the new schedule would suddenly make me super efficient at home,I think I had this idea that the new schedule would suddenly make me super efficient at home.,clause,clause
+27,0.0,"179, 180","179, 180",0,I,I,subject,subject
+27,0.0,"179, 180","179, 180",0,I,I,group,group
+27,0.0,"179, 180","179, 180",0,I,I,nominal-group,nominal-group
+28,0.0,"181, 186","181, 186",0,think,think,verbal-group,verbal-group
+28,0.0,"181, 186","181, 186",0,think,think,group,group
+28,0.0,"181, 186","181, 186",0,think,think,predicator,predicator
+125,1.0,"187, 271","187, 272",1,I had this idea that the new schedule would suddenly make me super efficient at home,I had this idea that the new schedule would suddenly make me super efficient at home.,clause,clause
+1850,6.082762530298219,"193, 271","187, 272",7,this idea that the new schedule would suddenly make me super efficient at home,I had this idea that the new schedule would suddenly make me super efficient at home.,complement-direct,complement-direct
+31,0.0,"187, 188","187, 188",0,I,I,subject,subject
+31,0.0,"187, 188","187, 188",0,I,I,group,group
+31,0.0,"187, 188","187, 188",0,I,I,nominal-group,nominal-group
+29,0.0,"189, 192","189, 192",0,had,had,verbal-group,verbal-group
+29,0.0,"189, 192","189, 192",0,had,had,group,group
+29,0.0,"189, 192","189, 192",0,had,had,predicator,predicator
+33,1.0,"203, 271","203, 272",1,that the new schedule would suddenly make me super efficient at home,that the new schedule would suddenly make me super efficient at home.,clause,clause
+34,0.0,"203, 207","203, 207",0,that,that,marker,marker
+32,0.0,"208, 224","208, 224",0,the new schedule,the new schedule,subject,subject
+32,0.0,"208, 224","208, 224",0,the new schedule,the new schedule,group,group
+1850,49.33558553417604,"193, 271","208, 224",62,this idea that the new schedule would suddenly make me super efficient at home,the new schedule,nominal-group,nominal-group
+35,0.0,"225, 230","225, 230",0,would,would,verbal-group,verbal-group
+35,0.0,"225, 230","225, 230",0,would,would,finite,finite
+35,0.0,"225, 230","225, 230",0,would,would,group,group
+36,0.0,"231, 239","231, 239",0,suddenly,suddenly,adverbial-group,adverbial-group
+36,0.0,"231, 239","231, 239",0,suddenly,suddenly,group,group
+36,0.0,"231, 239","231, 239",0,suddenly,suddenly,adjunct,adjunct
+30,0.0,"240, 244","240, 244",0,make,make,verbal-group,verbal-group
+30,0.0,"240, 244","240, 244",0,make,make,group,group
+30,0.0,"240, 244","240, 244",0,make,make,predicator,predicator
+38,9.486832980505138,"248, 263","245, 272",12,super efficient,me super efficient at home.,complement-direct,complement-direct
+37,0.0,"245, 247","245, 247",0,me,me,group,group
+37,0.0,"245, 247","245, 247",0,me,me,nominal-group,nominal-group
+38,6.0,"248, 263","254, 263",6,super efficient,efficient,group,group
+214,1.0,"264, 271","264, 272",1,at home,at home.,group,group
+214,1.0,"264, 271","264, 272",1,at home,at home.,prepositional-group,prepositional-group
+214,1.0,"264, 271","264, 272",1,at home,at home.,adjunct,adjunct
+39,1.0,"283, 297","283, 298",1,That was naive,That was naive.,clause,clause
+42,0.0,"283, 287","283, 287",0,That,That,subject,subject
+42,0.0,"283, 287","283, 287",0,That,That,group,group
+40,0.0,"288, 291","288, 291",0,was,was,verbal-group,verbal-group
+40,0.0,"288, 291","288, 291",0,was,was,group,group
+40,0.0,"288, 291","288, 291",0,was,was,predicator,predicator
+41,1.0,"292, 297","292, 298",1,naive,naive.,complement-direct,complement-direct
+41,1.0,"292, 297","292, 298",1,naive,naive.,adjectival-group,adjectival-group
+41,1.0,"292, 297","292, 298",1,naive,naive.,group,group
+43,1.0,"300, 345","300, 346",1,My OCD has been on a tear over the last month,My OCD has been on a tear over the last month.,clause,clause
+48,0.0,"300, 306","300, 306",0,My OCD,My OCD,subject,subject
+48,0.0,"300, 306","300, 306",0,My OCD,My OCD,group,group
+48,0.0,"300, 306","300, 306",0,My OCD,My OCD,nominal-group,nominal-group
+44,0.0,"307, 310","307, 310",0,has,has,verbal-group,verbal-group
+44,0.0,"307, 310","307, 310",0,has,has,finite,finite
+44,0.0,"307, 310","307, 310",0,has,has,group,group
+45,0.0,"311, 315","311, 315",0,been,been,verbal-group,verbal-group
+45,0.0,"311, 315","311, 315",0,been,been,group,group
+45,0.0,"311, 315","311, 315",0,been,been,predicator,predicator
+46,0.0,"316, 325","316, 325",0,on a tear,on a tear,complement-direct,complement-direct
+46,0.0,"316, 325","316, 325",0,on a tear,on a tear,group,group
+46,0.0,"316, 325","316, 325",0,on a tear,on a tear,prepositional-group,prepositional-group
+47,1.0,"326, 345","326, 346",1,over the last month,over the last month.,group,group
+47,1.0,"326, 345","326, 346",1,over the last month,over the last month.,prepositional-group,prepositional-group
+47,1.0,"326, 345","326, 346",1,over the last month,over the last month.,adjunct,adjunct
+49,1.0,"348, 368","348, 369",1,I'm hanging in there,"I'm hanging in there,",clause,clause
+52,0.0,"348, 349","348, 349",0,I,I,subject,subject
+52,0.0,"348, 349","348, 349",0,I,I,group,group
+52,0.0,"348, 349","348, 349",0,I,I,nominal-group,nominal-group
+51,0.0,"349, 351","349, 351",0,'m,'m,verbal-group,verbal-group
+51,0.0,"349, 351","349, 351",0,'m,'m,finite,finite
+51,0.0,"349, 351","349, 351",0,'m,'m,group,group
+50,0.0,"352, 359","352, 359",0,hanging,hanging,verbal-group,verbal-group
+50,0.0,"352, 359","352, 359",0,hanging,hanging,group,group
+50,0.0,"352, 359","352, 359",0,hanging,hanging,predicator,predicator
+54,1.0,"370, 459","370, 460",1,"but I'm not sure if the issue is the standard ""Ann's OCD peaks in fall"" or something else","but I'm not sure if the issue is the standard ""Ann's OCD peaks in fall"" or something else.",clause,clause
+55,0.0,"370, 373","370, 373",0,but,but,marker,marker
+58,0.0,"374, 375","374, 375",0,I,I,subject,subject
+58,0.0,"374, 375","374, 375",0,I,I,group,group
+58,0.0,"374, 375","374, 375",0,I,I,nominal-group,nominal-group
+57,0.0,"375, 381","375, 381",0,'m not,'m not,verbal-group,verbal-group
+57,0.0,"375, 381","375, 381",0,'m not,'m not,group,group
+57,0.0,"375, 381","375, 381",0,'m not,'m not,predicator,predicator
+56,0.0,"382, 386","382, 386",0,sure,sure,complement-direct,complement-direct
+56,0.0,"382, 386","382, 386",0,sure,sure,adjectival-group,adjectival-group
+56,0.0,"382, 386","382, 386",0,sure,sure,group,group
+62,1.0,"387, 459","387, 460",1,"if the issue is the standard ""Ann's OCD peaks in fall"" or something else","if the issue is the standard ""Ann's OCD peaks in fall"" or something else.",clause,clause
+59,0.0,"387, 389","387, 389",0,if,if,marker,marker
+60,0.0,"390, 399","390, 399",0,the issue,the issue,subject,subject
+60,0.0,"390, 399","390, 399",0,the issue,the issue,group,group
+60,0.0,"390, 399","390, 399",0,the issue,the issue,nominal-group,nominal-group
+61,0.0,"400, 402","400, 402",0,is,is,verbal-group,verbal-group
+61,0.0,"400, 402","400, 402",0,is,is,group,group
+61,0.0,"400, 402","400, 402",0,is,is,predicator,predicator
+63,1.0,"403, 459","403, 460",1,"the standard ""Ann's OCD peaks in fall"" or something else","the standard ""Ann's OCD peaks in fall"" or something else.",complement-direct,complement-direct
+63,1.0,"403, 459","403, 460",1,"the standard ""Ann's OCD peaks in fall"" or something else","the standard ""Ann's OCD peaks in fall"" or something else.",group,group
+63,1.0,"403, 459","403, 460",1,"the standard ""Ann's OCD peaks in fall"" or something else","the standard ""Ann's OCD peaks in fall"" or something else.",nominal-group,nominal-group
+64,1.0,"462, 516","462, 517",1,"Usually it's more of an October, November issue for me","Usually it's more of an October, November issue for me.",clause,clause
+71,0.0,"462, 469","462, 469",0,Usually,Usually,group,group
+66,0.0,"470, 472","470, 472",0,it,it,subject,subject
+66,0.0,"470, 472","470, 472",0,it,it,group,group
+66,0.0,"470, 472","470, 472",0,it,it,nominal-group,nominal-group
+65,0.0,"472, 474","472, 474",0,'s,'s,verbal-group,verbal-group
+65,0.0,"472, 474","472, 474",0,'s,'s,group,group
+65,0.0,"472, 474","472, 474",0,'s,'s,predicator,predicator
+67,9.433981132056603,"475, 509","480, 517",13,"more of an October, November issue","of an October, November issue for me.",complement-direct,complement-direct
+67,9.433981132056603,"475, 509","480, 517",13,"more of an October, November issue","of an October, November issue for me.",group,group
+69,30.01666203960727,"510, 516","480, 517",31,for me,"of an October, November issue for me.",prepositional-group,prepositional-group
+69,30.01666203960727,"510, 516","480, 517",31,for me,"of an October, November issue for me.",adjunct,adjunct
+92,0.0,"519, 522","519, 522",0,But,But,marker,marker
+94,0.0,"523, 524","523, 524",0,I,I,subject,subject
+94,0.0,"523, 524","523, 524",0,I,I,group,group
+94,0.0,"523, 524","523, 524",0,I,I,nominal-group,nominal-group
+93,0.0,"524, 526","524, 526",0,'m,'m,verbal-group,verbal-group
+93,0.0,"524, 526","524, 526",0,'m,'m,group,group
+93,0.0,"524, 526","524, 526",0,'m,'m,predicator,predicator
+95,0.0,"527, 532","527, 532",0,still,still,adverbial-group,adverbial-group
+95,0.0,"527, 532","527, 532",0,still,still,group,group
+95,0.0,"527, 532","527, 532",0,still,still,adjunct,adjunct
+95,0.0,"527, 532","527, 532",0,still,still,mood-adjunct,mood-adjunct
+96,0.0,"533, 537","533, 537",0,here,here,adverbial-group,adverbial-group
+96,0.0,"533, 537","533, 537",0,here,here,group,group
+82,2.0,"539, 576","537, 576",2,contemplating looking for a therapist,", contemplating looking for a therapist",clause,clause
+87,0.0,"539, 552","539, 552",0,contemplating,contemplating,verbal-group,verbal-group
+87,0.0,"539, 552","539, 552",0,contemplating,contemplating,group,group
+87,0.0,"539, 552","539, 552",0,contemplating,contemplating,predicator,predicator
+86,0.0,"553, 576","553, 576",0,looking for a therapist,looking for a therapist,clause,clause
+91,0.0,"553, 560","553, 560",0,looking,looking,verbal-group,verbal-group
+91,0.0,"553, 560","553, 560",0,looking,looking,group,group
+91,0.0,"553, 560","553, 560",0,looking,looking,predicator,predicator
+90,0.0,"561, 576","561, 576",0,for a therapist,for a therapist,complement-direct,complement-direct
+90,0.0,"561, 576","561, 576",0,for a therapist,for a therapist,group,group
+90,0.0,"561, 576","561, 576",0,for a therapist,for a therapist,prepositional-group,prepositional-group
+83,2.23606797749979,"578, 619","576, 620",3,contemplating not looking for a therapist,", contemplating not looking for a therapist.",clause,clause
+84,0.0,"578, 591","578, 591",0,contemplating,contemplating,verbal-group,verbal-group
+84,0.0,"578, 591","578, 591",0,contemplating,contemplating,group,group
+84,0.0,"578, 591","578, 591",0,contemplating,contemplating,predicator,predicator
+85,1.0,"592, 619","592, 620",1,not looking for a therapist,not looking for a therapist.,clause,clause
+88,0.0,"592, 603","592, 603",0,not looking,not looking,verbal-group,verbal-group
+88,0.0,"592, 603","592, 603",0,not looking,not looking,group,group
+88,0.0,"592, 603","592, 603",0,not looking,not looking,predicator,predicator
+89,1.0,"604, 619","604, 620",1,for a therapist,for a therapist.,complement-direct,complement-direct
+89,1.0,"604, 619","604, 620",1,for a therapist,for a therapist.,group,group
+89,1.0,"604, 619","604, 620",1,for a therapist,for a therapist.,prepositional-group,prepositional-group
+70,1.0,"622, 631","622, 632",1,We'll see,We'll see.,clause,clause
+72,0.0,"622, 624","622, 624",0,We,We,subject,subject
+72,0.0,"622, 624","622, 624",0,We,We,group,group
+72,0.0,"622, 624","622, 624",0,We,We,nominal-group,nominal-group
+73,0.0,"624, 627","624, 627",0,'ll,'ll,verbal-group,verbal-group
+73,0.0,"624, 627","624, 627",0,'ll,'ll,finite,finite
+73,0.0,"624, 627","624, 627",0,'ll,'ll,group,group
+74,0.0,"628, 631","628, 631",0,see,see,verbal-group,verbal-group
+74,0.0,"628, 631","628, 631",0,see,see,group,group
+74,0.0,"628, 631","628, 631",0,see,see,predicator,predicator
+75,1.0,"634, 667","634, 668",1,We're having a lovely summer here,We're having a lovely summer here.,clause,clause
+78,0.0,"634, 636","634, 636",0,We,We,subject,subject
+78,0.0,"634, 636","634, 636",0,We,We,group,group
+78,0.0,"634, 636","634, 636",0,We,We,nominal-group,nominal-group
+76,0.0,"636, 639","636, 639",0,'re,'re,verbal-group,verbal-group
+76,0.0,"636, 639","636, 639",0,'re,'re,finite,finite
+76,0.0,"636, 639","636, 639",0,'re,'re,group,group
+77,0.0,"640, 646","640, 646",0,having,having,verbal-group,verbal-group
+77,0.0,"640, 646","640, 646",0,having,having,group,group
+77,0.0,"640, 646","640, 646",0,having,having,predicator,predicator
+79,6.0,"647, 662","647, 668",6,a lovely summer,a lovely summer here.,complement-direct,complement-direct
+79,6.0,"647, 662","647, 668",6,a lovely summer,a lovely summer here.,group,group
+79,6.0,"647, 662","647, 668",6,a lovely summer,a lovely summer here.,nominal-group,nominal-group
+102,1.0,"713, 760","713, 761",1,"I've really been noticing my OCD, unfortunately","I've really been noticing my OCD, unfortunately.",clause,clause
+103,0.0,"713, 714","713, 714",0,I,I,subject,subject
+103,0.0,"713, 714","713, 714",0,I,I,group,group
+103,0.0,"713, 714","713, 714",0,I,I,nominal-group,nominal-group
+105,0.0,"714, 717","714, 717",0,'ve,'ve,verbal-group,verbal-group
+105,0.0,"714, 717","714, 717",0,'ve,'ve,finite,finite
+105,0.0,"714, 717","714, 717",0,'ve,'ve,group,group
+106,0.0,"718, 724","718, 724",0,really,really,adverbial-group,adverbial-group
+106,0.0,"718, 724","718, 724",0,really,really,group,group
+106,0.0,"718, 724","718, 724",0,really,really,adjunct,adjunct
+106,0.0,"718, 724","718, 724",0,really,really,mood-adjunct,mood-adjunct
+104,0.0,"725, 738","725, 738",0,been noticing,been noticing,verbal-group,verbal-group
+104,0.0,"725, 738","725, 738",0,been noticing,been noticing,group,group
+104,0.0,"725, 738","725, 738",0,been noticing,been noticing,predicator,predicator
+107,0.0,"739, 745","739, 745",0,my OCD,my OCD,complement-direct,complement-direct
+107,0.0,"739, 745","739, 745",0,my OCD,my OCD,group,group
+107,0.0,"739, 745","739, 745",0,my OCD,my OCD,nominal-group,nominal-group
+108,2.23606797749979,"747, 760","745, 761",3,unfortunately,", unfortunately.",adverbial-group,adverbial-group
+108,2.23606797749979,"747, 760","745, 761",3,unfortunately,", unfortunately.",group,group
+108,2.23606797749979,"747, 760","745, 761",3,unfortunately,", unfortunately.",adjunct,adjunct
+109,5.0,"763, 809","763, 814",5,I find that I can make myself sit with anxiety,"I find that I can make myself sit with anxiety, and",clause,clause
+112,0.0,"763, 764","763, 764",0,I,I,subject,subject
+112,0.0,"763, 764","763, 764",0,I,I,group,group
+112,0.0,"763, 764","763, 764",0,I,I,nominal-group,nominal-group
+113,0.0,"765, 769","765, 769",0,find,find,verbal-group,verbal-group
+113,0.0,"765, 769","765, 769",0,find,find,group,group
+113,0.0,"765, 769","765, 769",0,find,find,predicator,predicator
+110,0.0,"770, 809","770, 809",0,that I can make myself sit with anxiety,that I can make myself sit with anxiety,clause,clause
+114,0.0,"770, 774","770, 774",0,that,that,marker,marker
+115,0.0,"775, 776","775, 776",0,I,I,subject,subject
+115,0.0,"775, 776","775, 776",0,I,I,group,group
+115,0.0,"775, 776","775, 776",0,I,I,nominal-group,nominal-group
+116,0.0,"777, 780","777, 780",0,can,can,verbal-group,verbal-group
+116,0.0,"777, 780","777, 780",0,can,can,finite,finite
+116,0.0,"777, 780","777, 780",0,can,can,group,group
+117,0.0,"781, 785","781, 785",0,make,make,verbal-group,verbal-group
+117,0.0,"781, 785","781, 785",0,make,make,group,group
+117,0.0,"781, 785","781, 785",0,make,make,predicator,predicator
+111,7.0,"793, 809","786, 809",7,sit with anxiety,myself sit with anxiety,clause,clause
+118,17.0,"786, 792","786, 809",17,myself,myself sit with anxiety,complement-direct,complement-direct
+118,0.0,"786, 792","786, 792",0,myself,myself,group,group
+118,0.0,"786, 792","786, 792",0,myself,myself,nominal-group,nominal-group
+119,0.0,"793, 796","793, 796",0,sit,sit,verbal-group,verbal-group
+119,0.0,"793, 796","793, 796",0,sit,sit,group,group
+119,0.0,"793, 796","793, 796",0,sit,sit,predicator,predicator
+120,0.0,"797, 809","797, 809",0,with anxiety,with anxiety,group,group
+120,0.0,"797, 809","797, 809",0,with anxiety,with anxiety,prepositional-group,prepositional-group
+120,0.0,"797, 809","797, 809",0,with anxiety,with anxiety,adjunct,adjunct
+127,4.123105625617661,"811, 838","815, 839",5,"and when I do, it goes down","when I do, it goes down.",clause,clause
+121,0.0,"815, 824","815, 824",0,when I do,when I do,clause,clause
+122,0.0,"820, 821","820, 821",0,I,I,subject,subject
+122,0.0,"820, 821","820, 821",0,I,I,group,group
+122,0.0,"820, 821","820, 821",0,I,I,nominal-group,nominal-group
+123,0.0,"822, 824","822, 824",0,do,do,verbal-group,verbal-group
+123,0.0,"822, 824","822, 824",0,do,do,group,group
+123,0.0,"822, 824","822, 824",0,do,do,predicator,predicator
+129,2.0,"826, 828","824, 828",2,it,", it",subject,subject
+129,2.0,"826, 828","824, 828",2,it,", it",group,group
+129,2.0,"826, 828","824, 828",2,it,", it",nominal-group,nominal-group
+128,5.0,"829, 838","829, 833",5,goes down,goes,verbal-group,verbal-group
+128,5.0,"829, 838","829, 833",5,goes down,goes,group,group
+128,5.0,"829, 838","829, 833",5,goes down,goes,predicator,predicator
+130,1.0,"834, 838","834, 839",1,down,down.,marker,marker
+131,1.0,"841, 913","841, 914",1,But I'm also finding a lot of new general anxiety categories cropping up,But I'm also finding a lot of new general anxiety categories cropping up.,clause,clause
+134,0.0,"845, 846","845, 846",0,I,I,subject,subject
+134,0.0,"845, 846","845, 846",0,I,I,group,group
+134,0.0,"845, 846","845, 846",0,I,I,nominal-group,nominal-group
+133,0.0,"846, 848","846, 848",0,'m,'m,verbal-group,verbal-group
+133,0.0,"846, 848","846, 848",0,'m,'m,finite,finite
+133,0.0,"846, 848","846, 848",0,'m,'m,group,group
+135,0.0,"849, 853","849, 853",0,also,also,adverbial-group,adverbial-group
+135,0.0,"849, 853","849, 853",0,also,also,group,group
+135,0.0,"849, 853","849, 853",0,also,also,adjunct,adjunct
+132,0.0,"854, 861","854, 861",0,finding,finding,verbal-group,verbal-group
+132,0.0,"854, 861","854, 861",0,finding,finding,group,group
+132,0.0,"854, 861","854, 861",0,finding,finding,predicator,predicator
+136,1.0,"862, 913","862, 914",1,a lot of new general anxiety categories cropping up,a lot of new general anxiety categories cropping up.,complement-direct,complement-direct
+136,1.0,"862, 913","862, 914",1,a lot of new general anxiety categories cropping up,a lot of new general anxiety categories cropping up.,group,group
+136,1.0,"862, 913","862, 914",1,a lot of new general anxiety categories cropping up,a lot of new general anxiety categories cropping up.,nominal-group,nominal-group
+137,1.0,"902, 913","902, 914",1,cropping up,cropping up.,clause,clause
+138,3.0,"902, 913","902, 910",3,cropping up,cropping,verbal-group,verbal-group
+138,3.0,"902, 913","902, 910",3,cropping up,cropping,group,group
+138,3.0,"902, 913","902, 910",3,cropping up,cropping,predicator,predicator
+139,1.0,"916, 1009","916, 1010",1,I've decided I'd like to move to a neighborhood about 5 miles south of where I currently live,I've decided I'd like to move to a neighborhood about 5 miles south of where I currently live.,clause,clause
+142,0.0,"916, 917","916, 917",0,I,I,subject,subject
+142,0.0,"916, 917","916, 917",0,I,I,group,group
+142,0.0,"916, 917","916, 917",0,I,I,nominal-group,nominal-group
+143,0.0,"917, 920","917, 920",0,'ve,'ve,verbal-group,verbal-group
+143,0.0,"917, 920","917, 920",0,'ve,'ve,finite,finite
+143,0.0,"917, 920","917, 920",0,'ve,'ve,group,group
+144,0.0,"921, 928","921, 928",0,decided,decided,verbal-group,verbal-group
+144,0.0,"921, 928","921, 928",0,decided,decided,group,group
+144,0.0,"921, 928","921, 928",0,decided,decided,predicator,predicator
+140,1.0,"929, 1009","929, 1010",1,I'd like to move to a neighborhood about 5 miles south of where I currently live,I'd like to move to a neighborhood about 5 miles south of where I currently live.,clause,clause
+145,0.0,"929, 930","929, 930",0,I,I,subject,subject
+145,0.0,"929, 930","929, 930",0,I,I,group,group
+145,0.0,"929, 930","929, 930",0,I,I,nominal-group,nominal-group
+146,0.0,"930, 932","930, 932",0,'d,'d,verbal-group,verbal-group
+146,0.0,"930, 932","930, 932",0,'d,'d,finite,finite
+146,0.0,"930, 932","930, 932",0,'d,'d,group,group
+147,0.0,"933, 937","933, 937",0,like,like,verbal-group,verbal-group
+147,0.0,"933, 937","933, 937",0,like,like,group,group
+147,0.0,"933, 937","933, 937",0,like,like,predicator,predicator
+192,1.0,"938, 1009","938, 1010",1,to move to a neighborhood about 5 miles south of where I currently live,to move to a neighborhood about 5 miles south of where I currently live.,clause,clause
+193,0.0,"938, 945","938, 945",0,to move,to move,verbal-group,verbal-group
+193,0.0,"938, 945","938, 945",0,to move,to move,group,group
+193,0.0,"938, 945","938, 945",0,to move,to move,predicator,predicator
+148,32.0,"946, 1009","946, 977",32,to a neighborhood about 5 miles south of where I currently live,to a neighborhood about 5 miles,group,group
+148,32.0,"946, 1009","946, 977",32,to a neighborhood about 5 miles south of where I currently live,to a neighborhood about 5 miles,prepositional-group,prepositional-group
+149,0.0,"984, 986","984, 986",0,of,of,marker,marker
+141,3.1622776601683795,"984, 1009","987, 1010",4,of where I currently live,where I currently live.,clause,clause
+194,0.0,"987, 992","987, 992",0,where,where,complement-direct,complement-direct
+194,0.0,"987, 992","987, 992",0,where,where,group,group
+150,0.0,"993, 994","993, 994",0,I,I,subject,subject
+150,0.0,"993, 994","993, 994",0,I,I,group,group
+150,0.0,"993, 994","993, 994",0,I,I,nominal-group,nominal-group
+152,0.0,"995, 1004","995, 1004",0,currently,currently,adverbial-group,adverbial-group
+152,0.0,"995, 1004","995, 1004",0,currently,currently,group,group
+152,0.0,"995, 1004","995, 1004",0,currently,currently,adjunct,adjunct
+151,0.0,"1005, 1009","1005, 1009",0,live,live,verbal-group,verbal-group
+151,0.0,"1005, 1009","1005, 1009",0,live,live,group,group
+151,0.0,"1005, 1009","1005, 1009",0,live,live,predicator,predicator
+154,33.015148038438355,"1045, 1088","1012, 1089",34,and that's an objectively reasonable choice,"I'd be much closer to my sister, and that's an objectively reasonable choice.",clause,clause
+155,0.0,"1012, 1013","1012, 1013",0,I,I,subject,subject
+155,0.0,"1012, 1013","1012, 1013",0,I,I,group,group
+155,0.0,"1012, 1013","1012, 1013",0,I,I,nominal-group,nominal-group
+156,0.0,"1013, 1015","1013, 1015",0,'d,'d,verbal-group,verbal-group
+156,0.0,"1013, 1015","1013, 1015",0,'d,'d,finite,finite
+156,0.0,"1013, 1015","1013, 1015",0,'d,'d,group,group
+157,0.0,"1016, 1018","1016, 1018",0,be,be,verbal-group,verbal-group
+157,0.0,"1016, 1018","1016, 1018",0,be,be,group,group
+157,0.0,"1016, 1018","1016, 1018",0,be,be,predicator,predicator
+159,12.0,"1019, 1043","1031, 1043",12,much closer to my sister,to my sister,complement-direct,complement-direct
+159,12.0,"1019, 1043","1031, 1043",12,much closer to my sister,to my sister,group,group
+161,0.0,"1049, 1053","1049, 1053",0,that,that,subject,subject
+161,0.0,"1049, 1053","1049, 1053",0,that,that,group,group
+163,1.0,"1056, 1088","1056, 1089",1,an objectively reasonable choice,an objectively reasonable choice.,complement-direct,complement-direct
+163,1.0,"1056, 1088","1056, 1089",1,an objectively reasonable choice,an objectively reasonable choice.,group,group
+163,1.0,"1056, 1088","1056, 1089",1,an objectively reasonable choice,an objectively reasonable choice.,nominal-group,nominal-group
+164,19.0,"1091, 1123","1091, 1142",19,My current house is also too big,"My current house is also too big and I'm a slob, so",clause,clause
+181,0.0,"1091, 1107","1091, 1107",0,My current house,My current house,subject,subject
+181,0.0,"1091, 1107","1091, 1107",0,My current house,My current house,group,group
+181,0.0,"1091, 1107","1091, 1107",0,My current house,My current house,nominal-group,nominal-group
+178,0.0,"1108, 1110","1108, 1110",0,is,is,verbal-group,verbal-group
+178,0.0,"1108, 1110","1108, 1110",0,is,is,group,group
+178,0.0,"1108, 1110","1108, 1110",0,is,is,predicator,predicator
+180,15.811388300841896,"1116, 1123","1111, 1138",20,too big,also too big and I'm a slob,complement-direct,complement-direct
+180,15.811388300841896,"1116, 1123","1111, 1138",20,too big,also too big and I'm a slob,adjectival-group,adjectival-group
+180,15.811388300841896,"1116, 1123","1111, 1138",20,too big,also too big and I'm a slob,group,group
+169,0.0,"1128, 1129","1128, 1129",0,I,I,subject,subject
+169,0.0,"1128, 1129","1128, 1129",0,I,I,group,group
+169,0.0,"1128, 1129","1128, 1129",0,I,I,nominal-group,nominal-group
+171,0.0,"1132, 1138","1132, 1138",0,a slob,a slob,complement-direct,complement-direct
+171,0.0,"1132, 1138","1132, 1138",0,a slob,a slob,group,group
+171,0.0,"1132, 1138","1132, 1138",0,a slob,a slob,nominal-group,nominal-group
+172,2.0,"1140, 1142","1138, 1142",2,so,", so",marker,marker
+166,3.1622776601683795,"1140, 1172","1143, 1173",4,so it's too much to keep up with,it's too much to keep up with.,clause,clause
+173,0.0,"1143, 1145","1143, 1145",0,it,it,subject,subject
+173,0.0,"1143, 1145","1143, 1145",0,it,it,group,group
+173,0.0,"1143, 1145","1143, 1145",0,it,it,nominal-group,nominal-group
+174,0.0,"1145, 1147","1145, 1147",0,'s,'s,verbal-group,verbal-group
+174,0.0,"1145, 1147","1145, 1147",0,'s,'s,group,group
+174,0.0,"1145, 1147","1145, 1147",0,'s,'s,predicator,predicator
+177,0.0,"1148, 1156","1148, 1156",0,too much,too much,complement-direct,complement-direct
+177,0.0,"1148, 1156","1148, 1156",0,too much,too much,group,group
+167,1.0,"1157, 1172","1157, 1173",1,to keep up with,to keep up with.,clause,clause
+158,11.045361017187261,"1168, 1172","1157, 1173",12,with,to keep up with.,complement-direct,complement-direct
+98,3.0,"1157, 1167","1157, 1164",3,to keep up,to keep,verbal-group,verbal-group
+98,3.0,"1157, 1167","1157, 1164",3,to keep up,to keep,group,group
+98,3.0,"1157, 1167","1157, 1164",3,to keep up,to keep,predicator,predicator
+183,33.0,"1175, 1272","1175, 1239",33,"BUT, I also made this choice because of stress about my neighbor and worry about earthquake risks","BUT, I also made this choice because of stress about my neighbor",clause,clause
+176,2.0,"1180, 1181","1178, 1181",2,I,", I",subject,subject
+176,2.0,"1180, 1181","1178, 1181",2,I,", I",group,group
+176,2.0,"1180, 1181","1178, 1181",2,I,", I",nominal-group,nominal-group
+186,0.0,"1182, 1186","1182, 1186",0,also,also,adverbial-group,adverbial-group
+186,0.0,"1182, 1186","1182, 1186",0,also,also,group,group
+186,0.0,"1182, 1186","1182, 1186",0,also,also,adjunct,adjunct
+187,0.0,"1187, 1191","1187, 1191",0,made,made,verbal-group,verbal-group
+187,0.0,"1187, 1191","1187, 1191",0,made,made,group,group
+187,0.0,"1187, 1191","1187, 1191",0,made,made,predicator,predicator
+188,0.0,"1192, 1203","1192, 1203",0,this choice,this choice,complement-direct,complement-direct
+188,0.0,"1192, 1203","1192, 1203",0,this choice,this choice,group,group
+188,0.0,"1192, 1203","1192, 1203",0,this choice,this choice,nominal-group,nominal-group
+189,37.589892258425,"1204, 1272","1222, 1239",51,because of stress about my neighbor and worry about earthquake risks,about my neighbor,group,group
+189,37.589892258425,"1204, 1272","1222, 1239",51,because of stress about my neighbor and worry about earthquake risks,about my neighbor,prepositional-group,prepositional-group
+189,37.589892258425,"1204, 1272","1222, 1239",51,because of stress about my neighbor and worry about earthquake risks,about my neighbor,adjunct,adjunct
+219,5.0,"1275, 1335","1275, 1340",5,I think the best approach is to continue with a plan to move,"I think the best approach is to continue with a plan to move, but",clause,clause
+191,0.0,"1275, 1276","1275, 1276",0,I,I,subject,subject
+191,0.0,"1275, 1276","1275, 1276",0,I,I,group,group
+191,0.0,"1275, 1276","1275, 1276",0,I,I,nominal-group,nominal-group
+195,0.0,"1277, 1282","1277, 1282",0,think,think,verbal-group,verbal-group
+195,0.0,"1277, 1282","1277, 1282",0,think,think,group,group
+195,0.0,"1277, 1282","1277, 1282",0,think,think,predicator,predicator
+185,0.0,"1283, 1335","1283, 1335",0,the best approach is to continue with a plan to move,the best approach is to continue with a plan to move,clause,clause
+199,0.0,"1283, 1300","1283, 1300",0,the best approach,the best approach,subject,subject
+199,0.0,"1283, 1300","1283, 1300",0,the best approach,the best approach,group,group
+199,0.0,"1283, 1300","1283, 1300",0,the best approach,the best approach,nominal-group,nominal-group
+196,0.0,"1301, 1303","1301, 1303",0,is,is,verbal-group,verbal-group
+196,0.0,"1301, 1303","1301, 1303",0,is,is,group,group
+196,0.0,"1301, 1303","1301, 1303",0,is,is,predicator,predicator
+197,0.0,"1304, 1335","1304, 1335",0,to continue with a plan to move,to continue with a plan to move,clause,clause
+198,0.0,"1304, 1315","1304, 1315",0,to continue,to continue,verbal-group,verbal-group
+198,0.0,"1304, 1315","1304, 1315",0,to continue,to continue,group,group
+198,0.0,"1304, 1315","1304, 1315",0,to continue,to continue,predicator,predicator
+200,0.0,"1316, 1335","1316, 1335",0,with a plan to move,with a plan to move,complement-direct,complement-direct
+200,0.0,"1316, 1335","1316, 1335",0,with a plan to move,with a plan to move,group,group
+200,0.0,"1316, 1335","1316, 1335",0,with a plan to move,with a plan to move,prepositional-group,prepositional-group
+190,0.0,"1328, 1335","1328, 1335",0,to move,to move,clause,clause
+201,0.0,"1328, 1335","1328, 1335",0,to move,to move,verbal-group,verbal-group
+201,0.0,"1328, 1335","1328, 1335",0,to move,to move,group,group
+201,0.0,"1328, 1335","1328, 1335",0,to move,to move,predicator,predicator
+203,39.20459156782532,"1337, 1450","1341, 1411",43,"but to make myself wait until a house I'm certain is the right choice (not in an OCD way, though :) ) comes along",to make myself wait until a house I'm certain is the right choice (not,clause,clause
+182,0.0,"1341, 1348","1341, 1348",0,to make,to make,verbal-group,verbal-group
+182,0.0,"1341, 1348","1341, 1348",0,to make,to make,group,group
+182,0.0,"1341, 1348","1341, 1348",0,to make,to make,predicator,predicator
+218,41.30375285612676,"1390, 1406","1349, 1411",46,the right choice,myself wait until a house I'm certain is the right choice (not,complement-direct,complement-direct
+205,0.0,"1349, 1355","1349, 1355",0,myself,myself,group,group
+205,0.0,"1349, 1355","1349, 1355",0,myself,myself,nominal-group,nominal-group
+206,0.0,"1356, 1360","1356, 1360",0,wait,wait,verbal-group,verbal-group
+206,0.0,"1356, 1360","1356, 1360",0,wait,wait,group,group
+206,0.0,"1356, 1360","1356, 1360",0,wait,wait,predicator,predicator
+215,30.4138126514911,"1375, 1438","1361, 1411",41,"I'm certain is the right choice (not in an OCD way, though :) )",until a house I'm certain is the right choice (not,clause,clause
+2327,0.0,"1361, 1366","1361, 1366",0,until,until,marker,marker
+211,12.0,"1367, 1374","1367, 1386",12,a house,a house I'm certain,subject,subject
+211,12.0,"1367, 1374","1367, 1386",12,a house,a house I'm certain,group,group
+211,12.0,"1367, 1374","1367, 1386",12,a house,a house I'm certain,nominal-group,nominal-group
+210,65.5133574166368,"1361, 1450","1375, 1386",78,"until a house I'm certain is the right choice (not in an OCD way, though :) ) comes along",I'm certain,clause,clause
+207,0.0,"1375, 1376","1375, 1376",0,I,I,subject,subject
+207,0.0,"1375, 1376","1375, 1376",0,I,I,group,group
+207,0.0,"1375, 1376","1375, 1376",0,I,I,nominal-group,nominal-group
+208,0.0,"1376, 1378","1376, 1378",0,'m,'m,verbal-group,verbal-group
+208,0.0,"1376, 1378","1376, 1378",0,'m,'m,finite,finite
+208,0.0,"1376, 1378","1376, 1378",0,'m,'m,group,group
+209,0.0,"1379, 1386","1379, 1386",0,certain,certain,group,group
+217,0.0,"1387, 1389","1387, 1389",0,is,is,verbal-group,verbal-group
+217,0.0,"1387, 1389","1387, 1389",0,is,is,group,group
+217,0.0,"1387, 1389","1387, 1389",0,is,is,predicator,predicator
+212,6.0,"1439, 1450","1439, 1444",6,comes along,comes,verbal-group,verbal-group
+212,6.0,"1439, 1450","1439, 1444",6,comes along,comes,group,group
+212,6.0,"1439, 1450","1439, 1444",6,comes along,comes,predicator,predicator
+221,0.0,"1453, 1454","1453, 1454",0,I,I,subject,subject
+221,0.0,"1453, 1454","1453, 1454",0,I,I,group,group
+221,0.0,"1453, 1454","1453, 1454",0,I,I,nominal-group,nominal-group
+222,0.0,"1455, 1459","1455, 1459",0,have,have,verbal-group,verbal-group
+222,0.0,"1455, 1459","1455, 1459",0,have,have,group,group
+222,0.0,"1455, 1459","1455, 1459",0,have,have,predicator,predicator
+227,14.0,"1482, 1544","1468, 1544",14,but very few houses that meet my requirements come up for sale,"to move ASAP, but very few houses that meet my requirements come up for sale",clause,clause
+225,0.0,"1468, 1475","1468, 1475",0,to move,to move,verbal-group,verbal-group
+225,0.0,"1468, 1475","1468, 1475",0,to move,to move,group,group
+225,0.0,"1468, 1475","1468, 1475",0,to move,to move,predicator,predicator
+229,17.0,"1502, 1527","1502, 1544",17,that meet my requirements,that meet my requirements come up for sale,clause,clause
+234,0.0,"1507, 1511","1507, 1511",0,meet,meet,verbal-group,verbal-group
+234,0.0,"1507, 1511","1507, 1511",0,meet,meet,group,group
+234,0.0,"1507, 1511","1507, 1511",0,meet,meet,predicator,predicator
+235,17.0,"1512, 1527","1512, 1544",17,my requirements,my requirements come up for sale,complement-direct,complement-direct
+235,0.0,"1512, 1527","1512, 1527",0,my requirements,my requirements,group,group
+235,0.0,"1512, 1527","1512, 1527",0,my requirements,my requirements,nominal-group,nominal-group
+231,3.0,"1528, 1535","1528, 1532",3,come up,come,verbal-group,verbal-group
+231,3.0,"1528, 1535","1528, 1532",3,come up,come,group,group
+231,3.0,"1528, 1535","1528, 1532",3,come up,come,predicator,predicator
+232,0.0,"1536, 1544","1536, 1544",0,for sale,for sale,group,group
+232,0.0,"1536, 1544","1536, 1544",0,for sale,for sale,prepositional-group,prepositional-group
+232,0.0,"1536, 1544","1536, 1544",0,for sale,for sale,adjunct,adjunct
+237,2.0,"1546, 1548","1544, 1548",2,so,", so",marker,marker
+238,0.0,"1549, 1551","1549, 1551",0,it,it,subject,subject
+238,0.0,"1549, 1551","1549, 1551",0,it,it,group,group
+238,0.0,"1549, 1551","1549, 1551",0,it,it,nominal-group,nominal-group
+239,0.0,"1552, 1557","1552, 1557",0,could,could,verbal-group,verbal-group
+239,0.0,"1552, 1557","1552, 1557",0,could,could,finite,finite
+239,0.0,"1552, 1557","1552, 1557",0,could,could,group,group
+240,0.0,"1558, 1562","1558, 1562",0,take,take,verbal-group,verbal-group
+240,0.0,"1558, 1562","1558, 1562",0,take,take,group,group
+240,0.0,"1558, 1562","1558, 1562",0,take,take,predicator,predicator
+241,1.0,"1563, 1570","1563, 1571",1,a while,a while.,complement-direct,complement-direct
+241,1.0,"1563, 1570","1563, 1571",1,a while,a while.,group,group
+241,1.0,"1563, 1570","1563, 1571",1,a while,a while.,nominal-group,nominal-group
+246,1.0,"1573, 1603","1573, 1604",1,That ramps my anxiety right up,"That ramps my anxiety right up,",clause,clause
+248,0.0,"1573, 1577","1573, 1577",0,That,That,subject,subject
+248,0.0,"1573, 1577","1573, 1577",0,That,That,group,group
+247,0.0,"1578, 1583","1578, 1583",0,ramps,ramps,verbal-group,verbal-group
+247,0.0,"1578, 1583","1578, 1583",0,ramps,ramps,group,group
+247,0.0,"1578, 1583","1578, 1583",0,ramps,ramps,predicator,predicator
+249,0.0,"1584, 1594","1584, 1594",0,my anxiety,my anxiety,complement-direct,complement-direct
+249,0.0,"1584, 1594","1584, 1594",0,my anxiety,my anxiety,group,group
+249,0.0,"1584, 1594","1584, 1594",0,my anxiety,my anxiety,nominal-group,nominal-group
+250,0.0,"1595, 1603","1595, 1603",0,right up,right up,adverbial-group,adverbial-group
+250,0.0,"1595, 1603","1595, 1603",0,right up,right up,group,group
+250,0.0,"1595, 1603","1595, 1603",0,right up,right up,adjunct,adjunct
+251,1.0,"1605, 1644","1605, 1645",1,and that's the piece that I know is OCD,and that's the piece that I know is OCD.,clause,clause
+252,0.0,"1605, 1608","1605, 1608",0,and,and,marker,marker
+254,0.0,"1609, 1613","1609, 1613",0,that,that,subject,subject
+254,0.0,"1609, 1613","1609, 1613",0,that,that,group,group
+253,0.0,"1613, 1615","1613, 1615",0,'s,'s,verbal-group,verbal-group
+253,0.0,"1613, 1615","1613, 1615",0,'s,'s,group,group
+253,0.0,"1613, 1615","1613, 1615",0,'s,'s,predicator,predicator
+255,19.0,"1616, 1644","1616, 1625",19,the piece that I know is OCD,the piece,group,group
+255,19.0,"1616, 1644","1616, 1625",19,the piece that I know is OCD,the piece,nominal-group,nominal-group
+256,1.0,"1626, 1644","1626, 1645",1,that I know is OCD,that I know is OCD.,clause,clause
+255,10.04987562112089,"1616, 1644","1626, 1645",11,the piece that I know is OCD,that I know is OCD.,complement-direct,complement-direct
+257,0.0,"1626, 1630","1626, 1630",0,that,that,marker,marker
+258,0.0,"1631, 1632","1631, 1632",0,I,I,subject,subject
+258,0.0,"1631, 1632","1631, 1632",0,I,I,group,group
+258,0.0,"1631, 1632","1631, 1632",0,I,I,nominal-group,nominal-group
+259,0.0,"1633, 1637","1633, 1637",0,know,know,verbal-group,verbal-group
+259,0.0,"1633, 1637","1633, 1637",0,know,know,group,group
+259,0.0,"1633, 1637","1633, 1637",0,know,know,predicator,predicator
+260,1.0,"1638, 1644","1638, 1645",1,is OCD,is OCD.,clause,clause
+261,0.0,"1638, 1640","1638, 1640",0,is,is,verbal-group,verbal-group
+261,0.0,"1638, 1640","1638, 1640",0,is,is,group,group
+261,0.0,"1638, 1640","1638, 1640",0,is,is,predicator,predicator
+262,1.0,"1641, 1644","1641, 1645",1,OCD,OCD.,complement-direct,complement-direct
+262,1.0,"1641, 1644","1641, 1645",1,OCD,OCD.,group,group
+262,1.0,"1641, 1644","1641, 1645",1,OCD,OCD.,nominal-group,nominal-group
+242,1.0,"1647, 1663","1647, 1664",1,Patience is hard,Patience is hard!,clause,clause
+243,0.0,"1647, 1655","1647, 1655",0,Patience,Patience,subject,subject
+243,0.0,"1647, 1655","1647, 1655",0,Patience,Patience,group,group
+243,0.0,"1647, 1655","1647, 1655",0,Patience,Patience,nominal-group,nominal-group
+244,0.0,"1656, 1658","1656, 1658",0,is,is,verbal-group,verbal-group
+244,0.0,"1656, 1658","1656, 1658",0,is,is,group,group
+244,0.0,"1656, 1658","1656, 1658",0,is,is,predicator,predicator
+245,1.0,"1659, 1663","1659, 1664",1,hard,hard!,complement-direct,complement-direct
+245,1.0,"1659, 1663","1659, 1664",1,hard,hard!,adjectival-group,adjectival-group
+245,1.0,"1659, 1663","1659, 1664",1,hard,hard!,group,group
+263,1.0,"1666, 1728","1666, 1729",1,"After yesterday's post, I promptly didn't follow my own advice","After yesterday's post, I promptly didn't follow my own advice.",clause,clause
+269,6.0,"1666, 1688","1672, 1688",6,After yesterday's post,yesterday's post,group,group
+269,6.0,"1666, 1688","1672, 1688",6,After yesterday's post,yesterday's post,prepositional-group,prepositional-group
+269,6.0,"1666, 1688","1672, 1688",6,After yesterday's post,yesterday's post,adjunct,adjunct
+264,2.0,"1690, 1691","1688, 1691",2,I,", I",subject,subject
+264,2.0,"1690, 1691","1688, 1691",2,I,", I",group,group
+264,2.0,"1690, 1691","1688, 1691",2,I,", I",nominal-group,nominal-group
+268,0.0,"1692, 1700","1692, 1700",0,promptly,promptly,adverbial-group,adverbial-group
+268,0.0,"1692, 1700","1692, 1700",0,promptly,promptly,group,group
+268,0.0,"1692, 1700","1692, 1700",0,promptly,promptly,adjunct,adjunct
+265,0.0,"1701, 1704","1701, 1704",0,did,did,verbal-group,verbal-group
+265,0.0,"1701, 1704","1701, 1704",0,did,did,finite,finite
+265,0.0,"1701, 1704","1701, 1704",0,did,did,group,group
+266,0.0,"1704, 1714","1704, 1714",0,n't follow,n't follow,verbal-group,verbal-group
+266,0.0,"1704, 1714","1704, 1714",0,n't follow,n't follow,group,group
+266,0.0,"1704, 1714","1704, 1714",0,n't follow,n't follow,predicator,predicator
+267,1.0,"1715, 1728","1715, 1729",1,my own advice,my own advice.,complement-direct,complement-direct
+267,1.0,"1715, 1728","1715, 1729",1,my own advice,my own advice.,group,group
+267,1.0,"1715, 1728","1715, 1729",1,my own advice,my own advice.,nominal-group,nominal-group
+270,1.0,"1731, 1905","1731, 1906",1,Today at work I got so sucked into my anxiety that I sent some overwrought emails to a bigwig at the office about a project we're working on together that's causing me stress,Today at work I got so sucked into my anxiety that I sent some overwrought emails to a bigwig at the office about a project we're working on together that's causing me stress.,clause,clause
+290,0.0,"1731, 1736","1731, 1736",0,Today,Today,group,group
+290,0.0,"1731, 1736","1731, 1736",0,Today,Today,nominal-group,nominal-group
+2402,3.0,"1737, 1744","1740, 1744",3,at work,work,group,group
+288,0.0,"1745, 1746","1745, 1746",0,I,I,subject,subject
+288,0.0,"1745, 1746","1745, 1746",0,I,I,group,group
+288,0.0,"1745, 1746","1745, 1746",0,I,I,nominal-group,nominal-group
+289,0.0,"1747, 1750","1747, 1750",0,got,got,verbal-group,verbal-group
+289,0.0,"1747, 1750","1747, 1750",0,got,got,group,group
+289,0.0,"1747, 1750","1747, 1750",0,got,got,predicator,predicator
+271,1.0,"1751, 1905","1751, 1906",1,so sucked into my anxiety that I sent some overwrought emails to a bigwig at the office about a project we're working on together that's causing me stress,so sucked into my anxiety that I sent some overwrought emails to a bigwig at the office about a project we're working on together that's causing me stress.,clause,clause
+2469,0.0,"1751, 1753","1751, 1753",0,so,so,adverbial-group,adverbial-group
+2469,0.0,"1751, 1753","1751, 1753",0,so,so,group,group
+2469,0.0,"1751, 1753","1751, 1753",0,so,so,adjunct,adjunct
+2469,0.0,"1751, 1753","1751, 1753",0,so,so,mood-adjunct,mood-adjunct
+291,0.0,"1754, 1760","1754, 1760",0,sucked,sucked,verbal-group,verbal-group
+291,0.0,"1754, 1760","1754, 1760",0,sucked,sucked,group,group
+291,0.0,"1754, 1760","1754, 1760",0,sucked,sucked,predicator,predicator
+292,0.0,"1761, 1776","1761, 1776",0,into my anxiety,into my anxiety,complement-direct,complement-direct
+292,0.0,"1761, 1776","1761, 1776",0,into my anxiety,into my anxiety,group,group
+292,0.0,"1761, 1776","1761, 1776",0,into my anxiety,into my anxiety,prepositional-group,prepositional-group
+272,1.0,"1777, 1905","1777, 1906",1,that I sent some overwrought emails to a bigwig at the office about a project we're working on together that's causing me stress,that I sent some overwrought emails to a bigwig at the office about a project we're working on together that's causing me stress.,clause,clause
+284,0.0,"1777, 1781","1777, 1781",0,that,that,marker,marker
+285,0.0,"1782, 1783","1782, 1783",0,I,I,subject,subject
+285,0.0,"1782, 1783","1782, 1783",0,I,I,group,group
+285,0.0,"1782, 1783","1782, 1783",0,I,I,nominal-group,nominal-group
+286,0.0,"1784, 1788","1784, 1788",0,sent,sent,verbal-group,verbal-group
+286,0.0,"1784, 1788","1784, 1788",0,sent,sent,group,group
+286,0.0,"1784, 1788","1784, 1788",0,sent,sent,predicator,predicator
+2470,0.0,"1789, 1812","1789, 1812",0,some overwrought emails,some overwrought emails,complement-direct,complement-direct
+2470,0.0,"1789, 1812","1789, 1812",0,some overwrought emails,some overwrought emails,group,group
+2470,0.0,"1789, 1812","1789, 1812",0,some overwrought emails,some overwrought emails,nominal-group,nominal-group
+213,68.0,"1813, 1838","1813, 1906",68,to a bigwig at the office,to a bigwig at the office about a project we're working on together that's causing me stress.,complement-direct,complement-direct
+689,26.019223662515376,"1839, 1905","1813, 1906",27,about a project we're working on together that's causing me stress,to a bigwig at the office about a project we're working on together that's causing me stress.,group,group
+689,26.019223662515376,"1839, 1905","1813, 1906",27,about a project we're working on together that's causing me stress,to a bigwig at the office about a project we're working on together that's causing me stress.,prepositional-group,prepositional-group
+689,26.019223662515376,"1839, 1905","1813, 1906",27,about a project we're working on together that's causing me stress,to a bigwig at the office about a project we're working on together that's causing me stress.,adjunct,adjunct
+273,0.0,"1855, 1880","1855, 1880",0,we're working on together,we're working on together,clause,clause
+280,0.0,"1855, 1857","1855, 1857",0,we,we,subject,subject
+280,0.0,"1855, 1857","1855, 1857",0,we,we,group,group
+280,0.0,"1855, 1857","1855, 1857",0,we,we,nominal-group,nominal-group
+281,0.0,"1857, 1860","1857, 1860",0,'re,'re,verbal-group,verbal-group
+281,0.0,"1857, 1860","1857, 1860",0,'re,'re,finite,finite
+281,0.0,"1857, 1860","1857, 1860",0,'re,'re,group,group
+282,3.0,"1861, 1871","1861, 1868",3,working on,working,verbal-group,verbal-group
+282,3.0,"1861, 1871","1861, 1868",3,working on,working,group,group
+282,3.0,"1861, 1871","1861, 1868",3,working on,working,predicator,predicator
+283,0.0,"1872, 1880","1872, 1880",0,together,together,adverbial-group,adverbial-group
+283,0.0,"1872, 1880","1872, 1880",0,together,together,group,group
+283,0.0,"1872, 1880","1872, 1880",0,together,together,adjunct,adjunct
+274,7.0,"1881, 1905","1881, 1898",7,that's causing me stress,that's causing me,clause,clause
+276,0.0,"1885, 1887","1885, 1887",0,'s,'s,verbal-group,verbal-group
+276,0.0,"1885, 1887","1885, 1887",0,'s,'s,finite,finite
+276,0.0,"1885, 1887","1885, 1887",0,'s,'s,group,group
+277,0.0,"1888, 1895","1888, 1895",0,causing,causing,verbal-group,verbal-group
+277,0.0,"1888, 1895","1888, 1895",0,causing,causing,group,group
+277,0.0,"1888, 1895","1888, 1895",0,causing,causing,predicator,predicator
+278,0.0,"1896, 1898","1896, 1898",0,me,me,group,group
+278,0.0,"1896, 1898","1896, 1898",0,me,me,nominal-group,nominal-group
+293,1.0,"1908, 1956","1908, 1957",1,And of course now I'm feeling anxious about that,And of course now I'm feeling anxious about that!,clause,clause
+294,0.0,"1908, 1911","1908, 1911",0,And,And,marker,marker
+295,4.0,"1912, 1921","1912, 1925",4,of course,of course now,group,group
+295,4.0,"1912, 1921","1912, 1925",4,of course,of course now,adjunct,adjunct
+297,0.0,"1926, 1927","1926, 1927",0,I,I,subject,subject
+297,0.0,"1926, 1927","1926, 1927",0,I,I,group,group
+297,0.0,"1926, 1927","1926, 1927",0,I,I,nominal-group,nominal-group
+298,0.0,"1927, 1929","1927, 1929",0,'m,'m,verbal-group,verbal-group
+298,0.0,"1927, 1929","1927, 1929",0,'m,'m,finite,finite
+298,0.0,"1927, 1929","1927, 1929",0,'m,'m,group,group
+299,0.0,"1930, 1937","1930, 1937",0,feeling,feeling,verbal-group,verbal-group
+299,0.0,"1930, 1937","1930, 1937",0,feeling,feeling,group,group
+299,0.0,"1930, 1937","1930, 1937",0,feeling,feeling,predicator,predicator
+301,6.082762530298219,"1946, 1956","1952, 1957",7,about that,that!,group,group
+635,0.0,"1959, 1963","1959, 1963",0,What,What,subject,subject
+635,0.0,"1959, 1963","1959, 1963",0,What,What,group,group
+631,5.0,"1959, 1991","1964, 1991",5,What most frustrates me about it,most frustrates me about it,clause,clause
+634,0.0,"1964, 1968","1964, 1968",0,most,most,group,group
+624,0.0,"1969, 1979","1969, 1979",0,frustrates,frustrates,verbal-group,verbal-group
+624,0.0,"1969, 1979","1969, 1979",0,frustrates,frustrates,group,group
+624,0.0,"1969, 1979","1969, 1979",0,frustrates,frustrates,predicator,predicator
+632,0.0,"1980, 1982","1980, 1982",0,me,me,complement-direct,complement-direct
+632,0.0,"1980, 1982","1980, 1982",0,me,me,group,group
+632,0.0,"1980, 1982","1980, 1982",0,me,me,nominal-group,nominal-group
+633,0.0,"1983, 1991","1983, 1991",0,about it,about it,group,group
+633,0.0,"1983, 1991","1983, 1991",0,about it,about it,prepositional-group,prepositional-group
+633,0.0,"1983, 1991","1983, 1991",0,about it,about it,adjunct,adjunct
+623,0.0,"1993, 1995","1993, 1995",0,is,is,verbal-group,verbal-group
+623,0.0,"1993, 1995","1993, 1995",0,is,is,group,group
+623,0.0,"1993, 1995","1993, 1995",0,is,is,predicator,predicator
+628,1.0,"1996, 2026","1996, 2027",1,that I knew it was OCD-related,that I knew it was OCD-related.,clause,clause
+630,0.0,"1996, 2000","1996, 2000",0,that,that,marker,marker
+629,0.0,"2001, 2002","2001, 2002",0,I,I,subject,subject
+629,0.0,"2001, 2002","2001, 2002",0,I,I,group,group
+629,0.0,"2001, 2002","2001, 2002",0,I,I,nominal-group,nominal-group
+621,0.0,"2003, 2007","2003, 2007",0,knew,knew,verbal-group,verbal-group
+621,0.0,"2003, 2007","2003, 2007",0,knew,knew,group,group
+621,0.0,"2003, 2007","2003, 2007",0,knew,knew,predicator,predicator
+625,1.0,"2008, 2026","2008, 2027",1,it was OCD-related,it was OCD-related.,clause,clause
+626,0.0,"2008, 2010","2008, 2010",0,it,it,subject,subject
+626,0.0,"2008, 2010","2008, 2010",0,it,it,group,group
+626,0.0,"2008, 2010","2008, 2010",0,it,it,nominal-group,nominal-group
+622,0.0,"2011, 2014","2011, 2014",0,was,was,verbal-group,verbal-group
+622,0.0,"2011, 2014","2011, 2014",0,was,was,group,group
+622,0.0,"2011, 2014","2011, 2014",0,was,was,predicator,predicator
+627,1.0,"2015, 2026","2015, 2027",1,OCD-related,OCD-related.,complement-direct,complement-direct
+627,1.0,"2015, 2026","2015, 2027",1,OCD-related,OCD-related.,adjectival-group,adjectival-group
+627,1.0,"2015, 2026","2015, 2027",1,OCD-related,OCD-related.,group,group
+638,0.0,"2029, 2032","2029, 2032",0,And,And,marker,marker
+640,0.0,"2033, 2034","2033, 2034",0,I,I,subject,subject
+640,0.0,"2033, 2034","2033, 2034",0,I,I,group,group
+640,0.0,"2033, 2034","2033, 2034",0,I,I,nominal-group,nominal-group
+641,0.0,"2035, 2040","2035, 2040",0,could,could,verbal-group,verbal-group
+641,0.0,"2035, 2040","2035, 2040",0,could,could,finite,finite
+641,0.0,"2035, 2040","2035, 2040",0,could,could,group,group
+642,0.0,"2040, 2048","2040, 2048",0,n't keep,n't keep,verbal-group,verbal-group
+642,0.0,"2040, 2048","2040, 2048",0,n't keep,n't keep,group,group
+642,0.0,"2040, 2048","2040, 2048",0,n't keep,n't keep,predicator,predicator
+643,0.0,"2049, 2055","2049, 2055",0,myself,myself,complement-direct,complement-direct
+643,0.0,"2049, 2055","2049, 2055",0,myself,myself,group,group
+643,0.0,"2049, 2055","2049, 2055",0,myself,myself,nominal-group,nominal-group
+646,0.0,"2056, 2060","2056, 2060",0,from,from,marker,marker
+644,5.0,"2056, 2069","2061, 2069",5,from reacting,reacting,clause,clause
+645,0.0,"2061, 2069","2061, 2069",0,reacting,reacting,verbal-group,verbal-group
+645,0.0,"2061, 2069","2061, 2069",0,reacting,reacting,group,group
+645,0.0,"2061, 2069","2061, 2069",0,reacting,reacting,predicator,predicator
+637,12.041594578792296,"2070, 2108","2082, 2109",13,rather than even trying to wait it out,even trying to wait it out.,clause,clause
+652,0.0,"2082, 2086","2082, 2086",0,even,even,adverbial-group,adverbial-group
+652,0.0,"2082, 2086","2082, 2086",0,even,even,group,group
+652,0.0,"2082, 2086","2082, 2086",0,even,even,adjunct,adjunct
+652,0.0,"2082, 2086","2082, 2086",0,even,even,mood-adjunct,mood-adjunct
+647,0.0,"2087, 2093","2087, 2093",0,trying,trying,verbal-group,verbal-group
+647,0.0,"2087, 2093","2087, 2093",0,trying,trying,group,group
+647,0.0,"2087, 2093","2087, 2093",0,trying,trying,predicator,predicator
+648,1.0,"2094, 2108","2094, 2109",1,to wait it out,to wait it out.,clause,clause
+649,0.0,"2094, 2101","2094, 2101",0,to wait,to wait,verbal-group,verbal-group
+649,0.0,"2094, 2101","2094, 2101",0,to wait,to wait,group,group
+649,0.0,"2094, 2101","2094, 2101",0,to wait,to wait,predicator,predicator
+650,0.0,"2102, 2104","2102, 2104",0,it,it,complement-direct,complement-direct
+650,0.0,"2102, 2104","2102, 2104",0,it,it,group,group
+650,0.0,"2102, 2104","2102, 2104",0,it,it,nominal-group,nominal-group
+651,1.0,"2105, 2108","2105, 2109",1,out,out.,marker,marker
+302,1.0,"2111, 2134","2111, 2135",1,Tomorrow is another day,Tomorrow is another day.,clause,clause
+303,0.0,"2111, 2119","2111, 2119",0,Tomorrow,Tomorrow,subject,subject
+303,0.0,"2111, 2119","2111, 2119",0,Tomorrow,Tomorrow,group,group
+303,0.0,"2111, 2119","2111, 2119",0,Tomorrow,Tomorrow,nominal-group,nominal-group
+304,0.0,"2120, 2122","2120, 2122",0,is,is,verbal-group,verbal-group
+304,0.0,"2120, 2122","2120, 2122",0,is,is,group,group
+304,0.0,"2120, 2122","2120, 2122",0,is,is,predicator,predicator
+305,1.0,"2123, 2134","2123, 2135",1,another day,another day.,complement-direct,complement-direct
+305,1.0,"2123, 2134","2123, 2135",1,another day,another day.,group,group
+305,1.0,"2123, 2134","2123, 2135",1,another day,another day.,nominal-group,nominal-group
+328,1.0,"2137, 2344","2137, 2345",1,Sunny recently posted a video on her blog from the OCD conference about being reminded that the goal of OCD treatment is not to have less anxiety but to learn to accept anxiety and know that it won't kill us,Sunny recently posted a video on her blog from the OCD conference about being reminded that the goal of OCD treatment is not to have less anxiety but to learn to accept anxiety and know that it won't kill us.,clause,clause
+352,0.0,"2137, 2142","2137, 2142",0,Sunny,Sunny,subject,subject
+352,0.0,"2137, 2142","2137, 2142",0,Sunny,Sunny,group,group
+352,0.0,"2137, 2142","2137, 2142",0,Sunny,Sunny,nominal-group,nominal-group
+353,0.0,"2143, 2151","2143, 2151",0,recently,recently,adverbial-group,adverbial-group
+353,0.0,"2143, 2151","2143, 2151",0,recently,recently,group,group
+353,0.0,"2143, 2151","2143, 2151",0,recently,recently,adjunct,adjunct
+353,0.0,"2143, 2151","2143, 2151",0,recently,recently,mood-adjunct,mood-adjunct
+354,0.0,"2152, 2158","2152, 2158",0,posted,posted,verbal-group,verbal-group
+354,0.0,"2152, 2158","2152, 2158",0,posted,posted,group,group
+354,0.0,"2152, 2158","2152, 2158",0,posted,posted,predicator,predicator
+355,0.0,"2159, 2166","2159, 2166",0,a video,a video,complement-direct,complement-direct
+355,0.0,"2159, 2166","2159, 2166",0,a video,a video,group,group
+355,0.0,"2159, 2166","2159, 2166",0,a video,a video,nominal-group,nominal-group
+356,0.0,"2167, 2178","2167, 2178",0,on her blog,on her blog,group,group
+356,0.0,"2167, 2178","2167, 2178",0,on her blog,on her blog,prepositional-group,prepositional-group
+356,0.0,"2167, 2178","2167, 2178",0,on her blog,on her blog,adjunct,adjunct
+357,0.0,"2179, 2202","2179, 2202",0,from the OCD conference,from the OCD conference,group,group
+357,0.0,"2179, 2202","2179, 2202",0,from the OCD conference,from the OCD conference,prepositional-group,prepositional-group
+357,0.0,"2179, 2202","2179, 2202",0,from the OCD conference,from the OCD conference,adjunct,adjunct
+346,67.0,"2270, 2282","2203, 2282",67,less anxiety,about being reminded that the goal of OCD treatment is not to have less anxiety,complement-direct,complement-direct
+350,0.0,"2203, 2208","2203, 2208",0,about,about,marker,marker
+331,53.0,"2262, 2282","2209, 2282",53,to have less anxiety,being reminded that the goal of OCD treatment is not to have less anxiety,clause,clause
+351,0.0,"2209, 2223","2209, 2223",0,being reminded,being reminded,verbal-group,verbal-group
+351,0.0,"2209, 2223","2209, 2223",0,being reminded,being reminded,group,group
+351,0.0,"2209, 2223","2209, 2223",0,being reminded,being reminded,predicator,predicator
+347,0.0,"2224, 2228","2224, 2228",0,that,that,marker,marker
+348,0.0,"2229, 2254","2229, 2254",0,the goal of OCD treatment,the goal of OCD treatment,subject,subject
+348,0.0,"2229, 2254","2229, 2254",0,the goal of OCD treatment,the goal of OCD treatment,group,group
+348,0.0,"2229, 2254","2229, 2254",0,the goal of OCD treatment,the goal of OCD treatment,nominal-group,nominal-group
+349,0.0,"2255, 2261","2255, 2261",0,is not,is not,verbal-group,verbal-group
+349,0.0,"2255, 2261","2255, 2261",0,is not,is not,group,group
+349,0.0,"2255, 2261","2255, 2261",0,is not,is not,predicator,predicator
+345,0.0,"2262, 2269","2262, 2269",0,to have,to have,verbal-group,verbal-group
+345,0.0,"2262, 2269","2262, 2269",0,to have,to have,group,group
+345,0.0,"2262, 2269","2262, 2269",0,to have,to have,predicator,predicator
+332,4.123105625617661,"2283, 2344","2287, 2345",5,but to learn to accept anxiety and know that it won't kill us,to learn to accept anxiety and know that it won't kill us.,clause,clause
+333,0.0,"2296, 2313","2296, 2313",0,to accept anxiety,to accept anxiety,clause,clause
+341,0.0,"2296, 2305","2296, 2305",0,to accept,to accept,verbal-group,verbal-group
+341,0.0,"2296, 2305","2296, 2305",0,to accept,to accept,group,group
+341,0.0,"2296, 2305","2296, 2305",0,to accept,to accept,predicator,predicator
+342,0.0,"2306, 2313","2306, 2313",0,anxiety,anxiety,complement-direct,complement-direct
+342,0.0,"2306, 2313","2306, 2313",0,anxiety,anxiety,group,group
+342,0.0,"2306, 2313","2306, 2313",0,anxiety,anxiety,nominal-group,nominal-group
+334,1.0,"2314, 2344","2314, 2345",1,and know that it won't kill us,and know that it won't kill us.,clause,clause
+335,1.0,"2323, 2344","2323, 2345",1,that it won't kill us,that it won't kill us.,clause,clause
+336,0.0,"2323, 2327","2323, 2327",0,that,that,marker,marker
+337,0.0,"2328, 2330","2328, 2330",0,it,it,subject,subject
+337,0.0,"2328, 2330","2328, 2330",0,it,it,group,group
+337,0.0,"2328, 2330","2328, 2330",0,it,it,nominal-group,nominal-group
+338,0.0,"2331, 2333","2331, 2333",0,wo,wo,verbal-group,verbal-group
+338,0.0,"2331, 2333","2331, 2333",0,wo,wo,finite,finite
+338,0.0,"2331, 2333","2331, 2333",0,wo,wo,group,group
+339,0.0,"2333, 2341","2333, 2341",0,n't kill,n't kill,verbal-group,verbal-group
+339,0.0,"2333, 2341","2333, 2341",0,n't kill,n't kill,group,group
+339,0.0,"2333, 2341","2333, 2341",0,n't kill,n't kill,predicator,predicator
+340,1.0,"2342, 2344","2342, 2345",1,us,us.,complement-direct,complement-direct
+340,1.0,"2342, 2344","2342, 2345",1,us,us.,group,group
+340,1.0,"2342, 2344","2342, 2345",1,us,us.,nominal-group,nominal-group
+311,1.0,"2347, 2453","2347, 2454",1,"The lucky side effect being that once you learn that, you are actually likely to see a decrease in anxiety","The lucky side effect being that once you learn that, you are actually likely to see a decrease in anxiety.",clause,clause
+326,0.0,"2347, 2368","2347, 2368",0,The lucky side effect,The lucky side effect,subject,subject
+326,0.0,"2347, 2368","2347, 2368",0,The lucky side effect,The lucky side effect,group,group
+326,0.0,"2347, 2368","2347, 2368",0,The lucky side effect,The lucky side effect,nominal-group,nominal-group
+327,0.0,"2369, 2374","2369, 2374",0,being,being,verbal-group,verbal-group
+327,0.0,"2369, 2374","2369, 2374",0,being,being,group,group
+327,0.0,"2369, 2374","2369, 2374",0,being,being,predicator,predicator
+321,0.0,"2375, 2379","2375, 2379",0,that,that,marker,marker
+323,0.0,"2385, 2388","2385, 2388",0,you,you,subject,subject
+323,0.0,"2385, 2388","2385, 2388",0,you,you,group,group
+323,0.0,"2385, 2388","2385, 2388",0,you,you,nominal-group,nominal-group
+324,0.0,"2389, 2394","2389, 2394",0,learn,learn,verbal-group,verbal-group
+324,0.0,"2389, 2394","2389, 2394",0,learn,learn,group,group
+324,0.0,"2389, 2394","2389, 2394",0,learn,learn,predicator,predicator
+312,6.082762530298219,"2401, 2453","2395, 2454",7,you are actually likely to see a decrease in anxiety,"that, you are actually likely to see a decrease in anxiety.",clause,clause
+314,2.0,"2401, 2404","2399, 2404",2,you,", you",subject,subject
+314,2.0,"2401, 2404","2399, 2404",2,you,", you",group,group
+314,2.0,"2401, 2404","2399, 2404",2,you,", you",nominal-group,nominal-group
+315,0.0,"2405, 2408","2405, 2408",0,are,are,verbal-group,verbal-group
+315,0.0,"2405, 2408","2405, 2408",0,are,are,group,group
+315,0.0,"2405, 2408","2405, 2408",0,are,are,predicator,predicator
+316,7.0,"2409, 2417","2409, 2424",7,actually,actually likely,group,group
+318,1.0,"2425, 2453","2425, 2454",1,to see a decrease in anxiety,to see a decrease in anxiety.,clause,clause
+319,0.0,"2425, 2431","2425, 2431",0,to see,to see,verbal-group,verbal-group
+319,0.0,"2425, 2431","2425, 2431",0,to see,to see,group,group
+319,0.0,"2425, 2431","2425, 2431",0,to see,to see,predicator,predicator
+320,1.0,"2432, 2453","2432, 2454",1,a decrease in anxiety,a decrease in anxiety.,complement-direct,complement-direct
+320,1.0,"2432, 2453","2432, 2454",1,a decrease in anxiety,a decrease in anxiety.,group,group
+320,1.0,"2432, 2453","2432, 2454",1,a decrease in anxiety,a decrease in anxiety.,nominal-group,nominal-group
+306,1.0,"2456, 2474","2456, 2475",1,It sure isn't easy,It sure isn't easy.,clause,clause
+307,0.0,"2456, 2458","2456, 2458",0,It,It,subject,subject
+307,0.0,"2456, 2458","2456, 2458",0,It,It,group,group
+307,0.0,"2456, 2458","2456, 2458",0,It,It,nominal-group,nominal-group
+308,3.0,"2464, 2466","2464, 2469",3,is,isn't,verbal-group,verbal-group
+308,3.0,"2464, 2466","2464, 2469",3,is,isn't,group,group
+308,3.0,"2464, 2466","2464, 2469",3,is,isn't,predicator,predicator
+309,4.123105625617661,"2466, 2474","2470, 2475",5,n't easy,easy.,complement-direct,complement-direct
+309,4.123105625617661,"2466, 2474","2470, 2475",5,n't easy,easy.,group,group
+358,21.0,"2477, 2532","2477, 2553",21,I've reached the point where I can recognize my anxiety,"I've reached the point where I can recognize my anxiety, and acknowledge it,",clause,clause
+376,0.0,"2477, 2478","2477, 2478",0,I,I,subject,subject
+376,0.0,"2477, 2478","2477, 2478",0,I,I,group,group
+376,0.0,"2477, 2478","2477, 2478",0,I,I,nominal-group,nominal-group
+377,0.0,"2478, 2481","2478, 2481",0,'ve,'ve,verbal-group,verbal-group
+377,0.0,"2478, 2481","2478, 2481",0,'ve,'ve,finite,finite
+377,0.0,"2478, 2481","2478, 2481",0,'ve,'ve,group,group
+378,0.0,"2482, 2489","2482, 2489",0,reached,reached,verbal-group,verbal-group
+378,0.0,"2482, 2489","2482, 2489",0,reached,reached,group,group
+378,0.0,"2482, 2489","2482, 2489",0,reached,reached,predicator,predicator
+379,33.0,"2490, 2532","2490, 2499",33,the point where I can recognize my anxiety,the point,nominal-group,nominal-group
+370,20.0,"2500, 2532","2500, 2552",20,where I can recognize my anxiety,"where I can recognize my anxiety, and acknowledge it",clause,clause
+379,28.792360097775937,"2490, 2532","2500, 2505",37,the point where I can recognize my anxiety,where,complement-direct,complement-direct
+379,28.792360097775937,"2490, 2532","2500, 2505",37,the point where I can recognize my anxiety,where,group,group
+372,0.0,"2506, 2507","2506, 2507",0,I,I,subject,subject
+372,0.0,"2506, 2507","2506, 2507",0,I,I,group,group
+372,0.0,"2506, 2507","2506, 2507",0,I,I,nominal-group,nominal-group
+373,0.0,"2508, 2511","2508, 2511",0,can,can,verbal-group,verbal-group
+373,0.0,"2508, 2511","2508, 2511",0,can,can,finite,finite
+373,0.0,"2508, 2511","2508, 2511",0,can,can,group,group
+374,0.0,"2512, 2521","2512, 2521",0,recognize,recognize,verbal-group,verbal-group
+374,0.0,"2512, 2521","2512, 2521",0,recognize,recognize,group,group
+374,0.0,"2512, 2521","2512, 2521",0,recognize,recognize,predicator,predicator
+375,0.0,"2522, 2532","2522, 2532",0,my anxiety,my anxiety,complement-direct,complement-direct
+375,0.0,"2522, 2532","2522, 2532",0,my anxiety,my anxiety,group,group
+375,0.0,"2522, 2532","2522, 2532",0,my anxiety,my anxiety,nominal-group,nominal-group
+359,0.0,"2534, 2552","2534, 2552",0,and acknowledge it,and acknowledge it,clause,clause
+367,0.0,"2534, 2537","2534, 2537",0,and,and,marker,marker
+368,0.0,"2538, 2549","2538, 2549",0,acknowledge,acknowledge,verbal-group,verbal-group
+368,0.0,"2538, 2549","2538, 2549",0,acknowledge,acknowledge,group,group
+368,0.0,"2538, 2549","2538, 2549",0,acknowledge,acknowledge,predicator,predicator
+369,0.0,"2550, 2552","2550, 2552",0,it,it,complement-direct,complement-direct
+369,0.0,"2550, 2552","2550, 2552",0,it,it,group,group
+369,0.0,"2550, 2552","2550, 2552",0,it,it,nominal-group,nominal-group
+361,0.0,"2554, 2557","2554, 2557",0,and,and,marker,marker
+362,0.0,"2558, 2559","2558, 2559",0,I,I,subject,subject
+362,0.0,"2558, 2559","2558, 2559",0,I,I,group,group
+362,0.0,"2558, 2559","2558, 2559",0,I,I,nominal-group,nominal-group
+363,0.0,"2560, 2563","2560, 2563",0,can,can,verbal-group,verbal-group
+363,0.0,"2560, 2563","2560, 2563",0,can,can,finite,finite
+363,0.0,"2560, 2563","2560, 2563",0,can,can,group,group
+364,0.0,"2564, 2568","2564, 2568",0,even,even,adverbial-group,adverbial-group
+364,0.0,"2564, 2568","2564, 2568",0,even,even,group,group
+364,0.0,"2564, 2568","2564, 2568",0,even,even,adjunct,adjunct
+364,0.0,"2564, 2568","2564, 2568",0,even,even,mood-adjunct,mood-adjunct
+365,0.0,"2569, 2572","2569, 2572",0,sit,sit,verbal-group,verbal-group
+365,0.0,"2569, 2572","2569, 2572",0,sit,sit,group,group
+365,0.0,"2569, 2572","2569, 2572",0,sit,sit,predicator,predicator
+366,1.0,"2573, 2580","2573, 2581",1,with it,with it.,complement-direct,complement-direct
+366,1.0,"2573, 2580","2573, 2581",1,with it,with it.,group,group
+366,1.0,"2573, 2580","2573, 2581",1,with it,with it.,prepositional-group,prepositional-group
+380,1.0,"2583, 2625","2583, 2626",1,But it isn't any less uncomfortable for me,But it isn't any less uncomfortable for me.,clause,clause
+381,0.0,"2583, 2586","2583, 2586",0,But,But,marker,marker
+382,0.0,"2587, 2589","2587, 2589",0,it,it,subject,subject
+382,0.0,"2587, 2589","2587, 2589",0,it,it,group,group
+382,0.0,"2587, 2589","2587, 2589",0,it,it,nominal-group,nominal-group
+383,0.0,"2590, 2595","2590, 2595",0,isn't,isn't,verbal-group,verbal-group
+383,0.0,"2590, 2595","2590, 2595",0,isn't,isn't,group,group
+383,0.0,"2590, 2595","2590, 2595",0,isn't,isn't,predicator,predicator
+384,4.0,"2596, 2618","2600, 2618",4,any less uncomfortable,less uncomfortable,complement-direct,complement-direct
+384,4.0,"2596, 2618","2600, 2618",4,any less uncomfortable,less uncomfortable,adjectival-group,adjectival-group
+384,4.0,"2596, 2618","2600, 2618",4,any less uncomfortable,less uncomfortable,group,group
+385,1.0,"2619, 2625","2619, 2626",1,for me,for me.,group,group
+385,1.0,"2619, 2625","2619, 2626",1,for me,for me.,prepositional-group,prepositional-group
+385,1.0,"2619, 2625","2619, 2626",1,for me,for me.,adjunct,adjunct
+722,1.0,"2628, 2707","2628, 2708",1,I don't know that it ever actually becomes less unpleasant while it's happening,I don't know that it ever actually becomes less unpleasant while it's happening.,clause,clause
+737,0.0,"2628, 2629","2628, 2629",0,I,I,subject,subject
+737,0.0,"2628, 2629","2628, 2629",0,I,I,group,group
+737,0.0,"2628, 2629","2628, 2629",0,I,I,nominal-group,nominal-group
+735,0.0,"2630, 2632","2630, 2632",0,do,do,verbal-group,verbal-group
+735,0.0,"2630, 2632","2630, 2632",0,do,do,finite,finite
+735,0.0,"2630, 2632","2630, 2632",0,do,do,group,group
+736,0.0,"2632, 2640","2632, 2640",0,n't know,n't know,verbal-group,verbal-group
+736,0.0,"2632, 2640","2632, 2640",0,n't know,n't know,group,group
+736,0.0,"2632, 2640","2632, 2640",0,n't know,n't know,predicator,predicator
+723,1.0,"2641, 2707","2641, 2708",1,that it ever actually becomes less unpleasant while it's happening,that it ever actually becomes less unpleasant while it's happening.,clause,clause
+734,37.20215047547655,"2671, 2686","2641, 2708",52,less unpleasant,that it ever actually becomes less unpleasant while it's happening.,complement-direct,complement-direct
+729,0.0,"2641, 2645","2641, 2645",0,that,that,marker,marker
+730,0.0,"2646, 2648","2646, 2648",0,it,it,subject,subject
+730,0.0,"2646, 2648","2646, 2648",0,it,it,group,group
+730,0.0,"2646, 2648","2646, 2648",0,it,it,nominal-group,nominal-group
+732,5.0,"2654, 2662","2649, 2662",5,actually,ever actually,group,group
+733,0.0,"2663, 2670","2663, 2670",0,becomes,becomes,verbal-group,verbal-group
+733,0.0,"2663, 2670","2663, 2670",0,becomes,becomes,group,group
+733,0.0,"2663, 2670","2663, 2670",0,becomes,becomes,predicator,predicator
+724,1.0,"2687, 2707","2687, 2708",1,while it's happening,while it's happening.,clause,clause
+725,0.0,"2687, 2692","2687, 2692",0,while,while,marker,marker
+726,0.0,"2693, 2695","2693, 2695",0,it,it,subject,subject
+726,0.0,"2693, 2695","2693, 2695",0,it,it,group,group
+726,0.0,"2693, 2695","2693, 2695",0,it,it,nominal-group,nominal-group
+727,0.0,"2695, 2697","2695, 2697",0,'s,'s,verbal-group,verbal-group
+727,0.0,"2695, 2697","2695, 2697",0,'s,'s,finite,finite
+727,0.0,"2695, 2697","2695, 2697",0,'s,'s,group,group
+728,0.0,"2698, 2707","2698, 2707",0,happening,happening,verbal-group,verbal-group
+728,0.0,"2698, 2707","2698, 2707",0,happening,happening,group,group
+728,0.0,"2698, 2707","2698, 2707",0,happening,happening,predicator,predicator
+386,1.0,"2710, 2737","2710, 2738",1,What's your experience been,What's your experience been?,clause,clause
+390,0.0,"2710, 2714","2710, 2714",0,What,What,complement-direct,complement-direct
+390,0.0,"2710, 2714","2710, 2714",0,What,What,group,group
+388,0.0,"2714, 2716","2714, 2716",0,'s,'s,verbal-group,verbal-group
+388,0.0,"2714, 2716","2714, 2716",0,'s,'s,finite,finite
+388,0.0,"2714, 2716","2714, 2716",0,'s,'s,group,group
+387,0.0,"2717, 2732","2717, 2732",0,your experience,your experience,subject,subject
+387,0.0,"2717, 2732","2717, 2732",0,your experience,your experience,group,group
+387,0.0,"2717, 2732","2717, 2732",0,your experience,your experience,nominal-group,nominal-group
+389,0.0,"2733, 2737","2733, 2737",0,been,been,verbal-group,verbal-group
+389,0.0,"2733, 2737","2733, 2737",0,been,been,group,group
+389,0.0,"2733, 2737","2733, 2737",0,been,been,predicator,predicator
+391,1.0,"2740, 2775","2740, 2776",1,Have you ever visited BeyondOCD.org,Have you ever visited BeyondOCD.org?,clause,clause
+395,0.0,"2740, 2744","2740, 2744",0,Have,Have,verbal-group,verbal-group
+395,0.0,"2740, 2744","2740, 2744",0,Have,Have,finite,finite
+395,0.0,"2740, 2744","2740, 2744",0,Have,Have,group,group
+392,0.0,"2745, 2748","2745, 2748",0,you,you,subject,subject
+392,0.0,"2745, 2748","2745, 2748",0,you,you,group,group
+392,0.0,"2745, 2748","2745, 2748",0,you,you,nominal-group,nominal-group
+393,0.0,"2749, 2753","2749, 2753",0,ever,ever,adverbial-group,adverbial-group
+393,0.0,"2749, 2753","2749, 2753",0,ever,ever,group,group
+393,0.0,"2749, 2753","2749, 2753",0,ever,ever,adjunct,adjunct
+393,0.0,"2749, 2753","2749, 2753",0,ever,ever,mood-adjunct,mood-adjunct
+394,0.0,"2754, 2761","2754, 2761",0,visited,visited,verbal-group,verbal-group
+394,0.0,"2754, 2761","2754, 2761",0,visited,visited,group,group
+394,0.0,"2754, 2761","2754, 2761",0,visited,visited,predicator,predicator
+396,1.0,"2762, 2775","2762, 2776",1,BeyondOCD.org,BeyondOCD.org?,complement-direct,complement-direct
+396,1.0,"2762, 2775","2762, 2776",1,BeyondOCD.org,BeyondOCD.org?,group,group
+396,1.0,"2762, 2775","2762, 2776",1,BeyondOCD.org,BeyondOCD.org?,nominal-group,nominal-group
+397,22.0,"2777, 2800","2777, 2822",22,I suspect I have before,"I suspect I have before, but forgot about it.",clause,clause
+398,0.0,"2777, 2778","2777, 2778",0,I,I,subject,subject
+398,0.0,"2777, 2778","2777, 2778",0,I,I,group,group
+398,0.0,"2777, 2778","2777, 2778",0,I,I,nominal-group,nominal-group
+399,0.0,"2779, 2786","2779, 2786",0,suspect,suspect,verbal-group,verbal-group
+399,0.0,"2779, 2786","2779, 2786",0,suspect,suspect,group,group
+399,0.0,"2779, 2786","2779, 2786",0,suspect,suspect,predicator,predicator
+400,1.0,"2787, 2800","2787, 2801",1,I have before,"I have before,",clause,clause
+401,0.0,"2787, 2788","2787, 2788",0,I,I,subject,subject
+401,0.0,"2787, 2788","2787, 2788",0,I,I,group,group
+401,0.0,"2787, 2788","2787, 2788",0,I,I,nominal-group,nominal-group
+402,0.0,"2789, 2793","2789, 2793",0,have,have,verbal-group,verbal-group
+402,0.0,"2789, 2793","2789, 2793",0,have,have,group,group
+402,0.0,"2789, 2793","2789, 2793",0,have,have,predicator,predicator
+403,0.0,"2794, 2800","2794, 2800",0,before,before,adverbial-group,adverbial-group
+403,0.0,"2794, 2800","2794, 2800",0,before,before,group,group
+403,0.0,"2794, 2800","2794, 2800",0,before,before,adjunct,adjunct
+403,0.0,"2794, 2800","2794, 2800",0,before,before,mood-adjunct,mood-adjunct
+404,1.0,"2802, 2821","2802, 2822",1,but forgot about it,but forgot about it.,clause,clause
+405,0.0,"2802, 2805","2802, 2805",0,but,but,marker,marker
+406,0.0,"2806, 2812","2806, 2812",0,forgot,forgot,verbal-group,verbal-group
+406,0.0,"2806, 2812","2806, 2812",0,forgot,forgot,group,group
+406,0.0,"2806, 2812","2806, 2812",0,forgot,forgot,predicator,predicator
+407,1.0,"2813, 2821","2813, 2822",1,about it,about it.,complement-direct,complement-direct
+407,1.0,"2813, 2821","2813, 2822",1,about it,about it.,group,group
+407,1.0,"2813, 2821","2813, 2822",1,about it,about it.,prepositional-group,prepositional-group
+408,1.0,"2824, 2875","2824, 2876",1,Last week I spent some time looking around the site,Last week I spent some time looking around the site.,clause,clause
+409,0.0,"2824, 2833","2824, 2833",0,Last week,Last week,group,group
+409,0.0,"2824, 2833","2824, 2833",0,Last week,Last week,adjunct,adjunct
+409,0.0,"2824, 2833","2824, 2833",0,Last week,Last week,nominal-group,nominal-group
+410,0.0,"2834, 2835","2834, 2835",0,I,I,subject,subject
+410,0.0,"2834, 2835","2834, 2835",0,I,I,group,group
+410,0.0,"2834, 2835","2834, 2835",0,I,I,nominal-group,nominal-group
+411,0.0,"2836, 2841","2836, 2841",0,spent,spent,verbal-group,verbal-group
+411,0.0,"2836, 2841","2836, 2841",0,spent,spent,group,group
+411,0.0,"2836, 2841","2836, 2841",0,spent,spent,predicator,predicator
+412,25.0,"2842, 2851","2842, 2876",25,some time,some time looking around the site.,nominal-group,nominal-group
+413,1.0,"2852, 2875","2852, 2876",1,looking around the site,looking around the site.,clause,clause
+414,0.0,"2852, 2859","2852, 2859",0,looking,looking,verbal-group,verbal-group
+414,0.0,"2852, 2859","2852, 2859",0,looking,looking,group,group
+414,0.0,"2852, 2859","2852, 2859",0,looking,looking,predicator,predicator
+415,1.0,"2860, 2875","2860, 2876",1,around the site,around the site.,complement-direct,complement-direct
+415,1.0,"2860, 2875","2860, 2876",1,around the site,around the site.,group,group
+415,1.0,"2860, 2875","2860, 2876",1,around the site,around the site.,prepositional-group,prepositional-group
+440,1.0,"2878, 2953","2878, 2954",1,The Expert Perspectives link at the top right had some really good articles,"The Expert Perspectives link at the top right had some really good articles,",clause,clause
+451,0.0,"2878, 2923","2878, 2923",0,The Expert Perspectives link at the top right,The Expert Perspectives link at the top right,subject,subject
+451,0.0,"2878, 2923","2878, 2923",0,The Expert Perspectives link at the top right,The Expert Perspectives link at the top right,group,group
+451,0.0,"2878, 2923","2878, 2923",0,The Expert Perspectives link at the top right,The Expert Perspectives link at the top right,nominal-group,nominal-group
+449,0.0,"2924, 2927","2924, 2927",0,had,had,verbal-group,verbal-group
+449,0.0,"2924, 2927","2924, 2927",0,had,had,group,group
+449,0.0,"2924, 2927","2924, 2927",0,had,had,predicator,predicator
+450,0.0,"2928, 2953","2928, 2953",0,some really good articles,some really good articles,complement-direct,complement-direct
+450,0.0,"2928, 2953","2928, 2953",0,some really good articles,some really good articles,group,group
+450,0.0,"2928, 2953","2928, 2953",0,some really good articles,some really good articles,nominal-group,nominal-group
+441,1.0,"2955, 3021","2955, 3022",1,and I also was thoroughly inspired by some of the Personal Stories,and I also was thoroughly inspired by some of the Personal Stories.,clause,clause
+442,0.0,"2955, 2958","2955, 2958",0,and,and,marker,marker
+443,0.0,"2959, 2960","2959, 2960",0,I,I,subject,subject
+443,0.0,"2959, 2960","2959, 2960",0,I,I,group,group
+443,0.0,"2959, 2960","2959, 2960",0,I,I,nominal-group,nominal-group
+444,0.0,"2961, 2965","2961, 2965",0,also,also,adverbial-group,adverbial-group
+444,0.0,"2961, 2965","2961, 2965",0,also,also,group,group
+444,0.0,"2961, 2965","2961, 2965",0,also,also,adjunct,adjunct
+447,0.0,"2966, 2969","2966, 2969",0,was,was,verbal-group,verbal-group
+447,0.0,"2966, 2969","2966, 2969",0,was,was,finite,finite
+447,0.0,"2966, 2969","2966, 2969",0,was,was,group,group
+445,0.0,"2970, 2980","2970, 2980",0,thoroughly,thoroughly,adverbial-group,adverbial-group
+445,0.0,"2970, 2980","2970, 2980",0,thoroughly,thoroughly,group,group
+445,0.0,"2970, 2980","2970, 2980",0,thoroughly,thoroughly,adjunct,adjunct
+446,0.0,"2981, 2989","2981, 2989",0,inspired,inspired,verbal-group,verbal-group
+446,0.0,"2981, 2989","2981, 2989",0,inspired,inspired,group,group
+446,0.0,"2981, 2989","2981, 2989",0,inspired,inspired,predicator,predicator
+448,8.06225774829855,"2990, 3021","2998, 3022",9,by some of the Personal Stories,of the Personal Stories.,complement-direct,complement-direct
+448,8.06225774829855,"2990, 3021","2998, 3022",9,by some of the Personal Stories,of the Personal Stories.,group,group
+448,8.06225774829855,"2990, 3021","2998, 3022",9,by some of the Personal Stories,of the Personal Stories.,prepositional-group,prepositional-group
+422,1.0,"3024, 3135","3024, 3136",1,This is one of the few places I've seen people post that their OCD really isn't a big problem in their life now,This is one of the few places I've seen people post that their OCD really isn't a big problem in their life now.,clause,clause
+437,0.0,"3024, 3028","3024, 3028",0,This,This,subject,subject
+437,0.0,"3024, 3028","3024, 3028",0,This,This,group,group
+423,1.0,"3054, 3135","3054, 3136",1,I've seen people post that their OCD really isn't a big problem in their life now,I've seen people post that their OCD really isn't a big problem in their life now.,clause,clause
+435,0.0,"3054, 3055","3054, 3055",0,I,I,subject,subject
+435,0.0,"3054, 3055","3054, 3055",0,I,I,group,group
+435,0.0,"3054, 3055","3054, 3055",0,I,I,nominal-group,nominal-group
+434,0.0,"3055, 3058","3055, 3058",0,'ve,'ve,verbal-group,verbal-group
+434,0.0,"3055, 3058","3055, 3058",0,'ve,'ve,finite,finite
+434,0.0,"3055, 3058","3055, 3058",0,'ve,'ve,group,group
+433,0.0,"3059, 3063","3059, 3063",0,seen,seen,verbal-group,verbal-group
+433,0.0,"3059, 3063","3059, 3063",0,seen,seen,group,group
+433,0.0,"3059, 3063","3059, 3063",0,seen,seen,predicator,predicator
+431,7.0710678118654755,"3071, 3135","3064, 3136",8,post that their OCD really isn't a big problem in their life now,people post that their OCD really isn't a big problem in their life now.,clause,clause
+436,0.0,"3064, 3070","3064, 3070",0,people,people,group,group
+436,0.0,"3064, 3070","3064, 3070",0,people,people,nominal-group,nominal-group
+432,0.0,"3071, 3075","3071, 3075",0,post,post,verbal-group,verbal-group
+432,0.0,"3071, 3075","3071, 3075",0,post,post,group,group
+432,0.0,"3071, 3075","3071, 3075",0,post,post,predicator,predicator
+424,1.0,"3076, 3135","3076, 3136",1,that their OCD really isn't a big problem in their life now,that their OCD really isn't a big problem in their life now.,clause,clause
+425,0.0,"3076, 3080","3076, 3080",0,that,that,marker,marker
+426,0.0,"3081, 3090","3081, 3090",0,their OCD,their OCD,subject,subject
+426,0.0,"3081, 3090","3081, 3090",0,their OCD,their OCD,group,group
+426,0.0,"3081, 3090","3081, 3090",0,their OCD,their OCD,nominal-group,nominal-group
+427,0.0,"3091, 3097","3091, 3097",0,really,really,adverbial-group,adverbial-group
+427,0.0,"3091, 3097","3091, 3097",0,really,really,group,group
+427,0.0,"3091, 3097","3091, 3097",0,really,really,adjunct,adjunct
+427,0.0,"3091, 3097","3091, 3097",0,really,really,mood-adjunct,mood-adjunct
+428,0.0,"3098, 3103","3098, 3103",0,isn't,isn't,verbal-group,verbal-group
+428,0.0,"3098, 3103","3098, 3103",0,isn't,isn't,group,group
+428,0.0,"3098, 3103","3098, 3103",0,isn't,isn't,predicator,predicator
+429,0.0,"3104, 3131","3104, 3131",0,a big problem in their life,a big problem in their life,complement-direct,complement-direct
+429,0.0,"3104, 3131","3104, 3131",0,a big problem in their life,a big problem in their life,group,group
+429,0.0,"3104, 3131","3104, 3131",0,a big problem in their life,a big problem in their life,nominal-group,nominal-group
+430,1.0,"3132, 3135","3132, 3136",1,now,now.,adverbial-group,adverbial-group
+430,1.0,"3132, 3135","3132, 3136",1,now,now.,group,group
+430,1.0,"3132, 3135","3132, 3136",1,now,now.,adjunct,adjunct
+416,1.0,"3138, 3166","3138, 3167",1,I love to read those stories,I love to read those stories!,clause,clause
+417,0.0,"3138, 3139","3138, 3139",0,I,I,subject,subject
+417,0.0,"3138, 3139","3138, 3139",0,I,I,group,group
+417,0.0,"3138, 3139","3138, 3139",0,I,I,nominal-group,nominal-group
+418,0.0,"3140, 3144","3140, 3144",0,love,love,verbal-group,verbal-group
+418,0.0,"3140, 3144","3140, 3144",0,love,love,group,group
+418,0.0,"3140, 3144","3140, 3144",0,love,love,predicator,predicator
+419,1.0,"3145, 3166","3145, 3167",1,to read those stories,to read those stories!,clause,clause
+420,0.0,"3145, 3152","3145, 3152",0,to read,to read,verbal-group,verbal-group
+420,0.0,"3145, 3152","3145, 3152",0,to read,to read,group,group
+420,0.0,"3145, 3152","3145, 3152",0,to read,to read,predicator,predicator
+421,1.0,"3153, 3166","3153, 3167",1,those stories,those stories!,complement-direct,complement-direct
+421,1.0,"3153, 3166","3153, 3167",1,those stories,those stories!,group,group
+421,1.0,"3153, 3166","3153, 3167",1,those stories,those stories!,nominal-group,nominal-group
+452,1.0,"3169, 3275","3169, 3276",1,Every so often people write to me asking if they can write a post about their product or system or website,Every so often people write to me asking if they can write a post about their product or system or website.,clause,clause
+454,15.0,"3184, 3190","3169, 3190",15,people,Every so often people,subject,subject
+453,7.0,"3169, 3183","3169, 3190",7,Every so often,Every so often people,group,group
+454,15.0,"3184, 3190","3169, 3190",15,people,Every so often people,nominal-group,nominal-group
+455,0.0,"3191, 3196","3191, 3196",0,write,write,verbal-group,verbal-group
+455,0.0,"3191, 3196","3191, 3196",0,write,write,group,group
+455,0.0,"3191, 3196","3191, 3196",0,write,write,predicator,predicator
+457,3.1622776601683795,"3203, 3275","3200, 3276",4,asking if they can write a post about their product or system or website,me asking if they can write a post about their product or system or website.,clause,clause
+456,3.0,"3197, 3202","3200, 3202",3,to me,me,group,group
+459,0.0,"3203, 3209","3203, 3209",0,asking,asking,verbal-group,verbal-group
+459,0.0,"3203, 3209","3203, 3209",0,asking,asking,group,group
+459,0.0,"3203, 3209","3203, 3209",0,asking,asking,predicator,predicator
+458,1.0,"3210, 3275","3210, 3276",1,if they can write a post about their product or system or website,if they can write a post about their product or system or website.,clause,clause
+465,25.019992006393608,"3235, 3275","3210, 3276",26,about their product or system or website,if they can write a post about their product or system or website.,adjunct,adjunct
+460,0.0,"3210, 3212","3210, 3212",0,if,if,marker,marker
+461,0.0,"3213, 3217","3213, 3217",0,they,they,subject,subject
+461,0.0,"3213, 3217","3213, 3217",0,they,they,group,group
+461,0.0,"3213, 3217","3213, 3217",0,they,they,nominal-group,nominal-group
+462,0.0,"3218, 3221","3218, 3221",0,can,can,verbal-group,verbal-group
+462,0.0,"3218, 3221","3218, 3221",0,can,can,finite,finite
+462,0.0,"3218, 3221","3218, 3221",0,can,can,group,group
+463,0.0,"3222, 3227","3222, 3227",0,write,write,verbal-group,verbal-group
+463,0.0,"3222, 3227","3222, 3227",0,write,write,group,group
+463,0.0,"3222, 3227","3222, 3227",0,write,write,predicator,predicator
+464,42.0,"3228, 3234","3228, 3276",42,a post,a post about their product or system or website.,complement-direct,complement-direct
+465,7.0710678118654755,"3235, 3275","3228, 3276",8,about their product or system or website,a post about their product or system or website.,group,group
+464,42.0,"3228, 3234","3228, 3276",42,a post,a post about their product or system or website.,nominal-group,nominal-group
+654,8.0,"3278, 3290","3278, 3282",8,Some of them,Some,group,group
+655,0.0,"3291, 3294","3291, 3294",0,are,are,verbal-group,verbal-group
+655,0.0,"3291, 3294","3291, 3294",0,are,are,group,group
+655,0.0,"3291, 3294","3291, 3294",0,are,are,predicator,predicator
+755,0.0,"3318, 3319","3318, 3319",0,I,I,subject,subject
+755,0.0,"3318, 3319","3318, 3319",0,I,I,group,group
+755,0.0,"3318, 3319","3318, 3319",0,I,I,nominal-group,nominal-group
+757,7.0,"3329, 3333","3322, 3333",7,wary,really wary,complement-direct,complement-direct
+757,7.0,"3329, 3333","3322, 3333",7,wary,really wary,adjectival-group,adjectival-group
+758,5.0,"3322, 3328","3322, 3333",5,really,really wary,group,group
+754,0.0,"3334, 3336","3334, 3336",0,of,of,marker,marker
+741,3.1622776601683795,"3334, 3445","3337, 3446",4,of appearing to endorse something I know nothing about when something as important as mental health is involved,appearing to endorse something I know nothing about when something as important as mental health is involved.,clause,clause
+753,0.0,"3337, 3346","3337, 3346",0,appearing,appearing,verbal-group,verbal-group
+753,0.0,"3337, 3346","3337, 3346",0,appearing,appearing,group,group
+753,0.0,"3337, 3346","3337, 3346",0,appearing,appearing,predicator,predicator
+658,33.015148038438355,"3314, 3445","3347, 3446",34,but I'm really wary of appearing to endorse something I know nothing about when something as important as mental health is involved,to endorse something I know nothing about when something as important as mental health is involved.,clause,clause
+752,0.0,"3347, 3357","3347, 3357",0,to endorse,to endorse,verbal-group,verbal-group
+752,0.0,"3347, 3357","3347, 3357",0,to endorse,to endorse,group,group
+752,0.0,"3347, 3357","3347, 3357",0,to endorse,to endorse,predicator,predicator
+751,58.0,"3358, 3388","3358, 3446",58,something I know nothing about,something I know nothing about when something as important as mental health is involved.,complement-direct,complement-direct
+747,0.0,"3368, 3369","3368, 3369",0,I,I,subject,subject
+747,0.0,"3368, 3369","3368, 3369",0,I,I,group,group
+747,0.0,"3368, 3369","3368, 3369",0,I,I,nominal-group,nominal-group
+748,0.0,"3370, 3374","3370, 3374",0,know,know,verbal-group,verbal-group
+748,0.0,"3370, 3374","3370, 3374",0,know,know,group,group
+748,0.0,"3370, 3374","3370, 3374",0,know,know,predicator,predicator
+746,54.00925846556311,"3437, 3445","3383, 3446",55,involved,about when something as important as mental health is involved.,complement-direct,complement-direct
+750,0.0,"3383, 3388","3383, 3388",0,about,about,marker,marker
+739,1.0,"3389, 3445","3389, 3446",1,when something as important as mental health is involved,when something as important as mental health is involved.,clause,clause
+744,0.0,"3394, 3433","3394, 3433",0,something as important as mental health,something as important as mental health,subject,subject
+744,0.0,"3394, 3433","3394, 3433",0,something as important as mental health,something as important as mental health,group,group
+744,0.0,"3394, 3433","3394, 3433",0,something as important as mental health,something as important as mental health,nominal-group,nominal-group
+745,0.0,"3434, 3436","3434, 3436",0,is,is,verbal-group,verbal-group
+745,0.0,"3434, 3436","3434, 3436",0,is,is,group,group
+746,0.0,"3437, 3445","3437, 3445",0,involved,involved,group,group
+477,0.0,"3448, 3490","3448, 3490",0,The Beyond OCD site is run by a non-profit,The Beyond OCD site is run by a non-profit,clause,clause
+480,0.0,"3448, 3467","3448, 3467",0,The Beyond OCD site,The Beyond OCD site,subject,subject
+480,0.0,"3448, 3467","3448, 3467",0,The Beyond OCD site,The Beyond OCD site,group,group
+480,0.0,"3448, 3467","3448, 3467",0,The Beyond OCD site,The Beyond OCD site,nominal-group,nominal-group
+481,0.0,"3468, 3470","3468, 3470",0,is,is,verbal-group,verbal-group
+481,0.0,"3468, 3470","3468, 3470",0,is,is,finite,finite
+481,0.0,"3468, 3470","3468, 3470",0,is,is,group,group
+482,0.0,"3471, 3474","3471, 3474",0,run,run,verbal-group,verbal-group
+482,0.0,"3471, 3474","3471, 3474",0,run,run,group,group
+482,0.0,"3471, 3474","3471, 3474",0,run,run,predicator,predicator
+483,0.0,"3475, 3490","3475, 3490",0,by a non-profit,by a non-profit,complement-direct,complement-direct
+483,0.0,"3475, 3490","3475, 3490",0,by a non-profit,by a non-profit,group,group
+478,1.0,"3491, 3530","3491, 3531",1,and doesn't seem to be selling anything,and doesn't seem to be selling anything.,clause,clause
+479,0.0,"3491, 3494","3491, 3494",0,and,and,marker,marker
+484,0.0,"3495, 3499","3495, 3499",0,does,does,verbal-group,verbal-group
+484,0.0,"3495, 3499","3495, 3499",0,does,does,finite,finite
+484,0.0,"3495, 3499","3495, 3499",0,does,does,group,group
+485,0.0,"3499, 3507","3499, 3507",0,n't seem,n't seem,verbal-group,verbal-group
+485,0.0,"3499, 3507","3499, 3507",0,n't seem,n't seem,group,group
+485,0.0,"3499, 3507","3499, 3507",0,n't seem,n't seem,predicator,predicator
+486,1.0,"3508, 3530","3508, 3531",1,to be selling anything,to be selling anything.,clause,clause
+487,11.0,"3508, 3521","3508, 3510",11,to be selling,to,predicator,predicator
+487,8.54400374531753,"3508, 3521","3511, 3513",11,to be selling,be,verbal-group,verbal-group
+487,8.54400374531753,"3508, 3521","3511, 3513",11,to be selling,be,group,group
+488,1.0,"3522, 3530","3522, 3531",1,anything,anything.,complement-direct,complement-direct
+488,1.0,"3522, 3530","3522, 3531",1,anything,anything.,group,group
+488,1.0,"3522, 3530","3522, 3531",1,anything,anything.,nominal-group,nominal-group
+466,1.0,"3533, 3565","3533, 3566",1,Take a look if you have a chance,Take a look if you have a chance.,clause,clause
+467,0.0,"3533, 3537","3533, 3537",0,Take,Take,verbal-group,verbal-group
+467,0.0,"3533, 3537","3533, 3537",0,Take,Take,group,group
+467,0.0,"3533, 3537","3533, 3537",0,Take,Take,predicator,predicator
+468,0.0,"3538, 3544","3538, 3544",0,a look,a look,complement-direct,complement-direct
+468,0.0,"3538, 3544","3538, 3544",0,a look,a look,group,group
+468,0.0,"3538, 3544","3538, 3544",0,a look,a look,nominal-group,nominal-group
+469,1.0,"3545, 3565","3545, 3566",1,if you have a chance,if you have a chance.,clause,clause
+470,0.0,"3545, 3547","3545, 3547",0,if,if,marker,marker
+471,0.0,"3548, 3551","3548, 3551",0,you,you,subject,subject
+471,0.0,"3548, 3551","3548, 3551",0,you,you,group,group
+471,0.0,"3548, 3551","3548, 3551",0,you,you,nominal-group,nominal-group
+472,0.0,"3552, 3556","3552, 3556",0,have,have,verbal-group,verbal-group
+472,0.0,"3552, 3556","3552, 3556",0,have,have,group,group
+472,0.0,"3552, 3556","3552, 3556",0,have,have,predicator,predicator
+473,1.0,"3557, 3565","3557, 3566",1,a chance,a chance.,complement-direct,complement-direct
+473,1.0,"3557, 3565","3557, 3566",1,a chance,a chance.,group,group
+473,1.0,"3557, 3565","3557, 3566",1,a chance,a chance.,nominal-group,nominal-group
+489,1.0,"3572, 3654","3572, 3655",1,I just noticed that Janet Singer from OCDTalk has lots of posts on the site's blog,I just noticed that Janet Singer from OCDTalk has lots of posts on the site's blog.,clause,clause
+495,0.0,"3572, 3573","3572, 3573",0,I,I,subject,subject
+495,0.0,"3572, 3573","3572, 3573",0,I,I,group,group
+495,0.0,"3572, 3573","3572, 3573",0,I,I,nominal-group,nominal-group
+497,0.0,"3574, 3578","3574, 3578",0,just,just,adverbial-group,adverbial-group
+497,0.0,"3574, 3578","3574, 3578",0,just,just,group,group
+497,0.0,"3574, 3578","3574, 3578",0,just,just,adjunct,adjunct
+497,0.0,"3574, 3578","3574, 3578",0,just,just,mood-adjunct,mood-adjunct
+496,0.0,"3579, 3586","3579, 3586",0,noticed,noticed,verbal-group,verbal-group
+496,0.0,"3579, 3586","3579, 3586",0,noticed,noticed,group,group
+496,0.0,"3579, 3586","3579, 3586",0,noticed,noticed,predicator,predicator
+490,1.0,"3587, 3654","3587, 3655",1,that Janet Singer from OCDTalk has lots of posts on the site's blog,that Janet Singer from OCDTalk has lots of posts on the site's blog.,clause,clause
+491,0.0,"3587, 3591","3587, 3591",0,that,that,marker,marker
+492,0.0,"3592, 3617","3592, 3617",0,Janet Singer from OCDTalk,Janet Singer from OCDTalk,subject,subject
+492,0.0,"3592, 3617","3592, 3617",0,Janet Singer from OCDTalk,Janet Singer from OCDTalk,group,group
+492,0.0,"3592, 3617","3592, 3617",0,Janet Singer from OCDTalk,Janet Singer from OCDTalk,nominal-group,nominal-group
+493,0.0,"3618, 3621","3618, 3621",0,has,has,verbal-group,verbal-group
+493,0.0,"3618, 3621","3618, 3621",0,has,has,group,group
+493,0.0,"3618, 3621","3618, 3621",0,has,has,predicator,predicator
+494,1.0,"3622, 3654","3622, 3655",1,lots of posts on the site's blog,lots of posts on the site's blog.,complement-direct,complement-direct
+494,1.0,"3622, 3654","3622, 3655",1,lots of posts on the site's blog,lots of posts on the site's blog.,group,group
+494,1.0,"3622, 3654","3622, 3655",1,lots of posts on the site's blog,lots of posts on the site's blog.,nominal-group,nominal-group
+499,1.0,"3657, 3723","3657, 3724",1,Which means I've almost certainly been told about this site before,Which means I've almost certainly been told about this site before.,clause,clause
+501,0.0,"3657, 3662","3657, 3662",0,Which,Which,subject,subject
+501,0.0,"3657, 3662","3657, 3662",0,Which,Which,group,group
+502,0.0,"3663, 3668","3663, 3668",0,means,means,verbal-group,verbal-group
+502,0.0,"3663, 3668","3663, 3668",0,means,means,group,group
+502,0.0,"3663, 3668","3663, 3668",0,means,means,predicator,predicator
+500,1.0,"3669, 3723","3669, 3724",1,I've almost certainly been told about this site before,I've almost certainly been told about this site before.,clause,clause
+503,0.0,"3669, 3670","3669, 3670",0,I,I,subject,subject
+503,0.0,"3669, 3670","3669, 3670",0,I,I,group,group
+503,0.0,"3669, 3670","3669, 3670",0,I,I,nominal-group,nominal-group
+504,0.0,"3670, 3673","3670, 3673",0,'ve,'ve,verbal-group,verbal-group
+504,0.0,"3670, 3673","3670, 3673",0,'ve,'ve,finite,finite
+504,0.0,"3670, 3673","3670, 3673",0,'ve,'ve,group,group
+505,0.0,"3674, 3690","3674, 3690",0,almost certainly,almost certainly,adverbial-group,adverbial-group
+505,0.0,"3674, 3690","3674, 3690",0,almost certainly,almost certainly,group,group
+505,0.0,"3674, 3690","3674, 3690",0,almost certainly,almost certainly,adjunct,adjunct
+506,0.0,"3691, 3700","3691, 3700",0,been told,been told,verbal-group,verbal-group
+506,0.0,"3691, 3700","3691, 3700",0,been told,been told,group,group
+506,0.0,"3691, 3700","3691, 3700",0,been told,been told,predicator,predicator
+507,0.0,"3701, 3716","3701, 3716",0,about this site,about this site,complement-direct,complement-direct
+507,0.0,"3701, 3716","3701, 3716",0,about this site,about this site,group,group
+507,0.0,"3701, 3716","3701, 3716",0,about this site,about this site,prepositional-group,prepositional-group
+508,1.0,"3717, 3723","3717, 3724",1,before,before.,adverbial-group,adverbial-group
+508,1.0,"3717, 3723","3717, 3724",1,before,before.,group,group
+508,1.0,"3717, 3723","3717, 3724",1,before,before.,adjunct,adjunct
+615,1.0,"3750, 3809","3750, 3810",1,Last weekend I had either a stomach virus or food poisoning,Last weekend I had either a stomach virus or food poisoning.,clause,clause
+619,0.0,"3750, 3762","3750, 3762",0,Last weekend,Last weekend,group,group
+619,0.0,"3750, 3762","3750, 3762",0,Last weekend,Last weekend,nominal-group,nominal-group
+618,0.0,"3763, 3764","3763, 3764",0,I,I,subject,subject
+618,0.0,"3763, 3764","3763, 3764",0,I,I,group,group
+618,0.0,"3763, 3764","3763, 3764",0,I,I,nominal-group,nominal-group
+617,0.0,"3765, 3768","3765, 3768",0,had,had,verbal-group,verbal-group
+617,0.0,"3765, 3768","3765, 3768",0,had,had,group,group
+617,0.0,"3765, 3768","3765, 3768",0,had,had,predicator,predicator
+616,1.0,"3769, 3809","3769, 3810",1,either a stomach virus or food poisoning,either a stomach virus or food poisoning.,complement-direct,complement-direct
+616,1.0,"3769, 3809","3769, 3810",1,either a stomach virus or food poisoning,either a stomach virus or food poisoning.,group,group
+616,1.0,"3769, 3809","3769, 3810",1,either a stomach virus or food poisoning,either a stomach virus or food poisoning.,nominal-group,nominal-group
+705,33.0,"3849, 3865","3816, 3865",33,over the weekend,while it made sense to stay home over the weekend,adjunct,adjunct
+709,4.0,"3812, 3821","3816, 3821",4,And while,while,marker,marker
+706,0.0,"3822, 3824","3822, 3824",0,it,it,subject,subject
+706,0.0,"3822, 3824","3822, 3824",0,it,it,group,group
+706,0.0,"3822, 3824","3822, 3824",0,it,it,nominal-group,nominal-group
+707,0.0,"3825, 3829","3825, 3829",0,made,made,verbal-group,verbal-group
+707,0.0,"3825, 3829","3825, 3829",0,made,made,group,group
+707,0.0,"3825, 3829","3825, 3829",0,made,made,predicator,predicator
+708,0.0,"3830, 3835","3830, 3835",0,sense,sense,complement-direct,complement-direct
+708,0.0,"3830, 3835","3830, 3835",0,sense,sense,group,group
+708,0.0,"3830, 3835","3830, 3835",0,sense,sense,nominal-group,nominal-group
+702,0.0,"3836, 3865","3836, 3865",0,to stay home over the weekend,to stay home over the weekend,clause,clause
+703,0.0,"3836, 3843","3836, 3843",0,to stay,to stay,verbal-group,verbal-group
+703,0.0,"3836, 3843","3836, 3843",0,to stay,to stay,group,group
+703,0.0,"3836, 3843","3836, 3843",0,to stay,to stay,predicator,predicator
+704,17.0,"3844, 3848","3844, 3865",17,home,home over the weekend,complement-direct,complement-direct
+705,5.0,"3849, 3865","3844, 3865",5,over the weekend,home over the weekend,group,group
+704,17.0,"3844, 3848","3844, 3865",17,home,home over the weekend,nominal-group,nominal-group
+699,2.0,"3867, 3868","3865, 3868",2,I,", I",subject,subject
+699,2.0,"3867, 3868","3865, 3868",2,I,", I",group,group
+699,2.0,"3867, 3868","3865, 3868",2,I,", I",nominal-group,nominal-group
+700,0.0,"3869, 3873","3869, 3873",0,find,find,verbal-group,verbal-group
+700,0.0,"3869, 3873","3869, 3873",0,find,find,group,group
+700,0.0,"3869, 3873","3869, 3873",0,find,find,predicator,predicator
+691,7.0710678118654755,"3867, 3913","3874, 3914",8,"I find myself wanting to avoid people now, too","myself wanting to avoid people now, too.",clause,clause
+701,0.0,"3874, 3880","3874, 3880",0,myself,myself,group,group
+701,0.0,"3874, 3880","3874, 3880",0,myself,myself,nominal-group,nominal-group
+698,0.0,"3881, 3888","3881, 3888",0,wanting,wanting,verbal-group,verbal-group
+698,0.0,"3881, 3888","3881, 3888",0,wanting,wanting,group,group
+698,0.0,"3881, 3888","3881, 3888",0,wanting,wanting,predicator,predicator
+693,1.0,"3889, 3913","3889, 3914",1,"to avoid people now, too","to avoid people now, too.",clause,clause
+694,0.0,"3889, 3897","3889, 3897",0,to avoid,to avoid,verbal-group,verbal-group
+694,0.0,"3889, 3897","3889, 3897",0,to avoid,to avoid,group,group
+694,0.0,"3889, 3897","3889, 3897",0,to avoid,to avoid,predicator,predicator
+695,0.0,"3898, 3904","3898, 3904",0,people,people,complement-direct,complement-direct
+695,0.0,"3898, 3904","3898, 3904",0,people,people,group,group
+695,0.0,"3898, 3904","3898, 3904",0,people,people,nominal-group,nominal-group
+696,0.0,"3905, 3908","3905, 3908",0,now,now,adverbial-group,adverbial-group
+696,0.0,"3905, 3908","3905, 3908",0,now,now,group,group
+696,0.0,"3905, 3908","3905, 3908",0,now,now,adjunct,adjunct
+697,2.23606797749979,"3910, 3913","3908, 3914",3,too,", too.",adverbial-group,adverbial-group
+697,2.23606797749979,"3910, 3913","3908, 3914",3,too,", too.",group,group
+697,2.23606797749979,"3910, 3913","3908, 3914",3,too,", too.",adjunct,adjunct
+509,0.0,"3916, 3964","3916, 3964",0,My sister is traveling with her family next week,My sister is traveling with her family next week,clause,clause
+525,0.0,"3916, 3925","3916, 3925",0,My sister,My sister,subject,subject
+525,0.0,"3916, 3925","3916, 3925",0,My sister,My sister,group,group
+525,0.0,"3916, 3925","3916, 3925",0,My sister,My sister,nominal-group,nominal-group
+526,0.0,"3926, 3928","3926, 3928",0,is,is,verbal-group,verbal-group
+526,0.0,"3926, 3928","3926, 3928",0,is,is,finite,finite
+526,0.0,"3926, 3928","3926, 3928",0,is,is,group,group
+527,0.0,"3929, 3938","3929, 3938",0,traveling,traveling,verbal-group,verbal-group
+527,0.0,"3929, 3938","3929, 3938",0,traveling,traveling,group,group
+527,0.0,"3929, 3938","3929, 3938",0,traveling,traveling,predicator,predicator
+528,0.0,"3939, 3954","3939, 3954",0,with her family,with her family,group,group
+528,0.0,"3939, 3954","3939, 3954",0,with her family,with her family,prepositional-group,prepositional-group
+528,0.0,"3939, 3954","3939, 3954",0,with her family,with her family,adjunct,adjunct
+529,0.0,"3955, 3964","3955, 3964",0,next week,next week,group,group
+529,0.0,"3955, 3964","3955, 3964",0,next week,next week,adjunct,adjunct
+529,0.0,"3955, 3964","3955, 3964",0,next week,next week,nominal-group,nominal-group
+516,0.0,"3965, 3968","3965, 3968",0,and,and,marker,marker
+517,0.0,"3969, 3970","3969, 3970",0,I,I,subject,subject
+517,0.0,"3969, 3970","3969, 3970",0,I,I,group,group
+517,0.0,"3969, 3970","3969, 3970",0,I,I,nominal-group,nominal-group
+518,0.0,"3971, 3975","3971, 3975",0,have,have,verbal-group,verbal-group
+518,0.0,"3971, 3975","3971, 3975",0,have,have,group,group
+518,0.0,"3971, 3975","3971, 3975",0,have,have,predicator,predicator
+519,41.0,"3976, 4003","3976, 4044",41,a fear of still being germy,a fear of still being germy and getting them all sick on their trip.,complement-direct,complement-direct
+519,41.0,"3976, 4003","3976, 4044",41,a fear of still being germy,a fear of still being germy and getting them all sick on their trip.,group,group
+519,41.0,"3976, 4003","3976, 4044",41,a fear of still being germy,a fear of still being germy and getting them all sick on their trip.,nominal-group,nominal-group
+522,53.08483775994799,"3986, 3991","3983, 4044",56,still,of still being germy and getting them all sick on their trip.,adjunct,adjunct
+521,0.0,"3983, 3985","3983, 3985",0,of,of,marker,marker
+523,0.0,"3992, 3997","3992, 3997",0,being,being,verbal-group,verbal-group
+523,0.0,"3992, 3997","3992, 3997",0,being,being,group,group
+523,0.0,"3992, 3997","3992, 3997",0,being,being,predicator,predicator
+524,41.0,"3998, 4003","3998, 4044",41,germy,germy and getting them all sick on their trip.,adjectival-group,adjectival-group
+511,12.041594578792296,"4004, 4043","4016, 4044",13,and getting them all sick on their trip,them all sick on their trip.,clause,clause
+514,4.0,"4016, 4024","4016, 4020",4,them all,them,group,group
+514,4.0,"4016, 4024","4016, 4020",4,them all,them,nominal-group,nominal-group
+515,5.0990195135927845,"4025, 4043","4030, 4044",6,sick on their trip,on their trip.,complement-direct,complement-direct
+515,5.0990195135927845,"4025, 4043","4030, 4044",6,sick on their trip,on their trip.,group,group
+711,1.0,"4046, 4180","4046, 4181",1,I've confirmed with several people that most people don't think this way that far after an illness (or even two days after an illness),I've confirmed with several people that most people don't think this way that far after an illness (or even two days after an illness).,clause,clause
+717,0.0,"4046, 4047","4046, 4047",0,I,I,subject,subject
+717,0.0,"4046, 4047","4046, 4047",0,I,I,group,group
+717,0.0,"4046, 4047","4046, 4047",0,I,I,nominal-group,nominal-group
+718,0.0,"4047, 4050","4047, 4050",0,'ve,'ve,verbal-group,verbal-group
+718,0.0,"4047, 4050","4047, 4050",0,'ve,'ve,finite,finite
+718,0.0,"4047, 4050","4047, 4050",0,'ve,'ve,group,group
+719,0.0,"4051, 4060","4051, 4060",0,confirmed,confirmed,verbal-group,verbal-group
+719,0.0,"4051, 4060","4051, 4060",0,confirmed,confirmed,group,group
+719,0.0,"4051, 4060","4051, 4060",0,confirmed,confirmed,predicator,predicator
+720,0.0,"4061, 4080","4061, 4080",0,with several people,with several people,complement-direct,complement-direct
+720,0.0,"4061, 4080","4061, 4080",0,with several people,with several people,group,group
+720,0.0,"4061, 4080","4061, 4080",0,with several people,with several people,prepositional-group,prepositional-group
+712,1.0,"4081, 4180","4081, 4181",1,that most people don't think this way that far after an illness (or even two days after an illness),that most people don't think this way that far after an illness (or even two days after an illness).,clause,clause
+713,0.0,"4081, 4085","4081, 4085",0,that,that,marker,marker
+714,0.0,"4086, 4097","4086, 4097",0,most people,most people,subject,subject
+714,0.0,"4086, 4097","4086, 4097",0,most people,most people,group,group
+714,0.0,"4086, 4097","4086, 4097",0,most people,most people,nominal-group,nominal-group
+715,0.0,"4098, 4100","4098, 4100",0,do,do,verbal-group,verbal-group
+715,0.0,"4098, 4100","4098, 4100",0,do,do,finite,finite
+715,0.0,"4098, 4100","4098, 4100",0,do,do,group,group
+716,0.0,"4100, 4109","4100, 4109",0,n't think,n't think,verbal-group,verbal-group
+716,0.0,"4100, 4109","4100, 4109",0,n't think,n't think,group,group
+716,0.0,"4100, 4109","4100, 4109",0,n't think,n't think,predicator,predicator
+760,0.0,"4110, 4118","4110, 4118",0,this way,this way,complement-direct,complement-direct
+760,0.0,"4110, 4118","4110, 4118",0,this way,this way,group,group
+760,0.0,"4110, 4118","4110, 4118",0,this way,this way,nominal-group,nominal-group
+759,53.0,"4119, 4180","4119, 4127",53,that far after an illness (or even two days after an illness),that far,adverbial-group,adverbial-group
+759,9.055385138137417,"4119, 4180","4128, 4181",10,that far after an illness (or even two days after an illness),after an illness (or even two days after an illness).,group,group
+759,9.055385138137417,"4119, 4180","4128, 4181",10,that far after an illness (or even two days after an illness),after an illness (or even two days after an illness).,adjunct,adjunct
+531,0.0,"4183, 4185","4183, 4185",0,So,So,marker,marker
+532,0.0,"4186, 4196","4186, 4196",0,apparently,apparently,adverbial-group,adverbial-group
+532,0.0,"4186, 4196","4186, 4196",0,apparently,apparently,group,group
+532,0.0,"4186, 4196","4186, 4196",0,apparently,apparently,adjunct,adjunct
+533,0.0,"4197, 4198","4197, 4198",0,I,I,subject,subject
+533,0.0,"4197, 4198","4197, 4198",0,I,I,group,group
+533,0.0,"4197, 4198","4197, 4198",0,I,I,nominal-group,nominal-group
+534,0.0,"4199, 4205","4199, 4205",0,should,should,verbal-group,verbal-group
+534,0.0,"4199, 4205","4199, 4205",0,should,should,finite,finite
+534,0.0,"4199, 4205","4199, 4205",0,should,should,group,group
+535,0.0,"4206, 4211","4206, 4211",0,visit,visit,verbal-group,verbal-group
+535,0.0,"4206, 4211","4206, 4211",0,visit,visit,group,group
+535,0.0,"4206, 4211","4206, 4211",0,visit,visit,predicator,predicator
+536,0.0,"4212, 4221","4212, 4221",0,my sister,my sister,group,group
+536,0.0,"4212, 4221","4212, 4221",0,my sister,my sister,nominal-group,nominal-group
+537,1.0,"4222, 4234","4222, 4235",1,this weekend,this weekend.,group,group
+537,1.0,"4222, 4234","4222, 4235",1,this weekend,this weekend.,nominal-group,nominal-group
+538,5.0990195135927845,"4242, 4292","4237, 4293",6,making the right choice isn't fun most of the time,"Ugh, making the right choice isn't fun most of the time!",clause,clause
+539,2.0,"4242, 4265","4240, 4265",2,making the right choice,", making the right choice",clause,clause
+2403,0.0,"4242, 4248","4242, 4248",0,making,making,verbal-group,verbal-group
+2403,0.0,"4242, 4248","4242, 4248",0,making,making,group,group
+2403,0.0,"4242, 4248","4242, 4248",0,making,making,predicator,predicator
+2404,0.0,"4249, 4265","4249, 4265",0,the right choice,the right choice,complement-direct,complement-direct
+2404,0.0,"4249, 4265","4249, 4265",0,the right choice,the right choice,group,group
+2404,0.0,"4249, 4265","4249, 4265",0,the right choice,the right choice,nominal-group,nominal-group
+540,3.0,"4266, 4271","4266, 4268",3,isn't,is,verbal-group,verbal-group
+540,3.0,"4266, 4271","4266, 4268",3,isn't,is,group,group
+541,4.0,"4272, 4275","4268, 4275",4,fun,n't fun,group,group
+540,4.47213595499958,"4266, 4271","4268, 4275",6,isn't,n't fun,predicator,predicator
+542,1.0,"4276, 4292","4276, 4293",1,most of the time,most of the time!,group,group
+543,1.0,"4295, 4339","4295, 4340",1,We're having a mini-heat wave here in the NW,We're having a mini-heat wave here in the NW.,clause,clause
+544,0.0,"4295, 4297","4295, 4297",0,We,We,subject,subject
+544,0.0,"4295, 4297","4295, 4297",0,We,We,group,group
+544,0.0,"4295, 4297","4295, 4297",0,We,We,nominal-group,nominal-group
+545,0.0,"4297, 4300","4297, 4300",0,'re,'re,verbal-group,verbal-group
+545,0.0,"4297, 4300","4297, 4300",0,'re,'re,finite,finite
+545,0.0,"4297, 4300","4297, 4300",0,'re,'re,group,group
+546,0.0,"4301, 4307","4301, 4307",0,having,having,verbal-group,verbal-group
+546,0.0,"4301, 4307","4301, 4307",0,having,having,group,group
+546,0.0,"4301, 4307","4301, 4307",0,having,having,predicator,predicator
+547,16.0,"4308, 4324","4308, 4340",16,a mini-heat wave,a mini-heat wave here in the NW.,complement-direct,complement-direct
+547,16.0,"4308, 4324","4308, 4340",16,a mini-heat wave,a mini-heat wave here in the NW.,group,group
+547,16.0,"4308, 4324","4308, 4340",16,a mini-heat wave,a mini-heat wave here in the NW.,nominal-group,nominal-group
+770,12.0,"4342, 4361","4342, 4349",12,Nothing like the SW,Nothing,nominal-group,nominal-group
+770,10.63014581273465,"4342, 4361","4350, 4354",15,Nothing like the SW,like,group,group
+763,1.0,"4363, 4426","4363, 4427",1,but it's still hot in the land of limited home air conditioning,but it's still hot in the land of limited home air conditioning.,clause,clause
+764,0.0,"4363, 4366","4363, 4366",0,but,but,marker,marker
+765,0.0,"4367, 4369","4367, 4369",0,it,it,subject,subject
+765,0.0,"4367, 4369","4367, 4369",0,it,it,group,group
+765,0.0,"4367, 4369","4367, 4369",0,it,it,nominal-group,nominal-group
+766,0.0,"4369, 4371","4369, 4371",0,'s,'s,verbal-group,verbal-group
+766,0.0,"4369, 4371","4369, 4371",0,'s,'s,group,group
+766,0.0,"4369, 4371","4369, 4371",0,'s,'s,predicator,predicator
+768,6.0,"4378, 4381","4372, 4381",6,hot,still hot,adjectival-group,adjectival-group
+767,4.0,"4372, 4377","4372, 4381",4,still,still hot,group,group
+769,1.0,"4382, 4426","4382, 4427",1,in the land of limited home air conditioning,in the land of limited home air conditioning.,group,group
+769,1.0,"4382, 4426","4382, 4427",1,in the land of limited home air conditioning,in the land of limited home air conditioning.,prepositional-group,prepositional-group
+769,1.0,"4382, 4426","4382, 4427",1,in the land of limited home air conditioning,in the land of limited home air conditioning.,adjunct,adjunct
+549,1.0,"4429, 4468","4429, 4469",1,I'm toughing out the neighbor situation,I'm toughing out the neighbor situation.,clause,clause
+550,0.0,"4429, 4430","4429, 4430",0,I,I,subject,subject
+550,0.0,"4429, 4430","4429, 4430",0,I,I,group,group
+550,0.0,"4429, 4430","4429, 4430",0,I,I,nominal-group,nominal-group
+551,0.0,"4430, 4432","4430, 4432",0,'m,'m,verbal-group,verbal-group
+551,0.0,"4430, 4432","4430, 4432",0,'m,'m,finite,finite
+551,0.0,"4430, 4432","4430, 4432",0,'m,'m,group,group
+552,4.0,"4433, 4445","4433, 4441",4,toughing out,toughing,verbal-group,verbal-group
+552,4.0,"4433, 4445","4433, 4441",4,toughing out,toughing,group,group
+552,4.0,"4433, 4445","4433, 4441",4,toughing out,toughing,predicator,predicator
+553,1.0,"4446, 4468","4446, 4469",1,the neighbor situation,the neighbor situation.,complement-direct,complement-direct
+553,1.0,"4446, 4468","4446, 4469",1,the neighbor situation,the neighbor situation.,group,group
+553,1.0,"4446, 4468","4446, 4469",1,the neighbor situation,the neighbor situation.,nominal-group,nominal-group
+37,48.877397639399746,"245, 247","203, 272",67,me,that the new schedule would suddenly make me super efficient at home.,complement-direct,complement-direct
+1850,57.87054518492115,"193, 271","248, 253",73,this idea that the new schedule would suddenly make me super efficient at home,super,group,group
+81,83.0,"519, 537","519, 620",83,But I'm still here,"But I'm still here, contemplating looking for a therapist, contemplating not looking for a therapist.",clause,clause
+194,20.12461179749811,"987, 992","978, 1010",27,where,south of where I currently live.,adverbial-group,adverbial-group
+162,35.4400902933387,"1053, 1055","1043, 1089",44,'s,", and that's an objectively reasonable choice.",group,group
+204,39.6232255123179,"1356, 1450","1349, 1411",46,"wait until a house I'm certain is the right choice (not in an OCD way, though :) ) comes along",myself wait until a house I'm certain is the right choice (not,clause,clause
+220,68.0,"1453, 1480","1453, 1548",68,I have an urge to move ASAP,"I have an urge to move ASAP, but very few houses that meet my requirements come up for sale, so",clause,clause
+223,77.0,"1460, 1467","1460, 1544",77,an urge,"an urge to move ASAP, but very few houses that meet my requirements come up for sale",complement-direct,complement-direct
+230,44.14748010928823,"1486, 1501","1476, 1544",53,very few houses,"ASAP, but very few houses that meet my requirements come up for sale",group,group
+230,44.14748010928823,"1486, 1501","1476, 1544",53,very few houses,"ASAP, but very few houses that meet my requirements come up for sale",nominal-group,nominal-group
+279,122.00409829181969,"1899, 1905","1777, 1906",123,stress,that I sent some overwrought emails to a bigwig at the office about a project we're working on together that's causing me stress.,complement-direct,complement-direct
+620,32.01562118716424,"1959, 2026","1991, 2027",33,"What most frustrates me about it, is that I knew it was OCD-related",", is that I knew it was OCD-related.",clause,clause
+346,67.0,"2270, 2282","2203, 2282",67,less anxiety,about being reminded that the goal of OCD treatment is not to have less anxiety,group,group
+344,50.0,"2287, 2295","2287, 2345",50,to learn,to learn to accept anxiety and know that it won't kill us.,group,group
+330,72.00694410957877,"2224, 2344","2296, 2345",73,that the goal of OCD treatment is not to have less anxiety but to learn to accept anxiety and know that it won't kill us,to accept anxiety and know that it won't kill us.,clause,clause
+313,55.0,"2375, 2399","2375, 2454",55,that once you learn that,"that once you learn that, you are actually likely to see a decrease in anxiety.",clause,clause
+325,55.0,"2395, 2399","2395, 2454",55,that,"that, you are actually likely to see a decrease in anxiety.",complement-direct,complement-direct
+412,25.0,"2842, 2851","2842, 2876",25,some time,some time looking around the site.,complement-direct,complement-direct
+412,25.0,"2842, 2851","2842, 2876",25,some time,some time looking around the site.,group,group
+436,66.0,"3064, 3070","3064, 3136",66,people,people post that their OCD really isn't a big problem in their life now.,complement-direct,complement-direct
+439,83.0,"3032, 3053","3032, 3136",83,one of the few places,one of the few places I've seen people post that their OCD really isn't a big problem in their life now.,group,group
+456,74.0,"3197, 3202","3197, 3276",74,to me,to me asking if they can write a post about their product or system or website.,complement-direct,complement-direct
+464,52.20153254455275,"3228, 3234","3197, 3276",73,a post,to me asking if they can write a post about their product or system or website.,group,group
+656,134.30189872075525,"3304, 3312","3295, 3446",143,fabulous,"probably fabulous, but I'm really wary of appearing to endorse something I know nothing about when something as important as mental health is involved.",adjectival-group,adjectival-group
+742,90.13878188659973,"3347, 3388","3278, 3446",127,to endorse something I know nothing about,"Some of them are probably fabulous, but I'm really wary of appearing to endorse something I know nothing about when something as important as mental health is involved.",clause,clause
+751,58.0,"3358, 3388","3358, 3446",58,something I know nothing about,something I know nothing about when something as important as mental health is involved.,group,group
+751,58.0,"3358, 3388","3358, 3446",58,something I know nothing about,something I know nothing about when something as important as mental health is involved.,nominal-group,nominal-group
+749,64.0,"3375, 3382","3375, 3446",64,nothing,nothing about when something as important as mental health is involved.,complement-direct,complement-direct
+749,64.0,"3375, 3382","3375, 3446",64,nothing,nothing about when something as important as mental health is involved.,group,group
+740,58.0,"3368, 3388","3368, 3446",58,I know nothing about,I know nothing about when something as important as mental health is involved.,clause,clause
+749,64.0,"3375, 3382","3375, 3446",64,nothing,nothing about when something as important as mental health is involved.,nominal-group,nominal-group
+690,40.0,"3812, 3913","3812, 3873",40,"And while it made sense to stay home over the weekend, I find myself wanting to avoid people now, too","And while it made sense to stay home over the weekend, I find",clause,clause
+510,41.0,"3965, 4003","3965, 4044",41,and I have a fear of still being germy,and I have a fear of still being germy and getting them all sick on their trip.,clause,clause
+520,41.10960958218893,"3983, 4003","3986, 4044",44,of still being germy,still being germy and getting them all sick on their trip.,clause,clause
+513,30.675723300355934,"4008, 4015","3998, 4044",39,getting,germy and getting them all sick on their trip.,group,group
+514,20.0,"4016, 4024","4016, 4044",20,them all,them all sick on their trip.,complement-direct,complement-direct
+226,65.96969000988257,"1476, 1480","1460, 1544",80,ASAP,"an urge to move ASAP, but very few houses that meet my requirements come up for sale",group,group
+223,77.0,"1460, 1467","1460, 1544",77,an urge,"an urge to move ASAP, but very few houses that meet my requirements come up for sale",nominal-group,nominal-group
+439,83.0,"3032, 3053","3032, 3136",83,one of the few places,one of the few places I've seen people post that their OCD really isn't a big problem in their life now.,complement-direct,complement-direct
+656,134.30189872075525,"3304, 3312","3295, 3446",143,fabulous,"probably fabulous, but I'm really wary of appearing to endorse something I know nothing about when something as important as mental health is involved.",complement-direct,complement-direct
+757,118.00423721205946,"3329, 3333","3295, 3446",147,wary,"probably fabulous, but I'm really wary of appearing to endorse something I know nothing about when something as important as mental health is involved.",group,group
+524,43.657759905886145,"3998, 4003","3983, 4044",56,germy,of still being germy and getting them all sick on their trip.,group,group
+524,41.0,"3998, 4003","3998, 4044",41,germy,germy and getting them all sick on their trip.,complement-direct,complement-direct
+,
+,Manual mismatching all parsed (False Negative)
+9,"3, 16",two weeks ago,nominal-group
+17,"95, 103",actually,group
+17,"95, 103",actually,adjunct
+17,"95, 103",actually,adverbial-group
+16,"129, 132",too,group
+16,"129, 132",too,adverbial-group
+16,"129, 132",too,adjunct
+20,"155, 156",I,group
+20,"155, 156",I,nominal-group
+20,"155, 156",I,subject
+23,"168, 176",too busy,nominal-group
+32,"208, 224",the new schedule,verbal-group
+36,"231, 239",suddenly,mood-adjunct
+38,"248, 263",super efficient,adjectival-group
+42,"283, 287",That,nominal-group
+53,"360, 368",in there,group
+53,"360, 368",in there,prepositional-group
+53,"360, 368",in there,complement-direct
+71,"462, 469",Usually,adverbial-group
+71,"462, 469",Usually,adjunct
+71,"462, 469",Usually,mood-adjunct
+67,"475, 509","more of an October, November issue",nominal-group
+69,"510, 516",for me,group
+96,"533, 537",here,complement-direct
+80,"663, 667",here,group
+80,"663, 667",here,adverbial-group
+80,"663, 667",here,adjunct
+99,"670, 674",Just,marker
+100,"675, 693",a few days over 90,group
+100,"675, 693",a few days over 90,nominal-group
+101,"695, 710",most in the 80s,group
+101,"695, 710",most in the 80s,nominal-group
+126,"811, 814",and,marker
+124,"815, 819",when,marker
+153,"1012, 1043",I'd be much closer to my sister,clause
+159,"1019, 1043",much closer to my sister,adverbial-group
+160,"1045, 1048",and,marker
+161,"1049, 1053",that,nominal-group
+162,"1053, 1055",'s,verbal-group
+162,"1053, 1055",'s,predicator
+179,"1111, 1115",also,group
+179,"1111, 1115",also,adverbial-group
+179,"1111, 1115",also,adjunct
+165,"1124, 1138",and I'm a slob,clause
+168,"1124, 1127",and,marker
+170,"1129, 1131",'m,group
+170,"1129, 1131",'m,verbal-group
+170,"1129, 1131",'m,predicator
+177,"1148, 1156",too much,adverbial-group
+158,"1168, 1172",with,group
+158,"1168, 1172",with,prepositional-group
+184,"1175, 1178",BUT,marker
+202,"1337, 1340",but,marker
+205,"1349, 1355",myself,complement-direct
+209,"1379, 1386",certain,verbal-group
+209,"1379, 1386",certain,predicator
+216,"1387, 1438","is the right choice (not in an OCD way, though :) )",clause
+218,"1390, 1406",the right choice,group
+218,"1390, 1406",the right choice,nominal-group
+223,"1460, 1467",an urge,group
+224,"1468, 1480",to move ASAP,clause
+226,"1476, 1480",ASAP,adverbial-group
+226,"1476, 1480",ASAP,adjunct
+226,"1476, 1480",ASAP,mood-adjunct
+228,"1482, 1485",but,marker
+230,"1486, 1501",very few houses,subject
+233,"1502, 1506",that,marker
+236,"1546, 1570",so it could take a while,clause
+248,"1573, 1577",That,nominal-group
+254,"1609, 1613",that,nominal-group
+268,"1692, 1700",promptly,mood-adjunct
+290,"1731, 1736",Today,adjunct
+2402,"1737, 1744",at work,prepositional-group
+2402,"1737, 1744",at work,adjunct
+213,"1813, 1838",to a bigwig at the office,group
+213,"1813, 1838",to a bigwig at the office,prepositional-group
+275,"1881, 1885",that,marker
+279,"1899, 1905",stress,group
+279,"1899, 1905",stress,nominal-group
+295,"1912, 1921",of course,adverbial-group
+296,"1922, 1925",now,group
+296,"1922, 1925",now,adverbial-group
+296,"1922, 1925",now,adjunct
+300,"1938, 1945",anxious,group
+300,"1938, 1945",anxious,adjectival-group
+300,"1938, 1945",anxious,complement-direct
+301,"1946, 1956",about that,prepositional-group
+301,"1946, 1956",about that,adjunct
+635,"1959, 1963",What,nominal-group
+634,"1964, 1968",most,adverbial-group
+634,"1964, 1968",most,adjunct
+634,"1964, 1968",most,mood-adjunct
+639,"2029, 2108",And I couldn't keep myself from reacting rather than even trying to wait it out,clause
+636,"2070, 2081",rather than,marker
+329,"2203, 2344",about being reminded that the goal of OCD treatment is not to have less anxiety but to learn to accept anxiety and know that it won't kill us,clause
+346,"2270, 2282",less anxiety,nominal-group
+343,"2283, 2286",but,marker
+344,"2287, 2295",to learn,verbal-group
+344,"2287, 2295",to learn,predicator
+322,"2380, 2384",once,marker
+325,"2395, 2399",that,group
+325,"2395, 2399",that,nominal-group
+316,"2409, 2417",actually,adjunct
+316,"2409, 2417",actually,mood-adjunct
+316,"2409, 2417",actually,adverbial-group
+317,"2418, 2424",likely,group
+317,"2418, 2424",likely,adverbial-group
+317,"2418, 2424",likely,adjunct
+317,"2418, 2424",likely,mood-adjunct
+310,"2459, 2463",sure,group
+310,"2459, 2463",sure,adverbial-group
+310,"2459, 2463",sure,adjunct
+310,"2459, 2463",sure,mood-adjunct
+309,"2466, 2474",n't easy,nominal-group
+371,"2500, 2505",where,marker
+360,"2554, 2580",and I can even sit with it,clause
+731,"2649, 2653",ever,group
+731,"2649, 2653",ever,adverbial-group
+731,"2649, 2653",ever,adjunct
+731,"2649, 2653",ever,mood-adjunct
+732,"2654, 2662",actually,adjunct
+732,"2654, 2662",actually,mood-adjunct
+732,"2654, 2662",actually,adverbial-group
+734,"2671, 2686",less unpleasant,group
+734,"2671, 2686",less unpleasant,adjectival-group
+390,"2710, 2714",What,nominal-group
+445,"2970, 2980",thoroughly,mood-adjunct
+437,"3024, 3028",This,nominal-group
+438,"3029, 3031",is,group
+438,"3029, 3031",is,verbal-group
+438,"3029, 3031",is,predicator
+439,"3032, 3053",one of the few places,nominal-group
+453,"3169, 3183",Every so often,adverbial-group
+453,"3169, 3183",Every so often,adjunct
+453,"3169, 3183",Every so often,mood-adjunct
+454,"3184, 3190",people,group
+456,"3197, 3202",to me,prepositional-group
+465,"3235, 3275",about their product or system or website,prepositional-group
+653,"3278, 3312",Some of them are probably fabulous,clause
+654,"3278, 3290",Some of them,nominal-group
+657,"3295, 3303",probably,group
+657,"3295, 3303",probably,adverbial-group
+657,"3295, 3303",probably,adjunct
+657,"3295, 3303",probably,mood-adjunct
+656,"3304, 3312",fabulous,group
+738,"3314, 3317",but,marker
+756,"3319, 3321",'m,group
+756,"3319, 3321",'m,verbal-group
+756,"3319, 3321",'m,predicator
+758,"3322, 3328",really,adverbial-group
+758,"3322, 3328",really,adjunct
+758,"3322, 3328",really,mood-adjunct
+743,"3389, 3393",when,marker
+745,"3434, 3436",is,predicator
+746,"3437, 3445",involved,adjectival-group
+483,"3475, 3490",by a non-profit,prepositional-group
+1257,"3514, 3521",selling,clause
+2468,"3514, 3521",selling,group
+2468,"3514, 3521",selling,verbal-group
+2468,"3514, 3521",selling,predicator
+501,"3657, 3662",Which,nominal-group
+505,"3674, 3690",almost certainly,mood-adjunct
+508,"3717, 3723",before,mood-adjunct
+474,"3726, 3747",Even more great stuff,group
+474,"3726, 3747",Even more great stuff,nominal-group
+619,"3750, 3762",Last weekend,adjunct
+704,"3844, 3848",home,group
+705,"3849, 3865",over the weekend,prepositional-group
+701,"3874, 3880",myself,complement-direct
+692,"3881, 3913","wanting to avoid people now, too",clause
+522,"3986, 3991",still,group
+522,"3986, 3991",still,adverbial-group
+522,"3986, 3991",still,mood-adjunct
+512,"4004, 4007",and,marker
+513,"4008, 4015",getting,verbal-group
+513,"4008, 4015",getting,predicator
+515,"4025, 4043",sick on their trip,nominal-group
+530,"4183, 4234",So apparently I should visit my sister this weekend,clause
+536,"4212, 4221",my sister,complement-direct
+537,"4222, 4234",this weekend,adjunct
+541,"4272, 4275",fun,nominal-group
+541,"4272, 4275",fun,complement-direct
+542,"4276, 4292",most of the time,adverbial-group
+542,"4276, 4292",most of the time,adjunct
+542,"4276, 4292",most of the time,mood-adjunct
+548,"4325, 4339",here in the NW,group
+548,"4325, 4339",here in the NW,adverbial-group
+548,"4325, 4339",here in the NW,adjunct
+767,"4372, 4377",still,adverbial-group
+767,"4372, 4377",still,adjunct
+767,"4372, 4377",still,mood-adjunct
+768,"4378, 4381",hot,group
+,
+,Parsed mismatching all manual (False Positives)
+0,"0, 63",So two weeks ago I started my new work schedule: 3 days a week.,finite
+3,"3, 16",two weeks ago,adverbial-group
+19,"19, 26",started,finite
+64,"65, 87","In theory, it's great.",finite
+64,"65, 74",In theory,complement-direct
+64,"65, 67",In,marker
+77,"78, 80",'s,finite
+87,"89, 133","Well, actually, in practice it's great, too.",finite
+103,"105, 116",in practice,complement-direct
+103,"105, 107",in,marker
+117,"119, 121",'s,finite
+132,"135, 177",But for some reason I still feel too busy.,finite
+140,"143, 156",some reason I,complement-direct
+160,"163, 167",feel,finite
+165,"168, 177",too busy.,adjectival-group
+177,"181, 186",think,finite
+185,"189, 192",had,finite
+189,"193, 202",this idea,complement-direct
+241,"245, 272",me super efficient at home.,clause
+241,"245, 272",me super efficient at home.,finite
+241,"245, 247",me,subject
+244,"248, 253",super,adverbial-group
+244,"248, 253",super,adjunct
+250,"254, 263",efficient,verbal-group
+250,"254, 263",efficient,finite
+250,"254, 263",efficient,predicator
+260,"264, 272",at home.,complement-direct
+260,"264, 266",at,marker
+277,"283, 298",That was naive.,finite
+282,"288, 291",was,finite
+309,"316, 325",on a tear,adjunct
+309,"316, 318",on,marker
+319,"326, 346",over the last month.,complement-direct
+319,"326, 330",over,marker
+352,"360, 368",in there,marker
+362,"370, 460","but I'm not sure if the issue is the standard ""Ann's OCD peaks in fall"" or something else.",finite
+367,"375, 381",'m not,finite
+379,"387, 460","if the issue is the standard ""Ann's OCD peaks in fall"" or something else.",adverbial-group
+379,"387, 460","if the issue is the standard ""Ann's OCD peaks in fall"" or something else.",adjunct
+379,"387, 460","if the issue is the standard ""Ann's OCD peaks in fall"" or something else.",finite
+392,"400, 402",is,finite
+425,"433, 435",in,marker
+453,"462, 517","Usually it's more of an October, November issue for me.",finite
+453,"462, 469",Usually,complement-direct
+453,"462, 469",Usually,adjectival-group
+463,"472, 474",'s,finite
+471,"480, 482",of,marker
+501,"510, 513",for,marker
+509,"519, 620","But I'm still here, contemplating looking for a therapist, contemplating not looking for a therapist.",finite
+514,"524, 526",'m,finite
+523,"533, 537",here,adjunct
+551,"561, 576",for a therapist,adjunct
+551,"561, 564",for,marker
+594,"604, 620",for a therapist.,adjunct
+594,"604, 607",for,marker
+750,"765, 769",find,finite
+771,"786, 809",myself sit with anxiety,finite
+771,"786, 792",myself,subject
+778,"793, 796",sit,finite
+782,"797, 809",with anxiety,complement-direct
+782,"797, 801",with,marker
+800,"815, 839","when I do, it goes down.",finite
+800,"815, 824",when I do,adverbial-group
+800,"815, 824",when I do,adjunct
+800,"815, 824",when I do,finite
+800,"815, 819",when,complement-direct
+800,"815, 819",when,group
+807,"822, 824",do,finite
+809,"824, 825",",",marker
+814,"829, 833",goes,finite
+825,"841, 844",But,marker
+852,"868, 870",of,marker
+895,"911, 914",up.,marker
+929,"946, 977",to a neighborhood about 5 miles,complement-direct
+929,"946, 977",to a neighborhood about 5 miles,adjunct
+929,"946, 948",to,marker
+947,"964, 969",about,marker
+970,"987, 1010",where I currently live.,finite
+988,"1005, 1009",live,finite
+1013,"1031, 1043",to my sister,prepositional-group
+1013,"1031, 1043",to my sister,adjunct
+1013,"1031, 1033",to,marker
+1025,"1043, 1089",", and that's an objectively reasonable choice.",adjectival-group
+1072,"1091, 1142","My current house is also too big and I'm a slob, so",finite
+1089,"1108, 1110",is,finite
+1124,"1143, 1173",it's too much to keep up with.,finite
+1126,"1145, 1147",'s,finite
+1129,"1148, 1156",too much,adjectival-group
+1146,"1165, 1167",up,marker
+1149,"1168, 1173",with.,marker
+1155,"1175, 1239","BUT, I also made this choice because of stress about my neighbor",finite
+1155,"1175, 1178",BUT,adverbial-group
+1155,"1175, 1178",BUT,group
+1155,"1175, 1178",BUT,adjunct
+1167,"1187, 1191",made,finite
+1202,"1222, 1239",about my neighbor,complement-direct
+1202,"1222, 1227",about,marker
+1220,"1240, 1273",and worry about earthquake risks.,clause
+1220,"1240, 1273",and worry about earthquake risks.,finite
+1220,"1240, 1243",and,marker
+1224,"1244, 1249",worry,verbal-group
+1224,"1244, 1249",worry,finite
+1224,"1244, 1249",worry,group
+1224,"1244, 1249",worry,predicator
+1230,"1250, 1273",about earthquake risks.,complement-direct
+1230,"1250, 1273",about earthquake risks.,group
+1230,"1250, 1273",about earthquake risks.,prepositional-group
+1230,"1250, 1273",about earthquake risks.,adjunct
+1230,"1250, 1255",about,marker
+1254,"1275, 1340","I think the best approach is to continue with a plan to move, but",finite
+1256,"1277, 1282",think,finite
+1262,"1283, 1335",the best approach is to continue with a plan to move,finite
+1280,"1301, 1303",is,finite
+1295,"1316, 1335",with a plan to move,adjunct
+1295,"1316, 1320",with,marker
+1328,"1349, 1355",myself,subject
+1335,"1356, 1360",wait,finite
+1340,"1361, 1411",until a house I'm certain is the right choice (not,adverbial-group
+1340,"1361, 1411",until a house I'm certain is the right choice (not,adjunct
+1355,"1376, 1378",'m,predicator
+1358,"1379, 1386",certain,complement-direct
+1358,"1379, 1386",certain,adjectival-group
+1366,"1387, 1389",is,finite
+1394,"1415, 1438","an OCD way, though :) )",complement-direct
+1394,"1415, 1438","an OCD way, though :) )",group
+1394,"1415, 1438","an OCD way, though :) )",nominal-group
+1404,"1425, 1426",",",marker
+1418,"1439, 1444",comes,finite
+1424,"1445, 1451",along.,marker
+1431,"1453, 1548","I have an urge to move ASAP, but very few houses that meet my requirements come up for sale, so",finite
+1433,"1455, 1459",have,finite
+1480,"1502, 1544",that meet my requirements come up for sale,finite
+1480,"1502, 1506",that,subject
+1480,"1502, 1506",that,group
+1485,"1507, 1511",meet,finite
+1490,"1512, 1544",my requirements come up for sale,clause
+1490,"1512, 1544",my requirements come up for sale,finite
+1490,"1512, 1527",my requirements,subject
+1506,"1528, 1532",come,finite
+1511,"1533, 1535",up,marker
+1514,"1536, 1544",for sale,complement-direct
+1514,"1536, 1539",for,marker
+1550,"1573, 1604","That ramps my anxiety right up,",finite
+1555,"1578, 1583",ramps,finite
+1582,"1605, 1645",and that's the piece that I know is OCD.,finite
+1590,"1613, 1615",'s,finite
+1603,"1626, 1645",that I know is OCD.,finite
+1610,"1633, 1637",know,finite
+1615,"1638, 1645",is OCD.,finite
+1615,"1638, 1640",is,finite
+1623,"1647, 1664",Patience is hard!,finite
+1632,"1656, 1658",is,finite
+1647,"1672, 1688",yesterday's post,complement-direct
+1705,"1731, 1736",Today,subject
+1714,"1740, 1744",work,verbal-group
+1714,"1740, 1744",work,finite
+1714,"1740, 1744",work,predicator
+1721,"1747, 1750",got,finite
+1721,"1747, 1750",got,clause
+1728,"1754, 1760",sucked,finite
+1735,"1761, 1776",into my anxiety,adjunct
+1735,"1761, 1765",into,marker
+1758,"1784, 1788",sent,finite
+1787,"1813, 1815",to,marker
+1813,"1839, 1844",about,marker
+1843,"1869, 1871",on,marker
+1855,"1881, 1885",that,subject
+1855,"1881, 1885",that,group
+1870,"1896, 1898",me,complement-direct
+1885,"1912, 1925",of course now,complement-direct
+1885,"1912, 1925",of course now,prepositional-group
+1885,"1912, 1914",of,marker
+1925,"1952, 1957",that!,complement-direct
+1925,"1952, 1957",that!,adjectival-group
+1936,"1964, 1991",most frustrates me about it,finite
+1936,"1964, 1968",most,adjectival-group
+1936,"1964, 1968",most,subject
+1941,"1969, 1979",frustrates,finite
+1955,"1983, 1991",about it,complement-direct
+1955,"1983, 1988",about,marker
+1963,"1991, 2027",", is that I knew it was OCD-related.",finite
+1965,"1993, 1995",is,finite
+1968,"1996, 2027",that I knew it was OCD-related.,finite
+1975,"2003, 2007",knew,finite
+1980,"2008, 2027",it was OCD-related.,finite
+1983,"2011, 2014",was,finite
+2081,"2111, 2135",Tomorrow is another day.,finite
+2090,"2120, 2122",is,finite
+2121,"2152, 2158",posted,finite
+2136,"2167, 2178",on her blog,complement-direct
+2136,"2167, 2169",on,marker
+2148,"2179, 2202",from the OCD conference,complement-direct
+2148,"2179, 2183",from,marker
+2172,"2203, 2282",about being reminded that the goal of OCD treatment is not to have less anxiety,adjunct
+2207,"2238, 2240",of,marker
+2224,"2255, 2261",is not,finite
+2283,"2314, 2317",and,marker
+2287,"2318, 2322",know,verbal-group
+2287,"2318, 2322",know,finite
+2287,"2318, 2322",know,group
+2287,"2318, 2322",know,predicator
+2343,"2375, 2454","that once you learn that, you are actually likely to see a decrease in anxiety.",finite
+2348,"2380, 2384",once,adverbial-group
+2348,"2380, 2384",once,group
+2348,"2380, 2384",once,adjunct
+2357,"2389, 2394",learn,finite
+2363,"2395, 2454","that, you are actually likely to see a decrease in anxiety.",finite
+2363,"2395, 2399",that,marker
+2373,"2405, 2408",are,finite
+2377,"2409, 2424",actually likely,complement-direct
+2377,"2409, 2424",actually likely,adjectival-group
+2411,"2443, 2445",in,marker
+2423,"2456, 2475",It sure isn't easy.,finite
+2431,"2464, 2469",isn't,finite
+2437,"2470, 2475",easy.,adjectival-group
+2466,"2500, 2552","where I can recognize my anxiety, and acknowledge it",adverbial-group
+2466,"2500, 2552","where I can recognize my anxiety, and acknowledge it",adjunct
+2500,"2534, 2552",and acknowledge it,finite
+2504,"2538, 2549",acknowledge,finite
+2539,"2573, 2581",with it.,adjunct
+2539,"2573, 2577",with,marker
+2548,"2583, 2626",But it isn't any less uncomfortable for me.,finite
+2555,"2590, 2595",isn't,finite
+2584,"2619, 2626",for me.,complement-direct
+2584,"2619, 2622",for,marker
+2613,"2649, 2662",ever actually,complement-direct
+2613,"2649, 2662",ever actually,adjectival-group
+2627,"2663, 2670",becomes,finite
+2651,"2687, 2708",while it's happening.,complement-direct
+2739,"2777, 2822","I suspect I have before, but forgot about it.",finite
+2741,"2779, 2786",suspect,finite
+2749,"2787, 2801","I have before,",finite
+2751,"2789, 2793",have,finite
+2764,"2802, 2822",but forgot about it.,finite
+2768,"2806, 2812",forgot,finite
+2775,"2813, 2822",about it.,adjunct
+2775,"2813, 2818",about,marker
+2785,"2824, 2876",Last week I spent some time looking around the site.,finite
+2785,"2824, 2833",Last week,adverbial-group
+2785,"2824, 2833",Last week,mood-adjunct
+2797,"2836, 2841",spent,finite
+2821,"2860, 2876",around the site.,adjunct
+2821,"2860, 2866",around,marker
+2838,"2878, 2954","The Expert Perspectives link at the top right had some really good articles,",finite
+2867,"2907, 2909",at,marker
+2884,"2924, 2927",had,finite
+2950,"2990, 2997",by some,nominal-group
+2950,"2990, 2992",by,marker
+2958,"2998, 3022",of the Personal Stories.,adjunct
+2958,"2998, 3000",of,marker
+2988,"3026, 3028",is,verbal-group
+2988,"3026, 3028",is,finite
+2988,"3026, 3028",is,group
+2988,"3026, 3028",is,predicator
+2995,"3036, 3038",of,marker
+3023,"3064, 3136",people post that their OCD really isn't a big problem in their life now.,finite
+3023,"3064, 3070",people,subject
+3030,"3071, 3075",post,finite
+3035,"3076, 3136",that their OCD really isn't a big problem in their life now.,finite
+3057,"3098, 3103",isn't,finite
+3077,"3118, 3120",in,marker
+3096,"3138, 3167",I love to read those stories!,finite
+3098,"3140, 3144",love,finite
+3148,"3191, 3196",write,finite
+3154,"3197, 3199",to,marker
+3157,"3200, 3202",me,subject
+3157,"3200, 3202",me,nominal-group
+3167,"3210, 3276",if they can write a post about their product or system or website.,adverbial-group
+3192,"3235, 3240",about,marker
+3234,"3278, 3446","Some of them are probably fabulous, but I'm really wary of appearing to endorse something I know nothing about when something as important as mental health is involved.",finite
+3234,"3278, 3282",Some,subject
+3247,"3291, 3294",are,finite
+3290,"3334, 3446",of appearing to endorse something I know nothing about when something as important as mental health is involved.,adjunct
+3324,"3368, 3446",I know nothing about when something as important as mental health is involved.,finite
+3326,"3370, 3374",know,finite
+3339,"3383, 3446",about when something as important as mental health is involved.,adjunct
+3345,"3389, 3446",when something as important as mental health is involved.,finite
+3345,"3389, 3393",when,complement-direct
+3345,"3389, 3393",when,group
+3390,"3434, 3436",is,finite
+3393,"3437, 3445",involved,verbal-group
+3393,"3437, 3445",involved,predicator
+3430,"3475, 3490",by a non-profit,adjectival-group
+3430,"3475, 3490",by a non-profit,nominal-group
+3430,"3475, 3477",by,marker
+3463,"3508, 3531",to be selling anything.,finite
+3466,"3511, 3513",be,finite
+3487,"3533, 3566",Take a look if you have a chance.,finite
+3487,"3533, 3537",Take,finite
+3499,"3545, 3566",if you have a chance.,finite
+3499,"3545, 3566",if you have a chance.,adverbial-group
+3499,"3545, 3566",if you have a chance.,adjunct
+3506,"3552, 3556",have,finite
+3525,"3572, 3655",I just noticed that Janet Singer from OCDTalk has lots of posts on the site's blog.,finite
+3532,"3579, 3586",noticed,finite
+3540,"3587, 3655",that Janet Singer from OCDTalk has lots of posts on the site's blog.,finite
+3558,"3605, 3609",from,marker
+3571,"3618, 3621",has,finite
+3580,"3627, 3629",of,marker
+3589,"3636, 3638",on,marker
+3615,"3663, 3668",means,finite
+3653,"3701, 3716",about this site,adjunct
+3653,"3701, 3706",about,marker
+3700,"3750, 3810",Last weekend I had either a stomach virus or food poisoning.,finite
+3700,"3750, 3762",Last weekend,complement-direct
+3715,"3765, 3768",had,finite
+3761,"3812, 3873","And while it made sense to stay home over the weekend, I find",finite
+3765,"3816, 3865",while it made sense to stay home over the weekend,finite
+3765,"3816, 3865",while it made sense to stay home over the weekend,adverbial-group
+3774,"3825, 3829",made,finite
+3798,"3849, 3853",over,marker
+3818,"3869, 3873",find,finite
+3823,"3874, 3880",myself,subject
+3854,"3905, 3908",now,mood-adjunct
+3887,"3939, 3954",with her family,complement-direct
+3887,"3939, 3943",with,marker
+3903,"3955, 3964",next week,adverbial-group
+3913,"3965, 4044",and I have a fear of still being germy and getting them all sick on their trip.,finite
+3919,"3971, 3975",have,finite
+3964,"4016, 4044",them all sick on their trip.,finite
+3964,"4016, 4020",them,subject
+3969,"4021, 4024",all,adverbial-group
+3969,"4021, 4024",all,group
+3969,"4021, 4024",all,adjunct
+3969,"4021, 4024",all,mood-adjunct
+3973,"4025, 4029",sick,verbal-group
+3973,"4025, 4029",sick,finite
+3973,"4025, 4029",sick,predicator
+3978,"4030, 4044",on their trip.,prepositional-group
+3978,"4030, 4044",on their trip.,adjunct
+3978,"4030, 4032",on,marker
+4008,"4061, 4080",with several people,adjunct
+4008,"4061, 4065",with,marker
+4075,"4128, 4181",after an illness (or even two days after an illness).,complement-direct
+4075,"4128, 4181",after an illness (or even two days after an illness).,prepositional-group
+4075,"4128, 4133",after,marker
+4110,"4163, 4168",after,marker
+4132,"4186, 4196",apparently,mood-adjunct
+4158,"4212, 4221",my sister,adverbial-group
+4158,"4212, 4221",my sister,adjunct
+4168,"4222, 4235",this weekend.,complement-direct
+4182,"4237, 4293","Ugh, making the right choice isn't fun most of the time!",finite
+4182,"4237, 4240",Ugh,subject
+4182,"4237, 4240",Ugh,group
+4182,"4237, 4240",Ugh,nominal-group
+4211,"4266, 4268",is,finite
+4213,"4268, 4275",n't fun,verbal-group
+4221,"4276, 4293",most of the time!,complement-direct
+4221,"4276, 4293",most of the time!,adjectival-group
+4274,"4330, 4332",in,marker
+4285,"4342, 4362","Nothing like the SW,",clause
+4285,"4342, 4362","Nothing like the SW,",finite
+4285,"4342, 4349",Nothing,subject
+4293,"4350, 4354",like,verbal-group
+4293,"4350, 4354",like,finite
+4293,"4350, 4354",like,predicator
+4298,"4355, 4361",the SW,complement-direct
+4298,"4355, 4361",the SW,group
+4298,"4355, 4361",the SW,nominal-group
+4306,"4363, 4427",but it's still hot in the land of limited home air conditioning.,finite
+4312,"4369, 4371",'s,finite
+4315,"4372, 4381",still hot,complement-direct
+4325,"4382, 4427",in the land of limited home air conditioning.,complement-direct
+4325,"4382, 4384",in,marker
+4337,"4394, 4396",of,marker
+4384,"4442, 4445",out,marker
+175,"179, 272",I think I had this idea that the new schedule would suddenly make me super efficient at home.,finite
+189,"193, 202",this idea,nominal-group
+183,"187, 272",I had this idea that the new schedule would suddenly make me super efficient at home.,finite
+293,"300, 346",My OCD has been on a tear over the last month.,finite
+340,"348, 369","I'm hanging in there,",finite
+527,"537, 620",", contemplating looking for a therapist, contemplating not looking for a therapist.",complement-direct
+527,"537, 620",", contemplating looking for a therapist, contemplating not looking for a therapist.",clause
+611,"622, 632",We'll see.,finite
+622,"634, 668",We're having a lovely summer here.,finite
+699,"713, 761","I've really been noticing my OCD, unfortunately.",finite
+748,"763, 814","I find that I can make myself sit with anxiety, and",finite
+755,"770, 809",that I can make myself sit with anxiety,complement-direct
+825,"841, 914",But I'm also finding a lot of new general anxiety categories cropping up.,finite
+899,"916, 1010",I've decided I'd like to move to a neighborhood about 5 miles south of where I currently live.,finite
+912,"929, 1010",I'd like to move to a neighborhood about 5 miles south of where I currently live.,finite
+912,"929, 1010",I'd like to move to a neighborhood about 5 miles south of where I currently live.,complement-direct
+921,"938, 1010",to move to a neighborhood about 5 miles south of where I currently live.,complement-direct
+961,"978, 1010",south of where I currently live.,group
+961,"978, 1010",south of where I currently live.,adjunct
+967,"984, 1010",of where I currently live.,complement-direct
+967,"984, 1010",of where I currently live.,group
+967,"984, 1010",of where I currently live.,adjunct
+994,"1012, 1089","I'd be much closer to my sister, and that's an objectively reasonable choice.",finite
+1025,"1043, 1089",", and that's an objectively reasonable choice.",complement-direct
+1262,"1283, 1335",the best approach is to continue with a plan to move,complement-direct
+1283,"1304, 1335",to continue with a plan to move,complement-direct
+1320,"1341, 1411",to make myself wait until a house I'm certain is the right choice (not,finite
+1328,"1349, 1411",myself wait until a house I'm certain is the right choice (not,finite
+1320,"1341, 1411",to make myself wait until a house I'm certain is the right choice (not,subject
+1340,"1361, 1411",until a house I'm certain is the right choice (not,finite
+1354,"1375, 1386",I'm certain,finite
+1454,"1476, 1544","ASAP, but very few houses that meet my requirements come up for sale",complement-direct
+1593,"1616, 1625",the piece,complement-direct
+1615,"1638, 1645",is OCD.,complement-direct
+1641,"1666, 1729","After yesterday's post, I promptly didn't follow my own advice.",finite
+1719,"1745, 1906",I got so sucked into my anxiety that I sent some overwrought emails to a bigwig at the office about a project we're working on together that's causing me stress.,clause
+1705,"1731, 1906",Today at work I got so sucked into my anxiety that I sent some overwrought emails to a bigwig at the office about a project we're working on together that's causing me stress.,finite
+1725,"1751, 1906",so sucked into my anxiety that I sent some overwrought emails to a bigwig at the office about a project we're working on together that's causing me stress.,finite
+1751,"1777, 1906",that I sent some overwrought emails to a bigwig at the office about a project we're working on together that's causing me stress.,finite
+1829,"1855, 1880",we're working on together,finite
+1855,"1881, 1898",that's causing me,finite
+1881,"1908, 1957",And of course now I'm feeling anxious about that!,finite
+1968,"1996, 2027",that I knew it was OCD-related.,complement-direct
+1980,"2008, 2027",it was OCD-related.,complement-direct
+2053,"2082, 2109",even trying to wait it out.,adjunct
+2053,"2082, 2109",even trying to wait it out.,complement-direct
+2053,"2082, 2109",even trying to wait it out.,group
+2065,"2094, 2109",to wait it out.,complement-direct
+2106,"2137, 2345",Sunny recently posted a video on her blog from the OCD conference about being reminded that the goal of OCD treatment is not to have less anxiety but to learn to accept anxiety and know that it won't kill us.,finite
+2256,"2287, 2345",to learn to accept anxiety and know that it won't kill us.,complement-direct
+2265,"2296, 2345",to accept anxiety and know that it won't kill us.,complement-direct
+2256,"2287, 2345",to learn to accept anxiety and know that it won't kill us.,nominal-group
+2256,"2287, 2345",to learn to accept anxiety and know that it won't kill us.,finite
+2287,"2318, 2345",know that it won't kill us.,complement-direct
+2283,"2314, 2345",and know that it won't kill us.,finite
+2292,"2323, 2345",that it won't kill us.,finite
+2287,"2318, 2345",know that it won't kill us.,group
+2292,"2323, 2345",that it won't kill us.,complement-direct
+2393,"2425, 2454",to see a decrease in anxiety.,complement-direct
+2456,"2490, 2499",the point,complement-direct
+2456,"2490, 2499",the point,group
+2443,"2477, 2553","I've reached the point where I can recognize my anxiety, and acknowledge it,",finite
+2592,"2628, 2708",I don't know that it ever actually becomes less unpleasant while it's happening.,finite
+2605,"2641, 2708",that it ever actually becomes less unpleasant while it's happening.,finite
+2651,"2687, 2708",while it's happening.,finite
+2673,"2710, 2738",What's your experience been?,finite
+2702,"2740, 2776",Have you ever visited BeyondOCD.org?,finite
+2749,"2787, 2822","I have before, but forgot about it.",clause
+2749,"2787, 2822","I have before, but forgot about it.",complement-direct
+2915,"2955, 3022",and I also was thoroughly inspired by some of the Personal Stories.,finite
+2950,"2990, 2997",by some,complement-direct
+2950,"2990, 2997",by some,group
+2983,"3024, 3136",This is one of the few places I've seen people post that their OCD really isn't a big problem in their life now.,finite
+3013,"3054, 3136",I've seen people post that their OCD really isn't a big problem in their life now.,finite
+3035,"3076, 3136",that their OCD really isn't a big problem in their life now.,complement-direct
+3103,"3145, 3167",to read those stories!,complement-direct
+3154,"3197, 3276",to me asking if they can write a post about their product or system or website.,adjunct
+3126,"3169, 3276",Every so often people write to me asking if they can write a post about their product or system or website.,finite
+3339,"3383, 3446",about when something as important as mental health is involved.,group
+3403,"3448, 3490",The Beyond OCD site is run by a non-profit,finite
+3446,"3491, 3531",and doesn't seem to be selling anything.,finite
+3463,"3508, 3510",to,verbal-group
+3463,"3508, 3510",to,group
+3463,"3508, 3531",to be selling anything.,complement-direct
+3540,"3587, 3655",that Janet Singer from OCDTalk has lots of posts on the site's blog.,complement-direct
+3609,"3657, 3724",Which means I've almost certainly been told about this site before.,finite
+3621,"3669, 3724",I've almost certainly been told about this site before.,finite
+3621,"3669, 3724",I've almost certainly been told about this site before.,complement-direct
+3761,"3812, 3815",And,marker
+3765,"3816, 3865",while it made sense to stay home over the weekend,clause
+3785,"3836, 3865",to stay home over the weekend,complement-direct
+3838,"3889, 3914","to avoid people now, too.",complement-direct
+3864,"3916, 3964",My sister is traveling with her family next week,finite
+3973,"4025, 4029",sick,group
+3993,"4046, 4181",I've confirmed with several people that most people don't think this way that far after an illness (or even two days after an illness).,finite
+4028,"4081, 4181",that most people don't think this way that far after an illness (or even two days after an illness).,finite
+4028,"4081, 4181",that most people don't think this way that far after an illness (or even two days after an illness).,complement-direct
+4066,"4119, 4127",that far,group
+4066,"4119, 4127",that far,adjunct
+4239,"4295, 4340",We're having a mini-heat wave here in the NW.,finite
+4285,"4342, 4349",Nothing,group
+4371,"4429, 4469",I'm toughing out the neighbor situation.,finite
+189,"193, 202",this idea,group
+1719,"1745, 1906",I got so sucked into my anxiety that I sent some overwrought emails to a bigwig at the office about a project we're working on together that's causing me stress.,complement-direct
+2343,"2375, 2454","that once you learn that, you are actually likely to see a decrease in anxiety.",complement-direct
+3290,"3334, 3446",of appearing to endorse something I know nothing about when something as important as mental health is involved.,complement-direct
+3290,"3334, 3446",of appearing to endorse something I know nothing about when something as important as mental health is involved.,group
+3303,"3347, 3446",to endorse something I know nothing about when something as important as mental health is involved.,complement-direct
+3931,"3983, 4044",of still being germy and getting them all sick on their trip.,complement-direct

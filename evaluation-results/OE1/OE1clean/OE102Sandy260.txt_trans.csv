@@ -1,0 +1,462 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.24594594594594596
+,Recall,0.56875
+,F1,0.3433962264150944
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+5,0.0,"63, 69","63, 69",0,wanted,wanted,main,main
+4,9.0,"32, 53","32, 62",9,I am new to the group,I am new to the group and just,relational,relational
+2,0.0,"34, 36","34, 36",0,am,am,main,main
+11,0.0,"94, 98","94, 98",0,tell,tell,main,main
+20,7.0,"160, 164","160, 171",7,been,been eating,main,main
+23,6.082762530298219,"209, 223","203, 224",7,I'm old ( 38 ),"Yeah, I'm old ( 38 ).",attributive,attributive
+23,6.082762530298219,"209, 223","203, 224",7,I'm old ( 38 ),"Yeah, I'm old ( 38 ).",relational,relational
+25,7.0,"213, 223","213, 216",7,old ( 38 ),old,attribute,attribute
+24,1.0,"211, 212","210, 212",1,m,'m,main,main
+26,2.0,"209, 210","207, 210",2,I,", I",carrier,carrier
+29,8.0,"232, 236","232, 244",8,been,been married,main,main
+34,4.0,"273, 277","269, 277",4,know,n't know,main,main
+40,0.0,"325, 326","325, 326",0,I,I,agent,agent
+39,5.0,"336, 347","336, 342",5,living with,living,main,main
+49,0.0,"467, 474","467, 474",0,dropped,dropped,main,main
+46,4.123105625617661,"453, 498","449, 499",5,my weight has dropped from a stable 110 to 88,and my weight has dropped from a stable 110 to 88.,action,action
+45,0.0,"421, 430","421, 430",0,triggered,triggered,main,main
+47,0.0,"453, 462","453, 462",0,my weight,my weight,affected,affected
+51,0.0,"500, 501","500, 501",0,I,I,carrier,carrier
+50,1.0,"500, 510","500, 511",1,"I am 5' 7""","I am 5' 7"".",attributive,attributive
+50,1.0,"500, 510","500, 511",1,"I am 5' 7""","I am 5' 7"".",relational,relational
+53,3.0,"505, 510","508, 510",3,"5' 7""","7""",attribute,attribute
+52,0.0,"502, 504","502, 504",0,am,am,main,main
+56,18.0,"561, 582","561, 564",18,"did an ""intervention""",did,main,main
+60,0.0,"587, 593","587, 593",0,forced,forced,main,main
+58,4.123105625617661,"587, 611","583, 612",5,forced me into treatment,and forced me into treatment.,action,action
+59,0.0,"594, 596","594, 596",0,me,me,affected,affected
+64,0.0,"620, 635","620, 635",0,a horrible time,a horrible time,attribute,attribute
+61,32.0,"613, 635","613, 667",32,It was a horrible time,It was a horrible time because I was 3 1/2 hours away.,attributive,attributive
+65,31.016124838541646,"644, 666","613, 667",32,I was 3 1/2 hours away,It was a horrible time because I was 3 1/2 hours away.,locational,locational
+65,31.016124838541646,"644, 666","613, 667",32,I was 3 1/2 hours away,It was a horrible time because I was 3 1/2 hours away.,relational,relational
+63,0.0,"616, 619","616, 619",0,was,was,main,main
+67,0.0,"646, 649","646, 649",0,was,was,main,main
+62,0.0,"613, 615","613, 615",0,It,It,carrier,carrier
+72,0.0,"683, 698","683, 698",0,my 6 young kids,my 6 young kids,affected-possessed,affected-possessed
+76,0.0,"715, 722","715, 722",0,nursing,nursing,main,main
+78,0.0,"703, 704","703, 704",0,I,I,agent,agent
+77,1.0,"723, 745","723, 746",1,my 19 months old twins,my 19 months old twins.,affected,affected
+71,3.0,"677, 682","674, 682",3,leave,to leave,main,main
+87,7.0710678118654755,"829, 851","822, 852",8,they asked me to leave,", till they asked me to leave.",mental,mental
+87,7.0710678118654755,"829, 851","822, 852",8,they asked me to leave,", till they asked me to leave.",three-role-cognition,three-role-cognition
+91,3.1622776601683795,"843, 851","840, 852",4,to leave,me to leave.,phenomenon,phenomenon
+81,4.0,"774, 781","770, 781",4,wanting,not wanting,main,main
+85,4.0,"798, 806","798, 802",4,held out,held,main,main
+86,0.0,"796, 797","796, 797",0,I,I,agent,agent
+84,30.265491900843113,"796, 822","792, 852",34,I held out for 5 1/2 weeks,"and I held out for 5 1/2 weeks, till they asked me to leave.",action,action
+89,0.0,"834, 839","834, 839",0,asked,asked,main,main
+88,0.0,"829, 833","829, 833",0,they,they,agent,agent
+156,0.0,"912, 916","912, 916",0,lost,lost,main,main
+94,4.0,"863, 870","859, 870",4,restore,not restore,main,main
+149,0.0,"964, 968","964, 968",0,live,live,main,main
+98,0.0,"930, 931","930, 931",0,I,I,cognizant,cognizant
+100,0.0,"951, 1007","951, 1007",0,"a person can live healthy, as the ""enlightened anorexic""","a person can live healthy, as the ""enlightened anorexic""",phenomenon,phenomenon
+99,0.0,"943, 950","943, 950",0,believe,believe,main,main
+97,1.0,"930, 1007","930, 1008",1,"I personally believe a person can live healthy, as the ""enlightened anorexic""","I personally believe a person can live healthy, as the ""enlightened anorexic"".",mental,mental
+97,1.0,"930, 1007","930, 1008",1,"I personally believe a person can live healthy, as the ""enlightened anorexic""","I personally believe a person can live healthy, as the ""enlightened anorexic"".",two-role-cognition,two-role-cognition
+101,6.082762530298219,"1015, 1066","1009, 1067",7,I'd love to give up the negative behaviours someday,"Yeah, I'd love to give up the negative behaviours someday.",mental,mental
+105,2.0,"1015, 1016","1013, 1016",2,I,", I",emoter,emoter
+103,0.0,"1019, 1023","1019, 1023",0,love,love,main,main
+104,9.0,"1024, 1058","1024, 1067",9,to give up the negative behaviours,to give up the negative behaviours someday.,phenomenon,phenomenon
+109,0.0,"1068, 1069","1068, 1069",0,I,I,cognizant,cognizant
+106,1.0,"1068, 1090","1068, 1091",1,I know it is my choice,I know it is my choice.,mental,mental
+106,1.0,"1068, 1090","1068, 1091",1,I know it is my choice,I know it is my choice.,two-role-cognition,two-role-cognition
+108,0.0,"1070, 1074","1070, 1074",0,know,know,main,main
+155,1.0,"1075, 1090","1075, 1091",1,it is my choice,it is my choice.,attributive,attributive
+155,1.0,"1075, 1090","1075, 1091",1,it is my choice,it is my choice.,relational,relational
+154,1.0,"1081, 1090","1081, 1091",1,my choice,my choice.,attribute,attribute
+152,0.0,"1075, 1077","1075, 1077",0,it,it,carrier,carrier
+107,1.0,"1075, 1090","1075, 1091",1,it is my choice,it is my choice.,phenomenon,phenomenon
+153,0.0,"1078, 1080","1078, 1080",0,is,is,main,main
+111,0.0,"1094, 1100","1094, 1100",0,remain,remain,main,main
+113,0.0,"1092, 1093","1092, 1093",0,I,I,carrier,carrier
+110,0.0,"1092, 1106","1092, 1106",0,I remain at 88,I remain at 88,attributive,attributive
+112,0.0,"1101, 1106","1101, 1106",0,at 88,at 88,attribute,attribute
+118,12.041594578792296,"1150, 1169","1138, 1170",13,your pics are great,"By the way, your pics are great.",relational,relational
+121,2.0,"1150, 1159","1148, 1159",2,your pics,", your pics",carrier,carrier
+119,0.0,"1160, 1163","1160, 1163",0,are,are,main,main
+124,0.0,"1175, 1178","1175, 1178",0,are,are,main,main
+125,1.0,"1179, 1188","1179, 1189",1,beautiful,beautiful!,attribute,attribute
+122,1.0,"1171, 1188","1171, 1189",1,You are beautiful,You are beautiful!,attributive,attributive
+122,1.0,"1171, 1188","1171, 1189",1,You are beautiful,You are beautiful!,relational,relational
+123,0.0,"1171, 1174","1171, 1174",0,You,You,carrier,carrier
+127,0.0,"1199, 1206","1199, 1206",0,reminds,reminds,main,main
+132,34.0,"1288, 1292","1254, 1292",34,this,"Warm regards 
+Mary 
+Well, sorry this",carrier,carrier
+133,0.0,"1293, 1296","1293, 1296",0,was,was,main,main
+131,34.0147027033899,"1288, 1304","1254, 1305",35,this was so long,"Warm regards 
+Mary 
+Well, sorry this was so long.",relational,relational
+139,0.0,"1311, 1312","1311, 1312",0,I,I,perceiver,perceiver
+137,4.0,"1319, 1329","1315, 1329",4,experience,n't experience,main,main
+135,5.0990195135927845,"1311, 1349","1306, 1350",6,I don't experience any health problems,Just I don't experience any health problems.,mental,mental
+135,5.0990195135927845,"1311, 1349","1306, 1350",6,I don't experience any health problems,Just I don't experience any health problems.,two-role-perception,two-role-perception
+138,1.0,"1330, 1349","1330, 1350",1,any health problems,any health problems.,phenomenon,phenomenon
+,
+,Manual mismatching all parsed (False Negative)
+4,"32, 53",I am new to the group,attributive
+1,"32, 33",I,carrier
+3,"37, 53",new to the group,attribute
+7,"58, 84","just wanted to say ""hello""",mental
+6,"70, 84","to say ""hello""",phenomenon
+8,"86, 120",Can you tell me a little about you,mental
+8,"86, 120",Can you tell me a little about you,three-role-cognition
+12,"90, 93",you,agent
+13,"99, 101",me,affected-cognizant
+14,"102, 120",a little about you,phenomenon
+9,"125, 151",why you started this group,influential
+17,"129, 132",you,agent
+15,"133, 140",started,main
+16,"141, 151",this group,created-phenomenon
+18,"153, 201",I have been eating disordered for about 23 years,relational
+18,"153, 201",I have been eating disordered for about 23 years,attributive
+22,"153, 154",I,carrier
+21,"165, 182",eating disordered,attribute
+27,"225, 257",I have been married for 13 years,relational
+27,"225, 257",I have been married for 13 years,attributive
+31,"225, 226",I,carrier
+30,"237, 244",married,attribute
+32,"260, 322","My DH didn't know anything about my being ED, till last summer",mental
+32,"260, 322","My DH didn't know anything about my being ED, till last summer",two-role-cognition
+35,"260, 265",My DH,cognizant
+36,"278, 304",anything about my being ED,phenomenon
+37,"325, 368",I had been living with the ED and not by it,action
+140,"348, 368",the ED and not by it,range
+141,"370, 403",since just before we were married,action
+57,"388, 390",we,affected
+145,"396, 403",married,main
+42,"415, 448","I was triggered anew, 3 years ago",action
+43,"415, 416",I,affected
+54,"512, 582","Last July my hubby, his parents ( and my mother) did an ""intervention""",action
+55,"522, 560","my hubby, his parents ( and my mother)",agent
+61,"613, 635",It was a horrible time,relational
+66,"644, 645",I,carrier
+68,"650, 666",3 1/2 hours away,location
+69,"668, 698",I had to leave my 6 young kids,relational
+69,"668, 698",I had to leave my 6 young kids,possessive
+73,"668, 669",I,affected-carrier
+74,"703, 745",I was still nursing my 19 months old twins,action
+79,"764, 791",I was not wanting to change,mental
+83,"764, 765",I,emoter
+82,"782, 791",to change,phenomenon
+90,"840, 842",me,affected-cognizant
+92,"853, 881",I did not restore any weight,action
+96,"853, 854",I,agent
+95,"871, 881",any weight,affected
+142,"890, 928",most of the 6 lbs I'd lost while there,relational
+142,"890, 928",most of the 6 lbs I'd lost while there,possessive
+143,"890, 907",most of the 6 lbs,possessed
+144,"908, 909",I,carrier
+151,"951, 976",a person can live healthy,action
+147,"951, 959",a person,agent
+150,"969, 976",healthy,manner
+110,"1092, 1106",I remain at 88,relational
+114,"1111, 1136",am terrified of being FAT,mental
+117,"1114, 1126",terrified of,main
+116,"1127, 1136",being FAT,phenomenon
+118,"1150, 1169",your pics are great,attributive
+120,"1164, 1169",great,attribute
+126,"1194, 1249",Mike reminds me much of my brothers ( dark curly hair ),mental
+126,"1194, 1249",Mike reminds me much of my brothers ( dark curly hair ),three-role-cognition
+128,"1194, 1198",Mike,agent
+129,"1207, 1209",me,affected-cognizant
+130,"1210, 1229",much of my brothers,phenomenon
+131,"1288, 1304",this was so long,attributive
+134,"1297, 1304",so long,attribute
+,
+,Parsed mismatching all manual (False Positives)
+70,"70, 76",to say,main
+37,"37, 40",new,destination
+37,"37, 40",new,affected-destination
+41,"41, 62",to the group and just,destination
+41,"41, 62",to the group and just,affected-destination
+32,"32, 62",I am new to the group and just,process
+32,"32, 62",I am new to the group and just,directional
+32,"32, 33",I,agent
+32,"32, 33",I,agent-perceiver
+32,"32, 33",I,perceiver
+172,"172, 182",disordered,main
+203,"203, 224","Yeah, I'm old ( 38 ).",process
+203,"203, 224","Yeah, I'm old ( 38 ).",locational
+213,"213, 216",old,location
+207,"207, 210",", I",affected-carrier
+207,"207, 210",", I",agent-carrier
+225,"225, 226",I,agent
+225,"225, 226",I,agent-cognizant
+225,"225, 226",I,agent-carrier
+225,"225, 226",I,agent-perceiver
+225,"225, 258",I have been married for 13 years.,process
+225,"225, 258",I have been married for 13 years.,two-role-action
+225,"225, 258",I have been married for 13 years.,action
+245,"245, 258",for 13 years.,affected-emoter
+245,"245, 258",for 13 years.,affected-path
+245,"245, 258",for 13 years.,affected-perceiver
+245,"245, 258",for 13 years.,affected-cognizant
+245,"245, 258",for 13 years.,affected-carrier
+245,"245, 258",for 13 years.,affected-destination
+245,"245, 258",for 13 years.,affected
+245,"245, 258",for 13 years.,affected-possessed
+245,"245, 258",for 13 years.,affected-source
+325,"325, 326",I,agent-perceiver
+325,"325, 326",I,perceiver
+325,"325, 404","I had been living with the ED and not by it, since just before we were married.",process
+325,"325, 404","I had been living with the ED and not by it, since just before we were married.",locational
+325,"325, 404","I had been living with the ED and not by it, since just before we were married.",relational
+449,"449, 499",and my weight has dropped from a stable 110 to 88.,process
+449,"449, 499",and my weight has dropped from a stable 110 to 88.,two-role-action
+449,"449, 499",and my weight has dropped from a stable 110 to 88.,one-role-action
+475,"475, 499",from a stable 110 to 88.,affected-emoter
+475,"475, 499",from a stable 110 to 88.,affected-path
+475,"475, 499",from a stable 110 to 88.,affected-perceiver
+475,"475, 499",from a stable 110 to 88.,affected-cognizant
+475,"475, 499",from a stable 110 to 88.,affected-carrier
+475,"475, 499",from a stable 110 to 88.,affected-destination
+475,"475, 499",from a stable 110 to 88.,affected
+475,"475, 499",from a stable 110 to 88.,affected-possessed
+475,"475, 499",from a stable 110 to 88.,affected-source
+453,"453, 462",my weight,affected-emoter
+453,"453, 462",my weight,agent
+453,"453, 462",my weight,affected-path
+453,"453, 462",my weight,affected-perceiver
+453,"453, 462",my weight,agent-cognizant
+453,"453, 462",my weight,affected-cognizant
+453,"453, 462",my weight,affected-carrier
+453,"453, 462",my weight,affected-destination
+453,"453, 462",my weight,agent-carrier
+453,"453, 462",my weight,affected-possessed
+453,"453, 462",my weight,agent-perceiver
+453,"453, 462",my weight,affected-source
+453,"453, 462",my weight,carrier
+500,"500, 501",I,affected-carrier
+500,"500, 501",I,agent-carrier
+500,"500, 511","I am 5' 7"".",process
+500,"500, 511","I am 5' 7"".",locational
+508,"508, 510","7""",location
+583,"583, 612",and forced me into treatment.,process
+583,"583, 612",and forced me into treatment.,causative
+583,"583, 612",and forced me into treatment.,two-role-action
+594,"594, 596",me,phenomenon
+594,"594, 596",me,affected-emoter
+594,"594, 596",me,created-phenomenon
+594,"594, 596",me,affected-path
+594,"594, 596",me,affected-perceiver
+594,"594, 596",me,affected-cognizant
+594,"594, 596",me,affected-carrier
+594,"594, 596",me,affected-destination
+594,"594, 596",me,affected-possessed
+594,"594, 596",me,affected-source
+594,"594, 596",me,created
+597,"597, 612",into treatment.,phenomenon
+597,"597, 612",into treatment.,affected-emoter
+597,"597, 612",into treatment.,created-phenomenon
+597,"597, 612",into treatment.,affected-path
+597,"597, 612",into treatment.,affected-perceiver
+597,"597, 612",into treatment.,affected-cognizant
+597,"597, 612",into treatment.,affected-carrier
+597,"597, 612",into treatment.,affected-destination
+597,"597, 612",into treatment.,affected
+597,"597, 612",into treatment.,affected-possessed
+597,"597, 612",into treatment.,affected-source
+597,"597, 612",into treatment.,created
+636,"636, 667",because I was 3 1/2 hours away.,process
+636,"636, 667",because I was 3 1/2 hours away.,directional
+636,"636, 667",because I was 3 1/2 hours away.,action
+636,"636, 667",because I was 3 1/2 hours away.,one-role-action
+620,"620, 635",a horrible time,location
+613,"613, 667",It was a horrible time because I was 3 1/2 hours away.,process
+644,"644, 645",I,agent
+644,"644, 645",I,agent-cognizant
+644,"644, 645",I,agent-carrier
+644,"644, 645",I,agent-perceiver
+644,"644, 645",I,perceiver
+613,"613, 615",It,affected-carrier
+613,"613, 615",It,agent-carrier
+683,"683, 698",my 6 young kids,affected-emoter
+683,"683, 698",my 6 young kids,affected-path
+683,"683, 698",my 6 young kids,affected-perceiver
+683,"683, 698",my 6 young kids,source
+683,"683, 698",my 6 young kids,location
+683,"683, 698",my 6 young kids,affected-cognizant
+683,"683, 698",my 6 young kids,affected-carrier
+683,"683, 698",my 6 young kids,affected-destination
+683,"683, 698",my 6 young kids,affected
+683,"683, 698",my 6 young kids,affected-source
+668,"668, 698",I had to leave my 6 young kids,process
+668,"668, 698",I had to leave my 6 young kids,causative
+668,"668, 698",I had to leave my 6 young kids,influential
+670,"670, 673",had,main
+703,"703, 704",I,agent-cognizant
+703,"703, 704",I,agent-carrier
+703,"703, 704",I,agent-perceiver
+703,"703, 704",I,perceiver
+674,"674, 698",to leave my 6 young kids,phenomenon
+674,"674, 698",to leave my 6 young kids,created-phenomenon
+674,"674, 698",to leave my 6 young kids,created
+723,"723, 746",my 19 months old twins.,affected-emoter
+723,"723, 746",my 19 months old twins.,affected-path
+723,"723, 746",my 19 months old twins.,affected-perceiver
+723,"723, 746",my 19 months old twins.,affected-cognizant
+723,"723, 746",my 19 months old twins.,affected-carrier
+723,"723, 746",my 19 months old twins.,affected-destination
+723,"723, 746",my 19 months old twins.,affected-possessed
+723,"723, 746",my 19 months old twins.,affected-source
+723,"723, 746",my 19 months old twins.,possessed
+699,"699, 746",and I was still nursing my 19 months old twins.,process
+699,"699, 746",and I was still nursing my 19 months old twins.,relational
+699,"699, 746",and I was still nursing my 19 months old twins.,possessive
+699,"699, 746",and I was still nursing my 19 months old twins.,two-role-action
+674,"674, 698",to leave my 6 young kids,process
+674,"674, 698",to leave my 6 young kids,locational
+674,"674, 698",to leave my 6 young kids,directional
+674,"674, 698",to leave my 6 young kids,two-role-action
+674,"674, 698",to leave my 6 young kids,action
+668,"668, 669",I,agent
+668,"668, 669",I,agent-cognizant
+668,"668, 669",I,agent-carrier
+668,"668, 669",I,agent-perceiver
+822,"822, 852",", till they asked me to leave.",process
+840,"840, 852",me to leave.,created-phenomenon
+782,"782, 791",to change,process
+782,"782, 791",to change,action
+782,"782, 791",to change,one-role-action
+840,"840, 842",me,agent
+840,"840, 842",me,agent-cognizant
+840,"840, 842",me,agent-carrier
+840,"840, 842",me,agent-perceiver
+782,"782, 791",to change,main
+756,"756, 762",to say,main
+807,"807, 822",for 5 1/2 weeks,affected-emoter
+807,"807, 822",for 5 1/2 weeks,affected-path
+807,"807, 822",for 5 1/2 weeks,affected-perceiver
+807,"807, 822",for 5 1/2 weeks,affected-cognizant
+807,"807, 822",for 5 1/2 weeks,affected-carrier
+807,"807, 822",for 5 1/2 weeks,affected-destination
+807,"807, 822",for 5 1/2 weeks,affected
+807,"807, 822",for 5 1/2 weeks,affected-possessed
+807,"807, 822",for 5 1/2 weeks,affected-source
+807,"807, 822",for 5 1/2 weeks,possessed
+796,"796, 797",I,agent-cognizant
+796,"796, 797",I,affected-carrier
+796,"796, 797",I,agent-carrier
+796,"796, 797",I,agent-perceiver
+796,"796, 797",I,carrier
+796,"796, 797",I,perceiver
+792,"792, 852","and I held out for 5 1/2 weeks, till they asked me to leave.",process
+792,"792, 852","and I held out for 5 1/2 weeks, till they asked me to leave.",relational
+792,"792, 852","and I held out for 5 1/2 weeks, till they asked me to leave.",possessive
+792,"792, 852","and I held out for 5 1/2 weeks, till they asked me to leave.",two-role-action
+792,"792, 852","and I held out for 5 1/2 weeks, till they asked me to leave.",one-role-action
+843,"843, 851",to leave,main
+840,"840, 852",me to leave.,process
+840,"840, 852",me to leave.,action
+840,"840, 852",me to leave.,one-role-action
+829,"829, 833",they,agent-cognizant
+829,"829, 833",they,agent-carrier
+829,"829, 833",they,agent-perceiver
+951,"951, 959",a person,affected-carrier
+951,"951, 959",a person,agent-carrier
+951,"951, 959",a person,carrier
+969,"969, 976",healthy,location
+930,"930, 931",I,affected-emoter
+930,"930, 931",I,agent-cognizant
+930,"930, 931",I,affected-cognizant
+930,"930, 931",I,emoter
+951,"951, 1007","a person can live healthy, as the ""enlightened anorexic""",created-phenomenon
+930,"930, 1008","I personally believe a person can live healthy, as the ""enlightened anorexic"".",process
+930,"930, 1008","I personally believe a person can live healthy, as the ""enlightened anorexic"".",emotive
+1009,"1009, 1067","Yeah, I'd love to give up the negative behaviours someday.",process
+1009,"1009, 1067","Yeah, I'd love to give up the negative behaviours someday.",emotive
+1013,"1013, 1016",", I",affected-emoter
+1024,"1024, 1067",to give up the negative behaviours someday.,process
+1024,"1024, 1067",to give up the negative behaviours someday.,two-role-action
+1024,"1024, 1067",to give up the negative behaviours someday.,action
+1024,"1024, 1031",to give,main
+1035,"1035, 1058",the negative behaviours,affected-emoter
+1035,"1035, 1058",the negative behaviours,affected-path
+1035,"1035, 1058",the negative behaviours,affected-perceiver
+1035,"1035, 1058",the negative behaviours,affected-cognizant
+1035,"1035, 1058",the negative behaviours,affected-carrier
+1035,"1035, 1058",the negative behaviours,affected-destination
+1035,"1035, 1058",the negative behaviours,affected
+1035,"1035, 1058",the negative behaviours,affected-possessed
+1035,"1035, 1058",the negative behaviours,affected-source
+1035,"1035, 1058",the negative behaviours,range
+1024,"1024, 1067",to give up the negative behaviours someday.,created-phenomenon
+1068,"1068, 1069",I,agent-cognizant
+1068,"1068, 1069",I,affected-cognizant
+1068,"1068, 1091",I know it is my choice.,process
+1075,"1075, 1091",it is my choice.,process
+1075,"1075, 1091",it is my choice.,locational
+1081,"1081, 1091",my choice.,location
+1075,"1075, 1077",it,affected-carrier
+1075,"1075, 1077",it,agent-carrier
+1075,"1075, 1091",it is my choice.,created-phenomenon
+1092,"1092, 1093",I,agent
+1092,"1092, 1093",I,affected-carrier
+1092,"1092, 1093",I,affected
+1092,"1092, 1093",I,agent-carrier
+1092,"1092, 1093",I,agent-perceiver
+1092,"1092, 1093",I,perceiver
+1133,"1133, 1137",FAT!,affected-emoter
+1133,"1133, 1137",FAT!,affected-path
+1133,"1133, 1137",FAT!,affected-perceiver
+1133,"1133, 1137",FAT!,affected-cognizant
+1133,"1133, 1137",FAT!,affected-carrier
+1133,"1133, 1137",FAT!,affected-destination
+1133,"1133, 1137",FAT!,affected
+1133,"1133, 1137",FAT!,affected-possessed
+1133,"1133, 1137",FAT!,affected-source
+1133,"1133, 1137",FAT!,range
+1092,"1092, 1106",I remain at 88,process
+1092,"1092, 1106",I remain at 88,locational
+1092,"1092, 1106",I remain at 88,action
+1092,"1092, 1106",I remain at 88,one-role-action
+1107,"1107, 1137",and am terrified of being FAT!,process
+1107,"1107, 1137",and am terrified of being FAT!,attributive
+1107,"1107, 1137",and am terrified of being FAT!,relational
+1127,"1127, 1137",being FAT!,process
+1127,"1127, 1137",being FAT!,two-role-action
+1127,"1127, 1137",being FAT!,action
+1114,"1114, 1123",terrified,attribute
+1111,"1111, 1113",am,main
+1127,"1127, 1132",being,main
+1101,"1101, 1106",at 88,location
+1138,"1138, 1170","By the way, your pics are great.",process
+1138,"1138, 1170","By the way, your pics are great.",locational
+1148,"1148, 1159",", your pics",agent
+1148,"1148, 1159",", your pics",affected-carrier
+1148,"1148, 1159",", your pics",agent-carrier
+1148,"1148, 1159",", your pics",agent-perceiver
+1148,"1148, 1159",", your pics",perceiver
+1141,"1141, 1148",the way,location
+1164,"1164, 1170",great.,location
+1179,"1179, 1189",beautiful!,location
+1171,"1171, 1189",You are beautiful!,process
+1171,"1171, 1189",You are beautiful!,locational
+1171,"1171, 1174",You,affected-carrier
+1171,"1171, 1174",You,agent-carrier
+1297,"1297, 1305",so long.,location
+1254,"1254, 1292","Warm regards 
+Mary 
+Well, sorry this",affected-carrier
+1254,"1254, 1292","Warm regards 
+Mary 
+Well, sorry this",agent-carrier
+1254,"1254, 1305","Warm regards 
+Mary 
+Well, sorry this was so long.",process
+1254,"1254, 1305","Warm regards 
+Mary 
+Well, sorry this was so long.",locational
+1311,"1311, 1312",I,affected-perceiver
+1311,"1311, 1312",I,agent-perceiver
+1306,"1306, 1350",Just I don't experience any health problems.,process
+1330,"1330, 1350",any health problems.,created-phenomenon

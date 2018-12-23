@@ -1,0 +1,472 @@
+,,Relaxed/Lambda Match Statistics
+,Precission,0.2216624685138539
+,Recall,0.5789473684210527
+,F1,0.3205828779599271
+,
+,Relaxed/Lambda Matches (True Positives)
+Man Id,Dist. Geometric,Man Interval,Auto Interval,Dist. Edit,Man Text,Auto Text,Man Features,Auto Features
+1,2.0,"22, 23","20, 23",2,I,", I",emoter,emoter
+138,7.0710678118654755,"22, 50","15, 51",8,I need your help desperately,"Girls, I need your help desperately.",mental,mental
+3,0.0,"29, 38","29, 38",0,your help,your help,phenomenon,phenomenon
+2,0.0,"24, 28","24, 28",0,need,need,main,main
+5,0.0,"54, 62","54, 62",0,realized,realized,main,main
+4,0.0,"52, 53","52, 53",0,I,I,cognizant,cognizant
+154,5.0,"82, 92","82, 87",5,taken over,taken,main,main
+155,5.0990195135927845,"93, 100","88, 101",6,my life,over my life.,affected,affected
+152,0.0,"74, 77","74, 77",0,mia,mia,agent,agent
+7,1.0,"52, 100","52, 101",1,I realized today that mia has taken over my life,I realized today that mia has taken over my life.,mental,mental
+7,1.0,"52, 100","52, 101",1,I realized today that mia has taken over my life,I realized today that mia has taken over my life.,two-role-cognition,two-role-cognition
+6,5.0990195135927845,"74, 100","69, 101",6,mia has taken over my life,that mia has taken over my life.,phenomenon,phenomenon
+19,0.0,"209, 210","209, 210",0,I,I,carrier,carrier
+21,1.0,"218, 223","218, 224",1,happy,happy.,attribute,attribute
+14,0.0,"142, 144","142, 144",0,'m,'m,main,main
+16,4.123105625617661,"209, 223","205, 224",5,I am not happy,but I am not happy.,attributive,attributive
+16,4.123105625617661,"209, 223","205, 224",5,I am not happy,but I am not happy.,relational,relational
+11,0.0,"112, 114","112, 114",0,is,is,main,main
+20,4.0,"211, 213","211, 217",4,am,am not,main,main
+24,0.0,"232, 238","232, 238",0,purged,purged,main,main
+158,0.0,"315, 321","315, 321",0,purged,purged,main,main
+27,0.0,"304, 310","304, 310",0,binged,binged,main,main
+139,52.0,"349, 368","349, 420",52,I've stopped eating,I've stopped eating in between binged because I can not control myself.,influential,influential
+29,0.0,"349, 350","349, 350",0,I,I,agent,agent
+32,18.0,"362, 368","362, 386",18,eating,eating in between binged,phenomenon,phenomenon
+31,0.0,"354, 361","354, 361",0,stopped,stopped,main,main
+34,0.0,"395, 396","395, 396",0,I,I,agent,agent
+36,4.0,"405, 412","401, 412",4,control,not control,main,main
+45,3.0,"457, 460","454, 460",3,eat,to eat,main,main
+48,4.0,"476, 481","472, 481",4,shove,not shove,main,main
+40,3.0,"438, 441","435, 441",3,eat,to eat,main,main
+50,0.0,"528, 529","528, 529",0,I,I,agent,agent
+51,0.0,"530, 533","530, 533",0,use,use,main,main
+41,1.0,"528, 567","528, 568",1,I use my bulimia to control my emotions,I use my bulimia to control my emotions.,action,action
+87,5.0,"574, 585","569, 585",5,I'm anxious,When I'm anxious,attributive,attributive
+87,5.0,"574, 585","569, 585",5,I'm anxious,When I'm anxious,relational,relational
+55,1.0,"576, 577","575, 577",1,m,'m,main,main
+58,0.0,"588, 593","588, 593",0,binge,binge,main,main
+54,0.0,"574, 575","574, 575",0,I,I,carrier,carrier
+61,3.0,"609, 620","609, 617",3,followed by,followed,main,main
+67,0.0,"725, 731","725, 731",0,racing,racing,main,main
+64,0.0,"703, 708","703, 708",0,hurts,hurts,main,main
+90,6.0,"694, 708","688, 708",6,my mouth hurts,until my mouth hurts,action,action
+91,4.123105625617661,"713, 731","709, 732",5,my heart is racing,and my heart is racing.,action,action
+70,0.0,"754, 764","754, 764",0,experience,experience,main,main
+68,2.0,"746, 747","744, 747",2,I,", I",perceiver,perceiver
+71,87.0,"765, 917","765, 830",87,"a small high from the purge, a sort of sick relaxed feeling, sort of like a ""phew, that's over, now I don't have to do it for another few hours""-feeling","a small high from the purge, a sort of sick relaxed feeling, sort",phenomenon,phenomenon
+74,5.0,"947, 960","947, 955",5,consumed with,consumed,main,main
+77,0.0,"994, 995","994, 995",0,I,I,agent-carrier,agent-carrier
+78,0.0,"996, 999","996, 999",0,get,get,main,main
+79,4.0,"1000, 1006","1000, 1002",4,it all,it,affected-possessed,affected-possessed
+94,1.0,"990, 1010","990, 1011",1,Did I get it all out,Did I get it all out?,relational,relational
+85,8.06225774829855,"1020, 1073","1012, 1074",9,there is more food hiding in the depths of my stomach,What if there is more food hiding in the depths of my stomach?,locational,locational
+85,8.06225774829855,"1020, 1073","1012, 1074",9,there is more food hiding in the depths of my stomach,What if there is more food hiding in the depths of my stomach?,relational,relational
+82,0.0,"1026, 1028","1026, 1028",0,is,is,main,main
+83,36.0,"1029, 1038","1029, 1074",36,more food,more food hiding in the depths of my stomach?,carrier,carrier
+99,1.0,"1075, 1115","1075, 1116",1,I'll be 20 pounds heavier in the morning,I'll be 20 pounds heavier in the morning!,attributive,attributive
+99,1.0,"1075, 1115","1075, 1116",1,I'll be 20 pounds heavier in the morning,I'll be 20 pounds heavier in the morning!,relational,relational
+97,0.0,"1080, 1082","1080, 1082",0,be,be,main,main
+98,10.0,"1083, 1100","1093, 1100",10,20 pounds heavier,heavier,attribute,attribute
+95,0.0,"1075, 1076","1075, 1076",0,I,I,carrier,carrier
+160,0.0,"1173, 1183","1173, 1183",0,how I felt,how I felt,mental,mental
+53,0.0,"1173, 1176","1173, 1176",0,how,how,phenomenon,phenomenon
+84,0.0,"1177, 1178","1177, 1178",0,I,I,emoter,emoter
+101,0.0,"1155, 1161","1155, 1161",0,wanted,wanted,main,main
+86,0.0,"1179, 1183","1179, 1183",0,felt,felt,main,main
+140,14.0,"1148, 1183","1162, 1183",14,I just wanted to explain how I felt,to explain how I felt,mental,mental
+102,0.0,"1162, 1183","1162, 1183",0,to explain how I felt,to explain how I felt,phenomenon,phenomenon
+105,0.0,"1208, 1212","1208, 1212",0,make,make,main,main
+100,0.0,"1148, 1149","1148, 1149",0,I,I,emoter,emoter
+110,0.0,"1259, 1266","1259, 1266",0,feeling,feeling,main,main
+111,0.0,"1267, 1287","1267, 1287",0,pretty lonely myself,pretty lonely myself,attribute,attribute
+108,0.0,"1255, 1256","1255, 1256",0,I,I,carrier,carrier
+112,1.0,"1255, 1298","1255, 1299",1,I'm feeling pretty lonely myself these days,I'm feeling pretty lonely myself these days.,attributive,attributive
+114,0.0,"1310, 1313","1310, 1313",0,has,has,main,main
+113,0.0,"1303, 1309","1303, 1309",0,anyone,anyone,carrier,carrier
+115,0.0,"1314, 1349","1314, 1349",0,any advice or tips for self control,any advice or tips for self control,possessed,possessed
+116,3.0,"1303, 1349","1300, 1349",3,anyone has any advice or tips for self control,If anyone has any advice or tips for self control,relational,relational
+116,3.0,"1303, 1349","1300, 1349",3,anyone has any advice or tips for self control,If anyone has any advice or tips for self control,possessive,possessive
+106,5.0,"1360, 1376","1365, 1376",5,much appreciated,appreciated,main,main
+149,25.019992006393608,"1403, 1440","1378, 1441",26,"loose another 5 pounds, no, 10 pounds","I will get past this and loose another 5 pounds, no, 10 pounds.",possessive,possessive
+126,20.024984394500787,"1409, 1440","1389, 1441",21,"another 5 pounds, no, 10 pounds","past this and loose another 5 pounds, no, 10 pounds.",affected-possessed,affected-possessed
+119,43.289721643826724,"1394, 1398","1389, 1441",48,this,"past this and loose another 5 pounds, no, 10 pounds.",possessed,possessed
+120,0.0,"1378, 1379","1378, 1379",0,I,I,carrier,carrier
+122,5.0,"1385, 1393","1385, 1388",5,get past,get,main,main
+124,0.0,"1523, 1532","1523, 1532",0,reminding,reminding,main,main
+132,4.0,"1478, 1480","1474, 1480",4,do,not do,main,main
+128,3.0,"1448, 1450","1448, 1453",3,is,isn't,main,main
+,
+,Manual mismatching all parsed (False Negative)
+156,"74, 100",mia has taken over my life,action
+8,"102, 165","My weight is at a standstill ( 95 lbs, I'm 5'2"" ) at the moment",relational
+8,"102, 165","My weight is at a standstill ( 95 lbs, I'm 5'2"" ) at the moment",attributive
+10,"102, 111",My weight,carrier
+12,"115, 130",at a standstill,attribute
+9,"141, 149","I'm 5'2""",relational
+9,"141, 149","I'm 5'2""",attributive
+13,"141, 142",I,carrier
+15,"145, 149","5'2""",attribute
+17,"167, 203",my lowest weight at this height ever,relational
+17,"167, 203",my lowest weight at this height ever,attributive
+157,"167, 183",my lowest weight,attribute
+18,"225, 294",I have purged everyday up to 4 times since 3 days before Thanksgiving,action
+22,"225, 226",I,agent
+25,"296, 310",Today I binged,action
+26,"302, 303",I,agent
+28,"315, 347",purged on the same foods 3 times,action
+141,"395, 420",I can not control myself.,action
+37,"413, 419",myself,affected
+142,"424, 441",I am going to eat,action
+38,"424, 425",I,agent
+143,"443, 460",I am going to eat,action
+42,"443, 444",I,agent
+145,"467, 526",I cannot shove one more crumb into my body without bursting,relational
+145,"467, 526",I cannot shove one more crumb into my body without bursting,directional
+46,"467, 468",I,agent
+144,"482, 496",one more crumb,affected-carrier
+49,"497, 509",into my body,destination
+52,"534, 544",my bulimia,range
+56,"578, 585",anxious,attribute
+88,"586, 593",I binge,action
+57,"586, 587",I,agent
+89,"595, 687","The eating is followed by an even more extreme anxiety and a ruthless, usually violent purge",event-relating
+59,"595, 605",The eating,carrier
+62,"621, 687","an even more extreme anxiety and a ruthless, usually violent purge",created-phenomenon
+63,"694, 702",my mouth,carrier
+65,"713, 721",my heart,carrier
+92,"733, 917","In the past, I would experience a small high from the purge, a sort of sick relaxed feeling, sort of like a ""phew, that's over, now I don't have to do it for another few hours""-feeling",mental
+92,"733, 917","In the past, I would experience a small high from the purge, a sort of sick relaxed feeling, sort of like a ""phew, that's over, now I don't have to do it for another few hours""-feeling",two-role-perception
+93,"932, 988",Now my mind is consumed with paranoid obsessive thoughts,action
+72,"936, 943",my mind,affected
+75,"961, 988",paranoid obsessive thoughts,agent
+94,"990, 1010",Did I get it all out,possessive
+44,"1039, 1073",hiding in the depths of my stomach,location
+146,"1199, 1253",it might make one or more of you girls feel less alone,influential
+103,"1199, 1201",it,agent
+107,"1213, 1253",one or more of you girls feel less alone,created-phenomenon
+112,"1255, 1298",I'm feeling pretty lonely myself these days,relational
+147,"1351, 1376",they are much appreciated,mental
+117,"1351, 1355",they,phenomenon
+148,"1378, 1398",I will get past this,relational
+148,"1378, 1398",I will get past this,possessive
+149,"1403, 1440","loose another 5 pounds, no, 10 pounds",relational
+125,"1403, 1408",loose,main
+33,"1442, 1462",There isn't anything,relational
+33,"1442, 1462",There isn't anything,locational
+129,"1454, 1462",anything,carrier
+150,"1468, 1506",we cannot do with each others' support,action
+130,"1468, 1470",we,agent
+151,"1508, 1547",I need to keep reminding myself of that,mental
+151,"1508, 1547",I need to keep reminding myself of that,three-role-cognition
+134,"1508, 1509",I,agent
+123,"1533, 1539",myself,affected-cognizant
+137,"1540, 1547",of that,phenomenon
+,
+,Parsed mismatching all manual (False Positives)
+20,"20, 23",", I",affected-emoter
+15,"15, 51","Girls, I need your help desperately.",process
+15,"15, 51","Girls, I need your help desperately.",desiderative
+29,"29, 38",your help,created-phenomenon
+52,"52, 53",I,affected-cognizant
+52,"52, 53",I,affected
+88,"88, 101",over my life.,attribute
+88,"88, 101",over my life.,affected-emoter
+88,"88, 101",over my life.,affected-path
+88,"88, 101",over my life.,affected-perceiver
+88,"88, 101",over my life.,affected-cognizant
+88,"88, 101",over my life.,affected-carrier
+88,"88, 101",over my life.,affected-destination
+88,"88, 101",over my life.,affected-possessed
+88,"88, 101",over my life.,affected-source
+88,"88, 101",over my life.,possessed
+74,"74, 77",mia,agent-cognizant
+74,"74, 77",mia,agent-carrier
+74,"74, 77",mia,agent-perceiver
+74,"74, 77",mia,perceiver
+69,"69, 101",that mia has taken over my life.,process
+69,"69, 101",that mia has taken over my life.,attributive
+69,"69, 101",that mia has taken over my life.,relational
+69,"69, 101",that mia has taken over my life.,possessive
+69,"69, 101",that mia has taken over my life.,two-role-action
+52,"52, 101",I realized today that mia has taken over my life.,process
+69,"69, 101",that mia has taken over my life.,created-phenomenon
+209,"209, 210",I,affected-carrier
+209,"209, 210",I,agent-carrier
+218,"218, 224",happy.,location
+205,"205, 224",but I am not happy.,process
+205,"205, 224",but I am not happy.,locational
+413,"413, 420",myself.,range
+362,"362, 386",eating in between binged,process
+362,"362, 386",eating in between binged,two-role-action
+362,"362, 386",eating in between binged,action
+349,"349, 420",I've stopped eating in between binged because I can not control myself.,process
+349,"349, 420",I've stopped eating in between binged because I can not control myself.,preventive
+349,"349, 350",I,agent-cognizant
+349,"349, 350",I,agent-carrier
+349,"349, 350",I,agent-perceiver
+362,"362, 386",eating in between binged,created-phenomenon
+362,"362, 386",eating in between binged,created
+372,"372, 386",between binged,affected-emoter
+372,"372, 386",between binged,affected-path
+372,"372, 386",between binged,affected-perceiver
+372,"372, 386",between binged,affected-cognizant
+372,"372, 386",between binged,affected-carrier
+372,"372, 386",between binged,affected-destination
+372,"372, 386",between binged,affected
+372,"372, 386",between binged,affected-possessed
+372,"372, 386",between binged,affected-source
+395,"395, 396",I,agent-cognizant
+395,"395, 396",I,agent-carrier
+395,"395, 396",I,agent-perceiver
+362,"362, 368",eating,main
+429,"429, 434",going,main
+448,"448, 453",going,main
+518,"518, 526",bursting,main
+556,"556, 568",my emotions.,range
+545,"545, 555",to control,main
+534,"534, 568",my bulimia to control my emotions.,affected-emoter
+534,"534, 568",my bulimia to control my emotions.,affected-path
+534,"534, 568",my bulimia to control my emotions.,affected-perceiver
+534,"534, 568",my bulimia to control my emotions.,affected-cognizant
+534,"534, 568",my bulimia to control my emotions.,affected-carrier
+534,"534, 568",my bulimia to control my emotions.,affected-destination
+534,"534, 568",my bulimia to control my emotions.,affected
+534,"534, 568",my bulimia to control my emotions.,affected-possessed
+534,"534, 568",my bulimia to control my emotions.,affected-source
+528,"528, 529",I,agent-cognizant
+528,"528, 529",I,agent-carrier
+528,"528, 529",I,agent-perceiver
+545,"545, 568",to control my emotions.,process
+545,"545, 568",to control my emotions.,two-role-action
+528,"528, 568",I use my bulimia to control my emotions.,process
+528,"528, 568",I use my bulimia to control my emotions.,two-role-action
+569,"569, 573",When,attribute
+569,"569, 573",When,location
+569,"569, 585",When I'm anxious,process
+569,"569, 585",When I'm anxious,locational
+574,"574, 575",I,affected-carrier
+574,"574, 575",I,agent-carrier
+694,"694, 702",my mouth,affected-emoter
+694,"694, 702",my mouth,affected-path
+694,"694, 702",my mouth,affected-perceiver
+694,"694, 702",my mouth,affected-cognizant
+694,"694, 702",my mouth,affected-carrier
+694,"694, 702",my mouth,affected-destination
+694,"694, 702",my mouth,affected
+694,"694, 702",my mouth,affected-possessed
+694,"694, 702",my mouth,affected-source
+595,"595, 708","The eating is followed by an even more extreme anxiety and a ruthless, usually violent purge until my mouth hurts",process
+595,"595, 708","The eating is followed by an even more extreme anxiety and a ruthless, usually violent purge until my mouth hurts",directional
+595,"595, 708","The eating is followed by an even more extreme anxiety and a ruthless, usually violent purge until my mouth hurts",relational
+595,"595, 708","The eating is followed by an even more extreme anxiety and a ruthless, usually violent purge until my mouth hurts",two-role-action
+618,"618, 649",by an even more extreme anxiety,agent
+618,"618, 649",by an even more extreme anxiety,agent-cognizant
+618,"618, 649",by an even more extreme anxiety,agent-carrier
+618,"618, 649",by an even more extreme anxiety,agent-perceiver
+618,"618, 649",by an even more extreme anxiety,perceiver
+688,"688, 708",until my mouth hurts,process
+688,"688, 708",until my mouth hurts,one-role-action
+709,"709, 732",and my heart is racing.,process
+709,"709, 732",and my heart is racing.,one-role-action
+713,"713, 721",my heart,agent
+713,"713, 721",my heart,agent-cognizant
+713,"713, 721",my heart,agent-carrier
+713,"713, 721",my heart,agent-perceiver
+595,"595, 605",The eating,affected-emoter
+595,"595, 605",The eating,affected-path
+595,"595, 605",The eating,affected-perceiver
+595,"595, 605",The eating,affected-cognizant
+595,"595, 605",The eating,affected-carrier
+595,"595, 605",The eating,affected-destination
+595,"595, 605",The eating,affected
+595,"595, 605",The eating,affected-possessed
+595,"595, 605",The eating,path
+595,"595, 605",The eating,affected-source
+595,"595, 605",The eating,range
+878,"878, 918","to do it for another few hours""-feeling.",process
+878,"878, 918","to do it for another few hours""-feeling.",attributive
+878,"878, 918","to do it for another few hours""-feeling.",two-role-action
+878,"878, 918","to do it for another few hours""-feeling.",action
+865,"865, 918","I don't have to do it for another few hours""-feeling.",process
+865,"865, 918","I don't have to do it for another few hours""-feeling.",causative
+865,"865, 918","I don't have to do it for another few hours""-feeling.",influential
+736,"736, 744",the past,phenomenon
+736,"736, 744",the past,created-phenomenon
+878,"878, 883",to do,main
+865,"865, 866",I,agent
+865,"865, 866",I,agent-cognizant
+865,"865, 866",I,agent-carrier
+865,"865, 866",I,agent-perceiver
+852,"852, 854",'s,main
+744,"744, 747",", I",affected-perceiver
+744,"744, 747",", I",agent-perceiver
+855,"855, 859",over,location
+855,"855, 859",over,range
+846,"846, 859",", that's over",process
+846,"846, 859",", that's over",locational
+846,"846, 859",", that's over",two-role-action
+846,"846, 859",", that's over",action
+887,"887, 918","for another few hours""-feeling.",attribute
+887,"887, 918","for another few hours""-feeling.",affected-emoter
+887,"887, 918","for another few hours""-feeling.",affected-path
+887,"887, 918","for another few hours""-feeling.",affected-perceiver
+887,"887, 918","for another few hours""-feeling.",affected-cognizant
+887,"887, 918","for another few hours""-feeling.",affected-carrier
+887,"887, 918","for another few hours""-feeling.",affected-destination
+887,"887, 918","for another few hours""-feeling.",affected
+887,"887, 918","for another few hours""-feeling.",affected-possessed
+887,"887, 918","for another few hours""-feeling.",affected-source
+846,"846, 852",", that",agent
+846,"846, 852",", that",agent-cognizant
+846,"846, 852",", that",affected-carrier
+846,"846, 852",", that",agent-carrier
+846,"846, 852",", that",agent-perceiver
+846,"846, 852",", that",carrier
+846,"846, 852",", that",perceiver
+869,"869, 877",n't have,main
+884,"884, 886",it,attribute
+884,"884, 886",it,affected-emoter
+884,"884, 886",it,affected-path
+884,"884, 886",it,affected-perceiver
+884,"884, 886",it,affected-cognizant
+884,"884, 886",it,affected-carrier
+884,"884, 886",it,affected-destination
+884,"884, 886",it,affected
+884,"884, 886",it,affected-possessed
+884,"884, 886",it,affected-source
+765,"765, 830","a small high from the purge, a sort of sick relaxed feeling, sort",created-phenomenon
+878,"878, 918","to do it for another few hours""-feeling.",phenomenon
+878,"878, 918","to do it for another few hours""-feeling.",created-phenomenon
+878,"878, 918","to do it for another few hours""-feeling.",created
+994,"994, 995",I,agent
+994,"994, 995",I,agent-cognizant
+994,"994, 995",I,agent-perceiver
+994,"994, 995",I,perceiver
+1000,"1000, 1002",it,affected-emoter
+1000,"1000, 1002",it,affected-path
+1000,"1000, 1002",it,affected-perceiver
+1000,"1000, 1002",it,source
+1000,"1000, 1002",it,affected-cognizant
+1000,"1000, 1002",it,affected-carrier
+1000,"1000, 1002",it,affected-destination
+1000,"1000, 1002",it,affected
+1000,"1000, 1002",it,affected-source
+1000,"1000, 1002",it,carrier
+990,"990, 1011",Did I get it all out?,process
+990,"990, 1011",Did I get it all out?,directional
+990,"990, 1011",Did I get it all out?,two-role-action
+990,"990, 1011",Did I get it all out?,action
+1012,"1012, 1074",What if there is more food hiding in the depths of my stomach?,process
+1039,"1039, 1074",hiding in the depths of my stomach?,process
+1039,"1039, 1074",hiding in the depths of my stomach?,two-role-action
+1039,"1039, 1074",hiding in the depths of my stomach?,action
+1029,"1029, 1074",more food hiding in the depths of my stomach?,affected-carrier
+1029,"1029, 1074",more food hiding in the depths of my stomach?,agent-carrier
+1046,"1046, 1074",in the depths of my stomach?,affected-emoter
+1046,"1046, 1074",in the depths of my stomach?,affected-path
+1046,"1046, 1074",in the depths of my stomach?,affected-perceiver
+1046,"1046, 1074",in the depths of my stomach?,affected-cognizant
+1046,"1046, 1074",in the depths of my stomach?,affected-carrier
+1046,"1046, 1074",in the depths of my stomach?,affected-destination
+1046,"1046, 1074",in the depths of my stomach?,affected
+1046,"1046, 1074",in the depths of my stomach?,affected-possessed
+1046,"1046, 1074",in the depths of my stomach?,affected-source
+1039,"1039, 1045",hiding,main
+1075,"1075, 1116",I'll be 20 pounds heavier in the morning!,process
+1075,"1075, 1116",I'll be 20 pounds heavier in the morning!,locational
+1075,"1075, 1116",I'll be 20 pounds heavier in the morning!,two-role-action
+1075,"1075, 1116",I'll be 20 pounds heavier in the morning!,action
+1093,"1093, 1100",heavier,location
+1093,"1093, 1100",heavier,range
+1075,"1075, 1076",I,agent
+1075,"1075, 1076",I,agent-cognizant
+1075,"1075, 1076",I,affected-carrier
+1075,"1075, 1076",I,affected
+1075,"1075, 1076",I,agent-carrier
+1075,"1075, 1076",I,agent-perceiver
+1075,"1075, 1076",I,perceiver
+1101,"1101, 1116",in the morning!,attribute
+1101,"1101, 1116",in the morning!,location
+1101,"1101, 1116",in the morning!,range
+1173,"1173, 1183",how I felt,process
+1173,"1173, 1183",how I felt,attributive
+1173,"1173, 1183",how I felt,two-role-perception
+1173,"1173, 1183",how I felt,emotive
+1173,"1173, 1183",how I felt,created-phenomenon
+1162,"1162, 1172",to explain,main
+1238,"1238, 1242",feel,main
+1173,"1173, 1176",how,attribute
+1173,"1173, 1176",how,created-phenomenon
+1177,"1177, 1178",I,affected-emoter
+1177,"1177, 1178",I,agent
+1177,"1177, 1178",I,affected-perceiver
+1177,"1177, 1178",I,affected-carrier
+1177,"1177, 1178",I,agent-carrier
+1177,"1177, 1178",I,agent-perceiver
+1177,"1177, 1178",I,carrier
+1177,"1177, 1178",I,perceiver
+1117,"1117, 1184","Sorry for the weird entry, but I just wanted to explain how I felt,",process
+1117,"1117, 1184","Sorry for the weird entry, but I just wanted to explain how I felt,",desiderative
+1162,"1162, 1183",to explain how I felt,process
+1162,"1162, 1183",to explain how I felt,three-role-cognition
+1127,"1127, 1142",the weird entry,phenomenon
+1127,"1127, 1142",the weird entry,created-phenomenon
+1162,"1162, 1183",to explain how I felt,created-phenomenon
+1148,"1148, 1149",I,affected-emoter
+1267,"1267, 1287",pretty lonely myself,phenomenon
+1267,"1267, 1287",pretty lonely myself,created-phenomenon
+1255,"1255, 1256",I,affected-emoter
+1255,"1255, 1256",I,agent
+1255,"1255, 1256",I,affected-perceiver
+1255,"1255, 1256",I,affected-carrier
+1255,"1255, 1256",I,agent-carrier
+1255,"1255, 1256",I,agent-perceiver
+1255,"1255, 1256",I,emoter
+1255,"1255, 1256",I,perceiver
+1255,"1255, 1299",I'm feeling pretty lonely myself these days.,process
+1255,"1255, 1299",I'm feeling pretty lonely myself these days.,mental
+1255,"1255, 1299",I'm feeling pretty lonely myself these days.,two-role-perception
+1255,"1255, 1299",I'm feeling pretty lonely myself these days.,emotive
+1303,"1303, 1309",anyone,affected-carrier
+1303,"1303, 1309",anyone,agent-carrier
+1314,"1314, 1349",any advice or tips for self control,affected
+1314,"1314, 1349",any advice or tips for self control,affected-possessed
+1300,"1300, 1349",If anyone has any advice or tips for self control,process
+1378,"1378, 1441","I will get past this and loose another 5 pounds, no, 10 pounds.",process
+1378,"1378, 1441","I will get past this and loose another 5 pounds, no, 10 pounds.",attributive
+1378,"1378, 1441","I will get past this and loose another 5 pounds, no, 10 pounds.",causative
+1378,"1378, 1441","I will get past this and loose another 5 pounds, no, 10 pounds.",two-role-action
+1378,"1378, 1441","I will get past this and loose another 5 pounds, no, 10 pounds.",action
+1389,"1389, 1441","past this and loose another 5 pounds, no, 10 pounds.",phenomenon
+1389,"1389, 1441","past this and loose another 5 pounds, no, 10 pounds.",attribute
+1389,"1389, 1441","past this and loose another 5 pounds, no, 10 pounds.",affected-emoter
+1389,"1389, 1441","past this and loose another 5 pounds, no, 10 pounds.",created-phenomenon
+1389,"1389, 1441","past this and loose another 5 pounds, no, 10 pounds.",affected-path
+1389,"1389, 1441","past this and loose another 5 pounds, no, 10 pounds.",affected-perceiver
+1389,"1389, 1441","past this and loose another 5 pounds, no, 10 pounds.",affected-cognizant
+1389,"1389, 1441","past this and loose another 5 pounds, no, 10 pounds.",affected-carrier
+1389,"1389, 1441","past this and loose another 5 pounds, no, 10 pounds.",affected-destination
+1389,"1389, 1441","past this and loose another 5 pounds, no, 10 pounds.",affected
+1389,"1389, 1441","past this and loose another 5 pounds, no, 10 pounds.",affected-source
+1389,"1389, 1441","past this and loose another 5 pounds, no, 10 pounds.",created
+1378,"1378, 1379",I,agent
+1378,"1378, 1379",I,agent-cognizant
+1378,"1378, 1379",I,affected-carrier
+1378,"1378, 1379",I,affected
+1378,"1378, 1379",I,agent-carrier
+1378,"1378, 1379",I,agent-perceiver
+1378,"1378, 1379",I,perceiver
+1515,"1515, 1539",to keep reminding myself,process
+1515,"1515, 1539",to keep reminding myself,continuing
+1515,"1515, 1539",to keep reminding myself,influential
+1481,"1481, 1506",with each others' support,affected-possessed
+1481,"1481, 1506",with each others' support,matchee
+1481,"1481, 1506",with each others' support,possessed
+1468,"1468, 1470",we,affected-carrier
+1468,"1468, 1470",we,agent-carrier
+1468,"1468, 1470",we,carrier
+1510,"1510, 1514",need,main
+1515,"1515, 1522",to keep,main
+1523,"1523, 1539",reminding myself,phenomenon
+1523,"1523, 1539",reminding myself,created-phenomenon
+545,"545, 568",to control my emotions.,action
+1173,"1173, 1183",how I felt,phenomenon
+1117,"1117, 1184","Sorry for the weird entry, but I just wanted to explain how I felt,",mental
