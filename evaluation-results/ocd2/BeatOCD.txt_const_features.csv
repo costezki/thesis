@@ -1,0 +1,132 @@
+Name,Man N,Man %,Auto N,Auto %,Precision,Recall,F1
+,
+TOTAL,9119,,11203,,0.4691600464161385,0.5763789889242241,0.5172719220549158
+,
+RANK,2455,26.921811602149358,4051,36.15995715433366,0.5408541100962725,0.8924643584521385,0.6735321241930525
+clause,529,21.54786150712831,546,13.478153542335225,0.8736263736263736,0.9017013232514177,0.8874418604651163
+marker,224,9.124236252545826,395,9.750678844729697,0.38734177215189874,0.6830357142857143,0.49434571890145396
+group,1699,69.20570264765784,1762,43.49543322636386,0.8859250851305335,0.9187757504414361,0.9020514302224791
+word,3,0.12219959266802445,1348,33.275734386571216,0.0,0.0,-1
+,
+VERBAL-GROUP-FUNCTION,3,0.03289834411667946,15,0.13389270731054181,0.0,0.0,-1
+auxiliary,0,0.0,0,0.0,-1,-1,-1.0
+modal,0,0.0,15,100.0,0.0,-1,0.0
+polarity-marker,3,100.0,0,0.0,-1,0.0,0.0
+main-verb,0,0.0,0,0.0,-1,-1,-1.0
+,
+EXPERIENTIAL-FUNCTION,4,0.04386445882223928,763,6.810675711862895,0.0,0.0,-1
+process,3,75.0,546,71.55963302752293,0.0,0.0,-1
+circumstance,0,0.0,217,28.440366972477065,0.0,-1,0.0
+participant,1,25.0,0,0.0,-1,0.0,0.0
+,
+INTERPERSONAL-FUNCTION,1681,18.43403882004606,2790,24.904043559760776,0.5369175627240144,0.891136228435455,0.6700961753522703
+finite,150,8.923259964306961,855,30.64516129032258,0.17192982456140352,0.98,0.2925373134328358
+adjunct,266,15.823914336704343,358,12.831541218637993,0.5446927374301676,0.7330827067669173,0.625
+subject,389,23.14098750743605,439,15.734767025089605,0.8405466970387244,0.9485861182519281,0.891304347826087
+complement-direct,347,20.6424747174301,590,21.14695340501792,0.5271186440677966,0.8962536023054755,0.6638207043756671
+complement-indirect,2,0.1189767995240928,2,0.07168458781362007,0.0,0.0,-1
+predicator,527,31.35038667459845,546,19.56989247311828,0.8717948717948718,0.9032258064516129,0.8872320596458527
+,
+ADJUNCT-TYPE,253,2.7744270205066344,86,0.7676515219137731,0.7325581395348837,0.2490118577075099,0.37168141592920356
+mood-adjunct,108,42.68774703557312,86,100.0,0.7325581395348837,0.5833333333333334,0.6494845360824741
+comment-adjunct,21,8.300395256916996,0,0.0,-1,0.0,0.0
+conjunctive-adjunct,14,5.533596837944664,0,0.0,-1,0.0,0.0
+other-adjunct,110,43.47826086956522,0,0.0,-1,0.0,0.0
+,
+MOOD-ADJUNCT-TYPE,108,1.1843403882004606,120,1.0711416584843345,0.4666666666666667,0.5185185185185185,0.4912280701754386
+temporality,43,39.81481481481482,54,45.0,0.5370370370370371,0.6744186046511628,0.597938144329897
+modality,36,33.33333333333333,20,16.666666666666664,0.65,0.3611111111111111,0.4642857142857143
+intensity,29,26.851851851851855,46,38.333333333333336,0.30434782608695654,0.4827586206896552,0.3733333333333333
+,
+GROUP-TYPE,1698,18.620462770040575,1731,15.451218423636526,0.8365106874638937,0.8527679623085983,0.8445610965296004
+nominal-group,648,38.16254416961131,623,35.99075678798383,0.9052969502407705,0.8703703703703703,0.8874901652242329
+verbal-group,678,39.92932862190813,706,40.78567302137493,0.8923512747875354,0.9292035398230089,0.9104046242774566
+prepositional-group,120,7.06713780918728,124,7.163489312536106,0.7258064516129032,0.75,0.7377049180327869
+adverbial-group,187,11.012956419316843,219,12.65164644714038,0.5981735159817352,0.7005347593582888,0.645320197044335
+adjectival-group,65,3.828032979976443,59,3.40843443096476,0.559322033898305,0.5076923076923077,0.532258064516129
+,
+MARKER-TYPE,222,2.43447746463428,8,0.07140944389895564,0.0,0.0,-1
+preposition,2,0.9009009009009009,0,0.0,-1,0.0,0.0
+conjunction,213,95.94594594594594,0,0.0,-1,0.0,0.0
+verb-particle,7,3.153153153153153,0,0.0,-1,0.0,0.0
+expletive,0,0.0,8,100.0,0.0,-1,0.0
+,
+Mann <=> Auto Mapping,
+parataxis,"p, a, r, a, t, a, x, i, s"
+preposition-of-instrument,"p, r, e, p, o, s, i, t, i, o, n, -, o, f, -, i, n, s, t, r, u, m, e, n, t"
+preposition-of-agent,"p, r, e, p, o, s, i, t, i, o, n, -, o, f, -, a, g, e, n, t"
+projection,"p, r, o, j, e, c, t, i, o, n"
+probability,"p, r, o, b, a, b, i, l, i, t, y"
+process,"p, r, o, c, e, s, s"
+clause,"c, l, a, u, s, e"
+expletive,"e, x, p, l, e, t, i, v, e"
+idea,"i, d, e, a"
+polarity-marker,"p, o, l, a, r, i, t, y, -, m, a, r, k, e, r"
+preposition,"p, r, e, p, o, s, i, t, i, o, n"
+intensity,"i, n, t, e, n, s, i, t, y"
+preposition-of-source,"p, r, e, p, o, s, i, t, i, o, n, -, o, f, -, s, o, u, r, c, e"
+marker,"m, a, r, k, e, r"
+now-relative,"n, o, w, -, r, e, l, a, t, i, v, e"
+total,"t, o, t, a, l"
+deictic,"d, e, i, c, t, i, c"
+modality,"m, o, d, a, l, i, t, y"
+subject,"s, u, b, j, e, c, t"
+comment-adjunct,"c, o, m, m, e, n, t, -, a, d, j, u, n, c, t"
+verb-particle,"v, e, r, b, -, p, a, r, t, i, c, l, e"
+group,"g, r, o, u, p"
+degree,"d, e, g, r, e, e"
+participant,"p, a, r, t, i, c, i, p, a, n, t"
+prepositional-group,"p, r, e, p, o, s, i, t, i, o, n, a, l, -, g, r, o, u, p"
+main-verb,"m, a, i, n, -, v, e, r, b"
+preposition-of-time,"p, r, e, p, o, s, i, t, i, o, n, -, o, f, -, t, i, m, e"
+adjunct,"a, d, j, u, n, c, t"
+mood-adjunct,"m, o, o, d, -, a, d, j, u, n, c, t"
+high,"h, i, g, h"
+expectancy-limiting,"e, x, p, e, c, t, a, n, c, y, -, l, i, m, i, t, i, n, g"
+pre-deictic,"p, r, e, -, d, e, i, c, t, i, c"
+low,"l, o, w"
+complement-indirect,"c, o, m, p, l, e, m, e, n, t, -, i, n, d, i, r, e, c, t"
+hypotaxis,"h, y, p, o, t, a, x, i, s"
+finite,"f, i, n, i, t, e"
+adjectival-clause,"a, d, j, e, c, t, i, v, a, l, -, c, l, a, u, s, e"
+preposition-of-path,"p, r, e, p, o, s, i, t, i, o, n, -, o, f, -, p, a, t, h"
+apposition,"a, p, p, o, s, i, t, i, o, n"
+expectancy-exceeding,"e, x, p, e, c, t, a, n, c, y, -, e, x, c, e, e, d, i, n, g"
+conjunctive-adjunct,"c, o, n, j, u, n, c, t, i, v, e, -, a, d, j, u, n, c, t"
+coordinating-conjunction,"c, o, o, r, d, i, n, a, t, i, n, g, -, c, o, n, j, u, n, c, t, i, o, n"
+qualifier,"q, u, a, l, i, f, i, e, r"
+posessor,"p, o, s, e, s, s, o, r"
+circumstance,"c, i, r, c, u, m, s, t, a, n, c, e"
+ordinal-numerative,"o, r, d, i, n, a, l, -, n, u, m, e, r, a, t, i, v, e"
+complement-direct,"c, o, m, p, l, e, m, e, n, t, -, d, i, r, e, c, t"
+epithet,"e, p, i, t, h, e, t"
+expansion,"e, x, p, a, n, s, i, o, n"
+extending,"e, x, t, e, n, d, i, n, g"
+usuality,"u, s, u, a, l, i, t, y"
+other-adjunct,"o, t, h, e, r, -, a, d, j, u, n, c, t"
+enhancing,"e, n, h, a, n, c, i, n, g"
+matrix-clause,"m, a, t, r, i, x, -, c, l, a, u, s, e"
+adverbial-group,"a, d, v, e, r, b, i, a, l, -, g, r, o, u, p"
+verbal-group,"v, e, r, b, a, l, -, g, r, o, u, p"
+constituent,"c, o, n, s, t, i, t, u, e, n, t"
+conjunction,"c, o, n, j, u, n, c, t, i, o, n"
+adjectival-group,"a, d, j, e, c, t, i, v, a, l, -, g, r, o, u, p"
+preposition-of-benficiary,"p, r, e, p, o, s, i, t, i, o, n, -, o, f, -, b, e, n, f, i, c, i, a, r, y"
+subordinating-conjunction,"s, u, b, o, r, d, i, n, a, t, i, n, g, -, c, o, n, j, u, n, c, t, i, o, n"
+correlative-conjunction,"c, o, r, r, e, l, a, t, i, v, e, -, c, o, n, j, u, n, c, t, i, o, n"
+predicator,"p, r, e, d, i, c, a, t, o, r"
+word,"w, o, r, d"
+auxiliary,"a, u, x, i, l, i, a, r, y"
+preposition-of-destination,"p, r, e, p, o, s, i, t, i, o, n, -, o, f, -, d, e, s, t, i, n, a, t, i, o, n"
+elaborating,"e, l, a, b, o, r, a, t, i, n, g"
+preposition-of-location,"p, r, e, p, o, s, i, t, i, o, n, -, o, f, -, l, o, c, a, t, i, o, n"
+nominal-clause,"n, o, m, i, n, a, l, -, c, l, a, u, s, e"
+cardinal-numerative,"c, a, r, d, i, n, a, l, -, n, u, m, e, r, a, t, i, v, e"
+thing,"t, h, i, n, g"
+nominal-group,"n, o, m, i, n, a, l, -, g, r, o, u, p"
+adverbial-clause,"a, d, v, e, r, b, i, a, l, -, c, l, a, u, s, e"
+modal,"m, o, d, a, l"
+locution,"l, o, c, u, t, i, o, n"
+temporality,"t, e, m, p, o, r, a, l, i, t, y"
+expectation-relative,"e, x, p, e, c, t, a, t, i, o, n, -, r, e, l, a, t, i, v, e"
+classifier,"c, l, a, s, s, i, f, i, e, r"

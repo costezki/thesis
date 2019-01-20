@@ -411,6 +411,8 @@ The first line of the algorithm checks if there are more than one clauses in the
 After the null elements are created the constituency graph is ready for the semantic enrichment stage semantic configuration are assigned to each clause. The next sections introduce first how the PTDB has been normalised and how the graph patterns are created from it and then proceed with the semantic enrichment algorithm.
 
 \section{Cleaning up the PTDB}
+\label{sec:claning-ptdb}
+
 The original version of the PTDB available on Neale's personal page\footnote{see \url{http://www.itri.brighton.ac.uk/~Amy.Neale/}} is not usable for computational purposes as such. It  contains records applying a couple of different notations and sometimes informal, comments for human understanding, which from a machine standpoint is noise and cannot be processed as such. In this section I explain now how the original PTDB was transformed into a machine friendly form in order to be used as a lexical database.
 
 The internal structure of the PTDB is detailed in Neale's PhD thesis \citep[193--231]{Neale2002}. Here I focus on three columns which are of interest for the parsing purpose: the \textit{verb form} (1^{st}), the Cardiff grammar \textit{process type} (6^{th}) and the participant role \textit{configuration} (8^{th}). Note that column numbers correspond to the original PTDB structure. After the transformation the PTDB column descriptions are as described in the Table \ref{tab:ptdb-comparison}. The field names in italic are the ones of interest and have been modified.

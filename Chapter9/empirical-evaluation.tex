@@ -7,9 +7,26 @@ In order to count correct and incorrect number of segments they need to be match
 
 To establish the matches between manual and automatic segments I have implemented a variation of the Gale-Shapley algorithm \citep{Gale1962} which is described in Section \ref{sec:stable-marriage} below. Then, the section that follows, are finally described the empirical findings of the current evaluation. 
 
-In the current evaluation I use two sets of annotated texts. The first dataset was created together with Ela Oren and is focused on constituency structure and clause Mood analysis. The texts represent blog articles of people diagnosed with Obsessive Compulsive Disorder (OCD) who self-report on the challenge of overcoming OCD. The dataset contains four texts comprising all together 988 clauses and 8605 words. The second dataset is the PhD work of Anke Shultz covering Cardiff Transitivity analysis. It comprises 31 files spanning over 1466 clauses and 20864 words. 
+In the current evaluation I use two sets of annotated texts. Table \ref{tab:corpus-sumary} summarises the corpora used for evaluation in this work.. The first dataset (OCD) was created by Ela Oren and I and is focused on syntactic constituency structure and clause Mood features. The texts represent blog articles of people diagnosed with Obsessive Compulsive Disorder (OCD) who self-report on the challenge of overcoming OCD. 
+%The dataset contains four texts comprising all together 988 clauses and 8605 words. 
+The second dataset (OE1) is the PhD work of Anke Shultz covering Cardiff Transitivity analysis. It comprises 31 files spanning over 1503 clauses and 20864 words. In addition She provided another similar smaller corpus of 157 clauses that si also included into the evaluation. 
 
-The datasets have not been developed for the purpose of evaluating current parser however they are compatible and can be adapted to evaluate (a) the boundaries of a constituent segment, (b) the constituent function and (c) some systemic feature choices. To enable each of these evaluations the annotation data and parser output need to be represented in such a way that they are comparable to each other.
+\begin{table}[!ht]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        \textbf{Corpus} & \textbf{Elements} & \textbf{System Network} & \textbf{\begin{tabular}[c]{@{}c@{}}\# characters\\ (thousands)\end{tabular}} & \textbf{\# clauses} & \textbf{Annotator(s)}         \\ \hline
+        OCD            & Syntax            & Mood              & 16.2                                                                         & 147                 &  Ela Oren \& Eugeniu Costetchi \\ \hline
+        OE1             & Semantics         & Transitivity      & 51.8                                                                         & 1503                & Anke Schultz                  \\ \hline
+        BTC             & Semantics         & Transitivity      & 5.6                                                                          & 157                 & Anke Schultz                  \\ \hline
+    \end{tabular}
+    }
+    \caption{Evaluation corpus summary}
+    \label{tab:corpus-sumary}
+\end{table}
+
+The OE1 and BTC datasets have not been developed for the purpose of evaluating the current parser however they are compatible and can be adapted to evaluate (a) the boundaries of a constituent segment, (b) the constituent semantic function and (c) some Transitivity features. To enable each of these evaluations the annotation data and parser output need to be represented in such a way that they are comparable to each other. Specifically the feature names had to be harmonised with the ones from PTDB. The adjustments were the same as described in Section \ref{sec:claning-ptdb}.
 
 \section{Segment definition}
 To compare the segment boundaries we need to understand how they are represented in each output and how they can be brought to a common for comparison. 
@@ -296,144 +313,453 @@ In the end the algorithm provides a list of successful matches out of which we c
 
 \section{The measurements}
 \label{sec:results}
-%todo write it
 
-In this section I present a series of questions and the empirical measurements addressing them. 
+In this section I present a series of measurements addressing two quality criteria of the parser. Firstly, the degree of divergence in segment spans between manual and parse segments in all corpora (OCD, BTC and OE1). And secondly, the accuracy of the parser with respect to manual annotations measured through precision, recall and F_1 measures. The syntactic constituency and some Mood features are derived from OCD corpus only, followed by the semantic constituency and Transitivity features evaluation based on OE1 and BTC corpora. 
 
-The above described differences in annotation rules are inevitably reflected in segmentation differences. Let's compare now the corpus and parser segmentation. I use geometric distance ($ d= \sqrt{\varDelta start ^{2}+\varDelta end ^{2}} $) to measure the difference between the segments matched with Gale-Shapley algorithm. Figure \ref{fig:segment-distance-distribution} represents distribution of matches according to the distance. 71.11\% of the segments have identical spans while the rest of 28.8\% have minor to major differences of which 19\% are distanced 1-5 characters due to differences in (a) punctuation, (b) conjunction and (c)verbal group treatment described above. The rest 9.9\% of long and very long distances (6-182 characters) are due to differences in verbal group treatment, subsumed conjuncts (clause and group conjunctions) and erroneous prepositional phrase attachment (treated as Qualifier instead of Complement/Adjunct or vice versa).
+\subsection{Segment divergence: general findings}
+
+The segments don't perfectly align, as described in previous sections, due to minor differences in annotation approach, text normalisation and trimming before parsing (that was not performed before the manual annotation), errors in the annotations (missing or including characters). The misalignment is measured using the geometric distance 
+%$d= \sqrt{\varDelta start ^{2}+\varDelta end ^{2}} $ 
+on segments matched with Algorithm \ref{alg:matching}. The presented statistics are calculated on a number of over 12500 segment pairs whose mean distance is 4.84 with a standard deviation of 14.51. The distance is distributed between a minimum 0 and maximum 219. A mean close to the minimum point and a large standard deviation indicates that most of the data points are situated between 0 and slightly over the mean continued by a very long tail of rare and distant data points. This intuition can be seen in the histogram depicted in Figure \ref{fig:segment-distance-histogram-full} below. This dataset resembles the Pareto distribution where 74\% are almost not shifted (by up to 1 character) or 83\% of the segments are slightly shifted up to 5 characters.
 
 \begin{figure}[!ht]
     \centering
-    \begin{tikzpicture}[pattern-node] 
-    \begin{axis}[
-    scale only axis,
-    axis y line*=left,
-    axis x line*=bottom,
-    xlabel=$Geometric Distance$,
-    ylabel=$Count$,
-    ylabel near ticks,
-    xlabel near ticks]
-    \addplot[color=black, mark = x] coordinates {
-        (0,	3433)
-        (5,	919)
-        (10,	135)
-        (15,	74)
-        (20,	50)
-        (25,	33)
-        (30,	33)
-        (35,	27)
-        (40,	21)
-        (45,	24)
-        (50,	9)
-        (55,	11)
-        (60,	15)
-        (65,	8)
-        (70,	15)
-        (75,	3)
-        (80,18)
-    };
-    \end{axis}
-    
-    \begin{axis}[
-    scale only axis,
-    axis y line*=right,
-    hide x axis,
-    ylabel=$Distribution$,
-    ylabel near ticks]
-    \addplot[color=black, mark = x] coordinates {		
-        (0,		.7110604805)
-        (5,		.1903479702)
-        (10,	.02796188898)
-        (15,	.01532725766)
-        (20,	.01035625518)
-        (25,	.00683512842)
-        (30,	.00683512842)
-        (35,	.0055923778)
-        (40,	.00434962717)
-        (45,	.00497100249)
-        (50,	.00186412593)
-        (55,	.00227837614)
-        (60,	.00310687655)
-        (65,	.00165700083)
-        (70,	.00310687655)
-        (75,	.00062137531)
-        (80,	.00372825186)
-    };
-    \end{axis}
-    \end{tikzpicture}
-    \caption{Segment distance distribution}
+    \includegraphics[width=.7\textwidth]{evaluation-results/figures/distance-distr-histogram-full}
+    \caption{Full histogram of the distance distribution of the matched segments (binning=300)}
+    \label{fig:segment-distance-histogram-full}
+\end{figure}
+
+Because of a very long tail, I reduce the further analysis to the distance span between 0 and 40. Figure \ref{fig:segment-distance-distribution} depicts the histogram of distances between matched segments (in 300 bins). It shows that most segments (89\%) are cumulated in first two bins with distance up to 2. The consequent three bins also contain a significant portion of segments with distance up to 5. The rest of the bins, represent a very long tail, spanning on distances up to maximum 219 and containing a small amount of segments. 
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.7\textwidth]{evaluation-results/figures/distance-distr-histogram}
+    \caption{Reduced histogram of the distance distribution of the matched segments (binning=300). View reduced to the a distance of 40 characters}
+    \label{fig:segment-distance-histogram}
+\end{figure}
+
+This distribution can be viewed in it's cumulative form depicted in Figure \ref{fig:segment-distance-distribution}. Here we see that over 51\% of segments are perfectly aligned. 80\% of the segments are slightly shifted up to a distance of maximum 5 characters. This can be explained by differences in (a) punctuation, (b) conjunction and (c)verbal group treatment described above. The next 5\% of the segments are shifted between 5 and 10 characters. The last 10\% cover the heavy shift of distances 20 to 219. This may be due differences in verbal group treatment, subsumed conjuncts (clause and group conjunctions) and erroneous prepositional phrase attachment (treated as Qualifier instead of Complement/Adjunct or vice versa). 
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.7\textwidth]{evaluation-results/figures/distance-distr-cumulative}
+    \caption{Cumulative histogram of the distance distribution of the matched segments (binning=300). View reduced to the a distance of 40 characters}
     \label{fig:segment-distance-distribution}
 \end{figure}
+
+\subsection{Segment divergence breakdown by element type}
+
+If we take a closer look at the Figure \ref{fig:segment-distance-histogram} we will notice some spikes and a tendency towards some local values. What would the histogram look like if we group values in a different manner considering these spikes and the long tail of the distribution. 
+In Figure \ref{fig:segment-distance-histogram} we can observe several dips at around distances 3, 6, 11, 13, 17, 19, 22, 24 and so on. I decided to consider these dips for deciding bin borders in the new bin design. And, since the tail is very long with very few values, as the bins advance to the left, each is designed over longer span this way compressing the tail. In Table \ref{tab:progressive-bins} is presented such binning design. Also each interval is assigned a category that means the degree of deviation.
+
+\begin{table}[!ht]
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{degree}          & insignificant & tiny & little & moderate & significant & high   \\ \hline
+        \textbf{distance intervals} & 0-3           & 3-5  & 5-10   & 10-20    & 20-50       & 50-250 \\ \hline
+    \end{tabular}
+    \caption{The progressive binning scale considering the dataset properties}
+    \label{tab:progressive-bins}
+\end{table}
+
+Besides custom binning described above, looking at each segment label in part brings more clarity to the evaluation. The most relevant segment labels are the unit elements. In the current evaluation, the annotators provide clause level syntactic (subject, complement, adjunct, predicator, finite) and semantic (configuration, main verb, participant) elements. These elements are used a dimension in the breakdown of the segment divergence that follows. 
+
+Using the bins defined in Table \ref{tab:progressive-bins} the distribution of segment deviations grouped by the main syntactic elements is provided in Table \ref{tab:deviation-per-feature-and-degree-constit} that is also depicted in Figure \ref{fig:segment-distance-degree-features-mood}. 
+
+\begin{table}[!ht]
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \multirow{2}{*}{\textbf{element}} & \multicolumn{6}{c|}{\textbf{\% of segments per degree of deviation}} \\ \cline{2-7} 
+        & \textbf{\begin{tabular}[c]{@{}c@{}}insignificant\\ (0-3)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}tiny\\ (3-5)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}little\\ (5-10)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}moderate\\ (10-20)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}significant\\ (20-50)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}high\\ (50-250)\end{tabular}} \\ \hline
+        predicator & 29.38 & 0.95 & 0.30 & 0.10 & 0.00 & 0.05 \\ \hline
+        subject    & 22.70 & 0.10 & 0.25 & 0.30 & 0.05 & 0.00 \\ \hline
+        adjunct    & 13.86 & 0.45 & 0.60 & 0.15 & 0.85 & 0.20 \\ \hline
+        complement & 12.10 & 0.75 & 1.46 & 2.26 & 1.96 & 1.86 \\ \hline
+        finite     & 9.19  & 0.00 & 0.00 & 0.00 & 0.05 & 0.05 \\ \hline
+    \end{tabular}
+    \caption{Percentage of segments deviated to a given degree for major syntactic elements}
+    \label{tab:deviation-per-feature-and-degree-constit}
+\end{table}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.7\textwidth]{evaluation-results/figures/distance-degree-features-syntactic}
+    \caption{Bar chart of the segments deviated to a given degree for major syntactic elements}
+    \label{fig:segment-distance-degree-features-mood}
+\end{figure}
+
+In Figure \ref{fig:segment-distance-degree-features-mood} we can see that most deviations are insignificant. The number of segments in the rest of the bins, from tiny to high, is below 1\% in every bin which perhaps reflects errors in annotation and/or matching algorithm requiring further investigation. In case of complements, however, the proportion of segments is slightly higher (0.7--2.2\%). This may be explained by the problem of prepositional phrase attachment and further analysis is needed to test this hypothesis. 
+
+When we switch to a grouping by the main Transitivity elements maintaining the same bins defined in Table \ref{tab:progressive-bins}, then the distribution of segment deviations looks as outlined in Table \ref{tab:deviation-per-feature-and-degree-trans}. The same data are depicted in Figure \ref{fig:segment-distance-degree-features-trans}. 
+
+\begin{table}[!ht]
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \multirow{2}{*}{\textbf{feature}} & \multicolumn{6}{c|}{\textbf{\% of segments per degree of deviation }}                                                                                                                                                 \\ \cline{2-7} 
+        & \textbf{\begin{tabular}[c]{@{}c@{}}insignificant\\ (0-3)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}tiny\\ (3-5)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}little\\ (5-10)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}moderate\\ (10-20)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}significant\\ (20-50)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}high\\ (50-250)\end{tabular}} \\ \hline
+        participant-role & 36.78 & 2.21 & 3.48 & 2.80 & 3.04 & 1.67 \\ \hline
+        main             & 20.75 & 3.48 & 1.23 & 0.39 & 0.00 & 0.00 \\ \hline
+        configuration    & 7.75  & 3.73 & 2.80 & 3.04 & 4.56 & 2.31 \\ \hline
+    \end{tabular}
+    \caption{Percentage of segments deviated to a given degree for major semantic elements}
+    \label{tab:deviation-per-feature-and-degree-trans}
+\end{table}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.7\textwidth]{evaluation-results/figures/distance-degree-features-semantic}
+    \caption{Bar chart of the feature segments deviated to a given degree for major semantic elements}
+    \label{fig:segment-distance-degree-features-trans}
+\end{figure}
+
+Similarly to Figure \ref{fig:segment-distance-degree-features-mood}, in Figure \ref{fig:segment-distance-degree-features-trans} we can see that most of the deviations are insignificant (0-3 characters). In the rest of the bins representing higher degrees of deviation the amount of segments is up to 4.7\% which reflects higher number of shifted segments. One exception is the main verb whose occurrences decreases towards higher degrees of deviation, i.e. it is shifted by an insignificant, tiny or little degree that is up to about 10 characters. This is explainable by the fact that the main verb is most of the time (if not always) a single word, which is always shorter than the configuration or participant elements which usually span clauses of groups comprising multiple words. The large variations in participant seems to correlate with complement variation and might be explained by the attachment errors. In cases of high configuration deviation however further investigation are needed because these may possibly be errors in the segment matching algorithm or other unknown anomalies.
+
+\subsection{Syntactic evaluation: Constituency elements}
+
+The evaluation data in this and the following sections will be presented in tables with the same structure. Using Table \ref{tab:constit-unit-types} as example I explain next what the columns mean. The first column will contain the name of the unit type, element or feature. The next three columns \textit{Match}, \textit{Manual mn} and \textit{Parse mn} represent the number of segments that are considered identical between the corpus and parser, the number of unmatched the corpus (manually created) segments and the number of unmatched parser (automatically generated) segments. The next three columns \textit{Precision}, \textit{Recall} and \textit{F_1} represent standard accuracy metrics indicating the fraction of relevant instances among the retrieved instances, fraction of relevant instances that have been retrieved over the total amount of relevant instances and the harmonic mean of the previous two. In addition, the column \textit{\%Total matched} represents the percentage the current item (row) in the table while the \textit{\% Manual nm} and \textit{\%Parse nm} represent the number of remaining unmatched segments of the current item (row) that represents a translation of the Manual and Parse mn columns into relative terms. 
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Unit type} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            clause              & 612.00 & 64.00  & 78.00  & 0.89 & 0.91 & 0.90 & 37.00 & 9.47  & 11.30 \\ \hline
+            nominal-group       & 717.00 & 108.00 & 67.00  & 0.91 & 0.87 & 0.89 & 43.35 & 13.09 & 8.55  \\ \hline
+            prepositional-group & 119.00 & 39.00  & 39.00  & 0.75 & 0.75 & 0.75 & 7.19  & 24.68 & 24.68 \\ \hline
+            adverbial-group     & 161.00 & 79.00  & 103.00 & 0.61 & 0.67 & 0.64 & 9.73  & 32.92 & 39.02 \\ \hline
+            adjectival-group    & 45.00  & 36.00  & 38.00  & 0.54 & 0.56 & 0.55 & 2.72  & 44.44 & 45.78 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for the main constituency unit types}
+    \label{tab:constit-unit-types}
+\end{table}
+
+The syntactic accuracy aims to measure how well the main unit types and the clause main elements have been detected by the parsed compared to the corpus. The evaluation is performed on the OCD corpus. This evaluation is restricted to the clause and four group types: nominal, prepositional, adverbial and adjectival. No clause complexes, group complexes or word types are included. The evaluation results are presented in Table \ref{tab:constit-unit-types} where we can see that clauses and nominal groups have an F_1 score of about 90\%. Prepositional, adverbial and adjectival group scores decrease to 55\% and requires investigation of the errors in the parsing and matching algorithms. There is also a contrast in the number of segments, visible in the bar chart from Figure \ref{fig:constit-unit-types}, between the first two element types and the last three with a ratio of one to four or more.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.7\textwidth]{evaluation-results/figures/accuracy-syntactic-group-types}
+    \caption{Bar chart of matched and non-matched (manual and parse) segments of the main constituency unit types}
+    \label{fig:constit-unit-types}
+\end{figure}
+
+Table \ref{tab:constit-unit-elements} presents the evaluation result for the main clause elements. Some of them such as, auxiliary verbs, main verb extension, negation particle, and others have been omitted in the corpus and thus missing in the present evaluation. For the predicator (i.e main verb) and subject elements the F_1 measure raises to 90\%. For the complements and finite the F_1 score is 67\% and 63\%. Surprisingly the complements have a small number of corpus unmatched segments and a high number of parser unmatched segments. This is explained by a flaw in the annotation methodology because the clausal complements were often annotated directly as new clause and omitting to draw the same segment with complement element. This required the corpus revision and correction. Adjuncts however have a higher number of unmatched segments on both sides and this may be dues to bugs in the parser.
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Clause element} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            predicator & 613 & 60  & 79  & 0.89 & 0.91 & 0.90 & 30.79 & 8.92  & 11.42 \\ \hline
+            subject    & 466 & 22  & 86  & 0.84 & 0.95 & 0.90 & 23.41 & 4.51  & 15.58 \\ \hline
+            complement & 406 & 43  & 350 & 0.54 & 0.90 & 0.67 & 20.39 & 9.58  & 46.30 \\ \hline
+            adjunct    & 321 & 159 & 224 & 0.59 & 0.67 & 0.63 & 16.12 & 33.12 & 41.10 \\ \hline
+            finite     & 185 & 3   & 392 & 0.32 & 0.98 & 0.48 & 9.29  & 1.60  & 67.94 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for the clause main elements}
+    \label{tab:constit-unit-elements}
+\end{table}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.7\textwidth]{evaluation-results/figures/accuracy-syntactic-clause-elements}
+    \caption{Bar chart of matched and non-matched (manual and parse) segments of the clause main elements}
+    \label{fig:constit-unit-elements}
+\end{figure}
+
+\subsection{Syntactic evaluation: Mood feature selections}
+%todo continue here
+In this section I present the evaluation of Mood system network selections. The corpus contains selections from a pat of the system network that is depicted in Figure \ref{fig:mood-ocd-simplified}. The full system network is provided in Figure \ref{fig:clause-mood}. Employing the entire system network in the annotations was difficult because as the delicacy increases the time spent for the annotation process increases. 
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.95\textwidth]{Figures/Evaluation/ocd1-mood-simplified.pdf}
+    \caption{The part of the Mood system network that has been used in OCD corpus annotation}
+    \label{fig:mood-ocd-simplified}
+\end{figure}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            positive & 485.00 & 125.00 & 55.00 & 0.90 & 0.80 & 0.84 & 89.48 & 20.49 & 10.19 \\ \hline
+            negative & 57.00  & 10.00  & 70.00 & 0.45 & 0.85 & 0.59 & 10.52 & 14.93 & 55.12 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for POLARITY-TYPE systemic choices}
+    \label{tab:features-polarity}
+\end{table}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            active  & 553.00 & 102.00 & 68.00 & 0.89 & 0.84 & 0.87 & 98.05 & 15.57 & 10.95 \\ \hline
+            passive & 11.00  & 11.00  & 28.00 & 0.28 & 0.50 & 0.36 & 1.95  & 50.00 & 71.79 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for VOICE-TYPE systemic choices}
+    \label{tab:features-voice}
+\end{table}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            non-finite   & 99.00  & 19.00 & 38.00  & 0.72 & 0.84 & 0.78 & 15.84 & 16.10 & 27.74 \\ \hline
+            finite       & 526.00 & 33.00 & 554.00 & 0.49 & 0.94 & 0.64 & 84.16 & 5.90  & 51.30 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for FINITNESS systemic choices}
+    \label{tab:features-finitness}
+\end{table}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            perfective   & 71.00  & 12.00 & 16.00  & 0.82 & 0.86 & 0.84 & 73.20 & 14.46 & 18.39 \\ \hline
+            imperfective & 26.00  & 9.00  & 24.00  & 0.52 & 0.74 & 0.61 & 26.80 & 25.71 & 48.00 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for NON-FINITE-TYPE systemic choices}
+    \label{tab:features-perfectivity}
+\end{table}
+
+%----deicticity
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            temporal & 446.00 & 74.00 & 55.00 & 0.89 & 0.86 & 0.87 & 97.38 & 14.23 & 10.98 \\ \hline
+            modal    & 12.00  & 33.00 & 6.00  & 0.67 & 0.27 & 0.38 & 2.62  & 73.33 & 33.33 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for DEICTICITY systemic choices}
+    \label{tab:features-deicticity}
+\end{table}
+
+%----mood assesment
+\begin{table}[]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            temporality & 35.00 & 17.00 & 27.00 & 0.56 & 0.67 & 0.61 & 56.45 & 32.69 & 43.55 \\ \hline
+            modality    & 15.00 & 32.00 & 8.00  & 0.65 & 0.32 & 0.43 & 24.19 & 68.09 & 34.78 \\ \hline
+            intensity   & 12.00 & 14.00 & 43.00 & 0.22 & 0.46 & 0.30 & 19.35 & 53.85 & 78.18 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for MOOD-ASSESSMENT systemic choices}
+    \label{tab:features-mood-assessment}
+\end{table}
+
+%---mood
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            indicative    & 455.00 & 216.00 & 37.00 & 0.92 & 0.68 & 0.78 & 99.13 & 32.19 & 7.52  \\ \hline
+            imperative    & 4.00   & 1.00   & 31.00 & 0.11 & 0.80 & 0.20 & 0.87  & 20.00 & 88.57 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for MOOD-TYPE systemic choices}
+    \label{tab:features-mood}
+\end{table}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            declarative   & 355.00 & 260.00 & 27.00 & 0.93 & 0.58 & 0.71 & 88.31 & 42.28 & 7.07  \\ \hline
+            interrogative & 47.00  & 7.00   & 63.00 & 0.43 & 0.87 & 0.57 & 11.69 & 12.96 & 57.27 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for INDICATIVE-TYPE systemic choices}
+    \label{tab:features-mood1}
+\end{table}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            wh            & 40.00  & 6.00   & 57.00 & 0.41 & 0.87 & 0.56 & 88.89 & 13.04 & 58.76 \\ \hline
+            yes-no        & 5.00   & 3.00   & 8.00  & 0.38 & 0.62 & 0.48 & 11.11 & 37.50 & 61.54 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for INTERROGATIVE-TYPE systemic choices}
+    \label{tab:features-mood2}
+\end{table}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            wh-subject    & 9.00   & 3.00   & 7.00  & 0.56 & 0.75 & 0.64 & 32.14 & 25.00 & 43.75 \\ \hline
+            wh-adjunct    & 11.00  & 15.00  & 3.00  & 0.79 & 0.42 & 0.55 & 39.29 & 57.69 & 21.43 \\ \hline
+            wh-complement & 8.00   & 0.00   & 62.00 & 0.11 & 1.00 & 0.21 & 28.57 & 0.00  & 88.57 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for WH-SELECTION systemic choices}
+    \label{tab:features-mood3}
+\end{table}
+
+
+\subsection{Semantic evaluation: Constituency elements}
+
+This section describes the empirical evaluation of the semantic annotations. This evaluation is based on the OE1 and BTC corpora created by Anke Schultz for her PhD project. She annotated the text with Cardiff Transitivity system.
+
+\subsection{Semantic evaluation: Transitivity feature selections}
+
+
+%Figure \ref{fig:segment-distance-distribution} represents a cumulative distribution of matches according to the distance. 
+%The figure is Because of the long tail of the distribution 
+%
+% 68\% of the segments have identical spans while the rest of 32\% have minor to major differences of which 19\% are distanced 1-5 characters due to differences in (a) punctuation, (b) conjunction and (c)verbal group treatment described above. The rest 9.9\% of long and very long distances (6-182 characters) are due to differences in verbal group treatment, subsumed conjuncts (clause and group conjunctions) and erroneous prepositional phrase attachment (treated as Qualifier instead of Complement/Adjunct or vice versa).
+
+%\begin{figure}[!ht]
+%    \centering
+%    \begin{tikzpicture}[pattern-node] 
+%    \begin{axis}[
+%    scale only axis,
+%    axis y line*=left,
+%    axis x line*=bottom,
+%    xlabel=$Geometric Distance$,
+%    ylabel=$Count$,
+%    ylabel near ticks,
+%    xlabel near ticks]
+%    \addplot[color=black, mark = x] coordinates {
+%        (0,	3433)
+%        (5,	919)
+%        (10,	135)
+%        (15,	74)
+%        (20,	50)
+%        (25,	33)
+%        (30,	33)
+%        (35,	27)
+%        (40,	21)
+%        (45,	24)
+%        (50,	9)
+%        (55,	11)
+%        (60,	15)
+%        (65,	8)
+%        (70,	15)
+%        (75,	3)
+%        (80,18)
+%    };
+%    \end{axis}
+%    
+%    \begin{axis}[
+%    scale only axis,
+%    axis y line*=right,
+%    hide x axis,
+%    ylabel=$Distribution$,
+%    ylabel near ticks]
+%    \addplot[color=black, mark = x] coordinates {		
+%        (0,		.7110604805)
+%        (5,		.1903479702)
+%        (10,	.02796188898)
+%        (15,	.01532725766)
+%        (20,	.01035625518)
+%        (25,	.00683512842)
+%        (30,	.00683512842)
+%        (35,	.0055923778)
+%        (40,	.00434962717)
+%        (45,	.00497100249)
+%        (50,	.00186412593)
+%        (55,	.00227837614)
+%        (60,	.00310687655)
+%        (65,	.00165700083)
+%        (70,	.00310687655)
+%        (75,	.00062137531)
+%        (80,	.00372825186)
+%    };
+%    \end{axis}
+%    \end{tikzpicture}
+%    \caption{Segment distance distribution}
+%    \label{fig:segment-distance-distribution}
+%\end{figure}
 
 %Because the problem formulation slightly differs from the standard one I have implemented the Gale-Shapley algorithm \citep{Gale1962} one of the most efficient algorithms with the corresponding extra requirements.
 
 %The featurered statistics
-Next I present evaluation data for systemic features and systems overall annotated in the corpus and parser. In the tables below are presented the following statistics for features and systems (in upper caps): number of segments in corpus containing the feature (M/N) percentage of the in corpus (M/\%), number of segments generated by the parser (A/N) and corresponding percentage (A/\%), precision, recall and F_{1} measures. 
+%
+%Next I present evaluation data for systemic features and systems overall annotated in the corpus and parser. In the tables below are presented the following statistics for features and systems (in upper caps): number of segments in corpus containing the feature (M/N) percentage of the in corpus (M/\%), number of segments generated by the parser (A/N) and corresponding percentage (A/\%), precision, recall and F_{1} measures. 
+%
+%Table \ref{tab:rank-statistics} contains evaluation statistics for the rank system. In this evaluation only group and clause level features have been taken into account excluding those at the word rank which are missing in the corpus. Clause and group constituents are identified with 0.88 and 0.9 F_{1} scores. 
 
-Table \ref{tab:rank-statistics} contains evaluation statistics for the rank system. In this evaluation only group and clause level features have been taken into account excluding those at the word rank which are missing in the corpus. Clause and group constituents are identified with 0.88 and 0.9 F_{1} scores. 
+%The marker feature is used for functional words such as prepositions, verbal prepositional particles, coordinating and subordinations conjunctions. However the prepositional phrases in the corpus do not contain the marker segment as the parser generates and only conjunctions and verbal particles are marked leading to low precision of 0.38. Overall the rank constituents are identified with 0.82 F_{1} score.
 
-The marker feature is used for functional words such as prepositions, verbal prepositional particles, coordinating and subordinations conjunctions. However the prepositional phrases in the corpus do not contain the marker segment as the parser generates and only conjunctions and verbal particles are marked leading to low precision of 0.38. Overall the rank constituents are identified with 0.82 F_{1} score.
-
-\begin{table}[H]
-    \centering
-    \begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
-        \hline
-        \textit{Name} & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ \hline
-        %&                &                 &                 &                  &                    &                 &             \\ \hline
-        RANK          & 2455       & 26.922          & 4052        & 36.156           & 0.716              & 0.902           & 0.762       \\ \hline
-        clause        & 529        & 21.548          & 545         & 13.450           & 
-        0.875              & 0.902           & 0.888       \\ \hline
-        group         & 1699       & 69.206          & 1760        & 43.435           & 0.886              & 0.918           & 0.902       \\ \hline
-        marker        & 224        & 9.124           & 396         & 9.773            & 0.389              & 0.688           & 0.497       \\ \hline
-        word          & 3          & 0.122           & 1351        & 33.342           & -              & -           & -      \\ \hline
-    \end{tabulary}
-    \caption{Rank system evaluation statistics}
-    \label{tab:rank-statistics}
-\end{table}
-
-The clause elements are systematized in Interpersonal function system whose evaluation statistics are contained in the Table \ref{tab:interpersonal-statistics}. Subjects and Predicators have the highest F_{1} scores of 0.889 and 0.888. Indirect objects have been perfectly identified but they are very few and do not have a statistical significance. Adjuncts and Complements (direct objects) have a lower precision and higher recall scoring 0.628 and 0.661 F_{1}. This is in part due to the fact that the parser annotates prepositional phrases that follow a predicate as both Complement and Adjunct being unable to syntactically distinguish between the two and this task being overtaken during the semantic analysis. The Finite elements are distinguished in the corpus only when they stand alone thus are not conflated with the predicator as in Example \ref{ex:non-conflated-finite}. But when the finite is conflated with the Predicator as in Example \ref{ex:conflated-finite} it has not been annotated in the corpus but it should be and further corrections of the corpus shall be implemented. For this reason there is a big difference between precision and recall 0.172 and 0.980 because most Finites in corpus have been identified by the parser and most of them are missing from the corpus. 
-
-\begin{exe}
-    \ex \label{ex:non-conflated-finite} He may (Finite) go (Predicator) home latter.
-    \ex \label{ex:conflated-finite} He already went (Finite/Predicator) home. 
-\end{exe}
-
-\begin{table}[H]
-    \centering
-    \begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
-        \hline
-        \textit{Name}          & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ \hline
-        %&                &                 &                 &                  &                    &                 &             \\ \hline
-        INTERPERSONAL-FUNCTION & 1681       & 18.434          & 2793        & 24.922           & 0.659              & 0.910           & 0.726       \\ \hline
-        finite                 & 150        & 8.923           & 855         & 30.612           & 0.172              & 0.980           & 0.293       \\ \hline
-        adjunct                & 266        & 15.824          & 358         & 12.818           & 0.547              & 0.737           & 0.628       \\ \hline
-        subject                & 389        & 23.141          & 439         & 15.718           & 0.838              & 0.946           & 0.889       \\ \hline
-        complement-direct      & 347        & 20.642          & 594         & 21.267           & 0.524              & 0.896           & 0.661       \\ \hline
-        complement-indirect    & 2          & 0.119           & 2           & 0.072            & 1              & 1           & 1      \\ \hline
-        predicator             & 527        & 31.350          & 545         & 19.513           & 0.873              & 0.903           & 0.888       \\ \hline
-    \end{tabulary}
-    \caption{Mood clause elements evaluation statistics}
-    \label{tab:interpersonal-statistics}
-\end{table}
-
-In Table \ref{tab:group-type-statistics} are presented evaluation statistics for Group Type system meaning how well are identified grammatical classes at the group level. Nominal and Verbal groups are parsed with 0.9 precision followed by prepositional, adverbial and adjectival groups with 0.72, 0.6 and 0.55 scores.
-
-\begin{table}[H]
-    \centering
-    \begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
-        \hline
-        \textit{Name}       & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ \hline
-        &              &              &              &              &               &              &             \\ \hline
-        GROUP-TYPE          & 1698     & 18.620       & 1728     & 15.419       & 0.838         & 0.853        & 0.845       \\ \hline
-        nominal-group       & 648      & 38.163       & 622      & 35.995       & 0.905         & 0.869        & 0.887       \\ \hline
-        verbal-group        & 678      & 39.929       & 705      & 40.799       & 0.894         & 0.929        & 0.911       \\ \hline
-        prepositional-group & 120      & 7.067        & 124      & 7.176        & 0.726         & 0.750        & 0.738       \\ \hline
-        adverbial-group     & 187      & 11.013       & 218      & 12.616       & 0.606         & 0.706        & 0.652       \\ \hline
-        adjectival-group    & 65       & 3.828        & 59       & 3.414        & 0.559         & 0.508        & 0.532       \\ \hline
-    \end{tabulary}
-    \caption{Evaluation statistics for group types}
-    \label{tab:group-type-statistics}
-\end{table}
+%\begin{table}[H]
+%    \centering
+%    \begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
+%        \hline
+%        \textit{Name} & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ \hline
+%        %&                &                 &                 &                  &                    &                 &             \\ \hline
+%        RANK          & 2455       & 26.922          & 4052        & 36.156           & 0.716              & 0.902           & 0.762       \\ \hline
+%        clause        & 529        & 21.548          & 545         & 13.450           & 
+%        0.875              & 0.902           & 0.888       \\ \hline
+%        group         & 1699       & 69.206          & 1760        & 43.435           & 0.886              & 0.918           & 0.902       \\ \hline
+%        marker        & 224        & 9.124           & 396         & 9.773            & 0.389              & 0.688           & 0.497       \\ \hline
+%        word          & 3          & 0.122           & 1351        & 33.342           & -              & -           & -      \\ \hline
+%    \end{tabulary}
+%    \caption{Rank system evaluation statistics}
+%    \label{tab:rank-statistics}
+%\end{table}
+%
+%The clause elements are systematized in Interpersonal function system whose evaluation statistics are contained in the Table \ref{tab:interpersonal-statistics}. Subjects and Predicators have the highest F_{1} scores of 0.889 and 0.888. Indirect objects have been perfectly identified but they are very few and do not have a statistical significance. Adjuncts and Complements (direct objects) have a lower precision and higher recall scoring 0.628 and 0.661 F_{1}. This is in part due to the fact that the parser annotates prepositional phrases that follow a predicate as both Complement and Adjunct being unable to syntactically distinguish between the two and this task being overtaken during the semantic analysis. The Finite elements are distinguished in the corpus only when they stand alone thus are not conflated with the predicator as in Example \ref{ex:non-conflated-finite}. But when the finite is conflated with the Predicator as in Example \ref{ex:conflated-finite} it has not been annotated in the corpus but it should be and further corrections of the corpus shall be implemented. For this reason there is a big difference between precision and recall 0.172 and 0.980 because most Finites in corpus have been identified by the parser and most of them are missing from the corpus. 
+%
+%\begin{exe}
+%    \ex \label{ex:non-conflated-finite} He may (Finite) go (Predicator) home latter.
+%    \ex \label{ex:conflated-finite} He already went (Finite/Predicator) home. 
+%\end{exe}
+%
+%\begin{table}[H]
+%    \centering
+%    \begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
+%        \hline
+%        \textit{Name}          & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ \hline
+%        %&                &                 &                 &                  &                    &                 &             \\ \hline
+%        INTERPERSONAL-FUNCTION & 1681       & 18.434          & 2793        & 24.922           & 0.659              & 0.910           & 0.726       \\ \hline
+%        finite                 & 150        & 8.923           & 855         & 30.612           & 0.172              & 0.980           & 0.293       \\ \hline
+%        adjunct                & 266        & 15.824          & 358         & 12.818           & 0.547              & 0.737           & 0.628       \\ \hline
+%        subject                & 389        & 23.141          & 439         & 15.718           & 0.838              & 0.946           & 0.889       \\ \hline
+%        complement-direct      & 347        & 20.642          & 594         & 21.267           & 0.524              & 0.896           & 0.661       \\ \hline
+%        complement-indirect    & 2          & 0.119           & 2           & 0.072            & 1              & 1           & 1      \\ \hline
+%        predicator             & 527        & 31.350          & 545         & 19.513           & 0.873              & 0.903           & 0.888       \\ \hline
+%    \end{tabulary}
+%    \caption{Mood clause elements evaluation statistics}
+%    \label{tab:interpersonal-statistics}
+%\end{table}
+%
+%In Table \ref{tab:group-type-statistics} are presented evaluation statistics for Group Type system meaning how well are identified grammatical classes at the group level. Nominal and Verbal groups are parsed with 0.9 precision followed by prepositional, adverbial and adjectival groups with 0.72, 0.6 and 0.55 scores.
+%
+%\begin{table}[H]
+%    \centering
+%    \begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
+%        \hline
+%        \textit{Name}       & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ \hline
+%        &              &              &              &              &               &              &             \\ \hline
+%        GROUP-TYPE          & 1698     & 18.620       & 1728     & 15.419       & 0.838         & 0.853        & 0.845       \\ \hline
+%        nominal-group       & 648      & 38.163       & 622      & 35.995       & 0.905         & 0.869        & 0.887       \\ \hline
+%        verbal-group        & 678      & 39.929       & 705      & 40.799       & 0.894         & 0.929        & 0.911       \\ \hline
+%        prepositional-group & 120      & 7.067        & 124      & 7.176        & 0.726         & 0.750        & 0.738       \\ \hline
+%        adverbial-group     & 187      & 11.013       & 218      & 12.616       & 0.606         & 0.706        & 0.652       \\ \hline
+%        adjectival-group    & 65       & 3.828        & 59       & 3.414        & 0.559         & 0.508        & 0.532       \\ \hline
+%    \end{tabulary}
+%    \caption{Evaluation statistics for group types}
+%    \label{tab:group-type-statistics}
+%\end{table}
 
 
 %\begin{table}[h]
