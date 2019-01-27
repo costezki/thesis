@@ -469,7 +469,6 @@ Table \ref{tab:constit-unit-elements} presents the evaluation result for the mai
 \end{figure}
 
 \subsection{Syntactic evaluation: Mood feature selections}
-%todo continue here
 In this section I present the evaluation of Mood system network selections. The corpus contains selections from a pat of the system network that is depicted in Figure \ref{fig:mood-ocd-simplified}. The full system network is provided in Figure \ref{fig:clause-mood}. Employing the entire system network in the annotations was difficult because as the delicacy increases the time spent for the annotation process increases. 
 
 \begin{figure}[!ht]
@@ -657,13 +656,81 @@ In this section I present the evaluation of Mood system network selections. The 
 %    \label{tab:features-mood3}
 %\end{table}
 
-Table \ref{tab:features-mood} summarises the evaluation results for MOOD system network features grouped by system names (in capital). Let me draw your attention to the POLARITY TYPE system where positive polarity scores 84\% F_1 measure and negative one almost 60\%. The positive polarity score is high but intuitively I would have expected even higher score because the polarity of an English clause is positive by default unless a negation marker is found and this represents only 10\% of the clauses in  the corpus. This may be explained however, as a consequence of low delicacy in the parsing algorithm. Current implementation determines polarity by checking for the presence of the negation verbal marker only. Nonetheless a more delicate polarity testing will have to take into consideration polarity indicators from the subject, complement and adjuncts of various type. 
+Table \ref{tab:features-mood} summarises the evaluation results for MOOD system network features grouped by system names (in capital). The precision and recall values vary quite a lot from a minimum of 11\% up to a maximum of 93\% and the harmonic mean, the F_1 score, between 30\% up to 87\%  averaging to almost 60\%. The details can be read in Table \ref{tab:mood-accuracy}. The distribution of these values can be seen in Figures \ref{fig:mood-precission-recall} and \ref{fig:mood-precission-f1}. A noticeable feature is the presence of two peaks in the precision and recall distributions: one around 50\% and the other one around 90\%. They translate into a similar F_1 distribution with peaks at 60\% and 85\%.
 
-The VOICE-TYPE system has a similar detection mechanism as the polarity. The parser checks whether there is a passive marker in the clause otherwise the active voice is selected. The positive one scores a high F_1 measure (87\%) yet the negative one performs worse than a random classifier.
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{} & \textbf{precision} & \textbf{recall} & \textbf{F1} \\ \hline
+        feature count & 21.00 & 21.00 & 21.00 \\ \hline
+        mean & 0.57 & 0.73 & 0.59 \\ \hline
+        standard deviation & 0.27 & 0.18 & 0.21 \\ \hline
+        min value & 0.11 & 0.32 & 0.20 \\ \hline
+        25\% quantile & 0.41 & 0.62 & 0.48 \\ \hline
+        50\% quantile & 0.56 & 0.80 & 0.61 \\ \hline
+        75\% quantile & 0.82 & 0.86 & 0.78 \\ \hline
+        max value & 0.93 & 1.00 & 0.87 \\ \hline
+    \end{tabular}
+    \caption{Descriptive statistics of the precision, recall and F1 scores}
+    \label{tab:mood-accuracy}
+\end{table}
+
+%\begin{figure}[!ht]
+%    \centering
+    \begin{minipage}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{evaluation-results/figures/accuracy-syntactic-mood-precission-recall.png}
+        \captionof{figure}{The distribution of precision and recall for selected features from the Mood system network}
+        \label{fig:mood-precission-recall}
+    \end{minipage}
+    \begin{minipage}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{evaluation-results/figures/accuracy-syntactic-mood-f1.png}
+        \captionof{figure}{The distribution of F1 score for selected features from the Mood system network}
+        \label{fig:mood-precission-f1}
+    \end{minipage}
+%    \caption{The distribution of precision, recall, $F_1$ measures for selected features from the Mood system network}
+%    \label{fig:mood-accuracy}
+%\end{figure}
+
+Within most systems, the F_1 scores exhibit high contrast from one feature to the other. What does it means is discussed in the next two cases. For example in POLARITY-TYPE system the positive polarity feature scores 84\% F_1 measure and negative one almost 60\%. As per Definition \ref{def:system}, the system features are mutually exclusive. The polarity of an English clause is positive by default unless a negation marker is found and this represents only 10\% of the clauses in  the corpus. This means that it should be sufficient for the parser to detect one feature with a reasonably high F_1 score then the converse feature should be detectable with the same degree of accuracy. Yet the current data invalidate this hypothesis. 
+
+In case of POLARITY-TYPE system, the phenomena may be explained, as a consequence of low delicacy in the parsing algorithm. Current implementation determines polarity by checking for the presence of the negation verbal marker only. Nonetheless a more delicate polarity testing will have to take into consideration polarity indicators from the subject, complement and adjuncts of various type that may have been taken into consideration during the annotation process. Providing an incomplete, less delicate implementation for systemic choices may be a source of errors. This hypothesis requires further investigation.  %The same can be expected of other systems that are reduced in delicacy 
+
+Nonetheless, the same phenomena can be seen if we look at the systems that do not span other ones with higher degrees of delicacy. For example, detection mechanism for VOICE-TYPE is implemented similarly to POLARITY-TYPE. The parser checks whether there is a passive order of elements in the clause otherwise the active voice is selected.  Detection of the positive voice scores a much higher F_1 measure of 87\% than the negative one of 36\%. There is no more the problem of low delicacy and still there is a discrepancy between the F_1 scores of the two features. %which is somehow counter intuitive result.  
+
+%This interpretation however is not entirely correct and there is another way of looking at this discrepancy. 
+This high discrepancy between the feature F_1 scores can be seen as follows. Most instances of active voice are easy to detect. But there is a portion of cases, regardless of the voice, that are difficult for the parser to distinguish. The passive voice selections are executed mostly for these ambiguous cases. More investigation is required to pinpoint exactly how such phenomena materialises.
+
+Nonetheless, in the future implementation, we can take advantage of the mutual exclusivity of system features and capitalise on the above finding, at least for leaf systems as follows. Because the score of one feature is higher, then clauses should be provided only with selections of only that one leaving the complement feature unselected. In a way assign only features that can be provided with a high confidence (using F_1 score as a measure of that). Then an additional process can select features of systems that are known to be selected but without a score. 
+
+%Next I proceed to discuss the semantic features implemented in the parser. 
 
 \subsection{Semantic evaluation: Constituency elements}
+%todo continue here
+This section describes the empirical findings regarding the semantic parsing. This evaluation is based on the OE1 and BTC corpora created by Anke Schultz for her PhD project. She annotated the text with Cardiff Transitivity system. The employed elements are Configuration, Participant role and Main verb.
 
-This section describes the empirical evaluation of the semantic annotations. This evaluation is based on the OE1 and BTC corpora created by Anke Schultz for her PhD project. She annotated the text with Cardiff Transitivity system.
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%    
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{} & \textbf{Match} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse\\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse\\ nm\end{tabular}} \\ \hline
+        Participant role & 2780 & 233 & 1002 & 0.74 & 0.92 & 0.82 & 49.54 & 7.73 & 26.49 \\ \hline
+        Configuration & 1376 & 127 & 493 & 0.74 & 0.92 & 0.82 & 24.52 & 8.45 & 26.38 \\ \hline
+        Main Verb & 1456 & 160 & 605 & 0.71 & 0.90 & 0.79 & 25.94 & 9.90 & 29.35 \\ \hline
+    \end{tabular}
+    }
+    \caption{The evaluation statistics for the main semantic elements}
+    \label{tab:configuration-elements}
+\end{table}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.95\textwidth]{evaluation-results/figures/accuracy-semantic-figure-elements}
+    \caption{Bar chart of matched and non-matched (manual and parse) segments of the main semantic elements}
+    \label{fig:configuration-elements}
+\end{figure}
 
 \subsection{Semantic evaluation: Transitivity feature selections}
 
@@ -852,9 +919,12 @@ This section describes the empirical evaluation of the semantic annotations. Thi
 %	\caption{My caption}
 %	\label{my-label}
 %\end{table}
-
 %\section{Semantic Evaluation}
-For the semantic evaluation has been used a corpus created by Anke Schultz for her PhD project annotated with Transitivity features i.e Configuration, Process and Participant which from constituency point of view correspond to the Clause, Predicator and Participants(predicate arguments) to Subjects and Complements cumulated. 
+
+
+\pagebreak
+
+For the semantic evaluation has been used a corpus created by Anke Schultz for her PhD project annotated with Transitivity elements i.e Configuration, Process and Participant which from constituency point of view correspond to the Clause, Predicator and Participants(predicate arguments) to Subjects and Complements cumulated. 
 
 \begin{table}[H]
     \centering
