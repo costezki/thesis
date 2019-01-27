@@ -484,136 +484,182 @@ In this section I present the evaluation of Mood system network selections. The 
         \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
             \hline
             \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            POLARITY-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
             positive & 485.00 & 125.00 & 55.00 & 0.90 & 0.80 & 0.84 & 89.48 & 20.49 & 10.19 \\ \hline
             negative & 57.00  & 10.00  & 70.00 & 0.45 & 0.85 & 0.59 & 10.52 & 14.93 & 55.12 \\ \hline
-        \end{tabular}
-    }
-    \caption{The evaluation statistics for POLARITY-TYPE systemic choices}
-    \label{tab:features-polarity}
-\end{table}
-
-\begin{table}[!ht]
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-            \hline
-            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            VOICE-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
             active  & 553.00 & 102.00 & 68.00 & 0.89 & 0.84 & 0.87 & 98.05 & 15.57 & 10.95 \\ \hline
             passive & 11.00  & 11.00  & 28.00 & 0.28 & 0.50 & 0.36 & 1.95  & 50.00 & 71.79 \\ \hline
-        \end{tabular}
-    }
-    \caption{The evaluation statistics for VOICE-TYPE systemic choices}
-    \label{tab:features-voice}
-\end{table}
-
-\begin{table}[!ht]
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-            \hline
-            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            FINITNESS &  &  &  &  &  &  &  &  &  \\ \hline
             non-finite   & 99.00  & 19.00 & 38.00  & 0.72 & 0.84 & 0.78 & 15.84 & 16.10 & 27.74 \\ \hline
             finite       & 526.00 & 33.00 & 554.00 & 0.49 & 0.94 & 0.64 & 84.16 & 5.90  & 51.30 \\ \hline
-        \end{tabular}
-    }
-    \caption{The evaluation statistics for FINITNESS systemic choices}
-    \label{tab:features-finitness}
-\end{table}
-
-\begin{table}[!ht]
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-            \hline
-            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            NON-FINITE-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
             perfective   & 71.00  & 12.00 & 16.00  & 0.82 & 0.86 & 0.84 & 73.20 & 14.46 & 18.39 \\ \hline
             imperfective & 26.00  & 9.00  & 24.00  & 0.52 & 0.74 & 0.61 & 26.80 & 25.71 & 48.00 \\ \hline
-        \end{tabular}
-    }
-    \caption{The evaluation statistics for NON-FINITE-TYPE systemic choices}
-    \label{tab:features-perfectivity}
-\end{table}
-
-%----deicticity
-\begin{table}[!ht]
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-            \hline
-            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            DEICTICITY &  &  &  &  &  &  &  &  &  \\ \hline            
             temporal & 446.00 & 74.00 & 55.00 & 0.89 & 0.86 & 0.87 & 97.38 & 14.23 & 10.98 \\ \hline
             modal    & 12.00  & 33.00 & 6.00  & 0.67 & 0.27 & 0.38 & 2.62  & 73.33 & 33.33 \\ \hline
-        \end{tabular}
-    }
-    \caption{The evaluation statistics for DEICTICITY systemic choices}
-    \label{tab:features-deicticity}
-\end{table}
-
-%----mood assesment
-\begin{table}[]
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-            \hline
-            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            MOOD-ASSESSMENT-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline            
             temporality & 35.00 & 17.00 & 27.00 & 0.56 & 0.67 & 0.61 & 56.45 & 32.69 & 43.55 \\ \hline
             modality    & 15.00 & 32.00 & 8.00  & 0.65 & 0.32 & 0.43 & 24.19 & 68.09 & 34.78 \\ \hline
             intensity   & 12.00 & 14.00 & 43.00 & 0.22 & 0.46 & 0.30 & 19.35 & 53.85 & 78.18 \\ \hline
-        \end{tabular}
-    }
-    \caption{The evaluation statistics for MOOD-ASSESSMENT systemic choices}
-    \label{tab:features-mood-assessment}
-\end{table}
-
-%---mood
-\begin{table}[!ht]
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-            \hline
-            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            MOOD-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline                        
             indicative    & 455.00 & 216.00 & 37.00 & 0.92 & 0.68 & 0.78 & 99.13 & 32.19 & 7.52  \\ \hline
             imperative    & 4.00   & 1.00   & 31.00 & 0.11 & 0.80 & 0.20 & 0.87  & 20.00 & 88.57 \\ \hline
-        \end{tabular}
-    }
-    \caption{The evaluation statistics for MOOD-TYPE systemic choices}
-    \label{tab:features-mood}
-\end{table}
-
-\begin{table}[!ht]
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-            \hline
-            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            INDICATIVE-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline                        
             declarative   & 355.00 & 260.00 & 27.00 & 0.93 & 0.58 & 0.71 & 88.31 & 42.28 & 7.07  \\ \hline
             interrogative & 47.00  & 7.00   & 63.00 & 0.43 & 0.87 & 0.57 & 11.69 & 12.96 & 57.27 \\ \hline
-        \end{tabular}
-    }
-    \caption{The evaluation statistics for INDICATIVE-TYPE systemic choices}
-    \label{tab:features-mood1}
-\end{table}
-
-\begin{table}[!ht]
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-            \hline
-            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
-            wh            & 40.00  & 6.00   & 57.00 & 0.41 & 0.87 & 0.56 & 88.89 & 13.04 & 58.76 \\ \hline
-            yes-no        & 5.00   & 3.00   & 8.00  & 0.38 & 0.62 & 0.48 & 11.11 & 37.50 & 61.54 \\ \hline
-        \end{tabular}
-    }
-    \caption{The evaluation statistics for INTERROGATIVE-TYPE systemic choices}
-    \label{tab:features-mood2}
-\end{table}
-
-\begin{table}[!ht]
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-            \hline
-            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            INTERROGATIVE-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline   
+             wh            & 40.00  & 6.00   & 57.00 & 0.41 & 0.87 & 0.56 & 88.89 & 13.04 & 58.76 \\ \hline
+            yes-no        & 5.00   & 3.00   & 8.00  & 0.38 & 0.62 & 0.48 & 11.11 & 37.50 & 61.54 \\ \hline                     
+            WH-SELECTION  &  &  &  &  &  &  &  &  &  \\ \hline                        
             wh-subject    & 9.00   & 3.00   & 7.00  & 0.56 & 0.75 & 0.64 & 32.14 & 25.00 & 43.75 \\ \hline
             wh-adjunct    & 11.00  & 15.00  & 3.00  & 0.79 & 0.42 & 0.55 & 39.29 & 57.69 & 21.43 \\ \hline
             wh-complement & 8.00   & 0.00   & 62.00 & 0.11 & 1.00 & 0.21 & 28.57 & 0.00  & 88.57 \\ \hline
         \end{tabular}
     }
-    \caption{The evaluation statistics for WH-SELECTION systemic choices}
-    \label{tab:features-mood3}
+    \caption{The evaluation statistics for POLARITY-TYPE systemic choices}
+    \label{tab:features-mood}
 \end{table}
 
+%\begin{table}[!ht]
+%    \resizebox{\textwidth}{!}{%
+%        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+%            \hline
+%            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+%            positive & 485.00 & 125.00 & 55.00 & 0.90 & 0.80 & 0.84 & 89.48 & 20.49 & 10.19 \\ \hline
+%            negative & 57.00  & 10.00  & 70.00 & 0.45 & 0.85 & 0.59 & 10.52 & 14.93 & 55.12 \\ \hline
+%        \end{tabular}
+%    }
+%    \caption{The evaluation statistics for POLARITY-TYPE systemic choices}
+%    \label{tab:features-polarity}
+%\end{table}
+
+%\begin{table}[!ht]
+%    \resizebox{\textwidth}{!}{%
+%        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+%            \hline
+%            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+%            active  & 553.00 & 102.00 & 68.00 & 0.89 & 0.84 & 0.87 & 98.05 & 15.57 & 10.95 \\ \hline
+%            passive & 11.00  & 11.00  & 28.00 & 0.28 & 0.50 & 0.36 & 1.95  & 50.00 & 71.79 \\ \hline
+%        \end{tabular}
+%    }
+%    \caption{The evaluation statistics for VOICE-TYPE systemic choices}
+%    \label{tab:features-voice}
+%\end{table}
+
+%\begin{table}[!ht]
+%    \resizebox{\textwidth}{!}{%
+%        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+%            \hline
+%            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+%            non-finite   & 99.00  & 19.00 & 38.00  & 0.72 & 0.84 & 0.78 & 15.84 & 16.10 & 27.74 \\ \hline
+%            finite       & 526.00 & 33.00 & 554.00 & 0.49 & 0.94 & 0.64 & 84.16 & 5.90  & 51.30 \\ \hline
+%        \end{tabular}
+%    }
+%    \caption{The evaluation statistics for FINITNESS systemic choices}
+%    \label{tab:features-finitness}
+%\end{table}
+
+%\begin{table}[!ht]
+%    \resizebox{\textwidth}{!}{%
+%        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+%            \hline
+%            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+%            perfective   & 71.00  & 12.00 & 16.00  & 0.82 & 0.86 & 0.84 & 73.20 & 14.46 & 18.39 \\ \hline
+%            imperfective & 26.00  & 9.00  & 24.00  & 0.52 & 0.74 & 0.61 & 26.80 & 25.71 & 48.00 \\ \hline
+%        \end{tabular}
+%    }
+%    \caption{The evaluation statistics for NON-FINITE-TYPE systemic choices}
+%    \label{tab:features-perfectivity}
+%\end{table}
+
+%----deicticity
+%\begin{table}[!ht]
+%    \resizebox{\textwidth}{!}{%
+%        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+%            \hline
+%            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+%            temporal & 446.00 & 74.00 & 55.00 & 0.89 & 0.86 & 0.87 & 97.38 & 14.23 & 10.98 \\ \hline
+%            modal    & 12.00  & 33.00 & 6.00  & 0.67 & 0.27 & 0.38 & 2.62  & 73.33 & 33.33 \\ \hline
+%        \end{tabular}
+%    }
+%    \caption{The evaluation statistics for DEICTICITY systemic choices}
+%    \label{tab:features-deicticity}
+%\end{table}
+
+%----mood assesment
+%\begin{table}[]
+%    \resizebox{\textwidth}{!}{%
+%        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+%            \hline
+%            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+%            temporality & 35.00 & 17.00 & 27.00 & 0.56 & 0.67 & 0.61 & 56.45 & 32.69 & 43.55 \\ \hline
+%            modality    & 15.00 & 32.00 & 8.00  & 0.65 & 0.32 & 0.43 & 24.19 & 68.09 & 34.78 \\ \hline
+%            intensity   & 12.00 & 14.00 & 43.00 & 0.22 & 0.46 & 0.30 & 19.35 & 53.85 & 78.18 \\ \hline
+%        \end{tabular}
+%    }
+%    \caption{The evaluation statistics for MOOD-ASSESSMENT systemic choices}
+%    \label{tab:features-mood-assessment}
+%\end{table}
+
+%---mood
+%\begin{table}[!ht]
+%    \resizebox{\textwidth}{!}{%
+%        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+%            \hline
+%            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+%            indicative    & 455.00 & 216.00 & 37.00 & 0.92 & 0.68 & 0.78 & 99.13 & 32.19 & 7.52  \\ \hline
+%            imperative    & 4.00   & 1.00   & 31.00 & 0.11 & 0.80 & 0.20 & 0.87  & 20.00 & 88.57 \\ \hline
+%        \end{tabular}
+%    }
+%    \caption{The evaluation statistics for MOOD-TYPE systemic choices}
+%    \label{tab:features-mood}
+%\end{table}
+
+%\begin{table}[!ht]
+%    \resizebox{\textwidth}{!}{%
+%        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+%            \hline
+%            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+%            declarative   & 355.00 & 260.00 & 27.00 & 0.93 & 0.58 & 0.71 & 88.31 & 42.28 & 7.07  \\ \hline
+%            interrogative & 47.00  & 7.00   & 63.00 & 0.43 & 0.87 & 0.57 & 11.69 & 12.96 & 57.27 \\ \hline
+%        \end{tabular}
+%    }
+%    \caption{The evaluation statistics for INDICATIVE-TYPE systemic choices}
+%    \label{tab:features-mood1}
+%\end{table}
+
+%\begin{table}[!ht]
+%    \resizebox{\textwidth}{!}{%
+%        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+%            \hline
+%            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+%            wh            & 40.00  & 6.00   & 57.00 & 0.41 & 0.87 & 0.56 & 88.89 & 13.04 & 58.76 \\ \hline
+%            yes-no        & 5.00   & 3.00   & 8.00  & 0.38 & 0.62 & 0.48 & 11.11 & 37.50 & 61.54 \\ \hline
+%        \end{tabular}
+%    }
+%    \caption{The evaluation statistics for INTERROGATIVE-TYPE systemic choices}
+%    \label{tab:features-mood2}
+%\end{table}
+
+%\begin{table}[!ht]
+%    \resizebox{\textwidth}{!}{%
+%        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+%            \hline
+%            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+%            wh-subject    & 9.00   & 3.00   & 7.00  & 0.56 & 0.75 & 0.64 & 32.14 & 25.00 & 43.75 \\ \hline
+%            wh-adjunct    & 11.00  & 15.00  & 3.00  & 0.79 & 0.42 & 0.55 & 39.29 & 57.69 & 21.43 \\ \hline
+%            wh-complement & 8.00   & 0.00   & 62.00 & 0.11 & 1.00 & 0.21 & 28.57 & 0.00  & 88.57 \\ \hline
+%        \end{tabular}
+%    }
+%    \caption{The evaluation statistics for WH-SELECTION systemic choices}
+%    \label{tab:features-mood3}
+%\end{table}
+
+Table \ref{tab:features-mood} summarises the evaluation results for MOOD system network features grouped by system names (in capital). Let me draw your attention to the POLARITY TYPE system where positive polarity scores 84\% F_1 measure and negative one almost 60\%. The positive polarity score is high but intuitively I would have expected even higher score because the polarity of an English clause is positive by default unless a negation marker is found and this represents only 10\% of the clauses in  the corpus. This may be explained however, as a consequence of low delicacy in the parsing algorithm. Current implementation determines polarity by checking for the presence of the negation verbal marker only. Nonetheless a more delicate polarity testing will have to take into consideration polarity indicators from the subject, complement and adjuncts of various type. 
+
+The VOICE-TYPE system has a similar detection mechanism as the polarity. The parser checks whether there is a passive marker in the clause otherwise the active voice is selected. The positive one scores a high F_1 measure (87\%) yet the negative one performs worse than a random classifier.
 
 \subsection{Semantic evaluation: Constituency elements}
 
