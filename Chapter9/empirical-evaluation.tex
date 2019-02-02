@@ -362,7 +362,7 @@ In Figure \ref{fig:segment-distance-histogram} we can observe several dips at ar
     \label{tab:progressive-bins}
 \end{table}
 
-Besides custom binning described above, looking at each segment label in part brings more clarity to the evaluation. The most relevant segment labels are the unit elements. In the current evaluation, the annotators provide clause level syntactic (subject, complement, adjunct, predicator, finite) and semantic (configuration, main verb, participant) elements. These elements are used a dimension in the breakdown of the segment divergence that follows. 
+Besides custom binning described above, looking at each segment label in part brings more clarity to the evaluation. The most relevant segment labels are the unit elements. In the current evaluation, the annotators provide clause level syntactic (Subject, Complement, Adjunct, Main verb, Finite) and semantic (Configuration, Main verb, Participant role) elements. These elements are used a dimension in the breakdown of the segment divergence that follows. 
 
 Using the bins defined in Table \ref{tab:progressive-bins} the distribution of segment deviations grouped by the main syntactic elements is provided in Table \ref{tab:deviation-per-feature-and-degree-constit} that is also depicted in Figure \ref{fig:segment-distance-degree-features-mood}. 
 
@@ -371,11 +371,11 @@ Using the bins defined in Table \ref{tab:progressive-bins} the distribution of s
         \hline
         \multirow{2}{*}{\textbf{element}} & \multicolumn{6}{c|}{\textbf{\% of segments per degree of deviation}} \\ \cline{2-7} 
         & \textbf{\begin{tabular}[c]{@{}c@{}}insignificant\\ (0-3)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}tiny\\ (3-5)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}little\\ (5-10)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}moderate\\ (10-20)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}significant\\ (20-50)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}high\\ (50-250)\end{tabular}} \\ \hline
-        predicator & 29.38 & 0.95 & 0.30 & 0.10 & 0.00 & 0.05 \\ \hline
-        subject    & 22.70 & 0.10 & 0.25 & 0.30 & 0.05 & 0.00 \\ \hline
-        adjunct    & 13.86 & 0.45 & 0.60 & 0.15 & 0.85 & 0.20 \\ \hline
-        complement & 12.10 & 0.75 & 1.46 & 2.26 & 1.96 & 1.86 \\ \hline
-        finite     & 9.19  & 0.00 & 0.00 & 0.00 & 0.05 & 0.05 \\ \hline
+        Main verb & 29.38 & 0.95 & 0.30 & 0.10 & 0.00 & 0.05 \\ \hline
+        Subject    & 22.70 & 0.10 & 0.25 & 0.30 & 0.05 & 0.00 \\ \hline
+        Adjunct    & 13.86 & 0.45 & 0.60 & 0.15 & 0.85 & 0.20 \\ \hline
+        Complement & 12.10 & 0.75 & 1.46 & 2.26 & 1.96 & 1.86 \\ \hline
+        Finite     & 9.19  & 0.00 & 0.00 & 0.00 & 0.05 & 0.05 \\ \hline
     \end{tabular}
     \caption{Percentage of segments deviated to a given degree for major syntactic elements}
     \label{tab:deviation-per-feature-and-degree-constit}
@@ -424,10 +424,10 @@ The evaluation data in this and the following sections will be presented in tabl
             \hline
             \textbf{Unit type} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
             clause              & 612.00 & 64.00  & 78.00  & 0.89 & 0.91 & 0.90 & 37.00 & 9.47  & 11.30 \\ \hline
-            nominal-group       & 717.00 & 108.00 & 67.00  & 0.91 & 0.87 & 0.89 & 43.35 & 13.09 & 8.55  \\ \hline
-            prepositional-group & 119.00 & 39.00  & 39.00  & 0.75 & 0.75 & 0.75 & 7.19  & 24.68 & 24.68 \\ \hline
-            adverbial-group     & 161.00 & 79.00  & 103.00 & 0.61 & 0.67 & 0.64 & 9.73  & 32.92 & 39.02 \\ \hline
-            adjectival-group    & 45.00  & 36.00  & 38.00  & 0.54 & 0.56 & 0.55 & 2.72  & 44.44 & 45.78 \\ \hline
+            nominal group       & 717.00 & 108.00 & 67.00  & 0.91 & 0.87 & 0.89 & 43.35 & 13.09 & 8.55  \\ \hline
+            prepositional group & 119.00 & 39.00  & 39.00  & 0.75 & 0.75 & 0.75 & 7.19  & 24.68 & 24.68 \\ \hline
+            adverbial group     & 161.00 & 79.00  & 103.00 & 0.61 & 0.67 & 0.64 & 9.73  & 32.92 & 39.02 \\ \hline
+            adjectival group    & 45.00  & 36.00  & 38.00  & 0.54 & 0.56 & 0.55 & 2.72  & 44.44 & 45.78 \\ \hline
         \end{tabular}
     }
     \caption{The evaluation statistics for the main constituency unit types}
@@ -443,18 +443,18 @@ The syntactic accuracy aims to measure how well the main unit types and the clau
     \label{fig:constit-unit-types}
 \end{figure}
 
-Table \ref{tab:constit-unit-elements} presents the evaluation result for the main clause elements. Some of them such as, auxiliary verbs, main verb extension, negation particle, and others have been omitted in the corpus and thus missing in the present evaluation. For the predicator (i.e main verb) and subject elements the F_1 measure raises to 90\%. For the complements and finite the F_1 score is 67\% and 63\%. Surprisingly the complements have a small number of corpus unmatched segments and a high number of parser unmatched segments. This is explained by a flaw in the annotation methodology because the clausal complements were often annotated directly as new clause and omitting to draw the same segment with complement element. This required the corpus revision and correction. Adjuncts however have a higher number of unmatched segments on both sides and this may be dues to bugs in the parser.
+Table \ref{tab:constit-unit-elements} presents the evaluation result for the main clause elements. Some of them such as, Auxiliary verbs, Main verb extension, Negation particle, and others have been omitted in the corpus and thus missing in the present evaluation. For the Main verb and Subject elements the F_1 measure raises to 90\%. For the complements and finite the F_1 score is 67\% and 63\%. Surprisingly, the Complements have a small number of corpus unmatched segments and a high number of parser unmatched segments. This is explained by a flaw in the annotation methodology because the clausal complements were often annotated directly as new clause and omitting to draw the same segment with complement element. This required the corpus revision and correction. Adjuncts however have a higher number of unmatched segments on both sides and this may be dues to bugs in the parser.
 
 \begin{table}[!ht]
     \resizebox{\textwidth}{!}{%
         \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
             \hline
             \textbf{Clause element} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
-            predicator & 613 & 60  & 79  & 0.89 & 0.91 & 0.90 & 30.79 & 8.92  & 11.42 \\ \hline
-            subject    & 466 & 22  & 86  & 0.84 & 0.95 & 0.90 & 23.41 & 4.51  & 15.58 \\ \hline
-            complement & 406 & 43  & 350 & 0.54 & 0.90 & 0.67 & 20.39 & 9.58  & 46.30 \\ \hline
-            adjunct    & 321 & 159 & 224 & 0.59 & 0.67 & 0.63 & 16.12 & 33.12 & 41.10 \\ \hline
-            finite     & 185 & 3   & 392 & 0.32 & 0.98 & 0.48 & 9.29  & 1.60  & 67.94 \\ \hline
+            Main verb & 613 & 60  & 79  & 0.89 & 0.91 & 0.90 & 30.79 & 8.92  & 11.42 \\ \hline
+            Subject    & 466 & 22  & 86  & 0.84 & 0.95 & 0.90 & 23.41 & 4.51  & 15.58 \\ \hline
+            Complement & 406 & 43  & 350 & 0.54 & 0.90 & 0.67 & 20.39 & 9.58  & 46.30 \\ \hline
+            Adjunct    & 321 & 159 & 224 & 0.59 & 0.67 & 0.63 & 16.12 & 33.12 & 41.10 \\ \hline
+            Finite     & 185 & 3   & 392 & 0.32 & 0.98 & 0.48 & 9.29  & 1.60  & 67.94 \\ \hline
         \end{tabular}
     }
     \caption{The evaluation statistics for the clause main elements}
@@ -703,13 +703,13 @@ Nonetheless, the same phenomena can be seen if we look at the systems that do no
 %This interpretation however is not entirely correct and there is another way of looking at this discrepancy. 
 This high discrepancy between the feature F_1 scores can be seen as follows. Most instances of active voice are easy to detect. But there is a portion of cases, regardless of the voice, that are difficult for the parser to distinguish. The passive voice selections are executed mostly for these ambiguous cases. More investigation is required to pinpoint exactly how such phenomena materialises.
 
-Nonetheless, in the future implementation, we can take advantage of the mutual exclusivity of system features and capitalise on the above finding, at least for leaf systems as follows. Because the score of one feature is higher, then clauses should be provided only with selections of only that one leaving the complement feature unselected. In a way assign only features that can be provided with a high confidence (using F_1 score as a measure of that). Then an additional process can select features of systems that are known to be selected but without a score. 
+Nonetheless, in the future implementation, we can take advantage of the mutual exclusivity of system features and capitalise on the above finding, at least for the leaf systems. Taking into consideration that the score of one feature is higher, clause elements should then be provided with selections of those features only. While the complement features shall remain unselected. This means that only features that can be provided with a high confidence (using F_1 score as a measure of that) shall be assigned. Then an additional process can be implemented to select the remaining unassigned features. 
 
 %Next I proceed to discuss the semantic features implemented in the parser. 
 
 \subsection{Semantic evaluation: Constituency elements}
 %todo continue here
-This section describes the empirical findings regarding the semantic parsing. This evaluation is based on the OE1 and BTC corpora created by Anke Schultz for her PhD project. She annotated the text with Cardiff Transitivity system. The employed elements are Configuration, Participant role and Main verb.
+This section describes the empirical findings regarding the semantic parsing. This evaluation is based on the OE1 and BTC corpora created by Anke Schultz for her PhD project. The text is annotated with Cardiff Transitivity system network. The employed elements are Configuration, Participant role and Main verb and Circumstances are excluded from the study. Table \ref{tab:configuration-elements} summarises the empirical findings. The F_1 score of about 82\%, precision of about 74\% and recall of about 92\% for these elements is surprisingly stable across elements compared to variate statistics of the syntactic elements presented in Table \ref{tab:constit-unit-elements} above. This difference may be explained by higher annotation quality in the corpus. 
 
 \begin{table}[!ht]
     \resizebox{\textwidth}{!}{%    
@@ -732,8 +732,11 @@ This section describes the empirical findings regarding the semantic parsing. Th
     \label{fig:configuration-elements}
 \end{figure}
 
-\subsection{Semantic evaluation: Transitivity feature selections}
+Another explanation could be the lower granularity of elements. Configuration segments in this case correspond to clause segments, Participant roles to the set union of Subjects and Complements while Main verb segments are the same. The merge of Subjects and Complements can be seen in Figure \ref{fig:configuration-elements}
 
+\subsection{Semantic evaluation: Transitivity feature selections}
+%todo
+Transitivity analysis does not primarily depend on the form of the  is semantic in nature and poses challenges in meaning selection beyond constituent class or function. Current parser does not select one meaning but rather proposes a set of possible configurations for each clause.
 
 %Figure \ref{fig:segment-distance-distribution} represents a cumulative distribution of matches according to the distance. 
 %The figure is Because of the long tail of the distribution 
@@ -924,23 +927,23 @@ This section describes the empirical findings regarding the semantic parsing. Th
 
 \pagebreak
 
-For the semantic evaluation has been used a corpus created by Anke Schultz for her PhD project annotated with Transitivity elements i.e Configuration, Process and Participant which from constituency point of view correspond to the Clause, Predicator and Participants(predicate arguments) to Subjects and Complements cumulated. 
+%For the semantic evaluation has been used a corpus created by Anke Schultz for her PhD project annotated with Transitivity elements i.e Configuration, Process and Participant which from constituency point of view correspond to the Clause, Predicator and Participants(predicate arguments) to Subjects and Complements cumulated. 
 
-\begin{table}[H]
-    \centering
-    \begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
-        \hline
-        \textit{Name} & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ 
-        %\hline
-        %&                &                 &                 &                  &                    &                 &             \\ \hline
-        Configuration          & 1466       & -          & 1833        & -           & 0.736              & 0.915           & 0.814       \\ \hline
-        Process        & 1423        & -          & 1814         & -           & 
-        0.707              & 0.902           & 0.791       \\ \hline
-        Participant         & 2652       & -          & 3398        & -           & 0.732              & 0.925           & 0.816       \\ \hline
-    \end{tabulary}
-    \caption{Transitivity System evaluation statistics}
-    \label{tab:transitivity-statistics}
-\end{table}
+%\begin{table}[H]
+%    \centering
+%    \begin{tabulary}{\linewidth}{|L|l|l|l|l|l|l|l|}
+%        \hline
+%        \textit{Name} & \textit{M/N} & \textit{M/\%} & \textit{A/N} & \textit{A/\%} & \textit{Prec} & \textit{Rec} & \textit{F_{1}} \\ 
+%        %\hline
+%        %&                &                 &                 &                  &                    &                 &             \\ \hline
+%        Configuration          & 1466       & -          & 1833        & -           & 0.736              & 0.915           & 0.814       \\ \hline
+%        Process        & 1423        & -          & 1814         & -           & 
+%        0.707              & 0.902           & 0.791       \\ \hline
+%        Participant         & 2652       & -          & 3398        & -           & 0.732              & 0.925           & 0.816       \\ \hline
+%    \end{tabulary}
+%    \caption{Transitivity System evaluation statistics}
+%    \label{tab:transitivity-statistics}
+%\end{table}
 
 Transitivity analysis is semantic in nature and poses challenges in meaning selection beyond constituent class or function. Current parser does not select one meaning but rather proposes a set of possible configurations for each clause. If top level Transitivity features correspond fairly to the number of syntactic constituents, the more delicate features are parsed with an average of 2.7 proposed features for each manually annotated one.
 

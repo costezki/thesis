@@ -7,134 +7,164 @@ In 1950 Alan Turing in a seminal paper \citep{Turing1950} published in Mind was 
 
 He proposed the famous \textit{Imitation Game} also known as the \textit{Turing test} in which a machine would have to exhibit intelligent behaviour equivalent or indistinguishable from that of a human. The test was set up by stating the following rules. The machine (player A) and a human (player B) are engaged in a written \textit{natural language} conversation with a human judge (player C) who has to decide whether each conversation partner is human or a machine. The goal of players A and B is to convince the judge (player C) that they are human. 
 
-This game underpins the question whether ``a computer, communicating over a teleprinter, (can) fool a person into believing it is human?'', moreover, whether it can exhibit (or even appear to exhibit) human(-like) cognitive capacities \citep{Harnad1992}. Essential parts of such cognitive capacities and intelligent behaviour that the machine needs to exhibit are of course the linguistic competences of comprehension (or ``understanding'') and generation of ``appropriate'' responses (for a given input from the judge C).
-
-The \textit{Artificial Intelligence} (AI) field was born from dwelling on Turing's questions. The term was coined by McCarthy for the first time in 1955 referring to the ``science and engineering of making intelligent machines'' \citep{McCarthy1955}.
+This game underpins the question whether ``a computer, communicating over a teleprinter, (can) fool a person into believing it is human?'', moreover, whether it can exhibit (or even appear to exhibit) human(-like) cognitive capacities \citep{Harnad1992}. Essential parts of such cognitive capacities and intelligent behaviour that the machine needs to exhibit are of course the linguistic competences of comprehension (or ``understanding'') and generation of ``appropriate'' responses (for a given input from the judge C). The \textit{Artificial Intelligence} (AI) field was born from dwelling on Turing's questions. The term was coined by McCarthy for the first time in 1955 referring to the ``science and engineering of making intelligent machines'' \citep{McCarthy1955}.
 
 The general target is to program machines to do with language what humans do. Various fields of research contribute to this goal. Linguistics, amongst others, contributes with theoretical frameworks systematizing and accounting for language in terms of morphology, phonology, syntax, semantics, discourse or grammar in general. In computer science increasingly more efficient algorithms and machine learning techniques are developed. Computational linguistics provides methods of encoding linguistically motivated tasks in terms of formal data structures and computational goals. In addition, specific algorithms and heuristics operating within reasonable amounts of time with satisfiable levels of accuracy are tailored to accomplish those linguistically motivated tasks.
 
-\textit{Computational Linguistics} (CL) was mentioned in the 1950 in the context of automatic translation \citep{Hutchins1999} of Russian text into English and developing before the field of Artificial Intelligence proper. Only a few years later CL became a sub-domain of AI as an interdisciplinary field dedicated to developing algorithms and computer software for intelligent processing of text (leaving the very hard questions of intelligence and human cognition aside). Besides \textit{machine translation} CL incorporates a broader range of tasks such as \textit{speech synthesis and recognition, text tagging, syntactic and semantic parsing, text generation, document summarisation, information extraction} and others. 
+\textit{Computational Linguistics} (CL) was mentioned in the 1950s in the context of automatic translation \citep{Hutchins1999} of Russian text into English and developed before the field of Artificial Intelligence proper. Only a few years later CL became a sub-domain of AI as an interdisciplinary field dedicated to developing algorithms and computer software for intelligent processing of text (leaving the very hard questions of intelligence and human cognition aside). Besides \textit{machine translation} CL incorporates a broader range of tasks such as \textit{speech synthesis and recognition, text tagging, syntactic and semantic parsing, text generation, document summarisation, information extraction} and others. 
 %New higher level and more complex tasks are formulated in academic and business environments as the simpler ones receive satisfiable 
 
 This thesis contributes to the field of CL and more specifically it is an advancement in \textit{Natural Language Parsing} (NLP), one of the central CL tasks informally defined as the process of transforming a sentence into (rich) machine readable syntactic and semantic structure(s). Developing a program to automatically analyse text in terms of such structures by involving computer science and artificial intelligence techniques is a task that has been pursued for several decades and still continues to be a major challenge today. This is especially so when the target is \textit{broad language coverage} and even more when the desired analysis goes beyond simple syntactic structures and towards richer functional and/or semantic descriptions useful in the latter stages of \textit{Natural Language Understanding} (NLU). The current contribution aims at a reliable modular method for parsing unrestricted English text into a feature rich constituency structure using Systemic Functional Grammars (SFGs). 
 
 In computational linguistics, broad coverage natural language components now exist for several levels of linguistic abstraction, ranging from tagging and stemming, through syntactic analyses to semantic specifications. In general, the higher the degree of abstraction, the less accurate the coverage becomes and, the richer the linguistic description, the slower the parsing process is performed. 
 
-Such working components are already widely used to enable humans to explore and exploit large quantities of textual data for purposes that vary from the most theoretical, such as understanding how language works or the relation between form and meaning, to very pragmatic purposes such as developing systems with natural language interfaces, machine translation, document summarising, information extraction and question answering systems to name just a few. 
+Such working components are already widely used to enable humans to explore and exploit large quantities of textual data for purposes that vary from the most theoretical, such as understanding how language works or the relation between form and meaning, to very pragmatic purposes such as developing systems with natural language interfaces, machine translation, document summarising, information extraction and question answering systems to name just a few. Nevertheless there is still a long way to go through before machines excel in these narrowly scoped tasks and even longer before machines start using language in the ways human do.
 
-%end copied from intro
-
-\section{Living in technologically ubiquitous world}
+\section{Living in a technologically ubiquitous world}
 \label{sec:motivation}
-Developed over thousands of years, the human language has become a versatile highly nuanced form of communication that carries a wealth of meaning which by far transcends the words alone. When it comes to \textit{human-machine} interaction this highly articulated communication form is deemed impractical. So far humans had to learn to interact with computers and do it in  formal, strict and rigorous manner via graphical user interfaces, command line terminals and programming languages. Advancements in \textit{Natural Language Processing} (NLP) which is a branch of \textit{Artificial Intelligence} (AI) are a game changer in this domain. NLP starts to unlocks the information treasure locked in the human speech and make it available for processing to computers. NLP becomes an important technology in bridging the gap between natural data and digital structured data.
+The human language has become a versatile highly nuanced form of communication that carries a wealth of meaning which by far transcends the words alone. When it comes to \textit{human-machine} interaction this highly articulated communication form is deemed impractical. So far humans had to learn to interact with computers and do it in a formal, strict and rigorous manner via graphical user interfaces, command line terminals and programming languages. Advancements in \textit{Natural Language Processing} (NLP) are a game changer in this domain. NLP starts to unlocks the information locked in the human speech and make it available for processing to computers. NLP becomes an important technology in bridging the gap between natural data and digital structured data.
 
-In a world such ours, where technology is ubiquitous and pervasive in almost all aspects of our life, NLP becomes of great value and importance regardless whether it materializes as a spell-checker, intuitive recommender system, spam filter, (not so) clever machine translator, voice controlled car, intelligent assistants such as Siri, Alexa or Google Now. 
+In a world such as ours, where technology is ubiquitous and pervasive in almost all aspects of life, NLP becomes of great value and importance regardless of whether it materializes as a spell-checker, an intuitive recommender system, spam filters, (not so) clever machine translators, voice controlled cars, or intelligent assistants such as Siri, Alexa or Google Now. 
 
-Every time you ask Siri or Alexa for directions to the nearest Peruvian restaurant, how to cook Romanian beef stew or what is the dictionary definition for the word ``germane'', a complex chain of operations is activated that allows `her' to understand the question, search for the information you are looking for and respond in a human understandable language. Such tasks are possible only in the past few years thanks to advances in NLP. Until now we have been interacting with computers in a language they understand rather than us. Now they are learning our language. 
+Every time an assistant such Siri or Alexa is asked for directions to the nearest Peruvian restaurant, how to cook Romanian beef stew or what is the dictionary definition for the word ``germane'', a complex chain of operations is activated that allows `her' to understand the question, search for the information you are looking for and respond in a human understandable language. Such tasks are possible only in the past few years thanks to advances in NLP. Until now we have been interacting with computers in a language they understand rather than us. The next challenge is to develop a technology that enables computers to interact with us in a language we understand rather then they. %Now they are learning our language. 
 
-%\section{NLP for business}
-%\label{sec:motivation-business}
+\section{NLP for business}
+\label{sec:motivation-business}
 
-NLP opens new and quite dramatic horizons for businesses. Navigating with limited resources stormy markets of competitors, customers and regulators and finding an optimal answer/action to a business question is not a trivial task. 
+%todo, soft comment: [JB] remember that if you start on this, it sounds like you intend to be competing with Watson or similar... so be careful about what range of functionalities you suggest that you should be evaluated in terms of! OK to express as one of the potential application areas showing relevance of NLP, but keep it short and as background information.
+NLP opens new and quite dramatic horizons for businesses. Navigating with limited resources stormy markets of competitors, customers and regulators and finding an optimal answer/action to a business question is not a trivial task. In this section I present a few example application areas and use them to discuss tasks that need to be accomplished for NLP in such contexts. These examples underline the ever growing need for NLP putting into perspective the need of ever deeper and richer linguistic analysis across a broad range of domains and applications.
+
 Markets are influenced by the information exchange and being able to process massive amounts of text and extract meaning can help asses the status of an industry and play an essential role in crafting a strategy or a tactical action. 
 Relevant NLP tasks for gathering market intelligence are \textit{named entity recognition} (NER), \textit{event extraction} and \textit{sentence classification}. With these tasks alone one can build a database about companies, people, governments, places, events together with positive or negative statements about them and run versatile analytics to audit the state of affairs.
 
 Compliance with governmental, European or international regulations is a big issue for large corporations. One question for addressing this problem is whether a product is a liability or not and if yes then in which way. Pharma companies for example, once a drug has been released for clinical trials, need to process the unstructured clinical narratives or patient's reports about their health and gather information on the side effects. The NLP tasks needed for this applications are primarily \textit{NER} to extract names of drugs, patients and pharma companies and \textit{relation detection} used to identify the context in which the side effect is mentioned. NER task help transforming a sentence such as ``Valium makes me sleepy'' to ``(drug) makes me (symptom)'' and relation detection will apply patterns such as ``I felt (symptom) after taking (drug)'' to detect the presence of side effects.
 
-Many customers, before buying a product, check online reviews about the company and the product whether it is pizza or a smartphone. Popular sources for such inquiry are the blogs, forums, reviews, social media, reports, news, company websites, etc. All of them contain a plethora of precious information that stays trapped in unstructured human generated text. This information if unlocked can play a great deal in company's reputation management and decisions for necessary actions to improve it. The NLP tasks sufficient to address this business required are \textit{sentiment analysis} to identify attitude, judgement, emotions and intent of the speaker, and \textit{co-reference resolution} which connects mentions of things to their pronominal reference in the following or preceding text. These tasks alone can extract the positive and negative attitudes from sentence ``The pizza was amazing but the waiter was awful!'' and connect it to the following sentence ``I adore when it is topped with my favourite artichoke'' about pizza and not the waiter and discover a topping preference.
+%todo, soft comment: [JB] again: this is precisely what Watson claims to be solving (with some impressive evidence in their favour); so it is not so trapped as it used to be. Need to position your contribution technically, and *not* as a competitor to Watson! Your concern must clearly come out as one that is focusing on the particular kinds of information being extracted and argue that this is valuable in its own right.
+Many customers, before buying a product, check online reviews about the company and the product regardless of whether it is pizza or a smartphone. Popular sources for such inquiry are blogs, forums, reviews, social media, reports, news, company websites, etc. All of these contain a plethora of precious information that stays trapped in unstructured human generated text. This information if unlocked can play a great deal in company's reputation management and decisions for necessary actions to improve it. The NLP tasks sufficient to address this business required are \textit{sentiment analysis} to identify attitude, judgement, emotions and intent of the speaker, and \textit{co-reference resolution} which connects mentions of things to their pronominal reference in the following or preceding text. These tasks alone can extract the positive and negative attitudes from the sentence ``The pizza was amazing but the waiter was awful!'' and connect it to the following sentence ``I love when it is topped with my favourite artichoke'', disambiguating the sentence so that it is clear that it is about pizza and not the waiter and so discover a topping preference.
 
-NLP is heavily used in customer service in order to figure out what customer means not just what she says. Interaction of companies with their customers contain many hints pointing towards their dissatisfaction and interaction itself is often one of the causes. Companies record, transcribe and analyse large numbers of call recordings for extended insights. They deploy chat bots fo increased responsiveness by providing immediate answers to simple needs and also decrease the load of the help desk staff. NLP tasks that are essential in addressing some of the customer service needs are \textit{speech recognition} that converts speech audio signal into text and \textit{question answering} which is a complex task of recognising the human language question, extract the meaning, searching relevant information in a knowledge base and generate an ineligible answer. Advances in deep learning allow nowadays to skip the need for searching in a knowledge base by learning from large corpora of question-answer pairs complex interrelations. 
+NLP is heavily used in customer service in order to figure out what a customer means not just what she says. Interaction of companies with their customers contain many hints pointing towards their dissatisfaction and interaction itself is often one of the causes. Companies record, transcribe and analyse large numbers of call recordings for extended insights. They deploy chat bots for increased responsiveness by providing immediate answers to simple needs and also decrease the load on the help desk staff. NLP tasks that are essential in addressing some of the customer service needs are \textit{speech recognition} that converts speech audio signal into text and \textit{question answering} which is a complex task of recognising the human language question, extract the meaning, searching relevant information in a knowledge base and generate an ineligible answer. Advances in deep learning allow nowadays to skip the need for searching in a knowledge base by learning from large corpora of question-answer pairs complex interrelations. 
 
-The above cases underline the increased need in NLP whereas the variation and ever increasing complexity of tasks reveal the need in deeper and richer semantic and pragmatic analysis across a broad range of domains and applications. Any analysis of text beyond the formal aspects such as morphology, lexis and syntax inevitably lead to a functional paradigm of some sort which can be applied not only at the clause level but at the discourse as a whole. This makes the text also an artefact with relation socio-cultural context where it occurs. 
+The above cases underline the increased need in NLP whereas the variation and ever increasing complexity of tasks reveal the need in deeper and richer semantic and pragmatic analysis across a broad range of domains and applications. Any analysis of text beyond the formal aspects such as morphology, lexis and syntax inevitably lead to a functional paradigm of some sort which can be applied not only at the clause level but at the discourse as a whole. This makes the text also an artefact with relation to the socio-cultural context where it occurs. At the moment mainly shallow or limited functional analysis have been realised and more research still needs to be done in this area.
 
 \section{The linguistic framework}
 \label{sec:framework}
-Any description or analysis involving language implies some theory of about its essential nature and how it works. A linguistic theory includes also goals of linguistics, assumptions about which methods are appropriate to approach those goals and assumptions about the relation between theory, description and applications \citep[3]{Fawcett2000}. 
+The present work is conducted under the premise that a theory of language is important and worth adopting. It is possible, in NLP, to reach considerable results even without adoption of such a framework. This is demonstrated by the latest advancements in (deep) machine learning. In current work the Systemic Functional (SF) theory of language is adopted because of its versatility to account for the complexity and phenomenological diversity of human language providing descriptions along multiple semiotic dimensions. Further I explaining why a theory is valuable and emphasize the strengths of SFL.
+ 
+Any meaningful description or analysis involving language implies some theory of about its essential nature and how it works. A linguistic theory includes also goals of linguistics, assumptions about which methods are appropriate to approach those goals and assumptions about the relation between theory, description and applications \citep[3]{Fawcett2000}. 
 
-In his seminal paper ``Categories of the theory of grammar'' \citep{Halliday61-orig}, Halliday lays the foundations of \textit{Systemic Functional Linguistic} (SFL) following the works of his British teacher J. R. Firth, inspired by Louis Hjelmslev \citep{Hjelmslev53} from Copenhagen School of linguistics and by a group of European linguists from Prague Linguistic Circle. This paper constitutes a response to the need for a \textit{general theory of language} that would be holistic enough to guide empirical research in the broad discipline of linguistic science:
+In his seminal paper ``Categories of the theory of grammar'' \citep{Halliday61-orig}, Halliday lays the foundations of \textit{Systemic Functional Linguistic} (SFL) following the works of his British teacher J. R. Firth, inspired by Louis Hjelmslev \citep{Hjelmslev53} from the Copenhagen School of linguistics and by European linguists from the Prague Linguistic Circle. Halliday's paper constitutes a response to the need for a \textit{general theory of language} that would be holistic enough to guide empirical research in the broad discipline of linguistic science:
 \begin{quotation}
     \dots the need for a \textit{general} theory of description, as opposed to a \textit{universal} scheme of descriptive categories, has long been apparent, if often unformulated, in the description of all languages \citep[54; emphasis in original]{Halliday57}
     \dots
     If we consider general linguistics to be the body of theory, which guides and controls the procedures of the various branches of linguistic science, then any linguistic study, historical or descriptive, particular or comparative, draws on and contributes to the principles of general linguistics \citep[55]{Halliday57}
 \end{quotation} 
 
-% deeper on SFL
+%todo, soft comment, suggested in the previous review: use here metrial from Bateman2017-sfl [the place of systemic functional linguistics ... 21 century]
 
-%TODO: use here metrial from Bateman2017-sfl [the place of systemic functional linguistics ... 21 century]
+Embracing the \textit{organon model} formulated by \citet{Buhler34}, Halliday refers to the language functions as metafunctions or lines of meaning that offer a trinocular perspective on language through \textit{ideational}, \textit{interpersonal} and \textit{textual} metafunctions. In SFL, language is first of all an interactive action serving to enact social relations under the umbrella of the \textit{interpersonal metafunction}. Then it is a medium to express the embodied human experience of inner (mental) and outer (perceived material) worlds via the \textit{ideational metafunction}. Finally the two weave together into a coherent discourse flow whose mechanisms are characterised through the \textit{textual metafunction}. 
 
-SFL regards language as a social semiotic system where any act of communication is regarded as a conflation of \textit{linguistic choices} available in a particular language. Choices are organised on a paradigmatic rather than structural axis and represented as \textit{system networks}. Moreover, in the SFL perspective language has evolved to serve particular \textit{functions} influencing their the structure and organisation of the language. However, their organisation around the paradigmatic dimension leads to a significantly different functional organisation than those found in several other frameworks which \citet{Butler2003-pt1, Butler2003-pt2} addresses extensively. 
+SFL regards language as a social semiotic system where any act of communication is regarded as a conflation of \textit{linguistic choices} available in a particular language. Choices are organised on a paradigmatic rather than structural axis and represented as \textit{system networks}. Moreover, in the SFL perspective language has evolved to serve particular \textit{functions} influencing their the structure and organisation of the language. However, their organisation around the paradigmatic dimension leads to a significantly different functional organisation than those found in several other frameworks which as \citet{Butler2003-pt1, Butler2003-pt2} has extensively addressed. 
 Also, making the paradigmatic organization of language a primary focus of linguistic description decreased the importance of the formal structural descriptions which from this perspective appear as realisation of (abstract) features. 
 
-Embracing the \textit{oragnon model} formulated by \citet{Buhler34}, Halliday refers to the language functions as metafunctions or lines of meaning that offer a trinocular perspective on language through \textit{ideational}, \textit{interpersonal} and \textit{textual} metafunctions. In SFL, language is first of all an interactive action serving to enact social relations under the umbrella of the \textit{interpersonal metafunction}. Then it is a medium to express the embodied human experience of inner (mental) and outer (perceived material) worlds via \textit{ideational metafunction}. Finally the two weave together into a coherent discourse flow whose mechanisms are characterised through the \textit{textual metafunction}. 
+A linguistic description is then provided at various levels of granularity, that in SFL are is called \textit{delicacy}. Just as the resolution of a digital photo defines the clarity and the amount of detail in the picture, in the same way delicacy refers to the how fine- or coarse-grained distinctions are made in the description of the language. 
 
-Then a linguistic description is provided at various levels of granularity, that in SFL are is called \textit{delicacy}. Just like the resolution of a digital photo defines the clarity and the amount of detail in the picture, the same way delicacy refers to the how fine- or coarse-grained distinctions are made in the description of the language. And if other linguistic traditions speak of a \textit{grammar} in SFL the term \textit{lexico-grammar} is used which, intuitively, is the combination of grammar and lexis explained in Section \ref{sec:wording} into a unitary body. A deeper description of the SFL theory of language is provided latter in Chapter \ref{ch:sfg}.
-
-% on metafunctions
-%TODO briefly introduce and refere to other extensive sources
-%To account for the complexity and phenomenological diversity of human language the SFL theory provides descriptions along \textit{syntagmatic, (meta)functional, paradigmatic, stratification and instantiation axes}. 
+There is no distinction, in SFL tradition, between lexicon and grammar. And to emphasize this fact, the term \textit{lexico-grammar} is used which means the combination of grammar and lexis into a unitary body (see Section \ref{sec:wording}).%And if other linguistic traditions speak of a \textit{grammar} in SFL the term \textit{lexico-grammar} is used which, intuitively, is the combination of grammar and lexis explained in  into a unitary body. 
+A deeper description of the SFL theory of language is provided below in Chapter \ref{ch:sfg}.
 
 % 
-Until today, two major Systemic Functional Grammars (SFG) have been developed: the \textit{Sydney Grammar} \citep{Halliday2013} and the \textit{Cardiff Grammar} \citep{Fawcett2008}. The latter, as Fawcett himself regards it, is an extension and a simplification of Sydney Grammar \citep[xviii]{Fawcett2008}. Each of the two grammars has advantages and shortcomings (presented in Chapter \ref{ch:sfg}) which I discuss from the perspective of theoretical soundness and suitability to the goals of the current project.
+Until today, two major Systemic Functional Grammars (SFG) have been developed: the \textit{Sydney Grammar} \citep{Halliday2013} and the \textit{Cardiff Grammar} \citep{Fawcett2008}. The latter, as Fawcett himself regards it, is an extension and a simplification of the Sydney Grammar \citep[xviii]{Fawcett2008}. Each of the two grammars has advantages and shortcomings (presented in Chapter \ref{ch:sfg}) which I will discuss from the perspective of theoretical soundness and suitability to the goals of the current project.
 
-Both Cardiff and Sydney grammars had been used as language models in natural language generation projects within 
-the broader contexts of social interaction. Some researchers \citep{Kasper1988, ODonoghue1991a, ODonnell1993, Souter1996, Day2007} attempted to reuse the grammars for the purpose of syntactic parsing within the borders of NL generation coverage. I come back to these works in more detail in Section \ref{sec:sota}.
+Both the Cardiff and Sydney grammars have been used as language models in natural language generation projects within the broader contexts of social interaction. Some researchers \citep{Kasper1988, ODonoghue1991a, ODonnell1993, Souter1996, Day2007} consequently attempted to reuse the grammars for the purpose of syntactic parsing.
+%within the borders of NL generation coverage. 
+I come back to these works in more detail in Section \ref{sec:sota}.
 
 % in short
 
-To sum up, in this thesis I adopt the Systemic Functional Linguistic (SFL) framework because of its versatility to account for the complexity and phenomenological diversity of human language providing descriptions along \textit{multiple semiotic dimensions} i.e. paradigmatic, syntagmatic, meta-functional, stratification and instantiation dimensions \citep{Halliday2003} and at different \textit{delicacy levels} of the \textit{lexico-grammatical cline} \citep{Halliday2002, Hasan2014}.  These notions and other elements of the SFL theory are addressed below in Chapter \ref{ch:sfg}.
+To sum up, in this thesis I adopt the Systemic Functional Linguistic (SFL) framework because of its versatility to account for the complexity and phenomenological diversity of human language providing descriptions along \textit{multiple semiotic dimensions} i.e. paradigmatic, syntagmatic, meta-functional, stratification and instantiation dimensions \citep{Halliday2003} and at different \textit{delicacy levels} of the \textit{lexico-grammatical cline} \citep{Halliday2002, Hasan2014}. To what degree it is possible and what are the benefits of such descriptions still remains to be explored as we do not know yet how much of the SFL descriptive potential needs to be employed in practice in order to achieve useful results or solve problems as those exemplified in Section \ref{sec:motivation-business}. These concepts and other elements of the SFL theory are addressed below in Chapter \ref{ch:sfg}.
 
-%todo motivational introduction for other kinds of applications of SFL
+%todo, no longer needed, as already motivated with business cases,  motivational introduction for other kinds of applications of SFL
 %As we part away from the surface form of text and aim for rich semantics or aim at analyses higher than the clause level i.e. discourse, the functional is increasingly useful and revealing of meanings in text. Such analyses have been done manually by linguists, semioticians and educators in an informal manner as there have not been any tools to automate such processes. Besides Linguistics, there is a plethora of linguistic analysis using SFL framework in other fields of research. SFL has been used extensively as a descriptive framework in Critical Discourse Analysis and in Education studies. Automatising the language analysis with SFL framework will unlock the potential of these fields. Next I provide a glimpse of what opportunities they offer. 
 
 \section{An example of Systemic Functional analysis}
 \label{sec:example}
-To provide a better intuition, this section describes an analysis of sentence using SFL framework. Here a parallel analysis between SFL and a more traditional grammar is provided in order to highlight the richness and high descriptive potential of SFL grammars. A source of the descriptive abundance is achieved through a practice of feature systematisation as mutually exclusive choices which is exemplified as well for three features of traditional grammar below. The feature analysis provided here is partial and restricted to only two constituents as this suffices to provide the reader with an intuition of what to expect from an SFL analysis.
-
-Traditional linguistics teaches us how to carry on a syntactic analysis of a sentence. So let's consider Example \ref{ex:1} in order to perform one. First we would assign a \textit{part of speech} (verb, noun, adjective etc.) to each word, then we would focus on clustering words into constituents guided by the intuitive rule \textit{which words goes together}, and then those would receive syntactic functions (subject, predicate, complement etc.) within the sentence.   %and result in a grouping such as the one in Example \ref{ex:2}. 
+To provide a better intuition on the current work, this section describes an analysis of a simple sentence in Example \ref{ex:1}. It will guide you starting from a traditional ``school grammar'' concepts down to an SFL description of the sentence. %Here a parallel analysis between SFL and a more traditional grammar is provided in order to highlight the richness and the descriptive potential of SFL grammars. 
+SFL provides us with a variety of functions and features serving to express text meaning from several perspectives. Another source of the descriptive breadth is achieved through a practice of feature systematisation as mutually exclusive choices. %The example is provided which is exemplified as well for three features of traditional grammar below. 
+The feature analysis provided here is partial and restricted to only two constituents (the clause and it's Subject) as this suffices to provide the reader with an intuition of what to expect from an SFL analysis.
 
 \begin{exe}
     \ex\label{ex:1} He gave the cake away.
-%    \ex\label{ex:2} He gave (the cake) away .
+    %    \ex\label{ex:2} He gave (the cake) away .
 \end{exe}
+
+School grammar teaches us how to perform a syntactic analysis of a sentence. So let's consider Example \ref{ex:1} in order to perform one. First we would assign a \textit{part of speech} (verb, noun, adjective etc.) to each word, then we would focus on clustering words into constituents guided by the intuitive question ``which words go together as a group''.
+% and then those would receive syntactic functions (subject, predicate, complement etc.) within the sentence.   
+%and result in a grouping such as the one in Example \ref{ex:2}. 
 
 \begin{figure}[!ht]
     \centering
-    \begin{tikzpicture}[tree-style,level 1/.style={sibling distance=4em},
-    level 2/.style={sibling distance=4em}, level distance=4.5em]
-    \node (cla) [pattern-node] {\textit{He gave the cake away.}}
+    \begin{tikzpicture}[scale=0.8, transform shape, tree-style,
+    level 1/.style={sibling distance=4em,level distance=3.5em,},
+    level 2/.style={sibling distance=4em,level distance=3.5em,}, 
+    edge from parent/.style={draw,rounded corners=3mm},
+    edge from parent path={(\tikzparentnode.south) -- ++(0,-1em) -| (\tikzchildnode.north)},
+     ]
+    \node (cla) [pattern-node] {He gave the cake away.}
     child { node (sub)[pattern-node] {He}}		
     child { node (mv)[pattern-node] {gave}}
-    child { node (com)[pattern-node] {\textit{the cake}}
+    child { node (com)[pattern-node] {the cake}
         child { node (det)[pattern-node]{the}}
         child { node (nou)[pattern-node]{cake}}}
     child {node[pattern-node](adjunct)
         {away}
     };
     \end{tikzpicture}
-    \caption{Representation of the Example \ref{ex:1} as constituency tree}
+    \caption{Constituency diagram for Example \ref{ex:1}}
     \label{fig:mcg-graph-example-simple-structure}
 \end{figure}
 
-Figure \ref{fig:mcg-graph-example-simple-structure} depicts the constituency division of the clause \ref{ex:1}% which is identical to the bracket notation in Example \ref{ex:2}. 
+Figure \ref{fig:mcg-graph-example-simple-structure} depicts a constituency division of the simple clause in Example \ref{ex:1}.% which is identical to the bracket notation in Example \ref{ex:2}. 
 The nodes represent grammatical constituents and the edges stand for the \textit{structure-substructure composition}. 
-Next we can move on to assign constituent class and a grammatical function. Table \ref{tab:sfg-constituency-analisys} provides a constituency analysis in SFL tradition. Here the sentence is formed of a single clause which has four constituting functional parts: a Subject, a Main Verb (also known as Predicate), a Complement and an Adjunct. Each of these functional parts is filled correspondingly by a pronoun, a verb, a nominal group and an adverb as assigned in the table below.
+Next we can move on to assign constituent class and a grammatical function. 
+%provides a constituency analysis in the SFL tradition
+Here the sentence is formed of a single clause which has four constituting functional parts: a subject providing information who is it about, a predicate indicating the action performed by the subject, a complement denoting what was in scope of the action and an adjunct describing the manner of the action. Each of these functional parts is filled correspondingly by a pronoun, a verb, a nominal group and an adverb. This analysis is depicted in Figure \ref{fig:constit-classes-example} as a constituency tree where the nodes carry classes and are given functions in parent units. The nods have been split into three sections for clarity purposes. The first section is filled with text fragments, the second (in blue) with unit classes and the third (in red) with unit functions. 
 
-\begin{table}[!ht]
+\begin{figure}[!ht]
     \centering
-    \begin{tabular}{cc|c|c|c}
-        \hline
-        \multicolumn{1}{|c|}{\textit{He}} & \textit{gave} & \textit{the}     & \textit{cake}   & \multicolumn{1}{c|}{\textit{away.}} \\ \hline
-        \multicolumn{5}{|c|}{clause}                                                                                                 \\ \hline
-        \multicolumn{1}{|c|}{Subject}     & Main Verb     & \multicolumn{2}{c|}{Complement}    & \multicolumn{1}{c|}{Adjunct}        \\ \hline
-        \multicolumn{1}{|c|}{pronoun}      & verb          & \multicolumn{2}{c|}{nominal group} & \multicolumn{1}{c|}{adverb}         \\ \hline
-        &               & Deictic          & Thing           &                                     \\ \cline{3-4}
-        &               & determiner       & noun            &                                     \\ \cline{3-4}
-    \end{tabular}
-    \caption{Constituency analysis with unit classes and grammatical functions (table view)}
-    \label{tab:sfg-constituency-analisys}
-\end{table}
+    \begin{tikzpicture}[scale=0.8, transform shape, tree-style,
+    level 1/.style={sibling distance=6.5em, level distance=2.5em,},
+    level 2/.style={sibling distance=5em, level distance=2.5em,}, 
+    edge from parent/.style={draw,rounded corners=3mm},
+    edge from parent path={(\tikzparentnode.south) -- ++(0,-1em) -| (\tikzchildnode.north)},
+    ]
+    \node (cla) [pattern-node, split-node-21,] {He gave the cake away. \nodepart{two} clause}
+    child { node (sub)[pattern-node, split-node-2,] {He \nodepart{two} pronoun \nodepart{three} Subject}}		
+    child { node (mv)[pattern-node, split-node-2,] {gave \nodepart{two} verb \nodepart{three} Main verb}}
+    child { node (com)[pattern-node, split-node-2,] {the cake \nodepart{two} nominal group \nodepart{three} Complement}
+        child { node (det)[pattern-node, split-node-2,]{the \nodepart{two} determiner \nodepart{three} Modifier}}
+        child { node (nou)[pattern-node, split-node-2,]{cake \nodepart{two} noun \nodepart{three} Head}}}
+    child {node[pattern-node, split-node-2,](adjunct) {away \nodepart{two} adverb \nodepart{three} Adjunct}
+    };
+    \end{tikzpicture}
+    \caption{Constituency analysis of Example \ref{ex:1} with unit classes and grammatical functions}
+    \label{fig:constit-classes-example}
+\end{figure}
 
-Next each constituent can be assigned a set of relevant linguistic features. For example The subject ``He'' is a pronoun that has features known in traditional grammar: \textit{singular}, \textit{masculine}, and \textit{3^{rd} person}. These features are well differentiated in traditional grammar. For example \textit{singular} means \textit{non-plural}, \textit{masculine} means \textit{non-feminine} and \textit{3^{rd} person} means \textit{non-1^{st}} and \textit{non-2^{nd}}. These are closed classes meaning that there is no \textit{4^{th} person} or that there is no \textit{neutral} grammatical gender in English as other languages have. These features can be systematised (see Figure \ref{fig:traditional-pronoun}) as three systems of mutually exclusive choices that can be assigned to pronominal units. Note that the gender is enabled for 3^{rd} person singular pronouns which can be expressed as is the figure below representing a \textit{system network} (explained in Chapter \ref{ch:sfg}).
+%\begin{table}[!ht]
+%    \centering
+%    \begin{tabular}{cc|c|c|c}
+%        \hline
+%        \multicolumn{1}{|c|}{\textit{He}} & \textit{gave} & \textit{the}     & \textit{cake}   & \multicolumn{1}{c|}{\textit{away.}} \\ \hline
+%        \multicolumn{5}{|c|}{clause}                                                                                                 \\ \hline
+%        \multicolumn{1}{|c|}{Subject}     & Main Verb     & \multicolumn{2}{c|}{Complement}    & \multicolumn{1}{c|}{Adjunct}        \\ \hline
+%        \multicolumn{1}{|c|}{pronoun}      & verb          & \multicolumn{2}{c|}{nominal group} & \multicolumn{1}{c|}{adverb}         \\ \hline
+%        &               & Deictic          & Thing           &                                     \\ \cline{3-4}
+%        &               & determiner       & noun            &                                     \\ \cline{3-4}
+%    \end{tabular}
+%    \caption{Constituency analysis with unit classes and grammatical functions (table view)}
+%    \label{tab:sfg-constituency-analisys}
+%\end{table}
+
+Next each constituent can be assigned a set of relevant linguistic features. For example The subject ``He'' is a pronoun that has features known in traditional grammar: \textit{singular}, \textit{masculine}, and \textit{3^{rd} person}. These features are well differentiated in traditional grammar. For example \textit{singular} means \textit{non-plural}, \textit{masculine} means \textit{non-feminine} and \textit{3^{rd} person} means \textit{non-1^{st}} and \textit{non-2^{nd}}. These are closed classes meaning that there is no \textit{4^{th} person} or that there is no \textit{neutral} grammatical gender in English as other languages have. These features can be systematised (see Figure \ref{fig:traditional-pronoun}) as three systems of mutually exclusive choices that can be assigned to pronominal units. Note that the gender is enabled for 3^{rd} person singular pronouns which can be expressed as is the figure below representing a \textit{system network} which I will explain in Chapter \ref{ch:sfg}.
 
 \begin{figure}[!ht]
     \centering      
@@ -143,162 +173,225 @@ Next each constituent can be assigned a set of relevant linguistic features. For
     \label{fig:traditional-pronoun}
 \end{figure}
 
-In SFG the pronouns are systematised in the system network of Person from \textit{Introduction to Functional Grammar} \citep[366]{Halliday2013} that is depicted in Figure \ref{fig:person-system-network}. The red rectangles from the figure represent the selections that are applicable to the Subject constituent ``He'' in example above.
-
+In SFG the pronouns are systematised in the system network of Person from \textit{Introduction to Functional Grammar} \citep[366]{Halliday2013} that is depicted in Figure \ref{fig:person-system-network}. The (red) rectangles from the figure represent the selections that are applicable to the Subject constituent ``He'' in example above. These selections are the result of traversing a system network deciding at each step which branch to follow and advance to the next system if one is available. A simplified traversal for selecting a pronominal referent can be described as follows. The choices are performed based on realisation rules but for now I postpone describing them focusing mainly on the traversal process. So, first the deciding agent shall choose in the PERSON system whether the referent participates in the interaction or not (follow in Figure \ref{fig:person-system-network}). In our example the referent is does not so \textit{non-interactant} choice is made and the agent proceeds towards the next system further distinguishing the type of \textit{non-interactant}. It can be singular or plural and four our case \textit{one-referent} is chosen. Further, the deciding agent needs to make a distinction between referents on the consciousness axis. For our example she chooses the \textit{conscious} feature. And finally conscious things need to be distinguished by gender, which in this example is masculine and therefore \textit{male} sex type is chosen. This path of choices uniquely identifies the pronoun ``He'' in a system network which also defines the boundaries of all choice possibilities. 
+ 
 \begin{figure}[!ht]
     \centering      
     \includegraphics[width=.90\textwidth]{Figures/Example/person-selections.pdf}      
-    \caption{The selections in Person system network from \citet[366]{Halliday2013} }
+    \caption{The selections in Person system network from \citet[366]{Halliday2013} for pronoun ``He''}
     \label{fig:person-system-network}
 \end{figure}
 
-Lets take now the clause constituent that is the root of the constituency tree and see how SFL features can be applied to it. If in in terms of traditional grammar the clause can be ascribed relatively few features i.e. as having \textit{passive voice}, \textit{positive polarity} and \textit{simple past tense} then in terms of SFL grammar the features are many more i.e. \textit{major, positive, active, effective, receptive, agentive, free, finite, temporal, past, non-progressive, non-perfect, declarative, indicative, mood-non-assessed, comment-non-assessed}. Figure \ref{fig:mood-selections} depicts the selections applicable to clause constituent in Example \ref{ex:1} from Mood system network that is an adaptation of Mood network proposed in \citet[162]{Halliday2013}. 
+%%todo: explain how the system network is traversed and choices made, this is needed in the next section
+
+Lets take now the clause constituent that is the root of the constituency tree (see Figure \ref{fig:constit-classes-example}) and see how SFL features can be applied to it. If in traditional grammar the clause is usually ascribed relatively few features, e.g. as having \textit{passive voice}, \textit{positive polarity} and \textit{simple past tense}; in terms of SFL grammar the corresponding features are many more i.e. \textit{major, positive, active, effective, receptive, agentive, free, finite, temporal, past, non-progressive, non-perfect, declarative, indicative, mood-non-assessed, comment-non-assessed}. Figure \ref{fig:mood-selections} depicts the selections applicable to clause constituent in Example \ref{ex:1} from Mood system network that is an adaptation of the Mood network proposed in \citet[162]{Halliday2013}. These selections represent, in SFL, choices made by the speaker when generating the utterance in a similar manner as explained for the pronominal referent above. Organisation of the linguistic features is system networks is one of the main things that distinguishes SFL from other linguistic traditions. I will introduce system networks, how they are structured and how they function in Chapter \ref{ch:sfg} that follows below. 
 
 \begin{figure}[!ht]
     \centering      
     \includegraphics[width=0.91\textwidth]{Figures/Example/mood-selections.pdf}      
-    \caption{The feature selections in the Mood system network for Example \ref{ex:1}}
+    \caption{The feature selections in the Mood system network for clause constituent in Example \ref{ex:1}}
     \label{fig:mood-selections}
 \end{figure}
 
-So far you have seen constituents assigned syntactic functions such as Subject, Complement, Adjunct etc. SFL covers a wider range of functions depending on the kind of meaning it aims at describing. For example what in other grammars is known as \textit{semantic labels}, \textit{thematic} or \textit{$\theta$ roles} SFL systematises as Transitivity system network (which will be introduced in Chapter \ref{sfg} below). Transitivity aims at providing domain independent \textit{semantic frames} called in SFL \textit{process configurations} which describe semantic actions and relationships, along with \textit{semantic roles} ascribed to their \textit{participants}. These semantic frames generally are governed by verbs and more specifically each verb meaning has a dedicated semantic frame. 
+So far we have seen constituents assigned syntactic functions such as Subject, Complement, Adjunct etc. In SFL, they are elements of the interpersonal metafunction that will be explained in Chapter \ref{ch:sfg}. SFL covers a wide range of linguistic features and functions depending on the kind of meaning it aims at describing. 
+%For example what in other grammars is known as \textit{semantic labels}, \textit{thematic} or \textit{$\theta$ roles} SFL systematises as Transitivity system network (which will be introduced in Chapter \ref{sfg} below). 
+For example another view on the same clause can be provided from a perspective that in SFL is called experiential and corresponds to what in traditional linguistics is known as semantics. It is systematised, in SFL, as Transitivity system network which aims at providing domain independent \textit{semantic frames} called \textit{process configurations}. They describe semantic actions and relationships, along with \textit{semantic roles} ascribed to their \textit{participants}. These semantic frames generally are ``governed'' by verbs and more specifically each verb meaning has a dedicated semantic frame.
 
-For example \ref{ex:1} corresponds to a Possessive semantic frame where ``He'' is the Agent and Carrier whereas ``the cake'' is the Possessed thing as marked in Example \ref{ex:3}. These configurations and participant roles correspond to Transitivity system network proposed in \citep{Neale2002}.
+The clause in Example \ref{ex:1} corresponds to a Possessive semantic frame where ``He'' is the Agent and Carrier while ``the cake'' is the Affected and Possessed thing. Example \ref{ex:3} provides these annotations. These configurations and participant roles correspond to the Transitivity system network proposed by \citet{Neale2002} which I will introduce in Chapter \ref{ch:the-grammar}.
 
 \begin{exe}
-    \ex\label{ex:3} [_{Agent-Carrier} He] gave [_{Possessed} the cake] away. 
+    \ex\label{ex:3} [_{Agent-Carrier} He] gave [_{Affected-Possessed} the cake] away. 
 \end{exe}
 
-There are more functions and features that can be assigned to the constituents in the Example \ref{ex:1} but I stop here. The analysis provided so far highlights that SFG grammar has a variety of functions serving to express different meanings. The traditional grammar distinguishes them as syntactic and semantic functions but, as we will see in Chapter \ref{ch:sfg} below, SFL does not make such a distinction. Another aim of the current section was to provide a glance of the feature rich grammar and I hope the example with Mood feature selection in Figure \ref{fig:mood-selections} fulfils this goal.
+%%todo, move after teh next paragraph
+
+
+%The analysis provided so far highlights that SFG grammar has a variety of functions serving to express different meanings. 
+%The traditional grammar distinguishes them as syntactic and semantic functions but, as we will see in Chapter \ref{ch:sfg} below, SFL does not make such a distinction. Another aim of the current section was to provide a glance of the feature rich grammar and I hope the example with Mood feature selection in Figure \ref{fig:mood-selections} fulfils this goal.
 
 \begin{figure}[!ht]
     \centering
-    \begin{tikzpicture}[scale=0.8, transform shape, tree-style, 
-    level 1/.style={sibling distance=11em, level distance=14em},
-    level 2/.style={sibling distance=10em, level distance=12em}, 
-    anchor=north
-    growth parent anchor = north,]
-    
-    \node (cla) [pattern-node, split-node, text width = 42em,]  
-    {clause 
-        \nodepart{two} Configuration
-        \nodepart{three} major, positive, active, effective, receptive, agentive, free, finite, temporal, past, non-progressive, non-perfect, declarative, indicative, mood-non-assessed, comment-non-assessed, posessive};
-    
-    \node (sub) [pattern-node, split-node, below=3em of cla, xshift=-16em,] 
-    {pronoun
-        \nodepart{two} Subject, Participant,\\ 
-        Agent \& Carrier 
-        \nodepart{three} 3^{rd} person, singular,\\ 
-        male, non-interactant,\\ 
-        one-referent, conscious};
-    
-    \node (mv)[pattern-node, split-node, below=3em of cla, xshift=-5em] 
-    {verb
-        \nodepart{two} Main Verb, Finite, \\Process 
-        \nodepart{three} possessive };
-    
-    \node (com)[pattern-node,split-node, below=3em of cla, xshift=6em] 
-    {nominal group
-        \nodepart{two} Complement, Participant, 
-        \\ Affected \& Possessed
-        \nodepart{three} };
-    
-    \node (det)[pattern-node,split-node, below=3em of com, xshift=-6em]
-    {determiner
-        \nodepart{two} Deictic, Modifier
-        \nodepart{three} specific, demonstrative,\\ 
-        determinative, non-selective};
-    
-    \node (nou)[pattern-node,split-node, below=3em of com, xshift=6em]
-    {noun
-        \nodepart{two} Thing, Head
-        \nodepart{three} inanimate, singular,\\ 
-        countable };
-    
-    \node[pattern-node,split-node, below=3em of cla, xshift=17em](adjunct)
-    {adverb
-        \nodepart{two} Adjunct,
-        \\Circumstance,
-        \\Location
-        \nodepart{three} };
-    
-    \draw[sequence,-,edge-style] (cla.south) -- ++(0,-1em) -| (sub.north);
-    \draw[sequence,-,edge-style] (cla.south) -- ++(0,-1em) -| (mv.north);
-    \draw[sequence,-,edge-style] (cla.south) -- ++(0,-1em) -| (com.north);
-    \draw[sequence,-,edge-style] (cla.south) -- ++(0,-1em) -| (adjunct.north);
-    \draw[sequence,-,edge-style] (com.south) -- ++(0,-1em) -| (det.north);
-    \draw[sequence,-,edge-style] (com.south) -- ++(0,-1em) -| (nou.north);	
+    \begin{tikzpicture}[scale=0.8, transform shape, tree-style,
+    level 1/.style={sibling distance=11em, level distance=3em,},
+    level 2/.style={sibling distance=12em, level distance=3em,}, 
+    edge from parent/.style={draw,rounded corners=3mm},
+    anchor=north,
+    edge from parent path={(\tikzparentnode.south) -- ++(0,-1em) -| (\tikzchildnode.north)},
+    ]
+    \node (cla) [pattern-node, split-node-31, text width = 0.9\textwidth,] 
+        {He gave the cake away. 
+            \nodepart{two} clause 
+            \nodepart{three}  major, positive, active, effective, receptive, agentive, free, finite, temporal, past, non-progressive, non-perfect, declarative, indicative, mood-non-assessed, comment-non-assessed, posessive }
+    child { node (sub)[pattern-node, split-node-3,] 
+        {He 
+            \nodepart{two} pronoun 
+            \nodepart{three} Subject, Participant,\\ 
+            Agent \& Carrier
+            \nodepart{four} 3^{rd} person, singular,\\ 
+            male, non-interactant,\\ 
+            one-referent, conscious}}		
+    child { node (mv)[pattern-node, split-node-3,] 
+        {gave 
+            \nodepart{two} verb 
+            \nodepart{three} Main Verb, Finite, \\Process 
+            \nodepart{four} %posessive
+        }}
+    child { node (com)[pattern-node, split-node-3,] 
+        {the cake 
+            \nodepart{two} nominal group 
+            \nodepart{three} Complement, Participant, 
+            \\ Affected \& Possessed
+            \nodepart{four}
+        }
+        child { node (det)[pattern-node, split-node-3,] 
+            {the 
+                \nodepart{two} determiner 
+                \nodepart{three} Deictic, Modifier
+                \nodepart{four} %specific, demonstrative,\\                determinative, non-selective
+            }}
+        child { node (nou)[pattern-node, split-node-3,] 
+            {cake 
+                \nodepart{two} noun 
+                \nodepart{three} Head, Thing
+                \nodepart{four} %inanimate, singular,\\                 countable
+            }}}
+    child {node[pattern-node, split-node-3,](adjunct) 
+        {away 
+            \nodepart{two} adverb 
+            \nodepart{three} Adjunct,
+            \\Circumstance,
+            \\Location
+            \nodepart{four}
+        }
+    };
     \end{tikzpicture}
     \caption{Representation of Example \ref{ex:1} as feature rich constituency tree}
     \label{fig:mcg-graph-example}
 \end{figure}
 
+%\begin{figure}[!ht]
+%    \centering
+%    \begin{tikzpicture}[scale=0.8, transform shape, tree-style, 
+%    level 1/.style={sibling distance=11em, level distance=14em},
+%    level 2/.style={sibling distance=10em, level distance=12em}, 
+%    anchor=north
+%    growth parent anchor = north,]
+%    
+%    \node (cla) [pattern-node, split-node, text width = 42em,]  
+%    {clause 
+%        \nodepart{two} Configuration
+%        \nodepart{three} major, positive, active, effective, receptive, agentive, free, finite, temporal, past, non-progressive, non-perfect, declarative, indicative, mood-non-assessed, comment-non-assessed, posessive};
+%    
+%    \node (sub) [pattern-node, split-node, below=3em of cla, xshift=-16em,] 
+%    {pronoun
+%        \nodepart{two} Subject, Participant,\\ 
+%        Agent \& Carrier 
+%        \nodepart{three} 3^{rd} person, singular,\\ 
+%        male, non-interactant,\\ 
+%        one-referent, conscious};
+%    
+%    \node (mv)[pattern-node, split-node, below=3em of cla, xshift=-5em] 
+%    {verb
+%        \nodepart{two} Main Verb, Finite, \\Process 
+%        \nodepart{three} possessive };
+%    
+%    \node (com)[pattern-node,split-node, below=3em of cla, xshift=6em] 
+%    {nominal group
+%        \nodepart{two} Complement, Participant, 
+%        \\ Affected \& Possessed
+%        \nodepart{three} };
+%    
+%    \node (det)[pattern-node,split-node, below=3em of com, xshift=-6em]
+%    {determiner
+%        \nodepart{two} Deictic, Modifier
+%        \nodepart{three} specific, demonstrative,\\ 
+%        determinative, non-selective};
+%    
+%    \node (nou)[pattern-node,split-node, below=3em of com, xshift=6em]
+%    {noun
+%        \nodepart{two} Thing, Head
+%        \nodepart{three} inanimate, singular,\\ 
+%        countable };
+%    
+%    \node[pattern-node,split-node, below=3em of cla, xshift=17em](adjunct)
+%    {adverb
+%        \nodepart{two} Adjunct,
+%        \\Circumstance,
+%        \\Location
+%        \nodepart{three} };
+%    
+%    \draw[sequence,-,edge-style] (cla.south) -- ++(0,-1em) -| (sub.north);
+%    \draw[sequence,-,edge-style] (cla.south) -- ++(0,-1em) -| (mv.north);
+%    \draw[sequence,-,edge-style] (cla.south) -- ++(0,-1em) -| (com.north);
+%    \draw[sequence,-,edge-style] (cla.south) -- ++(0,-1em) -| (adjunct.north);
+%    \draw[sequence,-,edge-style] (com.south) -- ++(0,-1em) -| (det.north);
+%    \draw[sequence,-,edge-style] (com.south) -- ++(0,-1em) -| (nou.north);	
+%    \end{tikzpicture}
+%    \caption{Representation of Example \ref{ex:1} as feature rich constituency tree}
+%    \label{fig:mcg-graph-example}
+%\end{figure}
 
-Next, Figure \ref{fig:mcg-graph-example} summarises everything discussed above into a partially filled constituency tree. The constituents that were not discussed are assigned only few high level functions and features. As you can see, every node is richly decorated with syntactic and semantic features. The blue part of each node denotes grammatical class, the red part carries functions some of  which are important to establishing a valid constituency structure (that are Mood functions) and the the Transitivity functions; and the green part some grammatical features selected from system networks. In practice, the feature set is much richer than what nodes in Figure \ref{fig:mcg-graph-example} carry here the restriction aims simply to avoid an over-crowded example. 
-
+There are more functions and features that can be assigned to the constituents in the Example \ref{ex:1} but this is sufficient for the current purposes of introduction. Figure \ref{fig:mcg-graph-example} summarises everything discussed above into a partially filled constituency tree. The constituents that were not discussed are assigned only a few functions. %In practice, every node is richly decorated with syntactic and semantic features that are functionally anchored in the system networks.
+The last (green) section of every node in the constituent tree is filled with a limited set of grammatical features selected from system networks. In practice the feature set is much richer than those shown in the nodes in Figure \ref{fig:mcg-graph-example}; the restriction aims simply to avoid an over-crowded example and simplify the exposition. Important to underline here is the systemic functional anchoring of the features into system networks that is an SFL practice.
 
 %Generating automatically feature rich constituency structure such as the one in Figure \ref{fig:mcg-graph-example} is the general aim in the current work.
 
 Next I describe what opportunities and limitations exist in automatically generating rich SFL analyses as until now it has not been possible to use these detailed analysis in computational contexts. This makes them unavailable for corpus work, for training data in machine learning and other end-user application scenarios provided as motivation in the Sections \ref{sec:motivation} above.
 
-\section{Computing with SFG - a practical problem}
+\section{The problem of parsing with SFGs}
 \label{sec:problem}
-%the problem of parsing with SFGs
-
-%\todo[inline]{
-%    But, until now it has not been possible to use these
-%    detailed analysis in computational contexts: this makes
-%    them unavailable for corpus work, for training data in
-%    machine learning, etc. etc. (add as many points as occur
-%    to you).
-%}
-
-%\todo[inline]{
-%    There have been attempts to make this work (which you
-%    will come back to and describe in Chapter X in detail), however,
-%    but these have not worked. As you you say you will describe in detail
-%    in Chapter X, }
-
-%\todo[inline]{
-%    there is however a strong diagnostic as to
-%    just why these attempts have not been successful: i.e., the
-%    lack of structural detail that SFG descriptions typically
-%    provide. This is argued in general in Bateman (2008)
-%    and Teich (1999) [and any other references you can find].
-%}
+%todo continue here
+%Computing with SFG - a practical problem
 
 %The problem of parsing with SFG has been well laid out in \citet{Bateman2008} as being one of computational complexity due to exponential explosion of possible combinations of features. 
 
-SFL since it has been established has been primarily concerned with the paradigmatic axis of language. Accounts of the syntagmatic axis of language, for example syntactic structure, have been put in the background. The structure has been placed on the theoretical map and defined in terms of \textit{rank}, \textit{unit}, \textit{class} and \textit{function}, as we will see in detail in Chapter \ref{ch:sfg} but afterwards it received minimal attention as most of the focus was on the paradigmatic organisation in language (in fact this is is the feature that sets SFL apart from other approaches to study language). This has led to progress in accounting how language works at all strata but little was said about the language constituency. And this can be considered ``unsolved'' within SFL accounts leaving a ``gap in what must be one the central areas of any characterisation of language'' \citep[25]{Bateman2008}. 
+In this sections I describe the main challenges for using Systemic Functional Grammars (SFG) in computational contexts and parsing in particular. In short the first and main challenge in parsing with SFGs is that of computational complexity. Partially this problem stems from the manner grammars are structured and the fact that paradigmatic descriptions have received most of the attention at the expense of the syntagmatic ones. The second challenge is parsing with features that depart from directly observable grammatical variations towards increasingly abstract semantic features. Addressing this problem requires answers to a couple of other issues: the availability of a lexical-semantic database and a resolution mechanism for \textit{covert constituents}. As we will see motivated below, the latter are useful constructs in providing a solution even though some linguistic theories reject the mere existence of such things. Next I describe in detail the main problems. I will start with unbalance between paradigmatic and syntagmatic accounts in SFL, then bring the computational aspects into the picture comparing the natural language generation and parson problems, after which I turn towards the problem of parsing with more abstract features and draw parallels to \textit{semantic role labelling} problem in mainstream linguistics. Where appropriate, I will also suggesting how potential solutions may look like which will be further presented in Section \ref{sec:solution}.
 
-%As we will see below, some accounts of constituency are provided within SFL grammars, enough even to make them applicable in computational domains such as automatic \textit{natural language generation}. But such descriptions are by far not satisfiable with respect to what would a proper syntagmatic account of language would be. 
+\subsection{The lack of suitable syntagmatic descriptions in SFG}
+%% the problem of syntagmatic account
 
-This may be surprising as the syntagmatic dimension is implicit and present everywhere in the SFL literature. For instance all example analyses in the \textit{Introduction to Functional Grammar} \citep{Halliday2013} are predominantly syntagmatic. Moreover, Robin Fawcett for decades promotes the motto \textit{no system network without realisation statements} \citep[9]{Fawcett88-good}. \citet{Bateman2008} presents in detail why there is a severe imbalance between syntagmatic and paradigmatic axes in SFL, how it came to be this way and how it is especially damaging to the task of automatic text analysis. Next I describe the main problems and hint at how potential solutions may look like (described Section \ref{sec:solution}). 
+SFL since it was established has been primarily concerned with the paradigmatic axis of language. Accounts of the syntagmatic axis of language, such as the syntactic structure, have been put in the background. Within SFL, as we will see in Chapter \ref{ch:sfg}, structure is a syntagmatic ordering in language capturing regularities and patterns which can be paraphrased as \textit{what goes together with what}. It has been placed on the theoretical map and defined in terms of \textit{rank}, \textit{unit}, \textit{class} and \textit{function}, but afterwards it received minimal attention.
 
-\citet{ODonnell2005} offer a detailed description to the long history of SFL being applied in computational contexts yielding with productive outcomes on language theorising, description and processing. The transfer between SFL and computation typically involved a delay between the theoretical formulation and the computational instantiation of that formulation \citep[139]{BatemanMatthiessen88} \citep[19]{MatthiessenBateman91}. The theoretically formulated ideas contain hidden pitfalls that are revealed only upon explicit formulations required by in computation \mbox{\citep[27]{Bateman2008}}. 
+Most of the descriptive work, in SFL, is carried paradigmatically via \textit{system networks} (Definition \ref{def:system}) describing \textit{what could go instead of what} \citep[22]{Halliday2013}. Having the focus set on the paradigmatic organisation in language is in fact the feature that sets SFL apart from other approaches to study language.
+This has led to progress in accounting how language works at all strata but little was said about language constituency. And this can be considered ``unsolved'' within SFL accounts leaving a ``gap in what must be one the central areas of any characterisation of language'' \citep[25]{Bateman2008}. 
 
-The active exchange between the SFL theory and computation has been almost entirely oriented towards automatic \textit{natural language generation}. Such systems would use abstract semantic specifications and communicative goals to produce grammatically correct and well connected texts achieving those goals. This area has been shown to be successful in part due to decomposition of language along the paradigmatic axis using functionally motivated sets of choices between functionally motivated alternatives \citep{McDonald80}.
+%Accounts of the syntagmatic axis of language, such as the syntactic structure, have been put in the background. Within SFL, structure has been placed on the theoretical map and is defined in terms of \textit{rank}, \textit{unit}, \textit{class} and \textit{function}, as we will see in detail in Chapter \ref{ch:sfg}, but afterwards it received minimal attention. 
+%Most of the focus was set on 
+%the paradigmatic organisation in language is in fact the feature that sets SFL apart from other approaches to study language. 
+%%As we will see below, some accounts of constituency are provided within SFL grammars, enough even to make them applicable in computational domains such as automatic \textit{natural language generation}. But such descriptions are by far not satisfiable with respect to what would a proper syntagmatic account of language would be. 
 
-The computational processes driving the natural language generation relied heavily on the notion of \textit{search}. A well defined search problem is defined in terms of a precise description of the search space which then helps navigation process effectively to find solutions. The paradigmatic organization of the \textit{lexicogrammar} as system networks assumed within SFL turns out to organise the search space for possible grammatical units appropriate for communicative goals in almost ideal manner \citep[28]{Bateman2008}.
+If we attend SFL literature, however, the syntagmatic dimension is implicit and present everywhere in the SFL literature, which makes the above claims sound little surprising. For instance all example analyses in the \textit{Introduction to Functional Grammar} \citep{Halliday2013} are predominantly syntagmatic. 
+Moreover, Robin Fawcett for decades promotes the motto \textit{no system network without realisation statements} \citep[9]{Fawcett88-good} which means that every paradigmatic description must be accompanied by precise rules how it is syntagmatically realised in text. Yet, despite these inducements, the situation could not have been more different. \citet{Bateman2008} presents in detail why there is a severe imbalance between syntagmatic and paradigmatic axes in SFL, how it came to be this way and how it is especially damaging to the task of automatic text analysis, yet quite beneficial for the text generation task. 
 
-The \textit{automatic analysis} or \textit{parsing} can be seen as a reverse problem of finding appropriate analysis within a search space of possible solutions. That is identify the exact meaning, systematised in the grammar, of a given natural language sentence. As seen in Section \ref{sec:example} above, an account of the sentence meaning would have to provide both, in terms of a formal structure of the sentence revealing the constituents plus their syntactic relations to each other, and in terms of a complete set of features (detailed to the extent that grammar permits) applicable to each constituent of structure. If, in the generation process, the abstract semantic specifications are increasingly materialised through choice making by traversing the system network towards finally generated text, then, in the parsing process, the reverse is the case. The process starts from a given sentence aiming to derive/search the feature choices in the system network afferent to each of the constituents. But if the paradigmatically organised lexicogrammatical resource is effective for generation it turns out, as we will see next, to be by far unsuitable for the analysis task because of the \textit{size problem}. Halliday himself mentions this problem when he asks \textit{how big is a grammar?}.
+\subsection{Parsing is asymmetric to generation: the computational complexity issue}
 
-\begin{quotation}
+\citet{ODonnell2005} offer a detailed description to the long history of SFL being applied in computational contexts yielding with productive outcomes on language theorising, description and processing. The transfer between SFL and computation typically involved a delay between the theoretical formulation and the computational instantiation of that formulation \citep[139]{BatemanMatthiessen88} \citep[19]{MatthiessenBateman91}. The theoretically formulated ideas contain hidden pitfalls that are revealed only upon explicit formulations required in computation \mbox{\citep[27]{Bateman2008}}. 
+
+The active exchange between SFL theory and computation has been almost entirely oriented towards automatic \textit{natural language generation}. Such systems take abstract semantic specifications as input and use grammars to produce grammatically correct and well connected texts. One of the grammars successfully used in generation tasks is the Nigel grammar developed within Penman generation project \citep{Mann83}. The efficiency in generation tasks is, in part, due to decomposition of language along the paradigmatic axis using functionally motivated sets of choices between functionally motivated alternatives \citep{McDonald80}. The Nigel grammar contains 767 grammatical systems defined over 1381 grammatical features which Bateman evaluates as ``a very large computational grammar by current standards, although nowadays by no means the broadest when considered in terms of raw grammatical coverage'' \citep[29]{Bateman2008}.
+
+The computational processes driving natural language generation relied heavily on the notion of \textit{search}. A well defined search problem is defined in terms of a precise description of the search space which then helps a navigation process effectively to find solutions. The paradigmatic organization of the \textit{lexicogrammar} as system networks assumed within SFL turns out to organise the search space for possible grammatical units appropriate for expressing communicative goals in generation in almost ideal manner \citep[28]{Bateman2008}.
+
+\textit{Automatic analysis} or \textit{parsing} can be seen as a reverse problem of finding appropriate analysis within a search space of possible solutions. That is to identify, as accurate as possible, the meaning systematised in the grammar, of a given natural language sentence. As seen in Section \ref{sec:example} above, an account of the sentence meaning would have to provide two things. First a description in terms of a formal structure of the sentence revealing the constituents plus their syntactic relations to each other. And second, a description in terms of a complete set of features (detailed to the extent that grammar permits) applicable to each constituent of structure. If, in the generation process, the abstract semantic specifications are increasingly materialised through choice making by traversing the system network towards finally generated text (see example in Section \ref{sec:example}), then, in the parsing process, the reverse is the case. The process starts from a given sentence aiming to derive/search the feature choices in the system network afferent to each of the constituents. But if the paradigmatically organised lexicogrammatical resource is effective for generation it turns out, as we will see next, to be by far unsuitable for the analysis task because of the \textit{size problem}. Halliday himself mentions this problem when he asks \textit{how big is a grammar?}.
+
+\begin{quote}
     Given any system network it should in principle be possible to count the number of alternatives shown to be available. In practice, it is quite difficult to calculate the number of different selection expressions that are generated by a network of any considerable complexity \citep[10]{Halliday96-grammatics}.
-\end{quotation}
+\end{quote}
 
-The issue emerges from the way connections and (cross-)classifications are organised in a system network. In addition to that, the orientation of systemic grammars towards choice means that the grammar full of disjunctions leading to the problem of search complexity. Also the abstract nature of systemic features leads to a structural richness that adds logical complexity to the task \citep{ODonnell1993}. So estimating the size of the grammar would in fact mean estimating the potential number of feature combinations. For example, a hypothetical network of 40 systems the ``size of the grammar it generates lies somewhere between 41 and 2^{40} (which is somewhere around 10^{12})'' \citep[28]{Bateman2008}. However it is not easy to predict where would the upper limit of the grammar would fall even when the configuration of relations of a particular system network is known.
+The issue is that of handling a combinatorial space which emerges from the way connections and (cross-)classifications are organised in a system network. In addition to that, the orientation of systemic grammars towards choice means that a typical grammar includes many disjunctions, which leads to the problem of search complexity. Also the abstract nature of systemic features leads to a structural richness that adds logical complexity to the task \citep{ODonnell1993}. So estimating the size of the grammar would in fact mean estimating the potential number of feature combinations. For example, a hypothetical network of 40 systems the ``size of the grammar it generates lies somewhere between 41 and 2^{40} (which is somewhere around 10^{12})'' \citep[28]{Bateman2008}. However it is not easy to calculate where would the upper limit of a grammar fall even when the configuration of relations of a particular system network is known.
 
-For the generation task, that size, is not a problem at all as the number of choice points is actually rather small. Such a paradigmatic organisation is, in fact, an incredibly concise and efficient way to express the linguistic choices where the possible feature selections are relevant only when they are enabled by prior paradigmatic choices and it is only those alternatives that need to be considered \citep[12--13]{Halliday96-grammatics} .
+For the generation task the issue of size is not a problem at all as the number of choice points is actually rather small. Such a paradigmatic organisation is, in fact, a concise and efficient way to express the linguistic choices where the possible feature selections are relevant only when they are enabled by prior paradigmatic choices and it is only those alternatives that need to be considered \citep[12--13]{Halliday96-grammatics}. This property of gradual exposure of choices characterises the traversal of the system networks, in generation process, which starts from the root and gradually advances towards more delicate features down to a leaf.
 
-In the analysis task, the paradigmatic context of choice, that helps navigation during the generation process, is no longer available. It is not known
+In the analysis task, the paradigmatic context of choice, that helps navigation during the generation process is no longer available. It is not known
 any longer which features of a systemic network are relevant and which are not. This leads to a radical asymmetry between the two tasks. That
 is: in generation, the simple traversal of the network finds only the compatible choices
 because that is what the network leads to; whereas in analysis it is not evident in
-advance which path to follow therefore the task is virtually to explore entire search
-space in order to discover which features apply to the text. This means that any path is potentially relevant and shall be passed and checked leading to evaluation of the system network as a whole; and that there is no way to restricting the search space, as in the case of generation, to a a set of familiar paradigmatic lines \citep[29]{Bateman2008}. 
+advance which path to follow therefore the task is to explore the entire search
+space in order to discover which features apply to the text. This means that any path is potentially relevant and shall be passed and needs to be checked leading to evaluation of the system network as a whole. There is then no way to restrict the search space as in the case of generation \citep[29]{Bateman2008}. 
 
-One of the grammars successfully used in generation tasks is Nigel grammar developed within Penman generation project \citep{Mann83}. It contains 767 grammatical systems defined over 1381 grammatical features which Bateman evaluates as ``a very large computational grammar by current standards, although nowadays by no means the broadest when considered in terms of raw grammatical coverage'' \citep[29]{Bateman2008}. To parse with such a grammar would means exploring an incredibly vast search space $ 3 \times 10^{18} $ to be more precise. A more detailed break down the complexity by rank or primary class as provided in Table \ref{tab:size} below.
+%copied above
+One of the grammars successfully used in generation tasks is the Nigel grammar, described above, which is a large grammar by modern standards. 
+%developed within Penman generation project \citep{Mann83}. It contains 767 grammatical systems defined over 1381 grammatical features which Bateman evaluates as ``a very large computational grammar by current standards, although nowadays by no means the broadest when considered in terms of raw grammatical coverage'' \citep[29]{Bateman2008}.
+To parse with such a grammar would means exploring a search space of approximately $3 \times 10^{18} $ feature combinations. A more detailed break down the complexity by rank or primary class as provided in Table \ref{tab:size} below.
 
 \begin{table}[!ht]
     \centering
@@ -317,12 +410,14 @@ One of the grammars successfully used in generation tasks is Nigel grammar devel
     \label{tab:size}
 \end{table}
 
+\subsection{The challenge of parsing with semantic features}
+
 %difficulty SLR
-Another difficulty in parsing with SFGs lays in the fact that, as the analysis moves away from directly observable grammatical variations towards more abstract semantic variations, the difficulty of generating an accurate account increases drastically. Transitivity system network for example consists of such semantic features and it is comparable to what is called in computational linguistics (shallow) \textit{semantic parsing} or \textit{Semantic Role Labelling} (SRL) \citep{Carreras2005}.
+Another difficulty in parsing with SFGs lies in the fact that, as the analysis moves away from directly observable grammatical variations towards more abstract semantic variations, the difficulty of generating an accurate account increases drastically. The Transitivity system network for example consists of such semantic features and it is comparable to what is called in computational linguistics (shallow) \textit{semantic parsing} or \textit{Semantic Role Labelling} (SRL) \citep{Carreras2005}.
 
-The main challenge of SRL (well explained in \citep[245--250]{gildea2002automatic}) remain the same since \citet{Winograd1972}: moving away from the domain specific, hand-crafted semantic specifications towards domain independent and robust set of semantic specifications. This goal was undertaken in several projects to build large broad-scope lexico-semantic databases such as WordNet \citep{Fellbaum98-wn}, FrameNet \citep{Baker1998, Johnson2000, fillmore2003background} and VerbNet \citep{schuler2005verbnet, Kipper2008}. A similar database exists for Transitivity system network as described in \citet{Fawcett2009} called Process Type Database \citep{Neale2002}. 
+The main challenge of SRL, well explained in \citep[245--250]{gildea2002automatic}, remain the same since \citet{Winograd1972}: \textit{moving away from the domain specific, hand-crafted semantic specifications towards domain independent and robust set of semantic specifications}. This goal was undertaken in several projects to build large broad-scope lexico-semantic databases such as WordNet \citep{Fellbaum98-wn}, FrameNet \citep{Baker1998, Johnson2000, fillmore2003background} and VerbNet \citep{schuler2005verbnet, Kipper2008}. A similar database exists for Transitivity system network as described in \citet{Fawcett2009} called Process Type Database \citep{Neale2002}. 
 
-Such databases describe domain independent \textit{semantic frames} \citep{Fillmore1985} (know in SFL as \textit{configurations} or \textit{figures}) which describe semantic actions and relationships, along with \textit{semantic roles} ascribed to their \textit{participants}. The semantic frames generally are governed by verbs and more specifically each verb meaning has a dedicated semantic frame. For instance the perception frame contains \textit{Perceiver} and \textit{Phenomenon} roles as can be seen in Example \ref{ex:glance1}. 
+Such databases provides with domain independent \textit{semantic frames} \citep{Fillmore1985}, know in SFL as \textit{configurations} or \textit{figures}, which describe semantic actions and relationships, along with \textit{semantic roles} ascribed to their \textit{participants}. The semantic frames generally are governed by verbs and more specifically each verb meaning has a dedicated semantic frame. For instance the perception frame contains \textit{Perceiver} and \textit{Phenomenon} roles as can be seen in Example \ref{ex:glance1}.
 
 \begin{exe}
     \ex\label{ex:glance1} [_{Agent-Perceiver} Jaqueline] glanced [_{Phenomenon} at her new watch].
@@ -330,8 +425,19 @@ Such databases describe domain independent \textit{semantic frames} \citep{Fillm
 
 The tendency is to identify frames that are generic enough to cover classes of verb meanings (for example Action, Cognition, Perception, Possession frames) and the same applies to participant roles where the tendency is to reuse roles across semantic frames (for example agent role from Action frame is reused in Perception or Possession frames, or Phenomenon is reused in Cognition and Perception frames).
 
+\subsection{The issue of covert elements}
+
+Besides the challenge of identifying configurations and their participants in text, the problem with semantic features goes one step further. Sometimes the semantic roles correspond to constituents that are displaced or not realised in the text called \textit{covert} or \textit{null elements}. This increases the challenge of identifying and assigning them correctly. Next I show how (non-)realisation in text of the semantic roles impacts possibility to interpret that text. Then I will show how frames may still be valid even when an element is realised or displaced which will bring us to the core of the problem. This is followed by a brief description of the approach taken in the current work to solve it.  
+
+For a frame to be considered correctly realised in text it needs to fill at least the mandatory roles. Let's imagine that a part of the text in Example \ref{ex:glance1} is erased. If we take the Agent-Perceiver away as in Example \ref{ex:glance11} the texts is perceived as incomplete because it is not possible to interpret its meaning. It leaves us with the questions \textit{Who} glanced at her new watch? Similarly, if we delete the Phenomenon like in Example \ref{ex:glance12}, we are unable to resolve the meaning of the text without first answering the question \textit{what} or \textit{who} did Jaqueline glance at?
+
+\begin{exe}
+    \ex\label{ex:glance11} glanced at her new watch
+    \ex\label{ex:glance12} Jaqueline glanced
+\end{exe}
+
 %example of covert constituents
-Besides the challenge of pinning them down in text, the problem with semantic features goes one step further. Sometimes the semantic roles correspond to constituents that are displaced or not even realised in the text. This increases the challenge of identifying and assigning them correctly. Consider Example \ref{ex:glance2}. It is a sentence that has three non-auxiliary verbs: seem, worry and arrive. According to Cardiff grammar, which will be introduced in Chapter \ref{ch:sfg}, this corresponds to three clauses \textit{embedded} into each other as represented in Table \ref{tab:glance-analsys}.
+Consider now Example \ref{ex:glance2}. It is a sentence that has three non-auxiliary verbs: seem, worry and arrive. According to the Cardiff grammar, which will be introduced in Chapter \ref{ch:sfg}, this corresponds to three clauses \textit{embedded} into each other. A constituency analysis is provided in in Table \ref{tab:glance-analsys}.
 
 \begin{exe}
     \ex\label{ex:glance2} She seemed to worry about missing the river boat.
@@ -356,22 +462,22 @@ Besides the challenge of pinning them down in text, the problem with semantic fe
     \label{tab:glance-analsys}
 \end{table}
 
-The participant role configurations (or the semantic frames) these verbs bring about are provided in the Table \ref{tab:semantic-role-distro}. For the sake of this example lets say that the first role corresponds to the Subject constituent and the second to the Complement constituent. This way the verb meaning seem_{1} corresponds to an Attributive configuration that distributes Carrier and Attribute roles to the Subject ``She'' and the Complement ``to worry about missing the river boat''. In the case of worry about_1 and miss_1 the first roles provided by Cardiff grammar are \textit{compound} (i.e. composed of two simple ones) while the second ones are simple. So, in the example above, the verb meaning worry about_1 distributes the Phenomenon to the Complement ``about missing the river boat'' and the Agent \& Cognizant role to an empty Subject that is said to be \textit{non-realised}, \textit{covert} or \textit{null element}. A similar situation is for miss_1 that assigns an Affected \& Carrier role to the empty Subject and the Possessed role to the Complement ``the river boat''. 
+The participant role configurations (or the semantic frames) these verbs bring about are provided in the Table \ref{tab:semantic-role-distro}. For the sake of this example the first role corresponds to the Subject constituent and the second to the Complement constituent. This way the verb meaning \textit{seem_{1}} corresponds to an Attributive configuration that distributes Carrier and Attribute roles to the Subject ``She'' and the Complement ``to worry about missing the river boat''. In the case of \textit{worry about_1} and \textit{miss_1} the first roles provided by Cardiff grammar are \textit{compound} (i.e. composed of two simple ones) while the second ones are simple. So, in the example above, the verb meaning \textit{worry about_1} distributes the Phenomenon to the Complement ``about missing the river boat'' and the Agent \& Cognizant role to an empty Subject that is said to be \textit{non-realised}, \textit{covert} or \textit{null element}. A similar situation is for \textit{miss_1} that assigns an Affected \& Carrier role to the empty Subject and the Possessed role to the Complement ``the river boat''. 
 
 \begin{table}[!ht]
     \centering
-    \begin{tabular}{|l|l|l|}
+    \begin{tabulary}{0.95\textwidth}{|c|C|C|}
         \hline
-        \textit{verb meaning} & \textit{semantic configuration} & \textit{participant role mandatory distribution}  \\ \hline
-        seem_{1}           & Attributive                     & Carrier + Attribute                     \\ \hline
-        worry about_{1}   & Two Role Cognition              & Agent \& Cognizant + Phenomenon         \\ \hline
-        miss_{1}           & Possessive                      & Affected \& Carrier + Possessed (thing) \\ \hline
-    \end{tabular}
+        \textbf{Verb meaning} & \textbf{Semantic configuration} & \textbf{Participant role distribution}  \\ \hline
+        \textit{seem_{1}}           & Attributive                     & Carrier + Attribute                     \\ \hline
+        \textit{worry about_{1}}   & Two Role Cognition              & Agent \& Cognizant + Phenomenon         \\ \hline
+        \textit{miss_{1}}           & Possessive                      & Affected \& Carrier + Possessed (thing) \\ \hline
+    \end{tabulary}
     \caption{Semantic role configurations according to \citet{Neale2002,Fawcett2009}}
     \label{tab:semantic-role-distro}
 \end{table}
 
-Those unrealised Subjects in the embedded clauses are recoverable from the immediate syntactic context (no need for discourse) and correspond, in this case, to the Subject in the higher clause. This is easy to see in Examples \ref{ex:glance3} and \ref{ex:glance4} therefore we can just mark the places of the null Subjects in the embedded clause in order to be able to assign the semantic labels (otherwise the frame cannot be assigned to the constituents). Notice that I have provided also an index \textit{i} to highlight that the null elements correspond to the higher clause Subject ``She''. 
+Those unrealised Subjects in the embedded clauses are recoverable from the immediate syntactic context (no need for discourse) and correspond, in this case, to the Subject in the higher clause. This is easy to see in Examples \ref{ex:glance3} and \ref{ex:glance4} therefore we can just mark the places of the null Subjects in the embedded clause in order to be able to assign the semantic labels (otherwise the frame cannot be assigned to the constituents). Notice also an index \textit{i} to highlight that the null elements correspond to the higher clause Subject ``She''. 
 
 \begin{exe}
     \ex\label{ex:glance3} \textit{She} worried about missing the river boat.
@@ -389,7 +495,7 @@ Now that the places of covert constituents are explicitly marked and the recover
             \multicolumn{1}{|c|}{\textit{She_i}}   & \multicolumn{1}{c|}{\textit{seemed}} & \multicolumn{1}{c|}{$\emptyset_i$}   & \multicolumn{1}{c|}{\textit{to}} & \multicolumn{1}{c|}{\textit{worry}} & \textit{about} & $\emptyset_i$ & \textit{missing} & \textit{the} & \textit{river} & \textit{boat.} \\ \hline
             \multicolumn{11}{|c|}{Attributive configuration}                                                                                                                                                                                                                         \\ \hline
             \multicolumn{1}{|c|}{Agent} & \multicolumn{1}{c|}{}       & \multicolumn{9}{c|}{Attribute}                                                                                                                                                                               \\ \cline{1-1} \cline{3-11} 
-            & \multicolumn{1}{c|}{}       & \multicolumn{9}{c|}{Two Role Cognition configuration}                                                                                                                                                        \\ \cline{3-11} 
+            & \multicolumn{1}{c|}{}       & \multicolumn{9}{c|}{Two role cognition configuration}                                                                                                                                                        \\ \cline{3-11} 
             & \multicolumn{1}{c|}{}       & \multicolumn{1}{c|}{Agent \& Cognizant} &                         & \multicolumn{1}{c|}{}               & \multicolumn{6}{c|}{Phenomenon}                                                                       \\ \cline{3-3} \cline{6-11} 
             &                             &                                      &                         & \multicolumn{1}{c|}{}               & \multicolumn{6}{c|}{Possessive configuration}                                                         \\ \cline{6-11} 
             &                             &                                      &                         &                                     &                & Affected \& Carrier &                  & \multicolumn{3}{c|}{Possessed}                 \\ \cline{7-7} \cline{9-11} 
@@ -399,42 +505,45 @@ Now that the places of covert constituents are explicitly marked and the recover
     \label{tab:glance-analsys-semantic}
 \end{table}
 
-In language there are many cases where constituents are empty but recoverable from the immediate vicinity relying in most cases on syntactic means and in a few cases additional lexical-semantic resources are required. The mechanisms of detecting and resolving the empty constituents are captured in the Government and Binding Theory (GBT) developed in \citep{Chomsky81, Chomsky1982, Chomsky1986} and based on the phrase structure grammar. GBT explains how some constituents can \textit{move} from one place to another, where are the places of \textit{non-overt constituents} and what constituents do they refer to i.e. what are their \textit{antecedents}. Such accounts of empty elements are missing from any SFG grammar yet they are useful in determining the correct distribution of participant roles to the clause constituents. Translating the mechanisms from GBT into SFG could contribute to decreasing the complexity of the parsing problem mentioned above.
+In language there are many cases where constituents are empty but recoverable from the immediate vicinity relying in most cases on syntactic means and in a few cases additional lexical-semantic resources are required. In SFL, Fawcett describes these elements in the context of Cardiff grammar \citep[115,135,194]{Fawcett2008} but provides no means to recover them. Some mechanisms of detecting and resolving the empty constituents are captured in the Government and Binding Theory (GBT) developed in \citep{Chomsky81, Chomsky1982, Chomsky1986} and based on phrase structure grammar. GBT explains how some constituents can \textit{move} from one place to another, where are the places of \textit{non-overt constituents} and what constituents do they refer to i.e. what are their \textit{antecedents}. Such accounts of empty elements are missing from any SFG grammar yet they are useful in determining the correct distribution of participant roles to the clause constituents. Translating the mechanisms from GBT into SFG could contribute to decreasing the complexity of the parsing problem mentioned above.
 
 % concluding problem
 
-To conclude, I have drown attention to a few issues related to parsing with SFG. First, the parsing task cannot be treated as a reversible generation task because the methods that have been shown to work for generation are not usable for parsing as such due to a high computational complexity. Second, the parsing task, regardless of the grammar, should first and foremost account for the sentence structure on the syntagmatic axis and only afterwards for the (semantic) features selected on the paradigmatic axis. Such syntagmatic account in SFL is insufficient for the parsing task. Third, syntagmatic account alone does not provide enough clues for assignment of semantic features and require a lexical-semantic account within the grammar or as external semantic databases. Moreover it can be aided by identification of places where covert constituents are said to exist. Identifying such the null elements is not the only method of assigning semantic features and some approaches do without them but having access to such information is considered valuable in the present thesis.
+\subsection{The problem summary}
 
-Considering the problems above how could the vast search space of grammars such as Nigel be restricted to a reasonable size and how can be compensated the lack of proper syntagmatic description in SFGs? The first part of the question has already been addressed in \citet{ODonnell1993} but the lack for an answer to the second part and probably for other hidden reasons the results are not usable in real world applications. There have been, in fact, multiple attempts such as \citet{Kasper1988}, \citet{Kay1985}, \citet{ODonoghue1991a}, \citet{ODonnell1993} and \citet{Day2007}, to mention just a few, none of which managed to parse broad coverage English with full SFG without aid of some sort. Each had to accept limitations either in grammar or language size and eventually used simpler syntactic trees as a starting point of the parsing process. A detailed account of the current state of the art in parsing with SFGs is provided in Chapter \ref{ch:sota}. 
+This section has shown some of the issues related to parsing with SFG. In summary, first, the parsing task cannot be treated as a reversible generation task because the methods that have been shown to work for generation are not usable for parsing as such due to a high computational complexity. Second, the parsing task, regardless of the grammar, should first and foremost account for the sentence structure on the syntagmatic axis and only afterwards for the (semantic) features selected on the paradigmatic axis. Such syntagmatic account in SFL is insufficient for the parsing task. Third, syntagmatic account alone does not provide enough clues for assignment of semantic features and require a lexical-semantic account within the grammar or as external semantic databases. Moreover it can be aided by identification of places where covert constituents are said to exist. Identifying such the null elements is not the only method of assigning semantic features and some approaches do without them but having access to such information is considered valuable in the present thesis.
 
-Some linguistic frameworks, other than SFL, have been shown to work well in computational contexts solving problems similar to the ones identified above. Instead of attempting to find novel solutions within the current framework an alternative approach, I argue in the next section, would be to establish cross-theoretical and inter-grammatical links to enable integration of the ready solutions.
+% some sugestions 
+Regarding the problem of computational complexity explained above, how could the large search space of grammars such as Nigel be restricted to a reasonable size and how can be compensated the lack of proper syntagmatic description in SFGs? The first part of the question has already been addressed in \citet{ODonnell1993} in at least what would a possible solution look like. The lack for an answer to the second part and probably for other hidden reasons the results of parsing with SFGs so far are not usable in real world applications. This is drawn from the past attempts such as \citet{Kasper1988}, \citet{Kay1985}, \citet{ODonoghue1991a}, \citet{ODonnell1993} and \citet{Day2007}, to mention just a few, none of which managed to parse broad coverage English with full SFG without aid of some sort. Each had to accept limitations either in grammar or language size and eventually used simpler syntactic trees as a starting point of the parsing process. A detailed account of the current state of the art in parsing with SFGs is provided in Chapter \ref{ch:sota}. 
+
+Therefore to address parts of the above problems I attempt a different approach. %which is \textit{reuse} of positive results. 
+Some linguistic frameworks, other than SFL, have been shown to work well in computational contexts solving problems similar to the ones identified above. For the purposes of this thesis I selected Dependency Grammar (DG) and GBT. And instead of attempting to find novel solutions within the SFL framework, an alternative approach, I argue in the next section, would be to establish a cross-theoretical and inter-grammatical links and to enable integration of the ready solutions. 
 
 \section{Theoretical motivation - on theoretical compatibility and reuse}
 \label{sec:reuse}
 %on theoretical compatibility and reuse
 
+This thesis employs three linguistic frameworks namely the \textit{Systemic Functional Linguistics}, \textit{Dependency Grammar} and \textit{Governance \& Binding Theory}. SFL has already been motivated as target analysis framework in Section \ref{sec:framework} which is in detail introduced in Chapter \ref{ch:sfg}. The other two frameworks are employed because some of the accomplishments in those domains carry answers to above stated problems. The goal is to maximise positive properties and enable reusing the results. 
+
 % reuse motivation, context to parsing 
-In the past decades many significant progresses have been made in natural language parsing framed in one or another linguistic theory each adopting a distinct perspective and set of assumptions about language. The theoretical layout and the available resources influence directly what is implemented into the parser and each implementation approach encounters challenges that may or may not be common to other approaches in the same or other theories. 
+In the past decades much significant progress has been made in natural language parsing framed in one or another linguistic theory each adopting a distinct perspective and set of assumptions about language. The theoretical layout and the available resources influence directly what is implemented into the parser and each implementation approach encounters challenges that may or may not be common to other approaches in the same or other theories. 
 
 Parsers implementing one theoretical framework may face common or different challenges to those implementing other frameworks. The converse can be said of the solutions. When a solution is achieved using one framework it is potentially reusable in other ones. The successes and achievements in any school of thought can be regarded as valuable cross theoretical results to the degree links and correspondences can be established. Therefore reusing components that have been shown to work and yield ``good enough results'' is a strong pragmatic motivation in the present work.
-
-%
-This thesis employs three linguistic frameworks namely the \textit{Systemic Functional Linguistics}, \textit{Dependency Grammar} and \textit{Governance \& Binding Theory}. SFL has already been motivated as target analysis framework in Section \ref{sec:framework} which is in detail introduced in Chapter \ref{ch:sfg}. The other two frameworks are employed because some of the accomplishments in those domains I attempt at reusing in this thesis as motivated below. 
 
 %The compatibility
 %It demonstrates how selected grammatical frameworks namely \textit{Systemic Functional Grammar}, \textit{Dependency Grammar} and \textit{Governance \& Binding Theory} relate to each other and to which degree they are compatible to undergo a conversion process and to show that simple patterns carrying grammatical information can be used to enrich syntactically and semantically the parse structures. And here is a brief motivation for selecting these frameworks.   
 
 %
-In the last years \textit{Dependency Grammar} \citep{Tesniere2015} became quite popular in natural language processing world favoured in many projects and systems. The grammatical lightness and the  modern algorithms implemented into dependency parsers such as Stanford Dependency Parser \citep{Marneffe2006}, MaltParser \citep{Nivre2006}, MSTParser \citep{McDonald2006} and Enju \citep{Miyao2005} are increasingly efficient and highly accurate. Among the variety of dependency parsing algorithms, a special contribution bring the \textit{machine learning} methods such as those described in \citet{mcdonald2005online, mcdonald2006online, carreras2007experiments, zhang2011transition, pei2015effective} to name just a few. 
+In the past decade \textit{Dependency Grammar} \citep{Tesniere2015} has become quite popular in natural language processing world favoured in many projects and systems. The grammatical lightness and the  modern algorithms implemented into dependency parsers such as Stanford Dependency Parser \citep{Marneffe2006}, MaltParser \citep{Nivre2006}, MSTParser \citep{McDonald2006} and Enju \citep{Miyao2005} are increasingly efficient and highly accurate. Among the variety of dependency parsing algorithms, a special contribution bring the \textit{machine learning} methods such as those described in \citet{mcdonald2005online, mcdonald2006online, carreras2007experiments, zhang2011transition, pei2015effective} to name just a few. 
 
 As the dependency parse structures provide information about functional dependencies between words and grants direct access to the predicate-argument relations and can be used off the shelf for real world applications. 
 This information alone makes the dependency grammar a suitable candidate to supplement the syntagmatic account missing in SFGs and provide some functional hooks for reducing complexity in parsing with SFGs. One of the goals in this work is to investigate to which degree the dependency grammar is structurally and functionally compatible with SFGs to undergo a cross theoretic transformation. This hypothesis is investigated at the theoretical level in Chapter \ref{ch:dependecy-grammar} and then indirectly evaluated empirically in Chapter \ref{ch:evaluation} based on Stanford Dependencies parser version 3.5 \citep{Marneffe2008a,Marneffe2008, Marneffe2014}. 
 
-The problem of accounting for the \textit{null elements}, mentioned above, is not addressed neither in SFL nor in Dependency Grammar. It is, however, in detail addressed in the Government and Binding Theory (GBT) \citep{Chomsky81,Haegeman1991} which is one of Chomsky's Transformational Grammars \citep{Chomsky1957}. One other goal in this thesis is to investigate to which degree GBT accounts of null elements can be reused as DG or SFG structures to undergo a cross-theoretic transformation enabling those accounts in DG or SFG contexts. Chapter \ref{ch:gbt} introduces GBT and investigate this hypothesis providing some of the cross-theoretic and inter-grammatical links to Dependency and SFL grammars that as we will see in Chapter \ref{ch:enrichment-stage} benefits the Transitivity analysis.
+The problem of accounting for the \textit{null elements}, mentioned above, is not addressed either in SFL or in Dependency Grammar. It is, however, addressed in detail in the Government and Binding Theory (GBT) \citep{Chomsky81,Haegeman1991} which is one of Chomsky's Transformational Grammars \citep{Chomsky1957}. One other goal in this thesis is to investigate to which degree GBT accounts of null elements can be reused as DG or SFG structures to undergo a cross-theoretic transformation enabling those accounts in DG or SFG contexts. Chapter \ref{ch:gbt} introduces GBT and investigate this hypothesis providing some of the cross-theoretic and inter-grammatical links to Dependency and SFL grammars that as we will see in Chapter \ref{ch:enrichment-stage} benefits the Transitivity analysis.
 
 %Chapter \ref{ch:dependecy-grappamr} and \ref{ch:gbt} besides introducing the Dependency grammar and correspondingly Government and Binding Theory show how these frameworks relate to each other and to which degree they are compatible to undergo a conversion process for the purpose of reuse.
 
-\section{Aims and scope}
+\section{Thesis goals and scope}
 \label{sec:solution}
 %Thesis Goals and Proposed Solution
 
@@ -451,7 +560,7 @@ The structure enrichment phase aims at discovering and assigning systemic featur
 %solution to syntagmatic deficit
 The problem in using SFGs for parsing, as we have seen in Section \ref{sec:problem} above, manifests when the grammar is instantiated computationally with a primary focus on paradigmatic organisation (prevalent in SFL) at the cost of syntagmatics which leads to the first difficulty that needs to be addressed: discovering from a sequence of words what possible groups are combinable into grammatical groups, phrases or clauses. This is a task of bridging a sequence of words as input and the grammatical description of how they can combine to form a (syntactic) constituency tree structure (known in SFL as \textit{syntagmatic organizations} which will be addressed in Section \ref{sec:structure-sydney}). 
 
-This challenge can be addressed by filling the gap of the syntagmatic account within the SFL grammar directly. It involves, first, providing information about which grammatical functions operate at each rank, second, which grammatical functions can be filled by which classes of units and, third, providing relative and absolute description of the element order for each unit class. This information in the grammar can guide the process of building the constituency structure. 
+This challenge will be addressed by filling the gap of the syntagmatic account within the SFL grammar directly. This involves, first, providing information about which grammatical functions operate at each rank, second, which grammatical functions can be filled by which classes of units and, third, providing relative and absolute description of the element order for each unit class. This information in the grammar can guide the process of building the constituency structure. 
 
 Alternatively the problem of structure construction can be outsourced as parsing with other grammars. This is done in the works of Kasper \citet{Kasper1988} and \citet{Honnibal2004a, Honnibal2007} and is knows in SFL literature as \textit{parsing with a syntactic backbone}. In this case, the problem changes into creating a transformation mechanism to obtain the SFL constituency structure rather than build it from scratch. 
 
@@ -487,7 +596,6 @@ The enrichment stage of the parsing process comprises of a series of graph patte
 In this work most of the graph patterns have been manually created. Because this is laborious exercise only a few system networks have been covered in the implementation of the parser. Nonetheless they suffice for deriving some conclusions regarding the parsing approach. The future work may investigate how can graph patterns be generated automatically from the realisation rules of large grammars such as Nigel grammar. 
 
 The two main system networks targeted in this are MOOD and TRANSITIVITY (both briefly described in Chapter \ref{ch:sfg}). The MOOD network is composed of features which can be identified through graph patterns involving only the unit classes and functions provided in the constituency structure (described in Chapter \ref{ch:parsing-algorithm}). The TRANSITIVITY network requires a lexical-semantic database in order to derive graph patterns. This work employs the Process Type Database (PTDB) \citep{Neale2002} to aid enrichment with TRANSITIVITY features described in Chapter \ref{ch:enrichment-stage}.  
-
 
 
 %Moreover if the syntagmatic account is available then they can serve as paradigmatic context (similar to the one available during generation task) for traversing the system network and extend to the full set of systemic features. This sort of description can restrict the search space to applicable network parts and provide to an extent traversal context during analysis task.
@@ -536,9 +644,9 @@ The two main system networks targeted in this are MOOD and TRANSITIVITY (both br
 
 \subsection{Parsimonious Vole architecture}
 \label{sec:architecture}
-The current thesis is accompanied by a software implementation - the Parsimonious Vole parser. It is written in Python programming language and is available as open source distribution\footnote{\url{https://bitbucket.org/lps/parsimonious-vole}} . This section provides an overview to the construction process.
+The current thesis is accompanied by a software implementation called the Parsimonious Vole parser. It is written in Python programming language and is available as open source distribution\footnote{\url{https://bitbucket.org/lps/parsimonious-vole}} . This section provides an overview to the construction process.
 
-The parser follows a pipeline architecture depicted in Figure \ref{fig:pipeline-overview} where, starting from an input text, a rich systemic functional constituency structure is progressively built. Figure \ref{fig:pipeline-overview} provides three types of boxes: the rounded rectangles represent the parsing steps, the green trapezoid boxes represent input and output data while the orange double framed trapezoid boxes represent additional resources involved in the parsing step. The parsing steps linearly flow from one to the next via green trapezoid boxes on the left-hand side, which represent input-output data in between the steps. On the right-hand side are positioned double edged orange trapezoids representing fixed resources needed by some operations. For example, the \textit{constituency graph creation} step takes a normalised dependency graph for input and produces a constituency graph as output.
+The parser follows the pipeline architecture depicted in Figure \ref{fig:pipeline-overview} where, starting from an input text, a rich systemic functional constituency structure is progressively built. Figure \ref{fig:pipeline-overview} provides three types of boxes: the rounded rectangles represent the parsing steps, the green trapezoid boxes represent input and output data while the orange double framed trapezoid boxes represent additional resources involved in the parsing step. The parsing steps linearly flow from one to the next via green trapezoid boxes on the left-hand side, which represent input-output data in between the steps. On the right-hand side are positioned double edged orange trapezoids representing fixed resources needed by some operations. For example, the \textit{constituency graph creation} step takes a normalised dependency graph for input and produces a constituency graph as output.
 
 On the right-hand side a series of green vertical arrows are provided naming phases in parsing process (spanning one ore more process steps) where the first one, \textit{Graph Building} (spanning the first three process steps), accomplish construction of the constituency backbone (corresponding to the syntagmatic account described in Section \ref{sec:syntagmatic-account} above) and the second phase \textit{Graph Enrichment} (spanning the last three process steps) flashes out the backbone with features (described in Section \ref{sec:paradigmatic-account}). 
 
