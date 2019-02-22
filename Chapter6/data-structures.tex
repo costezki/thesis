@@ -1,4 +1,4 @@
-\chapter{On Graphs, Feature Structures and Systemic Networks}
+\chapter{Graphs, Feature Structures and Systemic Networks}
 \label{ch:data-structures}
 %graphs, graph patterns, attribute-value matrices etc.\\ what can they do?
 
@@ -30,10 +30,11 @@ While developing the Parsimonious Vole parser a set of representational requirem
 
 The general approach to construct an SFG parse structure revolves around the graph pattern matching and graph traversal. In the following sections I present the instruments used for building such structures, starting from a generic computer science definition of graphs and moving towards specific graph types covering also the feature structures and conditional sets. 
 
-\section{On sets, feature structures and graphs}
+\section{General definitions}
+%On sets, feature structures and graphs
 \label{sec:graphs}
 
-In the field of computational linguistics trees has been taken as the de facto data representation. In Section \ref{sec:paradigmatic-account} I have mentioned already that I employ graph and not tree structures. 
+In the field of computational linguistics trees has been taken as the de facto data representation. In Section \ref{sec:paradigmatic-account}, I have mentioned already that I employ graph and not tree structures. 
 
 Firstly, the trees are a special kind of graphs. Anything expressed as a tree is as well a tree. Secondly, we gain a higher degree of expressiveness even if at the expense of computational complexity, a point to which we will come back latter in Section \ref{sec:graph-matching}. This expressiveness is needed when dealing with interconnection of various linguistic theories which in practice is done by mapping the nodes of one tree structure onto the nodes of another one. In addition, the structures are not always trees. There are situations when a node has more than one parent or when a node is connected to its siblings which break the tree structure. 
 
@@ -807,7 +808,7 @@ The permissive FS matching has been developed together with the strict FS matchi
 \section{Pattern based operations}
 \label{sec:pattern-based-operations}
 
-The patterns are searched for in a graph always for a purpose. Graph isomorphism is only a precondition for another operation, be it a simple selection (i.e. non-affecting operation) or an affecting operation such as feature structure enrichment (on either nodes or edges), inserting or deleting a node or drawing a new connection between nodes. It seems only natural that the end goal is embedded into the pattern, so that when it is identified, also the desired operation(s) is(are) triggered. I call such graph patterns \textit{operational pattern graphs} (Definition \ref{def:operational-pattern}). Next I explain how to embed the operations into the graph pattern and how they are used in the algorithm. 
+The patterns are searched for in a graph always for a purpose. Graph isomorphism is only a precondition for another operation, be it a simple selection (i.e. non-affecting operation) or an affecting operation such as feature structure enrichment (on either nodes or edges), inserting or deleting a node or drawing a new connection between nodes. It seems only natural that the end goal is embedded into the pattern, so that when it is identified, also the desired operation(s) is(are) triggered. I call such graph patterns \textit{operational pattern graphs} (Definition \ref{def:operational-pattern}). Next I explain how to embed  operations into the graph pattern and how they are used in the algorithm. 
 
 \begin{definition}[Operational graph pattern]\label{def:operational-pattern}
     An \textit{operative graph pattern} is a pattern graph that has least on one node \textit{operation} and \textit{arg} features.

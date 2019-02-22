@@ -11,7 +11,10 @@ import itertools
 from IPython.display import HTML, Markdown, display
 import re
 
-evaluation_repo="/home/lps/Dropbox/Publications/PhD Thesis 2015/thesis/evaluation-results/"
+# evaluation_repo="/home/lps/Dropbox/Publications/PhD Thesis 2015/thesis/evaluation-results/"
+# evaluation_repo=os.path.dirname(os.path.abspath(__file__))
+evaluation_repo=os.getcwd()+"/"
+
 OE1_const_file_list = glob.glob(evaluation_repo+"OE1/*/*.txt_const.csv")
 OE1_trans_file_list = glob.glob(evaluation_repo+"OE1/*/*.txt_trans.csv")
 
@@ -255,13 +258,19 @@ def make_stats(matches, manual_nm, parse_nm, filters=None,drops=None):
     add_relative_values(stats)
     
     dsp(stats)
-
+    #     Ansolute stats
     d = stats[["Match","Manual","Parse"]]
     #d = d[stats.index.isin(filters)]
     d.plot.bar()
 
     plt.xlabel("Features")
     plt.ylabel("Occurences")
+    #     Relative stats
+    d = stats[["f1","precission","recall"]]
+    d.plot.bar()
+
+    plt.xlabel("Features")
+    plt.ylabel("Score")
     
     return stats
     

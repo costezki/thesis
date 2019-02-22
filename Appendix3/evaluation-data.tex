@@ -1,0 +1,208 @@
+\chapter{Empirical evaluation data}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%  
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{degree}          & insignificant & tiny & little & moderate & significant & high   \\ \hline
+        \textbf{distance intervals} & 0-3           & 3-5  & 5-10   & 10-20    & 20-50       & 50-250 \\ \hline
+    \end{tabular}
+    }
+    \caption{The progressive binning scale considering the dataset properties}
+    \label{tab:progressive-bins}
+\end{table}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%  
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \multirow{2}{*}{\textbf{element}} & \multicolumn{6}{c|}{\textbf{\% of segments per degree of deviation}} \\ \cline{2-7} 
+        & \textbf{\begin{tabular}[c]{@{}c@{}}insignificant\\ (0-3)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}tiny\\ (3-5)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}little\\ (5-10)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}moderate\\ (10-20)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}significant\\ (20-50)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}high\\ (50-250)\end{tabular}} \\ \hline
+        Main verb & 29.38 & 0.95 & 0.30 & 0.10 & 0.00 & 0.05 \\ \hline
+        Subject    & 22.70 & 0.10 & 0.25 & 0.30 & 0.05 & 0.00 \\ \hline
+        Adjunct    & 13.86 & 0.45 & 0.60 & 0.15 & 0.85 & 0.20 \\ \hline
+        Complement & 12.10 & 0.75 & 1.46 & 2.26 & 1.96 & 1.86 \\ \hline
+        Finite     & 9.19  & 0.00 & 0.00 & 0.00 & 0.05 & 0.05 \\ \hline
+    \end{tabular}
+    }   
+    \caption{Percentage of segments deviated to a given degree for major syntactic elements}
+    \label{tab:deviation-per-feature-and-degree-constit}
+\end{table}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%  
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        \multirow{2}{*}{\textbf{feature}} & \multicolumn{6}{c|}{\textbf{\% of segments per degree of deviation }}                                                                                                                                                 \\ \cline{2-7} 
+        & \textbf{\begin{tabular}[c]{@{}c@{}}insignificant\\ (0-3)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}tiny\\ (3-5)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}little\\ (5-10)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}moderate\\ (10-20)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}significant\\ (20-50)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}high\\ (50-250)\end{tabular}} \\ \hline
+        participant-role & 36.78 & 2.21 & 3.48 & 2.80 & 3.04 & 1.67 \\ \hline
+        main             & 20.75 & 3.48 & 1.23 & 0.39 & 0.00 & 0.00 \\ \hline
+        configuration    & 7.75  & 3.73 & 2.80 & 3.04 & 4.56 & 2.31 \\ \hline
+    \end{tabular}
+    }
+    \caption{Percentage of segments deviated to a given degree for major semantic elements}
+    \label{tab:deviation-per-feature-and-degree-trans}
+\end{table}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Unit type} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            clause              & 612.00 & 64.00  & 78.00  & 0.89 & 0.91 & 0.90 & 37.00 & 9.47  & 11.30 \\ \hline
+            nominal group       & 717.00 & 108.00 & 67.00  & 0.91 & 0.87 & 0.89 & 43.35 & 13.09 & 8.55  \\ \hline
+            prepositional group & 119.00 & 39.00  & 39.00  & 0.75 & 0.75 & 0.75 & 7.19  & 24.68 & 24.68 \\ \hline
+            adverbial group     & 161.00 & 79.00  & 103.00 & 0.61 & 0.67 & 0.64 & 9.73  & 32.92 & 39.02 \\ \hline
+            adjectival group    & 45.00  & 36.00  & 38.00  & 0.54 & 0.56 & 0.55 & 2.72  & 44.44 & 45.78 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for the main constituency unit types}
+    \label{tab:constit-unit-types}
+\end{table}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Element} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            Main verb & 613 & 60  & 79  & 0.89 & 0.91 & 0.90 & 30.79 & 8.92  & 11.42 \\ \hline
+            Subject    & 466 & 22  & 86  & 0.84 & 0.95 & 0.90 & 23.41 & 4.51  & 15.58 \\ \hline
+            Complement & 406 & 43  & 350 & 0.54 & 0.90 & 0.67 & 20.39 & 9.58  & 46.30 \\ \hline
+            Adjunct    & 321 & 159 & 224 & 0.59 & 0.67 & 0.63 & 16.12 & 33.12 & 41.10 \\ \hline
+            Finite     & 185 & 3   & 392 & 0.32 & 0.98 & 0.48 & 9.29  & 1.60  & 67.94 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for the clause main elements}
+    \label{tab:constit-unit-elements}
+\end{table}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+            POLARITY-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
+            positive & 485 & 125 & 55 & 0.90 & 0.80 & 0.84 & 89.48 & 20.49 & 10.19 \\ \hline
+            negative & 57  & 10  & 70 & 0.45 & 0.85 & 0.59 & 10.52 & 14.93 & 55.12 \\ \hline
+            VOICE-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
+            active  & 553 & 102 & 68 & 0.89 & 0.84 & 0.87 & 98.05 & 15.57 & 10.95 \\ \hline
+            passive & 11  & 11  & 28 & 0.28 & 0.50 & 0.36 & 1.95  & 50.00 & 71.79 \\ \hline
+            FINITNESS &  &  &  &  &  &  &  &  &  \\ \hline
+            non-finite   & 99  & 19 & 38  & 0.72 & 0.84 & 0.78 & 15.84 & 16.10 & 27.74 \\ \hline
+            finite       & 526 & 33 & 554 & 0.49 & 0.94 & 0.64 & 84.16 & 5.90  & 51.30 \\ \hline
+            NON-FINITE-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
+            perfective   & 71  & 12 & 16  & 0.82 & 0.86 & 0.84 & 73.20 & 14.46 & 18.39 \\ \hline
+            imperfective & 26  & 9  & 24  & 0.52 & 0.74 & 0.61 & 26.80 & 25.71 & 48.00 \\ \hline
+            DEICTICITY &  &  &  &  &  &  &  &  &  \\ \hline            
+            temporal & 446 & 74 & 55 & 0.89 & 0.86 & 0.87 & 97.38 & 14.23 & 10.98 \\ \hline
+            modal    & 12  & 33 & 6  & 0.67 & 0.27 & 0.38 & 2.62  & 73.33 & 33.33 \\ \hline
+            MOOD-ASSESSMENT-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline            
+            temporality & 35 & 17 & 27 & 0.56 & 0.67 & 0.61 & 56.45 & 32.69 & 43.55 \\ \hline
+            modality    & 15 & 32 & 8  & 0.65 & 0.32 & 0.43 & 24.19 & 68.09 & 34.78 \\ \hline
+            intensity   & 12 & 14 & 43 & 0.22 & 0.46 & 0.30 & 19.35 & 53.85 & 78.18 \\ \hline
+            MOOD-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline                        
+            indicative    & 455 & 216 & 37 & 0.92 & 0.68 & 0.78 & 99.13 & 32.19 & 7.52  \\ \hline
+            imperative    & 4   & 1   & 31 & 0.11 & 0.80 & 0.20 & 0.87  & 20.00 & 88.57 \\ \hline
+            INDICATIVE-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline                        
+            declarative   & 355 & 260 & 27 & 0.93 & 0.58 & 0.71 & 88.31 & 42.28 & 7.07  \\ \hline
+            interrogative & 47  & 7   & 63 & 0.43 & 0.87 & 0.57 & 11.69 & 12.96 & 57.27 \\ \hline
+            INTERROGATIVE-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline   
+            wh            & 40  & 6   & 57 & 0.41 & 0.87 & 0.56 & 88.89 & 13.04 & 58.76 \\ \hline
+            yes-no        & 5   & 3   & 8  & 0.38 & 0.62 & 0.48 & 11.11 & 37.50 & 61.54 \\ \hline                     
+            WH-SELECTION  &  &  &  &  &  &  &  &  &  \\ \hline                        
+            wh-subject    & 9   & 3   & 7  & 0.56 & 0.75 & 0.64 & 32.14 & 25.00 & 43.75 \\ \hline
+            wh-adjunct    & 11  & 15  & 3  & 0.79 & 0.42 & 0.55 & 39.29 & 57.69 & 21.43 \\ \hline
+            wh-complement & 8   & 0   & 62 & 0.11 & 1.00 & 0.21 & 28.57 & 0.00  & 88.57 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics available for the Mood systems}
+    \label{tab:features-mood}
+\end{table}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%    
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Element} & \textbf{Match} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse\\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse\\ nm\end{tabular}} \\ \hline
+            Participant role & 2780 & 233 & 1002 & 0.74 & 0.92 & 0.82 & 49.54 & 7.73 & 26.49 \\ \hline
+            Configuration & 1376 & 127 & 493 & 0.74 & 0.92 & 0.82 & 24.52 & 8.45 & 26.38 \\ \hline
+            Main Verb & 1456 & 160 & 605 & 0.71 & 0.90 & 0.79 & 25.94 & 9.90 & 29.35 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics for the main semantic elements}
+    \label{tab:configuration-elements}
+\end{table}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%  
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{Feature} & \textbf{Match} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse\\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse\\ nm\end{tabular}} \\ \hline
+        PROCESS-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
+        mental & 277 & 231 & 87 & 0.76 & 0.55 & 0.64 & 33.62 & 45.47 & 23.90 \\ \hline
+        relational & 338 & 297 & 174 & 0.66 & 0.53 & 0.59 & 41.02 & 46.77 & 33.98 \\ \hline
+        influential & 38 & 51 & 62 & 0.38 & 0.43 & 0.40 & 4.61 & 57.30 & 62.00 \\ \hline
+        action & 170 & 231 & 352 & 0.33 & 0.42 & 0.37 & 20.63 & 57.61 & 67.43 \\ \hline
+        event-relating & 1 & 28 & 0 & 1.00 & 0.03 & 0.07 & 0.12 & 96.55 & 0.00 \\ \hline
+        RELATIONAL-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
+        attributive & 169 & 239 & 107 & 0.61 & 0.41 & 0.49 & 70.42 & 58.58 & 38.77 \\ \hline
+        directional & 30 & 13 & 127 & 0.19 & 0.70 & 0.30 & 12.50 & 30.23 & 80.89 \\ \hline
+        locational & 39 & 20 & 207 & 0.16 & 0.66 & 0.26 & 16.25 & 33.90 & 84.15 \\ \hline
+        matching & 2 & 0 & 69 & 0.03 & 1.00 & 0.05 & 0.83 & 0.00 & 97.18 \\ \hline
+        MENTAL-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
+        three-role-cognition & 45 & 51 & 34 & 0.57 & 0.47 & 0.51 & 29.41 & 53.12 & 43.04 \\ \hline
+        two-role-cognition & 95 & 102 & 86 & 0.52 & 0.48 & 0.50 & 62.09 & 51.78 & 47.51 \\ \hline
+        two-role-perception & 13 & 12 & 102 & 0.11 & 0.52 & 0.19 & 8.50 & 48.00 & 88.70 \\ \hline
+        three-role-perception & 0 & 2 & 6 & 0.00 & 0.00 &  & 0.00 & 100.00 & 100.00 \\ \hline
+        desiderative & 0 & 0 & 81 & 0.00 &  &  & 0.00 &  & 100.00 \\ \hline
+        emotive & 0 & 0 & 87.00 & 0.00 &  &  & 0.00 &  & 100.00 \\ \hline
+%        ACTION-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
+%        one-role-action & 0 & 0 & 178 & 0.00 &  &  &  &  & 100.00 \\ \hline
+%        three-role-action & 0 & 0 & 1 & 0.00 &  &  &  &  & 100.00 \\ \hline
+%        two-role-action & 0 & 0 & 485 & 0.00 &  &  &  &  & 100.00 \\ \hline
+    \end{tabular}
+    }
+    \caption{The evaluation statistics available for the PROCESS-TYPE system and few of its subsystems from the Transitivity network}
+    \label{tab:features-transitivity}
+\end{table}
+
+\begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%  
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            \textbf{Feature} & \textbf{Match} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse\\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse\\ nm\end{tabular}} \\ \hline
+            emoter & 91 & 70 & 57 & 0.61 & 0.57 & 0.59 & 5.48 & 43.48 & 38.51 \\ \hline
+            phenomenon & 359 & 223 & 294 & 0.55 & 0.62 & 0.58 & 21.60 & 38.32 & 45.02 \\ \hline
+            carrier & 267 & 263 & 244 & 0.52 & 0.50 & 0.51 & 16.06 & 49.62 & 47.75 \\ \hline
+            possessive & 75 & 48 & 99 & 0.43 & 0.61 & 0.51 & 4.51 & 39.02 & 56.90 \\ \hline
+            cognizant & 82 & 84 & 104 & 0.44 & 0.49 & 0.47 & 4.93 & 50.60 & 55.91 \\ \hline
+            agent & 267 & 210 & 428 & 0.38 & 0.56 & 0.46 & 16.06 & 44.03 & 61.58 \\ \hline
+            possessed & 71 & 24 & 155 & 0.31 & 0.75 & 0.44 & 4.27 & 25.26 & 68.58 \\ \hline
+            attribute & 162 & 241 & 170 & 0.49 & 0.40 & 0.44 & 9.75 & 59.80 & 51.20 \\ \hline
+            destination & 18 & 10 & 121 & 0.13 & 0.64 & 0.22 & 1.08 & 35.71 & 87.05 \\ \hline
+            affected & 93 & 70 & 663 & 0.12 & 0.57 & 0.20 & 5.60 & 42.94 & 87.70 \\ \hline
+            location & 17 & 40 & 226 & 0.07 & 0.30 & 0.11 & 1.02 & 70.18 & 93.00 \\ \hline
+            source & 1 & 6 & 13 & 0.07 & 0.14 & 0.10 & 0.06 & 85.71 & 92.86 \\ \hline
+            created-phenomenon & 29 & 12 & 647 & 0.04 & 0.71 & 0.08 & 1.74 & 29.27 & 95.71 \\ \hline
+            path & 1 & 4 & 19 & 0.05 & 0.20 & 0.08 & 0.06 & 80.00 & 95.00 \\ \hline
+            range & 11 & 19 & 240 & 0.04 & 0.37 & 0.08 & 0.66 & 63.33 & 95.62 \\ \hline
+            affected-carrier & 33 & 28 & 899 & 0.04 & 0.54 & 0.07 & 1.99 & 45.90 & 96.46 \\ \hline
+            affected-possessed & 20 & 6 & 575 & 0.03 & 0.77 & 0.06 & 1.20 & 23.08 & 96.64 \\ \hline
+            affected-cognizant & 22 & 34 & 624 & 0.03 & 0.39 & 0.06 & 1.32 & 60.71 & 96.59 \\ \hline
+            manner & 1 & 7 & 25 & 0.04 & 0.12 & 0.06 & 0.06 & 87.50 & 96.15 \\ \hline
+            perceiver & 10 & 8 & 344 & 0.03 & 0.56 & 0.05 & 0.60 & 44.44 & 97.18 \\ \hline
+            agent-carrier & 17 & 12 & 745 & 0.02 & 0.59 & 0.04 & 1.02 & 41.38 & 97.77 \\ \hline
+            created & 3 & 15 & 228 & 0.01 & 0.17 & 0.02 & 0.18 & 83.33 & 98.70 \\ \hline
+            matchee & 1 & 2 & 91 & 0.01 & 0.33 & 0.02 & 0.06 & 66.67 & 98.91 \\ \hline
+            agent-perceiver & 6 & 1 & 657 & 0.01 & 0.86 & 0.02 & 0.36 & 14.29 & 99.10 \\ \hline
+            agent-cognizant & 2 & 3 & 633 & 0.00 & 0.40 & 0.01 & 0.12 & 60.00 & 99.69 \\ \hline
+            affected-perceiver & 1 & 0 & 544 & 0.00 & 1.00 & 0.00 & 0.06 & 0.00 & 99.82 \\ \hline
+            affected-destination & 1 & 0 & 593 & 0.00 & 1.00 & 0.00 & 0.06 & 0.00 & 99.83 \\ \hline
+            affected-emoter & 1 & 0 & 631 & 0.00 & 1.00 & 0.00 & 0.06 & 0.00 & 99.84 \\ \hline
+            affected-path & 0 & 0 & 494 & 0.00 &  &  & 0.00 &  & 100.00 \\ \hline
+            affected-source & 0 & 0 & 490 & 0.00 &  &  & 0.00 &  & 100.00 \\ \hline
+        \end{tabular}
+    }
+    \caption{The evaluation statistics available for the PARTICIPANT-ROLE-TYPE system from the Transitivity network}
+    \label{tab:features-participant-role}
+\end{table}

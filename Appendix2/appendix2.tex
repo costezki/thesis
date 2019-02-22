@@ -19,10 +19,15 @@ The syntax for decoding patterns is as follows:
 	\clearpage% Flush earlier floats (otherwise order might not be correct)
 	\begin{landscape}% Landscape page
 		\centering % Center table
-		\begin{longtable}{|l|l|p{3cm}|p{5cm}|p{5cm}|}
+		\begin{longtable}{|l|l|l|l|l|}%{|l|l|p{3cm}|p{5cm}|p{5cm}|}
 			\hline
+            
 			{\bf Type}  & {\bf Category}         & {\bf Meaning}                        & {\bf Paratactic mrkrs}                                                                 & {\bf Paratactic template}                                                               \\ \hline
-			Elaboration & Exposition             & in other words, I.e                  & or, or rather, in other words, that is to say, I mean, i.e.,                           & @1 (,) (mrkr) @2 // @1 ;  @2 // @1 , @2 // @1 - @2 //                                   \\ \hline
+			\endfirsthead
+            \endhead
+            \endlastfoot
+            
+            Elaboration & Exposition             & in other words, I.e                  & or, or rather, in other words, that is to say, I mean, i.e.,                           & @1 (,) (mrkr) @2 // @1 ;  @2 // @1 , @2 // @1 - @2 //                                   \\ \hline
 			Elaboration & Exemplification        & for example, e.g.                    & for example, for instance, in particular, e.g.                                         & @1 (,) (mrkr) @2 // @1 ;  @2 // @1 , @2 // @1 - @2 //                                   \\ \hline
 			Elaboration & Clarification          & to be precise, viz.                  & in fact, actually, indeed, at least, i.e., viz.,                                       & @1 (,) (mrkr) @2 // @1 ;  @2 // @1 , @2 // @1 - @2 //                                   \\ \hline
 			Extension   & additive:positive      & X and Y                              & and, but also, too, in addition, also, moreover, on the other hand, and that           & @1 mrkr @2 // "not only" @1 "but also" @2 // "both" @1 "and" @2 //                      \\ \hline
