@@ -2,12 +2,13 @@
 %\label{ch:semantic-parsing}
 \label{ch:enrichment-stage}
 
-The previous chapter describes how to create the systemic functional constituency structure which is the syntagmatic organization aimed at in this work. This chapter presents the mechanisms by which the paradigmatic account is provided through selection of systemic features at the level of each constituent. I present how constituency graph is enriched with features from two main system networks MOOD, introduced in Section \ref{sec:mood} and TRANSITIVITY, introduced in Section \ref{sec:transitivity}.
+The previous chapter describes how to create the systemic functional constituency structure which is the syntagmatic organisation aimed at in this work. This chapter presents the mechanisms by which the paradigmatic account is provided through selection of systemic features at the level of each constituent. I present how constituency graph is enriched with features from two main system networks MOOD, introduced in Section \ref{sec:mood} and TRANSITIVITY, introduced in Section \ref{sec:transitivity}.
 
 In the parsing process pipeline depicted in Figure \ref{fig:pipeline-overview} there is an phase called \textit{increasingly semantic graph enrichment}. The present chapter covers this phase entirely starting from Mood enrichment, to Null Element creation and finally Transitivity enrichment.
 
 The main method of enrichment is execution of update graph patterns (presented in Section \ref{sec:pattern-based-operations}) on the constituency graph. The MOOD graph patterns have been manually designed across various levels of delicacy. The patterns usually cover from one to four systemic selection from sibling or chained systems. Then the graph patterns are employed in the MOOD enrichment process provided  in Section \ref{sec:enrichment-stage}. 
 
+% todo: do smth 
 In SFL, Transitivity analysis roughly corresponds to what is known in mainstream computational linguistics as semantic analysis of text or \textit{semantic role labelling} (SRL), a well established task in the mainstream computational linguistics \citep{Carreras2005, Pradhan2007}. In this task the clause is assigned a semantic frame in which the predicate functions as the process and the participant constituents take frame dependent roles (or functions). The nodes that do not receive any participant role are adjuncts which act as circumstances and currently outside the scope of this thesis.
 
 Sometimes not all constituents are realised in the clause. Usually these constituents play semantic roles in the process configuration realised by the clause. This happens for one of two reasons: the participant is implicit and resolvable from the discourse structure or it is implicit and resolvable by a lookup outside the clause borders within the same sentence. The resolution from the discourse structure is outside the scope of the current work, the second resolution type, however, is implemented as it is based only on the sentence structure. In this work the account for empty constituents is implemented as described in Government and Binding Theory (GBT) \citep{Haegeman1991} introduced in Chapter \ref{ch:gbt}.
@@ -139,7 +140,7 @@ In this stage the CG nodes are assigned system network features from graph patte
 
 The enrichment functions are provided via two rule tables. The first rule table (activation table) offers a pairing between element class and/or element (also called here the trigger) and an ordered set of system names. The second rule table is an association between a system name, an enrichment function (either matching or dictionary lookup) and a parameter that is either a set of graph patterns or a dictionary. Both tables have been manually created following the MOOD system network but also a few simple systems for nominal phrases.The graph patterns and dictionaries have been also manually complied following either traditional grammar sources, mainly \citet{Quirk1985}, or SFL sources, mainly IFG4 \citep{Halliday2013}. 
 
-%Table \ref{tab:systemic-selection-activations} associates a list of triggers to a list of systemic networks.
+
 The systems are provided in Table \ref{tab:systemic-selection-activations},in the right column, as ordered associations to the node class or function, in the left column. The list of systems from the MOOD network is partial because, as we will see next, the set of associated patterns, usually cover several systems at once, therefore the least delicate one serves as a marker for a portion of the system network. 
 %The left column represents activation triggers and the right column represents an ordered list of systems.
 

@@ -504,7 +504,7 @@ The algorithm is thus checking that the POS of the first auxiliary is according 
 \subsection{Mislabelled infinitives}
 %6. correct_imperative_non_infinitives(result):
 %    """ 
-%    if there is a VB pos that does not have an 'aux' dependecy  to preposition 'to'
+%    if there is a VB pos that does not have an 'aux' dependency  to preposition 'to'
 %     then it is rather present simple than infinitive so the verb POs is VBP 
 %    """
 In English base form of the verb often coincides with present simple form (non 3^{rd} person). Therefore the POS tagger sometimes mislabels infinitive (VB) as present simple (VBP) the verb is  and vice versa. 
@@ -868,10 +868,10 @@ The currently implemented process consists of DG traversal and execution of gene
 
 Before presenting the two stages of creation I will first reiterate over the difference in the dependency nature in the constituency and dependency graphs. Then I will also talk about the tight coupling of the two graphs and the rule tables used in traversal. 
 
-%dependecy difference - justification for 1st phase skipping heads
+%dependency difference - justification for 1st phase skipping heads
 \subsection{Dependency nature and implication on head creation}
 \label{sec:dep-implications}
-In Section \ref{sec:dependecy-relations-sfl} is explained the different dependency relation nature in dependency graphs and in systemic functional constituency graphs. The DG uses a \textit{parent-daughter dependency} while in Constituency Graphs there is a \textit{sibling dependency}. This difference implies that, when mapped into CG, a DG node, stands for both a unit and that unit's head. In other words a DG node corresponds to two functions and unit classes at different rank scales. For example the root verb in DG corresponds to the clause node and the lexical item which fills the Main Verb of the clause. 
+In Section \ref{sec:dependency-relations-sfl} is explained the different dependency relation nature in dependency graphs and in systemic functional constituency graphs. The DG uses a \textit{parent-daughter dependency} while in Constituency Graphs there is a \textit{sibling dependency}. This difference implies that, when mapped into CG, a DG node, stands for both a unit and that unit's head. In other words a DG node corresponds to two functions and unit classes at different rank scales. For example the root verb in DG corresponds to the clause node and the lexical item which fills the Main Verb of the clause. 
 
 The two functions at different rank scales is the main reason why the creation algorithm is separated into two phases with a traversal top-down and another bottom up. In current approach, the top-down perspective considers the DG node functioning in the upper rank. The result of the top-down phase is a constituency graph without head (and sometimes few other) elements/nodes.
 

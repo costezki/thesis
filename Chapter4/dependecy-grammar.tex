@@ -1,5 +1,5 @@
 \chapter{Dependency grammar (DG)}
-\label{ch:dependecy-grammar}
+\label{ch:dependency-grammar}
 
 The Stanford dependency analysis of a given text constitutes the input for the algorithm developed in the current work. It provides the foundation to build the syntactic backbone used adopted here. This chapter offers an overview of the grammar and the parser developed at the Stanford university. In the last part of the chapter is discussed the cross theoretical connection between the dependency and systemic functional grammars. 
 
@@ -265,7 +265,7 @@ In addition Tesniere did not make distinctions between the dependency types. As 
 \subsection{Grammatical function} 
 In the modern linguistics the notion of grammatical functions e.g. subject, object, determiner etc. are attached to the notion of syntactic dependency. They are in fact an essential account in the modern dependency-based approaches because they are the only way to distinguish between various roles the dependents play in relation to their governors. The grammatical functions attached to the dependency relations are primitives of the dependency grammars. This is not the case for Chomskian phrase structure constituency where the functions are derived from the structural configurations. Nevertheless in latter constituency models such as \textit{Lexical Functional Grammars} \citep{Brensan2000} and \textit{Head-Driven Phrase Structure} \citep{PollardSag1994} have introduces the grammatical functions as grammatical primitives.
 
-The grammatical functions were not important in Tesniere's theory. He mentioned only, in the context of valency theory, three \textit{actant functions} called \textit{first}, \textit{second} and \textit{third} the other verb dependants being \textit{circumstantial}. Most dependecy grammars assume dozens of functions to offer a fine-grained syntactic characterization of language based on distinguishable syntactic properties. This way two elements have the same grammatical function if and only if they have the same \textit{markers,} \textit{order} (linear position), \textit{agreement properties} and \textit{distribution}. Several grammatical function sets have been developed in the fields of formal dependency grammars, parsers and tree-banks. The most important ones for English Language are the ones of \citet{MelcukPertsov86}, of \citet{Johnson2000} and of \citet{Marneffe2008, Marneffe2008a}. In this work is employed the latter as it is part of the Stanford dependency parser described latter in this Chapter. 
+The grammatical functions were not important in Tesniere's theory. He mentioned only, in the context of valency theory, three \textit{actant functions} called \textit{first}, \textit{second} and \textit{third} the other verb dependants being \textit{circumstantial}. Most dependency grammars assume dozens of functions to offer a fine-grained syntactic characterization of language based on distinguishable syntactic properties. This way two elements have the same grammatical function if and only if they have the same \textit{markers,} \textit{order} (linear position), \textit{agreement properties} and \textit{distribution}. Several grammatical function sets have been developed in the fields of formal dependency grammars, parsers and tree-banks. The most important ones for English Language are the ones of \citet{MelcukPertsov86}, of \citet{Johnson2000} and of \citet{Marneffe2008, Marneffe2008a}. In this work is employed the latter as it is part of the Stanford dependency parser described latter in this Chapter. 
 
 \subsection{Projectivity}
 Central to how the word order is accounted for in dependency grammar is \textit{projectivity}. It is not present in the Elements but it is the basis for identifying \textit{long-distance dependencies} also known as \textit{discontinuities} or \textit{gapping}. The concept is introduced by \citet{Lecerf1961} following publication of the Elements \citep{Tesniere59}. It is defined in terms of crossing lines when drawing dependency trees where the ones without containing crossing lines are called \textit{projective} and the ones with crossing lines are called \textit{non-projective} i.e. violating projection principle. 
@@ -574,7 +574,7 @@ This is the reason why often in this thesis the references ar to dependency grap
 
 \section{Cross theoretical bridge from DG to SFG}
 \label{sec:cross-theoretical-bridge}
-\label{sec:dependecy-relations-sfl}
+\label{sec:dependency-relations-sfl}
 
 %%TODO section structure:
 %%%%1. introduce why it is here
@@ -591,14 +591,14 @@ This is the reason why often in this thesis the references ar to dependency grap
 %%%%1. introduce why it is here
 This section aims at establishing cross theoretical links between Dependency theory of grammar and the Systemic Functional theory of grammar. This cross theoretical bridge is necessary as a fundamental principle for further deriving transformation rules from dependency representation into systemic functional one. Such rules are then enacted in the parsing pipeline for creating the systemic constituency structure which is the aim of this thesis detailed in Chapter \ref{ch:parsing-algorithm}.
 
-%%TODO conceptualise the dependecy as taxis relations between units
-%The concept of dependency between pairs of words is long acknowledged in linguistic communities. In SFL terms dependencies can be conceptualised as \textit{hypotactic expansions} (see Definition \ref{def:taxis}) of word classes (or parts of speech) where the expanded word acts as \textit{heads} and expanding ones as \textit{dependent} establishing parent-daughter structural relations illustrated in Figure \ref{fig:dependecy-dg}.
+%%TODO conceptualise the dependency as taxis relations between units
+%The concept of dependency between pairs of words is long acknowledged in linguistic communities. In SFL terms dependencies can be conceptualised as \textit{hypotactic expansions} (see Definition \ref{def:taxis}) of word classes (or parts of speech) where the expanded word acts as \textit{heads} and expanding ones as \textit{dependent} establishing parent-daughter structural relations illustrated in Figure \ref{fig:dependency-dg}.
 %and the description of \citet[pp. 438 -- 443]{Halliday2013}
 
 %%%%2. restate what dep is in DG and what it is in SFG
 Lets recap what dependency relations are in the Dependency theory and in Systemic Functional theory of grammar. In the Dependency theory of grammar, as we saw in Section \ref{sec:origins}, the dependency relations are conceptualised as connections between neighbouring words that stand in a governor (superior) and subordinate (inferior) relations to each other, also referred here as \textit{parent-daughter} relations. 
 
-In SFL the concept of dependency is less salient than the foundational role it plays in the Dependency theory. They are regarded as orthogonal relations between sibling elements of a unit (Figure \ref{fig:dependecy-sfg}) and link the \textit{heads} to their \textit{modifiers} in Hallidayan \textit{logical structure}\citep[388]{Halliday2013} (discussed in Section \ref{sec:rank-system}). The reason why the elements are siblings and \textit{not} subordinated is due to \textit{componence} based conceptualisation of the unit structure (see Section \ref{sec:componence}) as a part-whole linearly ordered set of elements. In SFL, componence, together with filling, embedding and expounding are constituency relations. In this view the subordination is replaced by the componence relation between the element and the unit it is part of and hence making the elements siblings of equal status. Yet one element, the head, plays a special pivotal role to the unit (definer in Section \ref{sec:elements-of-structure} and discussed in Section \ref{sec:heads}) that, in Sydney grammar, is the Head/Thing in Sydney grammar or Head, Apex, Main Verb, etc. in Cardiff grammar.
+In SFL the concept of dependency is less salient than the foundational role it plays in the Dependency theory. They are regarded as orthogonal relations between sibling elements of a unit (Figure \ref{fig:dependency-sfg}) and link the \textit{heads} to their \textit{modifiers} in Hallidayan \textit{logical structure}\citep[388]{Halliday2013} (discussed in Section \ref{sec:rank-system}). The reason why the elements are siblings and \textit{not} subordinated is due to \textit{componence} based conceptualisation of the unit structure (see Section \ref{sec:componence}) as a part-whole linearly ordered set of elements. In SFL, componence, together with filling, embedding and expounding are constituency relations. In this view the subordination is replaced by the componence relation between the element and the unit it is part of and hence making the elements siblings of equal status. Yet one element, the head, plays a special pivotal role to the unit (definer in Section \ref{sec:elements-of-structure} and discussed in Section \ref{sec:heads}) that, in Sydney grammar, is the Head/Thing in Sydney grammar or Head, Apex, Main Verb, etc. in Cardiff grammar.
 
 %TODO good place to continue with taxis relations, hook on the orthogonality not being same as junction in DG and neitehr parataxis
 
@@ -607,7 +607,7 @@ In SFL the concept of dependency is less salient than the foundational role it p
     \ex\label{ex:witness} The witness seemed quite convincing. 
 \end{exe}
 
-Consider the example \ref{ex:witness} whose representation as dependency structure is depicted in Figure \ref{fig:dependecy-dg-ex} and as Systemic Functional constituency structure in Table \ref{tab:dependecy-sfg-ex}. In Figure \ref{fig:dependecy-dg-ex} the structure starts with a root node ``seemed'' from which span two relations: subject (nsubj) to ``witness'' and an open clausal complement (xcomp) to ``convincing''.
+Consider the example \ref{ex:witness} whose representation as dependency structure is depicted in Figure \ref{fig:dependency-dg-ex} and as Systemic Functional constituency structure in Table \ref{tab:dependency-sfg-ex}. In Figure \ref{fig:dependency-dg-ex} the structure starts with a root node ``seemed'' from which span two relations: subject (nsubj) to ``witness'' and an open clausal complement (xcomp) to ``convincing''.
 
 \begin{figure}[!ht]
     \centering
@@ -621,7 +621,7 @@ Consider the example \ref{ex:witness} whose representation as dependency structu
         \depedge{5}{4}{advmod}
     \end{dependency}
     \caption{Dependency representation } %Example of parent-daughter hierarchical dependency
-    \label{fig:dependecy-dg-ex}
+    \label{fig:dependency-dg-ex}
 \end{figure}
 
 \begin{table}[!ht]
@@ -636,18 +636,18 @@ Consider the example \ref{ex:witness} whose representation as dependency structu
         determiner     & noun               &                 & adverb          & adjective           \\ \cline{1-2} \cline{4-5} 
     \end{tabular}
     \caption{Example of head-modifier sibling dependency}
-    \label{tab:dependecy-sfg-ex}
+    \label{tab:dependency-sfg-ex}
 \end{table}
 
-In Table \ref{tab:dependecy-sfg-ex}, the corresponding structure, is a root clause unit composed of three elements: a Subject a Main Verb and a Complement. The Main Verb is the pivotal element heading the clause unit which means that the inconspicuous dependency relations hold from the Main Verb to the Subject and to the Complement. The Subject and Complement are filled by a nominal and, correspondingly, an adjectival group whereas the Main Verb Element is expounded with a verb item ``seemed''.
+In Table \ref{tab:dependency-sfg-ex}, the corresponding structure, is a root clause unit composed of three elements: a Subject a Main Verb and a Complement. The Main Verb is the pivotal element heading the clause unit which means that the inconspicuous dependency relations hold from the Main Verb to the Subject and to the Complement. The Subject and Complement are filled by a nominal and, correspondingly, an adjectival group whereas the Main Verb Element is expounded with a verb item ``seemed''.
 This observation is expressed in generic terms but the Generalization \ref{gen:correspondence1}. 
 
-Next, in Figure \ref{fig:dependecy-dg-ex}, the determiner relation (det) between ``witness'' and ``the'' is of similar as the ``subj'' holding between a governor and a subordinate. The corresponding constituency structure is that of a nominal group unit with a Head and a Deictic elements. One exception, though, is that the governor also functions as subordinate in another relation and thus has an incoming edge. This dual role of a node has far reaching consequences in the constituency structure. Having an incoming dependency relation corresponds, in constituency structure, to the filling relation between an element of a unit and the unit of the rank right below. Here, the node ``witness'', acting as a subordinate to the ``seemed'' node, fills the Subject element of the clause. In fact the dependency node ``seemed'' projects into constituency structure the expounding relation between the lexical item and the element of the clause.
+Next, in Figure \ref{fig:dependency-dg-ex}, the determiner relation (det) between ``witness'' and ``the'' is of similar as the ``subj'' holding between a governor and a subordinate. The corresponding constituency structure is that of a nominal group unit with a Head and a Deictic elements. One exception, though, is that the governor also functions as subordinate in another relation and thus has an incoming edge. This dual role of a node has far reaching consequences in the constituency structure. Having an incoming dependency relation corresponds, in constituency structure, to the filling relation between an element of a unit and the unit of the rank right below. Here, the node ``witness'', acting as a subordinate to the ``seemed'' node, fills the Subject element of the clause. In fact the dependency node ``seemed'' projects into constituency structure the expounding relation between the lexical item and the element of the clause.
 
 In a nutshell we see is that the parent-daughter dependency relations in Dependency structure unpacks into multiple relations in the Systemic Functional structure: the componence relation between unit and element, the filling relation between elements and units of the lower rank, the identification of the head of unit element (a.k.a. the pivotal element) and, the (indirect) sibling head-modifier relation.
 
 On the other hand, if we focus on the underlying plain dependency relations between head and dependent we will notice a perfect isomorphism between the two structures. To illustrate that lets reduce the node labels to ``head'' and ``dep'' which will correspond, in the dependency representation, to parent (governor) and daughter (subordinate), whereas in constituency representation, to head and modifier siblings. 
-%Performing the substitutions yields the representation depicted in Figure \ref{fig:dependecy-dg} and in Figure \ref{fig:dependecy-sfg}
+%Performing the substitutions yields the representation depicted in Figure \ref{fig:dependency-dg} and in Figure \ref{fig:dependency-sfg}
 
 \begin{figure}[hbtp]
     \centering
@@ -656,19 +656,19 @@ On the other hand, if we focus on the underlying plain dependency relations betw
         \includegraphics[width=0.9\textwidth]{Figures/SFL-grammar/dependency-dg.pdf}
         \vspace{+22pt}
         \caption{Parent-daughter relations}
-        \label{fig:dependecy-dg}
+        \label{fig:dependency-dg}
     \end{subfigure}%
     \begin{subfigure}{.5\textwidth}
         \centering
         \includegraphics[width=0.9\textwidth]{Figures/SFL-grammar/dependency-sfg.pdf}
         \caption{Sibling head-modifier relations}
-        \label{fig:dependecy-sfg}
+        \label{fig:dependency-sfg}
     \end{subfigure}
     \caption{Plain dependency relations in Dependency and Systemic Functional representation}
     \label{fig:dependency-relations}
 \end{figure}
 
-Figure \ref{fig:dependency-relations} illustrates side by side the parent-daughter and sibling dependency relations in a simplified form. In Figure \ref{fig:dependecy-dg} dependencies are the only relations between the units of structure whereas in Figure \ref{fig:dependecy-sfg} are two levels (ranks) of units where the dependency relations are relevant only between sibling elements at the same level within the structure of a unit. As we have seen in Chapter \ref{ch:sfg} knowing only the unit elements is not enough to construct the constituency structure, but it is informative enough for deducing the missing parts. What the Figure \ref{fig:dependency-relations} illustrates is that the two structures resemble each other in a suggestive fashion that will be used below to construct a bridge between descriptions.  
+Figure \ref{fig:dependency-relations} illustrates side by side the parent-daughter and sibling dependency relations in a simplified form. In Figure \ref{fig:dependency-dg} dependencies are the only relations between the units of structure whereas in Figure \ref{fig:dependency-sfg} are two levels (ranks) of units where the dependency relations are relevant only between sibling elements at the same level within the structure of a unit. As we have seen in Chapter \ref{ch:sfg} knowing only the unit elements is not enough to construct the constituency structure, but it is informative enough for deducing the missing parts. What the Figure \ref{fig:dependency-relations} illustrates is that the two structures resemble each other in a suggestive fashion that will be used below to construct a bridge between descriptions.  
 
 %%%%6. what exactly is the unpacking  principle
 
@@ -722,14 +722,14 @@ Generalisation \ref{gen:correspondence3} provides the link between the projected
 		\depedge{5}{4}{amod}
 	\end{dependency}
 	\caption{Dependency analysis for Table \ref{tab:example-substructure-analisys-cardiff-repeated} }
-	\label{fig:small-wooden-dependecy}
+	\label{fig:small-wooden-dependency}
 \end{figure}
 
 %The dependency structure is overloaded with two kinds of meaning
 
-Figure \ref{fig:small-wooden-dependecy} and Table \ref{tab:example-substructure-analisys-cardiff-repeated} represent the analysis of a nominal group from Example \ref{ex:small-wooden} (``some small very small wooden ones'') in the SFG and the Stanford dependency grammar contrasting the two structures. Consider the dependency relation ``det'' acting as a link between the noun ``ones'' and the determiner ``some''. When translated into the SF variant the dependency relation stands within the nominal group between the Head element (filled by word ``ones'') and the Quantifying Determiner element (filled by the word ``some''). As mentioned earlier all the elements in a unit are equal in the structure so the Head and Quantifying Determiner are siblings. So the items (words) filling those elements are also siblings. How then is the dependency relation established? 
+Figure \ref{fig:small-wooden-dependency} and Table \ref{tab:example-substructure-analisys-cardiff-repeated} represent the analysis of a nominal group from Example \ref{ex:small-wooden} (``some small very small wooden ones'') in the SFG and the Stanford dependency grammar contrasting the two structures. Consider the dependency relation ``det'' acting as a link between the noun ``ones'' and the determiner ``some''. When translated into the SF variant the dependency relation stands within the nominal group between the Head element (filled by word ``ones'') and the Quantifying Determiner element (filled by the word ``some''). As mentioned earlier all the elements in a unit are equal in the structure so the Head and Quantifying Determiner are siblings. So the items (words) filling those elements are also siblings. How then is the dependency relation established? 
 
-% going again on explaining the SFL dependecy
+% going again on explaining the SFL dependency
 
 %In SFL there is the concept of Head and Modifier. There is no direct relationship between them, the Modifier and Head stand for two different kinds of meaning and what the Modifier modifies is not the Head per se but the referent denoted by the head (and thus what is construed by the entire unit). It is precisely this modification of the head that is called a (sibling) dependency relation and is seldom mentioned in the SFL literature because it is considered implicit and recoverable from the SF constituency structure.
 
@@ -737,10 +737,10 @@ Figure \ref{fig:small-wooden-dependecy} and Table \ref{tab:example-substructure-
 %The Head also is the element that acts as an anchor for the entire unit. In this sense the word ``ones'' realizes not only the Head function (sided with Determiner ``some'') but also anchors the entire unit. The relation between the group and it's elements is one of \textit{componence} (Definition \ref{def:componence}) described in Section \ref{sec:componence}. Yet in the role of unit anchor we cannot say that there is a componence relation between ``one'' and ``some'' because it is merely a proxy to the referent rather than the entire unit. So in this role ``one'' can be said to be standing in a parent-daughter dependency relation to ``some'' incorporating the filling and componence relations.
 
 % example of the relation being unpacked
-Lets look at a second example of the two relations ``advmod'' from ``small'' to ``very'' and ``amod'' from ``ones'' to ``small'' in Figure \ref{fig:small-wooden-dependecy}. The interesting case here is the item ``small'' which is the head (Apex) of the quality group. I it anchors the meaning of the whole group and the quality group fills the Modifier/Epithet element within the nominal group. What is not covered in previous example is that the Apex ``small'' not only is a representative of the entire group but it also suitable filler on its own for the Modifier element within nominal group. Using the similar translation mechanism as above, this means that, the incoming dependency needs to be unpacked into three levels: the element within the current group (Modifier), the unit class that element is filling (Quality Group) and finally the head of the filler group (Apex). In fact, to be absolutely correct there is one more level. The elements of a unit are expounded by lexical items, so a fourth relation to unpack is the expounding of the Apex by the word ``small''.
+Lets look at a second example of the two relations ``advmod'' from ``small'' to ``very'' and ``amod'' from ``ones'' to ``small'' in Figure \ref{fig:small-wooden-dependency}. The interesting case here is the item ``small'' which is the head (Apex) of the quality group. I it anchors the meaning of the whole group and the quality group fills the Modifier/Epithet element within the nominal group. What is not covered in previous example is that the Apex ``small'' not only is a representative of the entire group but it also suitable filler on its own for the Modifier element within nominal group. Using the similar translation mechanism as above, this means that, the incoming dependency needs to be unpacked into three levels: the element within the current group (Modifier), the unit class that element is filling (Quality Group) and finally the head of the filler group (Apex). In fact, to be absolutely correct there is one more level. The elements of a unit are expounded by lexical items, so a fourth relation to unpack is the expounding of the Apex by the word ``small''.
 
 %concluding
-I just showed how the dependency relation in dependency structure (Figure \ref{fig:dependecy-dg}) can be unpacked into compounding elements of a unit (Figure \ref{fig:dependecy-sfg}) corresponding to the the sibling dependency considered an indirect relation between the Head and the Modifier (in the Logical metafunction); and then from that using Generalisations \ref{gen:correspondence1}--\ref{gen:correspondence3} deduce the rest of the constituency structure such as the componence relation between unit head and the compounding elements and the filling/expounding relation between the element and the unit right below. 
+I just showed how the dependency relation in dependency structure (Figure \ref{fig:dependency-dg}) can be unpacked into compounding elements of a unit (Figure \ref{fig:dependency-sfg}) corresponding to the the sibling dependency considered an indirect relation between the Head and the Modifier (in the Logical metafunction); and then from that using Generalisations \ref{gen:correspondence1}--\ref{gen:correspondence3} deduce the rest of the constituency structure such as the componence relation between unit head and the compounding elements and the filling/expounding relation between the element and the unit right below. 
 
 
 %do not mention algorithm yet

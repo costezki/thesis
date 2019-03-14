@@ -1,20 +1,20 @@
 \chapter{Systemic functional theory of grammar} %The systemic functional grammar}
 \label{ch:sfg}
 
-Any description of language requires a theory that provides the frame, scope and the necessary concepts. 
+Any description of language requires a theory that provides the frame, scope and concepts necessary. 
 %used to describe a grammar i.e. structure, categories, functions, relations and how they relate to one another. 
-Having a solid theory of grammar contributes to explaining what language is and how it works. It also frames how language is ought yo be analysed by either human or machines. 
+Having a solid theory of grammar contributes to explaining what language is and how it works. It also frames how language ought to be analysed by either human or machines. 
 %A grammar, as a description of linguistic rules, is thus framed by a theory of grammar expressing what language is, how it functions and in which ways it shall be describes.
 
-In his seminal paper \citet{Halliday61} addresses the ardent need of the time for a general theory of language and partially answers the proposal for a universal theory of language. He sets out what was known at the time as Scale and Category Grammar. 
-In such a model \textit{units} are set up to account for for pieces of language which carry grammatical patterns. They are seen as arranged on a hierarchical \textit{rank} scale of words, groups and clauses. These and other foundational concepts are covered in the first part of this Chapter. 
+In his seminal paper \citet{Halliday61}, Halliday addresses the ardent need of the time for a general theory of language and partially answers the proposal for a universal theory of language. He sets out what was known at the time as Scale and Category Grammar. 
+In such a model \textit{units} are set up to account for pieces of language which carry grammatical patterns. They are seen as arranged on a hierarchical \textit{rank} scale of words, groups and clauses. These and other foundational concepts are covered in the first part of this chapter. 
 
-There are two variants of Systemic Functional Grammars: the \textit{Sydney Grammar} started in 1961 by \citet{Halliday2002} and the \textit{Cardiff Grammar} proposed by \citet{Fawcett2008} which is a simplification and an extension of the Sydney Grammar. To understand the underlying common motives and how they are different we shall start looking at their theories of grammar. They also have quite different historical developments. 
+There are two variants of Systemic Functional Grammars: the \textit{Sydney Grammar} started in 1961 by \citet{Halliday2002} and the \textit{Cardiff Grammar} proposed by \citet{Fawcett2008}, which is a simplification and an extension of the Sydney Grammar. To understand the underlying common motives and how they are different we shall start by looking at their theories of grammar. They also have quite different historical developments. 
 
 %Sydney theory of grammar originates with \citet{Halliday61-orig} defining the categories of the theory of grammar. It has been then  further refined in \citep{Halliday2003-systemic-theory} and in highly influential ``Introduction to Functional Grammar'' \citep{ifg}. Sydney grammar developed by \citet{Matthiessen-lexcartog-book} had been computationally implemented as part of a large scale natural language generation project called PENMAN \citep{PenmanOverview,Penman89}. It is worth noting that one of the well known SFG implementations for English, Nigel grammar \citep{intronigel}, was part of the same project.  
 %Cardiff theory of grammar crystallised in ``A theory of syntax for Systemic Functional Linguistics'' \citep{Fawcett2000} which represents a large body of research part of the COMMUNAL project \citep{Fawcett90-communal,Fawcett93-ewnlg4} performed at Cardiff University.
 
-Sydney and Cardiff grammars have been formalised to the point where they could be computationally applied to natural language generation. They have been implemented in PENMAN \citep{PenmanOverview,Penman89} and respectively COMMUNAL projects \citep{Fawcett90-communal}. Both versions of SF grammars have been used predominantly for English and implementations of for other languages are also available. The major component of PENMAN is a computer model of Halliday's SF grammar described by \citet{gazebo}, \citet{MatthiessenBateman91}, \citep{Matthiessen-lexcartog-book} and others. COMMUNAL is the computer implementation of Cardiff grammar described by \citet{Fawcett:1988}, \citet{Fawcett93-ewnlg4} and others. 
+The Sydney and Cardiff grammars have been formalised to the point where they could be computationally applied to natural language generation. They have been implemented in the PENMAN \citep{PenmanOverview,Penman89} and COMMUNAL \citep{Fawcett90-communal} projects respectively. While the Cardiff style grammar has been primarily used for for English, the Sydney style grammar has been implemented for over twelve languages in the KPML text generation system \citep{KPML1,Bateman96-KPML-resources,Bateman1997}. The major component of PENMAN is a computer model of Halliday's SF grammar described by \citet{gazebo}, \citet{MatthiessenBateman91}, \citep{Matthiessen-lexcartog-book} and others. COMMUNAL is the computer implementation of Cardiff grammar described by \citet{Fawcett:1988}, \citet{Fawcett93-ewnlg4} and others. 
 
 This chapter first sets out the basic organisational dimensions for each of the theories and then discusses comparatively Halliday's \citep{Halliday2002} and Fawcett's \citep{Fawcett2000} versions of SFL.
 
@@ -22,7 +22,7 @@ This chapter first sets out the basic organisational dimensions for each of the 
 
 \section{A word on wording}
 \label{sec:wording}
-Before going into deeper discussion I first make terminological clarifications on the terms: grammar, grammatics, syntax, semantics and lexicogrammar. I start with a definitions adopted in ``mainstream'' generative linguistics and then present how the same terms are discussed in systemic functional linguistics.
+Before going into deeper discussion I first make terminological clarifications on the terms: grammar, grammatics, syntax, semantics and lexico-grammar. I start with a definitions adopted in ``mainstream'' generative linguistics and then present how the same terms are discussed in systemic functional linguistics.
 
 %Radford1997: A minimalist introiduction to syntax
 Radford, a generative linguist, in the ``Minimalist Introduction to Syntax'' (\citeyear{Radford1997}), starts with a description of grammar as a field of study, which, in his words, is traditionally subdivided into two inter-related areas of study: syntax and morphology. %\citep[1]{Radford1997}.
@@ -51,7 +51,7 @@ Radford adds that, traditionally, grammar is not only concerned with the princip
 [Grammar is] the study of the principles which govern the formation and interpretation of words, phrases and sentences. \citep[1]{Radford1997}
 \end{definition}
 
-Interestingly enough, the Definition \ref{def:grammar-min} makes no mention at all to the lexicon. This is because the formal grammars focus primarily on unit classes and how they are accommodated in various structures and so in formal linguistics the lexicon is often disconnected from the grammar. The systemic grammar, on the other hand, along with formal descriptions of grammatical categories and structures, includes the lexicon as part of grammar to form a \textit{lexicogrammar}. At this point I have to mention that systemic functional grammar is not the only lexicalised one and there are others taking the same approach such as 
+Interestingly enough, the Definition \ref{def:grammar-min} makes no mention at all to the lexicon. This is because the formal grammars focus primarily on unit classes and how they are accommodated in various structures and so in formal linguistics the lexicon is often disconnected from the grammar. The systemic grammar, on the other hand, along with formal descriptions of grammatical categories and structures, includes the lexicon as part of grammar to form a \textit{lexico-grammar}. At this point I have to mention that systemic functional grammar is not the only lexicalised one and there are others taking the same approach such as 
 %TODO: references needed
 Lexical Functional Grammar (LFG), Head Phrase Structure Grammar (HPSG), Combinatory Categorial Grammar (CCG) and others. 
 
@@ -120,7 +120,7 @@ To Halliday, the term \textit{semiotic} accounts for an orientation towards mean
 		\draw[thick, <->, postaction={ decorate ,decoration = {text along path, raise=1ex, text align=center,text={Stratification}}}](A) -- +($(D)-(C)$);  % the stratification axis line
 		
 		\node[align = center] at (-1,1) {Phonology \\ (sounding)};
-		\node[align = center] at (-3,3) {Lexicogrammar \\ (wording)};
+		\node[align = center] at (-3,3) {Lexico-grammar \\ (wording)};
 		\node[align = center] at (-5,5) {Semantics \\ (meaning)};
 		
 		\node[align = center] at (2,5) {Expression};
@@ -144,9 +144,9 @@ To Halliday, the term \textit{semiotic} accounts for an orientation towards mean
 
 Having that said, the stratification axis is a useful dimension to relate the formal and the systemic functional grammars. This is also an instrument employed by Hjelmslev \citep{Taverniers2011}. %TODO: eventually expand here
 
-The SFL model defines language as a resource organised into three strata: phonology (sounding), lexicogrammar (wording) and semantics (meaning). Each is defined according to its level of abstraction on the realisation axis. The realisation axis is divided into two planes: the expression and the content planes. 
-Although debate about the precise division continues, for current purpose it is sufficient to see the first stratum (i.e. phonology/morphology) belongs to the \textit{expression plane} and the last two (lexicogrammar and semantics) belong to the \textit{content plane}.
-%But the division is not so clear because some parts of semantics and lexicogrammar transcend from content into expression plane. 
+The SFL model defines language as a resource organised into three strata: phonology (sounding), lexico-grammar (wording) and semantics (meaning). Each is defined according to its level of abstraction on the realisation axis. The realisation axis is divided into two planes: the expression and the content planes. 
+Although debate about the precise division continues, for current purpose it is sufficient to see the first stratum (i.e. phonology/morphology) belongs to the \textit{expression plane} and the last two (lexico-grammar and semantics) belong to the \textit{content plane}.
+%But the division is not so clear because some parts of semantics and lexico-grammar transcend from content into expression plane. 
 In this context, the formal grammar could be localised entirely within the expression plane, including the phonology/morphology, syntax, lexicon while formal semantics, stripped of any explanations in terms of the meaning potential, belongs in the content plane.
 
 \section{Sydney theory of grammar}
@@ -185,7 +185,7 @@ Language is a patterned activity of meaningful organization. The patterned organ
 \end{definition}
 
 \begin{generalization}[Constituency principles]\label{def:constituency-principles}
-	The five principles of constituency in lexicogrammar are:
+	The five principles of constituency in lexico-grammar are:
 	\begin{enumerate}
 		\item There is a scale or rank in the grammar of every language. That of English (typical of many) can be represented as: clause, group/phrase, word, morpheme.
 		\item Each unit consists of \textit{one or more} units of rank next below.
@@ -221,7 +221,7 @@ The relation between units is that of consistency for which we say that a unit \
 		& (Morpheme complex)       \\ \hline
 		(Morpheme)       &                          \\ \hline
 	\end{tabular}
-	\caption{Rank scale of the (English) lexicogrammatical constituency}
+	\caption{Rank scale of the (English) lexico-grammatical constituency}
 	\label{tab:rank-scale}
 \end{table}
 
@@ -512,7 +512,7 @@ Across the rank scale, with respect to structure and metafunctions, Halliday for
 
 This principle implicitly relates to the property of language meaning that 
 %it naturally evolves towards the shortest and most effective way of expressing a meaning. 
-there is nothing meaningless and thus every piece of language must be explained and accounted for in the lexicogrammar. Also this principle implies that each metafunction has its own structure or that text is analysed through a multi structural approach.
+there is nothing meaningless and thus every piece of language must be explained and accounted for in the lexico-grammar. Also this principle implies that each metafunction has its own structure or that text is analysed through a multi structural approach.
 
 At the very top of the rank scale, clauses form complex structures. Halliday employs systematically the concepts of \textit{taxis} and \textit{logico-semantic relations} to account for inter-clausal relations. 
 
@@ -526,7 +526,7 @@ The elements of logical paratactic structure are notated left to right with numb
 
 Expansion is further divided into three: \textit{elaborating} \mbox{(= equals)}, \textit{extending} \mbox{(+ is added to)} and \textit{enhancing} \mbox{($\times$ is multiplied by)}. Elaboration is a way to restate the same thing, exemplify, comment or specify in detail. Extending is the way to add new element give an exception or offer an alternative. And finally enhancing is the way to qualify something with some circumstantial feature of time, place, cause, intensity or condition. 
 
-\subsection{Lexis and lexicogrammar}
+\subsection{Lexis and lexico-grammar}
 In SFL the terms \textit{word} and \textit{lexical item} are not really synonymous. They are related but they refer to different things. The term \textit{word} is reserved (in early Halliday) for the grammatical unit of the lowest rank whose \textit{exponents} are lexical items. %While word refers to the unit of structure below the group/phrase rank and above the morphemes, the lexical item is defies as follows. 
 
 \begin{definition}[Lexical Item]\label{def:lexical-item}
@@ -535,7 +535,7 @@ In SFL the terms \textit{word} and \textit{lexical item} are not really synonymo
 
 Examples of lexical items are the following: ``'s'' (the possessive morpheme), ``house'', ``walk'', ``on'' (words in traditional sense) and ``in front of'', ``according to'', ``ask around'', ``add up to'', ``break down'' (multi word prepositions and phrasal verbs).
 
-If some theories treat grammar and lexis as discrete phenomena, Halliday brings them together as opposite poles of the same cline. He refers to this merge as \textit{lexicogrammar} where they are paradigmatically related through delicacy relation.
+If some theories treat grammar and lexis as discrete phenomena, Halliday brings them together as opposite poles of the same cline. He refers to this merge as \textit{lexico-grammar} where they are paradigmatically related through delicacy relation.
 % and he expressed his dream that one day linguists will be able to turn whole linguistic form into (lexico)grammar showing that lexis is the most delicate grammar. 
 \citet{Hasan2014}, explores the feasibility of what would it mean to turn the ``whole linguistic form into grammar''. This then implies a assumption that lexis is not form and that its relation to semantics is unique which  in turn is challenging the problems of polysemy. 
 
@@ -616,7 +616,7 @@ If in Sydney model exponence (Definition \ref{def:exponence-sydney}) is a relati
 
 Note that componence is not a relationship between a unit and its places; the latter, as discussed in Section \ref{sec:elements-of-structure}, simply locationally relate elements of a unit to each other.
 
-Componence intuitively implies a part-whole constituency relationship between the unit and its elements. But this is not the only view. Another perspective is the concept of \textit{dependency} (which I will address in Chapter \ref{ch:dependecy-grammar}) or strictly speaking the \textit{sister} or \textit{sibling dependency} (not parent-daughter). 
+Componence intuitively implies a part-whole constituency relationship between the unit and its elements. But this is not the only view. Another perspective is the concept of \textit{dependency} (which I will address in Chapter \ref{ch:dependency-grammar}) or strictly speaking the \textit{sister} or \textit{sibling dependency} (not parent-daughter). 
 It is suitable for describing relations between elements of structure within a unit. 
 
 \begin{exe}
@@ -878,9 +878,9 @@ In SFL at large there is the consensus that linguistic forms and meanings are in
 	\dots something that is distinctly non-arbitrary [in language] is the way different kinds of meaning in language are expressed by different kinds of grammatical structure, as appears when linguistic structure is interpreted in functional terms \citep{Halliday2003-Ideas-about-language}.
 \end{quotation}
 
-When it comes to establishing the lexicogrammatical classes the two schools diverge. Halliday adopts the traditional grammar \textit{word classes} or \textit{parts of speech}: noun, verb, adjective etc. He then derives a set of groups (e.g. nominal group, verbal group, adverbial group etc.) that share properties of the word classes. In fact the class, in Halliday's words, ``indicates the in a general way its potential range of grammatical functions'' \citep[76]{Halliday2013}. For example the nominal group is a formation that functions as a noun may do and expresses same kind of meaning. 
+When it comes to establishing the lexico-grammatical classes the two schools diverge. Halliday adopts the traditional grammar \textit{word classes} or \textit{parts of speech}: noun, verb, adjective etc. He then derives a set of groups (e.g. nominal group, verbal group, adverbial group etc.) that share properties of the word classes. In fact the class, in Halliday's words, ``indicates the in a general way its potential range of grammatical functions'' \citep[76]{Halliday2013}. For example the nominal group is a formation that functions as a noun may do and expresses same kind of meaning. 
 
-Following the idea that major semantic classes of entities (situations, things, qualities and quantities) correspond to the major syntactic units, Fawcett decided to mirror them into the lexicogrammar. This lead to a semantically based classification of syntactic units: clause, nominal group, prepositional group, quality group and quantity group \citep[193--194]{Fawcett2000} along with a set of minor classes such as genitive and proper name clusters. This is, in a way, a tight coupling of the grammatical units with an ontology which may be subject to change in the future. The converse may also be stated that the traditional part of speech are disconnected from the semantics in the sense that there is no one to one correspondence (as Fawcett attempts) but rather complex set of mappings. Establishing the exact interface of syntax and semantics is a hot ongoing theoretical exploration across the entire linguistic discipline a difficult task in practice. This discussion however is beyond the scope here.   
+Following the idea that major semantic classes of entities (situations, things, qualities and quantities) correspond to the major syntactic units, Fawcett decided to mirror them into the lexico-grammar. This lead to a semantically based classification of syntactic units: clause, nominal group, prepositional group, quality group and quantity group \citep[193--194]{Fawcett2000} along with a set of minor classes such as genitive and proper name clusters. This is, in a way, a tight coupling of the grammatical units with an ontology which may be subject to change in the future. The converse may also be stated that the traditional part of speech are disconnected from the semantics in the sense that there is no one to one correspondence (as Fawcett attempts) but rather complex set of mappings. Establishing the exact interface of syntax and semantics is a hot ongoing theoretical exploration across the entire linguistic discipline a difficult task in practice. This discussion however is beyond the scope here.   
 
 In the current work I side with the Sydney classification of syntactic units that is close in line with traditional syntactic classifications \citep{Quirk1985}. I adopt the clause as a unit plus the four group classes of the Sidney grammar depicted in \mbox{Figure \ref{fig:group-classes}}. 
 
@@ -904,7 +904,7 @@ In the current work I side with the Sydney classification of syntactic units tha
 
 %The main reason is that Cardiff classes are beyond the syntactic variations of the grammar and blend into lexical semantics which makes it difficult to apply to parsing, at least nowadays with current state of word classification.
 
-The word classes or part of speech tags that I adopt here are the ones employed to annotate Penn Treebank corpora called the Penn tag set \citep{Marcus1993} which, like Sidney unit classes, are also in line with the traditional grammar. This tag set has become a widely accepted standard in mainstream computational linguistics and there are multiple implementation of the part of speech taggers. The Stanford Parser which plays an important role in the software implementation of this thesis and is described in the Chapter \ref{ch:dependecy-grammar}, employs precisely the Penn tag set.
+The word classes or part of speech tags that I adopt here are the ones employed to annotate Penn Treebank corpora called the Penn tag set \citep{Marcus1993} which, like Sidney unit classes, are also in line with the traditional grammar. This tag set has become a widely accepted standard in mainstream computational linguistics and there are multiple implementation of the part of speech taggers. The Stanford Parser which plays an important role in the software implementation of this thesis and is described in the Chapter \ref{ch:dependency-grammar}, employs precisely the Penn tag set.
 
 The Penn tag set was developed to annotate the Penn Treebank corpora \citep{Marcus1993}. It is a large, richly articulated tag set that provides distinct codings for classes of words that have distinct grammatical behaviour.
 
@@ -984,7 +984,7 @@ In the nominal group ``The old'' which is Subject in Example \ref{ex:the-old-exa
 
 %TODO follow the argumentation along the promisses in the section introduction
 
-In this work I adopt the principles for establishing the logical structure of Sydney Grammar. It resonates closely with the traditional ``semantically blinded'' grammars because and it always provides a Head element even if it differs from the syntactically motivated pivotal element in Cardiff Grammar. Moreover these logical Heads correspond to dependency heads established in the Stanford dependency parse. Chapter \ref{ch:dependecy-grammar} provides the grounds for cross-theoretical mappings and the empirical evaluation in Chapter \ref{ch:evaluation} validates it.
+In this work I adopt the principles for establishing the logical structure of Sydney Grammar. It resonates closely with the traditional ``semantically blinded'' grammars because and it always provides a Head element even if it differs from the syntactically motivated pivotal element in Cardiff Grammar. Moreover these logical Heads correspond to dependency heads established in the Stanford dependency parse. Chapter \ref{ch:dependency-grammar} provides the grounds for cross-theoretical mappings and the empirical evaluation in Chapter \ref{ch:evaluation} validates it.
 
 In language is not unusual to have nominal groups with the Thing missing or elliptic clauses with the Main verb missing therefore no rigid correspondence can be established between the logical Head and unit class. 
 %And because the unit class depends on its internal structure (in Cardiff school), this leads to a circular interdependency between the unit class and the unit structure. 
