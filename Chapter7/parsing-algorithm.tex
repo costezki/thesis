@@ -1,505 +1,533 @@
 \chapter{Creating the systemic functional constituency structure}
 \label{ch:parsing-algorithm}
 
-The previous chapter introduced the building blocs for the parser pipeline algorithm depicted in Figure \ref{fig:pipeline-overview}. This chapter covers the entire first phase of the of the algorithm called ``graph building''. 
-
-The considered input into the parsing pipeline are Stanford dependency parse graphs. The dependency graphs are sometimes erroneous or treat certain linguistic phenomena in an incompatible way with current approach. Therefore a preprocessing stage is needed to correct and canonicalise the dependency graphs which is covered in Section \ref{sec:preprocessing1} and \ref{sec:preprocessing2}. Then these graphs are rewritten into systemic constituency graphs. The process by which this happens is covered in Section \ref{sec:creation-constituency-graph}.
+    The previous chapter introduced the building blocks for the parser pipeline algorithm depicted in Figure \ref{fig:pipeline-overview}. This chapter covers the entire first phase of the algorithm called ``graph building''. The input for the parsing pipeline is made up of Stanford dependency parse graphs. The dependency graphs are sometimes erroneous or treat certain linguistic phenomena in a way incompatible with current approach. Therefore a preprocessing stage is needed to correct and canonicalise the dependency graphs; this is covered in Sections \ref{sec:preprocessing1} and \ref{sec:preprocessing2}. Then these graphs are rewritten into systemic constituency graphs. The process by which this happens is covered in Section \ref{sec:creation-constituency-graph}.
 
 \section{Canonicalisation of dependency graphs}
 \label{sec:preprocessing1}
-Beside stable errors, there are two other phenomena that are modified in the preprocessing phase: \textit{copula} and \textit{coordination}. They are not errors per se but simply an incompatibility between how Stanford parser represents them and how they need to be represented for processing by the current algorithm and grammar.
+    Beside stable errors, there are two other phenomena that are modified in the preprocessing phase: \textit{copula} and \textit{coordination}. They are not errors per se but represent simply an incompatibility between how the Stanford parser represents them and how they need to be represented for processing by the current algorithm and grammar.
 
-In this section I describe a set of transformation operations on the dependency graph before it is transformed into systemic constituency graph. The role of preprocessing phase is bringing in line aspects of dependency parse to a form compatible with systemic constituency graph creation process by (a) correcting known errors in DG, (b) cutting down some DG edges to form a tree (c) changing Stanford parser's standard handling of copulas, coordination and few other phenomena. This is achieved via three transformation types: (a) \textit{relabelling of edge relations}, (b) relabelling node POS, and (c) reattachment of nodes to a different parent. 
+    In this section I describe a set of transformation operations on the dependency graph before it is transformed into a systemic constituency graph. The role of the preprocessing phase is to bring in line aspects of the dependency parse to a form compatible with the systemic constituency graph creation process by (a) correcting known errors in DG, (b) cutting down some DG edges to form a tree, and (c) changing the Stanford parser's standard handling of copulas, coordination and few other phenomena. This is achieved via three transformation types: (a) \textit{relabelling of edge relations}, (b) relabelling node POS, and (c) reattachment of nodes to a different parent. 
 
 \subsection{Loosening conjunction edges}
-Stanford parser employs an extra edge for each of the conjuncts such that there is one indicating the syntactic relationship to the child or parent nodes (just like for any other nodes) and additionally one that shows the conjunction relationship to its sibling nodes. This process removes the parent or child relations except for the first conjunct and leaves only the sibling relationships. 
+    The Stanford parser employs an extra edge for each of the conjuncts such that there is one indicating the syntactic relationship to the child or parent nodes (just like for any other nodes) and additionally one that shows the conjunction relationship to its sibling nodes. In this step, the parent or child relations except for the first conjunct are removed leaving only the sibling relations. 
 
-Some common patterns occurring between noun, verb and adjective conjuncts are depicted below in figures \ref{fig:conj-noun-subj} - \ref{fig:conj-verb-subj}.
+    Some common patterns occurring between noun, verb and adjective conjuncts are depicted in Figures \ref{fig:conj-noun} - \ref{fig:conj-verb-subj}.
 
-\begin{figure}[!ht]
-\centering
-\begin{minipage}[b]{0.45\textwidth}
-\centering
-	\begin{dependency}[dep-style]
-		\begin{deptext}[]
-	Cats \& and \& dogs \& can \& be \& friends \& . \\ 
-		\end{deptext}
-	%	\deproot{3}{root}
-	%	\depedge{3}{1}{aux}
-	%	\depedge{3}{2}{nsubj}
-	%	\depedge{3}{4}{iobj}
-	%	\depedge{6}{5}{det}
-		\depedge{6}{1}{nsubj}
-		\depedge{6}{3}{nsubj}	
-		\depedge{1}{3}{conj\_and}
-	\end{dependency}
-\caption{Conjunction of noun objects}
-\label{fig:conj-noun-subj}
-\end{minipage}
-\quad
-\begin{minipage}[b]{0.45\textwidth}
-\centering
-	\begin{dependency}[dep-style]
-		\begin{deptext}[]
-	Please \& give \& me \& a \& fork \& and \& a \& knife \& ? \\ % \& , \& makes \& ... \\
-		\end{deptext}
-	%	\deproot{3}{root}
-	%	\depedge{3}{1}{aux}
-	%	\depedge{3}{2}{nsubj}
-	%	\depedge{3}{4}{iobj}
-	%	\depedge{6}{5}{det}
-		\depedge{3}{6}{dobj}
-		\depedge{3}{8}{dobj}	
-		\depedge{6}{8}{conj\_and}
-	\end{dependency}
-\caption{Conjunction of noun objects}
-\label{fig:conj-noun-obj}
-\end{minipage}
-\end{figure}
+    \begin{figure}[!ht]
+    \centering
+        \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \resizebox{0.97\textwidth}{!}{%
+        	\begin{dependency}[dep-style]
+        		\begin{deptext}[]
+        	Cats \& and \& dogs \& can \& be \& friends \& . \\ 
+        		\end{deptext}
+        	%	\deproot{3}{root}
+        	%	\depedge{3}{1}{aux}
+        	%	\depedge{3}{2}{nsubj}
+        	%	\depedge{3}{4}{iobj}
+        	%	\depedge{6}{5}{det}
+        		\depedge{6}{1}{nsubj}
+        		\depedge{6}{3}{nsubj}	
+        		\depedge{1}{3}{conj\_and}
+        	\end{dependency}
+        	}
+            \caption{Composite subject}
+            \label{fig:conj-noun-subj}
+        \end{subfigure}%
+        \quad
+        \begin{subfigure}[b]{0.45\textwidth}
+            \centering
+            \resizebox{0.97\textwidth}{!}{%
+        	\begin{dependency}[dep-style]
+        		\begin{deptext}[]
+        	Please \& give \& me \& a \& fork \& and \& a \& knife \\ 
+        		\end{deptext}
+        	%	\deproot{3}{root}
+        	%	\depedge{3}{1}{aux}
+        	%	\depedge{3}{2}{nsubj}
+        	%	\depedge{3}{4}{iobj}
+        	%	\depedge{6}{5}{det}
+        		\depedge{3}{6}{dobj}
+        		\depedge{3}{8}{dobj}	
+        		\depedge{6}{8}{conj\_and}
+        	\end{dependency}
+        	}
+            \caption{Composite object}
+            \label{fig:conj-noun-obj}
+        \end{subfigure}
+        \caption{Conjunction of nouns in subject and object positions}
+        \label{fig:conj-noun}
+    \end{figure}
 
-\begin{figure}[!ht]
-\centering
-\begin{minipage}[b]{0.45\textwidth}
-\centering
-\begin{dependency}[dep-style]
-		\begin{deptext}[]
-	It \& is \& hard \& for \& both \& me \& and \& you \& . \\ % \& , \& makes \& ... \\
-		\end{deptext}
-		%\deproot{3}{root}
-		%\depedge{3}{1}{expl}
-		%\depedge{3}{2}{cop}
-		%\depedge{6}{5}{preconj}
-		\depedge{3}{6}{prep\_for}
-		\depedge{3}{8}{prep\_for}
-		\depedge{6}{8}{conj\_and}
-	\end{dependency}
-\caption{Conjunction of prepositional phrases}
-\label{fig:conj-preps}
-\end{minipage}
-\quad
-\begin{minipage}[b]{0.45\textwidth}
-\centering
-	\begin{dependency}[dep-style]
-		\begin{deptext}[]
-	He \& is \& strong \& and \& brave \& . \\
-		\end{deptext}
-		%\deproot{3}{root}
-		\depedge{3}{1}{nsubj}
-		\depedge{5}{1}{nsubj}
-		%\depedge{3}{2}{cop}
-		\depedge{3}{5}{conj\_and}
-	\end{dependency}
-\caption{Conjunction of copulatives sharing the subject}
-\label{fig:conj-copula-subj}
-\end{minipage}
-\end{figure}
-\begin{figure}[!ht]
-\centering
-	\begin{dependency}[dep-style]
-		\begin{deptext}[]
-	He \& came \& home \& and \& immediately \& washed \& his \& hands \& . \\ % \& , \& makes \& ... \\
-		\end{deptext}
-		%\deproot{2}{root}
-		\depedge{2}{1}{nsubj}
-		\depedge{6}{1}{nsubj}
-		%\depedge{2}{3}{dobj}
-		\depedge{2}{6}{conj\_and}
-		%\depedge{6}{5}{advmod}
-		%\depedge{8}{7}{poss}
-		%\depedge{6}{8}{dobj}
-	\end{dependency}
-\caption{Conjunction of verbs sharing the same subject}
-\label{fig:conj-verb-subj}
-\end{figure}
 
-The main reason these extra edges need to be removed is to avoid traversal of the same node via different paths. This, in the current algorithm, has as consequence execution multiple times of the same operation such as for example creation of multiple constituents from the same DG node, which of course is undesirable. For example, if multiple subject relations occur in the DG then multiple subject are going to be instantiated in CG which is not covered in the grammar. Rather only one complex unit needs to be created with the subject role composed of two noun phrases (see discussion of this case in the Section \ref{sec:coordination}). 
+    \begin{figure}
+    \centering
+    \begin{dependency}[dep-style]
+    		\begin{deptext}[]
+    	It \& is \& hard \& for \& both \& me \& and \& you \& . \\ % \& , \& makes \& ... \\
+    		\end{deptext}
+    		%\deproot{3}{root}
+    		%\depedge{3}{1}{expl}
+    		%\depedge{3}{2}{cop}
+    		%\depedge{6}{5}{preconj}
+    		\depedge{3}{6}{prep\_for}
+    		\depedge{3}{8}{prep\_for}
+    		\depedge{6}{8}{conj\_and}
+    	\end{dependency}
+    \caption{Conjunction of prepositional phrases}
+    \label{fig:conj-preps}
+    \end{figure}
 
-The way I fix this problem is by removing functional edges to/from each conjunct except the first one. There are two generic patterns in figures \ref{fig:conj-inc-tight} and \ref{fig:conj-out-tight} correspondingly with incoming and outgoing edges that are transformed into the forms depicted in \ref{fig:conj-inc-loose} and \ref{fig:conj-out-loose}. 
+    \begin{figure}[!ht]
+    \centering
+    	\begin{dependency}[dep-style]
+    		\begin{deptext}[]
+    	He \& is \& strong \& and \& brave \& . \\
+    		\end{deptext}
+    		%\deproot{3}{root}
+    		\depedge{3}{1}{nsubj}
+    		\depedge{5}{1}{nsubj}
+    		%\depedge{3}{2}{cop}
+    		\depedge{3}{5}{conj\_and}
+    	\end{dependency}
+    \caption{Conjunction of copulatives sharing the subject}
+    \label{fig:conj-copula-subj}
+    \end{figure}
 
-I split the cases into two: patterns with incoming dependency edges and outgoing ones. First, see the pattern of conjuncts with \textit{incoming dependency} relations represented in Figure \ref{fig:conj-inc-tight} and exemplified in Figures \ref{fig:conj-noun-subj} - \ref{fig:conj-preps}. In SFG terms it corresponds to cases when the functional element of a parent constituent is filled by a complex unit below.
 
-\begin{figure}[!ht]
-\begin{minipage}{0.45\linewidth}
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (e){X};
-	\node[pattern-node, anchor=center, below left =5em of e] (c1){Conj_0};
-	\node[pattern-node, anchor=center, below  =3.5em of e] (c){Conj_{...}};
-	\node[pattern-node, anchor=center, below right =5em of e] (c2){Conj_n};
-	\path (e) edge[edge-style] node[left] {rel_1} (c1);
-	\path (e) edge[edge-style] node[left] {rel_1} (c);
-	\path (e) edge[edge-style] node[right] {rel_1} (c2);
-	\path (c1) edge[edge-style] node[above] {conj} (c);
-	\path (c) edge[edge-style] node[above] {conj} (c2);
-	\end{tikzpicture}
-\caption{Conjuncted elements with incoming tightly connected dependencies}
-\label{fig:conj-inc-tight}
-\end{minipage}
-\quad
-\begin{minipage}{0.45\linewidth}
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (e){X};
-	\node[pattern-node, anchor=center, below left =5em of e] (c1){Conj_0};
-	\node[pattern-node, anchor=center, below  =3.5em of e] (c){Conj_{...}};
-	\node[pattern-node, anchor=center, below right =5em of e] (c2){Conj_n};
-	\path (e) edge[edge-style] node[left] {rel_1} (c1);
-	%\path (e) edge[edge-style] node[left] {rel_1} (c);
-	%\path (e) edge[edge-style] node[right] {rel_1} (c2);
-	\path (c1) edge[edge-style] node[above] {conj} (c);
-	\path (c) edge[edge-style] node[above] {conj} (c2);
-	\end{tikzpicture}
-	\caption{Conjuncted elements with incoming loosely connected dependencies}
-	\label{fig:conj-inc-loose}
-\end{minipage}
-\end{figure}
+    \begin{figure}[!ht]
+    \centering
+    	\begin{dependency}[dep-style]
+    		\begin{deptext}[]
+    	He \& came \& home \& and \& immediately \& washed \& his \& hands \& . \\ 
+    		\end{deptext}
+    		%\deproot{2}{root}
+    		\depedge{2}{1}{nsubj}
+    		\depedge{6}{1}{nsubj}
+    		%\depedge{2}{3}{dobj}
+    		\depedge{2}{6}{conj\_and}
+    		%\depedge{6}{5}{advmod}
+    		%\depedge{8}{7}{poss}
+    		%\depedge{6}{8}{dobj}
+    	\end{dependency}
+    \caption{Conjunction of verbs sharing the same subject}
+    \label{fig:conj-verb-subj}
+    \end{figure}
 
-The second is the pattern of conjuncts with \textit{outgoing dependency relations} depicted in Figure \ref{fig:conj-out-tight}. In SFG terms it correspond to cases when a unit is sharing an element with another conjunct unit. These are mainly the cases of conjuncted verbs or copulas and are further discussed in the Chapter \ref{ch:gbt} about null elements. In GBT terms, the second to last conjuncts may miss for example the subject constituent if the conjuncts are verbs or copulas as in Figures  \ref{fig:conj-copula-subj} - \ref{fig:conj-verb-subj}. 
+    The main reason these extra edges need to be removed is to avoid traversal of the same node via different paths. This, in the current algorithm, has as consequence execution of the same operation multiple times such as for example creation of multiple constituents from the same DG node, which is of course undesirable. For example, if multiple subject relations occur in the DG then multiple subjects are going to be instantiated in CG and this is grammatically incorrect. Rather only one complex unit needs to be created with the subject role composed of two noun phrases; this was discussed in Section \ref{sec:coordination}. 
 
-\begin{figure}[!ht]
-\begin{minipage}{0.45\linewidth}
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (e){X};
-	\node[pattern-node, anchor=center, below left =5em of e] (c1){Conj_0};
-	\node[pattern-node, anchor=center, below  =3.5em of e] (c){Conj_{...}};
-	\node[pattern-node, anchor=center, below right =5em of e] (c2){Conj_n};
-	\path (c1) edge[edge-style] node[left] {rel_1} (e);
-	\path (c) edge[edge-style] node[left] {rel_1} (e);
-	\path (c2) edge[edge-style] node[right] {rel_1} (e);
-	\path (c1) edge[edge-style] node[above] {conj} (c);
-	\path (c) edge[edge-style] node[above] {conj} (c2);
-	\end{tikzpicture}
-\caption{Conjuncted elements with outgoing tightly connected dependencies}
-\label{fig:conj-out-tight}
-\end{minipage}
-\quad
-\begin{minipage}{0.45\linewidth}
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (e){X};
-	\node[pattern-node, anchor=center, below left =5em of e] (c1){Conj_0};
-	\node[pattern-node, anchor=center, below  =3.5em of e] (c){Conj_{...}};
-	\node[pattern-node, anchor=center, below right =5em of e] (c2){Conj_n};
-	\path (c1) edge[edge-style] node[left] {rel_1} (e);
-	%\path (e) edge[edge-style] node[left] {rel_1} (c);
-	%\path (e) edge[edge-style] node[right] {rel_1} (c2);
-	\path (c1) edge[edge-style] node[above] {conj} (c);
-	\path (c) edge[edge-style] node[above] {conj} (c2);
-	\end{tikzpicture}
-	\caption{Conjuncted elements with outgoing loosely connected dependencies}
-	\label{fig:conj-out-loose}
-\end{minipage}
-\end{figure}
+    The way I resolve this problem is by removing functional edges to/from each conjunct except the first one. There are two generic patterns in Figures \ref{fig:conj-inc-tight} and \ref{fig:conj-out-tight} correspondingly with incoming and outgoing edges that are transformed into the forms depicted in \ref{fig:conj-inc-loose} and \ref{fig:conj-out-loose}. 
+
+    I split the cases into two: patterns with incoming dependency edges and outgoing ones. First, see the pattern of conjuncts with \textit{incoming dependency} relations represented in Figure \ref{fig:conj-inc-tight} and exemplified in Figures \ref{fig:conj-noun-subj} - \ref{fig:conj-preps}. In SFG terms it corresponds to cases when the functional element of a parent constituent is filled by a complex unit below.
+
+    \begin{figure}[!ht]
+    \begin{subfigure}{0.45\linewidth}
+    	\begin{tikzpicture}[]
+    	\node[pattern-node, anchor=center] (e){X};
+    	\node[pattern-node, anchor=center, below left =5em of e] (c1){Conj_0};
+    	\node[pattern-node, anchor=center, below  =3.5em of e] (c){Conj_{...}};
+    	\node[pattern-node, anchor=center, below right =5em of e] (c2){Conj_n};
+    	\path (e) edge[edge-style] node[left] {rel_1} (c1);
+    	\path (e) edge[edge-style] node[left] {rel_1} (c);
+    	\path (e) edge[edge-style] node[right] {rel_1} (c2);
+    	\path (c1) edge[edge-style] node[above] {conj} (c);
+    	\path (c) edge[edge-style] node[above] {conj} (c2);
+    	\end{tikzpicture}
+    \caption{Conjuncted elements with incoming tightly connected dependencies}
+    \label{fig:conj-inc-tight}
+    \end{subfigure}
+    \quad
+    \begin{subfigure}{0.45\linewidth}
+    	\begin{tikzpicture}[]
+    	\node[pattern-node, anchor=center] (e){X};
+    	\node[pattern-node, anchor=center, below left =5em of e] (c1){Conj_0};
+    	\node[pattern-node, anchor=center, below  =3.5em of e] (c){Conj_{...}};
+    	\node[pattern-node, anchor=center, below right =5em of e] (c2){Conj_n};
+    	\path (e) edge[edge-style] node[left] {rel_1} (c1);
+    	%\path (e) edge[edge-style] node[left] {rel_1} (c);
+    	%\path (e) edge[edge-style] node[right] {rel_1} (c2);
+    	\path (c1) edge[edge-style] node[above] {conj} (c);
+    	\path (c) edge[edge-style] node[above] {conj} (c2);
+    	\end{tikzpicture}
+    	\caption{Conjuncted elements with incoming loosely connected dependencies}
+    	\label{fig:conj-inc-loose}
+    \end{subfigure}
+    \caption{From tightly to loosely connected incoming conjuncted elements}
+    \label{fig:conj-inc-tight-loose}
+    \end{figure}
+
+    The second is the pattern of conjuncts with \textit{outgoing dependency relations} depicted in Figure \ref{fig:conj-out-tight}. In SFG terms it correspond to cases when a unit is sharing an element with another conjunct unit. These are mainly the cases of conjuncted verbs or copulas and are further discussed in the Chapter \ref{ch:gbt} about null elements. In GBT terms, the second to last conjuncts may omit, for example, the subject constituent if the conjuncts are verbs or copulas as in Figures  \ref{fig:conj-copula-subj} - \ref{fig:conj-verb-subj}. 
+
+    \begin{figure}[!ht]
+    \begin{subfigure}{0.45\linewidth}
+    	\begin{tikzpicture}[]
+    	\node[pattern-node, anchor=center] (e){X};
+    	\node[pattern-node, anchor=center, below left =5em of e] (c1){Conj_0};
+    	\node[pattern-node, anchor=center, below  =3.5em of e] (c){Conj_{...}};
+    	\node[pattern-node, anchor=center, below right =5em of e] (c2){Conj_n};
+    	\path (c1) edge[edge-style] node[left] {rel_1} (e);
+    	\path (c) edge[edge-style] node[left] {rel_1} (e);
+    	\path (c2) edge[edge-style] node[right] {rel_1} (e);
+    	\path (c1) edge[edge-style] node[above] {conj} (c);
+    	\path (c) edge[edge-style] node[above] {conj} (c2);
+    	\end{tikzpicture}
+    \caption{Conjuncted elements with outgoing tightly connected dependencies}
+    \label{fig:conj-out-tight}
+    \end{subfigure}
+    \quad
+    \begin{subfigure}{0.45\linewidth}
+    	\begin{tikzpicture}[]
+    	\node[pattern-node, anchor=center] (e){X};
+    	\node[pattern-node, anchor=center, below left =5em of e] (c1){Conj_0};
+    	\node[pattern-node, anchor=center, below  =3.5em of e] (c){Conj_{...}};
+    	\node[pattern-node, anchor=center, below right =5em of e] (c2){Conj_n};
+    	\path (c1) edge[edge-style] node[left] {rel_1} (e);
+    	%\path (e) edge[edge-style] node[left] {rel_1} (c);
+    	%\path (e) edge[edge-style] node[right] {rel_1} (c2);
+    	\path (c1) edge[edge-style] node[above] {conj} (c);
+    	\path (c) edge[edge-style] node[above] {conj} (c2);
+    	\end{tikzpicture}
+    	\caption{Conjuncted elements with outgoing loosely connected dependencies}
+    	\label{fig:conj-out-loose}
+    \end{subfigure}
+    \caption{From tightly to loosely connected outgoing conjuncted elements}
+	\label{fig:conj-out-tight-loose}
+    \end{figure}
 
 \subsection{Transforming copulas into verb centred clauses}
 \label{sec:copulas}
-In Stanford dependency grammar \textit{copular verbs} are treated as dependants of their complements (see Figures \ref{fig:copula-simple} and \ref{fig:copula-conj}) because of the intention to maximize connections between content words. This configuration breaks the rule of the main verb being the head of clause discussed in Sections \ref{sec:verbal-grpoup-and-clause-division} and \ref{sec:cardiff-clause}. 
+    In the Stanford dependency grammar \textit{copular verbs} are treated as dependants of their complements (see Figures \ref{fig:copula-simple} and \ref{fig:copula-conj}) because of the intention to maximise connections between content words. This configuration breaks the rule of the main verb being the head of clause discussed in Sections \ref{sec:verbal-grpoup-and-clause-division} and \ref{sec:cardiff-clause}. 
 
-Moreover, despite that a variety of verbs are recognised as copulative e.g. \textit{act, keep, sound}, etc. Stanford parser provides copula configurations only for the verb \textit{to be} leading to unequal treatment of copular verbs. 
+    \begin{figure}
+    \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \begin{dependency}[dep-style]
+        		\begin{deptext}[]
+        	She \& is \& beautiful \& . \\%\& in \& the \& moonlight \&. \\
+        		\end{deptext}
+        		\deproot{3}{root}
+        		\depedge{3}{2}{cop}
+        		\depedge{3}{1}{nsubj}
+        		%\depedge{3}{6}{prep\_in}
+        		%\depedge{6}{5}{det}
+        	\end{dependency}
+        \caption{Simple copulative}
+        \label{fig:copula-simple}
+        \end{subfigure}
+        \quad
+        \begin{subfigure}[b]{0.55\textwidth}
+        \centering
+        	\begin{dependency}[dep-style]
+        		\begin{deptext}[]
+        	He \& is \& strong \& and \& brave \& . \\
+        		\end{deptext}
+        		\deproot{3}{root}
+        		\depedge{3}{1}{nsubj}
+        		\depedge{5}{1}{nsubj}
+        		\depedge{3}{2}{cop}
+        		\depedge{3}{5}{conj\_and}
+        	\end{dependency}
+        \caption{Conjunction of copulatives sharing the subject}
+        \label{fig:copula-conj}
+        \end{subfigure}
+         \caption{Simple and conjuncted copula in dependecy graphs}
+         \label{fig:copula-in-dg}
+    \end{figure}
+    
+    Moreover, despite that a variety of verbs are recognised as copulative e.g. \textit{act, keep, sound}, etc. the Stanford parser provides copula configurations only for the verb \textit{to be} leading to unequal treatment of copular verbs. 
 
-This case is sometimes accompanied by two relations that create cycles in th DG. They are the \textit{xsubj}, the relation to a controlling subject and \textit{ref}, the relation to a referent. The two relations are removed and their resolution is transferred to the semantic analysis stage of the algorithm.
+    This case is sometimes accompanied by two relations that create cycles in the DG. They are the \textit{xsubj}, the relation to a controlling subject and \textit{ref}, the relation to a referent. The two relations are removed in this parsing phase and their resolution is transferred to the semantic analysis stage of the algorithm.
 
-\begin{figure}[!ht]
-\centering
-\begin{minipage}[b]{0.45\textwidth}
-\centering
-\begin{dependency}[dep-style]
-		\begin{deptext}[]
-	She \& is \& beautiful \& in \& the \& moonlight \&. \\
-		\end{deptext}
-		\deproot{3}{root}
-		\depedge{3}{2}{cop}
-		\depedge{3}{1}{nsubj}
-		\depedge{3}{6}{prep\_in}
-		\depedge{6}{5}{det}
-	\end{dependency}
-\caption{Conjunction of prepositional phrases}
-\label{fig:copula-simple}
-\end{minipage}
-\quad
-\begin{minipage}[b]{0.45\textwidth}
-\centering
-	\begin{dependency}[dep-style]
-		\begin{deptext}[]
-	He \& is \& strong \& and \& brave \& . \\
-		\end{deptext}
-		\deproot{3}{root}
-		\depedge{3}{1}{nsubj}
-		\depedge{5}{1}{nsubj}
-		\depedge{3}{2}{cop}
-		\depedge{3}{5}{conj\_and}
-	\end{dependency}
-\caption{Conjunction of copulatives sharing the subject}
-\label{fig:copula-conj}
-\end{minipage}
-\end{figure}
+    To make the copulative verb the root of its clause, the following rules are implemented. First, some relations are transferred from the copula complement (adjective JJ or noun NN) to the copulative verb. The transferred relations are listed in Table \ref{tab:rependent-relations} which distinguishes them based on the part of speech of the \textit{copula complement}.
 
-To make the copulative verb the roots of its clause, following rules are implemented. First, some relations are transferred from the copula complement (adjective JJ or noun NN) to the copulative verb. The transferred relations are listed in Table \ref{tab:rependent-relations} which distinguishes them based on the part of speech which of the \textit{copula complement}.
+    \begin{table}[!ht]
+    \centering
+    \begin{tabulary}{\textwidth}{|c|C|}
+    \hline \textit{part of speech} & \textit{dominated relation} \\ 
+    \hline NN & dep, poss, possesive,
+                     amod, appos, conj,
+                     mwe, infmod, nn, num,
+                     number, partmod, preconj,
+                     predet, quantmod, rcmod,ref, det\\ 
+    \hline JJ & advmod, amod, conj \\ 
+    \hline 
+    \end{tabulary}
+    \caption{Relations dependent on the POS of the dominant node}
+    \label{tab:rependent-relations}
+    \end{table}
 
-\begin{table}[!ht]
-\centering
-\begin{tabulary}{\textwidth}{|c|C|}
-\hline \textit{part of speech} & \textit{dominated relation} \\ 
-\hline NN & dep, poss, possesive,
-                 amod, appos, conj,
-                 mwe, infmod, nn, num,
-                 number, partmod, preconj,
-                 predet, quantmod, rcmod,ref, det\\ 
-\hline JJ & advmod, amod, conj \\ 
-\hline 
-\end{tabulary}
-\caption{Relations dependent on the POS of the dominant node}
-\label{tab:rependent-relations}
-\end{table}
+    Second, all the outgoing connections from the copula complement are transferred to the verb except those listed in the second column of Table \ref{tab:rependent-relations}; these relations must stay linked to the NN or JJ nodes. Third the \textit{cop} relation is deleted. Fourth, all the incoming relations to the copula complement are transferred indistinguishably to the verb because these are all clause related and should be linked to the clause dominant node. Finally the \textit{dobj} link is created from the verb to the complement noun/adjective.
 
-Second, all the outgoing connections from the copula complement are transferred to the verb except those listed in second column of table \ref{tab:rependent-relations}, these relations must stay linked to the NN or JJ nodes. Third the \textit{cop} relation is deleted. Fourth, all the incoming relations to the copula complement are transferred indistinguishably to the verb because these are all clause related and shall be linked to the clause dominant node. Finally the \textit{dobj} link is created from the verb to the complement noun/adjective.
+    Figure \ref{fig:copula-initial} represents the generic pattern of copulas in Stanford DGs. The outgoing relations are distinguished between those in the filter as \textit{rel\_dep} and the rest simply as \textit{rel} while the incoming relations are not discriminated. Figure \ref{fig:copula-final} captures the final state of the transformation where the filtered outgoing relations stay attached to the complement node while the rest incoming and outgoing relations are moved to the verb.  
 
-Figure \ref{fig:copula-initial} represents the generic pattern of copulas in Stanford DGs. The outgoing relations are distinguished between those in the filter as \textit{rel\_dep} and the rest simply as \textit{rel} while the incoming relations are not discriminated. Figure \ref{fig:copula-final} captures the final state of the transformation where the filtered outgoing relations stay attached to the complement node while the rest incoming and outgoing relations are moved to the verb.  
+    \begin{figure}[!ht]
+    \centering
+        \begin{subfigure}{0.47\linewidth}
+            \centering
+            \resizebox{0.97\textwidth}{!}{%
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (cop){VB};
+        	\node[pattern-node, anchor=center, right =5em of cop] (compl){JJ/NN};
+        	\node[, anchor=center, above left=5em of cop,xshift=3.5em] (c1){};
+        	\node[, anchor=center, above right=5em of cop,xshift=-3.5em] (c2){};
+        	\node[, anchor=center, above left=5em of compl,xshift=3.5em] (c3){};
+        	\node[, anchor=center, above =3.5em of compl,] (c4){};
+        	\node[, anchor=center, above right=5em of compl,xshift=-3.5em] (c5){};
+        	\path (compl) edge[edge-style] node[above] {cop} (cop);
+        	\path (compl) edge[edge-style] node[right] {rel\_dep_{0..n}} (c5);
+        	\path (compl) edge[edge-style] node[left] {rel_{0..n}} (c2);
+        	\path (c4) edge[edge-style] node[above left] {rel_{0..n}} (compl);
+        	\end{tikzpicture}
+        	}
+        \caption{Generic pattern for copulas in Stanford parser.}
+        \label{fig:copula-initial}
+        \end{subfigure}
+        \quad
+        \begin{subfigure}{0.47\linewidth}
+            \centering
+            \resizebox{0.97\textwidth}{!}{%
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (cop){VB};
+        	\node[pattern-node, anchor=center, right =5em of cop] (compl){JJ/NN};
+        	\node[, anchor=center, above left=5em of cop,xshift=3.5em] (c1){};
+        	\node[, anchor=center, above right=5em of cop,xshift=-3.5em] (c2){};
+        	\node[, anchor=center, above left=5em of compl,xshift=3.5em] (c3){};
+        	\node[, anchor=center, above =3.5em of compl,] (c4){};
+        	\node[, anchor=center, above right=5em of compl,xshift=-3.5em] (c5){};
+        	\path (cop) edge[edge-style] node[above] {dobj} (compl);
+        	\path (compl) edge[edge-style] node[right] {rel\_dep_{0..n}} (c5);
+        	\path (cop) edge[edge-style] node[right] {rel_{0..n}} (c2);
+        	\path (c1) edge[edge-style] node[left] {rel_{0..n}} (cop);
+        	\end{tikzpicture}
+        	}
+        	\caption{Generic pattern for copulas after the transformation (the same as non-copular verbs).}
+        	\label{fig:copula-final}
+        \end{subfigure}
+        \caption{Generic patterns for dealing with copulas in dependecy graphs}
+        \label{fig:copula-final-final}
+    \end{figure}
 
-\begin{figure}[!ht]
-\begin{minipage}{0.45\linewidth}
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (cop){VB};
-	\node[pattern-node, anchor=center, right =5em of cop] (compl){JJ/NN};
-	\node[, anchor=center, above left=5em of cop,xshift=3.5em] (c1){};
-	\node[, anchor=center, above right=5em of cop,xshift=-3.5em] (c2){};
-	\node[, anchor=center, above left=5em of compl,xshift=3.5em] (c3){};
-	\node[, anchor=center, above =3.5em of compl,] (c4){};
-	\node[, anchor=center, above right=5em of compl,xshift=-3.5em] (c5){};
-	\path (compl) edge[edge-style] node[above] {cop} (cop);
-	\path (compl) edge[edge-style] node[right] {rel\_dep_{0..n}} (c5);
-	\path (compl) edge[edge-style] node[left] {rel_{0..n}} (c2);
-	\path (c4) edge[edge-style] node[above left] {rel_{0..n}} (compl);
-	\end{tikzpicture}
-\caption{Generic pattern for copulas in Stanford parser.}
-\label{fig:copula-initial}
-\end{minipage}
-\quad
-\begin{minipage}{0.45\linewidth}
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (cop){VB};
-	\node[pattern-node, anchor=center, right =5em of cop] (compl){JJ/NN};
-	\node[, anchor=center, above left=5em of cop,xshift=3.5em] (c1){};
-	\node[, anchor=center, above right=5em of cop,xshift=-3.5em] (c2){};
-	\node[, anchor=center, above left=5em of compl,xshift=3.5em] (c3){};
-	\node[, anchor=center, above =3.5em of compl,] (c4){};
-	\node[, anchor=center, above right=5em of compl,xshift=-3.5em] (c5){};
-	\path (cop) edge[edge-style] node[above] {dobj} (compl);
-	\path (compl) edge[edge-style] node[right] {rel\_dep_{0..n}} (c5);
-	\path (cop) edge[edge-style] node[right] {rel_{0..n}} (c2);
-	\path (c1) edge[edge-style] node[left] {rel_{0..n}} (cop);
-	\end{tikzpicture}
-	\caption{Generic pattern for copulas after the transformation (the same as non-copular verbs).}
-	\label{fig:copula-final}
-\end{minipage}
-\end{figure}
-
-In case of conjuncted copulas like in the example in Figure \ref{fig:copula-conj} the approach is slightly complicated by the fact that copula resolution algorithm shall be executed for each copula conjunct, however because of the previous step which is loosening the conjunction and removing graph cycles then only the first copula conjunct is concerned.
+    In case of conjuncted copulas as in the example in Figure \ref{fig:copula-conj}, the approach is slightly complicated by the fact that the copula resolution algorithm should be executed for each copula conjunct, however because of the previous step which is loosening the conjunction and removing graph cycles, only the first copula conjunct is concerned.
 
 \subsection{Non-finite clausal complements with adjectival predicates (a pseudo-copula pattern)}
 \label{sec:nonfinite-clausal-complement}
-The Figure \ref{fig:clausal-complement-jj} represents a dependency parse exemplifying a clausal complement with an adjectival predicate. In this analysis there is a main clause governed by the verb \textit{to paint} and the second one by the adjective \textit{white}. 
-In SFL Figure \ref{fig:clausal-complement-jj} receives a different analysis as it is represented in Table \ref{tab:adjectival-complement}.
+    Figure \ref{fig:clausal-complement-jj} represents a dependency parse exemplifying a clausal complement with an adjectival predicate. In this analysis there is a main clause governed by the verb \textit{to paint} and a second one by the adjective \textit{white}. In SFL simple clause, such as the one depicted in Figure \ref{fig:clausal-complement-jj}, receives a different analysis as is represented in Table \ref{tab:adjectival-complement}.
 
-\begin{figure}[!ht]
-	\centering
-	\begin{dependency}[dep-style]
-		\begin{deptext}[]
-			Perhaps \&Sarah \&painted \&the \&wall \&white \&. \\
-		\end{deptext}
-		\deproot{3}{root}
-		\depedge{3}{1}{advmod}
-		\depedge{3}{2}{nsubj}
-		\depedge{5}{4}{det}
-		\depedge{6}{5}{nsubj}
-		\depedge{3}{6}{xcomp}
-	\end{dependency}
-	\caption{Dependency parse for clausal complement with adjectival predicate}
-	\label{fig:clausal-complement-jj}
-\end{figure} 
+    \begin{figure}[!ht]
+    	\centering
+    	\begin{dependency}[dep-style]
+    		\begin{deptext}[]
+    			Perhaps \&Sarah \&painted \&the \&wall \&white \&. \\
+    		\end{deptext}
+    		\deproot{3}{root}
+    		\depedge{3}{1}{advmod}
+    		\depedge{3}{2}{nsubj}
+    		\depedge{5}{4}{det}
+    		\depedge{6}{5}{nsubj}
+    		\depedge{3}{6}{xcomp}
+    	\end{dependency}
+    	\caption{Dependency parse for clausal complement with adjectival predicate}
+    	\label{fig:clausal-complement-jj}
+    \end{figure} 
 
-\begin{table}[!ht]
-	\centering
-	\begin{tabular}{|c|c|c|c|c|c|}
-		\hline
-		\textit{Perhaps} & \textit{Sarah} & \textit{painted} & \textit{the}   & \textit{wall}  & \textit{white.} \\ \hline
-		Adjunct          & Subject        & Finite/Main Verb & \multicolumn{2}{c|}{Complement} & Complement      \\ \hline
-		& Agent          & Material Action  & \multicolumn{2}{c|}{Affected}   & Attribute       \\ \hline
-	\end{tabular}
-	\caption{SFG analysis with attributive adjectival complement}
-	\label{tab:adjectival-complement}
+    \begin{table}[!ht]
+    	\centering
+    	\begin{tabular}{|c|c|c|c|c|c|}
+    		\hline
+    		\textit{Perhaps} & \textit{Sarah} & \textit{painted} & \textit{the}   & \textit{wall}  & \textit{white.} \\ \hline
+    		Adjunct          & Subject        & Finite/Main Verb & \multicolumn{2}{c|}{Complement} & Complement      \\ \hline
+    		& Agent          & Material Action  & \multicolumn{2}{c|}{Affected}   & Attribute       \\ \hline
+    	\end{tabular}
+    	\caption{SFG analysis with attributive adjectival complement}
+    	\label{tab:adjectival-complement}
 \end{table}
 
-\textit{xcomp} relation defined in \citep{Marneffe2008} to introduce non-finite clausal complement without a subject. Dependency grammar allows adjectives (JJ) and nouns (NN) to be heads of clauses but only when they are a part of a copulative construction. In figure \ref{fig:clausal-complement-jj} it is not the case, there is no copulative verb \textit{to be} and also \textit{the wall} receives the subject role in the complement clause which should be absent. 
+    The \textit{xcomp} relation is defined in \citet{Marneffe2008} to introduce non-finite clausal complement without a subject. Dependency grammar allows adjectives (JJ) and nouns (NN) to be heads of clauses, but only when they are a part of a copulative construction. In Figure \ref{fig:clausal-complement-jj} it is not the case, there is no copulative verb \textit{to be} and also \textit{the wall} receives the subject role in the complement clause which should be absent. So I treat this as a misuse of the \textit{xcomp} relation and the adjective should not be treated as governing a new clause but rather non-clausally complementing the verb \textit{to paint}. This si in line with SF grammars where adjectival predicates are not allowed.
 
-So I treat it as a misuse of \textit{xcomp} relation and the adjective should not be treated as governing a new clause but rather non-clausally complementing the verb \textit{to paint}. Moreover that in SFG adjectival predicates are not allowed.
+    Certainly, depending on the linguistic school, opinions may diverge on the syntactic analysis comprising one or two clauses. But when analysed from a semantic perspective it is hard to deny that there is a Material Process with an Agent and Affected thing which is specifying also the resultant (or goal) Attribute of the Affected thing. 
 
-Certainly, depending on the linguistic school, opinions may diverge on the syntactic analysis comprising one or two clause. But when analysed from a semantic perspective it is hard to deny that there is a Material Process with an Agent and Affected thing which is specifying also the resultant (or goal) Attribute of the Affected thing. 
+    To accommodate such cases the dependency graph is changed from the pattern in Figure \ref{fig:xcomp-jj-init} to form Figure \ref{fig:xcomp-jj-final}. The \textit{xcomp} relation is transformed into \textit{dobj} and the subject of the embedded clause (if any) becomes the direct object (\textit{dobj}) in the main clause. This is not a correct treatment from the dependency grammar point of view but it suits the purpose of the current work. As the \textit{dobj} relation is projected later into a Complement element in the constituency structure, it fits well the case of adjectival Complements in the Cardiff grammar.
 
-To accommodate such cases the dependency graph is changed from pattern in Figure \ref{fig:xcomp-jj-init} to form in Figure \ref{fig:xcomp-jj-final}. The \textit{xcomp} relation is transformed into \textit{dobj} and the subject of the embedded clause (if any) becomes the direct object (\textit{dobj}) in the main clause.
-
-\begin{figure}[!ht]
-	\begin{minipage}{0.45\linewidth}
-		\centering
-		\begin{tikzpicture}[]
-		\node[pattern-node, anchor=center] (vb){VB};
-		\node[pattern-node, anchor=center, below right=2em of vb] (nsubj){NN};
-		\node[pattern-node, anchor=center, right =3em of nsubj] (xcomp){JJ};
-		
-		\path (vb) edge[edge-style] node[above] {xcomp} (xcomp);
-		\path (xcomp) edge[edge-style] node[below] {nsubj} (nsubj);
-		\end{tikzpicture}
-		\caption{Adjectival clausal complement}
-		\label{fig:xcomp-jj-init}
-	\end{minipage}
-	\quad
-	\begin{minipage}{0.45\linewidth}
-		\centering
-		\begin{tikzpicture}[]
-			\node[pattern-node, anchor=center] (vb){VB};
-			\node[pattern-node, anchor=center, below right=2em of vb] (nsubj){NN};
-			\node[pattern-node, anchor=center, right =3em of nsubj] (xcomp){JJ};
-		\path (vb) edge[edge-style] node[right] {dobj} (xcomp);
-		\path (vb) edge[edge-style] node[below left] {dobj} (nsubj);
-		\end{tikzpicture}
-		\caption{Adjectival clausal complement as secondary direct object}
+    \begin{figure}[!ht]
+    	\begin{subfigure}{0.45\linewidth}
+    		\centering
+    		\begin{tikzpicture}[]
+    		\node[pattern-node, anchor=center] (vb){VB};
+    		\node[pattern-node, anchor=center, below right=2em of vb] (nsubj){NN};
+    		\node[pattern-node, anchor=center, right =3em of nsubj] (xcomp){JJ};
+    		
+    		\path (vb) edge[edge-style] node[above] {xcomp} (xcomp);
+    		\path (xcomp) edge[edge-style] node[below] {nsubj} (nsubj);
+    		\end{tikzpicture}
+    		\caption{Adjectival clausal complement}
+    		\label{fig:xcomp-jj-init}
+    	\end{subfigure}
+    	\quad
+    	\begin{subfigure}{0.45\linewidth}
+    		\centering
+    		\begin{tikzpicture}[]
+    			\node[pattern-node, anchor=center] (vb){VB};
+    			\node[pattern-node, anchor=center, below right=2em of vb] (nsubj){NN};
+    			\node[pattern-node, anchor=center, right =3em of nsubj] (xcomp){JJ};
+    		\path (vb) edge[edge-style] node[right] {dobj} (xcomp);
+    		\path (vb) edge[edge-style] node[below left] {dobj} (nsubj);
+    		\end{tikzpicture}
+    		\caption{Adjectival clausal complement as secondary direct object}
+    		\label{fig:xcomp-jj-final}
+    	\end{subfigure}
+    	\caption{From adjectival clausal complement to two clausal complements}
 		\label{fig:xcomp-jj-final}
-	\end{minipage}
-\end{figure}
+    \end{figure}
 
 \section{Correction of errors in dependency graphs}
 \label{sec:preprocessing2}
 %%TODO group errors by operation type
 
-The Stanford Parser applies various machine learning(ML) techniques to parsing. It's accuracy increased over time to $\approx92\%$ for unlabelled attachments and $\approx89\%$ for labelled ones (in the version 3.5.1). This section addresses known error classes of wrongly attached nodes or wrongly labelled edges and nodes. These errors have been discovered during the development of Parsimonious Vole parser and are corrected to increase the result accuracy. 
+    The Stanford Parser applies various machine learning (ML) techniques to parsing. Its accuracy was increased over time to $\approx92\%$ for unlabelled attachments and $\approx89\%$ for labelled ones (in version 3.5.1). This section addresses known error classes of wrongly attached nodes or wrongly labelled edges and nodes. These errors have been discovered during the development of the Parsimonious Vole parser and are corrected to increase the result accuracy. 
 
-As the Stanford parser evolved, some error classes changed from one version to another (v2.0.3 -- v3.2.0 -- 3.5.1). Also the set of dependency labels for English initially described in \citep{Marneffe2008, Marneffe2008a} changed to a cross-linguistic one (starting from v3.3.0) described in \citep{Marneffe2014}.
+    As the Stanford parser evolved, some error classes changed from one version to another (v2.0.3 -- v3.2.0 -- 3.5.1). Also the set of dependency labels for English initially described in \citet{Marneffe2008, Marneffe2008a} changed to a cross-linguistic one (starting from v3.3.0) described in \citet{Marneffe2014}.
 
-As noted by \citet{Cer2010a} the most frequent errors are related to structures that are hard to attach i.e. prepositional phrases and relative clauses. During the implementation of current parser there had been discovered a set of errors, most frequent of which are described in this section and how are they treated. These errors are specific to Stanford Parser versions v2.0.3 -- 3.2.0. This section may constitute a valuable feedback for SDP error analysis. 
+    As noted by \citet{Cer2010a} the most frequent errors are related to structures that are hard to attach, i.e. prepositional phrases and relative clauses. During the implementation of the current parser were discovered a set of errors, the most frequent of which are described in this section along with how are they treated. These errors are specific to Stanford parser versions v2.0.3 -- 3.2.0. This section may constitute a valuable error analysis feedback for the authors of Stanford dependency parser. 
 
-\subsection{\textit{prep} relations from verb to free preposition}
-As noted before only the collapsed version of the DGs are taken as input. This means that no pure \textit{prep} relations shall occur but their expended version with the specific preposition appended to the relation name i.e. \textit{prep\_xxx}.
+\subsection{Free prepositions and \textit{prep} relation}
+    As noted before, only the collapsed version of the DGs are taken as input. This means that no pure \textit{prep} relations should occur but their expanded version with the specific preposition appended to the relation name, i.e. \textit{prep\_xxx}, are used.
 
-This is not always the case especially with phrasal verbs, the \textit{prt} relations are mislabelled as \textit{prep}. The correction consist in changing the \textit{prep} (figure \ref{fig:prep-init}) into \textit{prt} (figure \ref{fig:prep-final}) if the preposition node has no children e.g. \textit{pobj}. 
+    This is not always the case, especially with phrasal verbs, where the \textit{prt} relations are mislabelled as \textit{prep}. The correction consists in changing the \textit{prep} (Figure \ref{fig:prep-init}) into \textit{prt} (Figure \ref{fig:prep-final}) if the preposition node has no children, e.g. \textit{pobj}. 
 
-\begin{figure}[!ht]
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb){VB};
-	\node[pattern-node, anchor=center, right =5em of cop] (pr){IN};
-	\path (vb) edge[edge-style] node[above] {prep} (pr);
-	\end{tikzpicture}
-\caption{Mislabelled relation to free preposition.}
-\label{fig:prep-init}
-\end{minipage}
-\quad
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb){VB};
-	\node[pattern-node, anchor=center, right =5em of cop] (pr){IN};
-	\path (vb) edge[edge-style] node[above] {prt} (pr);
-	\end{tikzpicture}
-	\caption{Corrected relation to free preposition as verbal particle}
-	\label{fig:prep-final}
-\end{minipage}
-\end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb){VB};
+        	\node[pattern-node, anchor=center, right =5em of cop] (pr){IN};
+        	\path (vb) edge[edge-style] node[above] {prep} (pr);
+        	\end{tikzpicture}
+        \caption{Mislabelled relation to free preposition.}
+        \label{fig:prep-init}
+        \end{subfigure}
+        \quad
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb){VB};
+        	\node[pattern-node, anchor=center, right =5em of cop] (pr){IN};
+        	\path (vb) edge[edge-style] node[above] {prt} (pr);
+        	\end{tikzpicture}
+        	\caption{Corrected relation to free preposition as verbal particle}
+        	\label{fig:prep-final}
+        \end{subfigure}
+        \caption{Treatment of free preposition connected to a verb as verbal particles}
+    	\label{fig:prep-final-final}
+    \end{figure}
 
 \subsection{Non-finite clausal complements with internal subjects}
-The \textit{xcomp} relation stands for open clausal complements of either a verb(VB) or adjective (JJ/ADJP). The latter is actually transformed as discussed in Section \ref{sec:nonfinite-clausal-complement}. The open clausal complement defined in Lexical Functional Grammar \cite[p270--275]{Bresnan2001} is always non-finite and does not have its own subject. However sometimes \textit{xcomp} relation appears either (a) with finite verbs or (b) with own local subjects and both cases correspond to definition of \textit{ccomp} relation. 
+    The \textit{xcomp} relation stands for open clausal complements of either a verb(VB) or adjective (JJ/ADJP). The latter is actually transformed as discussed in Section \ref{sec:nonfinite-clausal-complement}. The open clausal complement defined in Lexical Functional Grammar \cite[p270--275]{Bresnan2001} is always non-finite and does not have its own subject. However sometimes the \textit{xcomp} relation appears either (a) with finite verbs or (b) with its own local subjects; both cases correspond to the definition of the \textit{ccomp} relation. 
 
-To fix this I transform all the instances of \textit{xcomp} relation to \textit{ccomp} if the dependent verb has a local subject (nsubj) or a finite verb as depicted in Figures \ref{fig:xcomp-init} - \ref{fig:xcomp-final}.
+    To address this I transform all the instances of \textit{xcomp} relation to \textit{ccomp} if the dependent verb has a local subject (nsubj) or a finite verb as depicted in Figures \ref{fig:xcomp-init} - \ref{fig:xcomp-final}.
 
-\begin{figure}[!ht]
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb){VB1};
-	\node[pattern-node, anchor=center, below =3.5em of vb] (subj){NN};
-	\node[pattern-node, anchor=center, below right=5em of vb] (comp){VB2};
-	\path (comp) edge[edge-style] node[above] {nsubj} (subj);
-	\path (vb) edge[edge-style] node[above right] {xcomp} (comp);
-	\end{tikzpicture}
-\caption{Mislabelled clausal complement}
-\label{fig:xcomp-init}
-\end{minipage}
-\quad
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb){VB1};
-		\node[pattern-node, anchor=center, below =3.5em of vb] (subj){NN};
-		\node[pattern-node, anchor=center, below right=5em of vb] (comp){VB2};
-		\path (comp) edge[edge-style] node[above] {nsubj} (subj);
-		\path (vb) edge[edge-style] node[above right] {ccomp} (comp);
-	\end{tikzpicture}
-	\caption{Corrected clausal complement}
-	\label{fig:xcomp-final}
-\end{minipage}
-\end{figure}
-
-%2. xcomp with subject  # if (VB-xcomp-VB1, VB1-[csubj,nsubj,nsubjpass]) then transform into VB-ccompl-VB1 
-%	it seems possible in SD but we don't want it. 
-%	    for a clause to be xcomped and have a subject. 
-%	     even if the xcomped clause is usually nonfinite, it still has subject.
-%	     ccomped clauses are expected to be finite and have subject.
-%	     we rurn the xcomps with subj into ccomps with subj, even if they 
-%	     are nonfinite
+    \begin{figure}[!ht]
+        \centering
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}
+        	\node[pattern-node, anchor=center] (vb){VB1};
+        	\node[pattern-node, anchor=center, below =3.5em of vb] (subj){NN};
+        	\node[pattern-node, anchor=center, below right=5em of vb] (comp){VB2};
+        	\path (comp) edge[edge-style] node[above] {nsubj} (subj);
+        	\path (vb) edge[edge-style] node[above right] {xcomp} (comp);
+        	\end{tikzpicture}
+        \caption{Mislabelled clausal complement}
+        \label{fig:xcomp-init}
+        \end{subfigure}
+        \quad
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}
+        	\node[pattern-node, anchor=center] (vb){VB1};
+        		\node[pattern-node, anchor=center, below =3.5em of vb] (subj){NN};
+        		\node[pattern-node, anchor=center, below right=5em of vb] (comp){VB2};
+        		\path (comp) edge[edge-style] node[above] {nsubj} (subj);
+        		\path (vb) edge[edge-style] node[above right] {ccomp} (comp);
+        	\end{tikzpicture}
+        	\caption{Corrected clausal complement}
+        	\label{fig:xcomp-final}
+        \end{subfigure}
+        \caption{Treatment of the non finite clausal complements with internal subjects}
+        \label{fig:xcomp-final-final}
+    \end{figure}
     
-\subsection{The first auxiliary with non-finite POS}
-%4. correct_pos_of_1st_auxiliary(result):
-%    """ if the predicate has several aux verbs, the 1st one is finite, 
-%    hence shall have correct POS ["VBD"] = past, ["VBP","VBZ"]= present, ["MD"]- modal 
-Sometimes the first auxiliary in a clause is mistakenly labelled as a non-finite verb. For some words the exact POS is less important as it has not big impact on the CG graph and features but in the case of first auxiliary verb of a clause it makes a big difference. It has an impact on determining the finiteness of the clause in a latter stage of the algorithm.
+    %2. xcomp with subject  # if (VB-xcomp-VB1, VB1-[csubj,nsubj,nsubjpass]) then transform into VB-ccompl-VB1 
+    %	it seems possible in SD but we don't want it. 
+    %	    for a clause to be xcomped and have a subject. 
+    %	     even if the xcomped clause is usually nonfinite, it still has subject.
+    %	     ccomped clauses are expected to be finite and have subject.
+    %	     we rurn the xcomps with subj into ccomps with subj, even if they 
+    %	     are nonfinite
+        
+\subsection{First auxiliary of non-finite POS}
+    %4. correct_pos_of_1st_auxiliary(result):
+    %    """ if the predicate has several aux verbs, the 1st one is finite, 
+    %    hence shall have correct POS ["VBD"] = past, ["VBP","VBZ"]= present, ["MD"]- modal 
+    Sometimes the first auxiliary in a clause is mistakenly labelled as a non-finite verb. For some words the exact POS is less important as it has no large impact on the CG graph and features. But, in the case of first auxiliary verb of a clause, it makes a substantial difference. It has an impact on determining the finiteness of the clause in a later stage of the algorithm. The algorithm therefore checks the POS of the first auxiliary according to the mapping defined in Table \ref{tab:aux-pos}.
 
-The algorithm is thus checking that the POS of the first auxiliary is according to the mapping defined in the Table \ref{tab:aux-pos}.
-\begin{table}[!ht]
-\centering
-	\begin{tabulary}{0.8\textwidth}{|L|L|L|}
-	\hline \textit{word} & \textit{POS} & \textit{notes} \\ 
-	\hline shall, should, must, may, might, can, could, will, would & MD & modals \\ 
-	\hline do, have, am, are & VBP & present \\ 
-	\hline has, is & VBZ & present 3rd person \\ 
-	\hline did, had, was, were & VBD & past \\ 
-	\hline 
-	\end{tabulary}
-\caption{Mapping lexical forms of auxiliaries to their POS}
-\label{tab:aux-pos}
-\end{table}
-
+    \begin{table}[!ht]
+    \centering
+    	\begin{tabulary}{0.99\textwidth}{|L|L|L|}
+    	\hline \textit{word} & \textit{POS} & \textit{notes} \\ 
+    	\hline shall, should, must, may, might, can, could, will, would & MD & modals \\ 
+    	\hline do, have, am, are & VBP & present \\ 
+    	\hline has, is, does & VBZ & present 3rd person \\ 
+    	\hline did, had, was, were & VBD & past \\ 
+    	\hline 
+    	\end{tabulary}
+    \caption{Mapping lexical forms of auxiliaries to their POS}
+    \label{tab:aux-pos}
+    \end{table}
+    
+    In this stage the part of speech of the first verb in a clause is checked whether it is found in the list of words mentioned in Table \ref{tab:aux-pos}. If it is present then the part of speech is verified to coincide with the expected POS provided in the table. When they do not coincide the POS is replaces according to the value in the table.  
+    
 \subsection{Prepositional phrases as false prepositional clauses}
-%5. correct_pepc_without_verb(result):
-%    """ 
-%        assuming that the copulas are already changed,
-%      the successor node of the prepc link shall be a verb,
-%       otherwise it is not a prepc but a prep link
-%    """
+    %5. correct_pepc_without_verb(result):
+    %    """ 
+    %        assuming that the copulas are already changed,
+    %      the successor node of the prepc link shall be a verb,
+    %       otherwise it is not a prepc but a prep link
+    %    """
 
-\textit{prepc} is a relation that introduces, via a preposition, a clausal modifier for a verb, adjective or noun. Assuming that the copulas had been changed as described in subsection \ref{sec:copulas} then the head and the tail of the relation can only be a verb. However when the relation head is not a verb (only nouns encountered so far) then the relation needs to be corrected from \textit{prepc} to \textit{prep} introducing a prepositional phrase rather than a subordinate clause. 
+    \textit{prepc} is a relation that introduces, via a preposition, a clausal modifier for a verb, adjective or noun. Assuming that the copulas had been changed as described in subsection \ref{sec:copulas} then the head and the tail of the relation can only be a verb. However when the relation head is not a verb (only nouns encountered so far) then the relation needs to be corrected from \textit{prepc} to \textit{prep} introducing a prepositional phrase rather than a subordinate clause. 
 
-\begin{figure}[!ht]
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb1){VB1};
-	\node[pattern-node, anchor=center, right=3em of vb1, yshift=-2em] (in){IN};
-	\node[pattern-node, anchor=center, right=3em of in, yshift=2em] (vb2){NN};
-	\path (vb1) edge[edge-style] node[above] {prepc\_xxx} (vb2);
-	\end{tikzpicture}
-\caption{Mislabelled prepositional phrase as clausal modifier}
-\label{fig:prepc-init}
-\end{minipage}
-\quad
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb1){VB1};
-	\node[pattern-node, anchor=center, right=3em of vb1, yshift=-2em] (in){IN};
-	\node[pattern-node, anchor=center, right=3em of in, yshift=2em] (vb2){NN};
-	\path (vb1) edge[edge-style] node[above] {prep\_xxx} (vb2);
-	\end{tikzpicture}
-	\caption{Corrected prepositional phrase}
+    \begin{figure}[!ht]
+    \centering
+    \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb1){VB1};
+        	\node[pattern-node, anchor=center, right=3em of vb1, yshift=-2em] (in){IN};
+        	\node[pattern-node, anchor=center, right=3em of in, yshift=2em] (vb2){NN};
+        	\path (vb1) edge[edge-style] node[above] {prepc\_xxx} (vb2);
+        	\end{tikzpicture}
+        \caption{Mislabelled prepositional phrase as clausal modifier}
+        \label{fig:prepc-init}
+        \end{subfigure}
+        \quad
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb1){VB1};
+        	\node[pattern-node, anchor=center, right=3em of vb1, yshift=-2em] (in){IN};
+        	\node[pattern-node, anchor=center, right=3em of in, yshift=2em] (vb2){NN};
+        	\path (vb1) edge[edge-style] node[above] {prep\_xxx} (vb2);
+        	\end{tikzpicture}
+        	\caption{Corrected prepositional phrase}
+        	\label{fig:prepc-final}
+        \end{subfigure}
+    \caption{Treating prepositional phrase links}
 	\label{fig:prepc-final}
-\end{minipage}
-\end{figure}
+    \end{figure}
 
 \subsection{Mislabelled infinitives}
 %6. correct_imperative_non_infinitives(result):
@@ -507,760 +535,798 @@ The algorithm is thus checking that the POS of the first auxiliary is according 
 %    if there is a VB pos that does not have an 'aux' dependency  to preposition 'to'
 %     then it is rather present simple than infinitive so the verb POs is VBP 
 %    """
-In English base form of the verb often coincides with present simple form (non 3^{rd} person). Therefore the POS tagger sometimes mislabels infinitive (VB) as present simple (VBP) the verb is  and vice versa. 
+    In English, the base form of the verb often coincides with present simple form (non $3^{rd}$ person). Therefore the POS tagger sometimes mislabels infinitive (VB) as present simple (VBP). 
 
+    The algorithm checks the presence of the preposition \textit{to} linked via \textit{aux} dependency relation positioned in front of the verb. If the preposition is present then the verb POS is changed to VB which is the correct POS for an infinitive form. Conversely, if the auxiliary preposition is not present the verb POS is changed into VBP, which corresponds to the present simple form of the verb. 
 
-The algorithm checks the presence of the preposition \textit{to} (linked via \textit{aux} dependency relation) in front of the verb. If the preposition is present then the verb POS is changed to VB and reverse, if the auxiliary preposition is not present the verb POS is changed into VBP. 
+    \begin{figure}[!ht]
+    \centering
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb1){VBP};
+        	\node[pattern-node, anchor=center, left=3em of vb1, ] (in){TO};
+        	\path (vb1) edge[edge-style] node[above] {aux} (in);
+        	\end{tikzpicture}
+        \caption{Infinitive mislabelled as present simple}
+        \label{fig:infinitive-init}
+        \end{subfigure}
+        \quad
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb1){VB};
+        	\node[pattern-node, anchor=center, left=3em of vb1, ] (in){TO};
+        	\path (vb1) edge[edge-style] node[above] {aux} (in);
+        	\end{tikzpicture}
+        	\caption{Correct infinitive}
+        	\label{fig:infinitive-final}
+        \end{subfigure}
+        \caption{Treating infinitives}
+    	\label{fig:infinitive-final-final}
+    \end{figure}
 
-\begin{figure}[!ht]
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb1){VBP};
-	\node[pattern-node, anchor=center, left=3em of vb1, ] (in){TO};
-	\path (vb1) edge[edge-style] node[above] {aux} (in);
-	\end{tikzpicture}
-\caption{Infinitive mislabelled as present simple}
-\label{fig:infinitive-init}
-\end{minipage}
-\quad
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb1){VB};
-	\node[pattern-node, anchor=center, left=3em of vb1, ] (in){TO};
-	\path (vb1) edge[edge-style] node[above] {aux} (in);
-	\end{tikzpicture}
-	\caption{Correct infinitive}
-	\label{fig:infinitive-final}
-\end{minipage}
-\end{figure}
-
-\begin{figure}[!ht]
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb1){VB};
-	\node[pattern-node-negative, anchor=center, left=3em of vb1] (in){TO};
-	\path (vb1) edge[edge-style] node[above] {aux} (in);
-	\end{tikzpicture}
-\caption{Present simple mislabelled as infinitive}
-\label{fig:present-simple-init}
-\end{minipage}
-\quad
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb1){VBP};
-	\node[pattern-node-negative, anchor=center, left=3em of vb1] (in){TO};
-	\path (vb1) edge[edge-style] node[above] {aux} (in);
-	\end{tikzpicture}
-	\caption{Correct present simple}
-	\label{fig:present-simple-final}
-\end{minipage}
-\end{figure}
+    \begin{figure}[!ht]
+    \centering
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb1){VB};
+        	\node[pattern-node-negative, anchor=center, left=3em of vb1] (in){TO};
+        	\path (vb1) edge[edge-style] node[above] {aux} (in);
+        	\end{tikzpicture}
+        \caption{Present simple mislabelled as infinitive}
+        \label{fig:present-simple-init}
+        \end{subfigure}
+        \quad
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb1){VBP};
+        	\node[pattern-node-negative, anchor=center, left=3em of vb1] (in){TO};
+        	\path (vb1) edge[edge-style] node[above] {aux} (in);
+        	\end{tikzpicture}
+        	\caption{Correct present simple}
+        	\label{fig:present-simple-final}
+        \end{subfigure}
+        \caption{Treating present simple}
+        \label{fig:present-simple-final-final}
+    \end{figure}
     
 \subsection{Attributive verbs mislabelled as adjectives}
-%7. correct_pos_of_predicate(dg):
-%    """
-%        if a node has a subject then it is a verb
-%        eg: That    movie    upset/JJ    Ivy    .
-%    """
-In English, \textit{attributive verbs} often have the same lexical form as their corresponding adjectives. This is a reason for POS being mislabelled adjective(JJ) instead of verb (VB) leading to situations when an adjective (JJ) has an outgoing subject relation which means that its POS should actually be VB. The algorithm checks for such cases and corrects the JJ POS into VBP (non 3^{rd} person present simple).
+    %7. correct_pos_of_predicate(dg):
+    %    """
+    %        if a node has a subject then it is a verb
+    %        eg: That    movie    upset/JJ    Ivy    .
+    %    """
+    In English, \textit{attributive verbs} often have the same lexical form as their corresponding adjectives. This is a reason for the POS being mislabelled as adjective (JJ) instead of verb (VB) leading to situations when an adjective (JJ) has an outgoing subject relation which means that its POS should actually be VB. The algorithm checks for such cases and corrects the JJ POS into VBP (non $3^{rd}$ person present simple).
 
-\begin{figure}[!ht]
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb1){VB};
-	\node[pattern-node, anchor=center, left=5em of vb1] (in){X};
-	\path (vb1) edge[edge-style] node[above] {aux} (in);
-	\end{tikzpicture}
-\caption{Mislabelled attributive verb}
-\label{fig:attributive-verb-init}
-\end{minipage}
-\quad
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb1){VBP};
-	\node[pattern-node, anchor=center, left=5em of vb1] (in){X};
-	\path (vb1) edge[edge-style] node[text centered, align=center] {nsubj,\\ nsubjpass} (in);
-	\end{tikzpicture}
-	\caption{Corrected attributive verb}
-	\label{fig:attributive-verb-final}
-\end{minipage}
-\end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb1){JJ};
+        	\node[pattern-node, anchor=center, left=5em of vb1] (in){X};
+        	\path (vb1) edge[edge-style] node[above] {nsubj,\\ nsubjpass} (in);
+        	\end{tikzpicture}
+        \caption{Mislabelled attributive verb}
+        \label{fig:attributive-verb-init}
+        \end{subfigure}
+        \quad
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb1){VBP};
+        	\node[pattern-node, anchor=center, left=5em of vb1] (in){X};
+        	\path (vb1) edge[edge-style] node[text centered, align=center] {nsubj,\\ nsubjpass} (in);
+        	\end{tikzpicture}
+        	\caption{Corrected attributive verb}
+        	\label{fig:attributive-verb-final}
+        \end{subfigure}
+        \caption{Treating adjectives with subject as verbs}
+    	\label{fig:attributive-verb-final-final}
+    \end{figure}
 
 \subsection{Non-finite verbal modifiers with clausal complements}
-%8. correct_misplaced_ccomp_on_partmod_node(dep_graph):
-%    """
-%        IF the partmod child node contains a ccomp link, then 
-%        the ccomp link shall be placed on the parent  
-%        
-%        Eg: Tell the boy playing the piano that he is good. 
-%    """
-The early version of Stanford Dependencies \citep{Marneffe2008} proposes two relations for non-finite vernal modifiers \textit{partmod} for participial and \textit{infmod} for infinitival forms exemplified in \ref{ex:boy1}.% and \ref{ex:anything1}. 
-Latter in \citep{Marneffe2014} both relations have been merged into the \textit{vmod}.
+    %8. correct_misplaced_ccomp_on_partmod_node(dep_graph):
+    %    """
+    %        IF the partmod child node contains a ccomp link, then 
+    %        the ccomp link shall be placed on the parent  
+    %        
+    %        Eg: Tell the boy playing the piano that he is good. 
+    %    """
+    The early version of Stanford Dependencies \citep{Marneffe2008} proposes two relations for non-finite verbal modifiers \textit{partmod} for participial and \textit{infmod} for infinitival forms exemplified in Example \ref{ex:boy1}. % and \ref{ex:anything1}. 
+    Later in \citet{Marneffe2014} both relations are merged into \textit{vmod}.
 
-\begin{exe}
-\ex\label{ex:boy1} Tell the boy playing the piano that he is good.
-%\ex\label{ex:anything1} I don't have anything to say to you. 
-\end{exe}
+    \begin{exe}
+    \ex\label{ex:boy1} Tell the boy playing the piano that he is good.
+    %\ex\label{ex:anything1} I don't have anything to say to you. 
+    \end{exe}
 
-Clauses such as ``(that) he is good'' following immediately after the qualifier clause (``playing the piano'' in the example \ref{ex:boy1}) are problematic with respect to where shall they be attached: to the main clause or to the modifying one. This problem is similar to the prepositional phrase attachment problem. 
+    Clauses such as ``(that) he is good'' following immediately after the qualifier clause (``playing the piano'' in the example \ref{ex:boy1}) are problematic with respect to where they shall be attached: to the main clause or to the modifying one. This problem is similar to the prepositional phrase attachment problem. 
 
-In this case, of course, attachment would depend on whether the verb accepts a clausal complement or not. In the example \ref{ex:boy1} the verb \textit{to play} does not take clausal complements then the clause ``that he is good'' is complementing ``tell the boy''. Stanford parser does not take into consideration such constraints and sometimes provides an incorrect attachment.
+    In this case, of course, attachment would depend on whether the verb accepts a clausal complement or not. In Example \ref{ex:boy1} the verb \textit{to play} does not take clausal complements and so the clause ``that he is good'' is complementing ``tell the boy''. The Stanford parser does not take into consideration such constraints and sometimes provides an incorrect attachment.
 
-This type of error can be captured as the graph pattern in Figure \ref{fig:ccomp-vmod-init} which is transformed by the algorithm into the form represented in Figure \ref{fig:ccomp-vmod-final}
-\begin{figure}[!ht]
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb1){VB1};
-	\node[pattern-node, anchor=center, below = 3em of vb1](nn){NN};
-	\node[pattern-node, anchor=center, right=3.6em of nn](vb2){VB2};
-	\node[pattern-node, anchor=center, right=3.5em of vb2](vb3){VB3};
-	\path (vb1) edge[edge-style] node[right] {rel_{...}} (nn);
-	\path (nn) edge[edge-style] node[above, text centered, align=center] {vmod} (vb2);
-	\path (vb2) edge[edge-style] node[above, text centered, align=center] {ccomp} (vb3);
-	\end{tikzpicture}
-\caption{Clausal complement attached to the modifier clause}
-\label{fig:ccomp-vmod-init}
-\end{minipage}
-\quad
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-		\node[pattern-node, anchor=center] (vb1){VB1};
-		\node[pattern-node, anchor=center, below = 3em of vb1](nn){NN};
-		\node[pattern-node, anchor=center, right=3.6em of nn](vb2){VB2};
-		\node[pattern-node, anchor=center, right=2em of vb2](vb3){VB3};
-		\path (vb1) edge[edge-style] node[right] {rel_{...}} (nn);
-		\path (nn) edge[edge-style] node[above, text centered, align=center] {vmod} (vb2);
-		\path (vb1) edge[edge-style] node[above, text centered, align=center] {ccomp} (vb3);
-		\end{tikzpicture}
-	\caption{Clausal complement attached to the main clause}
-	\label{fig:ccomp-vmod-final}
-\end{minipage}
-\end{figure}
+    This type of error can be captured as the graph pattern in Figure \ref{fig:ccomp-vmod-init} which is transformed by the algorithm into the form represented in Figure \ref{fig:ccomp-vmod-final}.
+    
+    \begin{figure}[!ht]
+        \centering
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb1){VB1};
+        	\node[pattern-node, anchor=center, below = 3em of vb1](nn){NN};
+        	\node[pattern-node, anchor=center, right=3.6em of nn](vb2){VB2};
+        	\node[pattern-node, anchor=center, right=3.5em of vb2](vb3){VB3};
+        	\path (vb1) edge[edge-style] node[right] {rel_{...}} (nn);
+        	\path (nn) edge[edge-style] node[above, text centered, align=center] {vmod} (vb2);
+        	\path (vb2) edge[edge-style] node[above, text centered, align=center] {ccomp} (vb3);
+        	\end{tikzpicture}
+        \caption{Clausal complement attached to the modifier clause}
+        \label{fig:ccomp-vmod-init}
+        \end{subfigure}
+        \quad
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}[]
+        		\node[pattern-node, anchor=center] (vb1){VB1};
+        		\node[pattern-node, anchor=center, below = 3em of vb1](nn){NN};
+        		\node[pattern-node, anchor=center, right=3.6em of nn](vb2){VB2};
+        		\node[pattern-node, anchor=center, right=2em of vb2](vb3){VB3};
+        		\path (vb1) edge[edge-style] node[right] {rel_{...}} (nn);
+        		\path (nn) edge[edge-style] node[above, text centered, align=center] {vmod} (vb2);
+        		\path (vb1) edge[edge-style] node[above, text centered, align=center] {ccomp} (vb3);
+        		\end{tikzpicture}
+        	\caption{Clausal complement attached to the main clause}
+        	\label{fig:ccomp-vmod-final}
+        \end{subfigure}
+        \caption{Treating clausal complements of the verbal modifiers}
+        \label{fig:ccomp-vmod-final-final}
+    \end{figure}
 
-Syntactic structure is not enough to capture this error which originates in the semantic influences on the syntax. To grasp the them an extra constraint check is the possible lexico-semantic type of the verb. As only verbal and cognition process types can take clausal complements as phenomena then the verb in the higher clause VB_1 heeds to be capable of accepting clausal complement VB_2 before performing the reattachment. In other words, if VB_1 is capable of accepting two complements (i.e. di-transitive) then most likely the VB_2 is a complement, otherwise it is certainly not.
+    Syntactic structure is not enough to capture this error because it originates in the semantic influences on the syntax. To grasp them an extra constraint check is the possible lexico-semantic type of the verb. As only verbal and cognition process types can take clausal complements as phenomena, the verb in the higher clause $VB_1$ heeds to be capable of accepting clausal complement $VB_2$ before performing the reattachment. In other words, if $VB_1$ is capable of accepting two complements (i.e. di-transitive) then most likely $VB_2$ is a complement, otherwise it is certainly not.
 
-%\begin{figure}[!ht]
-%\centering
-%\begin{dependency}[dep-style]
-%		\begin{deptext}[]
-%	Tell \& the \& boy \& playing \& the \& piano \& that \& he \& is \& good \& . \\
-%		\end{deptext}
-%		\depedge{3}{4}{partmod}
-%	\end{dependency}
-%\caption{Participial verbal modifier}
-%\label{fig:partmod1}
-%\end{figure}
-%\begin{figure}[!ht]
-%\centering
-%	\begin{dependency}[dep-style]
-%		\begin{deptext}[]
-%	I \& don \& 't \& have \& anything \& to \& say \& to \& you. \\
-%		\end{deptext}
-%		\depedge{5}{7}{infmod}
-%	\end{dependency}
-%\caption{infinitival verbal modifier}
-%\label{fig:infmod1}
-%\end{figure}
+    %\begin{figure}[!ht]
+    %\centering
+    %\begin{dependency}[dep-style]
+    %		\begin{deptext}[]
+    %	Tell \& the \& boy \& playing \& the \& piano \& that \& he \& is \& good \& . \\
+    %		\end{deptext}
+    %		\depedge{3}{4}{partmod}
+    %	\end{dependency}
+    %\caption{Participial verbal modifier}
+    %\label{fig:partmod1}
+    %\end{figure}
+    %\begin{figure}[!ht]
+    %\centering
+    %	\begin{dependency}[dep-style]
+    %		\begin{deptext}[]
+    %	I \& don \& 't \& have \& anything \& to \& say \& to \& you. \\
+    %		\end{deptext}
+    %		\depedge{5}{7}{infmod}
+    %	\end{dependency}
+    %\caption{infinitival verbal modifier}
+    %\label{fig:infmod1}
+    %\end{figure}
 
 
 \subsection{Demonstratives with a qualifier}
-%9. correct_DT_prep_NN(dep_graph):
-%    """
-%     if there is a DT(determiner) connected 
-%     to a NN via preposition, then the NN is 
-%     part of a PP that is a sibling of DT
-%     
-%     EG: ... and put that[DT] in the pan[NN]
-%     NN shall de compl/adjunct of "put" and not a qualifier of DT
-%    """
-Demonstratives (\textit{this, that, these, those}) occurs as both determines and as pronouns. In English, when demonstratives are used as determiners, they function as Deictic element of a nominal group i.e. modifying the head of the nominal group. When used as pronouns, demonstratives never form phrases but occur as single words filling a clause element. Translated into dependency grammar demonstratives may have as parent either a noun (NN) or a verb (VB*). 
+    %9. correct_DT_prep_NN(dep_graph):
+    %    """
+    %     if there is a DT(determiner) connected 
+    %     to a NN via preposition, then the NN is 
+    %     part of a PP that is a sibling of DT
+    %     
+    %     EG: ... and put that[DT] in the pan[NN]
+    %     NN shall de compl/adjunct of "put" and not a qualifier of DT
+    %    """
+    Demonstratives (\textit{this, that, these, those}) occur as both determiners and as pronouns. In English, when demonstratives are used as determiners, they function as a Deictic element of a nominal group, i.e. modifying the head of the nominal group. When used as pronouns, demonstratives never form phrases but occur as single words filling a clause element. Translated into dependency grammar, demonstratives may have as parent either a noun (NN) or a verb (VB*). 
+    
+    Examples below show uses of demonstratives in both cases. The word (thing/things) enclosed between round brackets should not be read as part of the sentence. These examples show that having those generic nouns in the sentence is grammatically correct but if they are missing the meaning is not changing because they implied by the demonstrative pronouns.
 
-Examples below show uses of demonstratives in both cases. The word (thing/things)* enclosed between round brackets are not part of the sentence but are elipted.  
+    \begin{exe}
+        \ex\label{ex:demonstrative1} Bill moved those beyond the counter.
+        \ex\label{ex:demonstrative2} Put that in our plan.
+        \ex\label{ex:demonstrative3} Look at those (things) beyond the counter.
+        \ex\label{ex:demonstrative4} What is that (thing) next to the screen?
+        \ex\label{ex:demonstrative5} I thought those (things) about him as well.
+        \ex\label{ex:demonstrative6} He felt that (thing) as a part of him. 
+    \end{exe}
 
-\begin{exe}
-\ex\label{ex:demonstrative1} Bill moved those beyond the counter.
-\ex\label{ex:demonstrative2} Put that in our plan.
-\ex\label{ex:demonstrative3} Look at those (things)* beyond the counter.
-\ex\label{ex:demonstrative4} What is that (thing)* next to the screen?
-\ex\label{ex:demonstrative5} I thought those (things)* about him as well.
-\ex\label{ex:demonstrative6} He felt that (thing)* as a part of him. 
-\end{exe}
-When demonstratives are followed by a prepositional phrase the question arises whether it shall be attached to the verb and take a clause role or it should be attached to the demonstrative as post-modifier. I shall note that demonstratives cannot take by themselves a post-modifier in either case as determiner or pronoun. 
+    When a demonstrative is followed by a prepositional phrase the question arises whether the prepositional phrase shall be attached to the verb and take a role in the clause or it should be attached as post-modifier to the demonstrative. I shall note that demonstratives cannot take by themselves a post-modifier in either case as determiner or pronoun. 
 
-However there are cases when apparently the post-modifier (prepositional phrase) pertains to the demonstrative like in the examples \ref{ex:demonstrative3} and \ref{ex:demonstrative4} and cases such as \ref{ex:demonstrative5} and \ref{ex:demonstrative6} when the post-modifier pertains to teh clause. 
+    However there are cases when apparently the post-modifier (prepositional phrase) pertains to the demonstrative as in Examples \ref{ex:demonstrative3} and \ref{ex:demonstrative4} and in cases such as Examples \ref{ex:demonstrative5} and \ref{ex:demonstrative6} when the post-modifier pertains to the clause. 
 
-In fact the only acceptable analysis for apparently a demonstrative with a Qualifier (i.e. post-modifier) can be analysed as noun phrases with the Thing missing (elipted) and the Deictic taking the role of the Head. The implied missing head is the generic noun ``thing(s)'' or any noun anaphorically binding the demonstrative.
+    In fact the only acceptable analysis for apparently a demonstrative with a Qualifier (i.e. post-modifier) is as noun phrases with the Thing missing and the Deictic taking the role of the Head. The implied missing head is the generic noun ``thing(s)'' or any noun anaphorically binding the demonstrative.
 
-The verb argument structure and syntactic constraints on the arguments described in the Transitivity classification of process types enable precise distinctions of such cases. However at this stage the algorithm does not employ this type of information. Therefore as a rule of thumb, the prepositional phrase following the demonstrative shall be attached to the verb in the case of non-projective\footnote{Projective verbs express cognitive and verbal processes like saying, thinking or imagining and often they verbs are di-transitive.} di-transitive verbs which are \textit{three role actions} and \textit{directional} processes.
+    The verb argument structure and syntactic constraints on the arguments described in the Transitivity classification of process types enable precise distinctions of such cases. However at this stage the algorithm does not employ this type of information. Therefore as a rule of thumb, the prepositional phrase following the demonstrative shall be attached to the verb in the case of non-projective\footnote{Projective verbs express cognitive and verbal processes like saying, thinking or imagining and often they verbs are di-transitive.} di-transitive verbs which are \textit{three role actions} and \textit{directional} processes.
 
-In examples \ref{ex:demonstrative1} and \ref{ex:demonstrative2}, attaching the prepositional phrase to the demonstratives (depicted in Figure \ref{fig:demonstrative-init}) is incorrect. It should be attached to the verb (like in the figure \ref{fig:demonstrative-final}) because the prepositional phrase can function as Destination or Location in each case i.e take semantic roles. 
+    In Examples \ref{ex:demonstrative1} and \ref{ex:demonstrative2}, attaching the prepositional phrase to the demonstratives (depicted in Figure \ref{fig:demonstrative-init}) is incorrect. It should be attached to the verb (as in the Figure \ref{fig:demonstrative-final}) because the prepositional phrase can function as Destination or Location in each case i.e take semantic roles. 
 
-The algorithm detects cases of demonstratives that have attached a prepositional phrase. If the parent verb is a three role action or a directional process then the prepositional phrase is reattached to the verb.
+    The algorithm detects cases of demonstratives that have attached a prepositional phrase. If the parent verb is a three role action or a directional process then the prepositional phrase is reattached to the verb.
 
-\begin{figure}[!ht]
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb1){VB\\(three role action, directional)};
-	\node[pattern-node, anchor=center, below =2.5em of vb1,xshift=1em] (dt){DT \\ (demonstrative)};
-	\node[pattern-node, anchor=center, below right =2.3em of dt,xshift=-2em] (in){IN};
-	\node[pattern-node, anchor=center, right =1em of in] (nn){NN};
-	\path (vb1) edge[edge-style] node[left] {dobj} (dt);
-	\path (dt) edge[edge-style] node[above right] {prep\_xxx} (nn);
-	\end{tikzpicture}
-\caption{Prepositional phrase attached to the demonstrative determiner which is the head of a nominal group}
-\label{fig:demonstrative-init}
-\end{minipage}
-\quad
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb1){VB\\(three role action, directional)};
-	\node[pattern-node, anchor=center, below =2.5em of vb1,xshift=1em] (dt){DT};
-	\node[pattern-node, anchor=center, right =1em of dt] (in){IN};
-	\node[pattern-node, anchor=center, right =1.5em of in] (nn){NN};
-	\path (vb1) edge[edge-style] node[left] {dobj} (dt);
-	\path (vb1) edge[edge-style] node[above right] {prep\_xxx} (nn);
-	\end{tikzpicture}
-	\caption{Prepositional Phrase attached to the verb with a demonstrative pronoun in between}
-	\label{fig:demonstrative-final}
-\end{minipage}
-\end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+            \resizebox{0.97\textwidth}{!}{%
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb1){VB\\(three role action, directional)};
+        	\node[pattern-node, anchor=center, below =2.5em of vb1,xshift=1em] (dt){DT \\ (demonstrative)};
+        	\node[pattern-node, anchor=center, below right =2.3em of dt,xshift=-2em] (in){IN};
+        	\node[pattern-node, anchor=center, right =1em of in] (nn){NN};
+        	\path (vb1) edge[edge-style] node[left] {dobj} (dt);
+        	\path (dt) edge[edge-style] node[above right] {prep\_xxx} (nn);
+        	\end{tikzpicture}
+        	}
+        \caption{Prepositional phrase attached to the demonstrative determiner which is the head of a nominal group}
+        \label{fig:demonstrative-init}
+        \end{subfigure}
+        \quad
+        \begin{subfigure}[t]{0.45\linewidth}
+        \centering
+            \resizebox{0.97\textwidth}{!}{%
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb1){VB\\(three role action, directional)};
+        	\node[pattern-node, anchor=center, below =2.5em of vb1,xshift=1em] (dt){DT};
+        	\node[pattern-node, anchor=center, right =1em of dt] (in){IN};
+        	\node[pattern-node, anchor=center, right =1.5em of in] (nn){NN};
+        	\path (vb1) edge[edge-style] node[left] {dobj} (dt);
+        	\path (vb1) edge[edge-style] node[above right] {prep\_xxx} (nn);
+        	\end{tikzpicture}
+        	}
+        	\caption{Prepositional Phrase attached to the verb with a demonstrative pronoun in between}
+        	\label{fig:demonstrative-final}
+        \end{subfigure}
+        \caption{Treating the attachment of prepositional phrases preceded by the demonstratives}
+        \label{fig:demonstrative-final-final}
+    \end{figure}
 
-Ideally, the algorithm should also change the POS of the demonstrative into pronoun but unfortunately Penn tag-set only contains personal and possesive pronouns. The demonstratives are always labelled as determiners so no POS change is made to the dependency graph but it is properly represented when converted into the constituency graph.
+    Ideally, the algorithm should also change the POS of the demonstrative into pronoun but unfortunately, Penn tag-set only contains personal and possessive pronouns. The demonstratives are always labelled as determiners so no POS change is made to the dependency graph but it is properly represented when converted into the constituency graph.
 
-\subsection{Topicalized complements labelled as second subjects}   
-%10. correct_two_subjects(dep_graph):
-%    """
-%        If there are two subjects then:
-%        * give priority to the one closer to the verb 
-%        * give priority to PR ovr NN OR
-%        
-%        current implementation takes only proximity to the verb into consideration 
-%        
-%        Ex: Any vitamins I could be lacking ?
-%        det(vitamin-2, any-1)
-%        nsubj(lack-6, vitamin-2)
-%        nsubj(lack-6, I-3)
-%        aux(lack-6, could-4)
-%        aux(lack-6, be-5)
-%        root(ROOT-0, lack-6)
-%    """ 
-In generative grammars the topicalization (or thematic fronting) of complements is described in \textit{Trace Theory} as \textit{WH/NP/PP-movement}. Examples \ref{ex:thematic-compl1}--\ref{ex:thematic-compl5} (from \citep[pp.~412-413]{Quirk1985}) present this phenomena. It is used in informal speech where it is quite common for an element to be fronted with a nuclear stress thus being informationally and thematically stressed. Alternatively this phenomena is used as a rhetorical style to point parallelism between two units and occurs in adjacent clauses like in examples \ref{ex:thematic-compl4}--\ref{ex:thematic-compl5}.
+\subsection{Topicalised complements labelled as second subjects}   
+    %10. correct_two_subjects(dep_graph):
+    %    """
+    %        If there are two subjects then:
+    %        * give priority to the one closer to the verb 
+    %        * give priority to PR ovr NN OR
+    %        
+    %        current implementation takes only proximity to the verb into consideration 
+    %        
+    %        Ex: Any vitamins I could be lacking ?
+    %        det(vitamin-2, any-1)
+    %        nsubj(lack-6, vitamin-2)
+    %        nsubj(lack-6, I-3)
+    %        aux(lack-6, could-4)
+    %        aux(lack-6, be-5)
+    %        root(ROOT-0, lack-6)
+    %    """ 
+    %In generative grammars 
+    The topicalisation (or thematic fronting) of complements is described in \textit{Trace Theory} as \textit{WH/NP/PP-movement}. Examples \ref{ex:thematic-compl1}--\ref{ex:thematic-compl5} from \citet[pp.~412-413]{Quirk1985} present this phenomena. It is used in informal speech where it is quite common for an element to be fronted with nuclear stress thus being informationally and thematically stressed. Alternatively this phenomena is used as a rhetorical style to point at parallelism between two units and occurs in adjacent clauses as in Examples \ref{ex:thematic-compl4}--\ref{ex:thematic-compl5}.
 
-\begin{exe}
-\ex\label{ex:thematic-compl1} Joe(,) his name is. 
-\ex\label{ex:thematic-compl2} Relaxation(,) you call it. 
-\ex\label{ex:thematic-compl3} Really good(,) cocktails they make at the hotel. 
-\ex\label{ex:thematic-compl3.5} Any vitamins(,) I could be lacking? 
-\ex\label{ex:thematic-compl4} His face(,) I'm not found of but his character I despise.
-\ex\label{ex:thematic-compl5} Rich(,) I may be (but that does not mean I'm happy).
-\end{exe}
+    \begin{exe}
+    \ex\label{ex:thematic-compl1} Joe(,) his name is. 
+    \ex\label{ex:thematic-compl2} Relaxation(,) you call it. 
+    % \ex\label{ex:thematic-compl3} Really good(,) cocktails they make at the hotel. 
+    \ex\label{ex:thematic-compl3.5} Any vitamins(,) I could be lacking? 
+    \ex\label{ex:thematic-compl4} His face(,) I'm not found of but his character I despise.
+    \ex\label{ex:thematic-compl5} Rich(,) I may be (but that does not mean I'm happy).
+    \end{exe}
 
-These are difficult cases for Stanford parser (tested with versions up to 3.5.1). None of the above examples are parsed correctly. However, if the comma is present between topicalized complement and the subject, then it produces parses that are closest to the correct one where the topicalized complement is labelled as second subject but still not a complement. So having a comma present helps. 
+    These are difficult cases for the Stanford parser (tested with versions up to 3.5.1). None of the above examples are parsed correctly. However, if the comma is present between topicalised complement and the subject, then it produces parses that are closest to the correct one where the topicalised complement is labelled as second subject but still not a complement. So having a comma present helps. 
 
-\begin{figure}[!ht]
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb1){VB\\(ditransitive)};
-	\node[pattern-node, anchor=center, below left=4.3em of vb1,xshift=4em] (s1){NN};
-	\node[pattern-node, anchor=center, left =1.3em of s1,xshift=0em] (s2){NN(,)};
-	\node[pattern-node, anchor=center, below right =4.3em of vb1,xshift=-4em] (c1){NN/PP/VB};
-	\path (vb1) edge[edge-style] node[right] {nsubj} (s1);
-	\path (vb1) edge[edge-style] node[above left] {nsubj} (s2);
-	\path (vb1) edge[edge-style] node[above right, xshift=0.5em, yshift=-1em] {dobj/iobj/ \\ prep/prepc} (c1);
-	\end{tikzpicture}
-\caption{Two consecutive nominal groups before the verb labelled as subjects}
-\label{fig:topic-complement-init}
-\end{minipage}
-\quad
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb1){VB\\(ditransitive)};
-	\node[pattern-node, anchor=center, below left=4.3em of vb1,xshift=4em] (s1){NN};
-	\node[pattern-node, anchor=center, left =1.3em of s1,xshift=0em] (s2){NN(,)};
-	\node[pattern-node, anchor=center, below right =4.3em of vb1,xshift=-4em] (c1){NN/PP/VB};
-	\path (vb1) edge[edge-style] node[right] {nsubj} (s1);
-	\path (vb1) edge[edge-style] node[above left] {dobj} (s2);
-	\path (vb1) edge[edge-style] node[above right, xshift=0.5em, yshift=-1em] {dobj/iobj/ \\ prep/prepc} (c1);
-	\end{tikzpicture}
-	\caption{Topicalized Direct Object -- moved to pre-subject position}
-	\label{fig:topic-complement-final}
-\end{minipage}
-\end{figure}
+    \begin{figure}[!ht]
+    \centering
+    
+        \begin{subfigure}[t]{0.47\linewidth}
+        \centering
+            \resizebox{0.97\textwidth}{!}{%
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb1){VB\\(ditransitive)};
+        	\node[pattern-node, anchor=center, below left=4.3em of vb1,xshift=4em] (s1){NN};
+        	\node[pattern-node, anchor=center, left =1.3em of s1,xshift=0em] (s2){NN(,)};
+        	\node[pattern-node, anchor=center, below right =4.3em of vb1,xshift=-4em] (c1){NN/PP/VB};
+        	\path (vb1) edge[edge-style] node[right] {nsubj} (s1);
+        	\path (vb1) edge[edge-style] node[above left] {nsubj} (s2);
+        	\path (vb1) edge[edge-style] node[above right, xshift=0.5em, yshift=-1em] {dobj/iobj/ \\ prep/prepc} (c1);
+        	\end{tikzpicture}
+        	}
+        \caption{Two consecutive nominal groups before the verb labelled as subjects}
+        \label{fig:topic-complement-init}
+        \end{subfigure}
+        \quad
+        \begin{subfigure}[t]{0.47\linewidth}
+        \centering
+            \resizebox{0.97\textwidth}{!}{%
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb1){VB\\(ditransitive)};
+        	\node[pattern-node, anchor=center, below left=4.3em of vb1,xshift=4em] (s1){NN};
+        	\node[pattern-node, anchor=center, left =1.3em of s1,xshift=0em] (s2){NN(,)};
+        	\node[pattern-node, anchor=center, below right =4.3em of vb1,xshift=-4em] (c1){NN/PP/VB};
+        	\path (vb1) edge[edge-style] node[right] {nsubj} (s1);
+        	\path (vb1) edge[edge-style] node[above left] {dobj} (s2);
+        	\path (vb1) edge[edge-style] node[above right, xshift=0.5em, yshift=-1em] {dobj/iobj/ \\ prep/prepc} (c1);
+        	\end{tikzpicture}
+        	}
+        	\caption{Topicalized Direct Object -- moved to pre-subject position}
+        	\label{fig:topic-complement-final}
+        \end{subfigure}
+    \caption{Treating consecutive nominal groups before the verb as topicalised Complement and Subject}
+	\label{fig:topic-complement-final-final}
+    \end{figure}
 
-The algorithm is looking for the cases of multiple subjects (represented in figure \ref{fig:topic-complement-init}) and gives priority to the one that is closest to the verb. The other one is relabelled as a complement (Figure \ref{fig:topic-complement-final}). The rule is generalized in the algorithm for multiple subjects even if so far only cases of two subjects have been observed.  
+    The algorithm is looking for the cases of multiple subjects (represented in figure \ref{fig:topic-complement-init}) and gives priority to the one that is closest to the verb. The other one is relabelled as a complement (Figure \ref{fig:topic-complement-final}). The rule is generalized in the algorithm for multiple subjects even if so far only cases of two subjects have been observed.  
 
 \subsection{Misinterpreted clausal complement of the auxiliary verb in interrogative clauses}
-%3. correct_interrogative_ccomp_to_aux(result):
-%    """ VB1-ccomp-VB2, VB2-[nsubj,csubj]-[PR,NN]; 
-%        VB1<[PR,NN]<VB2; VB1 is modal-VB or aux-VB;
-%        VB1 has no children 
-%        then ccomp->aux
-%    """
-%%TODO: explain
+    %3. correct_interrogative_ccomp_to_aux(result):
+    %    """ VB1-ccomp-VB2, VB2-[nsubj,csubj]-[PR,NN]; 
+    %        VB1<[PR,NN]<VB2; VB1 is modal-VB or aux-VB;
+    %        VB1 has no children 
+    %        then ccomp->aux
+    %    """
+    %%TODO: explain
+    Sometimes the auxiliary verb in the interrogative clauses (Examples \ref{ex:inter1} and \ref{ex:inter2}) is mistakenly used as a clause main verb. Instead of an \textit{aux} relation from the main verb to the auxiliary there is a clausal complement relation from the auxiliary to the main verb.
 
-Sometimes the auxiliary verb in the interrogative clauses (examples \ref{ex:inter1} and \ref{ex:inter2}) is mistakenly used as a clause main verb. Instead of \textit{aux} relation from the main verb to the auxiliary there is a clausal complement relation from the auxiliary to the main verb.
+    \begin{exe}
+    	\ex\label{ex:inter1} Do you walk alone?
+    	\ex\label{ex:inter2} Has Jane fed the cat?
+    \end{exe}
 
-\begin{exe}
-	\ex\label{ex:inter1} Do you walk alone?.
-	\ex\label{ex:inter2} Has Jane fed the cat?.
-\end{exe}
+    The algorithm searches for the pattern depicted in Figure \ref{fig:aux-init} and transforms it into the form Figure \ref{fig:aux-final}. 
 
-The algorithm searched for the pattern depicted in Figure \ref{fig:aux-init} and transforms it into the form Figure \ref{fig:aux-final}. 
+    \begin{figure}[!ht]
+    \centering
+        \begin{subfigure}[b]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb1){VB1};
+        	\node[pattern-node, anchor=center, below right=3em of vb1,xshift=-2em] (s){NN};
+        	\node[pattern-node, anchor=center, right=3em of s] (vb2){VB2};
+        	\path (vb2) edge[edge-style] node[below] {nsubj} (s);
+        	\path (vb1) edge[edge-style] node[above right] {ccomp} (vb2);
+        	\end{tikzpicture}
+        \caption{Mislabelled clausal complement}
+        \label{fig:aux-init}
+        \end{subfigure}
+        \quad
+        \begin{subfigure}[b]{0.45\linewidth}
+        \centering
+        	\begin{tikzpicture}[]
+        	\node[pattern-node, anchor=center] (vb2){VB2};
+        	\node[pattern-node, anchor=center, below left=3em of vb2,xshift=0em] (s){NN};
+        	\node[pattern-node, anchor=center, left=1em of s] (vb1){VB1};
+        	\path (vb2) edge[edge-style] node[below right] {nsubj} (s);
+        	\path (vb2) edge[edge-style] node[above left] {aux} (vb1);
+        	\end{tikzpicture}
+        	\caption{Corrected clausal complement}
+        	\label{fig:aux-final}
+        \end{subfigure}
+    \caption{Treating clausal complements in interrogative clauses}
+    \label{fig:aux-final-final}
+    \end{figure}
 
-\begin{figure}[!ht]
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb1){VB1};
-	\node[pattern-node, anchor=center, below right=3em of vb1,xshift=-2em] (s){NN};
-	\node[pattern-node, anchor=center, right=3em of s] (vb2){VB2};
-	\path (vb2) edge[edge-style] node[below] {nsubj} (s);
-	\path (vb1) edge[edge-style] node[above right] {ccomp} (vb2);
-	\end{tikzpicture}
-\caption{Mislabelled clausal complement}
-\label{fig:aux-init}
-\end{minipage}
-\quad
-\begin{minipage}{0.45\linewidth}
-\centering
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center] (vb2){VB2};
-	\node[pattern-node, anchor=center, below left=3em of vb2,xshift=0em] (s){NN};
-	\node[pattern-node, anchor=center, left=1em of s] (vb1){VB1};
-	\path (vb2) edge[edge-style] node[below right] {nsubj} (s);
-	\path (vb2) edge[edge-style] node[above left] {aux} (vb1);
-	\end{tikzpicture}
-	\caption{Corrected clausal complement}
-	\label{fig:aux-final}
-\end{minipage}
-\end{figure}
-
-\section{Creation of systemic constituency graph from dependency graph}
+\section{Creation of systemic constituency graphs from dependency graphs}
 \label{sec:creation-constituency-graph}
-This section describes how the systemic constituency structure is generated from the dependency graph. This is known in computer science as graph/tree rewriting. 
-
-In the prototype implementation no pre-existing algorithm has been used for graph rewriting but the focus was directed towards understanding the specificities of transforming from dependency into systemic constituency graphs. In the future work the algorithm can be replaced with the state of the art methods in graph rewriting. 
+    This section describes how the systemic constituency structure is generated from the dependency graph. This is treated in computer science as \textit{graph/tree rewriting}. This is treated by \citet{barendregt1987term}, \citet{courcelle1990graph}, \citet{plasmeijer1993functional} and \citet{grzegorz1999handbook}, to name just a few. At the time of developing the Parsimonious Vole parser I was not aware of this work and have implemented my own method of graph rewriting. Because in the prototype implementation no pre-existing algorithm has been used, future work could integrate the state of the art methods in graph rewriting. This section explains the algorithms employed for rewriting dependency graphs into systemic functional constituency graphs. The focus here is directed towards understanding what is needed for transforming from dependency into systemic constituency graphs.  
  
-The currently implemented process consists of DG traversal and execution of generative operations on a parallel structure, progressively building the CG. The choice of the generative operation is based on a rule table described in Section \ref{sec:rule-table} The DGs and CGs resemble each other but they are not isomorphic. The CG is created in two phases presented in the Algorithm \ref{alg:creation-of-cg}. The first phase, through a top-down breadth-first traversal of a DG, generates, using a rule-set, an incomplete CG that misses the heads and few other elements for each CG unit. Also no unit classes are specified, with except if that unit is a clause. The second phase, through a bottom-up DG traversal, complements the first one ensuring creation of all CG constituents, corresponding to missing unit elements and assigns the unit class. 
+    The currently implemented process consists of DG traversal and execution of generative operations on a parallel structure, progressively building the CG. The choice of the generative operation is based on a rule table described in Section \ref{sec:rule-table} The DGs and CGs resemble each other but they are not isomorphic. The CG is created in two phases presented in Algorithm \ref{alg:creation-of-cg}. The first phase, through a top-down breadth-first traversal of a DG, generates, using a rule-set, an incomplete CG that omits the heads and a few other elements for each CG unit. Also, no unit classes are specified, except if that unit is a clause. The second phase, through a bottom-up DG traversal, complements the first one ensuring creation of all CG constituents corresponding to missing unit elements and assigns the unit class. 
 
-\begin{algorithm}[!ht]
-	\Input{ \dg (the dependency graph), \rt }
-	\Output{ \cg (the constituency graph)}
-	\Begin{
-		create the partial \cg by top-down traversal \;
-		complete the \cg by bottom-up traversal \; 
-	}
-	\caption{Creation of the constituency graph}
-	\label{alg:creation-of-cg}
-\end{algorithm}
+    \begin{algorithm}[!ht]
+    	\Input{ \dg (the dependency graph), \rt }
+    	\Output{ \cg (the constituency graph)}
+    	\Begin{
+    		create the partial \cg by top-down traversal \;
+    		complete the \cg by bottom-up traversal \; 
+    	}
+    	\caption{Creation of the constituency graph}
+    	\label{alg:creation-of-cg}
+    \end{algorithm}
 
-Before presenting the two stages of creation I will first reiterate over the difference in the dependency nature in the constituency and dependency graphs. Then I will also talk about the tight coupling of the two graphs and the rule tables used in traversal. 
+    Before presenting the two stages of graph creation, I will first reiterate over the difference in the dependency nature in the constituency and dependency graphs. Then I will also talk about the tight coupling of the two graphs and the rule tables used in traversal. 
 
 %dependency difference - justification for 1st phase skipping heads
 \subsection{Dependency nature and implication on head creation}
 \label{sec:dep-implications}
-In Section \ref{sec:dependency-relations-sfl} is explained the different dependency relation nature in dependency graphs and in systemic functional constituency graphs. The DG uses a \textit{parent-daughter dependency} while in Constituency Graphs there is a \textit{sibling dependency}. This difference implies that, when mapped into CG, a DG node, stands for both a unit and that unit's head. In other words a DG node corresponds to two functions and unit classes at different rank scales. For example the root verb in DG corresponds to the clause node and the lexical item which fills the Main Verb of the clause. 
+    Section \ref{sec:dependency-relations-sfl} explained the different dependency relation nature in dependency graphs and in systemic functional constituency graphs. The DG uses a \textit{parent-child dependency} while in Constituency Graphs there is a \textit{sibling dependency}. This difference implies that, when mapped into CG, a DG node stands for both a unit and that unit's head. In other words a DG node corresponds to two functions and unit classes at different rank scales. For example, the root verb in DG corresponds to the clause node and the lexical item which fills the Main Verb of the clause. 
 
-The two functions at different rank scales is the main reason why the creation algorithm is separated into two phases with a traversal top-down and another bottom up. In current approach, the top-down perspective considers the DG node functioning in the upper rank. The result of the top-down phase is a constituency graph without head (and sometimes few other) elements/nodes.
+    The two functions at different rank scales are the main reason why the creation algorithm is separated into two phases with a traversal top-down and another bottom-up. In the current approach, the top-down perspective considers the DG node functioning in the upper rank. The result of the top-down phase is a constituency graph without head (and sometimes a few other) elements/nodes.
 
-The bottom-up perspective considers the DG nodes functioning in the lower rank and aims at creating the remaining nodes, mainly heads. The bottom-up phase is performed by traversing the constituency graph and not on the dependency graph. As the dependency nature in CG is among siblings, the traversal task seeks to spot and locally resolve the missing elements. The local resolution is performed based on the syntagmatic unit structure with the aid of the tight coupling between the dependency and constituency graphs that is explained in the section below.
+    The bottom-up perspective considers the DG nodes functioning in the lower rank and aims at creating the remaining nodes, mainly heads. The bottom-up phase is performed by traversing the constituency graph and not the dependency graph. As the dependency nature in CG is among siblings, the traversal task seeks to spot and locally resolve the missing elements. The local resolution is performed based on the syntagmatic unit structure with the aid of the tight coupling between the dependency and constituency graphs that is explained in the section below.
 
 \subsection{Tight coupling of dependency and constituency graphs}
 \label{sec:tight-coupling}
-At the creation stage, the CG is tightly coupled with the original DG. It means that each CG node has associated a corresponding DG node in DG together with the set of immediate child nodes. This coupling allows navigating easily from one graph to the other one via stored references. We say that a graph node is \textit{aware} of its ascription in another graph if it carries information to which nodes it is linked within the second graph.
+    At the creation stage, the CG is tightly coupled with the original DG. This means that each CG node has associated a corresponding DG node in the DG together with the set of immediate child nodes. This coupling allows navigating easily from one graph to the other via stored references. We say that a graph node is \textit{aware} of its ascription in another graph if it carries information to which nodes it is linked within the second graph.
 
-%The DG nodes carry a stack of CG nodes resembling the rank scale order of units to which it belongs. 
+    %The DG nodes carry a stack of CG nodes resembling the rank scale order of units to which it belongs. 
 
-Through a stack of CG nodes, the DG nodes are made aware of which CG nodes and in which order they subsume them (Figure \ref{fig:aware-dg}). On the other hand, the CG nodes are also made aware through a list of DG nodes, over which DG nodes do they span (Figure \ref{fig:aware-cg}). This way the positioning information is available bidirectionally about CG an DG structures.
+    Through a stack of CG nodes, the DG nodes are made aware of which CG nodes they correspond to and in which order they subsume them. An example of tight coupling is depicted in Figure \ref{fig:aware-dg}. On the other hand, the CG nodes are also made aware through a list of DG nodes, over which DG nodes they span, which is in Figure \ref{fig:aware-cg}. This way the positioning information is available bidirectionally about CG an DG structures.
 
-\begin{figure}[!ht]
-	\begin{minipage}{0.45\linewidth}
-		\centering
-		\begin{tikzpicture}[]
-		\node[pattern-node, ] (vb1){\textit{smiled}\\(clause1,\\ mainVerb1)\\};
-		\node[pattern-node, left=0.2em of vb1] (s){\textit{girl}\\(clause1,\\subject1,\\thing1)};
-		\node[pattern-node, left=0.2em of s] (det){\textit{The}\\(clause1,\\subject1,\\determiner1)};
-		\path (vb1) edge[edge-style, in=80,out=100] node[above] {nsubj} (s);
-		\path (s) edge[edge-style,in=80,out=100] node[above] {det} (det);
-		\end{tikzpicture}
-		\caption{Constituency aware DG nodes}
-		\label{fig:aware-dg}
-	\end{minipage}
-	\quad
-	\begin{minipage}{0.45\linewidth}
-		\centering
-		\begin{tikzpicture}[]
-		\node[pattern-node, anchor=center, text width=18em] (cl){clause1\\(\textit{The, girl, smiled})}
-		child { node[pattern-node, text width=11em, below =4em of cl.west, anchor=west] (s){subject1\\(\textit{The, girl})} 
-			child { node[pattern-node,below =4em of s.west, anchor=west](d) {determiner1\\(\textit{The})} }
-			child { node[pattern-node, text width=4em, below =4em of s.east, anchor=east](h) {thing1\\(\textit{girl})} } }
-		child {node[pattern-node,text width=5em, below =4em of cl.east, anchor=east] {mainVerb1\\(\textit{smiled})}};
-		\end{tikzpicture}
-		\caption{Dependency aware CG nodes}
-		\label{fig:aware-cg}
-	\end{minipage}
-\end{figure}
+    \begin{figure}[!ht]
+        \centering
+        
+    	\begin{subfigure}[b]{0.47\linewidth}
+    		\centering
+    		\resizebox{\textwidth}{!}{%
+    		\begin{tikzpicture}[]
+    		\node[pattern-node, ] (vb1){\textit{smiled}\\(clause1,\\ mainVerb1)\\};
+    		\node[pattern-node, left=0.2em of vb1] (s){\textit{girl}\\(clause1,\\subject1,\\thing1)};
+    		\node[pattern-node, left=0.2em of s] (det){\textit{The}\\(clause1,\\subject1,\\determiner1)};
+    		\path (vb1) edge[edge-style, in=80,out=100] node[above] {nsubj} (s);
+    		\path (s) edge[edge-style,in=80,out=100] node[above] {det} (det);
+    		\end{tikzpicture}
+    		}
+    		\caption{Constituency aware DG nodes}
+    		\label{fig:aware-dg}
+    	\end{subfigure}
+    	\quad
+    	\begin{subfigure}[b]{0.47\linewidth}
+    		\centering
+    		\resizebox{\textwidth}{!}{%
+    		\begin{tikzpicture}[]
+    		\node[pattern-node, anchor=center, text width=18em] (cl){clause1\\(\textit{The, girl, smiled})}
+    		child { node[pattern-node, text width=11em, below =4em of cl.west, anchor=west] (s){subject1\\(\textit{The, girl})} 
+    			child { node[pattern-node,below =4em of s.west, anchor=west](d) {determiner1\\(\textit{The})} }
+    			child { node[pattern-node, text width=4em, below =4em of s.east, anchor=east](h) {thing1\\(\textit{girl})} } }
+    		child {node[pattern-node,text width=5em, below =4em of cl.east, anchor=east] {mainVerb1\\(\textit{smiled})}};
+    		\end{tikzpicture}
+    		}
+    		\caption{Dependency aware CG nodes}
+    		\label{fig:aware-cg}
+    	\end{subfigure}
+    	\caption{Graph nodes aware of their correspondents in another graph}
+    	\label{fig:aware-nodes-final}
+    \end{figure}
 
-The Figure \ref{fig:aware-dg} depicts a dependency graph. Each node has a stack of ids corresponding to constituents in the CG (Figure \ref{fig:aware-cg}). Conversely, in Figure \ref{fig:aware-cg}, depicts a constituency graph where the constituent nodes carry a set of tokens corresponding to DG nodes. This way the DG in Figure \ref{fig:aware-dg} and the CG in \ref{fig:aware-cg} are aware of each other. 
+    Figure \ref{fig:aware-dg} depicts a dependency graph. Each node has a stack of ids corresponding to constituents in the CG (Figure \ref{fig:aware-cg}). Conversely, Figure \ref{fig:aware-cg}, depicts a constituency graph where the constituent nodes carry a set of tokens corresponding to DG nodes. This way the nodes of DG in Figure \ref{fig:aware-dg} and the nodes of CG in \ref{fig:aware-cg} are aware of each other's correspondents. 
 
-This node awareness has two interesting properties worth exploring. First, the DG nodes receive a vertical constituency strip. Each strip is a direct path from the root to the bottom of the constituency graph where the word of the DG is found. These strips are the very same ones explored in the parsing method explored by \citet{Day2007}.    
-Second, the CG nodes receive a horizontal span over DG nodes enabling exploration of elements linear order. These two properties could eventually be explored in future work to inform or verify the correctness of the constituency graph. In the present work the application of the node awareness is limited to the complete construction of the CG.
+    This node awareness has two interesting properties worth exploring. First, the DG nodes receive a vertical constituency strip. Each strip is a direct path from the root to the bottom of the constituency graph where the word of the DG is found. These strips are the very same ones explored in the parsing method explored by \citet{Day2007}. Second, the CG nodes receive a horizontal span over DG nodes enabling exploration of elements in linear order. These two properties could eventually be explored in future work to inform or verify the correctness of the constituency graph. In the present work the application of node awareness is limited to the complete construction of the CG.
 
 % graphs are created according to rule tables
 \subsection{Rule tables}
 \label{sec:rule-table}
+    Constituency Graphs are created through a top-down breadth-first walk of the dependency graph. During the top-down breadth-first walk of the DG each visited node triggers execution of a \textit{generative operation} on the growing CG. To know what operation to execute a rule table is used where the edge, head and tail nodes are mapped to a generative operation and possibly a parameter (specifying the element type if a constituent is to be created).
 
-Constituency Graphs are created through a top-down breadth-first walk of dependency graph. During the top-down breadth-first walk of DG each visited node triggers execution of a \textit{generative operation} on the growing CG on the side. To know what operation to execute a rule table is used where the edge, head and tail nodes are mapped to a generative operation and eventually a parameter (specifying the element type if a constituent is to be created).
+    A simplified example of the rule table is presented in Table \ref{tab:rule-table}. The full table is provided in Appendix \ref{ch:rule-table-transformation}. It can be regarded as an attribute value matrix (implemented as a Python dictionary) where the left column, the \textit{key}, contains a unique \textit{dependency graph context} serving as a rule trigger; while the left side column, the \textit{value}, contains the operation to be executed within the given context. 
 
-A simplified example of the rule table is presented in Table \ref{tab:rule-table}. The full table is provided in the Appendix \ref{ch:rule-table-transformation}. It can be regarded as an attribute value matrix (implemented as a Python dictionary) where the left column, the \textit{key}, contains a unique \textit{dependency graph context} serving as a rule trigger; while the left side column, the \textit{value}, contains the operation to be executed within the given context. 
+    \begin{table}[!ht]
+    	\centering
+    	\begin{tabular}{|l|c|l|l|}
+    		\hline
+    		\multirow{2}{*}{} & \multirow{2}{*}{\textbf{Key}} & \multicolumn{2}{c|}{\textbf{Value}}                                                                 \\ \cline{3-4} 
+    		&                               & \multicolumn{1}{c|}{\textit{\textbf{Operation}}} & \multicolumn{1}{c|}{\textit{\textbf{Parameter}}} \\ \hline
+    		1                 & nsubj                         & new constituent                                 & Subject                                          \\ \hline
+    		2                 & csubj                         & new constituent                         & Subject \& clause                                          \\ \hline
+    		3                 & prepc                         & new constituent                         & Complement, Adjunct \& clause                             \\ \hline
+    		4                 & VB-prep-NN                    & new constituent                                 & Complement, Adjunct                              \\ \hline
+    		5                 & NN-prep-NN                    & new constituent                                 & Qualifier                                        \\ \hline
+    		6                 & VB-advmod-WR                  & new constituent                                 & Complement                                       \\ \hline
+    		7                 & VB-advmod-RB                  & new constituent                                 & Adjunct                                          \\ \hline
+    		8                 & mwe                           & extend current                                  &                                                  \\ \hline
+    		9                 & nn                            & extend current                                  &                                                  \\ \hline
+    	\end{tabular}
+    	\caption{Example of rule table mapping specific and generic dependency context to generative operations}
+    	\label{tab:rule-table}
+    \end{table}
 
-\begin{table}[!ht]
-	\centering
-	\begin{tabular}{|l|c|l|l|}
-		\hline
-		\multirow{2}{*}{} & \multirow{2}{*}{\textbf{Key}} & \multicolumn{2}{c|}{\textbf{Value}}                                                                 \\ \cline{3-4} 
-		&                               & \multicolumn{1}{c|}{\textit{\textbf{Operation}}} & \multicolumn{1}{c|}{\textit{\textbf{Parameter}}} \\ \hline
-		1                 & nsubj                         & new constituent                                 & Subject                                          \\ \hline
-		2                 & csubj                         & new constituent                         & Subject \& clause                                          \\ \hline
-		3                 & prepc                         & new constituent                         & Complement, Adjunct \& clause                             \\ \hline
-		4                 & VB-prep-NN                    & new constituent                                 & Complement, Adjunct                              \\ \hline
-		5                 & NN-prep-NN                    & new constituent                                 & Qualifier                                        \\ \hline
-		6                 & VB-advmod-WR                  & new constituent                                 & Complement                                       \\ \hline
-		7                 & VB-advmod-RB                  & new constituent                                 & Adjunct                                          \\ \hline
-		8                 & mwe                           & extend current                                  &                                                  \\ \hline
-		9                 & nn                            & extend current                                  &                                                  \\ \hline
-	\end{tabular}
-	\caption{Example of rule table mapping specific and generic dependency context to generative operations}
-	\label{tab:rule-table}
-\end{table}
+    The current implementation uses three operation types: (a) \textit{creating a new constituent} under a given  one (b) \textit{creating a new sibling} to the given one (c) \textit{extending} a constituent with more dependency nodes. 
 
-Current implementation uses three operation types: (a) \textit{creating a new constituent} under a given  one (b) \textit{creating a new sibling} to the given one (c) \textit{extend} a constituent with more dependency nodes. 
+    The parameter is used only for operations (a) and (b) and specifies which element the new constituent is filling as described in Sections \ref{sec:sydney-theory-of-grammar} and \ref{sec:cardiff-theory-grammar}. Most of the time there is only one element provided but in the case of prepositional phrases and clauses it is impossible to specify purely on syntactic grounds the exact functional role and thus multiple options are provided (Adjunct or Complement) and then in later parsing phases, when the verb semantic configurations are verified, these options are reduced to one.  
 
-The parameter is used only for the operations (a) and (b) and specifies which element the new constituent is filling as described in Section \ref{sec:sydney-theory-of-grammar} and \ref{sec:cardiff-theory-grammar}. Most of the time there is only one element provided but in the case of prepositional phrases and clauses it is impossible to specify purely on syntactic basis the exact functional role and thus multiple options are provided (Adjunct or Complement) and then in lather parsing phases, when the verb semantic configurations are verified, these options are reduced to one.  
+    There are two types of keys in the rule table: the \textit{generic} ones where the key consist of the (non-extended) dependency relation and the \textit{specific} ones surrounded by the POS of head and tail edge nodes taking the form \mbox{\textit{Tail--relation--Head}}. For example, \textit{nsubj} relation (row 1) always leads to creation of a Subject nominal constituent regardless if it is headed by a noun, pronoun or adjective. Since all individual cases lead to the same outcome it suffices to map the dependency relation to the creation of a new constituent with Subject role ignoring the POS context of head and tail nodes. The same holds for the \textit{prepc} relation (row 3) as it always leads to creation of a subordinate clause constituent with Complement or Adjunct roles. So the generic relations can be viewed as equal to the form \mbox{\textit{Any--relation--Any}} only that the nodes are omitted due to redundancy.
 
-There are two types of keys in the rule table: the \textit{generic} ones where the key consist of the (non-extended) dependency relation and the \textit{specific} ones surrounded by the POSes of head and tail edge nodes taking the form \mbox{\textit{Tail--relation--Head}}. For example \textit{nsubj} relation (row 1) always leads to creation of a Subject nominal constituent regardless if it is headed by a noun, pronoun or adjective. Since all individual cases lead to the same outcome it suffices to map the dependency relation to the creation of a new constituent with Subject role ignoring the POS context of head and tail nodes. The same holds for \textit{prepc} relation (row 3) as it always leads to creation of subordinate clause constituent with Complement or Adjunct roles. So the generic relations can be viewed as equal to the form \mbox{\textit{Any--relation--Any}} only that the nodes are omitted due to redundancy.
+    In the case of \textit{prep} relations (rows 4 and 5) the story is different. Their interpretation is highly dependent on the context given by the parent/tail and child/head nodes. If it is connecting a verb and a noun then the constituent prepositional phrase takes the role of either Complement or Adjunct in the clause. But if the prep relation is from a noun to another noun, then it is a prepositional phrase with Qualifier function in the nominal group.
 
-In the case of \textit{prep} relation (rows 4 and 5) the story is different. Its interpretation is highly dependent on its context given by the parent/tail and child/head nodes. If it is connecting a verb and a noun then the constituent prepositional phrase takes the role of either Complement or Adjunct in the clause. But if the prep relation is from a noun to another noun, then it is a prepositional phrase with Qualifier function in the nominal group.
+    Some dependency relations are not mapped to an operation of creating a new but rather extend the existing constituent with all nodes succeeding the current in the DG. This operation is used for two reasons: either (a) the constituent truly consists of more than one word, for example the cases of multi-word expressions (e.g. ice-cream) marked via an \textit{mwe} relation (row 8) or (b) the relation (with or without its POS context) is insufficiently informative for instantiating a constituent node and is postponed for the second phase of the CG creation.
 
-Some dependency relation are not mapped to operation of creating a new but rather extend the existing constituent with all nodes succeeding current one in the DG. These operation is used for two reasons: either (a) the constituent truly consists of more than one word, for example the cases of multi word expressions (e.g. ice-cream) marked via \textit{mwe} relation (row 8) or (b) the relation (with or without it's POS context) is insufficiently informative for instantiating a constituent node and is postponed for the second phase of the CG creation.
+    Note that the contextualised relations provided in the rule table represent ``slight'' generalisations over what may be found in the dependency graphs. The generalisation consists in using only the first two letters of the POS (which, in PENN tag set can be up to four letters long). For example nouns generically are marked as NN but they may be further specified as NNP, NNPS and NNS; or verbs (VB) may be marked as VBD, VBG, VBN, VBP, and VBZ depending on their form. 
 
-Note that the contextualised relations are ``slightly'' generalised by reducing POS to first two letters which can be up to four letters long. For example nouns generically are marked as NN but they may be further specified as NNP, NNPS and NNS or verbs (VB) may be marked as VBD, VBG, VBN, VBP, and VBZ depending on their form. 
+    Now that I covered the rule table structure I briefly present the algorithm for making rule selections based on simple or contextualised keys.  
 
-Now that I covered the rule table structure I briefly present the algorithm for making rule selections based on simple or contextualised keys.  
-
-\begin{algorithm}[!ht]
-    \Input{ \rt, \edge}
-    \Output{ \rrule}
-    \Begin{
-        %	\tcp{simple key is the first segment of DG relation}
-        \simpleKey $\leftarrow$ the simplified label on the \edge   \;
-        \headPos $\leftarrow$ the POS of the \edge head node \;
-        \tailPos $\leftarrow$ the POS of the \edge tail node \;
-        %	\tcp{specific/contextualised key is the simple key surrounded by the edge 
-        %					nodes part of speech trimmed to their first two characters}
-        \ctxKey $\leftarrow$ concatenate (\tailPos + \simpleKey + \headPos) \;
-        \If{\ctxKey index \KwTo \rt}
-        {
-            \rrule $\leftarrow$ value for \ctxKey from \rt \;
-        }
-        \ElseIf {\simpleKey index \KwTo \rt}
-        {
-            \rrule $\leftarrow$ value for \simpleKey from \rt \;
-        }
-        \Else
-        {
-            \rrule $\leftarrow$ None \;
-        }
-        \Return{\rrule}
-    }
-    \caption{Operation selection in the rule table based on the edge type}
-    \label{alg:look-up}
-\end{algorithm}
-
-The Algorithm \ref{alg:look-up} is based on two dictionary lookups: one for specific key (contextualised by the edge relation and its nodes) and another one for generic key based on the edge relation alone. The \rt is conceived as a Python dictionary with string keys and and two-tuple containing the \operation and the \elementType parameter. If the key is found (either specific or generic) in the \rt then the operation and parameter are returned otherwise None is returned. 
-
-Next I explain the top-down traversal phase which is the cornerstone of the constituency graph creation. 
-
-\subsection{Top down traversal phase}
-\label{sec:first-phase}
-The goal of this first phase is to bootstrap a partial constituency graph starting from a given dependency graph and a rule table. The CG is created as a parallel graph structure through the process of breadth-first traversal on DG edges as described in Algorithm \ref{alg:phase-one}. The rewriting of the DG graph into a partial CG is performed as follows. DG nodes, starting from the root, are traversed top-down breadth first order and for each visited node apply the creation or extension operation as provided in the rule table. 
-
-% phase one
-\begin{algorithm}[!ht]
-	\Input{ \dg (the dependency graph), \rt }
-	\Output{ \cg (the constituency graph)}
-	\Begin{
-		create the \cg with a root node\;
-		make the \cg root node aware of the \dg root node\;
-		\For{ \edge \KwTo list of \dg edges in BFS order}
-		{
-			\rrule $\leftarrow$ find in \rt the rule for current edge context \label{line:choose-oper} \;
-			\operation $\leftarrow$ get operation from the rule table\;
-			\elementType $\leftarrow$ get the parameter from the rule table\label{line:param} \;
-			%\tcp{\cg and \dg nodes are aware of each and we can navigate between them}
-			\stack $\leftarrow$ get the constituency stack from the tail node of the current \dg edge \;
-			\cgPointer $\leftarrow$ get the CG node from the \stack \;
-			\Children $\leftarrow$ all child nodes for the current dg edge \label{line:children}\;
-			\tcp{ constructing or extending the \cg with a new node}
-			execute the \operation on \cg given \elementType, \cgPointer and \Children \label{line:execute-oper}\;
-		}
-		\Return{\cg} \;
-	}
-	\caption{Partial constituency graph creation by top down traversal}
-	\label{alg:phase-one}
-\end{algorithm}
-
-First the CG is instantiated and an empty root node is created within. Also, the root node is made aware of the root node in DG as described in Section \ref{sec:tight-coupling}. Then the DG is traversed in breadth first order (BFS) starting from the root node and as each DG edge is visited an operation is chosen based on the edge type and POS of the connected nodes (Lines \ref{line:param} - \ref{line:children}). The Line \ref{line:choose-oper} of the algorithm is responsible for looking up and selecting the \operation from the \rt as described in Algorithm \ref{alg:look-up}.
-Then the creative operation is executed with the established parameters: dependency successors (\Children), a constituent node parenting the newly created one (\cgPointer), \elementType which is chosen from the rule-table together with the \operation. %Note that the head nodes are not created in current but the next phase. 
- 
-In Python function are first class objects allowing objects to be called (executed) if they are of callable typed. This duality allows storing the functions directly in the \rt and then, upon lookup they are returned as objects but because they are also callable these objects are executed with the expected set of parameters based on their function aspect. The possible operation have been already explained in Section \ref{sec:rule-table}: \textit{extend current} and \textit{new (sibling) constituent}. Next I present the pseudo-code for each of the operations. Note that these operations do not return anything because their effect is on the input \cg and \dg. 
-
-% extend oper
-\paragraph{Extend constituent.} Algorithm \ref{alg:extend-current} outlines the functionality for extending current \cgPointer. It does two main things. It increases the span of an already existing CG node over more DG nodes and makes them, concomitantly, aware of each other. 
-
-\begin{algorithm}[!ht]
-\Input { \cgPointer, \Children, \elementType, \edge, \dg, \cg}
-\Begin{
-	\tcp{handling special relations \textit{prep} and \textit{conj}}
-	\If{$prep \vee conj$ \KwTo \edge relation }
-		{
-			\fn $\leftarrow$ find in \dg the free nodes refereed in the \edge relation \label{line:free-node} \;
-			create new node with \textit{marker} function under the \cgPointer with \fn as children \label{line:new-marker} \;
-			\Children $\leftarrow$ \Children \& \fn \;
-		}
-		\tcp{making the \Children and \cgPointer aware of each other}
-		\For {\node \KwTo \Children}
-			{
-				\stack $\leftarrow$ the constituency stack of the \node \;
-				push the \cgPointer to the \stack \;
-				\sspan $\leftarrow$ constituent span of the \cgPointer \;
-				extend the \sspan with current \node \;
-			}
-	}
-	\caption{Extend a constituent with DG nodes}
-	\label{alg:extend-current}
-\end{algorithm}
-
-If, however, the \edge relation is a conjunction or a preposition then the children list is extended with the free nodes that stand for the preposition or conjunction in place and eventually neighbouring punctuation marks (line \ref{line:free-node}). %The reason why preposition or conjunction nodes are free in DG si because Stanford scheme integrates them as edge labels, described in Sections \ref{sec:collapsed-cc-output}.
-
-This exceptional treatment is due to the fact that \textit{prep} and \textit{conj} relations are always specialised by the preposition or conjunction in place. For details on this aspect of Stanford Dependency Grammar please refer to Section \ref{sec:collapsed-cc-output}.
-
-\begin{figure}[!ht]
-\centering
-\begin{minipage}[b]{0.45\textwidth}
-\centering
-	\begin{dependency}[dep-style]
-		\begin{deptext}[]
-	He \& went \& on \& vacantion \& . \\
-		\end{deptext}
-		\deproot{2}{root}
-		\depedge{2}{1}{nsubj}
-		\depedge{2}{4}{prep\_on}
-	\end{dependency}
-\end{minipage}
-\begin{minipage}[b]{0.45\textwidth}
-	\begin{dependency}[dep-style]
-		\begin{deptext}[]
-	He \& went \& on \& vacation \& on \& a \& camel \& . \\
-		\end{deptext}
-		\deproot{2}{root}
-		\depedge{2}{1}{nsubj}
-		\depedge{2}{4}{prep\_on}
-		\depedge{2}{7}{prep\_on}
-		\depedge{7}{6}{det}
-	\end{dependency}
-\end{minipage}
-\caption{Challenging free nodes}
-\label{fig:challenging-free-nodes}
-\end{figure}
-
-Figure \ref{fig:challenging-free-nodes} exemplifies easy (on the left) and more difficult cases (on the right) of free node occurrence. The challenge in the second figure comes from the fact that there may be two suitable free nodes for the edge \textit{went-\mbox{prep\_on}-camel}. Another challenge type in resolving free nodes is when the preposition is a multi word construction. 
-
-Once all the free DG nodes are found, a new \cg node is created with \textit{Marker} \elementType spanning over them (line \ref{line:new-marker}). Then the free nodes are included into the list of \Children and all together are made aware of the current \cgPointer and vice versa. 
-
-% Create new
-\paragraph{Create new constituent.} The Algorithm \ref{alg:create-new} is a operation that inserts into CG a new node/constituent (line \ref{line:add-to-graph}). The new constituent is created as a child of a pointed CG node with the \elementType extracted from the \rt together with the \operation. Once the \cg node is created, it is extended with the \Children nodes as described in Algorithm \ref{alg:extend-current} above.
-
-Note that only the functional element is assigned to the freshly created constituent. It's class is added in the second phase of the creation algorithm. This is due to the fact that a function can be filled by units of several classes. The bottom up traversal provides a holistic view on the constituency of each unit giving the possibility to assign a class accordingly. For details see the Chapter \ref{ch:sfg}.
-
-\begin{algorithm}[!ht]
-\Input { \cgPointer, \Children, \elementType, \edge, \dg, \cg}
-\Begin{
-	\node $\leftarrow$ new Constituent \;
-	type(\node) $\leftarrow$ \elementType \;
-	%\node parent $\leftarrow$ \cgPointer \;
-	add to \cg new edge (\cgPointer, \node) \label{line:add-to-graph} \;
-	\tcp{invoking the Algorithm \ref{alg:extend-current}}
-	extend \cgPointer with \Children of \edge \;
-	}
-	\caption{Creating new child constituent}
-	\label{alg:create-new}
-\end{algorithm}
-
-A variation of the \textit{create new} is \textit{create sibling}  outlined in the Algorithm \ref{alg:create-new-sibling}. It sets the newly created constituent as a sibling of the current one and not as a child. This will make the new constituent a child of current \cgPointer's parent.
-
-\begin{algorithm}[!ht]
-	\Input { \cgPointer, \Children, \elementType, \edge, \dg, \cg}
-	\Begin{
-		\cgPointer $\leftarrow$ get the parent of \cgPointer \;
-		\tcp{invoking the Algorithm \ref{alg:create-new}}
-		create new constituent to an updated \cgPointer \;
-	}
-	\caption{Creating new sibling constituent}
-	\label{alg:create-new-sibling}
-\end{algorithm}
-% create sibling 
-
-\subsection{Bottom up traversal phase}
-Chapter \ref{ch:sfg} explains that each constituent must specify the unit class and the element it is filling within parent unit. The first phase of the algorithm achieves creating most of the constituents and assigns each unit functional elements derived from the dependency graph. The constituency graph misses, however, the unit classes and the syntactic head nodes. The second phase complements the first one by fulfilling two goals: (a) creation of constituents skipped in the first phase and (b) class assignment to the constituent units.
-\begin{figure}[!ht]
-	\centering
-	\begin{dependency}[dep-style]
-		\begin{deptext}[]
-			He \& could \& have \& tried \& to \& unlock \& the \& door \&. \\
-		\end{deptext}
-		\deproot{4}{root}
-		\depedge{4}{1}{nsubj}
-		\depedge{4}{2}{aux}
-		\depedge{4}{3}{aux}
-		\depedge{6}{5}{aux}
-		\depedge{4}{6}{xcomp}
-		\depedge{8}{7}{det}
-		\depedge{6}{8}{dobj}
-	\end{dependency}
-	\caption{The dependency graph before the first phase}
-	\label{fig:dep-example1}
-\end{figure}
-
-The Figure \ref{fig:post-1st-phase-cg} depicts and example CG generated in the 1^{st} phase with dotted lines representing places of the missing constituents. 
-
-\begin{figure}[!ht]
-	\centering
-    \scalebox{0.8}{
-	\begin{tikzpicture}[]
-	\node[pattern-node, anchor=center, text width=27em] (cl){Clause\\(\textit{He could have tried to unlock the door.})}
-		child { node[pattern-node, text width=5em, below =4em of cl.west, anchor = west] (s){Subject\\(\textit{He})} }
-	  	child {node[pattern-node,text width = 14em, below =4em of cl.east, anchor = east](c1) {Complement\\(\textit{to unlock the door.})} 
-			  	child { node[pattern-node,text width = 8em, below =4em of c1.east, anchor = east](c2) {Complement\\(\textit{the door.})} 
-			  		child { node[pattern-node,below =4em of c2.west, anchor = west](d) {Deictic\\(\textit{the})} }
-	  			 }
-	  		};
-	\coordinate[right=1em of s.east] (cor1);
-	\coordinate[left=1em of c1.west] (cor2);
-	\coordinate[left=5em of c2.west] (cor3);
-	\coordinate[left=1em of c2.west] (cor4);
-	\coordinate[right=1em of d.east] (cor5);
-	\coordinate[right=4em of d.east] (cor6);
-	
-	\draw[dashed] (cor1) -- (cor2);
-	\draw[dashed] (cor3) -- (cor4);
-	\draw[dashed] (cor5) -- (cor6);
-	
-	\end{tikzpicture}
-    }
-	\caption{Constituency graph after the top down traversal missing the head nodes}
-	\label{fig:post-1st-phase-cg}
-\end{figure}
-
-The missing constituents are the syntactic heads for all units. The clause, besides the Main Verb element which si the syntactic head of the unit, also misses the Finite, Auxiliary elements. Determining these functions strongly depends on the place within a unit and syntagmatic order in which units occur. %As the first phase is performed as graph traversal, the order dimension is not available so they have to be created in the second phase. 
-
-The class membership of constituent units is decided based on three informations available within each constituent: (a) part o speech of the head dependency node (b) element type of the constituent and (c) presence or absence of child constituents and their element types. The corresponding constraints are listed in Table \ref{tab:class-constitions}. The first column carries the unit class (to be assigned), the second and third columns enumerate part of speech and element types that constituents might fill. The Second and third column enumerations are exclusive disjunctive sets (S_{XOR}) because only one may be selected at a time while the list in last column is an open disjunction (S_{OR}) because any of child elements may be present. The last column is an enumeration of what child constituents might the current one have. The \textit{n/a} means that information is unavailable. 
-
-\begin{table}[!ht]
-\centering
-\begin{tabulary}{\textwidth}{|L|L|L|L|}
-\hline
-\textit{Class} & \textit{POS of the Head DG Node (XOR)} & \textit{Element Type (XOR)} & \textit{Child Constituents (OR)} \\ \hline
-Clause              & VB* & Subject, Complement, Qualifier, n/a & Subject, Complement, Adjunct, n/a \\ \hline
-Prepositional Group & CD, NN*, PR*,WP*, DT, WD* & Complement, Qualifier, Adjunct  & Marker, n/a \\ \hline
-Nominal Group       & CD, NN*, PR*,WP*, DT, WD*, JJ, JJS & Subject, Complement & Deictic, Numeral, Epithet, Classifier, Qualifier, n/a \\ \hline
-Adjectival Group    & JJ* & Complement, Epithet, Classifier & Modifier, n/a \\ \hline
-Adverbial Group     & RB*, WRB & Adjunct & Modifier, n/a \\ \hline
-\end{tabulary}
-\caption{Constraints for unit class assignment}
-\label{tab:class-constitions}
-\end{table}
-
-The Algorithm \ref{alg:phase-two} traverses the CG (not the DG) bottom-up with \textit{post-order depth-first} order (line \ref{line:iterate-leafs}) in order to assign to every visited constituent node a unit class and create the missing child constituents.
-
-\begin{algorithm}[!ht]
-    \Input {\cg, \dg}
-    \Begin{
-        \For {\label{line:iterate-leafs}\node \KwTo list of \cg nodes in DFS post-order}
-        {
-            \headPos $\leftarrow$ get POS of the corresponding \dg node \;
-            \elementType $\leftarrow$ get assigned function from \node \;
-            \Children $\leftarrow$ get \node children \;
-            \tcp{assigning classes}
-            class $\leftarrow$ find class based on \headPos, \elementType and \Children \label{line:start-class-assignment}\;
-            assign \node the class \label{line:end-class-assignment}\;
-            %			\If {\label{line:start-class-assignment}\headPos \KwTo main verb POSs}
-            %				{
-            %					assign \node \textit{Clause} class \;
-            %				}
-            %			\ElseIf {\headPos \KwTo nominal POSs $\wedge$ \elementType \KwTo prepositional element types $\wedge$ Marker \KwTo \Children}
-            %				{
-            %					assign \node \textit{Prepositional Group} class \;
-            %				}
-            %			\ElseIf {\headPos \KwTo nominal POSs $\wedge$ \elementType \KwTo nominal elemement types}
-            %				{
-            %					assign \node \textit{Nominal Group} class \;
-            %				}
-            %			\ElseIf {\headPos \KwTo adverbial POSs $\wedge$ \elementType \KwTo adverbial element type}
-            %				{
-            %					assign \node \textit{Adverbial Group} class \;
-            %				}
-            %			\ElseIf {\headPos \KwTo adjectival POSs $\wedge$ \elementType \KwTo adjectival element type}
-            %				{
-            %					assign \node \textit{Adjectival Group} class \label{line:end-class-assignment} \;
-            %				}
-            
-            \tcp{creating the rest of the units}
-            \If{\label{line:is-cg-leaf} \node is not a leaf}
+    \begin{algorithm}[!ht]
+        \Input{ \rt, \edge}
+        \Output{ \rrule}
+        \Begin{
+            %	\tcp{simple key is the first segment of DG relation}
+            \simpleKey $\leftarrow$ the simplified label on the \edge   \;
+            \headPos $\leftarrow$ the POS of the \edge head node \;
+            \tailPos $\leftarrow$ the POS of the \edge tail node \;
+            %	\tcp{specific/contextualised key is the simple key surrounded by the edge 
+            %					nodes part of speech trimmed to their first two characters}
+            \ctxKey $\leftarrow$ concatenate (\tailPos + \simpleKey + \headPos) \;
+            \If{\ctxKey index \KwTo \rt}
             {
-                \label{line:create-remaining-element-node} create the remaining elements under the \node \;
-                %					\eIf{\node is a Clause}
-                %						{	
-                %							\label{line:create-clause-nodes} create the clause elements for \node \;
-                %						}
-                %						{
-                %							\label{line:create-head-node} create the head for the \node \; 
-                %						}
+                \rrule $\leftarrow$ value for \ctxKey from \rt \;
+            }
+            \ElseIf {\simpleKey index \KwTo \rt}
+            {
+                \rrule $\leftarrow$ value for \simpleKey from \rt \;
+            }
+            \Else
+            {
+                \rrule $\leftarrow$ None \;
+            }
+            \Return{\rrule}
+        }
+        \caption{Operation selection in the rule table based on the edge type}
+        \label{alg:look-up}
+    \end{algorithm}
+
+    Algorithm \ref{alg:look-up} is based on two dictionary lookups: one for specific key (contextualised by the edge relation and its nodes) and another one for generic key based on the edge relation alone. The \rt is conceived as a Python dictionary with string keys and two-tuple containing the \operation and the \elementType parameter. If the key is found (either specific or generic) in the \rt then the operation and parameter are returned otherwise None is returned. 
+
+    Next I explain the top-down traversal phase which is the cornerstone of the constituency graph creation. 
+
+\subsection{Creating partial constituency graph through top-down traversal}
+\label{sec:first-phase}
+    The goal of this first phase is to bootstrap a partial constituency graph starting from a given dependency graph and a rule table. The CG is created as a parallel graph structure through the process of breadth-first traversal on DG edges as described in Algorithm \ref{alg:phase-one}. The rewriting of the DG graph into a partial CG is performed as follows. DG nodes, starting from the root, are traversed top-down breadth-first and for each visited node apply the creation or extension operation as provided in the rule table. 
+
+    % phase one
+    \begin{algorithm}[!ht]
+    	\Input{ \dg (the dependency graph), \rt }
+    	\Output{ \cg (the constituency graph)}
+    	\Begin{
+    		create the \cg with a root node\;
+    		make the \cg root node aware of the \dg root node\;
+    		\For{ \edge \KwTo list of \dg edges in BFS order}
+    		{
+    			\rrule $\leftarrow$ find in \rt the rule for current edge context \label{line:choose-oper} \;
+    			\operation $\leftarrow$ get operation from the rule table\;
+    			\elementType $\leftarrow$ get the parameter from the rule table\label{line:param} \;
+    			%\tcp{\cg and \dg nodes are aware of each and we can navigate between them}
+    			\stack $\leftarrow$ get the constituency stack from the tail node of the current \dg edge \;
+    			\cgPointer $\leftarrow$ get the CG node from the \stack \;
+    			\Children $\leftarrow$ all child nodes for the current dg edge \label{line:children}\;
+    			\tcp{ constructing or extending the \cg with a new node}
+    			execute the \operation on \cg given \elementType, \cgPointer and \Children \label{line:execute-oper}\;
+    		}
+    		\Return{\cg} \;
+    	}
+    	\caption{Partial constituency graph creation by top-down traversal}
+    	\label{alg:phase-one}
+    \end{algorithm}
+
+    First the CG is instantiated and an empty root node is created. Also, the root node is made aware of the root node in DG as described in Section \ref{sec:tight-coupling}. Then the DG is traversed in breadth first order (BFS) starting from the root node and as each DG edge is visited an operation is chosen based on the edge type and POS of the connected nodes (Lines \ref{line:param} - \ref{line:children}). Line \ref{line:choose-oper} of the algorithm is responsible for looking up and selecting the \operation from the \rt as described in Algorithm \ref{alg:look-up}. Then the creative operation is executed with the established parameters: dependency successors (\Children), a constituent node parenting the newly created one (\cgPointer), and \elementType which is chosen from the rule-table together with the \operation. %Note that the head nodes are not created in current but the next phase. 
+ 
+    In Python, functions are first class objects allowing objects to be called (executed) if they are of type ``callable''. This duality allows storing the functions directly in the \rt and then, upon lookup, they are returned as objects but because they are also callable these objects are executed with the expected set of parameters based on their function aspect. The possible operations have been already explained in Section \ref{sec:rule-table}: \textit{extend current} and \textit{new (sibling) constituent}. Next I present the pseudo-code for each of the operations. Note that these operations do not return anything because their effect is on the input \cg and \dg. 
+
+    % extend oper
+    \paragraph{Extend constituent.} Algorithm \ref{alg:extend-current} outlines the functionality for extending the current \cgPointer. It does two main things. It increases the span of an already existing CG node over more DG nodes and makes them, concomitantly, aware of each other. 
+
+    \begin{algorithm}[!ht]
+    \Input { \cgPointer, \Children, \elementType, \edge, \dg, \cg}
+    \Begin{
+    	\tcp{handling special relations \textit{prep} and \textit{conj}}
+    	\If{$prep \vee conj$ \KwTo \edge relation }
+    		{
+    			\fn $\leftarrow$ find in \dg the free nodes refereed in the \edge relation \label{line:free-node} \;
+    			create new node with \textit{marker} function under the \cgPointer with \fn as children \label{line:new-marker} \;
+    			\Children $\leftarrow$ \Children \& \fn \;
+    		}
+    		\tcp{making the \Children and \cgPointer aware of each other}
+    		\For {\node \KwTo \Children}
+    			{
+    				\stack $\leftarrow$ the constituency stack of the \node \;
+    				push the \cgPointer to the \stack \;
+    				\sspan $\leftarrow$ constituent span of the \cgPointer \;
+    				extend the \sspan with current \node \;
+    			}
+    	}
+    	\caption{Extend a constituent with DG nodes}
+    	\label{alg:extend-current}
+    \end{algorithm}
+
+    If, however, the \edge relation is a conjunction or a preposition then the children list is extended with the free nodes that stand for the preposition or conjunction in place and potentially neighbouring punctuation marks (line \ref{line:free-node}). %The reason why preposition or conjunction nodes are free in DG si because Stanford scheme integrates them as edge labels, described in Sections \ref{sec:collapsed-cc-output}.
+
+    This exceptional treatment is due to the fact that \textit{prep} and \textit{conj} relations are always specialised by the preposition or conjunction in place. For details on this aspect of the Stanford Dependency Grammar refer to Section \ref{sec:collapsed-cc-output}.
+
+    \begin{figure}[!ht]
+    \centering
+    \begin{minipage}[b]{0.35\textwidth}
+    \centering
+    	\begin{dependency}[dep-style]
+    		\begin{deptext}[]
+    	He \& went \& on \& vacantion \& . \\
+    		\end{deptext}
+    		\deproot{2}{root}
+    		\depedge{2}{1}{nsubj}
+    		\depedge{2}{4}{prep\_on}
+    	\end{dependency}
+    \end{minipage}
+    \begin{minipage}[b]{0.55\textwidth}
+    	\begin{dependency}[dep-style]
+    		\begin{deptext}[]
+    	He \& went \& on \& vacation \& on \& a \& camel \& . \\
+    		\end{deptext}
+    		\deproot{2}{root}
+    		\depedge{2}{1}{nsubj}
+    		\depedge{2}{4}{prep\_on}
+    		\depedge{2}{7}{prep\_on}
+    		\depedge{7}{6}{det}
+    	\end{dependency}
+    \end{minipage}
+    \caption{Examples of challenging free nodes}
+    \label{fig:challenging-free-nodes}
+    \end{figure}
+
+    Figure \ref{fig:challenging-free-nodes} exemplifies easy (on the left) and more difficult (on the right) cases of free node occurrence. The challenge in the second graph comes from the fact that there may be two suitable free nodes for the edge \textit{went-\mbox{prep\_on}-camel}. Another challenge type in resolving free nodes is when the preposition is a multi-word construction. 
+
+    Once all the free DG nodes are found, a new \cg node is created with \textit{Marker} \elementType spanning over them (line \ref{line:new-marker}). Then the free nodes are included in the list of \Children and all together are made aware of the current \cgPointer and vice versa. 
+
+    % Create new
+    \paragraph{Create new constituent.} Algorithm \ref{alg:create-new} is an operation that inserts into CG a new node/constituent (line \ref{line:add-to-graph}). The new constituent is created as a child of a pointed CG node with the \elementType extracted from the \rt together with the \operation. Once the \cg node is created, it is extended with the \Children nodes as described in Algorithm \ref{alg:extend-current} above.
+
+    Note that only the functional element is assigned to the freshly created constituent. Its class is added in the second phase of the creation algorithm. This is due to the fact that a function can be filled by units of several classes. The bottom-up traversal provides a holistic view on the constituency of each unit giving the possibility to assign a class accordingly. For details see Chapter \ref{ch:sfg}.
+
+    \begin{algorithm}[!ht]
+    \Input { \cgPointer, \Children, \elementType, \edge, \dg, \cg}
+    \Begin{
+    	\node $\leftarrow$ new Constituent \;
+    	type(\node) $\leftarrow$ \elementType \;
+    	%\node parent $\leftarrow$ \cgPointer \;
+    	add to \cg new edge (\cgPointer, \node) \label{line:add-to-graph} \;
+    	\tcp{invoking Algorithm \ref{alg:extend-current}}
+    	extend \cgPointer with \Children of \edge \;
+    	}
+    	\caption{Creating new child constituent}
+    	\label{alg:create-new}
+    \end{algorithm}
+
+    A variation of the \textit{create new} is \textit{create sibling} outlined in Algorithm \ref{alg:create-new-sibling}. It sets the newly created constituent as a sibling of the current one and not as a child. This makes the new constituent a child of the current \cgPointer's parent.
+
+    \begin{algorithm}[!ht]
+    	\Input { \cgPointer, \Children, \elementType, \edge, \dg, \cg}
+    	\Begin{
+    		\cgPointer $\leftarrow$ get the parent of \cgPointer \;
+    		\tcp{invoking Algorithm \ref{alg:create-new}}
+    		create new constituent to an updated \cgPointer \;
+    	}
+    	\caption{Creating new sibling constituent}
+    	\label{alg:create-new-sibling}
+    \end{algorithm}
+    % create sibling 
+
+\subsection{Completing the constituency graph through bottom-up traversal}
+    Chapter \ref{ch:sfg} explained that each constituent must specify the unit class and the element it is filling within its parent unit. The first phase of the algorithm achieves creating most of the constituents and assigns each unit functional elements derived from the dependency graph. The constituency graph misses, however, the unit classes and the syntactic head nodes. The second phase complements the first one by fulfilling two goals: (a) creation of constituents skipped in the first phase and (b) class assignment to the constituent units.
+
+    \begin{figure}[!ht]
+    	\centering
+    	\begin{dependency}[dep-style]
+    		\begin{deptext}[]
+    			He \& could \& have \& tried \& to \& unlock \& the \& door \&. \\
+    		\end{deptext}
+    		\deproot{4}{root}
+    		\depedge{4}{1}{nsubj}
+    		\depedge{4}{2}{aux}
+    		\depedge{4}{3}{aux}
+    		\depedge{6}{5}{aux}
+    		\depedge{4}{6}{xcomp}
+    		\depedge{8}{7}{det}
+    		\depedge{6}{8}{dobj}
+    	\end{dependency}
+    	\caption{The dependency graph before the first phase}
+    	\label{fig:dep-example1}
+    \end{figure}
+
+    Figure \ref{fig:post-1st-phase-cg} depicts an example CG generated in the first phase with dotted lines representing places of the missing constituents. 
+
+    \begin{figure}[!ht]
+    	\centering
+        \scalebox{0.8}{
+    	\begin{tikzpicture}[]
+    	\node[pattern-node, anchor=center, text width=27em] (cl){Clause\\(\textit{He could have tried to unlock the door.})}
+    		child { node[pattern-node, text width=5em, below =4em of cl.west, anchor = west] (s){Subject\\(\textit{He})} }
+    	  	child {node[pattern-node,text width = 14em, below =4em of cl.east, anchor = east](c1) {Complement\\(\textit{to unlock the door.})} 
+    			  	child { node[pattern-node,text width = 8em, below =4em of c1.east, anchor = east](c2) {Complement\\(\textit{the door.})} 
+    			  		child { node[pattern-node,below =4em of c2.west, anchor = west](d) {Deictic\\(\textit{the})} }
+    	  			 }
+    	  		};
+    	\coordinate[right=1em of s.east] (cor1);
+    	\coordinate[left=1em of c1.west] (cor2);
+    	\coordinate[left=5em of c2.west] (cor3);
+    	\coordinate[left=1em of c2.west] (cor4);
+    	\coordinate[right=1em of d.east] (cor5);
+    	\coordinate[right=4em of d.east] (cor6);
+    	
+    	\draw[dashed] (cor1) -- (cor2);
+    	\draw[dashed] (cor3) -- (cor4);
+    	\draw[dashed] (cor5) -- (cor6);
+    	
+    	\end{tikzpicture}
+        }
+    	\caption{Constituency graph after the top-down traversal missing the head nodes}
+    	\label{fig:post-1st-phase-cg}
+    \end{figure}
+
+    The missing constituents are the syntactic heads for all units. The clause, besides the Main Verb element which is the syntactic head of the unit, also misses the Finite, Auxiliary elements. Determining these functions strongly depends on the place within a unit and syntagmatic order in which units occur. %As the first phase is performed as graph traversal, the order dimension is not available so they have to be created in the second phase. 
+
+    The class membership of constituent units is decided based on three pieces of information available within each constituent: (a) part of speech of the head dependency node, (b) element type of the constituent, and (c) presence or absence of child constituents and their element types. The corresponding constraints are listed in Table \ref{tab:class-constitions}. The first column shows the unit class (to be assigned), the second and third columns enumerate part of speech and element types that constituents might fill. The second and third column enumerations are exclusive disjunctive sets ($S_{XOR}$) because only one may be selected at a time, while the list in the last column is an open disjunction ($S_{OR}$) because any of child elements may be present. The last column is an enumeration of what child constituents might the current one have. The \textit{n/a} means that information is unavailable. 
+
+    \begin{table}[!ht]
+    \centering
+    \begin{tabulary}{\textwidth}{|L|L|L|L|}
+    \hline
+    \textit{Class} & \textit{POS of the Head DG Node (XOR)} & \textit{Element Type (XOR)} & \textit{Child Constituents (OR)} \\ \hline
+    Clause              & VB* & Subject, Complement, Qualifier, n/a & Subject, Complement, Adjunct, n/a \\ \hline
+    Prepositional Group & CD, NN*, PR*,WP*, DT, WD* & Complement, Qualifier, Adjunct  & Marker, n/a \\ \hline
+    Nominal Group       & CD, NN*, PR*,WP*, DT, WD*, JJ, JJS & Subject, Complement & Deictic, Numeral, Epithet, Classifier, Qualifier, n/a \\ \hline
+    Adjectival Group    & JJ* & Complement, Epithet, Classifier & Modifier, n/a \\ \hline
+    Adverbial Group     & RB*, WRB & Adjunct & Modifier, n/a \\ \hline
+    \end{tabulary}
+    \caption{Constraints for unit class assignment}
+    \label{tab:class-constitions}
+    \end{table}
+
+    Algorithm \ref{alg:phase-two} traverses the CG (not the DG) bottom-up with \textit{post-order depth-first} order (line \ref{line:iterate-leafs}). This order means that first the child nodes are visited recursively before the node is visited, as compared for example with \textit{pre-order dept-first} order, when first the node is visited and then its child nodes. During this traversal algorithm assigns to every visited constituent node a unit class and creates the missing child constituents.
+
+    \begin{algorithm}[!ht]
+        \Input {\cg, \dg}
+        \Begin{
+            \For {\label{line:iterate-leafs}\node \KwTo list of \cg nodes in DFS post-order}
+            {
+                \headPos $\leftarrow$ get POS of the corresponding \dg node \;
+                \elementType $\leftarrow$ get assigned function from \node \;
+                \Children $\leftarrow$ get \node children \;
+                \tcp{assigning classes}
+                class $\leftarrow$ find class based on \headPos, \elementType and \Children \label{line:start-class-assignment}\;
+                assign \node the class \label{line:end-class-assignment}\;
+                %			\If {\label{line:start-class-assignment}\headPos \KwTo main verb POSs}
+                %				{
+                %					assign \node \textit{Clause} class \;
+                %				}
+                %			\ElseIf {\headPos \KwTo nominal POSs $\wedge$ \elementType \KwTo prepositional element types $\wedge$ Marker \KwTo \Children}
+                %				{
+                %					assign \node \textit{Prepositional Group} class \;
+                %				}
+                %			\ElseIf {\headPos \KwTo nominal POSs $\wedge$ \elementType \KwTo nominal elemement types}
+                %				{
+                %					assign \node \textit{Nominal Group} class \;
+                %				}
+                %			\ElseIf {\headPos \KwTo adverbial POSs $\wedge$ \elementType \KwTo adverbial element type}
+                %				{
+                %					assign \node \textit{Adverbial Group} class \;
+                %				}
+                %			\ElseIf {\headPos \KwTo adjectival POSs $\wedge$ \elementType \KwTo adjectival element type}
+                %				{
+                %					assign \node \textit{Adjectival Group} class \label{line:end-class-assignment} \;
+                %				}
+                
+                \tcp{creating the rest of the units}
+                \If{\label{line:is-cg-leaf} \node is not a leaf}
+                {
+                    \label{line:create-remaining-element-node} create the remaining elements under the \node \;
+                    %					\eIf{\node is a Clause}
+                    %						{	
+                    %							\label{line:create-clause-nodes} create the clause elements for \node \;
+                    %						}
+                    %						{
+                    %							\label{line:create-head-node} create the head for the \node \; 
+                    %						}
+                }
             }
         }
-    }
-    \caption{Creating the head units and assigning classes}
-    \label{alg:phase-two}
-\end{algorithm}
+        \caption{Creating the head units and assigning classes}
+        \label{alg:phase-two}
+    \end{algorithm}
 
-As mentioned above in Section \ref{sec:tight-coupling}, CG and DG are tight coupled which means that each CG node spans over a set of DG nodes. In this stage, traversal over the CG nodes is equal to traversing groups of DG nodes at each step. This creates focused mini context suitable for resolving the unit class and the missing elements out of the DG chunks. 
+    As mentioned above in Section \ref{sec:tight-coupling}, CG and DG are tightly coupled which means that each CG node spans over a set of DG nodes. In this stage, traversal over the CG nodes is equal to traversing groups of DG nodes at each step. This creates a focused mini-context suitable for resolving the unit class and the missing elements out of the DG chunks. 
 
-When assigning unit class the following informations are considered: (a) part of speech of the head DG node that triggered node creation in the first phase (\headPos), (b) the assigned element type (\elementType) and (c) element type of each direct child (\Children of \node). Lines \ref{line:start-class-assignment} to \ref{line:end-class-assignment} assign classes according to conditions provided in Table \ref{tab:class-constitions}. 
+    When assigning unit class, the following information is considered: (a) part of speech of the head DG node that triggered node creation in the first phase (\headPos), (b) the assigned element type (\elementType) and (c) element type of each direct child (\Children of \node). Lines \ref{line:start-class-assignment} to \ref{line:end-class-assignment} assign classes according to conditions provided in Table \ref{tab:class-constitions}. 
 
-The CG nodes corresponding to non-modal verb DG nodes are assigned clause class. This rule corresponds to the one main verb per clause principle discussed in Section \ref{sec:verbal-grpoup-and-clause-division}. This approach however does not take into consideration elliptic clauses and they need additional resolution that is considered for the future works and can be overcome by an \textit{ellipsis resolution mechanism}, similar to the one for \textit{null elements} described in Chapter \ref{ch:gbt}.
+    The CG nodes corresponding to non-modal verb DG nodes are assigned clause class. This rule corresponds to the one-main-verb-per-clause principle discussed in Section \ref{sec:verbal-grpoup-and-clause-division}. This approach however does not take into consideration elliptic clauses and they need additional resolution that is considered for future works and can be overcome by an \textit{ellipsis resolution mechanism}, similar to the one for \textit{null elements} described in Chapter \ref{ch:gbt}.
 
-The second part of algorithm creates head nodes for every non leaf constituent and in case the node is a clause then it also creates the clause elements such as: Finite, Auxiliary, Main Verb, Negator and Extension.
+    The second part of the algorithm creates head nodes for every non-leaf constituent and in case the node is a clause then it also creates the clause elements: Finite, Auxiliary, Main Verb, Negator and Extension.
 
-After the second stage, all the DG nodes must be covered by CG nodes. Moreover the CG nodes build up to a constituency graph that at this stage is always a tree. Provided the class and element type the nodes are ready to be enriched with choices from systemic networks described in the next chapter. 
+    After the second stage, all the DG nodes must be covered by CG nodes. Moreover the CG nodes build up to a constituency graph that at this stage is always a tree. If the the class and element type information is available, the created nodes are then ready to be enriched with choices from systemic networks as will be described in the next chapter. 
 
 \section{Discussion}
-In this Chapter is described in detail a set of transformations on DGs from Stanford parser and a tree rewriting algorithm. The DG transformations are there to correct known errors in Stanford parser version 3.5.1 and to adjust treatment of certain linguistic features such as copulas, conjunction and others. The final section of the chapter describes how the DG is rewritten into a CG using create and extend operations upon graph traversal and tight coupling between the CG and DG nodes.
 
-There are state of the art algorithms for graph rewriting with proven efficiency. The current work does not intend to be neither generic nor efficient rewriting algorithm but rather explore the process by which a DG can be rewritten into a SFL CG. In the future, to increase the speed performance, the current algorithm would have to be rewritten using for example a graph programming language or a graph rewriting formalism building. 
+    In this chapter a set of transformations of DGs from the Stanford parser is described in detail, followed by explanation of algorithms rewriting DGs into CGs. The DG transformations are there to correct known errors in Stanford parser version 3.5.1 and to adjust treatment of certain linguistic features such as copulas, conjunction and others. The final section of the chapter described how the DG is rewritten into a CG using create and extend operations upon graph traversal and tight coupling between the CG and DG nodes.
 
-Now that it has been described how to construct the the systemic functional constituency graph, the backbone, we can turn our attention to fleshing out this backbone with systemic features selected from system networks. Or, as we will see, preselected and bundled into graph patterns in order to be attached in batches once the graph pattern has been matched. 
+    There are state of the art algorithms for graph rewriting with proven efficiency. The current work intends to be neither generic nor an efficient rewriting algorithm but rather to explore the process by which a DG can be rewritten into a SFL CG. In the future, to increase the speed and performance, the current algorithm and be rewritten using for example a graph programming language or a graph rewriting formalism building. 
+
+    Now that it was described how to construct the systemic functional constituency graph, representing the syntactic backbone for parsing, we turn our attention to fleshing out this backbone with systemic features selected from system networks. The feature enrichment is performed by employing graph matching and pattern based operations, explained in Sections \ref{sec:graph-matching} and \ref{sec:pattern-based-operations}. How this process works is explained in the next chapter.
+    
+    % Or, as we will see, preselected and bundled into graph patterns in order to be attached in batches once the graph pattern has been matched. 
 
 %%todo, write the conclussions
 %%todo, * replace hard coded selector functions with constraint checking 

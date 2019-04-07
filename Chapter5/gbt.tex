@@ -4,998 +4,1003 @@
 
 %The rich Systemic Functional constituency structures resulting from the parsing 
 
-Transitivity analysis in SFL is similar to what \textit{semantic role labelling}, \textit{thematic}  or  \textit{$\theta$ role analysis} means in other theories. This thesis provides, in Chapter \ref{ch:enrichment-stage}, an account of how to perform SF Transitivity parsing resulting in a configuration of a process, participants and circumstances. For an illustration take Example \ref{ex:demo-trans1} whose Transitivity analysis is available in Table \ref{tab:demo-trans1}. Here the entire clause is analysed as a Possessive configuration governed by the verb ``receive'' where ``Albert'' plays the \textit{role} of the Affected-Carrier and ``a phone call'' is the thing being Possessed.
+    Transitivity analysis in SFL is similar to what \textit{semantic role labelling}, \textit{thematic} or \textit{$\theta$ role analysis} means in several other theories. This thesis provides, in Chapter \ref{ch:enrichment-stage}, an account of how to perform SF Transitivity parsing resulting in a configuration of a process, participants and circumstances. For an illustration take Example \ref{ex:demo-trans1} whose Transitivity analysis is given in Table \ref{tab:demo-trans1}. Here the entire clause is analysed as a Possessive configuration governed by the verb ``receive'' where ``Albert'' plays the \textit{role} of the Affected-Carrier and ``a phone call'' is the thing being Possessed.
 
-\begin{exe}
-    \ex\label{ex:demo-trans1} Albert received a phone call.
-    \ex\label{ex:demo-trans2} He asked to go home immediately.
-%    \ex\label{ex:demo-trans3} He asked [\textit{empty-subject} to go home immediately].
-\end{exe}
+    \begin{exe}
+        \ex\label{ex:demo-trans1} Albert received a phone call.
+        \ex\label{ex:demo-trans2} He asked to go home immediately.
+    %    \ex\label{ex:demo-trans3} He asked [\textit{empty-subject} to go home immediately].
+    \end{exe}
 
-\begin{table}[!ht]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|}
-        \hline
-        \textit{Albert}  & \textit{received} & \textit{a} & \textit{phone} & \textit{call} \\ \hline
-        \multicolumn{5}{|c|}{Possessive configuration}                                     \\ \hline
-        Affected Carrier & Process           & \multicolumn{3}{c|}{Posessed}               \\ \hline
-    \end{tabular}
-    \caption{Transitivity analysis with Cardiff grammar of Example \ref{ex:demo-trans1}}
-    \label{tab:demo-trans1}
-\end{table}
+    \begin{table}[!ht]
+        \centering
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            \textit{Albert}  & \textit{received} & \textit{a} & \textit{phone} & \textit{call} \\ \hline
+            \multicolumn{5}{|c|}{Possessive configuration}                                     \\ \hline
+            Affected Carrier & Process           & \multicolumn{3}{c|}{Posessed}               \\ \hline
+        \end{tabular}
+        \caption{Transitivity analysis with Cardiff grammar of Example \ref{ex:demo-trans1}}
+        \label{tab:demo-trans1}
+    \end{table}
 
-Example \ref{ex:demo-trans2} is slightly more complex and illustrates the main motivation behind the current chapter. It is analysed in Table \ref{tab:demo-trans2}, according to Cardiff grammar, as a Three Role Cognition configuration with ``ask'' being the process, ``he'' the Agent and ``to go home immediately'' the cognised Phenomenon. The Phenomenon is filled by a non-finite clause ``to go home immediately'' which is, in Transitivity account, a Directional configuration governed by the verb ``go'' and has as participants the Destination ``home'' and the Agent Carrier in an empty Subject position that is said to be \textit{non-realised}, \textit{empty}, or \textit{covert}. This is a case when the empty constituent is recoverable from the clause above and corresponds to the Subject ``He''. This way, the constituent ``He'' plays two roles: first as Agent in the Cognition process of the top clause and second as Agent Carrier in the Directional process of the embedded clause. In this work, the way to assign a second role coming from the lower clause, is by detecting and making explicit the empty constituents and resolving them locally with a link to the corresponding constituent.
+    Example \ref{ex:demo-trans2} is slightly more complex and illustrates the main motivation behind the current chapter. It is analysed in Table \ref{tab:demo-trans2}, according to the Cardiff grammar, as a Three Role Cognition configuration with ``ask'' being the process, ``he'' the Agent and ``to go home immediately'' the cognised Phenomenon. The Phenomenon is filled by a non-finite clause ``to go home immediately'' which is, in the Transitivity account, a Directional configuration governed by the verb ``go'' and has as participants the Destination ``home'' and the Agent Carrier in an empty Subject position that is said to be \textit{non-realised}, \textit{empty}, or \textit{covert}. This is a case when the empty constituent is recoverable from the clause above and corresponds to the Subject ``He''. This way, the constituent ``He'' plays two roles: first as Agent in the Cognition process of the top clause and second as Agent Carrier in the Directional process of the embedded clause. In this work, the way to assign a second role coming from the lower clause is by detecting and making explicit the empty constituents and resolving them locally with a link to the corresponding constituent.
 
-%TODO: perhaps argue more for the need of having in the structure of something that is not visible; 
-%TODO: perhaps use the configuration definitions as an argument, that there are mandatory arguments and optional ones, and sometimes the mandatory ones are not found in the clause and that has to be somehow handled. 
-%TODO Neale thesis page 17 a nice transition
+    %TODO: perhaps argue more for the need of having in the structure of something that is not visible; 
+    %TODO: perhaps use the configuration definitions as an argument, that there are mandatory arguments and optional ones, and sometimes the mandatory ones are not found in the clause and that has to be somehow handled. 
+    %TODO Neale thesis page 17 a nice transition
+    
+    \begin{table}[!ht]
+        \centering
+        \begin{tabular}{cc|c|c|c|c|c}
+            \hline
+            \multicolumn{1}{|c|}{\textit{He}} & \textit{asked} & \textit{{[}empty subject{]}} & \textit{to} & \textit{go} & \textit{home} & \multicolumn{1}{c|}{\textit{immediately}} \\ \hline
+            \multicolumn{7}{|c|}{Three Role Cognition configuration}                                                                                                                      \\ \hline
+            \multicolumn{1}{|c|}{Agent}           & Process        & \multicolumn{5}{c|}{Phenomena}                                                                                       \\ \hline
+            &                & \multicolumn{5}{c|}{Directional Configuration}                                                                       \\ \cline{3-7} 
+            &                & Agent-Carrier                &             & Process     & Destination   &                                           \\ \cline{3-3} \cline{5-6}
+        \end{tabular}
+        \caption{Transitivity analysis with Cardiff grammar of Example \ref{ex:demo-trans2}}
+        \label{tab:demo-trans2}
+    \end{table}
 
-\begin{table}[!ht]
-    \centering
-    \begin{tabular}{cc|c|c|c|c|c}
-        \hline
-        \multicolumn{1}{|c|}{\textit{He}} & \textit{asked} & \textit{{[}empty subject{]}} & \textit{to} & \textit{go} & \textit{home} & \multicolumn{1}{c|}{\textit{immediately}} \\ \hline
-        \multicolumn{7}{|c|}{Three Role Cognition configuration}                                                                                                                      \\ \hline
-        \multicolumn{1}{|c|}{Agent}           & Process        & \multicolumn{5}{c|}{Phenomena}                                                                                       \\ \hline
-        &                & \multicolumn{5}{c|}{Directional Configuration}                                                                       \\ \cline{3-7} 
-        &                & Agent-Carrier                &             & Process     & Destination   &                                           \\ \cline{3-3} \cline{5-6}
-    \end{tabular}
-    \caption{Transitivity analysis with Cardiff grammar of Example \ref{ex:demo-trans2}}
-    \label{tab:demo-trans2}
-\end{table}
+    In language there are many cases where constituents are empty but recoverable from the immediate vicinity relying in most cases on syntactic means alhough in a few cases additional lexical-semantic resources are required. The mechanisms of detecting and resolving the empty constituents are captured in the Government and Binding Theory (GBT) developed in \citet{Chomsky81, Chomsky1982, Chomsky1986} and are based on phrase structure grammar. GBT explains how some constituents can \textit{move} from one place to another, where the places of \textit{non-overt constituents} are and what constituents they refer to i.e. what are their \textit{antecedents}. 
 
-In language there are many cases where constituents are empty but recoverable from the immediate vicinity relying in most cases on syntactic means and in a few cases additional lexical-semantic resources are required. The mechanisms of detecting and resolving the empty constituents are captured in the Government and Binding Theory (GBT) developed in \citep{Chomsky81, Chomsky1982, Chomsky1986} and based on the phrase structure grammar. GBT explains how some constituents can \textit{move} from one place to another, where are the places of \textit{non-overt constituents} and what constituents do they refer to i.e. what are their \textit{antecedents}. 
-
-The GBT approach explains grammatical phenomena using \textit{phrase structures} (PS). This is more distant from SFG than the approach taken by the dependency grammar. Section \ref{sec:null-elements-gbt} briefly introduces the theoretical context of GBT and then formulates the principles and generalisations relevant for current work. Then Section \ref{sec:placing-null-elements} translates the introduced principles and generalisations into Dependency Grammar rules and patterns. To lay the ground for the two sections, I first place GBT into the context of transformational grammar and introduce the basic concepts.
+    The GBT approach explains grammatical phenomena using \textit{phrase structures} (PS). This is more distant from SFG than the approach taken by the dependency grammar. Section \ref{sec:null-elements-gbt} briefly introduces the theoretical context of GBT and then formulates the principles and generalisations relevant for the current work. Then Section \ref{sec:placing-null-elements} translates the introduced principles and generalisations into Dependency Grammar rules and patterns. To lay the ground for these two sections, I first place GBT into the context of transformational grammar and introduce the basic concepts.
 
 \section{Introduction to GBT}
 \label{sec:phrase-structure}
 
-This section is set as introduction to the fundamental concepts from Government and Binding Theory. It belongs to the family of Transformational grammars (TG) or transformational-generative grammars (TGG). It is part of the theory of generative grammar that considers grammar to be a system of rules that generate exactly those combinations of words which form grammatical sentences in a given language \mbox{\citep{Chomsky65}}. TG involves the use of defined operations called transformations to produce new sentences from existing ones.
+    This section is set as as introduction to the fundamental concepts from Government and Binding Theory. GBT belongs to the family of Transformational grammars (TG) or transformational-generative grammars (TGG). It is part of the theory of generative grammar that considers grammar to be a system of rules that generate exactly those combinations of words which form grammatical sentences in a given language \mbox{\citep{Chomsky65}}. TG involves the use of defined operations called transformations to produce new sentences from existing ones.
 
-Chomsky developed a formal theory of grammar \citep{Chomsky56} where transformations manipulated not just the surface strings, but the parse tree associated with them, making transformational grammar a system of tree automata \mbox{\citep{Stockwell1973}}.
+    Chomsky developed a formal theory of grammar \citep{Chomsky56} where transformations manipulated not just the surface strings, but the parse tree associated with them, making transformational grammar a system of tree automata \mbox{\citep{Stockwell1973}}.
 
-A transformational-generative (or simply transformational) grammar thus involved two types of productive rules: \textit{phrase structure rules}, such as ``S -> NP VP'' (meaning that a sentence may consist of a noun phrase followed by a verb phrase) etc., which could be used to generate grammatical sentences with associated parse trees (phrase markers, or P markers); and \textit{transformational rules}, such as rules for converting statements to questions or active to passive voice, which acted on the phrase markers to produce further grammatically correct sentences \citep[59-66]{Bach1966}. This notion of transformation proved adequate for subsequent versions including the ``extended'', ``revised extended'' and Government-Binding (GB) versions of generative grammar, but may no longer be sufficient for the latest ``minimalist'' grammar \citep{Chomsky93}. It require a formal definition that goes beyond the tree manipulation. For the purpose of the current work, however, the GBT employing the idea of transformations is perfectly suitable. I selected it because of clear and extensive descriptions of the mechanisms for identification of \textit{null elements} (also known as \textit{empty categories}) and how to provide them with an interpretation. 
+    A transformational-generative (or simply transformational) grammar thus involved two types of productive rules: \textit{phrase structure rules}, such as ``S -> NP VP'' (meaning that a sentence may consist of a noun phrase followed by a verb phrase) etc., which could be used to generate grammatical sentences with associated parse trees (phrase markers, or P markers); and \textit{transformational rules}, such as rules for converting statements to questions or active to passive voice, which acted on the phrase markers to produce further grammatically correct sentences \citep[59-66]{Bach1966}. This notion of transformation proved adequate for subsequent versions including the ``extended'', ``revised extended'' and Government-Binding (GB) versions of generative grammar, but is no longer be compatible with the latest ``minimalist'' grammar \citep{Chomsky93}, which for example disposes of the concept of government. The minimalist programme introduces a set of formal definitions that go beyond the tree manipulation. For the purpose of the current work, however, GBT employing the idea of transformations is perfectly suitable. I selected it because of clear and extensive descriptions of the mechanisms for identification of \textit{null elements} (also known as \textit{empty categories}) and how to provide them with an interpretation. 
 
 \subsection{Phrase structure}
-The notion of structure in a generative grammar refers to the way words are combined together to form phrases and sentences. \textit{Merging} is the technical term used in GBT for the operation of bringing two words together into a phrase. In this operation one word will always be more prominent and is therefore called the \textit{head} of the phrase. The resulting combination is a new constituent and is called a \textit{projection} of the head. This is known as \textit{X-bar theory} (often denoted as X' or $\bar{X}$) and embodies two primary claims: (a) that the phrases may contain intermediary constituents projected from a head X and (b) that this system of projected constituency may be common to more than one category (such as N, V, A, P etc.).
+    The notion of structure in a generative grammar refers to the way words are combined together to form phrases and sentences. \textit{Merging} is the technical term used in GBT for the operation of bringing two words together into a phrase. In this operation one word will always be more prominent and is therefore called the \textit{head} of the phrase. The resulting combination is a new constituent and is called a \textit{projection} of the head. This is known as \textit{X-bar theory} \citep{Jackendoff77-book}, often denoted as X' or $\bar{X}$, and embodies two primary claims: (a) that the phrases may contain intermediary constituents projected from a head X and (b) that this system of projected constituency may be common to more than one category (such as N, V, A, P etc.).
 
-These combinations of words and projections can be represented using the \textit{labelled bracketing notation} where the labels denote constituent categories. The bracketed notation is a representation equivalent to a hierarchical tree of constituent parts or \textit{parse tree} (also known as \textit{syntactic tree}, \textit{phrase structure}, \textit{derivation tree}). The parse tree represents the syntactic structure of a string according to some grammar. The equivalence between a bracketed notation and parse tree is exemplified in the following two representations of \ref{ex:example-sent} from \citep[83]{Haegeman1991}.
+    These combinations of words and projections can be represented using the \textit{labelled bracketing notation} where the labels denote constituent categories. The bracketed notation is a representation equivalent to a hierarchical tree of constituent parts or \textit{parse tree} (also known as \textit{syntactic tree}, \textit{phrase structure}, \textit{derivation tree}). The parse tree represents the syntactic structure of a string according to some grammar. The equivalence between a bracketed notation and parse tree is exemplified in the following two representations of example \ref{ex:example-sent} from \citep[83]{Haegeman1991}.
 
-\begin{exe}
-    \ex\label{ex:example-sent} Poirot will abandon the investigation.
-    \ex\label{ex:bracketed}
-    $
-    \Bigg[_S
-    \Big[_{NP}
-    \big[_NPoirot\big]
-    \Big]
-    \big[_{AUX}will\big]
-    \bigg[_{VP}
-    \big[_Vabandon\big]
-    \Big[_{NP}
-    \big[_{Det}the\big]
-    \big[_Ninvestigation\big]
-    \Big]
-    \bigg]
-    \Bigg]
-    $
-\end{exe}
+    \begin{exe}
+        \ex\label{ex:example-sent} Poirot will abandon the investigation.
+        \ex\label{ex:bracketed}
+        $
+        \Bigg[_S
+        \Big[_{NP}
+        \big[_NPoirot\big]
+        \Big]
+        \big[_{AUX}will\big]
+        \bigg[_{VP}
+        \big[_Vabandon\big]
+        \Big[_{NP}
+        \big[_{Det}the\big]
+        \big[_Ninvestigation\big]
+        \Big]
+        \bigg]
+        \Bigg]
+        $
+    \end{exe}
 
-\begin{figure}[!ht]
-    \centering
-    \Tree [.S [.NP [.N Poirot ] ] [.AUX will ] [.VP [.V abandon ] [.NP [.Det the ] [.N investigation ]]]]
-    \caption{The parse tree of Example \ref{ex:example-sent} from \citep[83]{Haegeman1991} }
-    \label{fig:exaple-parse-tree}
-\end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \Tree [.S [.NP [.N Poirot ] ] [.AUX will ] [.VP [.V abandon ] [.NP [.Det the ] [.N investigation ]]]]
+        \caption{The parse tree of Example \ref{ex:example-sent} from \citet[83]{Haegeman1991} }
+        \label{fig:exaple-parse-tree}
+    \end{figure}
 
-A node is said to be \textit{non-branching} if there is a single line starting below and it is called  \textit{branching} if there are more than one line going downwards. The children of a branching node are said to be bound by a \textit{sisterhood} relation and in relation to a \textit{parent} or \textit{mother} node. In a phrase structure the vertical relations are referred as \textit{dominance} relations defined below. 
+    A node is said to be \textit{non-branching} if there is a single line starting below and it is called  \textit{branching} if there is more than one line going downwards. The children of a branching node are said to be bound by a \textit{sisterhood} relation and in relation to a \textit{parent} or \textit{mother} node. In a phrase structure the vertical relations are referred to \textit{dominance} relations defined below. 
 
-\begin{definition}[Dominance]\label{def:dominance}
-    Node A dominates node B if and only if A is higher up in the tree than B and if you can trace a line from A to B going only downwards \citep[85]{Haegeman1991}.
-\end{definition}
+    \begin{definition}[Dominance]\label{def:dominance}
+        Node A dominates node B if and only if A is higher up in the tree than B and if you can trace a line from A to B going only downwards \citep[85]{Haegeman1991}.
+    \end{definition}
+    
+    Looking at the tree diagram along the horizontal axis, GBT describes left-to-right ordering of constituents using the linear \textit{precedence} relation. 
+    
+    \begin{definition}[Precedence]\label{def:predecence}
+        Node A precedes node B if and only if A is to the left of B and neither A dominates B nor B dominates A \citep[85]{Haegeman1991}.
+    \end{definition}
 
-Looking at the tree diagram along the horizontal axis, GBT describes left-to-right ordering of constituents using the \textit{precedence} relation. 
+    In Figure \ref{fig:exaple-parse-tree} NP, AUX and VP nodes are sisters, they precede one another and are dominated by the S parent node. A more specific type of dominance, that will be employed later in this chapter, is \textit{immediate dominance}, which is when there is no intermediary node between A and B. In this case, the node ``Poirot'' is also dominated by S but only the grandparent NP is immediately dominated by S. 
+    The same holds for precedence: the \textit{immediate precedence} is when a node A precedes a node B and there is no intervening node in between. Node NP precedes VP but only AUX is immediately preceded. 
 
-\begin{definition}[Precedence]\label{def:predecence}
-    Node A precedes node B if and only if A is to the left of B and neither A dominates B nor B dominates A \citep[85]{Haegeman1991}.
-\end{definition}
+    \begin{generalization}[Projection principle]\label{gen:pp}
+        Lexical information is syntactically represented. 
+    \end{generalization}
 
-In Figure \ref{fig:exaple-parse-tree} NP, AUX and VP nodes are sisters, they precede each other and are dominated by S parent node. A more specific type of dominance, that will be employed latter in this chapter, is the \textit{immediate dominance} which is when there is no intermediary node between A and B. In this case, the node ``Poirot'' is also dominated by S but only the grandparent NP is immediately dominated by S. 
-The same holds for precedence: the \textit{immediate precedence} is when a node A precedes a node B and there is no intervening node in between. Node NP precedes VP but only AUX is immediately preceded. 
-
-\begin{generalization}[Projection principle]\label{gen:pp}
-    Lexical information is syntactically represented. 
-\end{generalization}
-
-\begin{figure}[!ht]
-    \centering
-    \Tree [.S  
-            [.NP {Miss Marple} ] 
-            [.AUX will ] 
-            [.VP 
-                [.$\bar{V}$ 
-                    [.$\bar{V}$  
-                        [.V read ] 
-                        [.NP {the letters} ] 
-                    ]  
-                    [.PP {in the garden shed} ] 
+    \begin{figure}[!ht]
+        \centering
+        \Tree [.S  
+                [.NP {Miss Marple} ] 
+                [.AUX will ] 
+                [.VP 
+                    [.$\bar{V}$ 
+                        [.$\bar{V}$  
+                            [.V read ] 
+                            [.NP {the letters} ] 
+                        ]  
+                        [.PP {in the garden shed} ] 
+                    ] 
+                    [.NP {this afternoon} ] 
                 ] 
-                [.NP {this afternoon} ] 
-            ] 
-        ]
-%    \Tree [.VP [.V read ] [.NP {Miss Marple} ] ]
-    \caption{Example of projections from \citep[90]{Haegeman1991} }
-    \label{fig:maximal-projection}
-\end{figure}
+            ]
+    %    \Tree [.VP [.V read ] [.NP {Miss Marple} ] ]
+        \caption{Example of projections from \citet[90]{Haegeman1991} }
+        \label{fig:maximal-projection}
+    \end{figure}
 
-An important principle in GBT is that of \textit{projection} formulated in Generalisation \ref{gen:pp}. For example in Figure \ref{fig:maximal-projection}, projections of V that are dominated by more comprehensive projections of V are called \textit{intermediate projections} while the node labelled VP is the \textit{maximal projection} of V. Maximal projections are also barrier to government (see Definition \ref{def:government1} below). The role of lexicon in syntax from to GBT perspective is discussed at large in \citet{stowell1992syntax}. 
+    An important principle in GBT is that of \textit{projection} formulated in Generalisation \ref{gen:pp}. For example in Figure \ref{fig:maximal-projection}, projections of V that are dominated by more comprehensive projections of V are called \textit{intermediate projections} while the node labelled VP is the \textit{maximal projection} of V. Maximal projections are also barriers to government (see Definition \ref{def:government1} below). The role of the lexicon in syntax from GBT perspective is discussed at large in \citet{stowell1992syntax}. 
 
 \subsection{Theta theory}
-This section introduces which constituents are minimally required to form a sentence and why. Traditionally three types of verbs are recognised: \textit{transitive}, \textit{di-transitive} and \textit{intransitive}. This distinction is based on how many complements a verb requires to form a minimal complete sentence. If a verb is transitive then one NP direct object is required. If the verb is di-transitive then two NP or one NP and one PP direct and indirect objects are required. Finally, if it is intransitive then no NP complement is allowed. 
+    This section introduces which constituents are minimally required to form a sentence and why. Traditionally three types of verbs are recognised: \textit{transitive}, \textit{di-transitive} and \textit{intransitive}. This distinction is based on how many complements a verb requires to form a minimal complete sentence. If a verb is transitive then one NP direct object is required. If the verb is di-transitive then two NP or one NP and one PP direct and indirect objects are required. Finally, if it is intransitive then no NP complement is allowed. 
 
-Logicians for a long time have been concerned with formulating representations corresponding to semantic structure of sentences or \textit{propositions}. Like Tesniere \citep[97]{Tesniere2015} discussed in Section \ref{sec:origins}, Haegeman employs the metaphor of a theatre play when discussing the argument structure of predicates. A play not only describes the number of participants but also what corresponding roles they play. The specific semantic relations between the verb and its arguments is comparable with the identification of characters in a play script \citep[49]{Haegeman1991}.
+    Logicians for a long time have been concerned with formulating representations corresponding to semantic structure of sentences or \textit{propositions}. Like Tesniere \citep[97]{Tesniere2015} discussed in Section \ref{sec:origins}, Haegeman employs the metaphor of a theatre play when discussing the argument structure of predicates. A play not only describes the number of participants but also what corresponding roles they play. The specific semantic relations between the verb and its arguments is comparable with the identification of characters in a play script \citep[49]{Haegeman1991}.
  
-In logical notation such as in Example \ref{ex:argument} a proposition comprises of a predicate (P) that takes a certain number of \textit{arguments} (here a and b). By analogy to the logical tradition, in GBT, the verb is said to be like the predicate while the Subject together with complements are like the arguments that the predicate requires. 
+    In logical notation such as in Example \ref{ex:argument} a proposition is comprised of a predicate (P) that takes a certain number of \textit{arguments} (here a and b). By analogy to the logical tradition, in GBT, the verb is said to be like the predicate while the Subject together with complements are like the arguments that the predicate requires. 
 
-In Example \ref{ex:kill1} Maigret, taking Subject position, is the Agent in the process of killing while Poirot in the complement position is the Patient that receives the effects of the process of killing. The generic argument structure for the verb ``to kill'' can be expressed as in Example \ref{ex:kill2}. The first argument is of NP category and takes the role of an Agent while the second argument is also an NP but it takes the Patient role. The transitivity of a verb dictates how many arguments there should be.
+    In Example \ref{ex:kill1} Maigret, taking Subject position, is the Agent in the process of killing while Poirot in the complement position is the Patient that receives the effects of the process of killing. The generic argument structure for the verb ``to kill'' can be expressed as in Example \ref{ex:kill2}. The first argument is of NP category and takes the role of an Agent, while the second argument is also an NP but takes the Patient role. The transitivity of a verb dictates how many arguments there should be.
 
-\begin{exe}
-    \ex\label{ex:argument} P(a, b)
-    \ex\label{ex:kill1} Maigret killed Poirot.
-    \ex\label{ex:kill2} V kill: 1 (NP:Agent), 2 (NP:Patient)
-\end{exe}
+    \begin{exe}
+        \ex\label{ex:argument} P(a, b)
+        \ex\label{ex:kill1} Maigret killed Poirot.
+        \ex\label{ex:kill2} V kill: 1 (NP:Agent), 2 (NP:Patient)
+    \end{exe}
 
-In literature these relations between the verb and the arguments are called \textit{thematic roles} or theta-roles ($\theta$-roles). It is said that the verb \textit{theta marks} its arguments. The component of the grammar that regulates the assignment of thematic roles is called \textit{theta theory}. 
+    In the literature these relations between the verb and their arguments are called \textit{thematic roles} or theta-roles ($\theta$-roles). It is said that the verb \textit{theta marks} its arguments. The component of the grammar that regulates the assignment of thematic roles is called \textit{theta theory}. 
 
-In GBT the theory of thematic roles is very sketchy and does not go beyond distinction of several thematic roles (Agent/Actor, Patient, Theme, Experiencer, Beneficiary, Goal, Source, Location and the controversial Theme) \citep[50]{Haegeman1991}. The theta theory has a central criterion that is stipulated in Generalisation \ref{gen:theta-criterion}.
+    In GBT the theory of thematic roles is very sketchy and does not go beyond the distinction of several thematic roles (Agent/Actor, Patient, Theme, Experiencer, Beneficiary, Goal, Source, Location and the controversial Theme) \citep[50]{Haegeman1991}. Theta theory has a central criterion that is stipulated in Generalisation \ref{gen:theta-criterion}.
 
-\begin{generalization}[Theta criterion]\label{gen:theta-criterion}
-    Theta criterion requires that: 
-    \begin{itemize}
-        \item each argument is associated one and only one theta role
-        \item each theta role is assigned to one and only one argument \citep[54]{Haegeman1991}
-    \end{itemize} 
-\end{generalization}
+    \begin{generalization}[The theta criterion]\label{gen:theta-criterion}
+        Theta criterion requires that: 
+        \begin{itemize}
+            \item each argument is associated with one and only one theta role
+            \item each theta role is assigned to one and only one argument \citep[54]{Haegeman1991}
+        \end{itemize} 
+    \end{generalization}
 
-\begin{exe}
-    \ex\label{ex:expletive1} \textit{It} surprised Jeeves that the pig had been stolen.
-\end{exe}
+    In English, however, there is a special case, that of \textit{expletives}, when the Subject argument is filled by the pronoun \textit{it} that receives no thematic role and acts rather as a dummy slot filler without any semantic contribution to the meaning of the sentence \citep[62]{Haegeman1991}. An example is shown in Example \ref{ex:expletive1}. Worth noticing is also the fact that \textit{auxiliary verbs} and \textit{copula verbs} do not assign thematic roles \citep{pollock1989verb}. 
+    
+    \begin{exe}
+        \ex\label{ex:expletive1} \textit{It} surprised Jeeves that the pig had been stolen.
+    \end{exe}
 
-In English, however, there is a special case, that of \textit{expletives}, when the Subject argument is filled by the pronoun \textit{it} that receives no thematic role and acts rather as a dummy slot filler without any semantic contribution to the meaning of the sentence \citep[62]{Haegeman1991}. Worth noticing is also the fact that \textit{auxiliary verbs} and \textit{copula verbs} do not assign thematic roles \citep{pollock1989verb}. 
+    The verb that assigns a theta role does not need to specify which syntactic category it should be realised by. In more technical terms, this means that the categorial selection (\textit{c-selection}) follows from the semantic relation (\textit{s-selection}). When a theta role can be assigned to an argument it is said that it is saturated. In order to identify the assignment of respective roles the arguments are identified by means of an index provided as subscript in the sentence.
 
-The verb that assigns a theta role does not need to specify which syntactic category it shall be realised by. In more technical it means that the categorial selection (\textit{c-selection}) follows from semantic relation (\textit{s-selection}). When a theta role can be assigned to an argument it is said that it is saturated. In order to identify the assignment of respective role the arguments are identified by the means of an index provided as subscript in the sentence. 
+    \begin{exe}
+        \ex\label{ex:indexing1} Maigret_i killed the burglar_j.
+        \ex\label{ex:indexing2} Maigret_i said that he_i was ill.
+    \end{exe}
 
-\begin{exe}
-    \ex\label{ex:indexing1} Maigret_i killed the burglar_j.
-    \ex\label{ex:indexing2} Maigret_i said that he_i was ill.
-\end{exe}
+    In Example \ref{ex:indexing1} Maigret has the index \textit{i} and the burglar may be \textit{j}, meaning they are distinct referents. Conversely, in Example \ref{ex:indexing2}, ``he'' receives the same index as Maigret because they are interpreted as referring to the same entity. We say that the two are \textit{coindexed}.
 
-In the Example \ref{ex:indexing1} Maigret has the index \textit{i} and the burglar \textit{j} meaning they are distinct referents. On contrary, in Example \ref{ex:indexing2}, ``he'' receives the same index as Maigret because they are interpreted as referring to the same entity. We say that the two are \textit{coindexed}.
-
-%This is a sufficient foundation for introducing next the \textit{government theory}.
+    %This is a sufficient foundation for introducing next the \textit{government theory}.
 \subsection{Government and Binding}
-%Government is a structural property involved in syntactic processes such as theta-marking \ref{} and case-marking \ref{} that is introduced below.
+    %Government is a structural property involved in syntactic processes such as theta-marking \ref{} and case-marking \ref{} that is introduced below.
 
-Using the terminology from the traditional grammar it is said that a verb governs its object. This is generalised in GBT as a rule that the head of a phrase, called \textit{governor}, \textit{governs} its complement, called the \textit{governee}. This relation is loosely defined in Definition \ref{def:government-i} below and formally in Definition \ref{def:government1}. 
+    Using the terminology from traditional grammar it is said that a verb governs its object. This is generalised in GBT as a rule that the head of a phrase, called \textit{governor}, \textit{governs} its complement, called the \textit{governee}. This relation is loosely defined in Definition \ref{def:government-i} below and formally in Definition \ref{def:government1}. 
 
-\begin{definition}[government i]\label{def:government-i}
-     A governs B if 
-     \begin{itemize}
-         \item A is a governor;
-         \item A and B are sisters
-     \end{itemize}
-     Governors are heads \citep[86]{Haegeman1991}.
-\end{definition}
+    \begin{definition}[government i]\label{def:government-i}
+         A governs B if 
+         \begin{itemize}
+             \item A is a governor;
+             \item A and B are sisters
+         \end{itemize}
+         Governors are heads \citep[86]{Haegeman1991}.
+    \end{definition}
 
-In Figure \ref{fig:exaple-parse-tree} the verb ``abandon'' is the head of the verb phrase (VP) and governs the direct object - nominal phrase (NP) ``the investigation''. V does not govern the subject NP ``Poirot''. All the constituents governed by a node constitute the \textit{governing domain} of that node. In this case VP is the governing domain of V.
+    In Figure \ref{fig:exaple-parse-tree} the verb ``abandon'' is the head of the verb phrase (VP) and governs the direct object - nominal phrase (NP) ``the investigation''. V does not govern the subject NP ``Poirot''. All the constituents governed by a node constitute the \textit{governing domain} of that node. In this case VP is the governing domain of V.
 
-Before providing the next definition of government, I first introduce the notion of C-command which provides a general pattern of how the agreeing elements relate to each other in the parse tree. C-command is formally defined in Definition \ref{def:c-command}. When considering the geometrical relation between the agreeing elements, one always is higher in the tree than the other one in a manner depicted in Figure \ref{fig:agreement2}. In Figure \ref{fig:agreement1} the co-subscripted nodes indicate agreement. Here the [Spec, NP] c-commands all the nodes dominated by the NP. These nodes constitute the \textit{c-command domain} of Spec element \citep[134]{Haegeman1991}. 
+    Before providing the next definition of government, I first introduce the notion of C-command which provides a general pattern for how the agreeing elements relate to each other in the parse tree. c-command is formally defined in Definition \ref{def:c-command}. When considering the geometrical relation between the agreeing elements, one always is higher in the tree than the other one in the manner depicted in Figure \ref{fig:agreement2}. In Figure \ref{fig:agreement1} the co-subscripted nodes indicate agreement. Here the [Spec, NP] c-commands all the nodes dominated by the NP. These nodes constitute the \textit{c-command domain} of the Spec element \citep[134]{Haegeman1991}. 
 
-\begin{figure}[!ht]
-    \centering
-    \begin{subfigure}{0.45\linewidth}
+
+    \begin{figure}[!ht]
         \centering
-        \Tree [.NP [.Spec_i le ] [.$\bar{N}$ [.N_i livre ] [.PP sur Chomsky ]]]
-        \caption{Example of agreement in French \citep[132]{Haegeman1991} }
-        \label{fig:agreement1}
-    \end{subfigure}
-    \begin{subfigure}{0.45\linewidth}
-     \centering
-    \Tree [.X [.A_i ] [.{\ldots} [.B_i ] {\ldots} ]]
-    \caption{Schematic representation of the c-command \citep[133]{Haegeman1991} }
-    \label{fig:agreement2}
-\end{subfigure}
-    \caption{Agreement example and schematic representation }
-    \label{fig:agreement}
-\end{figure}
+        \resizebox{0.92\textwidth}{!}{%
+        \begin{subfigure}[b]{0.47\linewidth}
+            \centering
+            \Tree [.NP [.Spec_i le ] [.$\bar{N}$ [.N_i livre ] [.PP sur Chomsky ]]]
+            \caption{Example of agreement in French \citep[132]{Haegeman1991} }
+            \label{fig:agreement1}
+        \end{subfigure}
+        \quad
+        \begin{subfigure}[b]{0.47\linewidth}
+            \centering
+            \Tree [.X [.A_i ] [.{\ldots} [.B_i ] {\ldots} ]]
+            \caption{Schematic representation of the \mbox{c-command} \citep[133]{Haegeman1991} }
+            \label{fig:agreement2}
+        \end{subfigure}
+        }
+        \caption{Agreement example and schematic representation }
+        \label{fig:agreement}
+    \end{figure}
+    
+    \begin{definition}[c-command]\label{def:c-command}
+        A node A c-commands a node B if and only if
+        \begin{itemize}
+            \item A does not dominate B;
+            \item B does not dominate A;
+            \item the first branching node dominating A also dominates B \citep[212]{Haegeman1991}.
+        \end{itemize}
+    \end{definition}
+    
+    \begin{definition}[Government]\label{def:government1}
+        X governs Y if and only if
+        \begin{itemize}
+            \item X is either of the category A, N, V, P, I; \\
+                or \\
+                X and Y are coindexed
+            \item X c-commands Y;
+            \item no barrier intervenes between X and Y;
+            \item there is no Z such that Z satisfies the points above and X c-commands Z \citep[557]{Haegeman1991}.
+        \end{itemize}
+    \end{definition}
 
-\begin{definition}[c-command]\label{def:c-command}
-    A node A c-commands a node B if and only if
-    \begin{itemize}
-        \item A does not dominate B;
-        \item B does not dominate A;
-        \item the first branching node dominating A also dominates B \citep[212]{Haegeman1991}.
-    \end{itemize}
-\end{definition}
+    %After having introduced government I turn next to the binding theory. 
+    %np definitions
+    In GBT three types of NP are distinguished: \textit{full noun phrases} (e.g. Maigret, the doctor,  etc.), \textit{pronouns} (e.g. he, me, us, etc.), and \textit{anaphors} comprised of reflexives (e.g. myself, herself, etc.) plus reciprocals (e.g. each other, one another). Pronouns and anaphors (reflexives and referential) lack inherent reference. Anaphors need an antecedent for their interpretations whereas pronouns do not. Pronouns indicate some inherent features of the referent so that they can be identified from the contextual information. The full noun phrases called Referential expressions, or \textit{R-expression} for short, are inherently referential and do not need an antecedent. Moreover they do not tolerate an antecedent \citep[226]{Haegeman1991}. The NP types can be defined in terms of features Anaphor and Pronominal (systematised together with the empty categories in Table \ref{tab:null-types} below). This way Pronouns have features [+Pronominal,-Anaphor], Anaphors [+Pronominal,-Anaphor] and the R-expressions [-Pronominal,-Anaphor]. The last combination [+Pronominal,+Anaphor] corresponds to \textit{PRO empty category} which will be discussed in Section \ref{sec:pro-mcg} below. 
 
-\begin{definition}[Government]\label{def:government1}
-    X governs Y if and only if
-    \begin{itemize}
-        \item X is either of the category A, N, V, P, I; \\
-            or \\
-            X and Y are coindexed
-        \item X c-commands Y;
-        \item no barrier intervenes between X and Y;
-        \item there is no Z such that Z satisfies the points above and X c-commands Z \citep[557]{Haegeman1991}.
-    \end{itemize}
-\end{definition}
+    The module of the grammar regulating interpretation of the noun phrase (NP) is referred, in GBT, as \textit{binding theory} (BT). It is formally defined in terms of c-command in Definition \ref{def:binding}. And because BT is essentially concerned with the binding of NPs in argument positions (\textit{A-position}), it is rather that \textbf{A-binding} (see Definition \ref{def:a-binding}) is of interest here. An A-position is a position in the tree to which a theta role can (but not necessarily) be assigned \citep[115]{Haegeman1991}.
 
-%After having introduced government I turn next to the binding theory. 
-%np definitions
-IN GBT three types of NP are distinguished: \textit{full noun phrases} (e.g. Maigret, the doctor,  etc.), \textit{pronouns} (e.g. he, me, us, etc.), and \textit{anaphors} comprised of reflexives (e.g. myself, herself, etc.) plus reciprocals (e.g. each other, one another,). 
-Pronouns and anaphors (reflexives and referential) lack inherent reference. Anaphors need an antecedent for their interpretations whereas pronouns do not. Pronoun indicate some inherent features of the referent so that they can be identified from the contextual information. The full noun phrases called Referential expressions or \textit{R-expression}, for short, are inherently referential and do not need an antecedent, moreover they do not tolerate an antecedent \citep[226]{Haegeman1991}. The NP types can be defined in terms of features Anaphor and Pronominal (systematised together with the empty categories in the Table \ref{tab:null-types} below). This way the Pronouns have features [+Pronominal,-Anaphor], the Anaphors [+Pronominal,-Anaphor] and the R-expressions [-Pronominal,-Anaphor]. The last combination [+Pronominal,+Anaphor] corresponds to \textit{PRO empty category} which will be discussed in the Section \ref{sec:pro-mcg} coming up next. 
+    \begin{definition}[Binding]\label{def:binding}
+        A binds B if and only if
+        \begin{itemize}
+            \item A c-commands B;
+            \item A and B are coindexed \citep[212]{Haegeman1991}.
+        \end{itemize}
+    \end{definition}
+    
+    \begin{definition}[A-Binding]\label{def:a-binding}
+        A A-binds B if and only if
+        \begin{itemize}
+            \item A is in A-position;
+            \item A c-commands B;
+            \item A and B are coindexed \citep[240]{Haegeman1991}.
+        \end{itemize}
+    \end{definition}
 
-The module of the grammar regulating interpretation of the noun phrase (NP) interpretation is referred, in GBT, as the \textit{binding theory}. It is formally defined in terms of c-command in Definition \ref{def:binding}. And because the BT is essentially concerned with binding of NPs in argument positions (\textit{A-position}) then it is rather the \textbf{A-binding} (see Definition \ref{def:a-binding}) of interest here. An A-position is a position in the tree to which a theta role can (but not necessarily) be assigned \citep[115]{Haegeman1991}.
+    Each of these NP types have an associated binding principle (ways in which to interpret, if needed, the reference of the NP) provided in Generalisations \ref{gen:binding-theory-a}, \ref{gen:binding-theory-b} and \ref{gen:binding-theory-c} below. These principles use the idea of \textit{governing category} which for a node A is the minimal domain containing it, its governor and an accessible subject. A subject A is said to be accessible for B if the co-indexation of A and B does not violate any grammatical principle \citep[241]{Haegeman1991}.
 
-\begin{definition}[Binding]\label{def:binding}
-    A binds B if and only if
-    \begin{itemize}
-        \item A c-commands B;
-        \item A and B are coindexed \citep[212]{Haegeman1991}.
-    \end{itemize}
-\end{definition}
-
-\begin{definition}[A-Binding]\label{def:a-binding}
-    A A-binds B if and only if
-    \begin{itemize}
-        \item A is in A-position;
-        \item A c-commands B;
-        \item A and B are coindexed \citep[240]{Haegeman1991}.
-    \end{itemize}
-\end{definition}
-
-Each of these NP types have an associated binding principle (ways in which to interpret, if needed, the reference of the NP) provided in Generalisations \ref{gen:binding-theory-a}, \ref{gen:binding-theory-b} and \ref{gen:binding-theory-c} below. These principle use the idea of \textit{governing category} which for a node A is the minimal domain containing it, its governor and an accessible subject. A subject A is said to be accessible for B if the co-indexation of A and B does not violate any grammatical principle \citep[241]{Haegeman1991}.
-
-\begin{generalization}[Principle A of binding theory]\label{gen:binding-theory-a}
-    An anaphor (i.e. a NP with the feature [+Anaphor] covering reflexives and reciprocals) must be bound in its governing category \citep[224]{Haegeman1991}.
-\end{generalization}
-
-\begin{generalization}[Principle B of binding theory]\label{gen:binding-theory-b}
-    The pronoun (i.e. a NP with feature [+Pronominal]) must be free in its governing category \citep[225]{Haegeman1991}.
-\end{generalization}
-
-\begin{generalization}[Principle C of binding theory]\label{gen:binding-theory-c}
-    An R-expression (i.e. a NP with independent reference) must be free everywhere \citep[227]{Haegeman1991}.
-\end{generalization}
-
+    \begin{generalization}[Principle A of binding theory]\label{gen:binding-theory-a}
+        An anaphor (i.e. a NP with the feature [+Anaphor] covering reflexives and reciprocals) must be bound in its governing category \citep[224]{Haegeman1991}.
+    \end{generalization}
+    
+    \begin{generalization}[Principle B of binding theory]\label{gen:binding-theory-b}
+        The pronoun (i.e. a NP with feature [+Pronominal]) must be free in its governing category \citep[225]{Haegeman1991}.
+    \end{generalization}
+    
+    \begin{generalization}[Principle C of binding theory]\label{gen:binding-theory-c}
+        An R-expression (i.e. a NP with independent reference) must be free everywhere \citep[227]{Haegeman1991}.
+    \end{generalization}
 
 \section{On Null Elements}
 \label{sec:null-elements-gbt}
-In certain schools of linguistics, in the study of syntax, an \textit{empty category} is a nominal element that does not have any phonological content and is therefore unpronounced. Empty categories may also be referred to as \textit{covert nouns}, in contrast to overt nouns which are pronounced \citep{Chomsky1993lectures}. Some empty categories are governed by the \textit{empty category principle} (see Definition \ref{def:ecp}). When representing empty categories in trees, linguists use a null symbol to depict the idea that there is a mental category at the level being represented, even if the word(s) are being left out of overt speech. 
-%GBT recognizes four main types of empty categories: NP-trace, Wh-trace, PRO, and pro.
 
-GBT recognises four main types of empty categories: \textit{NP-trace}, \textit{WH-trace}, \textit{PRO}, and \textit{pro}. They are subject to Principles A, B and C of the binding theory provided above and differentiated, like the over NPs, by two binding features: the anaphoric feature [a] and the pronominal feature [p]. The four possible combinations of plus (+) or minus (-) values for these features yield four types of empty categories. 
+    In certain schools of linguistics, in the study of syntax, an \textit{empty category} is a nominal element that does not have any phonological content and is therefore unpronounced. Empty categories may also be referred to as \textit{covert nouns}, in contrast to overt nouns, which are pronounced \citep{Chomsky1993lectures}. Some empty categories are governed by the \textit{empty category principle} (see Definition \ref{def:ecp}). When representing empty categories in trees, linguists use a null symbol to depict the idea that there is a mental category at the level being represented, even if the word(s) are left out of overt speech. 
+    %GBT recognizes four main types of empty categories: NP-trace, Wh-trace, PRO, and pro.
 
-\begin{table}[!ht]
-	\centering
-	%\resizebox{\textwidth}{!h}{%
-		\begin{tabulary}{\linewidth}{|c|c|c|C|C|}
-			\hline
-			\textbf{{[}a{]}} & \textbf{{[}p{]}} & \textbf{Symbol} & \textbf{Name of the empty category} & \textbf{Corresponding overt NP type} \\ \hline
-			-                & -                & t               & WH-trace                        & R-expression                           \\ \hline
-			-                & +                & pro             & little Pro                      & pronoun                                \\ \hline
-			+                & -                & t               & NP-trace                        & anaphor                                \\ \hline
-			+                & +                & PRO             & big Pro                         & none                                   \\ \hline
-		\end{tabulary}%
-	%}
-	\caption{Four types of empty categories 
-%        according to their binding features 
-(adaptation from \citep[436]{Haegeman1991})}
-	\label{tab:null-types}
-\end{table}
+    GBT recognises four main types of empty categories: \textit{NP-trace}, \textit{WH-trace}, \textit{PRO}, and \textit{pro}. They are subject to Principles A, B and C of the binding theory provided above and differentiated, like other NPs, by two binding features: the anaphoric feature [a] and the pronominal feature [p]. The four possible combinations of plus (+) or minus (-) values for these features yield four types of empty categories. 
 
-In Table \ref{tab:null-types}, [+a] refers to the anaphoric feature, meaning that the particular element must be bound within its governing category whereas [+p] refers to the pronominal feature which shows that the empty category is taking the place of an overt pronoun.
+    \begin{table}[!ht]
+    	\centering
+    	%\resizebox{\textwidth}{!h}{%
+    		\begin{tabulary}{\linewidth}{|c|c|c|C|C|}
+    			\hline
+    			\textbf{{[}a{]}} & \textbf{{[}p{]}} & \textbf{Symbol} & \textbf{Name of the empty category} & \textbf{Corresponding overt NP type} \\ \hline
+    			-                & -                & t               & WH-trace                        & R-expression                           \\ \hline
+    			-                & +                & pro             & little Pro                      & pronoun                                \\ \hline
+    			+                & -                & t               & NP-trace                        & anaphor                                \\ \hline
+    			+                & +                & PRO             & big Pro                         & none                                   \\ \hline
+    		\end{tabulary}%
+    	%}
+    	\caption{Four types of empty categories 
+    %        according to their binding features 
+    (adaptation from \citep[436]{Haegeman1991})}
+    	\label{tab:null-types}
+    \end{table}
 
-%is this definition well positioned here? 
-\begin{definition}[Empty Category Principle (ECP)]\label{def:ecp}
-    % solution taken from https://tex.stackexchange.com/questions/307141/itemizing-theorem-body
-    \leavevmode
-    \makeatletter
-    \@nobreaktrue
-    \makeatother
-    %    
-    \begin{itemize}
-        \item Traces must eb properly governed.
-        \item A properly governs B if and only if A theta-governs B or A antecedent-governs B \citep[17]{Chomsky1986}.
-        \item A theta-governs B if and only if  A governs B and A theta-marks B.
-        \item A antecedent-governs B if and only if A governs B and A is coindexed with B \citep[442]{Haegeman1991}.
-    \end{itemize}
-\end{definition}
+    In Table \ref{tab:null-types}, [+a] refers to the anaphoric feature, meaning that the particular element must be bound within its governing category whereas [+p] refers to the pronominal feature which shows that the empty category is taking the place of an overt pronoun.
 
+    %is this definition well positioned here? 
+    \begin{definition}[Empty Category Principle (ECP)]\label{def:ecp}
+        % solution taken from https://tex.stackexchange.com/questions/307141/itemizing-theorem-body
+        \leavevmode
+        \makeatletter
+        \@nobreaktrue
+        \makeatother
+        %    
+        \begin{itemize}
+            \item Traces must be properly governed.
+            \item A properly governs B if and only if A theta-governs B or A antecedent-governs B \citep[17]{Chomsky1986}.
+            \item A theta-governs B if and only if  A governs B and A theta-marks B.
+            \item A antecedent-governs B if and only if A governs B and A is coindexed with B \citep[442]{Haegeman1991}.
+        \end{itemize}
+    \end{definition}
 
-Next I describe in detail each empty category and the properties of corresponding overt noun type. 
+    Next I describe in detail each empty category and the properties of corresponding overt noun type. 
 
 
 \subsection{PRO Subjects and control theory}
 \label{sec:pro-mcg}
-\textit{PRO} stands for the non-overt NP that is the subject in non-finite (complement, adjunct or subject) clause and is accounted by the \textit{control theory} (CT).
 
-\begin{definition}[Control]\label{def:control}
-	Control is a term used to refer to a relation of referential dependency between an unexpressed subject (the control element) and an expressed or unexpressed constituent (controller). The referential properties of the controlled element are determined by those of the controller \citep{Bresnan1982}.
-\end{definition}
+    \textit{PRO} stands for the non-overt NP that is the subject in non-finite (complement, adjunct or subject) clauses and is accounted for by \textit{control theory} (CT).
 
-Control can be \textit{optional} or \textit{obligatory}. While \textit{Obligatory control} has a single interpretation, that of PRO being bound to its controller, the \textit{optional control} allows for two interpretations: \textit{bound} or \textit{free}. In Example \ref{ex:pro4} the PRO is controlled, thus bound, by the subject ``John'' of the matrix clause (i.e. higher clause) whereas in \ref{ex:pro5} it is an arbitrary interpretation where PRO refers to ``oneself'' or ``himself''. In \ref{ex:pro6} and \ref{ex:pro7} PRO must be controlled by the subject of the higher clause and does not allow for the arbitrary interpretation.
+    \begin{definition}[Control]\label{def:control}
+    	Control is a term used to refer to a relation of referential dependency between an unexpressed subject (the control element) and an expressed or unexpressed constituent (controller). The referential properties of the controlled element are determined by those of the controller \citep{Bresnan1982}.
+    \end{definition}
 
-\begin{exe}
-	\ex\label{ex:pro4}John asked how [PRO to behave himself/oneself].
-	\ex\label{ex:pro5}John and Bill discussed [PRO behaving oneself/themselves in public].
-	\ex\label{ex:pro6}John tried [PRO to behave himself/*oneself].
-	\ex\label{ex:pro7}John told Mary [PRO to behave herself/*himself/*oneself].
-\end{exe}
+    Control can be \textit{optional} or \textit{obligatory}. While \textit{obligatory control} has a single interpretation, that of PRO being bound to its controller, \textit{optional control} allows for two interpretations: \textit{bound} or \textit{free}. In Example \ref{ex:pro4} the PRO is controlled, thus bound, by the subject ``John'' of the matrix clause (i.e. higher clause) whereas in \ref{ex:pro5} it is an arbitrary interpretation where PRO refers to ``oneself'' or ``himself''. In \ref{ex:pro6} and \ref{ex:pro7} PRO must be controlled by the subject of the higher clause and does not allow for the arbitrary interpretation.
 
-Sometimes the controller is the subject (as in Examples \ref{ex:pro4}, \ref{ex:pro5}, \ref{ex:pro6}) and sometimes it is the object (Example \ref{ex:pro7}) of the higher clause. \citet[278]{Haegeman1991} proposes that there are two types of verbs, verbs of \textit{subject} and of \textit{object control}. The following set of generalizations from \cite{Haegeman1991} are instrumental in identifying places where a PRO constituent can be said to occur and identifies its corresponding binding element.
+    \begin{exe}
+    	\ex\label{ex:pro4}John asked how [PRO to behave himself/oneself].
+    	\ex\label{ex:pro5}John and Bill discussed [PRO behaving oneself/themselves in public].
+    	\ex\label{ex:pro6}John tried [PRO to behave himself/*oneself].
+    	\ex\label{ex:pro7}John told Mary [PRO to behave herself/*himself/*oneself].
+    \end{exe}
 
-\begin{generalization}\label{gen:1}
-	Each clause has a subject. If a clause doesn't have an overt subject then it is covertly (non-overtly) represented as PRO
-     \citep[263]{Haegeman1991}.
-\end{generalization}
-\begin{generalization}\label{gen:2}
-	A PRO subject can be bound, i.e. it takes a specific referent or can be arbitrary (equivalent to pronoun ``one'') \citep[263]{Haegeman1991}. In case of obligatory control, a PRO subject is bound to a NP and must be c-commanded by its controller \citep[278]{Haegeman1991}.
-\end{generalization}
+    Sometimes the controller is the subject (as in Examples \ref{ex:pro4}, \ref{ex:pro5}, \ref{ex:pro6}) and sometimes it is the object (Example \ref{ex:pro7}) of the higher clause. \citet[278]{Haegeman1991} proposes that there are two types of verbs, verbs of \textit{subject} and of \textit{object control}. The following set of generalisations from \cite{Haegeman1991} are instrumental in identifying places where a PRO constituent can be said to occur and identifies its corresponding binding element.
 
-\begin{generalization}\label{gen:3}
-	PRO must be in ungoverned position. This means that (a) PRO does not occur in object position (b) PRO cannot be subject of a finite clause \citep[279]{Haegeman1991}. 
-\end{generalization}
-\begin{generalization}\label{gen:4}
-	PRO does not occur in the non-finite clauses introduced by \textit{if} and \textit{for} complementizers, but it can occur in those introduced by \textit{whether} \citep[279]{Haegeman1991}.  
-\end{generalization}
-Examples \ref{ex:pro8} and \ref{ex:pro9} illustrate Generalisation \ref{gen:4}
-\begin{exe}
-	\ex\label{ex:pro8} John doesn't know [whether [PRO to leave].
-	\ex\label{ex:pro9} * John doesn’t know [if PRO to leave].
-\end{exe}
+    \begin{generalization}\label{gen:1}
+    	Each clause has a subject. If a clause doesn't have an overt subject then it is covertly (non-overtly) represented as PRO
+         \citep[263]{Haegeman1991}.
+    \end{generalization}
+    \begin{generalization}\label{gen:2}
+    	A PRO subject can be bound, i.e. it takes a specific referent or can be arbitrary (equivalent to pronoun ``one'') \citep[263]{Haegeman1991}. In case of obligatory control, a PRO subject is bound to a NP and must be c-commanded by its controller \citep[278]{Haegeman1991}.
+    \end{generalization}
 
-\begin{generalization}\label{gen:5}
-	PRO can be subject of complement, subject and adjunct clauses \citep[278]{Haegeman1991}.
-\end{generalization}
-\begin{generalization}\label{gen:6}
-	When PRO is the subject of a declarative complement clause it must be controlled by an NP, i.e. arbitrary interpretation is excluded \citep[280]{Haegeman1991}.
-\end{generalization}
-\begin{generalization}\label{gen:7}
-	The object of active clause becomes subject when it is passivized and also controls the PRO element in complement clause \citep[281]{Haegeman1991}.
-\end{generalization}
-\begin{generalization}\label{gen:8}
-	PRO is obligatorily controlled in adjunct clauses that are not introduced by a marker \citep[283]{Haegeman1991}.
-\end{generalization}
+    \begin{generalization}\label{gen:3}
+    	PRO must be in ungoverned position. This means that (a) PRO does not occur in object position (b) PRO cannot be subject of a finite clause \citep[279]{Haegeman1991}. 
+    \end{generalization}
+    \begin{generalization}\label{gen:4}
+    	PRO does not occur in the non-finite clauses introduced by \textit{if} and \textit{for} complementizers, but it can occur in those introduced by \textit{whether} \citep[279]{Haegeman1991}.  
+    \end{generalization}
 
-Adjuncts (clauses or phrases) often are introduced via prepositions. Nonetheless there are rare cases of adjunct clauses free of preposition. Examples \ref{ex:pro10} and \ref{ex:pro11} illustrate such marker-free adjunct clauses.
+    Examples \ref{ex:pro8} and \ref{ex:pro9} illustrate Generalisation \ref{gen:4}
+    \begin{exe}
+    	\ex\label{ex:pro8} John doesn't know [whether PRO to leave].
+    	\ex\label{ex:pro9} * John doesn’t know [if PRO to leave].
+    \end{exe}
 
-\begin{exe}
-	\ex\label{ex:pro10} John hired Mary [PRO to fire Bill].
-	\ex\label{ex:pro11} John abandoned the investigation [PRO to save money].
-\end{exe}
+    \begin{generalization}\label{gen:5}
+    	PRO can be subject of complement, subject and adjunct clauses \citep[278]{Haegeman1991}.
+    \end{generalization}
+    \begin{generalization}\label{gen:6}
+    	When PRO is the subject of a declarative complement clause it must be controlled by an NP, i.e. arbitrary interpretation is excluded \citep[280]{Haegeman1991}.
+    \end{generalization}
+    \begin{generalization}\label{gen:7}
+    	The object of an active clause becomes subject when it is passivized and also controls the PRO element in complement clause \citep[281]{Haegeman1991}.
+    \end{generalization}
+    \begin{generalization}\label{gen:8}
+    	PRO is obligatorily controlled in adjunct clauses that are not introduced by a marker \citep[283]{Haegeman1991}.
+    \end{generalization}
 
-\begin{generalization}\label{gen:9}
-	PRO in a subject clause is optionally controlled; thus by default it takes arbitrary interpretation \citep[283]{Haegeman1991}.  
-\end{generalization}
+    Adjuncts (clauses or phrases) often are introduced via prepositions. Nonetheless there are rare cases of adjunct clauses free of preposition. Examples \ref{ex:pro10} and \ref{ex:pro11} illustrate such marker-free adjunct clauses.
 
-\begin{exe}
-    \ex\label{ex:pro12} PRO_i smoking is bad for the health_j.
-    \ex\label{ex:pro13} PRO_i smoking is bad for your_i health_j.
-    \ex\label{ex:pro14} PRO_i smoking is bad for you_i.
-    \ex\label{ex:pro15} PRO_i lying to your_i friends decreases your_i trustworthiness_j.
-\end{exe}
+    \begin{exe}
+    	\ex\label{ex:pro10} John hired Mary [PRO to fire Bill].
+    	\ex\label{ex:pro11} John abandoned the investigation [PRO to save money].
+    \end{exe}
 
-A default assumption is to assign arbitrary ``one'' interpretation to each PRO subject in subject clauses. However, there are cases when it may be bound (resolved) to a pronominal NP in the complement of the higher clause. The binding element can be either the entire complement or a \textit{pronominal} part of it like the qualifier or the possessor. Example \ref{ex:pro12} illustrates that PRO has only arbitrary interpretation since it cannot be bound to the complement ``health''. 
-Moreover PRO can also be bound to (a) the possessive element of a higher clause - example \ref{ex:pro13}, (b) the complement of the higher clause - example \ref{ex:pro14} and (c) either the possessives in lower or higher clause, Example \ref{ex:pro15}.
+    \begin{generalization}\label{gen:9}
+    	PRO in a subject clause is optionally controlled; thus by default it takes arbitrary interpretation \citep[283]{Haegeman1991}.  
+    \end{generalization}
+
+    \begin{exe}
+        \ex\label{ex:pro12} PRO_i smoking is bad for the health_j.
+        \ex\label{ex:pro13} PRO_i smoking is bad for your_i health_j.
+        \ex\label{ex:pro14} PRO_i smoking is bad for you_i.
+        \ex\label{ex:pro15} PRO_i lying to your_i friends decreases your_i trustworthiness_j.
+    \end{exe}
+
+    A default assumption is to assign arbitrary ``one'' interpretation to each PRO subject in subject clauses. However, there are cases when it may be bound (resolved) to a pronominal NP in the complement of the higher clause. The binding element can be either the entire complement or a \textit{pronominal} part of it like the qualifier or the possessor. Example \ref{ex:pro12} illustrates that PRO has only arbitrary interpretation since it cannot be bound to the complement ``health''. 
+    Moreover PRO can also be bound to (a) the possessive element of a higher clause - example \ref{ex:pro13}, (b) the complement of the higher clause - example \ref{ex:pro14} and (c) either the possessives in lower or higher clause, Example \ref{ex:pro15}.
 
 \subsection{NP-traces} 
 \label{sec:np-gbt}
 
-In GBT, \textit{movement} is a kind of transformation used to explain discontinuity or displacement phenomena in language. It is based on the idea that some constituents appear to have been displaced from the position where they receive important features of interpretation. 
+    In GBT, \textit{movement} is a kind of transformation used to explain discontinuity or displacement phenomena in language. It is based on the idea that some constituents appear to have been displaced from the position where they receive important features of interpretation. 
 
-GBT distinguishes three types of movement: (a) \textit{head-movement} - the movement of auxiliaries from I to C , \textit{Wh-movement} - when the wh-constituent lands in Spec position of a CP (i.e. [Spec, CP]) and (c) NP-movement when a NP is moved into an empty subject position. 
-NP-movement in GB theory is used to explain \textit{passivization}, \textit{subject movement} (in interrogatives) and \textit{raising}. The raising phenomenon (Definition \ref{def:raising}) is the one that is of interest for us here as it is the one involving an empty constituent. 
+    GBT distinguishes three types of movement: (a) \textit{head-movement} - the movement of auxiliaries from I to C , \textit{Wh-movement} - when the wh-constituent lands in Spec position of a CP (i.e. [Spec, CP]) and (c) \textit{NP-movement} when a NP is moved into an empty subject position. 
+    NP-movement in GB theory is used to explain \textit{passivization}, \textit{subject movement} (in interrogatives) and \textit{raising}. The raising phenomenon (Definition \ref{def:raising}) is the one that is of interest for us here as it is the one involving an empty constituent. 
+    
+    Raising and control phenomena have been systematised by \citet{Elke1991-raising-control} in the context of systemic grammar. This work however aims at resolving the empty constituents within the syntactic structures (as GBT describes) rather than a paradigmatic integration of the phenomena into the Transitivity system network. Thus I resort to translating the principles from GBT into the grammar of the current thesis.
 
-When an NP moves it is said to leave \textit{traces} (Definition \ref{def:trace}). The moved constituent is called \textit{antecedent} of a trace. Both the trace(s) and the antecedent are coindexed and form what is called a \textit{chain} \citep[309]{Haegeman1991}.
+    When an NP moves it is said to leave \textit{traces} (Definition \ref{def:trace}). The moved constituent is called the \textit{antecedent} of a trace. Both the trace(s) and the antecedent are coindexed and form what is called a \textit{chain} \citep[309]{Haegeman1991}.
  
+        \begin{definition}[Trace]\label{def:trace}
+            A trace is an empty category which encodes the base position of a moved constituent and is indicated as \textit{t} \citep[309]{Haegeman1991}. 
+        \end{definition}
 
-\begin{definition}[Trace]\label{def:trace}
-    A trace is an empty category which encodes the base position of a moved constituent and is indicated as \textit{t} \citep[309]{Haegeman1991}. 
-\end{definition}
+    Consider Examples \ref{ex:np1} to \ref{ex:np4} where I use square brackets to indicate boundaries of an embedded clause. There are two cases of expletives (\ref{ex:np1} and \ref{ex:np3}) and their non-expletive counterparts (\ref{ex:np2} and \ref{ex:np4}), where the subject of the lower clause is moved to the subject position of the matrix clause by replacing the expletive. The movement of NPs is described in GB as leaving traces which here are marked as \textit{t}. This phenomena is called \textit{raising} (Definition \ref{def:raising}) or as \citet{Postal1974} calls this case \textit{subject-to-subject raising}.
+    
+    \begin{definition}[NP-raising]\label{def:raising}
+    	NP-raising is the NP-movement of a subject of a lower clause into subject position of a higher clause \citep[306]{Haegeman1991}. 
+    \end{definition}
+    
+    \begin{exe}
+    	\ex\label{ex:np1} It was believed [Poirot to have destroyed the evidence].
+    	\ex\label{ex:np2} Poirot_{i} was believed [t_{i} to have destroyed the evidence].
+    	\ex\label{ex:np3} It seems [that Poirot has destroyed the evidence].
+    	\ex\label{ex:np4} Poirot_{i} seems [t_{i} to have destroyed the evidence].
+    \end{exe}
 
-\begin{definition}[NP-raising]\label{def:raising}
-	NP-raising is the NP-movement of a subject of a lower clause into subject position of a higher clause \citep[306]{Haegeman1991}. 
-\end{definition}
+    The subjects ``It'' and ``Poirot'' in none of the examples \ref{ex:np1}--\ref{ex:np4} receive a semantic role from the main clause. ``It'' is an expletive and never receives a thematic role while ``Poirot'' in \ref{ex:np2} and \ref{ex:np4} takes an Agent role from ``destroy'' and is the Experiencer neither of ``believe'' nor of ``seem''. So the verbs ``believe'' and ``seem'' do not theta mark their subjects in these examples.
 
-Consider Examples \ref{ex:np1} to \ref{ex:np4} where I used square brackets to indicate boundaries of an embedded clause. There are two cases of expletives (\ref{ex:np1} and \ref{ex:np3}) and their non-expletive counterparts (\ref{ex:np2} and \ref{ex:np4}) where the subject of the lower clause is moved to the subject position of the matrix clause by replacing the expletive. The movement of NPs are described in GB as leaving traces which here are marked as \textit{t}. This phenomena is called \textit{raising} (Definition \ref{def:raising}) or as \citet{Postal1974} calls it the \textit{subject-to-subject raising}.
+    Raising is very similar to obligatory subject control with a difference in thematic role distribution. In the case of subject control, both the PRO element and its binder (the subject of the higher clause) receive thematic roles in both clauses. However in the case of raising, the NP is moved and it leaves a trace which is theta marked but not to the antecedent \citep[314]{Haegeman1991}. This is expressed in Generalisation \ref{gen:np1}. 
 
-\begin{exe}
-	\ex\label{ex:np1} It was believed [Poirot to have destroyed the evidence].
-	\ex\label{ex:np2} Poirot_{i} was believed [t_{i} to have destroyed the evidence].
-	\ex\label{ex:np3} It seems [that Poirot has destroyed the evidence].
-	\ex\label{ex:np4} Poirot_{i} seems [t_{i} to have destroyed the evidence].
-\end{exe}
+    \begin{generalization}\label{gen:np1} 
+    	The landing site for a moved NP is an empty A-position. The chain formed by an NP-movement is assigned only one theta role and it is assigned on the foot of the chain, i.e. the lowest trace \citep[314]{Haegeman1991}.
+    \end{generalization} 
 
-The subjects ``It'' and ``Poirot'' in none of the examples \ref{ex:np1}--\ref{ex:np4} receive a semantic role from the main clause. ``It'' is an expletive and never receives a thematic role while ``Poirot'' in \ref{ex:np2} and \ref{ex:np4} takes an Agent role from ``destroy'' and is not the Experiencer neither of ``believe'' nor of ``seem''. So verbs ``believe'' and ``seem'' do not theta mark their subjects in these examples.
-
-Raising is very similar to obligatory subject control with a difference in thematic role distribution. In the case of subject control, both the PRO element and it's binder (the subject of higher clause) receive thematic roles in both clauses. However in the case of raising, the NP is moved and it leaves a trace which is theta marked but not to the antecedent \citep[314]{Haegeman1991}. This is expressed in generalization \ref{gen:np1}. 
-
-\begin{generalization}\label{gen:np1} 
-	The landing site for a moved NP is an empty A-position. The chain formed by a NP-movement is assigned only one theta role and it is assigned on the foot of the chain, i.e. the lowest trace \citep[314]{Haegeman1991}.
-\end{generalization} 
-
-So, in case of raising, the landing sites for a moved NP are empty subject positions or the ones for expletives. As a result of movement, these positions are filled or expletives are replaced with the moved NP. The last type of movement is the one of NPs that have a \textit{Wh-word} described in the next section.
+    So, in the case of raising, the landing sites for a moved NP are empty subject positions or the ones for expletives. As a result of movement, these positions are filled or expletives are replaced with the moved NP. The movement of NPs that have a \textit{Wh-word} is described in the next section.
 
 \subsection{WH-traces}
 \label{sec:wh-gbt}
-\textit{Wh-movement} is involved in formation of Wh-interrogatives and in formulation of relative clauses. We are interested in both cases as both of them leave traces of empty elements that are relevant for transitivity analysis.  
+    \textit{Wh-movement} is involved in the formation of Wh-interrogatives and in the formulation of relative clauses. We are interested in both cases as both of them leave traces of empty elements that are relevant for transitivity analysis.  
 
 \begin{exe}
 	\ex\label{ex:wh1} [What] will Poirot eat?
 	\ex\label{ex:wh2} [Which detective] will Lord Emsworth invite?
 	\ex\label{ex:wh3} [Whose pigs] must Wooster feed?
-	\ex\label{ex:wh4} [When] will detective arrive at the castle?
+	\ex\label{ex:wh4} [When] will the detective arrive at the castle?
 	\ex\label{ex:wh5} [In which folder] does Margaret keep the letter?
 	\ex\label{ex:wh6} [How] will Jeeves feed the pigs? 
 	\ex\label{ex:wh7} [How big] will the reward be?
 \end{exe}
 
-\citet[375]{Haegeman1991} offers the Examples \ref{ex:wh1} -- \ref{ex:wh7} of \textit{Wh-constituents} which are any NPs or PPs that contain a \textit{Wh-word} in their componence. A Wh-word is any of the following words or their morphological derivations (by adding suffixes \textit{-ever}, \textit{-soever}): \textit{who, whom, whose, what, which, why, where, when} and \textit{how}. Thus the wh-constituent can be a single word or a \textit{Wh-phrase}. The Wh-phrase, in GBT, is then the NP or PP which is the maximal projection from a Wh-word. Haegeman treats each Wh-word as the head of the Wh-phrase. This is not quite the case . Below, in Section \ref{sec:wh-traces}, I provide a different definition of Wh-group such that it is congruent with the Systemic Functional Grammars.
+    \citet[375]{Haegeman1991} offers Examples \ref{ex:wh1} -- \ref{ex:wh7} as examples involving \textit{Wh-constituents}, which are any NPs or PPs that contain a \textit{Wh-word} in their componence. A Wh-word is any of the following words or their morphological derivations (by adding suffixes \textit{-ever}, \textit{-soever}): \textit{who, whom, whose, what, which, why, where, when} and \textit{how}. Thus the wh-constituent can be a single word or a \textit{Wh-phrase}. The Wh-phrase, in GBT, is then the NP or PP which is the maximal projection from a Wh-word. Haegeman treats each Wh-word as the head of the Wh-phrase. This is not quite the case . However, in Section \ref{sec:wh-traces}, I , will provide a different definition of Wh-group such that it is congruent with Systemic Functional Grammars.
 
-In GBT the \textit{case} occupies an important place in the grammar. The rules governing the case are known as \textit{case theory}. Verbs dictate the case of their arguments, a property called \textit{case marking}. The Subjects are marked with Nominative case while the Complements of the verb are marked with Accusative case. 
+    In GBT \textit{case} occupies an important place in the grammar. The rules governing case are known as \textit{case theory}. Verbs dictate the case of their arguments, a property called \textit{case marking}. Subjects are marked with Nominative case while Complements of the verb are marked with Accusative case. 
 
-In English, however, case system is very rudimentary as compared to other languages. Hence, \textit{who}, \textit{whom} and their derivatives \textit{whoever} and \textit{whomever} are the only Wh-words with overt case differentiation. The other Wh-words \textit{what, when, where} and \textit{how} do not change their form based on the case. 
+    In English, however, the case system is very rudimentary as compared to other many languages. Hence, \textit{who}, \textit{whom} and their derivatives \textit{whoever} and \textit{whomever} are the only Wh-words with overt case differentiation. The other Wh-words \textit{what, when, where} and \textit{how} do not change their form based on case. 
 
-Example \ref{ex:wh30} shows that the Accusative (\textit{whom}) is disallowed when its trace is in Subject position since this requires Nominative (\textit{who}). In example \ref{ex:wh31} the reverse holds and the Nominative form is disallowed as the Wh-word moved from Complement position requires Accusative case. 
+    Example \ref{ex:wh30} shows that the Accusative (\textit{whom}) is disallowed when its trace is in Subject position since this requires Nominative (\textit{who}). In example \ref{ex:wh31} the reverse holds and the Nominative form is disallowed as the Wh-word moved from Complement position requires Accusative case. 
 
-\begin{exe}
-	\ex\label{ex:wh30} Who_{i}/*Whom_{i} do you think [t_{i} will arrive first?]
-	\ex\label{ex:wh31} Whom_{i}/*Who_{i} do you think [Lord Emsworth will invite t_{i}?]
-\end{exe}
+    \begin{exe}
+    	\ex\label{ex:wh30} Who_{i}/*Whom_{i} do you think [t_{i} will arrive first?]
+    	\ex\label{ex:wh31} Whom_{i}/*Who_{i} do you think [Lord Emsworth will invite t_{i}?]
+    \end{exe}
 
-Another important distinction to be made among English Wh-words is the \textit{theta-marking}, i.e. the argument and non-argument distinction. Some wh-constituents will be in A-positions (i.e. functioning as subject or complement) such as in Example \ref{ex:wh1} -- \ref{ex:wh3} or in non A-position (i.e. functioning as adjunct) such as in Example \ref{ex:w4} and \ref{ex:wh6}. 
+    Another important distinction to be made among English Wh-words is \textit{theta-marking}, i.e. the argument and non-argument distinction. Some wh-constituents will be in A-positions (i.e. functioning as subject or complement) such as in Example \ref{ex:wh1} -- \ref{ex:wh3} or in non A-position (i.e. functioning as adjunct) such as in Examples \ref{ex:wh4} and \ref{ex:wh6}. 
 
-When the Wh-constituent moves, There are two places where it can land: (a) either in the subject position of the matrix clause changing its mood to interrogative (example \ref{ex:wh8}) or (b) subject position of the embedded clause creating embedded questions (example \ref{ex:wh9}). However regardless of the landing site, the movement principle is subject to what Haegeman describes as \textit{that-trace filter} expressed in Generalisation \ref{gen:wh1} and the \textit{Subjacency condition} (Generalisation \ref{gen:wh2}). Note that the matrix or embedded clauses correspond to the category of inflectional phrase (IP).
+    When the Wh-constituent moves, there are two places where it can land: (a) either in the subject position of the matrix clause changing its mood to interrogative (example \ref{ex:wh8}) or (b) subject position of the embedded clause creating embedded questions (example \ref{ex:wh9}). However regardless of the landing site, the movement principle is subject to what Haegeman describes as the \textit{that-trace filter} expressed in Generalisation \ref{gen:wh1} and the \textit{Subjacency condition} (Generalisation \ref{gen:wh2}). Note that the matrix or embedded clauses correspond to the category of inflectional phrase (IP).
 
-\begin{exe}
-\ex\label{ex:wh8} Whom_{i} do [you believe [that Lord Emsworth will invite t_{i}]]?
-\ex\label{ex:wh9} I wonder [whom_{i} you believe [that Lord Emsworth will invite t_{i}]].
-\end{exe}
+    \begin{exe}
+    \ex\label{ex:wh8} Whom_{i} do [you believe [that Lord Emsworth will invite t_{i}]]?
+    \ex\label{ex:wh9} I wonder [whom_{i} you believe [that Lord Emsworth will invite t_{i}]].
+    \end{exe}
+    
+    \begin{generalization}[That-trace filter]\label{gen:wh1}
+    	The sequence of an overt complementizer ``that'' followed by a trace is ungrammatical \citep[399]{Haegeman1991}.
+    \end{generalization}
 
-\begin{generalization}[That-trace filter]\label{gen:wh1}
-	The sequence of an overt complementizer ``that'' followed by a trace is ungrammatical \citep[399]{Haegeman1991}.
-\end{generalization}
+    The examples in \ref{ex:wh10} to \ref{ex:wh13} provided by \citet[398]{Haegeman1991} illustrate how the above generalisation applies. 
+    \begin{exe}
+    	\ex\label{ex:wh10} * Whom do you think that Lord Emsworth will invite?
+    	\ex\label{ex:wh11} Whom do you think Lord Emsworth will invite?
+    	\ex\label{ex:wh12} * Who do you think that will arrive first?
+    	\ex\label{ex:wh13} Who do you think will arrive first?
+    \end{exe}
 
-The examples in \ref{ex:wh10} to \ref{ex:wh13} provided by \citet[398]{Haegeman1991} illustrate how the above generalization applies. 
-\begin{exe}
-	\ex\label{ex:wh10} * Whom do you think that Lord Emsworth will invite?
-	\ex\label{ex:wh11} Whom do you think Lord Emsworth will invite?
-	\ex\label{ex:wh12} * Who do you think that will arrive first?
-	\ex\label{ex:wh13} Who do you think will arrive first?
-\end{exe}
+    \begin{generalization}[Subjacency condition]\label{gen:wh2}
+    	Movement cannot cross more than one bounding node, where bounding nodes are IP and NP \citep[402]{Haegeman1991}.
+    \end{generalization}
 
-\begin{generalization}[Subjacency condition]\label{gen:wh2}
-	Movement cannot cross more than one bounding node, where bounding nodes are IP and NP \citep[402]{Haegeman1991}.
-\end{generalization}
+    The Subjacency condition captures the grammatically of NP-movement and exposes two properties of the movement, namely as being \textit{successive} and \textit{cyclic}. Consider the chain creation resulting from Wh-movement in Examples \ref{ex:wh14} -- \ref{ex:wh16} provided by \citet[403--406]{Haegeman1991}. The Wh-movement leaves (intermediate) traces successively jumping each bounding node. 
 
-The Subjacency condition captures the grammaticality of NP-movement and exposes two properties of the movement, namely as being \textit{successive} and \textit{cyclic}. Consider the chain creation resulting from Wh-movement in Examples \ref{ex:wh14} -- \ref{ex:wh16} provided by \citet[403--406]{Haegeman1991}. The Wh-movement leaves (intermediate) traces successively jumping each bounding node. 
+    \begin{exe}
+    	\ex\label{ex:wh14} Who_{i} did [he see t_{i} last week?]
+    	\ex\label{ex:wh15} Who_{i} did [Poirot claim [t_{i} that he saw t_{i} last week?]]
+    	\ex\label{ex:wh16} Who_{i} did [Poirot say [t_{i} that he thinks [t_{i} he saw t_{i} last week?]]]
+    \end{exe}
 
-\begin{exe}
-	\ex\label{ex:wh14} Who_{i} did [he see t_{i} last week?]
-	\ex\label{ex:wh15} Who_{i} did [Poirot claim [t_{i} that he saw t_{i} last week?]]
-	\ex\label{ex:wh16} Who_{i} did [Poirot say [t_{i} that he thinks [t_{i} he saw t_{i} last week?]]]
-\end{exe}
+    What Generalisation \ref{gen:wh2} states is that a Wh-constituent cannot move further than subject position of the clause forming an interrogative form. Or also it can move outside into the subject position of the clause higher above leaving a WH-trace as can be seen in the Example \ref{ex:wh15} and \ref{ex:wh16}.
 
-What Generalisation \ref{gen:wh2} states is that a Wh-constituent cannot move further than subject position of the clause forming an interrogative form. Or also it can move outside into the subject position of the clause higher above leaving a WH-trace as can be seen in the Example \ref{ex:wh15} and \ref{ex:wh16}.
-
-Now that the kinds of null elements have been concisely described laying out the main rules governing their behaviour, I turn next to discuss what how these elements can be identified in terms of Dependency grammar. 
+    Now that the kinds of null elements have been described laying out the main rules governing their behaviour, I turn next to discuss how these elements can be identified in terms of Dependency grammar. 
 
 \section{Placing Null Elements into the Stanford dependency grammar}
 \label{sec:placing-null-elements}
 %todo[jb] It would be worthwhile to consider moving this to the short chapter which describes overall system architecture which should follow (see email). This would be the cleanest place for doing the integration first at a theoretical level, drawing connections, and then implementationally, in terms of a system architecture. 
 
-This section provides a selective translation of principles, rules and generalisations captured in GB theory into the context of dependency grammar. The selections mainly address the identification of places where (and by which relations) the null elements should be injected into dependency structure that will later help the semantic parsing process described in Chapter \ref{ch:enrichment-stage}. 
+    This section provides a selective translation of principles, rules and generalisations captured in GB theory into the context of dependency grammar. The selections mainly address the identification of places where (and by which relations) the null elements should be injected into dependency structure that will later help the semantic parsing process described in Chapter \ref{ch:enrichment-stage}. 
 
-In this section the grammatical accounts will often overlap. To make a clear distinction I will mark the dependency grammar relations with small caps italic. When the syntactic functions are marked with capital letter (e.g. Subject, Complement, Deictic) then they mean SFG functions and if they are in lower case (e.g. direct and indirect object) then the GBT reading applies. When the (unit/word) classes are mentioned using full word small caps (nominal group, clause, ) then the SFL reading shall be applied and when they are all caps acronyms (NN, PP, WH-trace, etc.) the reader shall apply GBT reading .
+    In this section the grammatical accounts will often overlap. To make a clear distinction I will mark the dependency grammar relations with lower case in italic. When the syntactic functions are marked with a capital letter (e.g. Subject, Complement, Deictic) then they mean SFG functions and, if they are in lower case (e.g. direct and indirect object), then the GBT reading applies. When the (unit/word) classes are mentioned using full word lower case (nominal group, clause,  etc.), then the SFL reading shall be applied and when they are all upper case acronyms (NN, PP, WH-trace, etc.) the GBT reading applies to.
 
 \subsection{PRO subject}
 % % % % % % % % % % % % % % % % % % % % % % % %
-Coming back to definition of PRO element in Section \ref{sec:pro-mcg}, it is strictly framed by the non-finite subordinate clauses. In dependency grammar the non-finite complement clauses are typically linked to their parent via \textit{xcomp} relation which is defined in \cite{Marneffe2008} as introducing an open clausal complement of a VP or ADJP without its own subject, whose reference is determined by an external reference as can be seen in Figure \ref{fig:xcomp-ex}.
+    Coming back to the definition of the PRO element in Section \ref{sec:pro-mcg}, it is strictly framed by the non-finite subordinate clauses. In dependency grammar the non-finite complement clauses are typically linked to their parent via the \textit{xcomp} relation, which is defined in \cite{Marneffe2008} as introducing an open clausal complement of a VP or ADJP without its own subject. Such cases can then can be resolved by intro ducting a PRO element as can be seen in Figure \ref{fig:xcomp-ex}.
 
-%%todo , interrogatives with we element in embedded clause have PRO subjects
-%ex:pro4
-%John decided to behave himself.
-%ex:pro7
-%John told Mary to behave herself.
+    %%todo , interrogatives with we element in embedded clause have PRO subjects
+    %ex:pro4
+    %John decided to behave himself.
+    %ex:pro7
+    %John told Mary to behave herself.
+    
+    \begin{figure}[!ht]
+        \centering
+        \begin{subfigure}[t]{0.42\linewidth}
+    %        \centering
+    %        \scalebox{1}{
+            \resizebox{\textwidth}{!}{%
+            \begin{dependency}[dep-style]
+                \begin{deptext}[]
+                    John_i \& decided \& PRO_i \& to \& behave.\\
+                \end{deptext}
+                \deproot{2}{root}
+                \depedge{2}{1}{nsubj}
+                \depedge{2}{5}{xcomp}
+                \depedge{5}{3}{nsubj}
+                \depedge{5}{4}{mark}
+            \end{dependency}
+            }
+    %    }
+            \caption{}
+            \label{fig:xcomp-ex1}
+        \end{subfigure}
+        \begin{subfigure}[t]{0.578\linewidth}
+    %        \centering
+    %        \scalebox{1}{
+            \resizebox{\textwidth}{!}{%
+            \begin{dependency}[dep-style]
+                \begin{deptext}[]
+                    John_i \& told \& Mary_j \& PRO_j \& to \& behave \& herself_j. \\
+                \end{deptext}
+                \deproot{2}{root}
+                \depedge{2}{1}{nsubj}
+                \depedge{2}{6}{xcomp}
+                \depedge{2}{3}{dobj}
+                \depedge{6}{4}{nsubj}
+                \depedge{6}{5}{mark}
+                \depedge{6}{7}{dobj}
+            \end{dependency}
+            }
+    %    }
+            \caption{}
+            \label{fig:xcomp-ex2}
+        \end{subfigure}
+        \caption{Dependency structure with a PRO subject}
+        \label{fig:xcomp-ex}
+    \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \begin{subfigure}[t]{0.45\linewidth}
-%        \centering
-%        \scalebox{1}{
-        \begin{dependency}[dep-style]
-            \begin{deptext}[]
-                John_i \& decided \& PRO_i \& to \& behave.\\
-            \end{deptext}
-            \deproot{2}{root}
-            \depedge{2}{1}{nsubj}
-            \depedge{2}{5}{xcomp}
-            \depedge{5}{3}{nsubj}
-            \depedge{5}{4}{mark}
-        \end{dependency}
-%    }
-        \caption{}
-        \label{fig:xcomp-ex1}
-    \end{subfigure}
+    These complements are always non-finite. Following the principles stated in Generalisations \ref{gen:1} and \ref{gen:3}, the non-finite complement clause introduced by the \textit{xcomp} relation would receive by default a PRO subject (controlled or arbitrary).
 
-    \begin{subfigure}[t]{0.45\linewidth}
-%        \centering
-%        \scalebox{1}{
-        \begin{dependency}[dep-style]
-            \begin{deptext}[]
-                John_i \& told \& Mary_j \& PRO_j \& to \& behave \& herself_j. \\
-            \end{deptext}
-            \deproot{2}{root}
-            \depedge{2}{1}{nsubj}
-            \depedge{2}{6}{xcomp}
-            \depedge{2}{3}{dobj}
-            \depedge{6}{4}{nsubj}
-            \depedge{6}{5}{mark}
-            \depedge{6}{7}{dobj}
-        \end{dependency}
-%    }
-        \caption{}
-        \label{fig:xcomp-ex2}
-    \end{subfigure}
-    \caption{Dependency structure with a PRO subject}
-    \label{fig:xcomp-ex}
-\end{figure}
+    The markers (conjunctions, prepositions or Wh-words) at the beginning of the embedded clause are no longer connected via \textit{xcomp} relations but instead via either \textit{prepc}, \textit{rcmod}, \textit{partmod} and \textit{infmod} together with a slight variation in clause features and constituency. Those cases are no longer treated under the PRO null element considerations and will be discussed later in this chapter since they correspond to other types of empty elements. The only exception, however, is the \textit{prepc} relation with the preposition ``whether'' which also introduces a complement clause with PRO element.
 
-These complements are always non-finite. Following the principles stated in Generalisation \ref{gen:1} and \ref{gen:3} the non-finite complement clause introduced by \textit{xcomp} relation would receive by default a PRO subject (controlled or arbitrary).
+    %\begin{figure}[H]
+    %	\centering
+    %	\begin{tikzpicture}[tree-style] 
+    %	\node[pattern-node, anchor=center] (vb1){class:clause}
+    %	%child {node[pattern-node] (subj1) {class:nominal,\\element:subject,\\id:subj1}}
+    %	child {node[pattern-node,below = 2em of vb1,] (vb2) {element:complement,\\class:clause,\\finiteness:non-finite}
+    %		child {node[pattern-node-negative] (marker) {element:marker,\\words:[if,for]}}
+    %		child {node[pattern-node-negative] (subj2) {element:subject,\\operation:insert}}
+    %	};
+    %	\end{tikzpicture}
+    %	\caption{CG pattern for detecting PRO subjects}
+    %	\label{fig:arb-control}
+    %\end{figure}
 
-The markers (conjunctions, prepositions or Wh-words) at the beginning of the embedded clause are no longer connected via \textit{xcomp} relation but instead via either \textit{prepc}, \textit{rcmod}, \textit{partmod} and \textit{infmod} and a slight variation in clause features and constituency. Those cases are no longer treated under the PRO null element considerations and will be discussed later in this chapter since they correspond to other types of empty elements. The only exception, however, is the \textit{prepc} relation only with the preposition ``whether'' which also introduces a complement clause with PRO element.
+    I have explained earlier how to identify the place where a PRO element should be created. Before creating it we need to find out (1) whether PRO is arbitrary (equivalent to pronoun ``one'') or it is bound to another constituent. And if it is bound then decide (2) whether it is bound to (and coindexed with) subject or object (in which case we say that PRO is subject or object controlled) as can be seen in Figure \ref{fig:xcomp-ex}.
 
-%\begin{figure}[H]
-%	\centering
-%	\begin{tikzpicture}[tree-style] 
-%	\node[pattern-node, anchor=center] (vb1){class:clause}
-%	%child {node[pattern-node] (subj1) {class:nominal,\\element:subject,\\id:subj1}}
-%	child {node[pattern-node,below = 2em of vb1,] (vb2) {element:complement,\\class:clause,\\finiteness:non-finite}
-%		child {node[pattern-node-negative] (marker) {element:marker,\\words:[if,for]}}
-%		child {node[pattern-node-negative] (subj2) {element:subject,\\operation:insert}}
-%	};
-%	\end{tikzpicture}
-%	\caption{CG pattern for detecting PRO subjects}
-%	\label{fig:arb-control}
-%\end{figure}
+    %%todo[jb] again, this will be clearer if all placed together perhaps in a chapter. Otherwise you have to remind the reader here what the mood selection is, reference back to where you have introduced this, etc. You cannot just use it with a reference to IFG as this does not give enough information to understand the argument at this point in the thesis. You cannot write anything which, in effect, says: go away and read this, then come back and you will understand what I'm saying!
 
-I have explained earlier how to identify the place where a PRO element should be created. Before creating it we need to find out (1) whether PRO is arbitrary (equivalent to pronoun ``one'') or it is bound to another constituent. And if it is bound then decide (2) whether it is bound to (and coindexed with) subject or object (case in which we say that PRO is subject or object controlled) as can be seen in Figure \ref{fig:xcomp-ex}.
+    From the Generalisation \ref{gen:6} above we can derive a test checking whether the mood fo the complement clause is interrogative or declarative. Many grammars, including SFG, do not consider that the non-finite clauses can have interrogative/declarative variation (called by \citet[107-167]{Halliday2004} \textit{mood} feature). Nonetheless, in GBT, even if a clause is non-finite such a distinction is useful. The complement clauses can have structural variation resembling a declarative or interrogative mood for the reason that a complement clause can start with a Wh-constituent which turns it into an interrogative one. Thus the test is whether there is a Wh-marker (who, whom, why, when, how) or the preposition ``whether''. The presence of any marker like in example \ref{ex:pro16} at the beginning of the complement clause will change the dependency relation from \textit{xcomp} to another one and sometimes effect the structure of the dependent clause as well. The only case when the complement clause remains subjectless and non-finite is the case introduced via a \textit{prepc} relation and the preposition ``whether''. However if any such marker is missing then the clause is declarative and thus it must be controlled by a NP, so arbitrary PRO is excluded. The cases of Wh-marked non-finite clauses will be treated in Section \ref{sec:wh-traces} about Wh-word movement.
 
-%%todo[jb] again, this will be clearer if all placed together perhaps in a chapter. Otherwise you have to remind the reader here what the mood selection is, reference back to where you have introduced this, etc. You cannot just use it with a reference to IFG as this does not give enough information to understand the argument at this point in the thesis. You cannot write anything which, in effect, says: go away and read this, then come back and you will understand what I'm saying!
+    \begin{exe}
+    	\ex \label{ex:pro16}Albert asked [whether/how/when/ PRO to go].
+    \end{exe}
+    
+    Based on the above I propose Generalisation \ref{gen:10} enforcing obligatory control for \textit{xcomp} clauses.
 
-Generalisation \ref{gen:6} above introduced test whether the complement clause is interrogative or declarative (which resembles mood determination in SFG). Many grammars, including SFG, do not consider that the non-finite clauses can have interrogative/declarative variation (called by \citet[107-167]{Halliday2004} \textit{mood} feature). Nonetheless, in GBT, even if a clause is non-finite such a distinction is useful. The complement clauses can have structural variation resembling a declarative or interrogative mood for the reason that a complement clause can start with a Wh-constituent which turns it into an interrogative one. Thus the test is whether there is a Wh-marker (who, whom, why, when, how) or the preposition ``whether''. The presence of any marker like in example \ref{ex:pro16} at the beginning of the complement clause will change the dependency relation from \textit{xcomp} to another one and sometimes the structure of the dependent clause as well. The only case when the complement clause remains subjectless non-finite is the case it is introduced via \textit{prepc} relation and the preposition ``whether''. However if any such marker is missing then the clause is declarative and thus it must be controlled by a NP, so the arbitrary PRO is excluded. The cases of Wh-marked non-finite clauses will be treated in the Section \ref{sec:wh-traces} about the Wh-word movement.
+    %%todo[jb] now it is very unclear what we are dealing with: is the xcomp relation in a DG? in which case you cannot just use the phrase structures (and note: one of the motivations for DG is not to have empty elements!! ...). So if you are merging here, you need to explicitly say what the resulting structure is *first*. Do we have a DG with additional elements following GB. Do we have a phrase structure with additional relations, or what? Say this first and then use this in your merged examples. This would also suggest having a clean chapter separation I think.
+    
+    \begin{generalization}\label{gen:10}
+    	If a clause is introduced by an \textit{xcomp} relation then it must have a PRO element which is bound to either subject or object of the parent clause.
+    \end{generalization}
 
-\begin{exe}
-	\ex \label{ex:pro16}Albert asked [whether/how/when/ PRO to go].
-\end{exe}
+    \begin{exe}
+    	\ex\label{ex:pro17} Albert_i asked [PRO_i to go alone].
+    	\ex\label{ex:pro18} Albert_i was asked [PRO_i to go alone].
+    	\ex\label{ex:pro19} Albert_i asked Wendy_j [PRO_j to go alone].
+    	\ex\label{ex:pro20} Albert_i was asked by Wendy_j [PRO_i to go alone].
+    \end{exe}
 
-Based on the above I propose Generalisation \ref{gen:10} enforcing obligatory control for \textit{xcomp} clauses.
+    %%todo[jb] remember that if you have gone over to a DG structure, there is no c-command anymore, so again you have to be clear about what structures are being dealt with when. This may require a more detailed description of your assumed translation architecture.
 
-%%todo[jb] now it is very unclear what we are dealing with: is the xcomp relation in a DG? in which case you cannot just use the phrase structures (and note: one of the motivations for DG is not to have empty elements!! ...). So if you are merging here, you need to explicitly say what the resulting structure is *first*. Do we have a DG with additional elements following GB. Do we have a phrase structure with additional relations, or what? Say this first and then use this in your merged examples. This would also suggest having a clean chapter separation I think.
+    Generalisation \ref{gen:7} required a test for passivization (also know in dependency grammar and SFL as \textit{voice}). Knowing the voice of the parent clause is necessary in order to determine which NP is controlling the PRO element in the complement clause. Consider Example \ref{ex:pro17} and its passive form \ref{ex:pro18}. In both cases there is only one NP that can command PRO and it is the subject of the parent clause ``Albert''. So we can generalise that the voice does not play any role in controller selection in one argument clauses (i.e. clauses without a nominal complement). In Examples \ref{ex:pro19} and \ref{ex:pro20} the parent clause takes two semantic arguments. The second part of principle \ref{gen:2} states that in case of obligatory control PRO must be \textit{c-commanded} by an NP. In \ref{ex:pro19} both NPs(``Albert'' and ``Wendy'') c-command the PRO element, however according to the Minimality Condition \citep[479]{Haegeman1991}, ``Albert'' is excluded as the commander of PRO because there is a closer NP that c-commands PRO. In the case of \ref{ex:pro20} the only NP that c-commands PRO is the subject ``Albert'' because ``by Mary'' is a PP (prepositional phrase) and also only NPs can control a PRO as stated in principle \ref{gen:6}. In the process of passivization the complement becomes subject and the subject becomes a prepositional (PP-by) complement and so the later is automatically excluded from control candidates, thus conforming to Generalisation \ref{gen:7} \citep[281]{Haegeman1991}. 
 
-\begin{generalization}\label{gen:10}
-	If a clause is introduced by \textit{xcomp} relation then it must have a PRO element which is bound to either subject or object of parent clause.
-\end{generalization}
+    The above can be synthesised into Generalisation \ref{gen:11} appealing to linear proximity of the words. But the linear order dimension is beyond the borders of dependency grammar in the sense that the word order is not being accounted for explicitly as a relation. Rather, the solution is technical: each word receives an index for the position it occupies within a sentence which suffices to implement Generalisation \ref{gen:11} applied in \mbox{Chapter \ref{ch:enrichment-stage}}.
+    
+    \begin{generalization}\label{gen:11}
+    	The controller of PRO element in a lower clause is the closest nominal constituent of the higher clause.
+    \end{generalization}
 
-\begin{exe}
-	\ex\label{ex:pro17} Albert_i asked [PRO_i to go alone].
-	\ex\label{ex:pro18} Albert_i was asked [PRO_i to go alone].
-	\ex\label{ex:pro19} Albert_i asked Wendy_j [PRO_j to go alone].
-	\ex\label{ex:pro20} Albert_i was asked by Wendy_j [PRO_i to go alone].
-\end{exe}
+    %Based on the previous argumentation, I propose generalization \ref{gen:11} for selecting the controller of PRO based on its proximity in the higher clause. The schematic representation of the pattern for obligatory and subject object control is depicted in Figure \ref{fig:obj-control} and respectively \ref{fig:subj-control}. Please note that in case of Figure \ref{fig:subj-control} the prepositional complements do not affect subject control in any way since it specifies only the nominal complements this making it complementary to \ref{fig:obj-control} with respect to prepositional complements. 
+    %
+    %\begin{figure}[H]
+    %	\centering
+    %	\begin{tikzpicture}[tree-style] 
+    %	\node[pattern-node, anchor=center] (vb1){class:clause}
+    %	child {node[pattern-node] (subj1) {class:nominal,\\element:subject}}
+    %	child {node[pattern-node] (subj1) {class:nominal,\\element:complement,\\id:compl1}}
+    %	child {node[pattern-node] (vb2) {class:clause,\\element:complement,\\finiteness:non-finite}
+    %		child {node[pattern-node-negative] (marker) {element:marker,\\words:[if,for]}}
+    %		child {node[pattern-node-negative] (subj2) {element:subject,\\operation:insert,\\arg:\{id:compl1\}}}
+    %	};
+    %	\end{tikzpicture}
+    %	\caption{CG pattern for obligatory object control in complement clauses}
+    %	\label{fig:obj-control}
+    %\end{figure}
+    %
+    %\begin{figure}[H]
+    %	\centering
+    %	\begin{tikzpicture}[tree-style] 
+    %	\node[pattern-node, anchor=center] (vb1){class:clause}
+    %	child {node[pattern-node] (subj1) {class:nominal,\\element:subject,\\id:subj1}}
+    %	child {node[pattern-node-negative] (subj1) {class:nominal,\\element:complement}}
+    %	child {node[pattern-node] (vb2) {class:clause,\\element:complement,\\finiteness:non-finite}
+    %		child {node[pattern-node-negative] (marker) {element:marker,\\words:[if,for]}}
+    %		child {node[pattern-node-negative] (subj2) {element:subject,\\operation:insert,\\arg:\{id:subj1\}}}
+    %	};
+    %	\end{tikzpicture}
+    %	\caption{CG pattern for obligatory subject control in complement clauses}
+    %	\label{fig:subj-control}
+    %\end{figure}
 
-%%todo[jb] remember that if you have gone over to a DG structure, there is no c-command anymore, so again you have to be clear about what structures are being dealt with when. This may require a more detailed description of your assumed translation architecture.
+    The adjunct non-finite clauses such as the ones in Example \ref{ex:pro10} (``John hired Mary [PRO to fire Bill]'') and \ref{ex:pro11} (``John abandoned the investigation [PRO to save money]'') shall be treated exactly as the non-finite complement clauses are. Generalisation \ref{gen:8} emphasises obligatory control for them. The only difference between the adjunct and complement clauses is dictated by the verb of the higher clause and whether it theta marks or not the lower clause. In dependency grammar the adjunct clauses are also introduced via \textit{xcomp} and \textit{prepc} relations, so syntactically there is no distinction between the two patterns.
 
-The generalization \ref{gen:7} required a test for passivization (also know in dependency grammar and SFL as \textit{voice}). Knowing the voice of the parent clause is necessary in order to determine what NP is controlling the PRO element in the complement clause. Consider Example \ref{ex:pro17} and it's passive form \ref{ex:pro18}. In both cases there is only one NP that can command PRO and it is the subject of the parent clause ``Albert''. So we can generalise that the voice does not play any role in controller selection in one argument clauses (i.e. clauses without a nominal complement). In Examples \ref{ex:pro19} and \ref{ex:pro20} the parent clause takes two semantic arguments. Second part of principle \ref{gen:2} states that in case of obligatory control PRO must be \textit{c-commanded} by an NP. In \ref{ex:pro19} both NPs(``Albert'' and `Wendy'') c-command PRO element, however according to Minimality Condition\citep[479]{Haegeman1991} ``Albert'' is excluded as the commander of PRO because there is a closer NP that c-commands PRO. In case of \ref{ex:pro20} the only NP that c-commands PRO is the subject ``Albert'' because ``by Mary'' is a PP (prepositional phrase) and also only NPs can control a PRO as stated in principle \ref{gen:6}. In the process of passivization the complement becomes subject and the subject becomes a prepositional (PP-by) complement then the latter is automatically excluded from control candidates, thus conforming to Generalisation \ref{gen:7} \citep[281]{Haegeman1991}. 
+    %%todo[jb] exactly: you have got the descriptions out of order. This makes it clear that you need to have discussed this first, otherwise you have to rely on stuff that you have not introduced to make your argument here. Changing the order of presentation would solve this and make things much clearer.
 
-The above can be synthesised into Generalisation \ref{gen:11} appealing to linear proximity of the words. But the linear order dimension is beyond the borders of dependency grammar in the sense that the word order is not being accounted explicitly as a relation. Rather, the solution is technical: each word receives an index for the position it occupies within a sentence which suffices to implement Generalisation \ref{gen:11} presented in \mbox{Chapter \ref{ch:enrichment-stage}}.
+    The \textit{prepc} relation in dependency grammar introduces a prepositional clausal modifier for a verb (VN), noun (NN) or adjective (JJ). Adjective and noun modification are cases of copulative clauses. Such configuration are not relevant to the context of this work  because, as we will see in Section \ref{sec:preprocessing1}, the dependency graphs are normalised. This process involves, among others, transforming the copulas into verb-predicated clauses instead of adjective or noun-predicated clauses. 
 
-\begin{generalization}\label{gen:11}
-	The controller of PRO element in a lower clause is the closest nominal constituent of the higher clause.
-\end{generalization}
+    %\begin{figure}
+    %    %        \centering
+    %    %        \scalebox{1}{
+    %    \begin{dependency}[dep-style]
+    %        \begin{deptext}[]
+    %            PRO \& smoking \& is \& bad \& for \& the \& health. \\
+    %        \end{deptext}
+    %        \deproot{2}{root}
+    %        \depedge{2}{1}{nsubj}
+    %        \depedge{2}{6}{xcomp}
+    %        \depedge{2}{3}{dobj}
+    %        \depedge{6}{4}{nsubj}
+    %        \depedge{6}{5}{mark}
+    %        \depedge{6}{7}{dobj}
+    %    \end{dependency}
+    %\end{figure}
 
-%Based on the previous argumentation, I propose generalization \ref{gen:11} for selecting the controller of PRO based on its proximity in the higher clause. The schematic representation of the pattern for obligatory and subject object control is depicted in Figure \ref{fig:obj-control} and respectively \ref{fig:subj-control}. Please note that in case of Figure \ref{fig:subj-control} the prepositional complements do not affect subject control in any way since it specifies only the nominal complements this making it complementary to \ref{fig:obj-control} with respect to prepositional complements. 
-%
-%\begin{figure}[H]
-%	\centering
-%	\begin{tikzpicture}[tree-style] 
-%	\node[pattern-node, anchor=center] (vb1){class:clause}
-%	child {node[pattern-node] (subj1) {class:nominal,\\element:subject}}
-%	child {node[pattern-node] (subj1) {class:nominal,\\element:complement,\\id:compl1}}
-%	child {node[pattern-node] (vb2) {class:clause,\\element:complement,\\finiteness:non-finite}
-%		child {node[pattern-node-negative] (marker) {element:marker,\\words:[if,for]}}
-%		child {node[pattern-node-negative] (subj2) {element:subject,\\operation:insert,\\arg:\{id:compl1\}}}
-%	};
-%	\end{tikzpicture}
-%	\caption{CG pattern for obligatory object control in complement clauses}
-%	\label{fig:obj-control}
-%\end{figure}
-%
-%\begin{figure}[H]
-%	\centering
-%	\begin{tikzpicture}[tree-style] 
-%	\node[pattern-node, anchor=center] (vb1){class:clause}
-%	child {node[pattern-node] (subj1) {class:nominal,\\element:subject,\\id:subj1}}
-%	child {node[pattern-node-negative] (subj1) {class:nominal,\\element:complement}}
-%	child {node[pattern-node] (vb2) {class:clause,\\element:complement,\\finiteness:non-finite}
-%		child {node[pattern-node-negative] (marker) {element:marker,\\words:[if,for]}}
-%		child {node[pattern-node-negative] (subj2) {element:subject,\\operation:insert,\\arg:\{id:subj1\}}}
-%	};
-%	\end{tikzpicture}
-%	\caption{CG pattern for obligatory subject control in complement clauses}
-%	\label{fig:subj-control}
-%\end{figure}
-
-The adjunct non-finite clauses such as the ones in Example \ref{ex:pro10} (``John hired Mery [PRO to fire Bill]'') and \ref{ex:pro11} (``John abandoned the investigation [PRO to save money]'') shall be treated exactly as the non-finite complement clauses are. Generalisation \ref{gen:8} emphasises obligatory control for them. The only difference between the adjunct and complement clauses is dictated by the verb of the higher clause and whether it theta marks or not the lower clause. In dependency grammar the adjunct clauses are also introduced via \textit{xcomp} and \textit{prepc} relations, so syntactically there is no distinction between the two patterns.
-
-%%todo[jb] exactly: you have got the descriptions out of order. This makes it clear that you need to have discussed this first, otherwise you have to rely on stuff that you have not introduced to make your argument here. Changing the order of presentation would solve this and make things much clearer.
-
-The \textit{prepc} relation in dependency grammar introduces a prepositional clausal modifier for a verb (VN), noun (NN) or adjective (JJ). Adjective and noun modification are cases of copulative clauses. Such configuration are not relevant to the context of this work  because, as we will see in Section \ref{sec:preprocessing1}, the dependency graphs are normalised. This process involves, among others, transforming the copulas into verb predicated clauses instead of adjective or noun predicated clauses. 
-
-%\begin{figure}
-%    %        \centering
-%    %        \scalebox{1}{
-%    \begin{dependency}[dep-style]
-%        \begin{deptext}[]
-%            PRO \& smoking \& is \& bad \& for \& the \& health. \\
-%        \end{deptext}
-%        \deproot{2}{root}
-%        \depedge{2}{1}{nsubj}
-%        \depedge{2}{6}{xcomp}
-%        \depedge{2}{3}{dobj}
-%        \depedge{6}{4}{nsubj}
-%        \depedge{6}{5}{mark}
-%        \depedge{6}{7}{dobj}
-%    \end{dependency}
-%\end{figure}
-
-%The non-finite subject clause are a special case
-The last subordinate type concerned with the PRO element is the subject clause such as the one in Example \ref{ex:pro12} (``PRO_i smoking is bad for the health_j''). In dependency structure, the subject non-finite clauses are introduced via \textit{csubj} relation. They are quite different from complement and adjunct clauses because, according to generalization \ref{gen:9} the PRO is optionally controlled. Since in this case it is not possible to bind PRO solely on syntactic grounds, the generalization \ref{gen:9} proposes arbitrary interpretation discussed in Section \ref{sec:pro-mcg}. Next I turn to identifying the second type of null elements (NP-traces) in the dependency structure of a sentence.
+    %The non-finite subject clause are a special case
+    The last subordinate type concerned with the PRO element is the subject clause such as the one in Example \ref{ex:pro12} (``$PRO_i$ smoking is bad for the health$_j$''). In dependency structure, the subject non-finite clauses are introduced via \textit{csubj} relation. They are quite different from complement and adjunct clauses because, according to Generalisation \ref{gen:9}, the PRO is optionally controlled. Since in this case it is not possible to bind PRO solely on syntactic grounds, Generalisation \ref{gen:9} proposes arbitrary interpretation discussed in Section \ref{sec:pro-mcg}. Next I turn to identifying the second type of null elements (NP-traces) in the dependency structure of a sentence.
 
 \subsection{NP-traces}
 \label{sec:np-traces}
-%say that here we would need more than dependency grammar, and a bit of PTDB 
-% % % % % % % % % % % % % % % % %
-Syntactically, NP raising can occur only when there is a complement clause by moving the subject of a lower clause into a position of a higher clause. The subject of the higher clause c-commands the subject of the lower clause. This is exactly the same syntactic configuration as in the case of PRO subjects (explained in Section \ref{sec:pro-mcg}). In dependency grammar the complement clause without own subject called \textit{open clausal complement} and is introduced via \textit{xcomp} relation.
+    %say that here we would need more than dependency grammar, and a bit of PTDB 
+    % % % % % % % % % % % % % % % % %
+    Syntactically, NP raising can occur only when there is a complement clause by moving the subject of a lower clause into a position of a higher clause. The subject of the higher clause c-commands the subject of the lower clause. This is exactly the same syntactic configuration as in the case of PRO subjects (explained in Section \ref{sec:pro-mcg}). In dependency grammar the complement clause without its own subject is called a \textit{open clausal complement} and is introduced via the \textit{xcomp} relation.
 
-\begin{figure}[!ht]
-	\centering
-	\begin{dependency}[dep-style]
-		\begin{deptext}[]
-			Poirot_i \& was \& believed \& \textit{t}_i \& to \& have \& destroyed \& the \& evidence \\
-		\end{deptext}
-		\deproot{3}{root}
-		\depedge{3}{1}{nsubjpass}
-		\depedge{3}{2}{auxpass}
-        \depedge{7}{4}{nsubj}
-		\depedge{7}{5}{aux}
-		\depedge{7}{6}{aux}
-		\depedge{3}{7}{xcomp}
-		\depedge{9}{8}{det}
-		\depedge{7}{9}{dobj}
-	\end{dependency}
-	\caption{Dependency parse for Example \ref{ex:np2}}
-	\label{fig:np-mcg1}
-\end{figure}
+    \begin{figure}[!ht]
+    	\centering
+    	\begin{dependency}[dep-style]
+    		\begin{deptext}[]
+    			Poirot_i \& was \& believed \& \textit{t}_i \& to \& have \& destroyed \& the \& evidence \\
+    		\end{deptext}
+    		\deproot{3}{root}
+    		\depedge{3}{1}{nsubjpass}
+    		\depedge{3}{2}{auxpass}
+            \depedge{7}{4}{nsubj}
+    		\depedge{7}{5}{aux}
+    		\depedge{7}{6}{aux}
+    		\depedge{3}{7}{xcomp}
+    		\depedge{9}{8}{det}
+    		\depedge{7}{9}{dobj}
+    	\end{dependency}
+    	\caption{Dependency parse for Example \ref{ex:np2}}
+    	\label{fig:np-mcg1}
+    \end{figure}
+    
+    \begin{figure}[!ht]
+        \centering
+        \begin{dependency}[dep-style]
+            \begin{deptext}[]
+                Poirot_i \& seems \& \textit{t}_i \& to \& have \& destroyed \& the \& evidence \\
+            \end{deptext}
+            \deproot{2}{root}
+            \depedge{2}{1}{nsub}
+            \depedge{6}{3}{nsubj}
+            \depedge{5}{4}{aux}
+            \depedge{6}{5}{aux}
+            \depedge{2}{6}{xcomp}
+            \depedge{8}{7}{det}
+            \depedge{6}{8}{dobj}
+        \end{dependency}
+        \caption{Dependency parse for Example \ref{ex:np4}}
+        \label{fig:np-mcg2} 
+    \end{figure}
 
-\begin{figure}[!ht]
-    \centering
-    \begin{dependency}[dep-style]
-        \begin{deptext}[]
-            Poirot_i \& seems \& \textit{t}_i \& to \& have \& destroyed \& the \& evidence \\
-        \end{deptext}
-        \deproot{2}{root}
-        \depedge{2}{1}{nsub}
-        \depedge{6}{3}{nsubj}
-        \depedge{5}{4}{aux}
-        \depedge{6}{5}{aux}
-        \depedge{2}{6}{xcomp}
-        \depedge{8}{7}{det}
-        \depedge{6}{8}{dobj}
-    \end{dependency}
-    \caption{Dependency parse for Example \ref{ex:np4}}
-    \label{fig:np-mcg2} 
-\end{figure}
+    Figures \ref{fig:np-mcg1} and \ref{fig:np-mcg2} represent dependency parse for Examples \ref{ex:np2} and \ref{ex:np4}. In these examples the subject position of the embedded clause is a NP-trace that is coindexed with the subject position in the  clause immediately higher. That subject can be either another NP-trace, in which case they form a chain, or an overt subject. 
 
-Figures \ref{fig:np-mcg1} and \ref{fig:np-mcg2} represent a dependency parses for Examples \ref{ex:np2} and \ref{ex:np4}. In these examples the subject position of the embedded clause is a NP-trace that is coindexed with the subject position in the  clause immediately higher. That subject can be either another NP-trace, in which case they form a chain, or an overt subject. 
+    There are also few exceptions to the above. First, the \textit{xcomp} complement clause, of course, should not have a subject of its own. Second, it should not be introduced with the conditional marker ``if'' or with preposition ``for''. Third, the higher clause must have no nominal complement between the subject and the embedded complement clause. 
 
-There are also few exceptions to the above. First, the \textit{xcomp} complement clause, of course, shall not have a subject of its own. Second, it shall not be introduced with the conditional marker ``if'' or with preposition ``for''. Third, the higher clause must have no nominal complement between the subject and the embedded complement clause. 
+    %To identify the place of the empty category is enough to apply the subject control pattern depicted in \ref{fig:subj-control}. 
+    Next, if the above conditions are satisfied and the embedded clause follows the \textit{obligatory subject control} pattern, then it is important to distinguish whether the empty subject is a PRO or a NP-trace \textit{t}. Deciding this is not possible using only purely syntactic criteria. The distinction is dictated by the distribution of semantic (participant) roles of each verb (sense), which I discuss next.
 
-%To identify the place of the empty category is enough to apply the subject control pattern depicted in \ref{fig:subj-control}. 
-Next, if the above conditions are satisfied and the embedded clause follows the \textit{obligatory subject control} pattern, the it is important to distinguish whether the empty subject is a PRO or a NP-trace \textit{t}. Deciding that is not possible using only pure syntactic criteria. The distinction is dictated by the distribution of semantic (participant) roles of each verb (sense) which I discuss next.
+    %TODO SFG account of examples, what do do? taken from NP traces
+    Table \ref{tab:srl-for-example} represents the semantic role distribution for the verbs ``believe'', ``seem'' and ``destroy'' employed in the examples above. In the second column the configuration type is provided and the last column indicates the distribution of semantic roles. The role order is normalised such that in a declarative active voice clause the first role is given to the Subject, the second to the complement (direct object) and the last to the next complement (indirect object). The symbol ``V'' is there to indicate the position of the verb. 
 
-%TODO SFG account of examples, what do do? taken from NP traces
+    \begin{table}[!ht]
+        \centering
+        \begin{tabular}{|l|l|l|}
+            \hline
+            \textit{Verb} & \textit{Process type} & \textit{canonical distribution of semantic roles} \\ \hline
+            Believe & Cognition & Cognizant + V + Phenomenon \\ \hline
+            Seem & Cognition & It + V + Cognizant + Phenomenon \\ \hline
+            Destroy & Action & Agent + V + Affected \\ \hline
+        \end{tabular}
+        \caption{Semantic role distribution for verbs ``believe'' and ``seem''}
+        \label{tab:srl-for-example}
+    \end{table}
 
-Table \ref{tab:srl-for-example} represents the semantic role distribution for the verbs ``believe'', ``seem'' and ``destroy'' employed in the examples above. In the second column is provided the configuration type and the last column indicates the distribution of semantic roles. The role order is normalised such that in a declarative active voice clause the first role is given to the Subject, the second to the complement (direct object) and the last to the next complement (indirect object). The symbol ``V'' is there to indicate the position of the verb. 
+    Figure \ref{fig:np-mcg1} depicts the analysis of a passive clause with an embedded complement clause. The subjects and complements switch places in passive clauses and so do the semantic roles. In this example, the Cognizant role distributed by the verb believe to Subject position goes to the embedded/complement clause position. However Phenomenon is the only semantic role that can be filled by a clause, all other roles take nominal, prepositional or adjectival groups. This leads us to the conclusion that the passive subject Poirot does not receive the Cognizant role from the ``believe'' frame and in fact, as we will see later, it may receive  semantic role(s) from ``somewhere'' else. 
 
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|l|l|l|}
-        \hline
-        \textit{Verb} & \textit{Process type} & \textit{canonical distribution of semantic roles} \\ \hline
-        Believe & Cognition & Cognizant + V + Phenomenon \\ \hline
-        Seem & Cognition & It + V + Cognizant + Phenomenon \\ \hline
-        Destroy & Action & Agent + V + Affected \\ \hline
-    \end{tabular}
-    \caption{Semantic role distribution for verbs ``believe'' and ``seem''}
-    \label{tab:srl-for-example}
-\end{table}
+    In Figure \ref{fig:np-mcg2} the verb ``seem'' assigns semantic roles, according to the description in Table \ref{tab:srl-for-example}, only to fist and second complements. The subject is left unassigned because the semantic configuration for the verb ``seem'' provides an expletive ``it'' instead of a role. The embedded clause, which is the only complement, can fill only the Phenomenon role. This means that the Cognizant role, just like in the previous example, is left unassigned and the Subject ``Poirot'' does not receive any semantic role from the verb ``seem''. 
+    %and so does not assign any thematic role to the subject which then can be filled either by an expletive or a moved NP. 
 
-Example \ref{ex:np2} is a passive clause with an embedded complement clause. The subjects and complements switch places in passive clauses and so do the semantic roles. In this example, the Cognizant role distributed by the verb believe to Subject position goes to the embedded/complement clause position. However Phenomena is the only semantic role that can be filled by a clause, all other roles take nominal, prepositional or adjectival groups. This leads us to conclusion that the passive subject Poirot does not receive the Cognizant role from the ``believe'' frame and in fact, as we will see latter, it may receive  semantic role(s) from ``somewhere'' else. 
+    The embedded clause in both cases is governed by the verb ``destroy'', which assigns the Agent role to the Subject and Affected role to the complement. The Subject however has moved from the embedded clause into the Subject position of the higher clause leaving an NP-trace. The distributed semantic role moves upwards on the chain as well such that the Subject in the higher clause (the antecedent) receives the Agent role from the embedded clause. 
 
-In Example \ref{ex:np4} the verb ``seem'' assigns roles, as seen in Table \ref{tab:srl-for-example}, only to fist and second complements while the subject is left unassigned as indicated by the expletive ``it''. The embedded clauses, which is the only complement, can fill only the Phenomenon role. This means that the Cognizant role, just like in the previous example, is left unassigned and the Subject ``Poirot'' does not receive any semantic role from the verb ``seem''. 
-%and so does not assign any thematic role to the subject which then can be filled either by an expletive or a moved NP. 
+    %TODO end of SFG account example
+    %First of all, knowing whether the null element in the embedded clause is PRO or NP-trace, is crucial for assignment of thematic roles to the constituents. 
+    Here the problem is to decide what type of relationship holds between the empty constituent and its antecedent (subject in the matrix clause) to which it is bound. In the case of \textit{PRO} constituent, the thematic roles are assigned to both the empty constituent and to its antecedent locally in the clause as where they are located. So the PRO constituent receives a thematic label dictated by the verb of the embedded clause and the antecedent by the verb of the matrix clause. In the \textit{t}-trace case, the thematic role is assigned only to the empty constituent by the verb of the embedded clause and this role is propagated to its antecedent. 
 
-The embedded clause in both cases is governed by the verb ``destroy'' which assigns the Agent role to the Subject and Affected role to the complement. The Subject however has moved from the embedded clause into the Subject position of the higher clause leaving an NP-trace and. The distributed semantic role moves upwards on the chain as well such that the Subject in the higher clause (the antecedent) receives the Agent role from the embedded clause. 
+    But this distinction requires analysis of the role distribution of upper and lower clause predicates and deciding the type of relationship between the empty category and its antecedent. 
+    %Hence, an operation on the constituency structure requires to be semantically informed.
+    If a semantically informed decision should be made at this stage of parsing or postponed to Transitivity analysis (i.e. semantic role labelling) is debatable because each approach introduces different problems. 
 
-%TODO end of SFG account example
+    Generalisation \ref{gen:trace-detection} presents the conditions that need to be verified in order to distinguish the t-trace from the PRO element. I employ here the traditional grammar syntactic features and categories and semantic configurations together with participant roles from the Cardiff grammar. 
 
-%First of all, knowing whether the null element in the embedded clause is PRO or NP-trace, is crucial for assignment of thematic roles to the constituents. 
-Here the problem is to decide what the type of relationship holds between the empty constituent and it's antecedent (subject in the matrix clause) to which it is bound. In the case of \textit{PRO} constituent, the thematic roles are assigned to both the empty constituent and to its antecedent locally in the clause they are located. So the PRO constituent receives a thematic label dictated by the verb of the embedded clause and the antecedent by the verb of the matrix clause. In the \textit{t}-trace case the thematic role is assigned only to the empty constituent by the verb of the embedded clause and this role is propagated to its antecedent. 
-
-But this distinction requires analysis of the role distribution of upper and lower clause predicates and deciding the type of relationship between the empty category and its antecedent. 
-%Hence, an operation on the constituency structure requires to be semantically informed. 
-If a semantically informed decision shall be made at this stage of parsing or postponed to Transitivity analysis (i.e. semantic role labelling) is debatable because each approach introduces different problem. 
-
-Generalization \ref{gen:trace-detection} presents the conditions that need to be verified in order to distinguish the t-trace from the PRO element. I employ here the traditional grammar syntactic features and categories and semantic configurations together with participant roles from Cardiff grammar. 
-
-\begin{generalization}\label{gen:trace-detection}
-    To identify the \textit{t}-traces check the following conditions:
-    \begin{itemize}
-        \item the subject control pattern matches the case AND
-        \item the process type of the higher clause is two or three role cognition, perception or emotion process (considering constraints on Cognizant and Phenomenon roles). AND
-        \item among the configurations of higher clause there is one with:
+    \begin{generalization}\label{gen:trace-detection}
+        To identify the \textit{t}-traces all the following conditions need hold:
         \begin{itemize}
-            \item an expletive subject OR
-            \item the Phenomenon role in subject position OR
-            \item Cognizant in subject position AND the clause has passive voice or interrogative mood (cases of movement).
+            \item the subject control pattern respects the case agreement.
+            \item the process type of the higher clause is two or three role cognition, perception or emotion process (considering constraints on Cognizant and Phenomenon roles). 
+            \item among the configurations of higher clause there is one with:
+            \begin{itemize}
+                \item an expletive subject OR
+                \item the Phenomenon role in subject position OR
+                \item Cognizant in subject position AND the clause has passive voice or interrogative mood (cases of movement).
+            \end{itemize}
         \end{itemize}
-    \end{itemize}
-\end{generalization}
+    \end{generalization}
 
 
 \subsection{Wh-traces}
 \label{sec:wh-traces}
 % % % % % % % % % % % % %
-I now turn to how Wh-movement and relative clauses are represented and behave in dependency grammar and SF grammars. Figures \ref{fig:e18} and \ref{fig:e19} present dependency parses for Wh-movement from Subject and Complement positions of lower clause while \ref{fig:e22} from adjunct position.
+    I now turn to how Wh-movement and relative clauses are represented and behave in dependency grammar and SF grammars. Figures \ref{fig:e18} and \ref{fig:e19} present dependency parses for Wh-movement from Subject and Complement positions of lower clause while \ref{fig:e22} shows movement from adjunct position.
 
-\begin{figure}[!ht]
-	\centering
-	\begin{dependency}[dep-style]
-		\begin{deptext}[]
-			Whom \& do \& you \& believe \& that \& Lord \& Emsworth \& will \& invite \& first \& ?\\
-		\end{deptext}
-		\deproot{4}{root}
-		\depedge{4}{1}{dobj}
-		\depedge{4}{2}{aux}
-		\depedge{4}{3}{nsubj}
-		\depedge{9}{5}{mark}
-		\depedge{7}{6}{nn}
-		\depedge{9}{8}{aux}
-		\depedge{9}{7}{nsubj}
-		\depedge{4}{9}{ccomp}
-		\depedge{9}{10}{advmod}
-	\end{dependency}
-	\caption{Dependency parse for Example \ref{ex:wh31}}
-	\label{fig:e18}
-\end{figure}
+    \begin{figure}[!ht]
+    	\centering
+    	\begin{dependency}[dep-style]
+    		\begin{deptext}[]
+    			Whom \& do \& you \& believe \& that \& Lord \& Emsworth \& will \& invite \& first \& ?\\
+    		\end{deptext}
+    		\deproot{4}{root}
+    		\depedge{4}{1}{dobj}
+    		\depedge{4}{2}{aux}
+    		\depedge{4}{3}{nsubj}
+    		\depedge{9}{5}{mark}
+    		\depedge{7}{6}{nn}
+    		\depedge{9}{8}{aux}
+    		\depedge{9}{7}{nsubj}
+    		\depedge{4}{9}{ccomp}
+    		\depedge{9}{10}{advmod}
+    	\end{dependency}
+    	\caption{Dependency parse for Example \ref{ex:wh31}}
+    	\label{fig:e18}
+    \end{figure}
+    
+    \begin{figure}[!ht]
+    	\centering
+    	\begin{dependency}[dep-style]
+    		\begin{deptext}[]
+    			Who \& do \& you \& think \& will \& arrive \& first \& ?\\
+    		\end{deptext}
+    		\deproot{4}{root}
+    		\depedge{4}{1}{dobj}
+    		\depedge{4}{2}{aux}
+    		\depedge{4}{3}{nsubj}
+    		\depedge{6}{5}{aux}
+    		\depedge{4}{6}{ccomp}
+    		\depedge{6}{7}{advmod}
+    	\end{dependency}
+    	\caption{Dependency parse for Example \ref{ex:wh30}}
+    	\label{fig:e19}
+    \end{figure}
+    
+    %definition of the Wh-group and element
+    % % todo[jb] give examples that make your point clear; you can't really just say that you disagree and will do something different without backup.
 
-\begin{figure}[!ht]
-	\centering
-	\begin{dependency}[dep-style]
-		\begin{deptext}[]
-			Who \& do \& you \& think \& will \& arrive \& first \& ?\\
-		\end{deptext}
-		\deproot{4}{root}
-		\depedge{4}{1}{dobj}
-		\depedge{4}{2}{aux}
-		\depedge{4}{3}{nsubj}
-		\depedge{6}{5}{aux}
-		\depedge{4}{6}{ccomp}
-		\depedge{6}{7}{advmod}
-	\end{dependency}
-	\caption{Dependency parse for Example \ref{ex:wh30}}
-	\label{fig:e19}
-\end{figure}
+    \citet[374]{Haegeman1991} defines phrases that contain a Wh-word as Wh-phrases. This being independent of whether the wh-word in is the head or determiner position in the phrase, as, according to Haegeman, the properties of that wh-word are projected to the level of the entire phrase. In SFG, the Wh-words function as heads but there are other cases when they act as determiners, possessors or adjectival modifiers, defined for the purposes of this thesis in Definition \ref{def:wh-group}. This issue is extensively discussed by \citet{Abney1987}, \citet{Quirk1985} and \citet{Halliday2013}. From these discussions, I have systematised the functional distribution for Wh-words and Wh-groups in Table \ref{tab:wh-functions}. This systematisation follows a systemic functional approach as it is more appropriate in discussions about groups, constituents, their features and functions. Note that Wh-group is not a new unit class in the grammar but a constituent feature possibly assigned to any of the three unit classes. This systematisation is useful for scoping the Wh-movement phenomena in SFL terms and will be used below.
 
-%definition of the Wh-group and element
-% % todo[jb] give examples that make your point clear; you can't really just say that you disagree and will do something different without backup.
+    \begin{definition}[Wh-group]\label{def:wh-group}
+        \textit{Wh-group} is a nominal, prepositional or adverbial group that contains s Wh-word either as head or as modifier. 
+    \end{definition}
 
-\citet[375]{Haegeman1991} treats each Wh-word as the head of the Wh-phrase. This is not the case in SFG. In some cases, the Wh-words, function as heads but there are other cases when they act as determiners, possessors or adjectival modifiers. This issue is extensively discussed by \citet{Abney1987,Quirk1985,Halliday2013}. From these discussions, I have systematised the functional distribution for Wh-words and Wh-groups in Table \ref{tab:wh-functions} below. This systematisation follows a systemic functional approach as it is more appropriate in discussions about groups, constituents, their features and functions. This systematisation is useful for scoping the Wh-movement phenomena in SFL terms.
+    \begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+        \begin{tabulary}{1.2\textwidth}{|C|C|C|C|}
+            \hline 
+            \textbf{Features} & \multicolumn{2}{c|}{\textbf{Clause functions of the Wh-group}} & \textbf{Group functions of Wh-word} \\ 
+            \hline 
+            & \textbf{Subject} & \textbf{Complement} &   \\ 
+            \hline 
+            person & who, whoever & whom, whomever, whomsoever & head/thing \\ 
+            \hline 
+            person, possessive & \multicolumn{2}{c|}{whose} & possessor \\ 
+            \hline 
+            person/non-person & \multicolumn{2}{c|}{which} & determiner \\ 
+            \hline 
+            non-person & \multicolumn{2}{c|}{what, whatever} & head/thing \\ 
+            \hline 
+            & \multicolumn{2}{c|}{\textbf{Adjunct}} &   \\ 
+            \hline 
+            various  & \multicolumn{2}{c|}{when, where, why, how} & head/modifier \\ 
+            circumstantial & \multicolumn{2}{c|}{(whether, whence, whereby, wherein)} &   \\ 
+            features & \multicolumn{2}{c|}{(and their \textit{-ever} derivations)} &   \\ 
+            \hline 
+        \end{tabulary}
+    }
+        \caption{Functions and features of Wh-words and groups}
+        \label{tab:wh-functions}
+    \end{table}
 
-For clarity the Wh-group in Definition \ref{def:wh-group}. Note that Wh-group is not a new unit class in the grammar but a constituent feature possibly assigned to any of the three unit classes.
+    %* Wh traces in interrogative complex clauses: Wh-movemen in embedded questions and Wh-movement in interrogative matrix clause.
 
-\begin{definition}[Wh-group]\label{def:wh-group}
-    \textit{Wh-group} is a nominal, prepositional or adverbial group that contains Wh-word either as head or as modifier. 
-\end{definition}
+    Just like in cases of NP-movement, the Wh-groups move only into two and three role cognition, perception and emotion semantic configurations. As mentioned above, the NP-antecedents land in expletive or passive subject position, the Wh-antecedents, by contrast, land in subject or subject preceding position functioning as subject, complement or adjunct depending on the Wh-word (or Wh-group).
 
-\begin{table}[!ht]
-    \begin{tabulary}{\textwidth}{|C|C|C|C|}
-        \hline 
-        \textbf{Features} & \multicolumn{2}{c|}{\textbf{Clause functions of the Wh-group}} & \textbf{Group functions of Wh-word} \\ 
-        \hline 
-        & \textbf{Subject} & \textbf{Complement} &   \\ 
-        \hline 
-        person & who, whoever & whom, whomever, whomsoever & head/thing \\ 
-        \hline 
-        person, possessive & \multicolumn{2}{c|}{whose} & possessor \\ 
-        \hline 
-        person/non-person & \multicolumn{2}{c|}{which} & determiner \\ 
-        \hline 
-        non-person & \multicolumn{2}{c|}{what, whatever} & head/thing \\ 
-        \hline 
-        & \multicolumn{2}{c|}{\textbf{Adjunct}} &   \\ 
-        \hline 
-        various  & \multicolumn{2}{c|}{when, where, why, how} & head/modifier \\ 
-        circumstantial & \multicolumn{2}{c|}{(whether, whence, whereby, wherein)} &   \\ 
-        features & \multicolumn{2}{c|}{(and their \textit{-ever} derivations)} &   \\ 
-        \hline 
-    \end{tabulary}
-    \caption{Functions and features of Wh-words and groups}
-    \label{tab:wh-functions}
-\end{table}
+    The essential features for capturing Wh-movement in dependency graphs are (a) the finite complement clause is identified by a \textit{ccomp} relation between the matrix and embedded clause (b) the Wh-word/group plays a complement function in the higher clause which is identifiable by \textit{dobj}, \textit{prep} or \textit{advmod} relations to the main verb (c) the function of the WH-trace in the lower clause is either Subject (e.g. Example \ref{ex:wh31}), Complement (e.g. Example \ref{ex:wh30}) or Adjunct. 
+    The \textit{ccomp} relation is defined in \cite{Marneffe2008} to introduce complement clauses with an internal subject which are usually finite. %I must emphasize the fact that the lower clause must be embedded into the higher one and receive a thematic role in higher clause.
 
-%* Wh traces in interrogative complex clauses: Wh-movemen in embedded questions and Wh-movement in interrogative matrix clause.
+    Regardless whether the syntactic function of the traces in the lower clause is Subject or Complement, in the higher clause the Wh-group takes the Complement function and is bound to the Main Verb via the \textit{dobj} relation but is positioned before the main verb and the Subject (a structure corresponding to Wh-interrogatives). A wh-group can take also Subject function in the higher clause, but then it is not a case of Wh-movement and is irrelevant for us at this point because there is no empty element involved. The attribution of clause function to the WH-trace is based on either the case of the Wh-group or the missing functional constituent in the lower clause. 
 
-%todo end move 
+    \begin{figure}[!ht]
+    	\centering
+    	\begin{dependency}[dep-style]
+    		\begin{deptext}[]
+    			When \& do \& you \& think \& Lord \& Emsworth \& will \& invite \& the \& detective \& ?\\
+    		\end{deptext}
+    		\deproot{4}{root}
+    		\depedge{4}{1}{advmod}
+    		\depedge{4}{2}{aux}
+    		\depedge{4}{3}{nsubj}
+    %		\depedge{9}{5}{mark}
+    		\depedge{4}{6}{ccomp}
+    		\depedge{7}{6}{nn}
+    		\depedge{9}{7}{nsubj}
+    		\depedge{9}{8}{aux}
+    		\depedge{4}{9}{ccomp}
+    		\depedge{11}{10}{det}
+    		\depedge{9}{11}{dobj}
+    	\end{dependency}
+    	\caption{Example dependency parse with Adjunct Wh-word}
+    	\label{fig:e22}
+    \end{figure}
 
-Just like in cases of NP-movement, the Wh-groups move only into two and three role cognition, perception and emotion semantic configuration. As mentioned above, the NP-antecedents land in expletive or passive subject position, the Wh-antecedents, by contrast, land in subject or subject preceding position functioning as subject, complement or adjunct depending on the Wh-word (or Wh-group).
+    In case of WH-traces with Adjunct function in the lower clause, as shown in Figure \ref{fig:e22}, their antecedents also receive Adjunct functions in the higher clause. One peculiar finding about Adjunct Wh-trace is that it cannot bind, at least in English, to the clause with a (generic) simple present tense. The clause must be bound in some other tense or modality than present simple. The reader can experiment with changing tense in the above example to test this. 
 
-The essential features for capturing Wh-movement in dependency graphs are (a) the finite complement clause identified by \textit{ccomp} relation between the matrix and embedded clause (b) the Wh-word/group plays a complement function in higher clause which is identifiable by \textit{dobj}, \textit{prep} or \textit{advmod} relations to the main verb (c) the function of the WH-trace in lower clause is either Subject (e.g. \ref{ex:wh31}), Complement (e.g. \ref{ex:wh30}) or Adjunct. 
-\textit{ccomp} relation is defined in \cite{Marneffe2008} to introduce complement clauses with an internal subject which are usually finite. %I must emphasize the fact that the lower clause must be embedded into the higher one and receive a thematic role in higher clause.
+    \begin{exe}
+    	\ex\label{ex:wh20} Who_{i} believes that Lord Emsworth will invite a detective?
+    	\ex\label{ex:wh21} To whom_{i} did Poirot say t_{i} that Lord Emsworth will invite a detective?
+    \end{exe}
 
-Regardless whether the syntactic function of the traces in the lower clause is Subject or Complement, in the higher clause the Wh-group takes Complement function and is bound to the Main Verb via \textit{dobj} relation but is positioned before the main verb and the Subject (a structure corresponding to Wh-interrogatives). Wh-group can take also Subject function in the higher clause, but then it is not a case of Wh-movement and is irrelevant for us at this point because there is no empty element involved. The attribution of clause function to the WH-trace is based on either the case of the Wh-group or the missing functional constituent in the lower clause. 
+    Not always are the Wh-groups movements from a lower clause. It is possible that the trace of the moved element resides in the higher clause (complement) or even to have a case of no movement when a Wh-word takes the Subject function in the higher clause. Examples \ref{ex:wh20} and \ref{ex:wh21} are good examples of a \textit{short} (in clause) movement of this kind. These cases of Wh-movement share similarities to relative clause Wh-traces that will be described in Section \ref{sec:wh-traces-relative} below. However the short movement cannot be grasped in terms of dependency grammar because order is the only factor that counts and dependency grammar is order free and does not (explicitly) account for it. The functions are already assigned accordingly so short movement is not a subject of interest for the current section.
 
-\begin{figure}[!ht]
-	\centering
-	\begin{dependency}[dep-style]
-		\begin{deptext}[]
-			When \& do \& you \& think \& Lord \& Emsworth \& will \& invite \& the \& detective \& ?\\
-		\end{deptext}
-		\deproot{4}{root}
-		\depedge{4}{1}{advmod}
-		\depedge{4}{2}{aux}
-		\depedge{4}{3}{nsubj}
-%		\depedge{9}{5}{mark}
-		\depedge{4}{6}{ccomp}
-		\depedge{7}{6}{nn}
-		\depedge{9}{7}{nsubj}
-		\depedge{9}{8}{aux}
-		\depedge{4}{9}{ccomp}
-		\depedge{11}{10}{det}
-		\depedge{9}{11}{dobj}
-	\end{dependency}
-	\caption{Example dependency parse with Adjunct Wh-word}
-	\label{fig:e22}
-\end{figure}
+    %\subsection{Chaining of Wh-traces}
+    %\label{sec:wh-traces}
+    \begin{figure}[H]
+    	\centering
+    	\begin{dependency}[dep-style]
+    		\begin{deptext}[]
+    			Who \& did \& Poirot \& say \& that \& he \& saw \& last \& week \& ?\\
+    		\end{deptext}
+    		\deproot{4}{root}
+    		\depedge{4}{1}{dobj}
+    		\depedge{4}{2}{aux}
+    		\depedge{4}{3}{nsubj}
+    		\depedge{9}{5}{mark}
+    		\depedge{7}{5}{nsubj}
+    		\depedge{4}{7}{ccomp}
+    		\depedge{9}{8}{nsubj}
+    		\depedge{7}{9}{ccomp}
+    		\depedge{11}{10}{amod}
+    		\depedge{9}{11}{tmod}
+    	\end{dependency}
+    	\caption{Dependency parse for Example \ref{ex:wh16}}
+    	\label{fig:e17}
+    \end{figure}
 
-In case of WH-traces with Adjunct function in the lower clause, as shown in Figure \ref{fig:e22}, their antecedents also receive Adjunct functions in the higher clause. One peculiar finding about Adjunct Wh-trace is that it cannot bind, at least in English, to the clause with a (generic) present simple tense. The clause must be bound in some other tense or modality than present simple. The reader can experiment with changing tense in the above example to test this. 
-
-\begin{exe}
-	\ex\label{ex:wh20} Who_{i} believes that Lord Emsworth will invite a detective?
-	\ex\label{ex:wh21} To whom_{i} did Poirot say t_{i} that Lord Emsworth will invite a detective?
-\end{exe}
-
-Not always are the Wh-groups movements from a lower clause. It is possible that the trace of the moved element resides in the higher clause (complement) or even to have a case of no movement when a Wh-word takes the Subject function in the higher clause. Examples \ref{ex:wh20} and \ref{ex:wh21} are good examples of a \textit{short} movement (in clause) of this kind (similar to relative clause Wh-traces described in Section \ref{sec:wh-traces-relative} below). However the short movement cannot be grasped in terms of dependency grammar because order is the only factor that counts and dependency grammar is order free and does not (explicitly) account for it. The functions are already assigned accordingly so short movement is not a subject of interest for the current section.
-
-%\subsection{Chaining of Wh-traces}
-%\label{sec:wh-traces}
-% chaining
-\begin{figure}[H]
-	\centering
-	\begin{dependency}[dep-style]
-		\begin{deptext}[]
-			Who \& did \& Poirot \& say \& that \& he \& saw \& last \& week \& ?\\
-		\end{deptext}
-		\deproot{4}{root}
-		\depedge{4}{1}{dobj}
-		\depedge{4}{2}{aux}
-		\depedge{4}{3}{nsubj}
-		\depedge{9}{5}{mark}
-		\depedge{7}{5}{nsubj}
-		\depedge{4}{7}{ccomp}
-		\depedge{9}{8}{nsubj}
-		\depedge{7}{9}{ccomp}
-		\depedge{11}{10}{amod}
-		\depedge{9}{11}{tmod}
-	\end{dependency}
-	\caption{Dependency parse for Example \ref{ex:wh16}}
-	\label{fig:e17}
-\end{figure}
-
-Recall the \textit{cyclic} and \textit{successive} properties of Wh-movement from the previous section underlined by Example \ref{ex:wh16} and its dependency parse in Figure \ref{fig:e17}. GBT suggests that the Wh-movement leaves traces in all the intermediary clauses. In dependency grammar these properties are treated instrumentally for determining intermediary wh-traces in the search for the foot of the chain and none of the intermediary traces shall be created as null elements. There is no further purpose for them as they do not receive a thematic role in the intermediary clauses. 
+    Recall the \textit{cyclic} and \textit{successive} properties of Wh-movement from the previous section underlined by Example \ref{ex:wh16} and its dependency parse in Figure \ref{fig:e17}. GBT suggests that the Wh-movement leaves traces in all the intermediary clauses. In dependency grammar these properties are treated instrumentally for determining intermediary wh-traces in the search for the foot of the chain and none of the intermediary traces are created as null elements. There is no further purpose for them as they do not receive a thematic role in the intermediary clauses. 
 
 \subsection{Wh-traces in relative clauses}
 % relative clauses
 \label{sec:wh-traces-relative}
-In GB theory the Wh-words that form relative clauses (\textit{who, whom, which, whose}) are considered moved. In dependency grammar such movement is redundant since the Wh-word and its trace are collapsed and take the same place and function. The Wh-words function either as Subject or complement. When the relative clause is introduced by a Wh-group there is no empty element to be detected, rather there is an anaphoric indexing relation to a noun it refers to. 
+    In GB theory the Wh-words that form relative clauses (\textit{who, whom, which, whose}) are considered moved. In dependency grammar such movement is redundant since the Wh-word and its trace are collapsed and take the same place and function. The Wh-words function either as Subject or Complement. When the relative clause is introduced by a Wh-group there is no empty element to be detected, rather there is an anaphoric indexing relation to a noun it refers to. 
 
+    \begin{table}[!ht]
+    \resizebox{\textwidth}{!}{%
+    	\begin{tabulary}{1.2\textwidth}{|L|L|L|L|}
+    		\hline 
+    		\textbf{Relativizing element} & \textbf{Feature} & \textbf{(Clause) Function} & \textbf{Examples} \\ 
+    		\hline 
+    		who & person & Subject & ... the woman who lives next door. \\ 
+    		\hline 
+    		whom & person & complement (non defining clause) & ... the doctor whom I have seen today. \\ 
+    		\hline 
+    		which & non-person & Subject/ complement & ... the apple which is lying on the table.\newline... the apple which George put on the table.  \\ 
+    		\hline 
+    		whose & possessive, person & possessor in Subject & ... the boy whose mother is a nurse. \\ 
+    		\hline
+    		(\textit{any of the above in prepositional group}) &  person/ non-person & thing/possessor in Subject &  ... the boy to whom I gave advice.\newline... the cause for which we fight. \\
+    		\hline
+    		that & person/ non-person & Subject & ... the apple that lies on the table. \\
+    		\hline
+    		Zero Wh-word & person/ non-person & Subject & ... the sword sent by the gods. \\
+    		\hline
+    	\end{tabulary}
+	}
+    	\caption{The Wh-words introducing a relative clause.}
+    	\label{tab:wh2}
+    \end{table}
 
-\begin{table}[!ht]
-	\begin{tabulary}{\textwidth}{|L|L|L|L|}
-		\hline 
-		\textbf{Relativizing element} & \textbf{Feature} & \textbf{(Clause) Function} & \textbf{Examples} \\ 
-		\hline 
-		who & person & Subject & ... the woman who lives next door. \\ 
-		\hline 
-		whom & person & complement (non defining clause) & ... the doctor whom I have seen today. \\ 
-		\hline 
-		which & non-person & Subject/ complement & ... the apple which is lying on the table.\newline... the apple which George put on the table.  \\ 
-		\hline 
-		whose & possessive, person & possessor in Subject & ... the boy whose mother is a nurse. \\ 
-		\hline
-		(\textit{any of the above in prepositional group}) &  person/ non-person & thing/possessor in Subject &  ... the boy to whom I gave advice.\newline... the cause for which we fight. \\
-		\hline
-		that & person/ non-person & Subject & ... the apple that lies on the table. \\
-		\hline
-		Zero Wh-word & person/ non-person & Subject & ... the sword sent by gods. \\
-		\hline
-	\end{tabulary} 
-	\caption{The Wh-words introducing a relative clause.}
-	\label{tab:wh2}
-\end{table}
+    Focusing now on the relative clauses, there are three more possible constructions that introduce them: (a) a prepositional group that contains a Wh-word, (b) a ``that'' complementizer which behaves like a relative pronoun and (c) the \textit{Zero Wh-word} which is a Wh-trace empty element which functions the same way as an overt Wh-word. Table \ref{tab:wh2} lists possible elements that introduce a relative clause, their features and the functions they can take. The traces of Wh-words to their antecedents are identified as follows. 
 
-Focusing now on the relative clauses, there are three more possible constructions that introduce them: (a) a prepositional group that contains a Wh-word, (b) ``that'' complementizer which behaves like a relative pronoun and (c) the \textit{Zero Wh-word} which is a Wh-trace empty element and which functions the same way as an overt Wh-word. Table \ref{tab:wh2} lists possible elements that introduce a relative clause, their features and the functions they can take. 
-Next I discuss how to identify, create and bind the traces of Wh-words to their antecedents. 
+    %Compare the dependency parse with an overt Wh-word in Figure \ref{fig:e20} and the covert one shown in Figure \ref{fig:e21}.
+    \begin{figure}[!ht]
+    	\centering
+    	\begin{dependency}[dep-style]
+    		\begin{deptext}[]
+    			Arthur \& took \& the \& sword \& which \& was \& sent \& to \& him \& by \& gods \&. \\
+    		\end{deptext}
+    		\deproot{2}{root}
+    		\depedge{2}{1}{nsubj}
+    		\depedge{4}{3}{det}
+    		\depedge{2}{4}{dobj}
+    		\depedge{7}{5}{nsubjpass}
+    		\depedge{7}{6}{auxpass}
+    		\depedge{4}{7}{rcmod}
+    		\depedge{7}{9}{prep\_to}
+    		\depedge{7}{11}{agent}
+    %        \depedge{12}{11}{det}
+    	\end{dependency}
+    	\caption{Dependency parse for ``Arthur took the sword which was sent to him by gods.''}
+    	\label{fig:e20}
+        \end{figure}
+        
+        \begin{figure}[!ht]
+    	\centering
+    	\begin{dependency}[dep-style]
+    		\begin{deptext}[]
+    			Arthur \& took \& the \& sword \& sent \& to \& him \& by \& gods \&. \\
+    		\end{deptext}
+    		\deproot{2}{root}
+    		\depedge{2}{1}{nsubj}
+    		\depedge{4}{3}{det}
+    		\depedge{2}{4}{dobj}
+    		\depedge{4}{5}{vmod}
+    		\depedge{5}{7}{prep\_to}
+    		\depedge{5}{9}{agent}
+    	\end{dependency}
+    	\caption{Dependency parse for ``Arthur took the sword sent to him by gods.''}
+    	\label{fig:e21}
+    \end{figure}
 
-%Compare the dependency parse with an overt Wh-word in Figure \ref{fig:e20} and the covert one shown in Figure \ref{fig:e21}.
-%\begin{figure}[!ht]
-%	\centering
-%	\begin{dependency}[dep-style]
-%		\begin{deptext}[]
-%			Arthur \& took \& the \& sword \& which \& was \& sent \& to \& him \& by \& gods \&. \\
-%		\end{deptext}
-%		\deproot{2}{root}
-%		\depedge{2}{1}{nsubj}
-%		\depedge{4}{3}{det}
-%		\depedge{2}{4}{dobj}
-%		\depedge{7}{5}{nsubjpass}
-%		\depedge{7}{6}{auxpass}
-%		\depedge{4}{7}{rcmod}
-%		\depedge{7}{9}{prep\_to}
-%		\depedge{7}{11}{agent}
-%%        \depedge{12}{11}{det}
-%	\end{dependency}
-%	\caption{Dependency parse for ``Arthur took the sword which was sent to him by gods.''}
-%	\label{fig:e20}
-%\end{figure}
-%\begin{figure}[!ht]
-%	\centering
-%	\begin{dependency}[dep-style]
-%		\begin{deptext}[]
-%			Arthur \& took \& the \& sword \& sent \& to \& him \& by \& gods \&. \\
-%		\end{deptext}
-%		\deproot{2}{root}
-%		\depedge{2}{1}{nsubj}
-%		\depedge{4}{3}{det}
-%		\depedge{2}{4}{dobj}
-%		\depedge{4}{5}{vmod}
-%		\depedge{5}{7}{prep\_to}
-%		\depedge{5}{9}{agent}
-%	\end{dependency}
-%	\caption{Dependency parse for ``Arthur took the sword sent to him by gods.''}
-%	\label{fig:e21}
-%\end{figure}
+    Relative clauses in dependency graphs are introduced by \textit{rcmod} and \textit{vmod} relations. The \textit{rcmod} introduces relative clauses containing a Wh-group while the \textit{vmod} introduce finite and non-finite relative clauses with a Zero Wh-word. So the \textit{vmod} dependency relation suffices to signal the empty element. These two ceases are exemplified in the Figures  \ref{fig:e20} and \ref{fig:e21}.
 
-Relative clauses in dependency graphs are introduced by \textit{rcmod} and \textit{vmod} relations. The \textit{rcmod} introduces relative clauses containing a Wh-group while the \textit{vmod} introduce finite and non-finite relative clauses with Zero Wh-word. So the \textit{vmod} dependency relation suffices to signal the empty element. 
-
-The Zero Wh-word behaves exactly like the \textit{PRO element} in the case of non finite complement clauses discussed in Section \ref{sec:pro-mcg}. It receives thematic roles in both the higher clause and in the lower clause and is not a part of a chain like the cases of NP/Wh-movement.
+    The Zero Wh-word behaves exactly like the \textit{PRO element} in the case of non-finite complement clauses discussed in Section \ref{sec:pro-mcg}. It receives thematic roles in both the higher clause and in the lower clause and is not a part of a chain like the cases of NP/Wh-movement.
 
 \section{Discussion}
-This chapter has treated the identification of the \textit{null elements} in syntactic structures as this was identified as one of the major places where a mismatch between SFG and the structural requirements for Transitivity analysis. Section \ref{sec:null-elements-gbt} presented how GBT theory handles null elements and then Section \ref{sec:placing-null-elements} showed how the same principles translate into Stanford dependency graphs involving also, for guidance, a few references to SFL constituency structure.
+    This chapter has treated the identification of the \textit{null elements} in syntactic structures as this was identified as one of the major places where a mismatch between SFG and the structural requirements for Transitivity analysis obtains. Section \ref{sec:null-elements-gbt} presented how GBT theory handles null elements and then Section \ref{sec:placing-null-elements} showed how the same principles translate into Stanford dependency graphs involving also, for guidance, a few references to SFL constituency structure.
 
-This chapter also contributes to establishing cross-theoretical connections that are among primary objectives of the current thesis. Specifically it provides translations of necessary principles and generalizations from GB theory into the context of dependency grammar. These results will be used directly in the parser implementation described in Section \ref{sec:creation-empty-elements}.
+    This chapter also contributes to establishing cross-theoretical connections that are among the primary objectives of the current thesis. Specifically it provides translations of necessary principles and generalisations from GB theory into the context of dependency grammar. These results will be used directly in the parser implementation described in Section \ref{sec:creation-empty-elements}.
 
-Identification of null elements will be important below for the semantic role labelling process described in Chapter \ref{ch:enrichment-stage} because usually the missing elements are participant roles (theta roles) shaping the semantic configuration. Therefore to increase the accuracy of semantic parsing, spotting null elements is a prerequisite.
+    Identification of null elements will be important below for the semantic role labelling process described in Chapter \ref{ch:enrichment-stage} because, usually, the missing elements are participant roles (theta roles) shaping the semantic configuration. Therefore to increase the accuracy of semantic parsing, spotting null elements is a prerequisite.
+    In the previous three chapters three grammatical traditions have been presented falling into the linguistics domain. Next follow three chapters explaining aspects of the Parsimonious Vole parser implementation employing a computer scientific perspective. 
