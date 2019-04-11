@@ -10,6 +10,9 @@ import os
 import itertools
 from IPython.display import HTML, Markdown, display
 import re
+from nltk.metrics import *
+import math 
+import scipy.spatial.distance as sd
 
 # evaluation_repo="/home/lps/Dropbox/Publications/PhD Thesis 2015/thesis/evaluation-results/"
 # evaluation_repo=os.path.dirname(os.path.abspath(__file__))
@@ -32,6 +35,9 @@ OCD2_mood_file_list = glob.glob(evaluation_repo+"ocd2/*.txt_mood.csv")
 
 OCD_const_file_list = OCD1_const_file_list + OCD2_const_file_list
 OCD_mood_file_list = OCD1_mood_file_list + OCD2_mood_file_list
+
+FIGURE_PATH = evaluation_repo + "figures/"
+
 
 # ALL_distance_analisys_file_list =  itertools.chain(
 #                                     OE1_const_file_list ,
@@ -141,33 +147,47 @@ def aggregate_files(file_list, marker=""):
 def dsp(df):
     """ Dysplay a dataframe in IPython environment"""
     display(HTML(df.to_html()))
+
+def false_omissions(match,man,parse):
+    """ false_negatives / (false_positive + true_positives) """
+    true_positives = match
+    false_positives = parse
+    false_negatives = man
+
+    if (false_positives + true_positives)==0: return np.nan
+    return false_negatives / (false_positives + true_positives)
+
+
+def miss_rate(match,man,parse):
+    """ false_negatives / (false_positive + true_positives) """
+    true_positives = match
+    false_positives = parse
+    false_negatives = man
+
+    if (false_positives + false_negatives)==0: return np.nan
+    return false_negatives / (false_positives + false_negatives)
     
 def precission(match,man,parse):
     """ true_positives / (false_positive + true_positives) """
     true_positives = match
     false_positives = parse
-    try:
-        return true_positives / (false_positives + true_positives)
-    except:
-        return -1  
+    if (false_positives + true_positives)==0: return np.nan
+    return true_positives / (false_positives + true_positives)
+    
     
 def recall(match,man,parse):
     """true_positives / (false_negative + true_positives)"""
-    try:
-        true_positives = match
-        false_negatives = man
-        return true_positives / (false_negatives + true_positives)
-    except:
-        return -1
+    true_positives = match
+    false_negatives = man
+    if (false_negatives + true_positives)==0: return np.nan
+    return true_positives / (false_negatives + true_positives)
     
 def f1(match,man,parse):
     """2 * precission * recall / (precission + recall)"""
-    try:
-        p = precission(match,man,parse)
-        r = recall(match,man,parse)
-        return 2 * p * r / (p + r)
-    except:
-        return -1
+    p = precission(match,man,parse)
+    r = recall(match,man,parse)
+    if (p + r)==0: return np.nan
+    return 2 * p * r / (p + r)
     
 def calculate_prf1(matches,manual_nm,parse_nm):
     """ generate the precission, recall and f1 for each feature
@@ -482,3 +502,296 @@ def find_near_same_segments(matches, manual_nm, parse_nm):
             dsp(m)
     
     return matches_reduced, manual_nm_reduced, parse_nm_reduced
+
+
+####################################################
+# functions added in evaluation 2.0
+####################################################
+
+EXACT_MATCH_COLUMN = "Matched (exactly only)"
+CLOSE_MATCH_COLUMN = "Matched (closely only)"
+MANUAL_COLUMN = "Corpus non-matched"
+PARSE_COLUMN = "Parser non-matched"
+COMBINED_MATCH_COLUMN = "Matched"
+
+
+def aggregate_data_by_feature(matches, manual_nm, parse_nm):
+    """ 
+        For a batch read from the evalaution files return the 
+        significant matched/non-matached countings per feature.
+    """
+    # looking into segment matche. Compile counting. Matches are split into two: zero distance and non-zero distance
+    exact_matches = matches.loc[matches['Dist. Geometric'] == 0]
+    close_matches = matches.loc[matches['Dist. Geometric'] != 0]
+
+    exact_match_groups = exact_matches.sort_values(["Man Features"],ascending=True).groupby("Man Features", as_index=True)
+    exact_match_count = exact_match_groups["Man Id"].count()
+    exact_match_count.rename(EXACT_MATCH_COLUMN,inplace=True)
+
+    close_match_groups = close_matches.sort_values(["Man Features"],ascending=True).groupby("Man Features", as_index=True)
+    close_match_count = close_match_groups["Man Id"].count()
+    close_match_count.rename(CLOSE_MATCH_COLUMN,inplace=True)
+
+    combined_match_groups = matches.sort_values(["Man Features"],ascending=True).groupby("Man Features", as_index=True)
+    combined_match_count = combined_match_groups["Man Id"].count()
+    combined_match_count.rename(COMBINED_MATCH_COLUMN,inplace=True)
+
+    
+    # looking into manual segments
+
+    manual_nm_groups = manual_nm.sort_values(["Features"],ascending=True).groupby("Features", as_index=True)
+    manual_count = manual_nm_groups["Man Id"].count()
+    manual_count.rename(MANUAL_COLUMN,axis=0,inplace=True)
+
+    # looking into automatic segments
+
+    parse_nm_groups = parse_nm.sort_values(["Features"],ascending=True).groupby("Features", as_index=True)
+    parse_count = parse_nm_groups["Man Id"].count()
+    parse_count.rename(PARSE_COLUMN,axis=0,inplace=True)
+
+    stats = pd.concat([exact_match_count, close_match_count, combined_match_count, manual_count, parse_count],axis=1, sort=False)
+    return stats.fillna(0)
+
+PRECISSION_COLUMN = "Precission"
+RECALL_COLUMN = "Recall"
+F1_COLUMN = "F1"
+MISS_RATE_COLUMN = "Miss rate"
+FALSE_OMISSIONs_COLUMN = "False omission rate"
+
+
+def __accuracy_statistics(aggregate_data_by_feature, match_column=COMBINED_MATCH_COLUMN):
+    """ Accuracy statistics for the dataset"""
+    result = pd.DataFrame()
+    MC = match_column
+    
+    result[PRECISSION_COLUMN] = aggregate_data_by_feature.apply(lambda x: precission(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
+    result[RECALL_COLUMN] = aggregate_data_by_feature.apply(lambda x: recall(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
+    result[F1_COLUMN] = aggregate_data_by_feature.apply(lambda x: f1(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
+    result[MISS_RATE_COLUMN] = aggregate_data_by_feature.apply(lambda x: miss_rate(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
+    result[FALSE_OMISSIONs_COLUMN] = aggregate_data_by_feature.apply(lambda x: false_omissions(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
+    
+    return result
+
+def accuracy_statistics_exact(aggregate_data_by_feature):
+    """  """
+    return __accuracy_statistics(aggregate_data_by_feature, match_column=EXACT_MATCH_COLUMN )  
+
+def accuracy_statistics_close(aggregate_data_by_feature):
+    """  """
+    return __accuracy_statistics(aggregate_data_by_feature, match_column=CLOSE_MATCH_COLUMNN )  
+
+def accuracy_statistics_combined(aggregate_data_by_feature):
+    """  """
+    return __accuracy_statistics(aggregate_data_by_feature, match_column=COMBINED_MATCH_COLUMN )  
+
+
+# 
+# setting the parameters for all plots
+# 
+HATCH_DENSITY = 2
+HATCH_PATTERNS = [ 
+                  "+"*HATCH_DENSITY , 
+                  "x"*HATCH_DENSITY, 
+                  "."*HATCH_DENSITY, 
+                  "O"*HATCH_DENSITY, 
+                  "o"*HATCH_DENSITY, 
+                  "*"*HATCH_DENSITY, 
+                  "/"*HATCH_DENSITY , 
+                  "\\"*HATCH_DENSITY , 
+                  "|" *HATCH_DENSITY, 
+                  "-"*HATCH_DENSITY , 
+                    ]                 
+
+
+cmap = plt.get_cmap("tab20c")
+COLORS = cmap(np.arange(3)*4)
+
+def bar_plot(df, xlabel="", ylabel="", filename = None):
+    """
+        Draw a bar plot from a dataframe using hashes and colours
+    """
+    f = plt.figure()
+    ax = f.add_subplot(111)
+    df.plot(ax=ax, kind='bar', legend=False)
+
+    bars = ax.patches
+    hatches = list(itertools.chain( *[[h] * len(df) for h in HATCH_PATTERNS] ))
+    
+    for bar, hatch in zip(bars, hatches):
+        bar.set_hatch(hatch)
+
+    ax.legend(loc='center right', bbox_to_anchor=(1, 1), ncol=2)
+    
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+
+    if filename:
+        f.savefig(FIGURE_PATH+filename+".pdf", bbox_inches='tight')
+
+    # a bit of cleanup
+    plt.show()
+    plt.clf()
+
+
+def ltx(df, filename="test", caption="My caption here", to_display=False):
+    """ Dysplay a dataframe as latex tabular"""
+    table = '\\begin{table}[!ht]\n\\centering\n'
+    table += df.to_latex(na_rep=0, float_format='{:,.2f}'.format, bold_rows=False, )
+    table +='\\caption{'+caption+'}\n'
+    table +='\\label{tab:'+filename+'}\n'
+    table +='\\end{table}'
+
+    if to_display:
+        dsp(df)
+
+    if filename:
+        with open(FIGURE_PATH+filename+".tex",'w') as tf:
+            tf.write(table)
+            
+
+PLOT_STATS_XLABEL = "Feature"
+PLOT_STATS_YLABEL_SCORE = "Score"
+PLOT_STATS_YLABEL_OCCURENCES = "Occurences"
+PLOT_STATS_F1_columns = [PRECISSION_COLUMN,RECALL_COLUMN,F1_COLUMN]
+PLOT_STATS_Err_columns = [MISS_RATE_COLUMN, FALSE_OMISSIONs_COLUMN]
+PLOT_STATS_DATA_columns_exact_also = [EXACT_MATCH_COLUMN,COMBINED_MATCH_COLUMN,MANUAL_COLUMN, PARSE_COLUMN]
+PLOT_STATS_DATA_columns = [COMBINED_MATCH_COLUMN,MANUAL_COLUMN, PARSE_COLUMN]
+
+
+def make_stats2(aggregate_data_by_feature, eval_name, filters=[], make_exact_also=False):
+    """
+    """
+    stats = aggregate_data_by_feature.copy()
+    if filters:
+        stats = stats[stats.index.isin(filters)]
+    
+    stats_exact_match    = accuracy_statistics_exact(stats)
+    stats_combined_match = accuracy_statistics_combined(stats)
+      
+    stats.sort_values(by=COMBINED_MATCH_COLUMN, inplace=True, ascending=False)
+    stats_exact_match.sort_values(by=F1_COLUMN, inplace=True, ascending=False)
+    stats_combined_match.sort_values(by=F1_COLUMN, inplace=True, ascending=False)
+
+    # original data
+    if make_exact_also:
+        bar_plot(stats[PLOT_STATS_DATA_columns_exact_also],PLOT_STATS_XLABEL, PLOT_STATS_YLABEL_OCCURENCES, eval_name+"-data")
+        ltx(stats[PLOT_STATS_DATA_columns_exact_also],eval_name+"-data")
+    else:
+        bar_plot(stats[PLOT_STATS_DATA_columns],PLOT_STATS_XLABEL, PLOT_STATS_YLABEL_OCCURENCES, eval_name+"-data")
+        ltx(stats[PLOT_STATS_DATA_columns],eval_name+"-data")
+
+    # precission
+    bar_plot(stats_combined_match[PLOT_STATS_F1_columns],PLOT_STATS_XLABEL, PLOT_STATS_YLABEL_SCORE, eval_name+"-combined-"+"F1")
+    ltx(stats_combined_match[PLOT_STATS_F1_columns],eval_name+"-combined-"+"F1")
+    
+    if make_exact_also:
+        bar_plot(stats_exact_match[PLOT_STATS_F1_columns],PLOT_STATS_XLABEL, PLOT_STATS_YLABEL_SCORE, eval_name+"-exact-"+"F1")
+        ltx(stats_exact_match[PLOT_STATS_F1_columns],eval_name+"-exact-"+"F1")
+        
+    # errors
+    bar_plot(stats_combined_match[PLOT_STATS_Err_columns],PLOT_STATS_XLABEL, PLOT_STATS_YLABEL_SCORE, eval_name+"-combined-"+"errors")
+    ltx(stats_combined_match[PLOT_STATS_Err_columns],eval_name+"-combined-"+"errors")
+
+    if make_exact_also:
+        bar_plot(stats_exact_match[PLOT_STATS_Err_columns],PLOT_STATS_XLABEL, PLOT_STATS_YLABEL_SCORE, eval_name+"-exact-"+"errors")
+        ltx(stats_exact_match[PLOT_STATS_Err_columns],eval_name+"-exact-"+"errors")
+    
+
+PREFIX_RELATIVE = "(%) "
+SUFFIX_RELATIVE = ""
+    
+def __relative_statistics(aggregate_data_by_feature, mc = COMBINED_MATCH_COLUMN):
+    """
+    """
+    result = pd.DataFrame()
+    
+    result[str(PREFIX_RELATIVE+mc+SUFFIX_RELATIVE)] = aggregate_data_by_feature.apply(lambda x: x[mc] / len(aggregate_data_by_feature) * 100 ,axis=1)
+    result[str(PREFIX_RELATIVE+MANUAL_COLUMN+SUFFIX_RELATIVE)] = aggregate_data_by_feature.apply(lambda x: (x[MANUAL_COLUMN]) / (x[mc] + x[MANUAL_COLUMN]) * 100  ,axis=1)
+    result[str(PREFIX_RELATIVE+PARSE_COLUMN+SUFFIX_RELATIVE)] = aggregate_data_by_feature.apply(lambda x: (x[PARSE_COLUMN]) / (x[mc] + x[PARSE_COLUMN]) * 100  ,axis=1)
+    
+    return result
+
+def relative_statistics_exact(aggregate_data_by_feature):
+    """    """
+    return __relative_statistics(aggregate_data_by_feature, mc = EXACT_MATCH_COLUMN)
+
+def relative_statistics_combined(aggregate_data_by_feature):
+    """    """
+    return __relative_statistics(aggregate_data_by_feature, mc = COMBINED_MATCH_COLUMN)
+
+def rename_features(matches, manual_nm, parse_nm, feature_replacement):
+   
+    mat, man, par = matches.copy(), manual_nm.copy(), parse_nm.copy()
+    
+    mat["Man Features"].replace(feature_replacement, inplace=True)
+    man["Features"].replace(feature_replacement, inplace=True)
+    par["Features"].replace(feature_replacement, inplace=True)
+    
+    return mat, man, par
+
+def drop_features(matches, manual_nm, parse_nm, drops):
+   
+    mat, man, par = matches.copy(), manual_nm.copy(), parse_nm.copy()
+    
+    mat = mat[~mat["Man Features"].isin(drops)]
+    man = man[~man["Features"].isin(drops)]
+    par = par[~par["Features"].isin(drops)]
+    
+    return mat, man, par
+
+# 
+# plaing with distances here 
+# 
+def to_segmentation_metric_form(s1, s2, return_window_size=False):
+    """
+        turn the two segments into sequences of zero and one, 
+        where zero represent segment content while one represents a break
+    """
+    
+    # half the average size of the segments
+    buffer_window = int(((s1[1]-s1[0])+(s2[1]-s2[0]))/4)
+    
+    def __generate_mock_segment(start, end , offset, buffer_window):
+        return '0'*(buffer_window + start - offset) + '1' + '0'* (end-offset) + '1' + '0'*(buffer_window)
+    
+    offset = min(s1+s2)
+    ss1 = __generate_mock_segment(start=s1[0], end=s1[1], offset=offset, buffer_window=buffer_window)
+    ss2 = __generate_mock_segment(start=s2[0], end=s2[1], offset=offset, buffer_window=buffer_window)
+    
+    if len(ss1)>len(ss2): ss2+='0'*(len(ss1)-len(ss2))
+    if len(ss1)<len(ss2): ss1+='0'*(len(ss2)-len(ss1))
+    
+    if return_window_size:
+        return ss1, ss2, buffer_window
+    
+    return ss1, ss2
+
+DISTANCE_GEOMETRIC = "Geometric"
+DISTANCE_EDIT = "Levinstein"
+DISTANCE_HAMMING = "Generalised Hamming"
+DISTANCE_Windowdiff = "WindowDiff"
+DISTANCE_PK = "Pk"
+
+MAN_START = 'Man Interval Start'
+MAN_END = 'Man Interval End'
+AUTO_START = 'Auto Interval Start'
+AUTO_END = 'Auto Interval End'
+MAN_TEXT = 'Man Text'
+AUTO_TEXT = "Auto Text"
+
+DISTANCES = [DISTANCE_EDIT, DISTANCE_GEOMETRIC, DISTANCE_HAMMING, DISTANCE_PK, DISTANCE_Windowdiff]
+
+def make_distances(matches):
+    """
+        returns the matches with additional distance columns
+    """
+    df = matches.copy()
+        
+    df[DISTANCE_GEOMETRIC] = df.apply(lambda x: sd.euclidean( [x[MAN_START],x[MAN_END]], [x[AUTO_START],x[AUTO_END]] ), axis=1 )
+    df[DISTANCE_EDIT] = df.apply(lambda x: distance.edit_distance( x[MAN_TEXT], x[AUTO_TEXT] ), axis=1 )
+    df[DISTANCE_HAMMING] = df.apply(lambda x: segmentation.ghd( *to_segmentation_metric_form([x[MAN_START],x[MAN_END]], [x[AUTO_START],x[AUTO_END]] ) ), axis=1 )
+    # windowfill k will be 1/2 average segment length
+    df[DISTANCE_Windowdiff] = df.apply(lambda x: segmentation.windowdiff(
+        *to_segmentation_metric_form([x[MAN_START],x[MAN_END]], [x[AUTO_START],x[AUTO_END]], return_window_size=True))  , axis=1 )
+    df[DISTANCE_PK] = df.apply(lambda x: segmentation.pk( *to_segmentation_metric_form([x[MAN_START],x[MAN_END]], [x[AUTO_START],x[AUTO_END]] ) ), axis=1 )
+    return df
