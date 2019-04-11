@@ -342,16 +342,18 @@
 
 \subsection{Segment divergence: general findings}
 
-    The segments don't perfectly align, as described in previous sections, due to minor differences in annotation approach, text normalisation and trimming before parsing (that was not performed before the manual annotation), errors in the annotations (missing or including characters). The misalignment is measured using the geometric distance 
-    %$d= \sqrt{\varDelta start ^{2}+\varDelta end ^{2}} $ 
-    on segments matched by Algorithm \ref{alg:matching}. The presented statistics are calculated on a number of over 12500 segment pairs whose mean distance is 4.84 with a standard deviation of 14.51. The distance is distributed between a minimum 0 and maximum 219 characters. The mean values is close to the minimum point and standard deviation is fairly large which indicates that most of the data points are situated between 0 and slightly over the mean continued by a very long tail of rare and distant data points. This intuition can be seen in the histogram depicted in Figure \ref{fig:segment-distance-histogram-full} below. This dataset resembles the Pareto distribution where 74\% are not shifted at all or 83\% of the segments are slightly shifted up to 5 characters.
+    % copied
+    
+    % The segments don't perfectly align, as described in previous sections, due to minor differences in annotation approach, text normalisation and trimming before parsing (that was not performed before the manual annotation), errors in the annotations (missing or including characters). The misalignment is measured using the geometric distance 
+    % %$d= \sqrt{\varDelta start ^{2}+\varDelta end ^{2}} $ 
+    % on segments matched by Algorithm \ref{alg:matching}. The presented statistics are calculated on a number of over 12500 segment pairs whose mean distance is 4.84 with a standard deviation of 14.51. The distance is distributed between a minimum 0 and maximum 219 characters. The mean values is close to the minimum point and standard deviation is fairly large which indicates that most of the data points are situated between 0 and slightly over the mean continued by a very long tail of rare and distant data points. This intuition can be seen in the histogram depicted in Figure \ref{fig:segment-distance-histogram-full} below. This dataset resembles the Pareto distribution where 74\% are not shifted at all or 83\% of the segments are slightly shifted up to 5 characters.
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=.65\textwidth]{evaluation-results/figures/distance-distr-histogram-full}
-    \caption{Full histogram of the distance distribution of the matched segments (binning=300)}
-    \label{fig:segment-distance-histogram-full}
-\end{figure}
+% \begin{figure}[!ht]
+%     \centering
+%     \includegraphics[width=.65\textwidth]{evaluation-results/figures/distance-distr-histogram-full}
+%     \caption{Full histogram of the distance distribution of the matched segments (binning=300)}
+%     \label{fig:segment-distance-histogram-full}
+% \end{figure}
 
     Because of a very long tail, I reduce the further analysis to the distance span between 0 and 40. Figure \ref{fig:segment-distance-distribution} depicts the histogram of distances between matched segments (in 300 bins). It shows that most segments (89\%) are cumulated in first two bins with distance up to 2. The consequent three bins also contain a significant portion of segments with distance up to 5. The rest of the bins, representing a very long tail, span distances up to maximum 219 and containing a small amount of segments. 
 

@@ -350,6 +350,8 @@ state="active"/>
     
     This section presents the evaluation data on text segmentation. As we will see below, most of the parser segments coincide with the corpus segments, but not all of them. The differences, which were described in Section \ref{sec:differences}, are mainly due to minor differences in annotation approach, text normalisation and trimming before parsing (that was not performed before the manual annotation), errors in the annotations (missing or including extra characters). 
     
+    The segmentation accuracy is presented in 
+    
     The segmentation differences are measured, as introduced in Section \ref{sec:evaluation-methodology}, using a few distance metrics: (a) geometric (Euclidean) distance, (b) edit (Levenshtein), (c) generalised hamming distance (GHD) \citep{Bookstein2002}, $P_k$ \citep[198--200]{beeferman1999statistical}, \textit{WindowDiff} \citep[10]{pevzner2002critique}. 
     The data are calculated on a number of over 12500 segment pairs out of which 62\% are exact matches and 38\% are close matches. 
     
@@ -407,14 +409,29 @@ state="active"/>
 
     \begin{figure}[!ht]
     \centering
-    \includegraphics[width=.65\textwidth]{evaluation-results/figures/distance-distribution-histogram-Geometric-25.pdf}
+    \includegraphics[width=.85\textwidth]{evaluation-results/figures/distance-distribution-histogram-Geometric-25.pdf}
     \caption{Matched segments geometric distance distribution histogram (binning=25)}
-    \label{fig:segment-distance-histogram-full}
+    \label{fig:distance-distribution-histogram-Geometric-25}
     \end{figure}
 
-    In the current evaluation, the geometric distance between corpus and parser segments spans from a minimum 0 to maximum 219 characters. The mean distance is 4.84 with a standard deviation of 14.51 i.e. $\pm$300\%. The mean value is closer to the minimum point, the relative standard deviation indicated extreme deviations of 300\%, skew indicates a strong asymmetry to the right, and the kurtosis of 42.54 (almost 15 times more than the interpretation threshold mentioned above) indicate that most of the data, about 80\%, gravitate towards the left, between 0 and slightly over the mean, while the rest of the data point continue into a very long tail to the right. This is depicted in Figure \ref{}
+    In the current evaluation, the geometric distance between corpus and parser segments spans from a minimum 0 to maximum 219 characters. The mean distance is 4.84 with a standard deviation of 14.51 i.e. $\pm$300\%. The mean value is close to the minimum point, the relative standard deviation indicated extreme deviations of 300\%, the skew over 1 indicates a strong asymmetry to the right, and the kurtosis of 42.54 (almost 15 times more than the interpretation threshold mentioned above) indicate that most of the data, about 80\%, gravitate towards the left, between 0 and slightly over the mean, while the rest of the data point continue into a very long tail to the right. This is depicted in Figure \ref{fig:distance-distribution-histogram-Geometric-25}. 
     
-
+    As appears in Figure \ref{fig:distance-distribution-histogram-Geometric-25}, the data follow a power law distribution \citep{newman2005power}. Here 62\% are not shifted at all and 83\% of the segments are slightly shifted up to 5 characters. There rest (27\%) of the segments are shifted by more than 5 characters. These ratios approximate Patetto's 80-20 distribution law but may as well fit Zipf's law \citep{newman2005power}. In future work, properties of these data should further be analysed, including the distribution fitting, that is selection of the theoretical distribution that fits best to a dataset.
+    
+    \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.85\textwidth]{evaluation-results/figures/distance-distribution-histogram-WindowDiff-25.pdf}
+    \caption{Matched segments WindowDiff distance distribution histogram (binning=25)}
+    \label{fig:distance-distribution-histogram-WindowDiff-25}
+    \end{figure}
+    
+    Next distance that I discuss is WindowDiff distance between corpus and parser segments. One crucial difference to geometric distance is the normalisation to [0,1] interval. In the current evaluation, the WindowDiff distance distribution, depicted in Figure \ref{fig:distance-distribution-histogram-WindowDiff-25}, spans from a minimum 0 to maximum score of 0.86. The mean distance is 0.14 with a standard deviation of 0.23 i.e. $\pm$164\%. The mean value is close to the minimum point, the relative standard deviation indicated extreme deviations of 164\%, the skew over 1 indicates a strong asymmetry to the right, and the kurtosis of 0.49 indicate the distribution does not have many outliers in the tail. 
+    
+    One positive aspect of this distance distribution is that the tail is not so long due to its normalised structure. This permits aggregation of the outliers we have observed in geometric distance distribution into a compact spectrum. This way, kurtosis, which, in this case, is smaller than 3, no longer indicates an abnormally long tail of outliers. 
+    
+    The histogram in Figure \ref{fig:distance-distribution-histogram-WindowDiff-25} resembles a power law distribution and more analysis work needs to be done in the future, including the distribution fitting and relation to the causes of partial matches in the first place. 
+    
+    This section presented the analysis of the segmentation distances. Next I move on to present the unit analisys 
 
 \subsection{Unit class evaluation}
 \label{sec:unit-class-evaluation}
