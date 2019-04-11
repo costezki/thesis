@@ -1,7 +1,7 @@
 
 from __future__ import division
 import matplotlib.pyplot as plt
-import pandas as pd
+# import pandas as pd
 import ipdb # for debuging
 import pandas as pd
 import numpy as np
@@ -10,7 +10,8 @@ import os
 import itertools
 from IPython.display import HTML, Markdown, display
 import re
-from nltk.metrics import *
+from nltk.metrics import segmentation as segmentation
+from nltk.metrics import distance as distance
 import math 
 import scipy.spatial.distance as sd
 
@@ -795,3 +796,13 @@ def make_distances(matches):
         *to_segmentation_metric_form([x[MAN_START],x[MAN_END]], [x[AUTO_START],x[AUTO_END]], return_window_size=True))  , axis=1 )
     df[DISTANCE_PK] = df.apply(lambda x: segmentation.pk( *to_segmentation_metric_form([x[MAN_START],x[MAN_END]], [x[AUTO_START],x[AUTO_END]] ) ), axis=1 )
     return df
+
+def filter_batch(matches, manual_nm, parse_nm):
+    """
+        Filter the manual and parse non matched sets to contain 
+        only features that have been also matched.
+    """
+    filter = matches["Man Features"].unique()
+    manual_nm_filtered = manual_nm.loc[manual_nm["Features"].isin(filter) ] 
+    parse_nm_filtered = parse_nm.loc[parse_nm["Features"].isin(filter) ] 
+    return matches, manual_nm_filtered, parse_nm_filtered
