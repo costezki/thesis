@@ -14,22 +14,23 @@
     % %The dataset contains four texts comprising all together 988 clauses and 8605 words. 
     % The second dataset (OE1) is the result of PhD work of Anke Schultz \citep{schulz2015me} covering the Cardiff Transitivity analysis. It comprises 31 files spanning over 1503 clauses and 20864 words. In addition, she provided another similar smaller corpus (BTC) of 157 clauses that is also included into this evaluation. 
 
-    \begin{table}[!ht]
-        \centering
-        \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|c|c|c|c|c|c|}
-            \hline
-            \textbf{Corpus} & \textbf{Elements} & \textbf{System Network} & \textbf{\begin{tabular}[c]{@{}c@{}}\# characters\\ (thousands)\end{tabular}} & \textbf{\# clauses} & \textbf{Annotator(s)}         \\ \hline
-            OCD            & Syntax            & MOOD              & 16.2                                                                         & 147                 &  Ela Oren \& Eugeniu Costetchi \\ \hline
-            OE1             & Semantics         & TRANSITIVITY      & 51.8                                                                         & 1503                & Anke Schultz                  \\ \hline
-            BTC             & Semantics         & TRANSITIVITY      & 5.6                                                                          & 157                 & Anke Schultz                  \\ \hline
-        \end{tabular}
-        }
-        \caption{Evaluation corpus summary}
-        \label{tab:corpus-sumary}
-    \end{table}
+    % copied
+    % \begin{table}[!ht]
+    %     \centering
+    %     \resizebox{\textwidth}{!}{%
+    %     \begin{tabular}{|c|c|c|c|c|c|}
+    %         \hline
+    %         \textbf{Corpus} & \textbf{Elements} & \textbf{System Network} & \textbf{\begin{tabular}[c]{@{}c@{}}\# characters\\ (thousands)\end{tabular}} & \textbf{\# clauses} & \textbf{Annotator(s)}         \\ \hline
+    %         OCD            & Syntax            & MOOD              & 16.2                                                                         & 147                 &  Ela Oren \& Eugeniu Costetchi \\ \hline
+    %         OE1             & Semantics         & TRANSITIVITY      & 51.8                                                                         & 1503                & Anke Schultz                  \\ \hline
+    %         BTC             & Semantics         & TRANSITIVITY      & 5.6                                                                          & 157                 & Anke Schultz                  \\ \hline
+    %     \end{tabular}
+    %     }
+    %     \caption{Evaluation corpus summary}
+    %     \label{tab:corpus-sumary}
+    % \end{table}
 
-    The OE1 and BTC datasets were not developed for the purpose of evaluating constituency in the current parser but are compatible and can be adapted to evaluate the boundaries of constituent segments. They are primitively used for evaluation of the constituent's semantic function and some TRANSITIVITY features (to the degree provided in the corpus). To enable each of these evaluations the annotation data and parser output needed to be uniformly represented in order to be in alignment with the parser output. To achieve this, feature names were harmonised with the ones from PTDB following the same adjustments as described in Section \ref{sec:claning-ptdb}. In Section \ref{sec:results},  the empirical findings of the current evaluation are described.
+    % The OE1 and BTC datasets were not developed for the purpose of evaluating constituency in the current parser but are compatible and can be adapted to evaluate the boundaries of constituent segments. They are primitively used for evaluation of the constituent's semantic function and some TRANSITIVITY features (to the degree provided in the corpus). To enable each of these evaluations the annotation data and parser output needed to be uniformly represented in order to be in alignment with the parser output. To achieve this, feature names were harmonised with the ones from PTDB following the same adjustments as described in Section \ref{sec:claning-ptdb}. In Section \ref{sec:results},  the empirical findings of the current evaluation are described.
 
 \section{Segment definition}
 % copied

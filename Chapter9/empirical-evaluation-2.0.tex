@@ -48,18 +48,37 @@
 \section{Evaluation corpus}
 \label{sec:corpus}
 % (provenance, annotations, size metrics, quality assessment; data examples ?)
+    
+    \begin{table}[!ht]
+        \centering
+        \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|c|}
+            \hline
+            \textbf{Corpus name} & \textbf{Meta-function} & \textbf{\begin{tabular}[c]{@{}c@{}}\# characters\\ (thousands)\end{tabular}} & \textbf{\# clauses} & \textbf{Annotator(s)}         \\ \hline
+            OCD            & Mood            & 16.2                                                                         & 147                 &  Ela Oren \& Eugeniu Costetchi \\ \hline
+            OE1         & Transitivity         & 51.8                                                                         & 1503                & Anke Schultz                  \\ \hline
+            % BTC             & Transitivity         & 5.6                                                                          & 157                 & Anke Schultz                  \\ \hline
+        \end{tabular}
+        }
+        \caption{Evaluation corpus summary}
+        \label{tab:corpus-sumary}
+    \end{table}
+    
+    % TODO: introduce corpora
+    
+    % The OE1 corpus was not developed for the purpose of evaluating constituency in the current parser. Nevertheless the provided segmentation however can be used to evaluate the boundaries of constituent segments. This corpus are primitively used for evaluation of the constituent's semantic function and some TRANSITIVITY features (to the degree provided in the corpus). To enable each of these evaluations the annotation data and parser output needed to be uniformly represented in order to be in alignment with the parser output. To achieve this, feature names were harmonised with the ones from PTDB following the same adjustments as described in Section \ref{sec:claning-ptdb}. In Section \ref{sec:results},  the empirical findings of the current evaluation are described.
 
-\subsection{Bremen Translation Corpus (BTC)}
+\subsection{OE1 corpus}
 
-    The Bremen Translation Corpus (BTC) was created at the University of Bremen by Kerstin Fischer, Anatol Stefanowitsch and Anke Schulz. It consists of comparable and parallel texts. The comparable part consists of a series of newsgroup texts of about 10,000 words of English text and another 10,000 words of German, text taken from the same register. The parallel part, called EDNA, is much larger comprising about 100,000 words of parallel English-German text. Anke uses in her thesis 10,000 words of parallel text and about the same of comparable text \citep[31]{schulz2015me}. In this evaluation only the English part is considered that comprises 31 files spanning over 1503 clauses and 20864 words. In addition, Anke provided another similar smaller corpus of 157 clauses that is also included into this evaluation. 
+    The Bremen Translation Corpus (BTC) was created at the University of Bremen by Kerstin Fischer, Anatol Stefanowitsch and Anke Schulz. It consists of comparable and parallel texts. The comparable part consists of a series of newsgroup texts of about 10,000 words of English text and another 10,000 words of German, text taken from the same register. The parallel part, called EDNA, is much larger comprising about 100,000 words of parallel English-German text. Anke uses in her thesis 10,000 words of parallel text and about the same of comparable text \citep[31]{schulz2015me}. In this evaluation only the English part is considered that comprises 31 files spanning over 1503 clauses and 20864 words. In addition, Anke provided a set of similarly annotations of the ``Little Red Riding Hood'' fairy tale comprising 157 clauses that is also included into this evaluation as part of OE1. 
     
     The corpus annotations cover Cardiff TRANSITIVITY, THEME and MODIFICATION system networks. The grammatical details and the annotation methodology are covered in detail in \citet{schulz2015me}.
 
-\subsection{Obsessive Compulsive Disorder corpus}
+\subsection{OCD corpus}
 
-     The first dataset (OCD) was created by Ela Oren and myself and is focused on syntactic constituency structure and clause MOOD features. The texts represent blog articles of people diagnosed with Obsessive Compulsive Disorder (OCD) who self-report on the challenge of overcoming OCD. The dataset contains four texts comprising all together 988 clauses and 8605 words. 
+     The first corpus (OCD) was created by Ela Oren and myself and is focused on syntactic constituency structure and clause MOOD features. The texts represent blog articles of people diagnosed with Obsessive Compulsive Disorder (OCD) who self-report on the challenge of overcoming OCD. The corpus contains four texts comprising all together 988 clauses and 8605 words. 
 
-\subsection{Differences between corpus and parser output}
+\subsection{Differences between the corpus annotation and parser output}
 \label{sec:differences}
 % todo rename section
 
@@ -258,11 +277,11 @@ state="active"/>
     
     In the Section \ref{sec:differences} I presented some differences between the parser output and the corpus annotations. Most of these differences are comparable especially that they manifest as slight variations in the segment spans, i.e. shifted start and/or end segment index, while the segment labels are exactly the same. 
     
-    Accounting for differences in the segment spans is a well known task in the mainstream computational linguistics called \textit{text segmentation evaluation}. A variety of segmentation evaluation metrics have been proposed among which the most known are $P_k$ \citep[198--200]{beeferman1999statistical}, \textit{WindowDiff} \citep[10]{pevzner2002critique}, \textit{Segmentation Similarity} \citep[154-156]{fournier2012segmentation} and \textit{Boundary Edit Distance} \citep{fournier2013evaluating}. Each of these metrics have been shown to have some flaws: both $P_k and WindowssDiff$ under-penalise errors \citep{lamprier2007evaluation} and have a bias towards favouring segmentation with few or tightly-clustered boundaries \citep{niekrasz2010unbiased} while segmentation similarity tends to ovewrly optimistic values due to its normalisation \citep{fournier2013evaluating}. 
+    Accounting for differences in the segment spans is a well known task in the mainstream computational linguistics called \textit{text segmentation evaluation}. A variety of segmentation evaluation metrics have been proposed among which the most known are $P_k$ \citep[198--200]{beeferman1999statistical}, \textit{WindowDiff} \citep[10]{pevzner2002critique}, \textit{Segmentation Similarity} \citep[154-156]{fournier2012segmentation} and \textit{Boundary Edit Distance} \citep{fournier2013evaluating}. Each of these metrics have been shown to have some flaws: both $P_k and WindowssDiff$ under-penalise errors \citep{lamprier2007evaluation} and have a bias towards favouring segmentation with few or tightly-clustered boundaries \citep{niekrasz2010unbiased} while segmentation similarity tends to overly optimistic values due to its normalisation \citep{fournier2013evaluating}. 
     
-    All the above metrics take into account that the content of the segment text may vary and so they use text edit distance to account for that. In the case of the current evaluation the segments are defined on the same text and thus only the segment indexes are relevant. 
+    % All the above metrics take into account that the content of the segment text may vary and so they use text edit distance to account for that. In the case of the current evaluation the segments are defined on the same text and thus only the segment indexes are relevant. 
     
-    Another simple metric to measure to measure the difference between the segments taking into account only their start and end indexes is that of \textit{geometric distance}. For two segments $S(start_S,end_S)$ and $T(start_T,end_T)$ the geometric distance is defined in Equation \ref{eq:distance}. We can replace the difference between start and end indexes with $\varDelta_{start}$ and $\varDelta_{end}$ notation and obtain the reduced form provided in Equation \ref{eq:distance-simpliefied}
+    A simple metric for the difference between the segments taking into account their start and end indexes is that of \textit{geometric distance}. For two segments $S(start_S,end_S)$ and $T(start_T,end_T)$ the geometric distance is defined in Equation \ref{eq:distance}. We can replace the difference between start and end indexes with $\varDelta_{start}$ and $\varDelta_{end}$ notation and obtain the reduced form provided in Equation \ref{eq:distance-simpliefied}
     
     \begin{equation} \label{eq:distance}
     d= \sqrt{(start_S - start_T)^{2}+(end_S-end_T)^{2}}
@@ -273,7 +292,7 @@ state="active"/>
     \end{equation}
 
     %todo: explain which one I have selected
-    Now that the metric for comparing segments have been introduced I move on to present a second more sophisticated evaluation method, which, in addition to accounting for the exact matches, accounts for close matches between segments.  
+    Now that the metric for comparing segments have been introduced I move on to present the second evaluation method, which, in addition to accounting for the exact matches, accounts for close matches between segments. 
     
     Taking into account the partially matching segments brings us to the second evaluation method. In this case, the task is that of aligning two sets of labelled segments, which is almost the same as the well know problem in computer science called \textit{stable marriage problem} \citep{Gusfield1989}. I adopt onward this frame to explain the evaluation method.
     
@@ -321,9 +340,86 @@ state="active"/>
         \label{alg:matching}
     \end{algorithm}
 
-    Using the second method of evaluation, presented above, we can count for every distinct label (a) how many segments match perfectly, i.e. the distance is zero, (b) how many segments partially match, i.e. the distance is greater than zero, (c) how many corpus segments are not matched and (d) how many parser segments are left unmatched. This way we get a four count numbers per label for all labels used in the corpus annotation and parser output combined that we can use to compute parser accuracy. Further more the partial matches can be analysed to estimate the degree of the deviation and derive insights what can be done about it. Having said that I further proceed with presenting the evaluation data. 
+    Using the second method of evaluation, presented above, we can count for every distinct label (a) how many segments match perfectly, i.e. the distance is zero, (b) how many segments partially match, i.e. the distance is greater than zero, (c) how many corpus segments are unmatched and (d) how many parser segments are unmatched. This way we get a four count numbers per label for all labels used in the corpus annotation and parser output combined that we can use to compute parser accuracy. Further more the partial matches can be analysed to estimate the degree of the deviation and derive insights what can be done about it. Having said that I further proceed with presenting the evaluation data. 
 
-\section{Evaluation data}
+\section{Syntactic alignment evaluation}
+    In this section I present ...
+    
+\subsection{Segmentation evaluation}
+\label{sec:segmentation-evaluation}
+    
+    This section presents the evaluation data on text segmentation. As we will see below, most of the parser segments coincide with the corpus segments, but not all of them. The differences, which were described in Section \ref{sec:differences}, are mainly due to minor differences in annotation approach, text normalisation and trimming before parsing (that was not performed before the manual annotation), errors in the annotations (missing or including extra characters). 
+    
+    The segmentation differences are measured, as introduced in Section \ref{sec:evaluation-methodology}, using a few distance metrics: (a) geometric (Euclidean) distance, (b) edit (Levenshtein), (c) generalised hamming distance (GHD) \citep{Bookstein2002}, $P_k$ \citep[198--200]{beeferman1999statistical}, \textit{WindowDiff} \citep[10]{pevzner2002critique}. 
+    The data are calculated on a number of over 12500 segment pairs out of which 62\% are exact matches and 38\% are close matches. 
+    
+    Before providing the interpretations to the data I first show that two of these distances are strongly correlated to each other and thus can be omitted from the discussion. Table \ref{tab:correlation-matrix-distances} represents correlation matrix for the distance types. 
+    
+    \begin{table}[!ht]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabulary}{\textwidth}{lccCcc}
+    \toprule
+    {} &  Levinstein &  Geometric &  Generalised Hamming &   Pk &  WindowDiff \\
+    \midrule
+    Levinstein          &        1.00 &       0.99 &                 0.54 & 0.46 &        0.55 \\
+    Geometric           &        0.99 &       1.00 &                 0.53 & 0.45 &        0.54 \\
+    Generalised Hamming &        0.54 &       0.53 &                 1.00 & 0.85 &        0.92 \\
+    Pk                  &        0.46 &       0.45 &                 0.85 & 1.00 &        0.92 \\
+    WindowDiff          &        0.55 &       0.54 &                 0.92 & 0.92 &        1.00 \\
+    \bottomrule
+    \end{tabulary}
+    }
+    \caption{Pearson correlation coefficients for pairs of distance measure types}
+    \label{tab:correlation-matrix-distances}
+    \end{table}
+    
+    I employ Pearson correlation coefficient which measures the direction and strength of a linear correlation between two variables, in this case pairs of distance types. The standard interpretation for this coefficient is as follows. A coefficient value between 0.1 and 0.3 indicated a weak linear relationship between the variables. If it is between 0.3 and 0.5 the relation is moderate while between 0.5 and 0.7 it indicates a strong; and between 0.7 and 1 it represents a very strong correlation of variables. 
+    
+    Using this rule of thumb we can say that there Levinstein and Geometric distances are almost the same. At the same both are only moderately related to the other three distance types. From this point on I will exclude the Levinstein distance and employ the geometric distance only as representative for both. 
+    
+    The generalised Hamming distance, $P_k$ and WindowDiff bear a strong correlation to each other. $P_k$ and WindowDiff are strongly correlated to each other and so I decide to exclude $P_k$ and generalised hamming distance from further discussions and use WindowDiff as the representative of the three distances. This choice is based on the fact that WindowDiff was proposed to overcome weaknesses of $P_k$ \citep[10]{pevzner2002critique}.
+    
+    I have shown that Geometric distance and WindowDiff distance are the representative distance measures in his evaluation that only mildly correlate to each other. Next I provide interpretations the descriptive data provided in Table \ref{tab:distance-descriptions} for each of them.
+    
+    \begin{table}[!ht]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabulary}{\textwidth}{LccccRcc}
+    \toprule
+    {} &  Min &    Max &  Mean &   Std &  Relative std &  Skew &  Kurtosis \\
+    \midrule
+    Levinstein          & 0.00 & 219.00 &  5.21 & 15.81 &          3.03 &  5.55 &     42.22 \\
+    \textbf{Geometric}           & 0.00 & 219.00 &  4.84 & 14.51 &          3.00 &  5.53 &     42.54 \\
+    Generalised Hamming & 0.00 &   8.00 &  1.75 &  2.81 &          1.61 &  1.38 &      0.34 \\
+    Pk                  & 0.00 &   1.00 &  0.17 &  0.28 &          1.67 &  1.48 &      0.81 \\
+    \textbf{WindowDiff}          & 0.00 &   0.86 &  0.14 &  0.23 &          1.64 &  1.39 &      0.49 \\
+    \bottomrule
+    \end{tabulary}
+    }
+    \caption{Descriptive statistics for each series of distance measurements between corpus and parser segments}
+    \label{tab:distance-descriptions}
+    \end{table}
 
+    Table \ref{tab:distance-descriptions} presents the descriptive statistics for every distance type. The \textit{std} column means \textit{standard deviation} ($\sigma$) while the \textit{relative std} represents \textit{relative standard deviation} (or coefficient of variation) which is the ration between the standard deviation and mean value ($\mu$), i.e. ($\sigma/\mu$). It measures how concentrated the data are around the mean, the more concentrated, the smaller the standard deviation. It is considered that a relative standard deviation between 0 and 0.5 indicates tightly clustered data around the mean; if it is situated between 0.5 and 1 then it means the data are more spread out; if, however the value is over one then it means the data are very scattered. 
+    
+    Besides the mean and (relative) standard deviation, \textit{Skew} and \textit{Kurtosis} are other statistical indicators describing a distribution. Skewness measures the asymmetry of the bell of the normal distribution where skewness greater than 1 indicates that the data are highly skewed to the right, i.e that there are rare data points situated in a long tail. Kurtosis measures the outliers present in the distribution. Kurtosis smaller than the threshold of 3 indicates that the data has light tails or lack of outliers, whereas a value greater than 3 indicates heavy tail and requires additional investigation as it may indicate among others wrong data. 
+
+    \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.65\textwidth]{evaluation-results/figures/distance-distribution-histogram-Geometric-25.pdf}
+    \caption{Matched segments geometric distance distribution histogram (binning=25)}
+    \label{fig:segment-distance-histogram-full}
+    \end{figure}
+
+    In the current evaluation, the geometric distance between corpus and parser segments spans from a minimum 0 to maximum 219 characters. The mean distance is 4.84 with a standard deviation of 14.51 i.e. $\pm$300\%. The mean value is closer to the minimum point, the relative standard deviation indicated extreme deviations of 300\%, skew indicates a strong asymmetry to the right, and the kurtosis of 42.54 (almost 15 times more than the interpretation threshold mentioned above) indicate that most of the data, about 80\%, gravitate towards the left, between 0 and slightly over the mean, while the rest of the data point continue into a very long tail to the right. This is depicted in Figure \ref{}
+    
+
+
+\subsection{Unit class evaluation}
+\label{sec:unit-class-evaluation}
+
+\subsection{Unit element evaluation}
+\label{sec:unit-element-evaluation}
 
 
