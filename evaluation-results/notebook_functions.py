@@ -34,8 +34,8 @@ OCD1_mood_file_list = glob.glob(evaluation_repo+"ocd1/*.txt_mood.csv")
 OCD2_const_file_list = glob.glob(evaluation_repo+"ocd2/*.txt_const.csv")
 OCD2_mood_file_list = glob.glob(evaluation_repo+"ocd2/*.txt_mood.csv")
 
-OCD_const_file_list = OCD1_const_file_list + OCD2_const_file_list
-OCD_mood_file_list = OCD1_mood_file_list + OCD2_mood_file_list
+OCD_const_file_list = OCD2_const_file_list
+OCD_mood_file_list = OCD2_mood_file_list
 
 FIGURE_PATH = evaluation_repo + "figures/"
 
@@ -237,7 +237,7 @@ def calculate_prf1(matches,manual_nm,parse_nm):
     stats["Parse"] = stats["Parse"].astype(np.int64, errors='ignore').fillna(0)
     stats["Manual"] = stats["Manual"].astype(np.int64, errors='ignore').fillna(0)
 
-    stats["precission"] = stats.apply(lambda x: precission(x["Match"], x["Manual"], x["Parse"]) ,axis=1)
+    stats["precision"] = stats.apply(lambda x: precission(x["Match"], x["Manual"], x["Parse"]) ,axis=1)
     stats["recall"] = stats.apply(lambda x: recall(x["Match"], x["Manual"], x["Parse"]) ,axis=1)
     stats["f1"] = stats.apply(lambda x: f1(x["Match"], x["Manual"], x["Parse"]) ,axis=1)
     
@@ -287,7 +287,7 @@ def make_stats(matches, manual_nm, parse_nm, filters=None,drops=None):
     plt.xlabel("Features")
     plt.ylabel("Occurences")
     #     Relative stats
-    d = stats[["f1","precission","recall"]]
+    d = stats[["f1","precision","recall"]]
     d.plot.bar()
 
     plt.xlabel("Features")
@@ -509,11 +509,39 @@ def find_near_same_segments(matches, manual_nm, parse_nm):
 # functions added in evaluation 2.0
 ####################################################
 
+
+
 EXACT_MATCH_COLUMN = "Matched (exactly only)"
 CLOSE_MATCH_COLUMN = "Matched (closely only)"
 MANUAL_COLUMN = "Corpus non-matched"
 PARSE_COLUMN = "Parser non-matched"
 COMBINED_MATCH_COLUMN = "Matched"
+
+PREFIX_RELATIVE = "(%) "
+SUFFIX_RELATIVE = ""
+MANUAL_COLUMN_RELATIVE = PREFIX_RELATIVE+MANUAL_COLUMN+SUFFIX_RELATIVE
+PARSE_COLUMN_RELATIVE = PREFIX_RELATIVE+PARSE_COLUMN+SUFFIX_RELATIVE
+EXACT_MATCH_COLUMN_RELATIVE = PREFIX_RELATIVE+EXACT_MATCH_COLUMN+SUFFIX_RELATIVE
+
+    
+def __relative_statistics(aggregate_data, mc = COMBINED_MATCH_COLUMN):
+    """
+    """
+    result = pd.DataFrame()
+    
+    # result[str(PREFIX_RELATIVE+mc+SUFFIX_RELATIVE)] = aggregate_data.apply(lambda x: x[mc] / len(aggregate_data) * 100 ,axis=1)
+    result[str(MANUAL_COLUMN_RELATIVE)] = aggregate_data.apply(lambda x: (x[MANUAL_COLUMN]) / (x[mc] + x[MANUAL_COLUMN]) * 100  ,axis=1)
+    result[str(PARSE_COLUMN_RELATIVE)] = aggregate_data.apply(lambda x: (x[PARSE_COLUMN]) / (x[mc] + x[PARSE_COLUMN]) * 100  ,axis=1)
+    
+    return result
+
+def relative_statistics_exact(aggregate_data):
+    """    """
+    return __relative_statistics(aggregate_data, mc = EXACT_MATCH_COLUMN)
+
+def relative_statistics_combined(aggregate_data):
+    """    """
+    return __relative_statistics(aggregate_data, mc = COMBINED_MATCH_COLUMN)
 
 
 def aggregate_data_by_feature(matches, manual_nm, parse_nm):
@@ -551,39 +579,41 @@ def aggregate_data_by_feature(matches, manual_nm, parse_nm):
     parse_count.rename(PARSE_COLUMN,axis=0,inplace=True)
 
     stats = pd.concat([exact_match_count, close_match_count, combined_match_count, manual_count, parse_count],axis=1, sort=False)
+    stats = stats.join(relative_statistics_combined(stats))
+    stats[EXACT_MATCH_COLUMN_RELATIVE] = stats.apply(lambda x: (x[EXACT_MATCH_COLUMN]) / (x[COMBINED_MATCH_COLUMN]) * 100  ,axis=1)
     return stats.fillna(0)
 
-PRECISSION_COLUMN = "Precission"
+PRECISSION_COLUMN = "Precision"
 RECALL_COLUMN = "Recall"
 F1_COLUMN = "F1"
 MISS_RATE_COLUMN = "Miss rate"
 FALSE_OMISSIONs_COLUMN = "False omission rate"
 
 
-def __accuracy_statistics(aggregate_data_by_feature, match_column=COMBINED_MATCH_COLUMN):
+def __accuracy_statistics(aggregate_data, match_column=COMBINED_MATCH_COLUMN):
     """ Accuracy statistics for the dataset"""
     result = pd.DataFrame()
     MC = match_column
     
-    result[PRECISSION_COLUMN] = aggregate_data_by_feature.apply(lambda x: precission(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
-    result[RECALL_COLUMN] = aggregate_data_by_feature.apply(lambda x: recall(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
-    result[F1_COLUMN] = aggregate_data_by_feature.apply(lambda x: f1(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
-    result[MISS_RATE_COLUMN] = aggregate_data_by_feature.apply(lambda x: miss_rate(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
-    result[FALSE_OMISSIONs_COLUMN] = aggregate_data_by_feature.apply(lambda x: false_omissions(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
+    result[PRECISSION_COLUMN] = aggregate_data.apply(lambda x: precission(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
+    result[RECALL_COLUMN] = aggregate_data.apply(lambda x: recall(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
+    result[F1_COLUMN] = aggregate_data.apply(lambda x: f1(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
+    result[MISS_RATE_COLUMN] = aggregate_data.apply(lambda x: miss_rate(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
+    result[FALSE_OMISSIONs_COLUMN] = aggregate_data.apply(lambda x: false_omissions(x[MC], x[MANUAL_COLUMN], x[PARSE_COLUMN]) ,axis=1)
     
     return result
 
-def accuracy_statistics_exact(aggregate_data_by_feature):
+def accuracy_statistics_exact(aggregate_data):
     """  """
-    return __accuracy_statistics(aggregate_data_by_feature, match_column=EXACT_MATCH_COLUMN )  
+    return __accuracy_statistics(aggregate_data, match_column=EXACT_MATCH_COLUMN )  
 
-def accuracy_statistics_close(aggregate_data_by_feature):
+def accuracy_statistics_close(aggregate_data):
     """  """
-    return __accuracy_statistics(aggregate_data_by_feature, match_column=CLOSE_MATCH_COLUMNN )  
+    return __accuracy_statistics(aggregate_data, match_column=CLOSE_MATCH_COLUMN )  
 
-def accuracy_statistics_combined(aggregate_data_by_feature):
+def accuracy_statistics_combined(aggregate_data):
     """  """
-    return __accuracy_statistics(aggregate_data_by_feature, match_column=COMBINED_MATCH_COLUMN )  
+    return __accuracy_statistics(aggregate_data, match_column=COMBINED_MATCH_COLUMN )  
 
 
 # 
@@ -650,19 +680,25 @@ def ltx(df, filename="test", caption="My caption here", to_display=False):
             tf.write(table)
             
 
+    
+
 PLOT_STATS_XLABEL = "Feature"
 PLOT_STATS_YLABEL_SCORE = "Score"
 PLOT_STATS_YLABEL_OCCURENCES = "Occurences"
+PLOT_STATS_YLABEL_Percentage = "Percent"
 PLOT_STATS_F1_columns = [PRECISSION_COLUMN,RECALL_COLUMN,F1_COLUMN]
 PLOT_STATS_Err_columns = [MISS_RATE_COLUMN, FALSE_OMISSIONs_COLUMN]
-PLOT_STATS_DATA_columns_exact_also = [EXACT_MATCH_COLUMN,COMBINED_MATCH_COLUMN,MANUAL_COLUMN, PARSE_COLUMN]
-PLOT_STATS_DATA_columns = [COMBINED_MATCH_COLUMN,MANUAL_COLUMN, PARSE_COLUMN]
+PLOT_STATS_DATA_columns_exact_also = [EXACT_MATCH_COLUMN,COMBINED_MATCH_COLUMN,
+                                      MANUAL_COLUMN, PARSE_COLUMN, 
+                                      ]
+PLOT_STATS_DATA_columns = [COMBINED_MATCH_COLUMN,MANUAL_COLUMN, PARSE_COLUMN, 
+                           ]
 
 
-def make_stats2(aggregate_data_by_feature, eval_name, filters=[], make_exact_also=False):
+def make_stats2(aggregate_data, eval_name, filters=[], make_exact_also=False, make_relative=True):
     """
     """
-    stats = aggregate_data_by_feature.copy()
+    stats = aggregate_data.copy()
     if filters:
         stats = stats[stats.index.isin(filters)]
     
@@ -696,29 +732,10 @@ def make_stats2(aggregate_data_by_feature, eval_name, filters=[], make_exact_als
     if make_exact_also:
         bar_plot(stats_exact_match[PLOT_STATS_Err_columns],PLOT_STATS_XLABEL, PLOT_STATS_YLABEL_SCORE, eval_name+"-exact-"+"errors")
         ltx(stats_exact_match[PLOT_STATS_Err_columns],eval_name+"-exact-"+"errors")
-    
 
-PREFIX_RELATIVE = "(%) "
-SUFFIX_RELATIVE = ""
-    
-def __relative_statistics(aggregate_data_by_feature, mc = COMBINED_MATCH_COLUMN):
-    """
-    """
-    result = pd.DataFrame()
-    
-    result[str(PREFIX_RELATIVE+mc+SUFFIX_RELATIVE)] = aggregate_data_by_feature.apply(lambda x: x[mc] / len(aggregate_data_by_feature) * 100 ,axis=1)
-    result[str(PREFIX_RELATIVE+MANUAL_COLUMN+SUFFIX_RELATIVE)] = aggregate_data_by_feature.apply(lambda x: (x[MANUAL_COLUMN]) / (x[mc] + x[MANUAL_COLUMN]) * 100  ,axis=1)
-    result[str(PREFIX_RELATIVE+PARSE_COLUMN+SUFFIX_RELATIVE)] = aggregate_data_by_feature.apply(lambda x: (x[PARSE_COLUMN]) / (x[mc] + x[PARSE_COLUMN]) * 100  ,axis=1)
-    
-    return result
-
-def relative_statistics_exact(aggregate_data_by_feature):
-    """    """
-    return __relative_statistics(aggregate_data_by_feature, mc = EXACT_MATCH_COLUMN)
-
-def relative_statistics_combined(aggregate_data_by_feature):
-    """    """
-    return __relative_statistics(aggregate_data_by_feature, mc = COMBINED_MATCH_COLUMN)
+    # make relative stats
+    if make_relative:
+        ltx(stats[ [COMBINED_MATCH_COLUMN,EXACT_MATCH_COLUMN_RELATIVE, MANUAL_COLUMN_RELATIVE, PARSE_COLUMN_RELATIVE] ],eval_name+"-relative")    
 
 def rename_features(matches, manual_nm, parse_nm, feature_replacement):
    
@@ -806,3 +823,10 @@ def filter_batch(matches, manual_nm, parse_nm):
     manual_nm_filtered = manual_nm.loc[manual_nm["Features"].isin(filter) ] 
     parse_nm_filtered = parse_nm.loc[parse_nm["Features"].isin(filter) ] 
     return matches, manual_nm_filtered, parse_nm_filtered
+
+def corpus_segment_count(batch_name, title=""):
+    matches, manual_nm, parse_nm = read_batch(batch_name)
+    display(HTML("<h3>"+title+" batch summary:</h3>"))
+    display(HTML("<p>"+str(len(matches))+" [ "+str(len(manual_nm))+" ( "+str( round(len(manual_nm)/len(matches)*100) )+"% ) / "+
+        str(len(parse_nm))+ " ( "+str( round(len(parse_nm)/len(matches)*100))+"% ) "+
+        " ] <i># Matches [Corpus non-matches/Parser non-matches]</i>"))
