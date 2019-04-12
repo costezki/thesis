@@ -467,9 +467,19 @@ state="active"/>
 
 \subsection{Unit class evaluation}
 \label{sec:unit-class-evaluation}
-    In this and the next section I present the parser syntactic accuracy. The syntactic accuracy aims to measure how well the main unit types and the clause main elements have been detected by the parser compared to the corpus. The evaluation is performed on the OCD corpus. This evaluation is restricted to the clause and four group types: nominal, prepositional, adverbial and adjectival. No clause complexes, group complexes or word types are included. 
+    In this and the next section I present the parser syntactic accuracy. The syntactic accuracy aims to measure how well the main unit types and the clause main elements have been detected by the parser compared to the corpus. The evaluation is performed on the OCD corpus. This evaluation is restricted to the clause and four group types: nominal, prepositional, adverbial and adjectival. No clause complexes, group complexes or word types are included. The evaluation data are depicted in Figure \ref{fig:unit-types-data}. The names of the unit classes are provided on the x axis at the bottom of the graph while on the y axis the absolute number of occurrences is provided. 
     
-    To make the data easier to read and interpret I present the evaluation data relative to the number of matched segments. The absolute values of the evaluation statistics are available in the appendices. The evaluation data in this and the following sections will be presented in tables with the same structure. Using Table \ref{tab:unit-types-relative} as example, the column meaning is as follows. The first column contains the name of the unit class, element or feature. The column ``Matched'' contains the absolute number of matched segments with a specific label. The three other columns represent the number of segments relative to the ``Matched'' ones. So the column ``(\%) Matched (exactly only)'' means that out of all the matched segments that many represent exact matches and the rest to 100\% are partially matched segments. The column ``(\%) Corpus non-matched'' represent the number of segments relative to the total number of segments of particular type in the corpus, which remain unmatched. The column signifies the fraction of segments that remain unmatched, while the rest up to 100\% have, each, a corresponded in the parser output. The column ``(\%) Parser non-matched'' represents the number of segments (relative to the total number of segments of particular type in the parser output) in the parser output that do not have a correspondent in the corpus.
+    The meaning of exact and close match has been explained in Section \ref{sec:segmentation-evaluation} and from now on the label ``Matched'' will mean the segments that are either exactly or closely matched all together, while the label with a remark ``(exact only)'' means that it applies to only the portion of the exactly matched segments. 
+    
+    
+    \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.85\textwidth]{evaluation-results/figures/unit-types-data.pdf}
+    \caption{Bar chart of matched and non-matched segments for the main unit classes}
+    \label{fig:unit-types-data}
+    \end{figure}
+    
+    To make the data easier to read and interpret I present the evaluation data in a table form using relative values to the number of matched segments. The absolute values of the evaluation statistics are contained in the graphical form and also available in the appendices in the table form. The relative evaluation data in this and the following sections will be presented in tables with the same structure. Using Table \ref{tab:unit-types-relative} as example, the column meaning is as follows. The first column contains the name of the unit class, element or feature. The column ``Matched'' contains the absolute number of matched segments with a specific label. The three other columns represent the number of segments relative to the ``Matched'' ones. So the column ``(\%) Matched (exactly only)'' means that out of all the matched segments that many represent exact matches and the rest to 100\% are partially matched segments. The column ``(\%) Corpus non-matched'' represent the number of segments relative to the total number of segments of particular type in the corpus, which remain unmatched. The column signifies the fraction of segments that remain unmatched, while the rest up to 100\% have, each, a corresponded in the parser output. The column ``(\%) Parser non-matched'' represents the number of segments (relative to the total number of segments of particular type in the parser output) in the parser output that do not have a correspondent in the corpus.
     
     \begin{table}[!ht]
     \centering
@@ -484,15 +494,35 @@ state="active"/>
     adjectival-group    &    33.00 &                       24.24 &                   49.23 &                   44.07 \\
     \bottomrule
     \end{tabulary}
-    \caption{The evaluation statistics relative to the number of matched segments for the main unit types}
+    \caption{The evaluation statistics relative to the number of matched segments for the main unit classes}
     \label{tab:unit-types-relative}
     \end{table}
     
-    The evaluation data from Table \ref{tab:unit-types-relative} indicate that most of the nominal and adverbial groups are identified with exact same borders as in the corpus while clause borders exhibit the most disagreement. The proportion of unmatched segments varies between 9\% for clauses and nominal groups and over 40\% for adjectival and adverbial groups. The absolute evaluation statistics values for can be viewed in Figure \ref{unit-types-data}.
+    The evaluation data from Table \ref{tab:unit-types-relative} indicate that most (over 70\%) of the nominal and adverbial groups are identified with exact same borders as in the corpus while clause borders exhibit the most disagreement reflected by their low score of exact matches, only 13.84\%. The proportion of unmatched unit class segments in both the corpus and parser output varies between 9\% for clauses and nominal groups, and over 40\% for adjectival and adverbial groups. These proportions, however, are better interpreted when they are embedded into precision and recall score, which are provided in Table \ref{tab:unit-types-combined-F1}. 
     
-    These proportions, however, are best viewed from the point of view of precision and recall provided in Table \ref{} 
+    \begin{table}[!ht]
+    \centering
+    \begin{tabular}{lccc}
+    \toprule
+    {} &  Precision &  Recall &   F1 \\
+    \midrule
+    nominal-group       &       0.91 &    0.87 & 0.89 \\
+    clause              &       0.87 &    0.90 & 0.89 \\
+    prepositional-group &       0.73 &    0.75 & 0.74 \\
+    adverbial-group     &       0.60 &    0.70 & 0.65 \\
+    adjectival-group    &       0.56 &    0.51 & 0.53 \\
+    \bottomrule
+    \end{tabular}
+    \caption{Parser accuracy statistics for for the main unit classes}
+    \label{tab:unit-types-combined-F1}
+    \end{table}
+    
+    Table \ref{tab:unit-types-combined-F1} shows that clause and normal group units are identified with almost 0.9 $F_1$ measure, which is an encouraging result, while the adjectival and adverbial groups score 0.53 and 0.65 indicates that there is some space for improvement. 
+    Further investigation is needed to discover the reason for the lower scores as there seem to be no obvious cause other than corpus and/or parser errors. Also, as visible in Figure \ref{fig:unit-types-data}, there is also a contrast in the number of segments between the first two unit types and the last three with a ratio of one to four or more. The low number of exemplars in this evaluation contributes probably to the lower accuracy.
     
 \subsection{Unit element evaluation}
 \label{sec:unit-element-evaluation}
+
+    
 
 
