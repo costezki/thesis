@@ -469,15 +469,14 @@
 
     % copied
     % The syntactic accuracy aims to measure how well the main unit types and the clause main elements have been detected by the parser compared to the corpus. The evaluation is performed on the OCD corpus. This evaluation is restricted to the clause and four group types: nominal, prepositional, adverbial and adjectival. No clause complexes, group complexes or word types are included. 
-    
-    The evaluation results are presented in Table \ref{tab:constit-unit-types} where we can see that clauses and nominal groups have an F_1 score of about 90\%. Prepositional, adverbial and adjectival group scores decrease to 55\% and requires investigation of the errors in the parsing and matching algorithms. There is also a contrast in the number of segments, visible in the bar chart from Figure \ref{fig:constit-unit-types}, between the first two element types and the last three with a ratio of one to four or more.
+    % The evaluation results are presented in Table \ref{tab:constit-unit-types} where we can see that clauses and nominal groups have an F_1 score of about 90\%. Prepositional, adverbial and adjectival group scores decrease to 55\% and requires investigation of the errors in the parsing and matching algorithms. There is also a contrast in the number of segments, visible in the bar chart from Figure \ref{fig:constit-unit-types}, between the first two element types and the last three with a ratio of one to four or more.
 
-    \begin{figure}[!ht]
-        \centering
-        \includegraphics[width=.65\textwidth]{evaluation-results/figures/accuracy-syntactic-group-types}
-        \caption{Bar chart of matched and non-matched (manual and parse) segments of the main constituency unit types}
-        \label{fig:constit-unit-types}
-    \end{figure}
+    % \begin{figure}[!ht]
+    %     \centering
+    %     \includegraphics[width=.65\textwidth]{evaluation-results/figures/accuracy-syntactic-group-types}
+    %     \caption{Bar chart of matched and non-matched (manual and parse) segments of the main constituency unit types}
+    %     \label{fig:constit-unit-types}
+    % \end{figure}
 
     Table \ref{tab:constit-unit-elements} presents the evaluation result for the main clause elements. Some of them, such as Auxiliary verbs, Main verb extension, Negation particle, and others have been omitted in the corpus and are thus missing in the present evaluation. For the Main verb and Subject elements the F_1 measure raises to 90\%. For the complements and finite the F_1 score is 67\% and 63\%. Surprisingly, the Complements have a small number of corpus unmatched segments and a high number of parser unmatched segments. This is explained by a flaw in the annotation methodology because the clausal complements were often annotated directly as new clause and omitting to draw the same segment with complement element. This required the corpus revision and correction. Adjuncts however have a higher number of unmatched segments on both sides and this may be due to bugs in the parser.
 
