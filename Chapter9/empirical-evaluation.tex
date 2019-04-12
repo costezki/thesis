@@ -446,7 +446,10 @@
 
 \subsection{Syntactic evaluation: constituency elements}
 \label{sec:syntactic-constituents}
-    The evaluation data in this and the following sections will be presented in tables with the same structure. Using Table \ref{tab:constit-unit-types} as example I explain next what the columns mean. The first column will contain the name of the unit type, element or feature. The next three columns \textit{Match}, \textit{Manual mn} and \textit{Parse mn} represent the number of segments that are considered identical between the corpus and parser, the number of unmatched corpus (manually created) segments and the number of unmatched parser (automatically generated) segments. The next three columns \textit{Precision}, \textit{Recall} and \textit{F_1} represent standard accuracy metrics indicating the fraction of relevant instances among the retrieved instances, the fraction of relevant instances that have been retrieved over the total amount of relevant instances and the harmonic mean of the previous two. In addition, the column \textit{\%Total matched} represents the percentage of the current item (row) in the table while the \textit{\% Manual nm} and \textit{\%Parse nm} represent the number of remaining unmatched segments of the current item (row) that represents a translation of the Manual and Parse mn columns into relative terms. 
+    % copied
+    % The evaluation data in this and the following sections will be presented in tables with the same structure. Using Table \ref{tab:constit-unit-types} as example I explain next what the columns mean. The first column will contain the name of the unit type, element or feature. The next three columns \textit{Match}, \textit{Manual mn} and \textit{Parse mn} represent the number of segments that are considered identical between the corpus and parser, the number of unmatched corpus (manually created) segments and the number of unmatched parser (automatically generated) segments. 
+    
+    The next three columns \textit{Precision}, \textit{Recall} and \textit{F_1} represent standard accuracy metrics indicating the fraction of relevant instances among the retrieved instances, the fraction of relevant instances that have been retrieved over the total amount of relevant instances and the harmonic mean of the previous two. In addition, the column \textit{\%Total matched} represents the percentage of the current item (row) in the table while the \textit{\% Manual nm} and \textit{\%Parse nm} represent the number of remaining unmatched segments of the current item (row) that represents a translation of the Manual and Parse mn columns into relative terms. 
 
 \begin{table}[!ht]
     \resizebox{\textwidth}{!}{%
@@ -464,7 +467,10 @@
     \label{tab:constit-unit-types}
 \end{table}
 
-    The syntactic accuracy aims to measure how well the main unit types and the clause main elements have been detected by the parser compared to the corpus. The evaluation is performed on the OCD corpus. This evaluation is restricted to the clause and four group types: nominal, prepositional, adverbial and adjectival. No clause complexes, group complexes or word types are included. The evaluation results are presented in Table \ref{tab:constit-unit-types} where we can see that clauses and nominal groups have an F_1 score of about 90\%. Prepositional, adverbial and adjectival group scores decrease to 55\% and requires investigation of the errors in the parsing and matching algorithms. There is also a contrast in the number of segments, visible in the bar chart from Figure \ref{fig:constit-unit-types}, between the first two element types and the last three with a ratio of one to four or more.
+    % copied
+    % The syntactic accuracy aims to measure how well the main unit types and the clause main elements have been detected by the parser compared to the corpus. The evaluation is performed on the OCD corpus. This evaluation is restricted to the clause and four group types: nominal, prepositional, adverbial and adjectival. No clause complexes, group complexes or word types are included. 
+    
+    The evaluation results are presented in Table \ref{tab:constit-unit-types} where we can see that clauses and nominal groups have an F_1 score of about 90\%. Prepositional, adverbial and adjectival group scores decrease to 55\% and requires investigation of the errors in the parsing and matching algorithms. There is also a contrast in the number of segments, visible in the bar chart from Figure \ref{fig:constit-unit-types}, between the first two element types and the last three with a ratio of one to four or more.
 
     \begin{figure}[!ht]
         \centering
