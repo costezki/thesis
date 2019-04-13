@@ -14,6 +14,7 @@ from nltk.metrics import segmentation as segmentation
 from nltk.metrics import distance as distance
 import math 
 import scipy.spatial.distance as sd
+from scipy import stats
 
 # evaluation_repo="/home/lps/Dropbox/Publications/PhD Thesis 2015/thesis/evaluation-results/"
 # evaluation_repo=os.path.dirname(os.path.abspath(__file__))
@@ -736,6 +737,8 @@ def make_stats2(aggregate_data, eval_name, filters=[], make_exact_also=False, ma
     # make relative stats
     if make_relative:
         ltx(stats[ [COMBINED_MATCH_COLUMN,EXACT_MATCH_COLUMN_RELATIVE, MANUAL_COLUMN_RELATIVE, PARSE_COLUMN_RELATIVE] ],eval_name+"-relative")    
+
+    return stats_exact_match, stats_combined_match        
 
 def rename_features(matches, manual_nm, parse_nm, feature_replacement):
    
