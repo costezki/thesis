@@ -478,209 +478,218 @@
     %     \label{fig:constit-unit-types}
     % \end{figure}
 
-    Table \ref{tab:constit-unit-elements} presents the evaluation result for the main clause elements. Some of them, such as Auxiliary verbs, Main verb extension, Negation particle, and others have been omitted in the corpus and are thus missing in the present evaluation. For the Main verb and Subject elements the F_1 measure raises to 90\%. For the complements and finite the F_1 score is 67\% and 63\%. Surprisingly, the Complements have a small number of corpus unmatched segments and a high number of parser unmatched segments. This is explained by a flaw in the annotation methodology because the clausal complements were often annotated directly as new clause and omitting to draw the same segment with complement element. This required the corpus revision and correction. Adjuncts however have a higher number of unmatched segments on both sides and this may be due to bugs in the parser.
+    % copied
+    
+    % Table \ref{tab:constit-unit-elements} presents the evaluation result for the main clause elements. Some of them, such as Auxiliary verbs, Main verb extension, Negation particle, and others have been omitted in the corpus and are thus missing in the present evaluation. For the Main verb and Subject elements the F_1 measure raises to 90\%. For the complements and finite the F_1 score is 67\% and 63\%. Surprisingly, the Complements have a small number of corpus unmatched segments and a high number of parser unmatched segments. This is can be explained by a flaw in the annotation methodology as follows. The clausal complements often were annotated as a new clauses omitting to draw the same segment and marking it to be a complement in the clause above. This required the corpus revision and correction. Adjuncts however have a higher number of unmatched segments on both sides and this may be due to bugs in the parser and other mistake or omissions in the corpus.
 
-    \begin{table}[!ht]
-        \resizebox{\textwidth}{!}{%
-            \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-                \hline
-                \textbf{Element} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
-                Main verb & 613 & 60  & 79  & 0.89 & 0.91 & 0.90 & 30.79 & 8.92  & 11.42 \\ \hline
-                Subject    & 466 & 22  & 86  & 0.84 & 0.95 & 0.90 & 23.41 & 4.51  & 15.58 \\ \hline
-                Complement & 406 & 43  & 350 & 0.54 & 0.90 & 0.67 & 20.39 & 9.58  & 46.30 \\ \hline
-                Adjunct    & 321 & 159 & 224 & 0.59 & 0.67 & 0.63 & 16.12 & 33.12 & 41.10 \\ \hline
-                Finite     & 185 & 3   & 392 & 0.32 & 0.98 & 0.48 & 9.29  & 1.60  & 67.94 \\ \hline
-            \end{tabular}
-        }
-        \caption{The evaluation statistics for the clause main elements}
-        \label{tab:constit-unit-elements}
-    \end{table}
+    % \begin{table}[!ht]
+    %     \resizebox{\textwidth}{!}{%
+    %         \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+    %             \hline
+    %             \textbf{Element} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+    %             Main verb & 613 & 60  & 79  & 0.89 & 0.91 & 0.90 & 30.79 & 8.92  & 11.42 \\ \hline
+    %             Subject    & 466 & 22  & 86  & 0.84 & 0.95 & 0.90 & 23.41 & 4.51  & 15.58 \\ \hline
+    %             Complement & 406 & 43  & 350 & 0.54 & 0.90 & 0.67 & 20.39 & 9.58  & 46.30 \\ \hline
+    %             Adjunct    & 321 & 159 & 224 & 0.59 & 0.67 & 0.63 & 16.12 & 33.12 & 41.10 \\ \hline
+    %             Finite     & 185 & 3   & 392 & 0.32 & 0.98 & 0.48 & 9.29  & 1.60  & 67.94 \\ \hline
+    %         \end{tabular}
+    %     }
+    %     \caption{The evaluation statistics for the clause main elements}
+    %     \label{tab:constit-unit-elements}
+    % \end{table}
 
-    \begin{figure}[!ht]
-        \centering
-        \includegraphics[width=.65\textwidth]{evaluation-results/figures/accuracy-syntactic-clause-elements}
-        \caption{Bar chart of matched and non-matched (manual and parse) segments of the clause main elements}
-        \label{fig:constit-unit-elements}
-    \end{figure}
+    % \begin{figure}[!ht]
+    %     \centering
+    %     \includegraphics[width=.65\textwidth]{evaluation-results/figures/accuracy-syntactic-clause-elements}
+    %     \caption{Bar chart of matched and non-matched (manual and parse) segments of the clause main elements}
+    %     \label{fig:constit-unit-elements}
+    % \end{figure}
 
 \subsection{Syntactic evaluation: MOOD features}
 \label{sec:syntactic-features}
-    In this section I present the evaluation of the MOOD system network selections. The corpus contains selections from a part of the system network that is depicted in Figure \ref{fig:mood-ocd-simplified}. The full system network is provided in Figure \ref{fig:clause-mood}. Employing the entire system network in the annotations was difficult because as the delicacy increases the time spent for the annotation process increases. 
+    
+    % copied 
+    
+    % In this section I present the evaluation of the MOOD system network selections. The corpus contains selections from a part of the system network that is depicted in Figure \ref{fig:mood-ocd-simplified}. The full system network is provided in Figure \ref{fig:clause-mood}. Employing the entire system network in the annotations was difficult because as the delicacy increases the time spent for the annotation process increases. 
 
-    \begin{figure}[!ht]
-        \centering
-        \includegraphics[width=.65\textwidth]{Figures/Evaluation/ocd1-mood-simplified.pdf}
-        \caption{The part of the MOOD system network that has been used in OCD corpus annotation}
-        \label{fig:mood-ocd-simplified}
-    \end{figure}
+    % \begin{figure}[!ht]
+    %     \centering
+    %     \includegraphics[width=.65\textwidth]{Figures/Evaluation/ocd1-mood-simplified.pdf}
+    %     \caption{The part of the MOOD system network that has been used in OCD corpus annotation}
+    %     \label{fig:mood-ocd-simplified}
+    % \end{figure}
 
-    \begin{table}[!ht]
-        \resizebox{\textwidth}{!}{%
-            \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-                \hline
-                \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
-                POLARITY-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
-                positive & 485 & 125 & 55 & 0.90 & 0.80 & 0.84 & 89.48 & 20.49 & 10.19 \\ \hline
-                negative & 57  & 10  & 70 & 0.45 & 0.85 & 0.59 & 10.52 & 14.93 & 55.12 \\ \hline
-                VOICE-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
-                active  & 553 & 102 & 68 & 0.89 & 0.84 & 0.87 & 98.05 & 15.57 & 10.95 \\ \hline
-                passive & 11  & 11  & 28 & 0.28 & 0.50 & 0.36 & 1.95  & 50.00 & 71.79 \\ \hline
-                FINITNESS &  &  &  &  &  &  &  &  &  \\ \hline
-                non-finite   & 99  & 19 & 38  & 0.72 & 0.84 & 0.78 & 15.84 & 16.10 & 27.74 \\ \hline
-                finite       & 526 & 33 & 554 & 0.49 & 0.94 & 0.64 & 84.16 & 5.90  & 51.30 \\ \hline
-                NON-FINITE-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
-                perfective   & 71  & 12 & 16  & 0.82 & 0.86 & 0.84 & 73.20 & 14.46 & 18.39 \\ \hline
-                imperfective & 26  & 9  & 24  & 0.52 & 0.74 & 0.61 & 26.80 & 25.71 & 48.00 \\ \hline
-                DEICTICITY &  &  &  &  &  &  &  &  &  \\ \hline            
-                temporal & 446 & 74 & 55 & 0.89 & 0.86 & 0.87 & 97.38 & 14.23 & 10.98 \\ \hline
-                modal    & 12  & 33 & 6  & 0.67 & 0.27 & 0.38 & 2.62  & 73.33 & 33.33 \\ \hline
-                MOOD-ASSESSMENT-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline            
-                temporality & 35 & 17 & 27 & 0.56 & 0.67 & 0.61 & 56.45 & 32.69 & 43.55 \\ \hline
-                modality    & 15 & 32 & 8  & 0.65 & 0.32 & 0.43 & 24.19 & 68.09 & 34.78 \\ \hline
-                intensity   & 12 & 14 & 43 & 0.22 & 0.46 & 0.30 & 19.35 & 53.85 & 78.18 \\ \hline
-                MOOD-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline                        
-                indicative    & 455 & 216 & 37 & 0.92 & 0.68 & 0.78 & 99.13 & 32.19 & 7.52  \\ \hline
-                imperative    & 4   & 1   & 31 & 0.11 & 0.80 & 0.20 & 0.87  & 20.00 & 88.57 \\ \hline
-                INDICATIVE-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline                        
-                declarative   & 355 & 260 & 27 & 0.93 & 0.58 & 0.71 & 88.31 & 42.28 & 7.07  \\ \hline
-                interrogative & 47  & 7   & 63 & 0.43 & 0.87 & 0.57 & 11.69 & 12.96 & 57.27 \\ \hline
-                INTERROGATIVE-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline   
-                 wh            & 40  & 6   & 57 & 0.41 & 0.87 & 0.56 & 88.89 & 13.04 & 58.76 \\ \hline
-                yes-no        & 5   & 3   & 8  & 0.38 & 0.62 & 0.48 & 11.11 & 37.50 & 61.54 \\ \hline                     
-                WH-SELECTION  &  &  &  &  &  &  &  &  &  \\ \hline                        
-                wh-subject    & 9   & 3   & 7  & 0.56 & 0.75 & 0.64 & 32.14 & 25.00 & 43.75 \\ \hline
-                wh-adjunct    & 11  & 15  & 3  & 0.79 & 0.42 & 0.55 & 39.29 & 57.69 & 21.43 \\ \hline
-                wh-complement & 8   & 0   & 62 & 0.11 & 1.00 & 0.21 & 28.57 & 0.00  & 88.57 \\ \hline
-            \end{tabular}
-        }
-        \caption{The evaluation statistics available for the MOOD system network}
-        \label{tab:features-mood}
-    \end{table}
+    % copied
+    % \begin{table}[!ht]
+    %     \resizebox{\textwidth}{!}{%
+    %         \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+    %             \hline
+    %             \textbf{Feature} & \textbf{Matched} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse \\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual \\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse \\ nm\end{tabular}} \\ \hline
+    %             POLARITY-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
+    %             positive & 485 & 125 & 55 & 0.90 & 0.80 & 0.84 & 89.48 & 20.49 & 10.19 \\ \hline
+    %             negative & 57  & 10  & 70 & 0.45 & 0.85 & 0.59 & 10.52 & 14.93 & 55.12 \\ \hline
+    %             VOICE-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
+    %             active  & 553 & 102 & 68 & 0.89 & 0.84 & 0.87 & 98.05 & 15.57 & 10.95 \\ \hline
+    %             passive & 11  & 11  & 28 & 0.28 & 0.50 & 0.36 & 1.95  & 50.00 & 71.79 \\ \hline
+    %             FINITNESS &  &  &  &  &  &  &  &  &  \\ \hline
+    %             non-finite   & 99  & 19 & 38  & 0.72 & 0.84 & 0.78 & 15.84 & 16.10 & 27.74 \\ \hline
+    %             finite       & 526 & 33 & 554 & 0.49 & 0.94 & 0.64 & 84.16 & 5.90  & 51.30 \\ \hline
+    %             NON-FINITE-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
+    %             perfective   & 71  & 12 & 16  & 0.82 & 0.86 & 0.84 & 73.20 & 14.46 & 18.39 \\ \hline
+    %             imperfective & 26  & 9  & 24  & 0.52 & 0.74 & 0.61 & 26.80 & 25.71 & 48.00 \\ \hline
+    %             DEICTICITY &  &  &  &  &  &  &  &  &  \\ \hline            
+    %             temporal & 446 & 74 & 55 & 0.89 & 0.86 & 0.87 & 97.38 & 14.23 & 10.98 \\ \hline
+    %             modal    & 12  & 33 & 6  & 0.67 & 0.27 & 0.38 & 2.62  & 73.33 & 33.33 \\ \hline
+    %             MOOD-ASSESSMENT-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline            
+    %             temporality & 35 & 17 & 27 & 0.56 & 0.67 & 0.61 & 56.45 & 32.69 & 43.55 \\ \hline
+    %             modality    & 15 & 32 & 8  & 0.65 & 0.32 & 0.43 & 24.19 & 68.09 & 34.78 \\ \hline
+    %             intensity   & 12 & 14 & 43 & 0.22 & 0.46 & 0.30 & 19.35 & 53.85 & 78.18 \\ \hline
+    %             MOOD-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline                        
+    %             indicative    & 455 & 216 & 37 & 0.92 & 0.68 & 0.78 & 99.13 & 32.19 & 7.52  \\ \hline
+    %             imperative    & 4   & 1   & 31 & 0.11 & 0.80 & 0.20 & 0.87  & 20.00 & 88.57 \\ \hline
+    %             INDICATIVE-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline                        
+    %             declarative   & 355 & 260 & 27 & 0.93 & 0.58 & 0.71 & 88.31 & 42.28 & 7.07  \\ \hline
+    %             interrogative & 47  & 7   & 63 & 0.43 & 0.87 & 0.57 & 11.69 & 12.96 & 57.27 \\ \hline
+    %             INTERROGATIVE-TYPE  &  &  &  &  &  &  &  &  &  \\ \hline   
+    %              wh            & 40  & 6   & 57 & 0.41 & 0.87 & 0.56 & 88.89 & 13.04 & 58.76 \\ \hline
+    %             yes-no        & 5   & 3   & 8  & 0.38 & 0.62 & 0.48 & 11.11 & 37.50 & 61.54 \\ \hline                     
+    %             WH-SELECTION  &  &  &  &  &  &  &  &  &  \\ \hline                        
+    %             wh-subject    & 9   & 3   & 7  & 0.56 & 0.75 & 0.64 & 32.14 & 25.00 & 43.75 \\ \hline
+    %             wh-adjunct    & 11  & 15  & 3  & 0.79 & 0.42 & 0.55 & 39.29 & 57.69 & 21.43 \\ \hline
+    %             wh-complement & 8   & 0   & 62 & 0.11 & 1.00 & 0.21 & 28.57 & 0.00  & 88.57 \\ \hline
+    %         \end{tabular}
+    %     }
+    %     \caption{The evaluation statistics available for the MOOD system network}
+    %     \label{tab:features-mood}
+    % \end{table}
 
-    Table \ref{tab:features-mood} summarises the evaluation results for the MOOD system network features grouped by system names (in capitals). The precision and recall values vary quite a lot from a minimum of 11\% up to a maximum of 93\% and the harmonic mean, the F_1 score, between 30\% up to 87\%  averaging to almost 60\%. The details can be read in Table \ref{tab:mood-accuracy}. The distribution of these values can be seen in Figures \ref{fig:mood-precission-recall} and \ref{fig:mood-precission-f1}. A noticeable feature is the presence of two peaks in the precision and recall distributions: one around 50\% and the other one around 90\%. They translate into a similar F_1 distribution with peaks at 60\% and 85\%.
+    % Table \ref{tab:features-mood} summarises the evaluation results for the MOOD system network features grouped by system names (in capitals). The precision and recall values vary quite a lot from a minimum of 11\% up to a maximum of 93\% and the harmonic mean, the F_1 score, between 30\% and 87\%  averaging to almost 60\%. The details can be read in Table \ref{tab:mood-accuracy}. The distribution of these values can be seen in Figures \ref{fig:mood-precission-recall} and \ref{fig:mood-precission-f1}. A noticeable feature is the presence of two peaks in the precision and recall distributions: one around 50\% and the other one around 90\%. They translate into a similar F_1 distribution with peaks at 60\% and 85\%.
 
-    \begin{table}[!ht]
-        \centering
-        \begin{tabular}{|c|c|c|c|}
-            \hline
-            \textbf{} & \textbf{precision} & \textbf{recall} & \textbf{F1} \\ \hline
-            feature count & 21.00 & 21.00 & 21.00 \\ \hline
-            mean & 0.57 & 0.73 & 0.59 \\ \hline
-            standard deviation & 0.27 & 0.18 & 0.21 \\ \hline
-            min value & 0.11 & 0.32 & 0.20 \\ \hline
-            25\% quantile & 0.41 & 0.62 & 0.48 \\ \hline
-            50\% quantile & 0.56 & 0.80 & 0.61 \\ \hline
-            75\% quantile & 0.82 & 0.86 & 0.78 \\ \hline
-            max value & 0.93 & 1.00 & 0.87 \\ \hline
-        \end{tabular}
-        \caption{Descriptive statistics of the precision, recall and F1 scores}
-        \label{tab:mood-accuracy}
-    \end{table}
+    % \begin{table}[!ht]
+    %     \centering
+    %     \begin{tabular}{|c|c|c|c|}
+    %         \hline
+    %         \textbf{} & \textbf{precision} & \textbf{recall} & \textbf{F1} \\ \hline
+    %         feature count & 21.00 & 21.00 & 21.00 \\ \hline
+    %         mean & 0.57 & 0.73 & 0.59 \\ \hline
+    %         standard deviation & 0.27 & 0.18 & 0.21 \\ \hline
+    %         min value & 0.11 & 0.32 & 0.20 \\ \hline
+    %         25\% quantile & 0.41 & 0.62 & 0.48 \\ \hline
+    %         50\% quantile & 0.56 & 0.80 & 0.61 \\ \hline
+    %         75\% quantile & 0.82 & 0.86 & 0.78 \\ \hline
+    %         max value & 0.93 & 1.00 & 0.87 \\ \hline
+    %     \end{tabular}
+    %     \caption{Descriptive statistics of the precision, recall and F1 scores}
+    %     \label{tab:mood-accuracy}
+    % \end{table}
 
-    \noindent
-    \begin{minipage}[t]{0.475\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{evaluation-results/figures/accuracy-syntactic-mood-precission-recall.png}
-        \captionof{figure}{The distribution of precision and recall for selected features from the MOOD system network}
-        \label{fig:mood-precission-recall}
-    \end{minipage}
-    \quad
-    \begin{minipage}[t]{0.475\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{evaluation-results/figures/accuracy-syntactic-mood-f1.png}
-        \captionof{figure}{The distribution of F1 score for selected features from the MOOD system network}
-        \label{fig:mood-precission-f1}
-    \end{minipage}
-    \vspace{1em}
+    % \noindent
+    % \begin{minipage}[t]{0.475\textwidth}
+    %     \centering
+    %     \includegraphics[width=\textwidth]{evaluation-results/figures/accuracy-syntactic-mood-precission-recall.png}
+    %     \captionof{figure}{The distribution of precision and recall for selected features from the MOOD system network}
+    %     \label{fig:mood-precission-recall}
+    % \end{minipage}
+    % \quad
+    % \begin{minipage}[t]{0.475\textwidth}
+    %     \centering
+    %     \includegraphics[width=\textwidth]{evaluation-results/figures/accuracy-syntactic-mood-f1.png}
+    %     \captionof{figure}{The distribution of F1 score for selected features from the MOOD system network}
+    %     \label{fig:mood-precission-f1}
+    % \end{minipage}
+    % \vspace{1em}
 
-    Within most systems, the F_1 scores exhibit high contrast from one feature to the other. What this means is discussed in the next two cases. For example in the POLARITY-TYPE system the positive polarity feature scores 84\% F_1 measure and negative one almost 60\%. As per Definition \ref{def:system}, the system features are mutually exclusive. The polarity of an English clause is positive by default unless a negation marker is found and this represents only 10\% of the clauses in  the corpus. This means that it should be sufficient for the parser to detect one feature with a reasonably high F_1 score then the converse feature should be detectable with the same degree of accuracy. Yet the current data invalidate this hypothesis. 
+    % Within most systems, the F_1 scores exhibit high contrast from one feature to the other. What this means is discussed in the next two cases. For example in the POLARITY-TYPE system the positive polarity feature scores 84\% F_1 measure and negative one almost 60\%. As per Definition \ref{def:system}, the system features are mutually exclusive. The polarity of an English clause is positive by default unless a negation marker is found and this represents only 10\% of the clauses in  the corpus. This means that it should be sufficient for the parser to detect one feature with a reasonably high F_1 score then the converse feature should be detectable with the same degree of accuracy. Yet the current data invalidate this hypothesis. 
 
-    In the case of the POLARITY-TYPE system, the phenomena may be explained as a consequence of low delicacy in the parsing algorithm. The current implementation determines polarity by checking for the presence of the negation verbal marker only. Nonetheless a more delicate polarity testing will have to take into consideration polarity indicators from the subject, complement and adjuncts of various types that may have been taken into consideration during the annotation process. Providing an incomplete, less delicate implementation for systemic choices may be a source of errors. This hypothesis requires further investigation.  %The same can be expected of other systems that are reduced in delicacy 
+    % In the case of the POLARITY-TYPE system, the phenomena may be explained as a consequence of low delicacy in the parsing algorithm. The current implementation determines polarity by checking for the presence of the negation verbal marker only. Nonetheless a more delicate polarity testing will have to take into consideration polarity indicators from the subject, complement and adjuncts of various types that may have been taken into consideration during the annotation process. Providing an incomplete, less delicate implementation for systemic choices may be a source of errors. This hypothesis requires further investigation.  %The same can be expected of other systems that are reduced in delicacy 
 
-    Nonetheless, the same phenomena can be seen if we look at the systems that do not span others with higher degrees of delicacy. For example, the detection mechanism for VOICE-TYPE is implemented similarly to POLARITY-TYPE. The parser checks whether there is a passive order of elements in the clause, otherwise the active voice is selected.  Detection of the positive voice scores a much higher F_1 measure of 87\% than the negative one of 36\%. There is no problem of low delicacy and still there is a discrepancy between the F_1 scores of the two features. %which is somehow counter intuitive result.  
+    % Nonetheless, the same phenomena can be seen if we look at the systems that do not span others with higher degrees of delicacy. For example, the detection mechanism for VOICE-TYPE is implemented similarly to POLARITY-TYPE. The parser checks whether there is a passive order of elements in the clause, otherwise the active voice is selected.  Detection of the positive voice scores a much higher F_1 measure of 87\% than the negative one of 36\%. There is no problem of low delicacy and still there is a discrepancy between the F_1 scores of the two features. %which is somehow counter intuitive result.  
 
     %This interpretation however is not entirely correct and there is another way of looking at this discrepancy. 
-    This high discrepancy between the feature F_1 scores can be seen as follows. Most instances of active voice are easy to detect. But there is a portion of cases, regardless of the voice, that are difficult for the parser to distinguish. The passive voice selections are executed mostly for these ambiguous cases. More investigation is required to pinpoint exactly how such phenomena materialise.
+    % This high discrepancy between the feature F_1 scores can be seen as follows. Most instances of active voice are easy to detect. But there is a portion of cases, regardless of the voice, that are difficult for the parser to distinguish. The passive voice selections are executed mostly for these ambiguous cases. More investigation is required to pinpoint exactly how such phenomena materialise.
 
-    Nonetheless, in future implementations we can take advantage of the mutual exclusivity of system features and capitalise on the above finding, at least for the leaf systems. Taking into consideration that the score of one feature is higher, clause elements should then be provided with selections of those features only, while the complement features scoring low in this evaluation should remain unassigned. This means that only features that can be provided with high confidence (using F_1 score as a measure of that) shall be assigned. Then an additional process can be implemented to select the remaining unassigned features. 
+    % Nonetheless, in future implementations we can take advantage of the mutual exclusivity of system features and capitalise on the above finding, at least for the leaf systems. Taking into consideration that the score of one feature is higher, clause elements should then be provided with selections of those features only, while the complement features scoring low in this evaluation should remain unassigned. This means that only features that can be provided with high confidence (using F_1 score as a measure of that) shall be assigned. Then an additional process can be implemented to select the remaining unassigned features. 
 
     %Next I proceed to discuss the semantic features implemented in the parser. 
 
 \subsection{Semantic evaluation: constituency elements}
 \label{sec:semantic-constituents}
-    This section describes the empirical findings regarding semantic parsing. This evaluation is based on the OE1 and BTC corpora created by Anke Schultz for her PhD project. The text is annotated according to the Cardiff TRANSITIVITY system network. The employed elements are Configuration, Participant role and Main verb while Circumstances are excluded from the study. Table \ref{tab:configuration-elements} summarises the empirical findings. 
 
-    \begin{table}[!ht]
-        \resizebox{\textwidth}{!}{%    
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-            \hline
-            \textbf{Element} & \textbf{Match} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse\\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse\\ nm\end{tabular}} \\ \hline
-            Participant role & 2780 & 233 & 1002 & 0.74 & 0.92 & 0.82 & 49.54 & 7.73 & 26.49 \\ \hline
-            Configuration & 1376 & 127 & 493 & 0.74 & 0.92 & 0.82 & 24.52 & 8.45 & 26.38 \\ \hline
-            Main Verb & 1456 & 160 & 605 & 0.71 & 0.90 & 0.79 & 25.94 & 9.90 & 29.35 \\ \hline
-        \end{tabular}
-        }
-        \caption{The evaluation statistics for the main semantic elements}
-        \label{tab:configuration-elements}
-    \end{table}
-    \begin{figure}[!ht]
-        \centering
-        \includegraphics[width=.65\textwidth]{evaluation-results/figures/accuracy-semantic-figure-elements}
-        \caption{Bar chart of matched and non-matched (manual and parse) segments of the main semantic elements}
-        \label{fig:configuration-elements}
-    \end{figure}
+    % copied
+    
+    % This section describes the empirical findings regarding semantic parsing. This evaluation is based on the OE1 and BTC corpora created by Anke Schultz for her PhD project. The text is annotated according to the Cardiff TRANSITIVITY system network. The employed elements are Configuration, Participant role and Main verb while Circumstances are excluded from the study. Table \ref{tab:configuration-elements} summarises the empirical findings. 
 
-    The F_1 score (82\%), precision (74\%) and recall (92\%) vary very little across elements when compared to the same scores for syntactic elements shown in Table \ref{tab:constit-unit-elements} above which vary substantially from one element to another. The score stability of the former may be explained by higher quality of annotation. 
+    % \begin{table}[!ht]
+    %     \resizebox{\textwidth}{!}{%    
+    %     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+    %         \hline
+    %         \textbf{Element} & \textbf{Match} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse\\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse\\ nm\end{tabular}} \\ \hline
+    %         Participant role & 2780 & 233 & 1002 & 0.74 & 0.92 & 0.82 & 49.54 & 7.73 & 26.49 \\ \hline
+    %         Configuration & 1376 & 127 & 493 & 0.74 & 0.92 & 0.82 & 24.52 & 8.45 & 26.38 \\ \hline
+    %         Main Verb & 1456 & 160 & 605 & 0.71 & 0.90 & 0.79 & 25.94 & 9.90 & 29.35 \\ \hline
+    %     \end{tabular}
+    %     }
+    %     \caption{The evaluation statistics for the main semantic elements}
+    %     \label{tab:configuration-elements}
+    % \end{table}
+    % \begin{figure}[!ht]
+    %     \centering
+    %     \includegraphics[width=.65\textwidth]{evaluation-results/figures/accuracy-semantic-figure-elements}
+    %     \caption{Bar chart of matched and non-matched (manual and parse) segments of the main semantic elements}
+    %     \label{fig:configuration-elements}
+    % \end{figure}
+
+    % The F_1 score (82\%), precision (74\%) and recall (92\%) vary very little across elements when compared to the same scores for syntactic elements shown in Table \ref{tab:constit-unit-elements} above which vary substantially from one element to another. The score stability of the former may be explained by higher quality of annotation. 
 
     Another explanation could be the lower granularity of elements. Text segments of Configurations in this case correspond to clause segments, Participant roles to both Subjects and Complements, while the Main verb segments are shared. The aggregation of Subjects and Complements can be observed in Figure \ref{fig:configuration-elements} where the number of participant roles is approximately double the number of configurations under the hypothesis that the average number of participants per clause is close to two. Next I present an analysis of the systemic feature selections data from the TRANSITIVITY system network. 
 
 \subsection{Semantic evaluation: TRANSITIVITY features}
 \label{sec:semantic-features}
-    In this section I present the evaluation of the TRANSITIVITY system network. The corpus contains annotations with the part from the original system network shown in Figure \ref{fig:cardiff-transitivity}. The limitation is in the number of process types and is represented in Figure \ref{fig:transitivity-simplified}. Employing the entire system network in the annotation process increases in difficulty as the delicacy increases due to the time need to do the job. 
+    % In this section I present the evaluation of the TRANSITIVITY system network. The corpus contains annotations with the part from the original system network shown in Figure \ref{fig:cardiff-transitivity}. The limitation is in the number of process types and is represented in Figure \ref{fig:transitivity-simplified}. Employing the entire system network in the annotation process increases in difficulty as the delicacy increases due to the time need to do the job. 
 
-    \begin{figure}[!ht]
-        \centering
-        \includegraphics[width=.65\textwidth]{Figures/Evaluation/trans-simplified.pdf}
-        \caption{The fragment of the TRANSITIVITY system network that has been used in the corpus}
-        \label{fig:transitivity-simplified}
-    \end{figure}
+    % \begin{figure}[!ht]
+    %     \centering
+    %     \includegraphics[width=.65\textwidth]{Figures/Evaluation/trans-simplified.pdf}
+    %     \caption{The fragment of the TRANSITIVITY system network that has been used in the corpus}
+    %     \label{fig:transitivity-simplified}
+    % \end{figure}
 
-    Transitivity analysis is semantic in nature and poses challenges in meaning selection beyond constituent class or function. Unlike other approaches where parser offers the most likely choice from the set of possible ones, the current parser has no means to differentiate between the alternatives and thus provides a set of possible configurations for each clause. Intuitively, this should reduce recall on all the elements but the effects are manifested only at the level of participant roles as will be described below. But first let's discuss the measurements on process types provided in Table \ref{tab:features-transitivity}. 
+    % Transitivity analysis is semantic in nature and poses challenges in meaning selection beyond constituent class or function. Unlike other approaches where parser offers the most likely choice from the set of possible ones, the current parser has no means to differentiate between the alternatives and thus provides a set of possible configurations for each clause. Intuitively, this should reduce recall on all the elements but the effects are manifested only at the level of participant roles as will be described below. But first let's discuss the measurements on process types provided in Table \ref{tab:features-transitivity}. 
 
-    \begin{table}[!ht]
-        \resizebox{\textwidth}{!}{%  
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-            \hline
-            \textbf{Feature} & \textbf{Match} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse\\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse\\ nm\end{tabular}} \\ \hline
-            PROCESS-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
-            mental & 277 & 231 & 87 & 0.76 & 0.55 & 0.64 & 33.62 & 45.47 & 23.90 \\ \hline
-            relational & 338 & 297 & 174 & 0.66 & 0.53 & 0.59 & 41.02 & 46.77 & 33.98 \\ \hline
-            influential & 38 & 51 & 62 & 0.38 & 0.43 & 0.40 & 4.61 & 57.30 & 62.00 \\ \hline
-            action & 170 & 231 & 352 & 0.33 & 0.42 & 0.37 & 20.63 & 57.61 & 67.43 \\ \hline
-            event-relating & 1 & 28 & 0 & 1.00 & 0.03 & 0.07 & 0.12 & 96.55 & 0.00 \\ \hline
-            RELATIONAL-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
-            attributive & 169 & 239 & 107 & 0.61 & 0.41 & 0.49 & 70.42 & 58.58 & 38.77 \\ \hline
-            directional & 30 & 13 & 127 & 0.19 & 0.70 & 0.30 & 12.50 & 30.23 & 80.89 \\ \hline
-            locational & 39 & 20 & 207 & 0.16 & 0.66 & 0.26 & 16.25 & 33.90 & 84.15 \\ \hline
-            matching & 2 & 0 & 69 & 0.03 & 1.00 & 0.05 & 0.83 & 0.00 & 97.18 \\ \hline
-            MENTAL-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
-            three-role-cognition & 45 & 51 & 34 & 0.57 & 0.47 & 0.51 & 29.41 & 53.12 & 43.04 \\ \hline
-            two-role-cognition & 95 & 102 & 86 & 0.52 & 0.48 & 0.50 & 62.09 & 51.78 & 47.51 \\ \hline
-            two-role-perception & 13 & 12 & 102 & 0.11 & 0.52 & 0.19 & 8.50 & 48.00 & 88.70 \\ \hline
-            three-role-perception & 0 & 2 & 6 & 0.00 & 0.00 &  & 0.00 & 100.00 & 100.00 \\ \hline
-            desiderative & 0 & 0 & 81 & 0.00 &  &  & 0.00 &  & 100.00 \\ \hline
-            emotive & 0 & 0 & 87.00 & 0.00 &  &  & 0.00 &  & 100.00 \\ \hline
-    %        ACTION-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
-    %        one-role-action & 0 & 0 & 178 & 0.00 &  &  &  &  & 100.00 \\ \hline
-    %        three-role-action & 0 & 0 & 1 & 0.00 &  &  &  &  & 100.00 \\ \hline
-    %        two-role-action & 0 & 0 & 485 & 0.00 &  &  &  &  & 100.00 \\ \hline
-        \end{tabular}
-        }
-        \caption{The evaluation statistics available for the PROCESS-TYPE system and few of its subsystems from the TRANSITIVITY system network}
-        \label{tab:features-transitivity}
-    \end{table}
+    % \begin{table}[!ht]
+    %     \resizebox{\textwidth}{!}{%  
+    %     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+    %         \hline
+    %         \textbf{Feature} & \textbf{Match} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse\\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse\\ nm\end{tabular}} \\ \hline
+    %         PROCESS-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
+    %         mental & 277 & 231 & 87 & 0.76 & 0.55 & 0.64 & 33.62 & 45.47 & 23.90 \\ \hline
+    %         relational & 338 & 297 & 174 & 0.66 & 0.53 & 0.59 & 41.02 & 46.77 & 33.98 \\ \hline
+    %         influential & 38 & 51 & 62 & 0.38 & 0.43 & 0.40 & 4.61 & 57.30 & 62.00 \\ \hline
+    %         action & 170 & 231 & 352 & 0.33 & 0.42 & 0.37 & 20.63 & 57.61 & 67.43 \\ \hline
+    %         event-relating & 1 & 28 & 0 & 1.00 & 0.03 & 0.07 & 0.12 & 96.55 & 0.00 \\ \hline
+    %         RELATIONAL-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
+    %         attributive & 169 & 239 & 107 & 0.61 & 0.41 & 0.49 & 70.42 & 58.58 & 38.77 \\ \hline
+    %         directional & 30 & 13 & 127 & 0.19 & 0.70 & 0.30 & 12.50 & 30.23 & 80.89 \\ \hline
+    %         locational & 39 & 20 & 207 & 0.16 & 0.66 & 0.26 & 16.25 & 33.90 & 84.15 \\ \hline
+    %         matching & 2 & 0 & 69 & 0.03 & 1.00 & 0.05 & 0.83 & 0.00 & 97.18 \\ \hline
+    %         MENTAL-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
+    %         three-role-cognition & 45 & 51 & 34 & 0.57 & 0.47 & 0.51 & 29.41 & 53.12 & 43.04 \\ \hline
+    %         two-role-cognition & 95 & 102 & 86 & 0.52 & 0.48 & 0.50 & 62.09 & 51.78 & 47.51 \\ \hline
+    %         two-role-perception & 13 & 12 & 102 & 0.11 & 0.52 & 0.19 & 8.50 & 48.00 & 88.70 \\ \hline
+    %         three-role-perception & 0 & 2 & 6 & 0.00 & 0.00 &  & 0.00 & 100.00 & 100.00 \\ \hline
+    %         desiderative & 0 & 0 & 81 & 0.00 &  &  & 0.00 &  & 100.00 \\ \hline
+    %         emotive & 0 & 0 & 87.00 & 0.00 &  &  & 0.00 &  & 100.00 \\ \hline
+    % %        ACTION-TYPE &  &  &  &  &  &  &  &  &  \\ \hline
+    % %        one-role-action & 0 & 0 & 178 & 0.00 &  &  &  &  & 100.00 \\ \hline
+    % %        three-role-action & 0 & 0 & 1 & 0.00 &  &  &  &  & 100.00 \\ \hline
+    % %        two-role-action & 0 & 0 & 485 & 0.00 &  &  &  &  & 100.00 \\ \hline
+    %     \end{tabular}
+    %     }
+    %     \caption{The evaluation statistics available for the PROCESS-TYPE system and few of its subsystems from the TRANSITIVITY system network}
+    %     \label{tab:features-transitivity}
+    % \end{table}
 
-    \begin{figure}[!ht]
+    \begin{figure}[!ht
         \centering
         \includegraphics[width=.65\textwidth]{evaluation-results/figures/accuracy-semantic-process-type-f1}
     %    \caption{Bar chart of matched and non-matched (manual and parse) segments of the PROCESS-TYPE features}
@@ -704,52 +713,53 @@
         \label{fig:relational-types}
     \end{figure}
 
-    \textit{Mental} and \textit{relational} processes are the ones with highest F_1 scores: 64\% and 59\%. They are followed by \textit{influential} and \textit{action} process types while results for the \textit{event-relating} are not conclusive because of the very small number of occurrences in the dataset. This can be seen in Figure \ref{fig:process-types} where the number of Matched segments (the left-most blue bar) is higher than the number of non matched Manual or Parse segments. This figure depicts the first part of the data in Table \ref{tab:features-transitivity}. The second and third parts are depicted in Figure \ref{fig:mental-types} and \ref{fig:relational-types}.
+    % copied
+    % \textit{Mental} and \textit{relational} processes are the ones with highest F_1 scores: 64\% and 59\%. They are followed by \textit{influential} and \textit{action} process types while results for the \textit{event-relating} are not conclusive because of the very small number of occurrences in the dataset. This can be seen in Figure \ref{fig:process-types} where the number of Matched segments (the left-most blue bar) is higher than the number of non matched Manual or Parse segments. This figure depicts the first part of the data in Table \ref{tab:features-transitivity}. The second and third parts are depicted in Figure \ref{fig:mental-types} and \ref{fig:relational-types}.
 
-    Among the \textit{mental} processes, Figure \ref{fig:mental-types}, \textit{two} and \textit{three} role \textit{cognition} are parsed the best, whereas among \textit{relational} ones, Figure \ref{fig:relational-types}, the \textit{attributive} process type scores the highest while rest of them score quite low. This can be seen from the higher number of  non- matched segments for each process type depicted as orange and green bars in the middle and on the right (for every feature). 
+    % Among the \textit{mental} processes, Figure \ref{fig:mental-types}, \textit{two} and \textit{three} role \textit{cognition} are parsed the best, whereas among \textit{relational} ones, Figure \ref{fig:relational-types}, the \textit{attributive} process type scores the highest while rest of them score quite low. This can be seen from the higher number of  non- matched segments for each process type depicted as orange and green bars in the middle and on the right (for every feature). 
 
-    Table \ref{tab:ratios-mental} and \ref{tab:ratios-relational} provide each two pairs of ratios. They have very similar data content. Next I discuss the case of the mental process type only because the same applies to the case of relational processes and perhaps to other ones, but we lack data for testing this hypothesis. Thus, the first pair of ratios, provided in the lowest row, compares the number of segments with \textit{mental} feature to the number of segments with any sub-type of \textit{mental} feature (see Figure \ref{fig:mental-types}) (i.e. the aggregates over \textit{cognition}, \textit{perception}, \textit{emotive}, etc.). This ratio measures how well are the feature dependencies preserved across delicacy levels. The second pair of ratios, provided in the last column, compares the number of segments provided by the parser and to that available in corpus for both the mental feature and the sum of its sub-types. 
+    % Table \ref{tab:ratios-mental} and \ref{tab:ratios-relational} provide each two pairs of ratios. They have very similar data content. Next I discuss the case of the mental process type only because the same applies to the case of relational processes and perhaps to other ones, but we lack data for testing this hypothesis. Thus, the first pair of ratios, provided in the lowest row, compares the number of segments with \textit{mental} feature to the number of segments with any sub-type of \textit{mental} feature (see Figure \ref{fig:mental-types}) (i.e. the aggregates over \textit{cognition}, \textit{perception}, \textit{emotive}, etc.). This ratio measures how well are the feature dependencies preserved across delicacy levels. The second pair of ratios, provided in the last column, compares the number of segments provided by the parser and to that available in corpus for both the mental feature and the sum of its sub-types. 
 
-    Table \ref{tab:ratios-mental} shows that in the corpus the number of segments with \textit{mental} feature is almost one fourth higher than what the parser provides (72 \%). This result means that probably not all the instances of a mental process have been detected by the parser (i.e. 28\% undetected). The same comparison ran on the sub-types of \textit{mental} process shows diametrically opposite results, i.e. three fourths more parser generated results than in the corpus (172\%) which is an indication of false positives. A possible explanation is the correlation between increase in delicacy and uncertainty i.e. the more delicate features are less precise in the parser results. As mentioned in the beginning of the section, uncertainty this case is manifested as a disjunction set of equally possible options. Currently there is no ranking available based on degrees of confidence. Hence the parser provides multiple feature selections from the same system (in this case MENTAL-TYPE) for the same constituent whereas there should be a single one. In the future this needs to be addressed by introducing a discrimination mechanism for every system in the network. A possible approach is to integrate the frequencies available from the corpus.
+    % Table \ref{tab:ratios-mental} shows that in the corpus the number of segments with \textit{mental} feature is almost one fourth higher than what the parser provides (72 \%). This result means that probably not all the instances of a mental process have been detected by the parser (i.e. 28\% undetected). The same comparison ran on the sub-types of \textit{mental} process shows diametrically opposite results, i.e. three fourths more parser generated results than in the corpus (172\%) which is an indication of false positives. A possible explanation is the correlation between increase in delicacy and uncertainty i.e. the more delicate features are less precise in the parser results. As mentioned in the beginning of the section, uncertainty this case is manifested as a disjunction set of equally possible options. Currently there is no ranking available based on degrees of confidence. Hence the parser provides multiple feature selections from the same system (in this case MENTAL-TYPE) for the same constituent whereas there should be a single one. In the future this needs to be addressed by introducing a discrimination mechanism for every system in the network. A possible approach is to integrate the frequencies available from the corpus.
 
-   \begin{table}[!ht]
-    \noindent
-    \resizebox{0.98\linewidth}{!}{%
-     \begin{minipage}[t]{0.495\textwidth}
-         \centering
-         \resizebox{0.995\textwidth}{!}{%  
-             \begin{tabulary}{1.2\textwidth}{|C|c|c|c|}
-                 \hline
-                 \textbf{Features} & \textbf{Manual} & \textbf{Parse} & \textbf{/} \\ \hline
-                 mental & 508 & 364 & \textbf{0.72} \\ \hline
-                 mental sub-types (sum of) & 320 & 549 & \textbf{1.72} \\ \hline
-                 \textbf{/} & \textbf{0.63} & \textbf{1.51} &  \\ \hline
-             \end{tabulary}
-         }
-         \caption{The ratios between \textit{mental} segments and the sum of mental sub-type segments}
-         \label{tab:ratios-mental}
-     \end{minipage}%
-     \quad
-     \begin{minipage}[t]{0.495\textwidth}
-         \centering
-         %    \begin{table}[!ht]
-         \resizebox{0.995\textwidth}{!}{%  
-             \begin{tabulary}{1.2\textwidth}{|C|c|c|c|}
-                 \hline
-                 \textbf{Features} & \textbf{Manual} & \textbf{Parse} & \textit{\textbf{/}} \\ \hline
-                 relational & 635 & 512 & \textbf{0.8} \\ \hline
-                 relational sub-types (sum of) & 512 & 750 & \textbf{1.47} \\ \hline
-                 \textit{\textbf{/}} & \textbf{0.8} & \textbf{1.47} &  \\ \hline
-             \end{tabulary}
-         }
-         \caption{The ratios between \textit{relational} segments and the sum of mental sub-type segments}
-         \label{tab:ratios-relational}
-         %    \end{table}
-     \end{minipage}
-     }
-    \end{table}
+%   \begin{table}[!ht]
+%     \noindent
+%     \resizebox{0.98\linewidth}{!}{%
+%      \begin{minipage}[t]{0.495\textwidth}
+%          \centering
+%          \resizebox{0.995\textwidth}{!}{%  
+%              \begin{tabulary}{1.2\textwidth}{|C|c|c|c|}
+%                  \hline
+%                  \textbf{Features} & \textbf{Manual} & \textbf{Parse} & \textbf{/} \\ \hline
+%                  mental & 508 & 364 & \textbf{0.72} \\ \hline
+%                  mental sub-types (sum of) & 320 & 549 & \textbf{1.72} \\ \hline
+%                  \textbf{/} & \textbf{0.63} & \textbf{1.51} &  \\ \hline
+%              \end{tabulary}
+%          }
+%          \caption{The ratios between \textit{mental} segments and the sum of mental sub-type segments}
+%          \label{tab:ratios-mental}
+%      \end{minipage}%
+%      \quad
+%      \begin{minipage}[t]{0.495\textwidth}
+%          \centering
+%          %    \begin{table}[!ht]
+%          \resizebox{0.995\textwidth}{!}{%  
+%              \begin{tabulary}{1.2\textwidth}{|C|c|c|c|}
+%                  \hline
+%                  \textbf{Features} & \textbf{Manual} & \textbf{Parse} & \textit{\textbf{/}} \\ \hline
+%                  relational & 635 & 512 & \textbf{0.8} \\ \hline
+%                  relational sub-types (sum of) & 512 & 750 & \textbf{1.47} \\ \hline
+%                  \textit{\textbf{/}} & \textbf{0.8} & \textbf{1.47} &  \\ \hline
+%              \end{tabulary}
+%          }
+%          \caption{The ratios between \textit{relational} segments and the sum of mental sub-type segments}
+%          \label{tab:ratios-relational}
+%          %    \end{table}
+%      \end{minipage}
+%      }
+%     \end{table}
 
-    If we look again at Table \ref{tab:ratios-mental} and compare the number of all mental sub-type occurrences (see Figure \ref{fig:mental-types}) to the number of mental type occurrences, then we see that the ratio is quite low (63\%). As the delicacy of the features increases fewer of these features are provided in the corpus. This is a direct manifestation of difficulty in annotating with ever more delicate features. This ratio, therefore, measures the degree of incompleteness at this level of delicacy. Comparing the same ratio for the parser generated segments we notice an opposite result (151\%). This is in fact another measurement of noise generated due to uncertainty when advancing to a more delicate features as explained above. 
+    % If we look again at Table \ref{tab:ratios-mental} and compare the number of all mental sub-type occurrences (see Figure \ref{fig:mental-types}) to the number of mental type occurrences, then we see that the ratio is quite low (63\%). As the delicacy of the features increases fewer of these features are provided in the corpus. This is a direct manifestation of difficulty in annotating with ever more delicate features. This ratio, therefore, measures the degree of incompleteness at this level of delicacy. Comparing the same ratio for the parser generated segments we notice an opposite result (151\%). This is in fact another measurement of noise generated due to uncertainty when advancing to a more delicate features as explained above. 
 
     So far we have discussed the process types and now let's turn attention towards the features from the PARTICIPANT-ROLE-TYPE system. Table \ref{tab:features-participant-role} presents the evaluation data and Figure \ref{fig:participant-roles-f1} depicts the precision, recall and F_1 score for each role sorted according to F_1 score in descending order while Figure \ref{fig:participant-roles} depicts the absolute number of segments for each feature.
 
