@@ -28,8 +28,6 @@
     
     The corpus used in this evaluation do not constitute a true gold standard and there are, due to different reasons, some differences to the parser. These differences will be described in detail in Section \ref{sec:differences}.
     
-    The evaluation methodology, which will be described in detail in Section \ref{sec:evaluation-methodology}, considers perfect alignment between segment boundaries and their labels, and also considers partial alignment of segments with the same label. This means that segments such as the ones in Listings \ref{lst:exampleText1} and \ref{lst:exampleText1} are given some credit in the alignment process.
-
 \noindent
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[numbers=left,basicstyle=\small\tt, stepnumber=1,firstnumber=0,frame=single,caption=Example segment from the corpus,label=lst:exampleText1,escapeinside={(*}{*)}]
@@ -43,22 +41,27 @@
 (*\textcolor{black!50}{$_{583}$}*)and forced me into treatment .(*\textcolor{black!50}{$_{612}$}*)
 \end{lstlisting}
 \end{minipage}    
-     
+
+The evaluation methodology, which will be described in detail in Section \ref{sec:evaluation-methodology}, considers perfect alignment between segment boundaries and their labels. Also it considers partial alignment of segments with the same label provided that the distance between them is not too large and there is not other better matching candidate at a shorter distance. This means that segment spans such as the ones in Listings \ref{lst:exampleText1} and \ref{lst:exampleText1} are given some credit in the alignment process. In this example, the segments are considered as partially (or closely) matching clauses. The main reason for taking segmentation discrepancies into consideration is for providing a wider evaluation ground to the systemic selections from the MOOD and TRANSITIVITY system networks. The next section describes the corpora used in current evaluation. 
 
 \section{Evaluation corpus}
 \label{sec:corpus}
-% (provenance, annotations, size metrics, quality assessment; data examples ?)
+    % (provenance, annotations, size metrics, quality assessment; data examples ?)
+    
+    This section briefly introduces the corpora used in the evaluation of the Parsimonious Vole parser. Table \ref{tab:corpus-sumary} provides a summary of the corpora descriptions.  
     
     \begin{table}[!ht]
         \centering
         \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|c|c|c|c|c|c|}
-            \hline
-            \textbf{Corpus name} & \textbf{Meta-function} & \textbf{\begin{tabular}[c]{@{}c@{}}\# characters\\ (thousands)\end{tabular}} & \textbf{\# clauses} & \textbf{Annotator(s)}         \\ \hline
-            OCD            & Mood            & 16.2                                                                         & 147                 &  Ela Oren \& Eugeniu Costetchi \\ \hline
-            OE1         & Transitivity         & 51.8                                                                         & 1503                & Anke Schultz                  \\ \hline
-            % BTC             & Transitivity         & 5.6                                                                          & 157                 & Anke Schultz                  \\ \hline
-        \end{tabular}
+        \begin{tabulary}{\textwidth}{cccccc}
+            \toprule
+            Corpus name & Meta-function & Characters & Clauses & Annotator(s) \\
+            \midrule
+            OCD & Mood & 16.200 & 147 &  Ela Oren \& Eugeniu Costetchi \\ 
+            OE & Transitivity & 51.800 & 1503 & Anke Schultz \& Tatsiana Markovic \\ 
+            OE-RRH & Transitivity & 5.600 & 157 & Anke Schultz \\
+        \bottomrule
+        \end{tabulary}
         }
         \caption{Evaluation corpus summary}
         \label{tab:corpus-sumary}
@@ -66,47 +69,51 @@
     
     % TODO: introduce corpora
     
-    % The OE1 corpus was not developed for the purpose of evaluating constituency in the current parser. Nevertheless the provided segmentation however can be used to evaluate the boundaries of constituent segments. This corpus are primitively used for evaluation of the constituent's semantic function and some TRANSITIVITY features (to the degree provided in the corpus). To enable each of these evaluations the annotation data and parser output needed to be uniformly represented in order to be in alignment with the parser output. To achieve this, feature names were harmonised with the ones from PTDB following the same adjustments as described in Section \ref{sec:claning-ptdb}. In Section \ref{sec:results},  the empirical findings of the current evaluation are described.
-
-\subsection{OE1 corpus}
-
-    The Bremen Translation Corpus (BTC) was created at the University of Bremen by Kerstin Fischer, Anatol Stefanowitsch and Anke Schulz. It consists of comparable and parallel texts. The comparable part consists of a series of newsgroup texts of about 10,000 words of English text and another 10,000 words of German, text taken from the same register. The parallel part, called EDNA, is much larger comprising about 100,000 words of parallel English-German text. Anke uses in her thesis 10,000 words of parallel text and about the same of comparable text \citep[31]{schulz2015me}. In this evaluation only the English part is considered that comprises 31 files spanning over 1503 clauses and 20864 words. In addition, Anke provided a set of similarly annotations of the ``Little Red Riding Hood'' fairy tale comprising 157 clauses that is also included into this evaluation as part of OE1. 
     
-    The corpus annotations cover Cardiff TRANSITIVITY, THEME and MODIFICATION system networks. The grammatical details and the annotation methodology are covered in detail in \citet{schulz2015me}.
-    
-    % todo introduce the network fragment
-    
-    The corpus contains annotations with the part from the original system network shown in Figure \ref{fig:cardiff-transitivity}. The limitation is in the number of process types and is represented in Figure \ref{fig:transitivity-simplified}. Employing the entire system network in the annotation process increases in difficulty as the delicacy increases due to the time need to do the job. 
+    % The OE corpus was not developed for the purpose of evaluating constituency in the current parser. Nevertheless the provided segmentation however can be used to evaluate the boundaries of constituent segments. This corpus are primitively used for evaluation of the constituent's semantic function and some TRANSITIVITY features (to the degree provided in the corpus). To enable each of these evaluations the annotation data and parser output needed to be uniformly represented in order to be in alignment with the parser output. To achieve this, feature names were harmonised with the ones from PTDB following the same adjustments as described in Section \ref{sec:claning-ptdb}. In Section \ref{sec:results},  the empirical findings of the current evaluation are described.
 
-    \begin{figure}[!ht]
+\subsection{OE corpus}
+
+    The Bremen Translation Corpus (BTC) was created at the University of Bremen by Kerstin Fischer, Anatol Stefanowitsch and Anke Schulz. It consists of comparable and parallel texts. The comparable part consists of a series of newsgroup texts of about 10,000 words of English text and another 10,000 words of German, text taken from the same register. The parallel part, called EDNA, is much larger comprising about 100,000 words of parallel English-German text. Anke uses in her thesis 10,000 words of parallel text and about the same of comparable text \citep[31]{schulz2015me}. In this evaluation only the English part is considered which is called OE. It comprises 31 files spanning over 1503 clauses and 20864 words. In addition, Anke provided a set of similar annotations for the ``Little Red Riding Hood'' fairy tale, called OE-RRH, comprising 157 clauses that is included as part of OE corpus in this evaluation. 
+    
+    \begin{figure}[!h]
         \centering
-        \includegraphics[width=.65\textwidth]{Figures/Evaluation/trans-simplified.pdf}
+        \includegraphics[width=.75\textwidth]{Figures/Evaluation/trans-simplified.pdf}
         \caption{The fragment of the TRANSITIVITY system network that has been used in the corpus}
         \label{fig:transitivity-simplified}
     \end{figure}
+
+    The corpus annotations, developed by Anke Schulz and Tatsiana Markovic \citep[36]{schulz2015me}, cover Cardiff TRANSITIVITY, THEME and MODIFICATION system networks. The grammatical details and the annotation methodology are covered in detail in \citet[48-161]{schulz2015me}.
+    
+    For the purpose of the current evaluation only the TRANSITIVITY system was considered. The extent to which the system network is covered in the corpus annotations is limited to the top part of the original TRANSITIVITY system network. The used system network fragment is depicted in Figure \ref{fig:cardiff-transitivity}, while the whole system network was provided in the Chapter \ref{ch:the-grammar}. Employing the entire system network in the annotation process increases in difficulty as the delicacy increases due to the time needed to perform the task \citep[33]{mcenery2006corpus}. The challenge of providing delicate (or fine-grained) corpus annotations using the entire extent of a system network still has to be addressed in the SFL community. 
     
 
 \subsection{OCD corpus}
 
      The first corpus (OCD) was created by Ela Oren and myself and is focused on syntactic constituency structure and clause MOOD features. The texts represent blog articles of people diagnosed with Obsessive Compulsive Disorder (OCD) who self-report on the challenge of overcoming OCD. The corpus contains four texts comprising all together 988 clauses and 8605 words. 
 
-    % todo expand, explain
-    The corpus contains selections from the system network depicted in Figure \ref{fig:mood-ocd-simplified}. It is a sub-part of the MOOD system network supported by the Parsimonious Vole parser, which was described in Chapter \ref{ch:the-grammar} and depicted in Figure \ref{fig:clause-mood}. Employing the entire system network in the annotations was difficult because as the delicacy increases the time spent for the annotation process increases drastically making the annotation process very tedious and slow.
-    
-    \begin{figure}[!ht]
+    \begin{figure}[!h]
         \centering
         \includegraphics[width=.85\textwidth]{Figures/Evaluation/ocd1-mood-simplified.pdf}
         \caption{The part of the MOOD system network that has been used in OCD corpus annotation}
         \label{fig:mood-ocd-simplified}
     \end{figure}
+    
+    % todo expand, explain
+    The corpus contains selections from the system network depicted in Figure \ref{fig:mood-ocd-simplified}. It is a sub-part of the MOOD system network supported by the Parsimonious Vole parser, which was described in Chapter \ref{ch:the-grammar} and depicted in Figure \ref{fig:clause-mood}. Employing the entire system network in the annotations was difficult because as the delicacy increases the time spent for the annotation process increases drastically making the annotation process very tedious and slow.
+    
+
 
 \subsection{Differences between the corpus annotation and parser output}
 \label{sec:differences}
-% todo rename section
 
-% todo: introduce this example
+    This section describes the main known differences between how the parser structures output and the methodology used to annotate the corpus. These differences are mainly due to text normalisation, treatment of conjunctions and punctuation. In OCD corpus there are also some segmentation errors described below.
+    
+    The Parsimonious Vole parser after receiving the raw text, first operation it performs is that of text normalisation. In this process the tabs and extra spaces between words and are reduced and special characters such as quotes, parenthesis, dashes and other orthographic characters are re-represented in a uniform way. In the OE corpus most of the text is uniformly formatted but there are few deviations. 
+    
+
 \begin{minipage}{\linewidth}
-\begin{lstlisting}[numbers=left,basicstyle=\small\tt, stepnumber=1,firstnumber=0,frame=single,caption=Raw text example in annotation data,label=lst:exampleText,escapeinside={(*}{*)}]
+\begin{lstlisting}[numbers=left,basicstyle=\small\tt, stepnumber=1,firstnumber=0,frame=single,caption=Sample of non-normalised raw text from the corpus,label=lst:exampleText,escapeinside={(*}{*)}]
 (*\textcolor{black!50}{$_{0}$}*)Red riding hood excerpt(*\textcolor{black!50}{$_{24}$}*)
 (*\textcolor{black!50}{$_{25}$}*)"What have you in that basket,   Little Red Riding Hood?"(*\textcolor{black!50}{$_{82}$}*)
 (*\textcolor{black!50}{$_{83}$}*)
@@ -114,20 +121,16 @@
 \end{lstlisting}
 \end{minipage}
 
-    Listing \ref{lst:exampleText} presents an example raw text from the annotation dataset containing an initial title line and two sentences separated by an empty line. The greyed index numbers at the beginning and end of each line indicate character offsets. In BTC corpus files, the first line plays the role of a header containing the title or the file name. In this example it is a title. Either way, this first line is neither considered for annotation nor parsing. 
+    Listing \ref{lst:exampleText} presents an example raw text from the annotation dataset containing an initial title line and two sentences separated by an empty line. The greyed index numbers at the beginning and end of each line indicate character offsets. In OE corpus files, the first line plays the role of a header containing the title or the file name. In this example it is a title. Either way, this first line is neither considered for annotation nor parsing. 
     
-    In the OCD file the text was not normalised before the annotation started. Mostly it is organised as one sentence per line, but there are instances of  extra blank lines or several some sentences per line as one continuous block. The text may also sporadically contain tabs and blank spaces such as here in line 1 between the comma and the ``Little Red Riding Hood''. 
+    In the OCD corpus normalisation was not at all addressed before the annotation started. Mostly it is organised as one sentence per line, but there are instances of extra blank lines or missing new line characters leading to few sentences per line as a block. The text may also contain tabs and extra blank spaces or blank lines as in Listing \ref{lst:exampleText} at index [82,84]. 
 
     It is noteworthy to mention that there are segmentation errors in a few cases from the OCD corpus. Some segments are either shifted and include the adjacent spaces (e.g. `` getting this push'' instead of ``getting this push'') or, the converse, leave out one or two characters of a marginal word (e.g. ``the balanc'' instead of ``the balance''). Such 
 
-    The parser diverges in a few ways from the corpus annotation methodology when it comes to punctuation marks and treatment of conjunctions. 
-    
-    In the corpus, punctuation marks such as commas, semicolons, three dots and full stops are not included in the constituent segments while the parser includes them at the end of each adjacent segment. 
-    
-    The treatment of conjunctions that was discussed in Section \ref{sec:coordination} differs as well. In the corpus, the conjunctions (such as ``and'', ``but'', ``so'', etc.) are excluded from the conjunct segments; they are considered markers in the clause/group complexes rather than part of the constituent. The parser, on the other hand, includes the conjunctions in the following adjacent segment. For example in the corpus there we find segment ``forced me into treatment'' while the parser produces a slightly larger segment ``and forced me into treatment.'' that includes the conjunction at the beginning and the full-stop at the end.
-    
-    Moreover the conjunct segment spans differ as well due to difference in treatment. Instead of being analysed in parallel, having sibling status as depicted in Figure \ref{fig:segment-conjunction-paralel}, the parse generated conjunct segments are subsumed in a cascade from the former to the latter as depicted in Figure \ref{fig:segment-conjunction-subsumed}.
+    As mentioned in the beginning of this section, the parser diverges in a few ways from the corpus annotation methodology when it comes to punctuation marks and treatment of conjunctions. Unfortunately there was no time to create a true golden corpus but OCD and OE corpora are close to that. 
 
+    In the OCD and OE corpus annotations, punctuation marks such as commas, semicolons, three dots and full stops are not included in the constituent segments while the parser includes them at the end of each adjacent segment. 
+    
     \begin{figure}[!ht]
         \centering
         \begin{subfigure}[b]{0.47\textwidth}
@@ -168,13 +171,17 @@
         \caption{Treatment of conjunctions in the corpus compared to the parser}
         \label{fig:conjunction-treatment}
     \end{figure}
-
-    % TODO: argue why partial match is valuable 
-
+    
+    The treatment of conjunctions that was discussed in Section \ref{sec:coordination} differs as well. In the corpus, the conjunctions (such as ``and'', ``but'', ``so'', etc.) are excluded from the conjunct segments; they are considered markers in the clause/group complexes rather than part of the constituent. The parser, on the other hand, includes the conjunctions in the following adjacent segment. For example in the corpus there we find segment ``forced me into treatment'' while the parser produces a slightly larger segment ``and forced me into treatment.'' that includes the conjunction at the beginning and the full-stop at the end.
+    
+    Moreover the conjunct segment spans differ as well due to difference in treatment. Instead of being analysed in parallel, having sibling status as depicted in Figure \ref{fig:segment-conjunction-paralel}, the parse generated conjunct segments are subsumed in a cascade from the former to the latter as depicted in Figure \ref{fig:segment-conjunction-subsumed}.
+    
+    In this section were mentioned the most important aspects in which the corpora annotations and parser output diverge. The evaluation methodology has been developed to take segmentation discrepancies into consideration in order to provide a wider evaluation ground to the systemic associations. Next section introduces the evaluation methodology.
+    
 \section{Evaluation methodology}
 \label{sec:evaluation-methodology}
 
-\subsection{Segments}
+\subsection{Reading the corpus segments as a set of mono labelled segments}
 
     To compare the segment boundaries we need to understand how they are represented in each output and how they can be brought to a common form comparison. 
     All datasets were created with the UAM Corpus Tool \citep{ODonnell2008,ODonnell2008a} version 2.4. The annotations, in this software, are recorded as segments spanning from a start to an end position in the text file together with the set of features (selected from a systemic network) attributed to that segment. There are no constituency or dependency relations between segments. The XML representation of an example annotation segment is provided in Listing \ref{lst:segment1}. There the \textit{id} attribute indicates the unique identification number within the annotation dataset, the \textit{start} and \textit{end} attributes define the segment between two character offsets relative to the beginning of the text file.
@@ -187,7 +194,7 @@ state="active"/>
 \end{lstlisting}
 \end{minipage}
 
-     In the current evaluation, the segments are reduced to carry only one label. The consequence is that segments with multiple features (Figure \ref{fig:segment-multiple}) are broken down into multiple segments with the same span (Figure \ref{fig:segment-simple}) for each feature. When each segment contains exactly one feature the evaluation can be focused on one or a set of features of interest by selecting only the segments that contain exactly those. 
+     In the current evaluation, the segments are constrained to carry only one label each. The consequence is that segments with multiple features (Figure \ref{fig:segment-multiple}) are broken down into multiple segments with the same span (Figure \ref{fig:segment-simple}) for each feature in the original segment. Doing so permits the evaluation to focus on one or a set of features by selecting only the segments that contain exactly those features. 
 
     \begin{figure}[!ht]
         \centering
@@ -224,8 +231,6 @@ state="active"/>
     \end{figure}
 
 % todo conclude the section 
-
-\subsection{reading the corpus segments as a set of mono labelled segments}
 
 
 \subsection{Turning parser output into a set of mono labelled segments}
@@ -303,7 +308,7 @@ state="active"/>
     
     % All the above metrics take into account that the content of the segment text may vary and so they use text edit distance to account for that. In the case of the current evaluation the segments are defined on the same text and thus only the segment indexes are relevant. 
     
-    A simple metric for the difference between the segments taking into account their start and end indexes is that of \textit{geometric distance}. For two segments $S(start_S,end_S)$ and $T(start_T,end_T)$ the geometric distance is defined in Equation \ref{eq:distance}. We can replace the difference between start and end indexes with $\varDelta_{start}$ and $\varDelta_{end}$ notation and obtain the reduced form provided in Equation \ref{eq:distance-simpliefied}
+    A simple metric for the difference between the segments taking into account their start and end indexes is that of \textit{geometric distance}. For two segments $S(start_S,end_S)$ and $T(start_T,end_T)$ the geometric distance is defined in Equation \ref{eq:distance}. We can replace the difference between start and end indexes with $\varDelta_{start}$ and $\varDelta_{end}$ notation and obtain the reduced form provided in Equation \ref{eq:distance-simpliefied}. These distances will be discussed in Section \ref{sec:segmentation-evaluation} based on the evaluation data.
     
     \begin{equation} \label{eq:distance}
     d= \sqrt{(start_S - start_T)^{2}+(end_S-end_T)^{2}}
@@ -313,7 +318,6 @@ state="active"/>
     d= \sqrt{\varDelta_{start} ^{2}+\varDelta_{end}^{2}}
     \end{equation}
 
-    %todo: explain which one I have selected
     Now that the metric for comparing segments have been introduced I move on to present the second evaluation method, which, in addition to accounting for the exact matches, accounts for close matches between segments. 
     
     Taking into account the partially matching segments brings us to the second evaluation method. In this case, the task is that of aligning two sets of labelled segments, which is almost the same as the well know problem in computer science called \textit{stable marriage problem} \citep{Gusfield1989}. I adopt onward this frame to explain the evaluation method.
@@ -776,7 +780,7 @@ state="active"/>
     \label{tab:features-transitivity}
     \end{table}
     
-    In Table \ref{tab:features-transitivity} \textit{mental} and \textit{relational} processes are the ones with highest $F_1$ scores: 0.64 and 0.59. They are followed by \textit{influential} and \textit{action} process types while results for the \textit{event-relating} are not conclusive because of the very small number of occurrences in the dataset. This can be read in Table \ref{tab:features-transitivity} where the number of Matched segments is higher than the number of non matched corpus or parser segments. 
+    In Table \ref{tab:features-transitivity} \textit{mental} and \textit{relational} processes are the ones with highest $F_1$ scores: 0.64 and 0.59. They are followed by \textit{influential} and \textit{action} process types while results for the \textit{event-relating} are not conclusive because of the very small number of occurrences in the dataset. This can be read in Table \ref{tab:features-transitivity} where the number of matched segments is higher than the number of non matched corpus or parser segments. Note that considerable volume of annotations for process type sub-types are provided for mental and relational processes only \citep[153-155]{schulz2015me}.
     
     Among the \textit{mental} processes, \textit{two-role-cognition} and \textit{three-role-cognition} are parsed with highest accuracy of 51\% and 50\% correspondingly; whereas among \textit{relational} ones the \textit{attributive} process type scores the highest, 49\% while rest of them score much lower. This can be seen from the higher number of  non-matched segments for each process type for every feature.     
     
@@ -846,88 +850,71 @@ state="active"/>
     
     If we look again at Table \ref{tab:ratios-mental} and compare the number of all mental sub-type occurrences (see Figure \ref{fig:mental-types}) to the number of mental type occurrences, then we see that the ratio is quite low (63\%). As the delicacy of the features increases fewer of these features are provided in the corpus. This is a direct manifestation of difficulty in annotating with ever more delicate features. This ratio, therefore, measures the degree of incompleteness at this level of delicacy. Comparing the same ratio for the parser generated segments we notice an opposite result (151\%). This is in fact another measurement of noise generated due to uncertainty when advancing to a more delicate features as explained above. 
     
-    \begin{table}[!ht]
+    \begin{table}[!b]
     \centering
-    \resizebox{0.8\textwidth}{!}{%
-        \begin{tabulary}{1.1\textwidth}{@{}lCCCccc@{}}
+    % \resizebox{0.8\textwidth}{!}{%
+        \begin{tabulary}{0.8\textwidth}{@{}lCCCccc@{}}
         \toprule
-         & Match & Corpus non-matched & Parser non-matched & Precision & Recall & F1 \\ \midrule
+        & Match & Corpus non-matched & Parser non-matched & Precision & Recall & F1 \\ 
+        \midrule
         emoter & 91 & 70 & 57 & 0.61 & 0.57 & 0.59 \\
         phenomenon & 359 & 223 & 294 & 0.55 & 0.62 & 0.58 \\
         carrier & 267 & 263 & 244 & 0.52 & 0.50 & 0.51 \\
-        possessive & 75 & 48 & 99 & 0.43 & 0.61 & 0.51 \\
         cognizant & 82 & 84 & 104 & 0.44 & 0.49 & 0.47 \\
         agent & 267 & 210 & 428 & 0.38 & 0.56 & 0.46 \\
         possessed & 71 & 24 & 155 & 0.31 & 0.75 & 0.44 \\
-        attribute & 162 & 241 & 170 & 0.49 & 0.40 & 0.44 \\ %\hline
-        destination & 18 & 10 & 121 & 0.13 & 0.64 & 0.22 \\
-        affected & 93 & 70 & 663 & 0.12 & 0.57 & 0.20 \\ %\hline
-        location & 17 & 40 & 226 & 0.07 & 0.30 & 0.11 \\
-        source & 1 & 6 & 13 & 0.07 & 0.14 & 0.10 \\
-        created-phenomenon & 29 & 12 & 647 & 0.04 & 0.71 & 0.08 \\
-        path & 1 & 4 & 19 & 0.05 & 0.20 & 0.08 \\
-        range & 11 & 19 & 240 & 0.04 & 0.37 & 0.08 \\
-        affected-carrier & 33 & 28 & 899 & 0.04 & 0.54 & 0.07 \\
-        affected-possessed & 20 & 6 & 575 & 0.03 & 0.77 & 0.06 \\
-        affected-cognizant & 22 & 34 & 624 & 0.03 & 0.39 & 0.06 \\
-        manner & 1 & 7 & 25 & 0.04 & 0.12 & 0.06 \\
-        perceiver & 10 & 8 & 344 & 0.03 & 0.56 & 0.05 \\
-        agent-carrier & 17 & 12 & 745 & 0.02 & 0.59 & 0.04 \\
-        created & 3 & 15 & 228 & 0.01 & 0.17 & 0.02 \\
-        matchee & 1 & 2 & 91 & 0.01 & 0.33 & 0.02 \\
-        agent-perceiver & 6 & 1 & 657 & 0.01 & 0.86 & 0.02 \\
-        agent-cognizant & 2 & 3 & 633 & 0.00 & 0.40 & 0.01 \\
-        affected-perceiver & 1 & 0 & 544 & 0.00 & 1.00 & 0.00 \\
-        affected-destination & 1 & 0 & 593 & 0.00 & 1.00 & 0.00 \\
-        affected-emoter & 1 & 0 & 631 & 0.00 & 1.00 & 0.00 \\
-        affected-path & 0 & 0 & 494 &  &  &  \\
-        affected-source & 0 & 0 & 490 &  &  & \\ 
+        attribute & 162 & 241 & 170 & 0.49 & 0.40 & 0.44 \\
+        affected & 93 & 70 & 663 & 0.12 & 0.57 & 0.20 \\
         \bottomrule
         \end{tabulary}
-    }
+    % }
     \caption{The evaluation statistics available for the PARTICIPANT-ROLE-TYPE system from the TRANSITIVITY system network}
-    \label{tab:features-participant-role}
+    \label{tab:features-participant-role-restricted}
     \end{table}
     
-    So far we have discussed the process types and now let's turn attention towards the features from the PARTICIPANT-ROLE-TYPE system. Table \ref{tab:features-participant-role} presents the evaluation data and Figure \ref{fig:participant-roles-f1} depicts the precision, recall and $F_1$ score for each role sorted according to $F_1$ score in descending order while Figure \ref{fig:participant-roles} depicts the absolute number of segments for each feature.
+    So far we have discussed the process types and now let's turn attention towards the features from the PARTICIPANT-ROLE-TYPE system. Table \ref{tab:features-participant-role} presents the evaluation data along with the precision, recall and $F_1$ score for each participant role sorted according to $F_1$ score in descending order. 
     
-    \begin{table}[!ht]
+    \begin{table}[!b]
     \centering
     \begin{tabular}{lccc}
         \toprule
         {} & {Precision} & {Recall} & {F1} \\ %\hline
         \midrule
-        mean & 0.15 & 0.54 & 0.19 \\
-        standard deviation & 0.20 & 0.25 & 0.21 \\
-        min value & 0.00 & 0.13 & 0.01 \\
-        25\% quantile & 0.01 & 0.39 & 0.04 \\
-        50\% quantile & 0.04 & 0.56 & 0.08 \\
-        75\% quantile & 0.27 & 0.66 & 0.44 \\
-        max value & 0.61 & 1.00 (0.75) & 0.59 \\
+        mean & 0.43 & 0.56 & 0.46 \\
+        standard deviation & 0.16 & 0.10 & 0.12 \\
+        min value & 0.12 & 0.40 & 0.20 \\
+        25\% quantile & 0.37 & 0.50 & 0.44 \\
+        50\% quantile & 0.46 & 0.56 & 0.46 \\
+        75\% quantile & 0.53 & 0.58 & 0.53 \\
+        max value & 0.61 & 0.75 & 0.59 \\
         \bottomrule
     \end{tabular}
     \caption{Descriptive statistics of the precision, recall and F1 scores for evaluated PARTICIPANT-ROLE features}
     \label{tab:features-participant-role-accuracy}
     \end{table}
     
+    In this evaluation only the participant roles that appear at least 100 times in the corpus are considered. This restriction is inherited from \citet[160-162]{schulz2015me} study on OE corpus. The entire set of evaluation results for participant roles is provided in Table \ref{tab:features-participant-role} in Appendix \ref{ch:evaluation-data}. 
+    
+    The evaluation results for considered set of participant roles is summarised in Table \ref{tab:features-participant-role-accuracy}. The precision vary from 12\% to 61\% with an average of 43\%, and the recall values between 40\% and 75\% with an average of 56\%. The data is characterised by lower precision and higher recall. This is reflected in the $F_1$ score which is situated at a low average of almost 20\%. The maximum of 100\% recall is a bit unfortunate because there are three features with a single instance provided in the corpus and many provided in the parser output thus the precision of 0\%. So I decided to ignore this value and use the next maximum which is 75\% for possessed participant role.
+    
     \vspace{1em}
     \noindent
-    \begin{minipage}[t]{0.49\textwidth}
+    \begin{minipage}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{evaluation-results/figures-old/accuracy-syntactic-mood-precission-recall.png}
+        \includegraphics[width=\textwidth]{evaluation-results/figures/PARTICIPANT-ROLE-distribution-PR-10.pdf}
         \captionof{figure}{The distribution of precision and recall for selected features from the PARTICIPANT-ROLE system}
         \label{fig:participant-role-precission-recall}
     \end{minipage}
     \quad
-    \begin{minipage}[t]{0.49\textwidth}
+    \begin{minipage}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{evaluation-results/figures-old/accuracy-syntactic-mood-f1.png}
+        \includegraphics[width=\textwidth]{evaluation-results/figures/PARTICIPANT-ROLE-distribution-F1-10.pdf}
         \captionof{figure}{The distribution of F1 score for selected features from the PARTICIPANT-ROLE system}
         \label{fig:participant-role-precission-f1}
     \end{minipage}
     \vspace{1em}
     
-    The entire set of evaluation results for participant roles is summarised in Table \ref{tab:features-participant-role-accuracy}. The precision values vary from 0\% to 61\% with an average of 15\%, and the recall values between 54\% and 100\% with an average of 54\%. So the data is characterised by low precision and high recall. This is reflected in the $F_1$ score which is situated at a low average of almost 20\%. The maximum of 100\% recall is a bit unfortunate because there are three features with a single instance provided in the corpus and many provided in the parser output thus the precision of 0\%. So I decided to ignore this value and use the next maximum which is 75\% for possessed participant role.
+     The distribution of precision, recall and $F_1$ scores can be seen in Figures \ref{fig:participant-role-precission-recall} and \ref{fig:participant-role-precission-f1}. The  noticeable feature is the high peak of precision near the minimum side of the graph and fairly uniform and flat distribution of recall up to the maximum side of the graph. They translate into $F_1$ distribution as three groups: a considerable first group near the minimum pole; a second small island, formed by destination and affected participant roles, at 20\% accuracy; and a third larger group between 40\% and 60\% accuracy on the right side of the graph.
     
     In Table \ref{tab:features-participant-role} a suite of eight features (emoter, phenomenon, carrier, possessive, cognizant, agent, possessed and attribute) have $F_1$ scores descending from almost 60\% to 44\%. Destination and affected features follow with half of the previous (20\%) and then the score halves again to 11\% continuing to descend towards zero. As the accuracy decreases we can notice that multiple features display high recall spikes. This is a manifestation of the assignment of multiple roles to the same participant for the reasons explained above for the process types. 
 
@@ -941,3 +928,21 @@ state="active"/>
 \section{Discussion}
 \label{sec:evaluation-discussion}
     
+    In this chapter we have discussed how the empirical evaluation of Parsimonious Vole parser has been conducted. The stage is set through a general presentation of the corpora and what the task at hand is, i.e. identifying and comparing segments available in the manually annotated corpus to those generated automatically by the parser. The comparison is performed in terms of how accurate the spans of corpus and parser segments are and how many segments with the same label are matched.
+    
+    In Section \ref{sec:corpus} are presented the OCD and OE corpora that were used in the current evaluation exercise. OCD corpus is used for measuring the accuracy of the constituency structure and MOOD feature assignments generated by the parser. The other corpus, OE, is used to evaluate TRANSITIVITY feature assignments. The parser output does not follow entirely the annotation methodology used in annotation of the corpus therefore there are a few differences to account for, which are explained in Section \ref{sec:differences}. 
+    
+    Section \ref{sec:evaluation-methodology} explains how the current evaluation is performed . It starts by defining what is evaluated i.e. labelled segments, following onto how corpus annotations and parser output are represented as batches of segments, and finally presenting how these batches are compared to one another deriving from that parser accuracy measurements and how the measurement data is structured. The alignment algorithm takes into consideration not only the exact but also the partial matches, which is discussed in part in the next section. 
+    
+    The next two sections, \ref{sec:syntactic-evaluation} and \ref{sec:systemic-evaluation}, present the evaluation data and discuss the findings. The evaluation of the segmentation task revealed that 71\% of the segment have identical spans and that 83\% of the segments are identical or shifted slightly (up to 5 characters). There are several ways to measure distance and among the tested ones the most significant was the geometric distance and the WindowDiff distance, while the other distances were strongly correlated to one of these two and were omitted from the discussion. 
+    
+    The results of evaluating constituency structure are as follows. The parser generated unit classes with an accuracy of 74\%, clause main Mood elements with an accuracy of 71.2\% and Transitivity elements with an accuracy of 81\%. 
+    
+    When it comes to evaluating the accuracy of systemic assignments, the measurements vary a lot not only between features at different levels of delicacy but also between sibling features within the same system. The accuracy measurements are provided for a fraction of the MOOD system network and a fraction of TRANSITIVITY system network, based on the availability of annotations in the corpus (described in Section \ref{sec:corpus}). The features from the MOOD system network are assigned, on average, with an accuracy of 59\%. The accuracy of Transitivity parsing is measured for process types and participant roles separately. The former, on average, is 36\% and the latter, on average, is 19\%. 
+    
+    The present evaluation results are significant in at least two major respects. First, the parser overall accuracy is not very satisfactory, although, if restricted to well performing features only, the parsing results could be considered useful in some practical situations. Second, this evaluation shows the areas that are in need of improvement and provides explanations of what could be the reason and thus setting the scene for future work improvements. 
+    This is already a good starting point for investigations of certain grammar areas with considerable low performance in order identify and resolve potential problems. Also, this evaluation is the first one and constitutes the baseline for further incremental developments.
+    
+    Even if it is completely separate action, this evaluation can be useful for further corpus improvements as well. When I mention corpus improvement I bear in mind the OCD corpus in particular, which needs to be re-annotated by at least one more annotator and to be tested for reliability. In addition, the corpora size is fairly small and many systemic features are missing or under-represented. For example event relating, environmental and other processes are missing from the corpus just like the distinctions of action types. It would be desperately necessary and yet quite unlikely to happen, to extend the corpus annotation and include more delicate MOOD and TRANSITIVITY features to study how they vary and how accurately the parser detects them. 
+    
+    Next chapter will put the entire thesis into perspective and conclude the work done so far, providing new ideas and setting a tone for what needs to be done in future work to improve the current results.
