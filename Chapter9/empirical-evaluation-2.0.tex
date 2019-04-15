@@ -73,10 +73,32 @@
     The Bremen Translation Corpus (BTC) was created at the University of Bremen by Kerstin Fischer, Anatol Stefanowitsch and Anke Schulz. It consists of comparable and parallel texts. The comparable part consists of a series of newsgroup texts of about 10,000 words of English text and another 10,000 words of German, text taken from the same register. The parallel part, called EDNA, is much larger comprising about 100,000 words of parallel English-German text. Anke uses in her thesis 10,000 words of parallel text and about the same of comparable text \citep[31]{schulz2015me}. In this evaluation only the English part is considered that comprises 31 files spanning over 1503 clauses and 20864 words. In addition, Anke provided a set of similarly annotations of the ``Little Red Riding Hood'' fairy tale comprising 157 clauses that is also included into this evaluation as part of OE1. 
     
     The corpus annotations cover Cardiff TRANSITIVITY, THEME and MODIFICATION system networks. The grammatical details and the annotation methodology are covered in detail in \citet{schulz2015me}.
+    
+    % todo introduce the network fragment
+    
+    The corpus contains annotations with the part from the original system network shown in Figure \ref{fig:cardiff-transitivity}. The limitation is in the number of process types and is represented in Figure \ref{fig:transitivity-simplified}. Employing the entire system network in the annotation process increases in difficulty as the delicacy increases due to the time need to do the job. 
+
+    \begin{figure}[!ht]
+        \centering
+        \includegraphics[width=.65\textwidth]{Figures/Evaluation/trans-simplified.pdf}
+        \caption{The fragment of the TRANSITIVITY system network that has been used in the corpus}
+        \label{fig:transitivity-simplified}
+    \end{figure}
+    
 
 \subsection{OCD corpus}
 
      The first corpus (OCD) was created by Ela Oren and myself and is focused on syntactic constituency structure and clause MOOD features. The texts represent blog articles of people diagnosed with Obsessive Compulsive Disorder (OCD) who self-report on the challenge of overcoming OCD. The corpus contains four texts comprising all together 988 clauses and 8605 words. 
+
+    % todo expand, explain
+    The corpus contains selections from the system network depicted in Figure \ref{fig:mood-ocd-simplified}. It is a sub-part of the MOOD system network supported by the Parsimonious Vole parser, which was described in Chapter \ref{ch:the-grammar} and depicted in Figure \ref{fig:clause-mood}. Employing the entire system network in the annotations was difficult because as the delicacy increases the time spent for the annotation process increases drastically making the annotation process very tedious and slow.
+    
+    \begin{figure}[!ht]
+        \centering
+        \includegraphics[width=.85\textwidth]{Figures/Evaluation/ocd1-mood-simplified.pdf}
+        \caption{The part of the MOOD system network that has been used in OCD corpus annotation}
+        \label{fig:mood-ocd-simplified}
+    \end{figure}
 
 \subsection{Differences between the corpus annotation and parser output}
 \label{sec:differences}
@@ -342,7 +364,8 @@ state="active"/>
 
     Using the second method of evaluation, presented above, we can count for every distinct label (a) how many segments match perfectly, i.e. the distance is zero, (b) how many segments partially match, i.e. the distance is greater than zero, (c) how many corpus segments are unmatched and (d) how many parser segments are unmatched. This way we get a four count numbers per label for all labels used in the corpus annotation and parser output combined that we can use to compute parser accuracy. Further more the partial matches can be analysed to estimate the degree of the deviation and derive insights what can be done about it. Having said that I further proceed with presenting the evaluation data. 
 
-\section{Syntactic alignment evaluation}
+\section{Evaluation of the syntactic structure}
+\label{sec:syntactic-evaluation}
     In this section I present ...
     
 \subsection{Segmentation evaluation}
@@ -498,31 +521,423 @@ state="active"/>
     \label{tab:unit-types-relative}
     \end{table}
     
-    The evaluation data from Table \ref{tab:unit-types-relative} indicate that most (over 70\%) of the nominal and adverbial groups are identified with exact same borders as in the corpus while clause borders exhibit the most disagreement reflected by their low score of exact matches, only 13.84\%. The proportion of unmatched unit class segments in both the corpus and parser output varies between 9\% for clauses and nominal groups, and over 40\% for adjectival and adverbial groups. These proportions, however, are better interpreted when they are embedded into precision and recall score, which are provided in Table \ref{tab:unit-types-combined-F1}. 
-    
+    The evaluation data from Table \ref{tab:unit-types-relative} indicate that most (over 70\%) of the nominal and adverbial groups are identified with exact same borders as in the corpus while clause borders exhibit the most disagreement reflected by their low score of exact matches, only 13.84\%. The proportion of unmatched unit class segments in both the corpus and parser output varies between 9\% for clauses and nominal groups, and over 40\% for adjectival and adverbial groups. These proportions, however, are better interpreted when they are embedded into precision and recall score, which are provided in Table  \ref{tab:unit-types-combined-F1}. 
     \begin{table}[!ht]
     \centering
-    \begin{tabular}{lccc}
+    \begin{tabular}{lcccccc}
     \toprule
-    {} &  Precision &  Recall &   F1 \\
+     & \multicolumn{3}{c}{Exact match only} & \multicolumn{3}{c}{Exact and close match} \\ \cline{2-7} 
+     & Precision & Recall & F1 & Precision & Recall & F1 \\ 
     \midrule
-    nominal-group       &       0.91 &    0.87 & 0.89 \\
-    clause              &       0.87 &    0.90 & 0.89 \\
-    prepositional-group &       0.73 &    0.75 & 0.74 \\
-    adverbial-group     &       0.60 &    0.70 & 0.65 \\
-    adjectival-group    &       0.56 &    0.51 & 0.53 \\
+    nominal-group & 0.87 & 0.83 & 0.85 & 0.91 & 0.87 & 0.89 \\
+    adverbial-group & 0.53 & 0.64 & 0.58 & 0.87 & 0.90 & 0.89 \\
+    prepositional-group & 0.52 & 0.55 & 0.54 & 0.73 & 0.75 & 0.74 \\
+    clause & 0.49 & 0.56 & 0.52 & 0.60 & 0.70 & 0.65 \\
+    adjectival-group & 0.24 & 0.20 & 0.22 & 0.56 & 0.51 & 0.53 \\ 
     \bottomrule
     \end{tabular}
     \caption{Parser accuracy statistics for for the main unit classes}
     \label{tab:unit-types-combined-F1}
     \end{table}
     
-    Table \ref{tab:unit-types-combined-F1} shows that clause and normal group units are identified with almost 0.9 $F_1$ measure, which is an encouraging result, while the adjectival and adverbial groups score 0.53 and 0.65 indicates that there is some space for improvement. 
-    Further investigation is needed to discover the reason for the lower scores as there seem to be no obvious cause other than corpus and/or parser errors. Also, as visible in Figure \ref{fig:unit-types-data}, there is also a contrast in the number of segments between the first two unit types and the last three with a ratio of one to four or more. The low number of exemplars in this evaluation contributes probably to the lower accuracy.
+    The scores provided in the first three columns are calculated with respect to exact matches only, which can be seen reflected in the lower precision, recall and $F_1$ scores when compared to their correspondents in the last three columns. These scores, nonetheless, constitute an appropriate baseline for comparing parser accuracy for when the close matches are considered as well. Note that in all cases of a match, close or exact, the segments bear the same label, and so, as explained in Section \ref{sec:differences}, the source of the divergence is in the segmentation. 
     
-\subsection{Unit element evaluation}
-\label{sec:unit-element-evaluation}
+    The last three columns in Table \ref{tab:unit-types-combined-F1} show that clause and normal group units are identified with almost 0.9 $F_1$ measure, which is an encouraging result, while the adjectival and adverbial groups score 0.53 and 0.65 indicates that there is some space for improvement. 
+    Further investigation is needed to discover the reason for the lower scores as there seem to be no obvious cause other than corpus and/or parser errors. Also, as visible in Figure \ref{fig:unit-types-data}, there is a contrast in the number of segments between the first two unit types and the last three with a ratio of one to four or more. The low number of exemplars in this evaluation contributes to a certain extent to the lower accuracy statistics.
+    
+\subsection{Clause Mood elements evaluation}
+\label{sec:unit-mood-element-evaluation}
+
+    In this section I describe the evaluation statistics reflecting the parser capacity to detect the main elements of a clause. The data available in the corpus unfortunately does not permit to evaluate units of lower rank such as nominal, prepositional, adjectival and other groups. Next I present statistics on the clause Mood elements, which were described in Chapter \ref{ch:the-grammar}. These elements are present in the annotations of the OCD corpus as explained in the beginning of this chapter in Section \ref{sec:corpus}. 
+    
+    \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.85\textwidth]{evaluation-results/figures/unit-elements-mood-data.pdf}
+    \caption{Bar chart of matched and non-matched segments for the clause main Mood elements}
+    \label{fig:unit-elements-mood-data}
+    \end{figure}
+    
+    The OCD corpus annotations provide with the main syntactic (Mood) elements in the clause. Some of them, such as Auxiliary verbs, Main verb extension, Negation particle, and others have been omitted in the corpus and are thus missing in the present evaluation. Figure  \ref{fig:unit-elements-mood-data} reflects the absolute values from the empirical data. 
+    
+    The parser accuracy measurements for syntactic are contained in Table \ref{tab:unit-elements-mood-combined-F1}. The $F_1$ score for subjects and main verbs is nearly 0.9 while the complements and adjuncts are over 0.6. Finite element scores nearly 0.5 which is a low score for such easy to detect element. The reason for it lays in the incomplete corpus annotations, which fails to account for conflation of the finite and main verb elements. So when there was a main verb that was also a finite, only the main verb function was marked, which is incomplete. This incompleteness is also reflected in the discrepancy between low precision of 0.32 and high recall of 0.98. 
+    
+    \begin{table}[!ht]
+    \centering
+    \begin{tabular}{lcccccc}
+    \toprule
+     & \multicolumn{3}{c}{Exact match only} & \multicolumn{3}{c}{Exact and close match} \\ \cline{2-7} 
+     & Precision & Recall & F1 & Precision & Recall & F1 \\ 
+    \midrule
+    main verb & 0.86 & 0.90 & 0.88 & 0.87 & 0.90 & 0.89 \\
+    subject & 0.82 & 0.94 & 0.88 & 0.84 & 0.95 & 0.89 \\
+    complement & 0.27 & 0.73 & 0.39 & 0.53 & 0.89 & 0.66 \\
+    adjunct & 0.50 & 0.62 & 0.55 & 0.58 & 0.69 & 0.63 \\
+    finite & 0.32 & 0.98 & 0.48 & 0.32 & 0.98 & 0.49 \\
+    \bottomrule
+    \end{tabular}
+    \caption{Parser accuracy statistics for the clause main Mood elements}
+    \label{tab:unit-elements-mood-combined-F1}
+    \end{table}
+    
+    The number of complements unmatched in the parser output is nearly the same as the number of matched complements. This is reflected in the 0.53 precision score and nearly 0.9 recall rate which overall lead to an $F_1$ score lower than that of subject and main verb elements. This can be explained by a flaw, mentioned in Section \ref{sec:corpus}, in the annotation methodology as follows. The clausal complements often were annotated as a new clauses omitting to draw the same segment and marking it to be a complement in the clause above. This required the corpus revision and correction. Adjuncts however have a higher number of unmatched segments on both sides and this may be due to bugs in the parser and other mistake or omissions in the corpus.
+    
+\subsection{Clause Transitivity elements evaluation}
+\label{sec:unit-transitivity-element-evaluation}
+
+    OE corpus, provides with elements needed in semantic (Transitivity) parsing. The employed elements are Configuration, Participant role and Main verb while Circumstances are excluded from the study. Figure \ref{fig:unit-elements-transitivity-data} summarises the evaluation data. 
+    
+    The configuration segments, in SFG, correspond to clause segments, the participant role segments have as correspondents either the subject or complement segments, while the Main verb segments are shared. The aggregation of Subjects and Complements can be observed in Figure \ref{fig:unit-elements-transitivity-data} where the number of participant roles is approximately double the number of configurations. A configuration can have between one and three participants, and current data show an average of two participants per clause. 
+    
+    \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.85\textwidth]{evaluation-results/figures/unit-elements-transitivity-data.pdf}
+    \caption{Bar chart of matched and non-matched segments for the clause main Transitivity elements}
+    \label{fig:unit-elements-transitivity-data}
+    \end{figure}
+    
+    Note that in Figure \ref{fig:unit-elements-transitivity-data} the scale stretches over 2500 which reflects a much larger number of segments in OE corpus than that available in the OCD corpus. This, and certainly a higher quality of annotations, is reflected in the fairly uniform evaluation results. The $F_1$ (0.82), precision (0.74) and recall (0.92) scores vary very little across elements when compared to scores of the syntactic elements shown in Table \ref{tab:unit-elements-mood-combined-F1},  which vary substantially from one element to another.   
+
+    \begin{table}[!ht]
+    \centering
+    \begin{tabular}{lcccccc}
+    \toprule
+     & \multicolumn{3}{c}{Exact match only} & \multicolumn{3}{c}{Exact and close match} \\ \cline{2-7} 
+     & Precision & Recall & F1 & Precision & Recall & F1 \\ 
+    \midrule
+    participant-role &       0.62 &    0.88 & 0.73 &       0.74 &    0.92 & 0.82 \\
+    configuration    &       0.22 &    0.52 & 0.30 &       0.74 &    0.92 & 0.82 \\
+    main verb        &       0.62 &    0.86 & 0.72 &       0.71 &    0.90 & 0.79 \\ 
+    \bottomrule
+    \end{tabular}
+    \caption{Parser accuracy statistics for the clause main Mood elements}
+    \label{tab:unit-elements-transitivity-combined-F1}
+    \end{table}
+    
+    In case of exact match evaluation the scores are lower for participant roles and main verbs, situating at 0.73 $F_1$ value, while configuration $F_1$ plummeted to 0.3. As configurations correspond in SFG to clauses boundary establishment methodology plays a significant role in achieving exact matches. Thus the discrepancy in the $F_1$ score between exact and combined matches is explainable by a discrepancy in the clause boundaries establishment and was already addressed in Section \ref{sec:differences}. 
+    
+    We come to the end of the syntactic structure evaluation where I have shown that the parser segments text exactly as in the corpus with an accuracy of 0.7 and an approximately same segmentation with an accuracy of 0.8. The parser detects unit classes on average with a score of 0.52 $F_1$ for exact matches and 0.74 $F_1$ for close matches. The Mood and Transitivity elements are detected on average with a 0.71 and 0.81 $F_1$ scores. 
+    
+    A constituency parser that generates a syntactic analysis using comparable unit classes and functions (using phrase structure grammars) such as for example \citet{chen2014fast}, \citet{stern2017minimal} or \citet{kitaev2018multilingual} reach an accuracy of 0.95 $F_1$ for English. This state of the art in parsing with other grammars reflects that there is a large space to improve the accuracy of Parsimonious Vole constituency. But it should not be separated from the main mission of this work to parse with constituency structures enriched with features from system networks. Next I present the evaluation of the the systemic feature selections from the MOOD and from the TRANSITIVITY system networks. 
 
     
+    
+\section{Evaluation of the systemic features assignment}
+\label{sec:systemic-evaluation}
+    In this section ... 
+    % todo: 
+    
+    % todo say that the exact and close matches no longer play a role in the evaluation because it is about the features assigned to the unit and is of paradigmatic nature, thus has nothing to do with the syntagmatic dimension where the segments live :) 
+    
+\subsection{Evaluation of the MOOD systemic features assignment}
+\label{sec:systemic-evaluation-MOOD}
 
+    In this section I present the evaluation results for the systemic selections from the MOOD system network assigned to units in the constituency structure. The fragment of the MOOD system network used in this evaluation was presented as part of the OCD corpus description in Section \ref{sec:corpus}. The parser provides more feature selections as described in Section \ref{sec:mood} of the chapter describing the parser grammar, but the current evaluation is limited to only what is available in the corpus.
 
+    In Table \ref{tab:features-mood} are provided the evaluation results for each of the MOOD features grouped by system network. On average the parser assigns systemic features with a precision of 59\%. I do not address the evaluation of every feature in part but analyse the results as a whole taking a few systems as examples for discussion. Addressing each system in part aiming at understanding why the score is satisfactory of not should be tackled in future work.
+
+     \begin{table}[!ht]
+        \centering
+        \resizebox{0.8\textwidth}{!}{%
+            \begin{tabulary}{1.1\textwidth}{@{}lCCCccc@{}}
+            \toprule
+             & Match & Corpus non-matched & Parser non-matched & Precision & Recall & F1 \\ \midrule
+            POLARITY-TYPE &  &  &  &  &  &  \\
+            positive & 485 & 125 & 55 & 0.90 & 0.80 & 0.84 \\
+            negative & 57 & 10 & 70 & 0.45 & 0.85 & 0.59 \\
+            VOICE-TYPE &  &  &  &  &  &  \\
+            active & 553 & 102 & 68 & 0.89 & 0.84 & 0.87 \\
+            passive & 11 & 11 & 28 & 0.28 & 0.50 & 0.36 \\
+            FINITNESS &  &  &  &  &  &  \\
+            non-finite & 99 & 19 & 38 & 0.72 & 0.84 & 0.78 \\
+            finite & 526 & 33 & 554 & 0.49 & 0.94 & 0.64 \\
+            NON-FINITE-TYPE &  &  &  &  &  &  \\
+            perfective & 71 & 12 & 16 & 0.82 & 0.86 & 0.84 \\
+            imperfective & 26 & 9 & 24 & 0.52 & 0.74 & 0.61 \\
+            DEICTICITY &  &  &  &  &  &  \\
+            temporal & 446 & 74 & 55 & 0.89 & 0.86 & 0.87 \\
+            modal & 12 & 33 & 6 & 0.67 & 0.27 & 0.38 \\
+            MOOD-ASSESSMENT-TYPE &  &  &  &  &  &  \\
+            temporality & 35 & 17 & 27 & 0.56 & 0.67 & 0.61 \\
+            modality & 15 & 32 & 8 & 0.65 & 0.32 & 0.43 \\
+            intensity & 12 & 14 & 43 & 0.22 & 0.46 & 0.30 \\
+            MOOD-TYPE &  &  &  &  &  &  \\
+            indicative & 455 & 216 & 37 & 0.92 & 0.68 & 0.78 \\
+            imperative & 4 & 1 & 31 & 0.11 & 0.80 & 0.20 \\
+            INDICATIVE-TYPE &  &  &  &  &  &  \\
+            declarative & 355 & 260 & 27 & 0.93 & 0.58 & 0.71 \\
+            interrogative & 47 & 7 & 63 & 0.43 & 0.87 & 0.57 \\
+            INTERROGATIVE-TYPE &  &  &  &  &  &  \\
+            wh & 40 & 6 & 57 & 0.41 & 0.87 & 0.56 \\
+            yes-no & 5 & 3 & 8 & 0.38 & 0.62 & 0.48 \\
+            WH-SELECTION &  &  &  &  &  &  \\
+            wh-subject & 9 & 3 & 7 & 0.56 & 0.75 & 0.64 \\
+            wh-adjunct & 11 & 15 & 3 & 0.79 & 0.42 & 0.55 \\
+            wh-complement & 8 & 0 & 62 & 0.11 & 1.00 & 0.21 \\ \bottomrule
+            \end{tabulary}
+        }
+        \caption{The evaluation statistics available for the MOOD system network}
+        \label{tab:features-mood}
+    \end{table}
+    
+    Table \ref{tab:features-mood} summarises the evaluation results for the MOOD system network features grouped by system name marked with capital letters. The order in which the features appear in the table follow roughly an increase in systemic delicacy. As delicacy increases there are increasingly fewer occurrences where a system is employed. This is also associated also by a decrease in accuracy although there are multiple factors influencing it among which corpus quality and small population size. 
+    
+    The precision and recall values vary quite a lot from a minimum of 11\% up to a maximum of 93\% and the harmonic mean, the $F_1$ score, between 30\% and 87\%  averaging to almost 60\%. The details can be read in Table \ref{tab:mood-accuracy}. The distribution of these values can be seen in Figures \ref{fig:mood-precission-recall} and \ref{fig:mood-precission-f1}. A noticeable feature is the presence of two peaks in the precision and recall distributions: one around 50\% and the other one around 90\%. They translate into a similar $F_1$ distribution with peaks at 60\% and 85\%, a phenomena which I address next.
+
+    \begin{table}[!ht]
+        \centering
+        \begin{tabular}{lccc}
+            \toprule
+            {} & {Precision} & {Recall} & {F1} \\ %\hline
+            % feature count & 21.00 & 21.00 & 21.00 \\ \hline
+            \midrule
+            mean & 0.57 & 0.73 & 0.59 \\ 
+            standard deviation & 0.27 & 0.18 & 0.21 \\ 
+            min value & 0.11 & 0.32 & 0.20 \\ %\hline
+            25\% quantile & 0.41 & 0.62 & 0.48 \\ %\hline
+            50\% quantile & 0.56 & 0.80 & 0.61 \\ %\hline
+            75\% quantile & 0.82 & 0.86 & 0.78 \\ %\hline
+            max value & 0.93 & 1.00 & 0.87 \\ %\hline
+            \bottomrule
+        \end{tabular}
+        \caption{Descriptive statistics of the precision, recall and F1 scores for evaluated MOOD features}
+        \label{tab:mood-accuracy}
+    \end{table}
+
+    Within most systems, the $F_1$ scores exhibit a contrast from one feature to the other. What this means is discussed in the next two cases. For example in the POLARITY-TYPE system the positive polarity feature scores 84\% $F_1$ measure and negative one almost 60\%. As per Definition \ref{def:system}, the system features are mutually exclusive. The polarity of an English clause is positive by default unless a negation marker is found and this represents only 10\% of the clauses in  the corpus. This means that it should be sufficient for the parser to detect one feature with a reasonably high $F_1$ score then the converse feature should be detectable with the same degree of accuracy. Yet the current data invalidate this hypothesis as the grammar does not represent exclusivity.
+    
+    \vspace{1em}
+    \noindent
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{evaluation-results/figures-old/accuracy-syntactic-mood-precission-recall.png}
+        \captionof{figure}{The distribution of precision and recall for selected features from the MOOD system network}
+        \label{fig:mood-precission-recall}
+    \end{minipage}
+    \quad
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{evaluation-results/figures-old/accuracy-syntactic-mood-f1.png}
+        \captionof{figure}{The distribution of F1 score for selected features from the MOOD system network}
+        \label{fig:mood-precission-f1}
+    \end{minipage}
+    \vspace{1em}
+    
+    In the case of the POLARITY-TYPE system, the phenomena may be explained as a consequence of low delicacy in the parsing algorithm. The current implementation determines polarity by checking for the presence of the negation verbal marker only. Nonetheless a more delicate polarity testing will have to take into consideration polarity indicators from the subject, complement and adjuncts of various types that may have been taken into consideration during the annotation process. Providing an incomplete, less delicate implementation for systemic choices may be a source of errors and thus this hypothesis requires further investigation.  %The same can be expected of other systems that are reduced in delicacy 
+    
+    Nonetheless, the same phenomena can be seen if we look at the systems that do not span others with higher degrees of delicacy. For example, the detection mechanism for VOICE-TYPE is implemented similarly to POLARITY-TYPE. The parser checks whether there is a passive order of elements in the clause, otherwise the active voice is selected.  Detection of the positive voice scores a much higher $F_1$ measure of 87\% than the negative one of 36\%. There is no problem of low delicacy and still there is a discrepancy between the $F_1$ scores of the two features which is somewhat a surprising result. 
+
+    One way to look at the high discrepancy between the feature accuracy scores can be as follows. 
+    If we take VOICE-TYPE as example, most instances of active voice are easy to detect. But there is a portion of cases, regardless which voice it is, that are difficult for the parser to distinguish. The passive voice selections are executed mostly for these ambiguous cases. It it possible that this can be generalised to other system networks and more investigation is required to pinpoint exactly how such phenomena materialise.
+
+    In future implementations we can take advantage of the mutual exclusivity of system features and capitalise on the above finding, at least for the leaf systems. Taking into consideration that the score of one feature is higher, clause elements should then be provided with selections of those features only, while the complement features, which score low in this evaluation should remain unassigned. This means that only features that can be provided with high confidence (using $F_1$ score as a measure of that) shall be assigned. Then an additional process can be implemented to select the remaining unassigned features. 
+    
+    % todo conclude this section
+
+\subsection{Evaluation of the TRANSITIVITY systemic features assignment}
+\label{sec:systemic-evaluation-TRANSITIVITY}
+    
+    In this section I present the evaluation of the TRANSITIVITY system network. As was explained in Section \ref{sec:corpus} above, the OE corpus contains annotations with the part from the original system network depicted in Figure \ref{fig:cardiff-transitivity}. The parser provides more feature selections as described in Section \ref{sec:transitivity} of the chapter describing the parser grammar, but the current evaluation is limited to only what is available in the corpus. 
+    
+    Transitivity analysis is semantic in nature and poses challenges in meaning selection beyond constituent class or function. The approach of assigning this sort of features was explained in Chapter \ref{ch:semantic-parsing}. Here I would like to remind an important aspect that impacts the evaluation results, explaining in some cases recall being higher than precision.
+    
+    In the grammar, described in Chapter \ref{ch:the-grammar}, a clause can be assigned a single process configuration and whose participant constituents can take only one role each. In the semantic role labelling task the situation is similar: a clause takes one semantic frame and each constituent only one semantic label. This means that a parser shall generate as output one semantic configuration that fits best the text. 
+    
+    The Parsimonious Vole parser does not always provide a single semantic configuration. Instead it generates one or several possible configurations for each clause instead of providing exactly a one. The reason for this is the mechanism by which semantic analysis is generated. The constituency structure is tested against a set of semantic graph patterns and the matching patterns enrich the constituency structure with semantic features immediately. In some cases more than one pattern matches the constituency structure leading to enrichment by multiple graph patterns, which is not entirely true. Thus these multiple assignments should be interpreted as alternating possibilities.  
+    
+    Intuitively, this should reduce recall on all the elements but the effects are mostly manifested at the level of participant roles as will be described below. First let's discuss the evaluation results for the process types, which are provided in Table \ref{tab:features-transitivity}, and after we will turn to the evaluation of participant roles.
+    
+    \begin{table}[!ht]
+    \centering
+    \resizebox{0.8\textwidth}{!}{%
+        \begin{tabulary}{1.1\textwidth}{@{}lCCCccc@{}}
+        \toprule
+         & Match & Corpus non-matched & Parser non-matched & Precision & Recall & F1 \\ \midrule
+        PROCESS-TYPE &  &  &  &  &  &  \\
+        mental & 277 & 231 & 87 & 0.76 & 0.55 & 0.64 \\
+        relational & 338 & 297 & 174 & 0.66 & 0.53 & 0.59 \\
+        influential & 38 & 51 & 62 & 0.38 & 0.43 & 0.40 \\
+        action & 170 & 231 & 352 & 0.33 & 0.42 & 0.37 \\
+        event-relating & 1 & 28 & 0 & 1.00 & 0.03 & 0.07 \\
+        RELATIONAL-TYPE &  &  &  &  &  &  \\
+        attributive & 169 & 239 & 107 & 0.61 & 0.41 & 0.49 \\
+        directional & 30 & 13 & 127 & 0.19 & 0.70 & 0.30 \\
+        locational & 39 & 20 & 207 & 0.16 & 0.66 & 0.26 \\
+        matching & 2 & 0 & 69 & 0.03 & 1.00 & 0.05 \\
+        MENTAL-TYPE &  &  &  &  &  &  \\
+        three-role-cognition & 45 & 51 & 34 & 0.57 & 0.47 & 0.51 \\
+        two-role-cognition & 95 & 102 & 86 & 0.52 & 0.48 & 0.50 \\
+        two-role-perception & 13 & 12 & 102 & 0.11 & 0.52 & 0.19 \\
+        three-role-perception & 0 & 2 & 6 & 0.00 & 0.00 &  \\
+        desiderative & 0 & 0 & 81 & 0.00 &  &  \\
+        emotive & 0 & 0 & 87.00 & 0.00 &  & \\ \bottomrule
+        \end{tabulary}
+    }
+    \caption{The evaluation statistics available for the PROCESS-TYPE system and few of its subsystems from the TRANSITIVITY system network}
+    \label{tab:features-transitivity}
+    \end{table}
+    
+    In Table \ref{tab:features-transitivity} \textit{mental} and \textit{relational} processes are the ones with highest $F_1$ scores: 0.64 and 0.59. They are followed by \textit{influential} and \textit{action} process types while results for the \textit{event-relating} are not conclusive because of the very small number of occurrences in the dataset. This can be read in Table \ref{tab:features-transitivity} where the number of Matched segments is higher than the number of non matched corpus or parser segments. 
+    
+    Among the \textit{mental} processes, \textit{two-role-cognition} and \textit{three-role-cognition} are parsed with highest accuracy of 51\% and 50\% correspondingly; whereas among \textit{relational} ones the \textit{attributive} process type scores the highest, 49\% while rest of them score much lower. This can be seen from the higher number of  non-matched segments for each process type for every feature.     
+    
+    \begin{table}[!ht]
+    \centering
+    \begin{tabular}{lccc}
+        \toprule
+        {} & {Precision} & {Recall} & {F1} \\ %\hline
+        \midrule
+        mean & 0.35 & 0.48 & 0.36 \\
+        standard deviation & 0.32 & 0.26 & 0.19 \\
+        min value & 0.00 & 0.00 & 0.05 \\
+        25\% quantile & 0.07 & 0.42 & 0.24 \\
+        50\% quantile & 0.33 & 0.48 & 0.39 \\
+        75\% quantile & 0.59 & 0.55 & 0.51 \\
+        max value & 1.00 (0.76) & 1.00 (0.70) & 0.64 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Descriptive statistics of the precision, recall and F1 scores for evaluated TRANSITIVITY features}
+    \label{tab:transitivity-accuracy}
+    \end{table}
+    
+    Looking at the entire set of evaluation results for process types, the precision and recall values vary quite a lot from a minimum of 3\% up to a maximum of 100\% and the harmonic mean, the $F_1$ score, between 7\% and 64\%  averaging to 41\%. The details can be read in Table \ref{tab:transitivity-accuracy}. The maximum of 100\% precision is a bit unfortunate because there is one instance of event-relating process found by the parser which also failed to find the other 28 thus the recall of 3\% only. So I decided to ignore this value and use the next maximum which is 76\% for mental process types. A similar case is for the matching process type which was provided only two times in the corpus but the parser generated 67 different instances of it.
+    
+    Next I provide an analysis of the evaluation data indicating a potential relation between the increase in the delicacy and effect it has on the parser accuracy. The accuracy of mental process detection is 64\% whereas the average accuracy for the mental sub-types (cognition, perception, desiderative and emotive) is 40\%. The same holds for relational process whose accuracy is 59\% whereas the average of its sub-types (attributive, directional, locational, matching) is only 26\%. I start by comparing the number of mental and relational segments to the sum of mental sub-type segments and sum of relational sub-type segments correspondingly. 
+    
+   \begin{table}[!ht]
+    \noindent
+    \resizebox{0.98\linewidth}{!}{%
+     \begin{minipage}[t]{0.495\textwidth}
+         \centering
+         \resizebox{0.995\textwidth}{!}{%  
+             \begin{tabulary}{1.2\textwidth}{|C|c|c|c|}
+                 \hline
+                 \textbf{Features} & \textbf{Manual} & \textbf{Parse} & \textbf{/} \\ \hline
+                 mental & 508 & 364 & \textbf{0.72} \\ \hline
+                 mental sub-types (sum of) & 320 & 549 & \textbf{1.72} \\ \hline
+                 \textbf{/} & \textbf{0.63} & \textbf{1.51} &  \\ \hline
+             \end{tabulary}
+         }
+         \caption{The ratios between \textit{mental} segments and the sum of mental sub-type segments}
+         \label{tab:ratios-mental}
+     \end{minipage}%
+     \quad
+     \begin{minipage}[t]{0.495\textwidth}
+         \centering
+         %    \begin{table}[!ht]
+         \resizebox{0.995\textwidth}{!}{%  
+             \begin{tabulary}{1.2\textwidth}{|C|c|c|c|}
+                 \hline
+                 \textbf{Features} & \textbf{Manual} & \textbf{Parse} & \textit{\textbf{/}} \\ \hline
+                 relational & 635 & 512 & \textbf{0.8} \\ \hline
+                 relational sub-types (sum of) & 512 & 750 & \textbf{1.47} \\ \hline
+                 \textit{\textbf{/}} & \textbf{0.8} & \textbf{1.47} &  \\ \hline
+             \end{tabulary}
+         }
+         \caption{The ratios between \textit{relational} segments and the sum of mental sub-type segments}
+         \label{tab:ratios-relational}
+         %    \end{table}
+     \end{minipage}
+     }
+    \end{table}
+    
+    Table \ref{tab:ratios-mental} and \ref{tab:ratios-relational} provide each two pairs of ratios. They have very similar data content. Next I discuss the case of the mental process type only because the same applies to the case of relational processes and perhaps to other ones, but we lack data for testing this hypothesis. Thus, the first pair of ratios, provided in the lowest row, compares the number of segments with \textit{mental} feature to the sum of segments with any sub-type of \textit{mental} feature (i.e.  \textit{cognition}, \textit{perception}, \textit{emotive}, etc.). This ratio measures how well are the feature dependencies preserved across delicacy levels. The second pair of ratios, provided in the last column, compares the number of segments provided by the parser and to that available in corpus for both the mental feature and the sum of its sub-types.
+    
+    Table \ref{tab:ratios-mental} shows that in the corpus the number of segments with \textit{mental} feature is almost one fourth higher than what the parser provides (72 \%). This result means that probably not all the instances of a mental process have been detected by the parser (i.e. 28\% undetected). The same comparison ran on the sub-types of \textit{mental} process shows diametrically opposite results, i.e. three fourths more parser generated results than in the corpus (172\%) which is an indication of false positives. A possible explanation is the correlation between increase in delicacy and uncertainty i.e. the more delicate features are less precise in the parser results. As mentioned in the beginning of the section, uncertainty this case is manifested as a disjunction set of equally possible options. Currently there is no ranking available based on degrees of confidence. Hence the parser provides multiple feature selections from the same system (in this case MENTAL-TYPE) for the same constituent whereas there should be a single one. In the future this needs to be addressed by introducing a discrimination mechanism so that parser collects first all the possible matches and then only the most suitable is assigned possibly by using frequencies available from a corpus like OE.
+    
+    If we look again at Table \ref{tab:ratios-mental} and compare the number of all mental sub-type occurrences (see Figure \ref{fig:mental-types}) to the number of mental type occurrences, then we see that the ratio is quite low (63\%). As the delicacy of the features increases fewer of these features are provided in the corpus. This is a direct manifestation of difficulty in annotating with ever more delicate features. This ratio, therefore, measures the degree of incompleteness at this level of delicacy. Comparing the same ratio for the parser generated segments we notice an opposite result (151\%). This is in fact another measurement of noise generated due to uncertainty when advancing to a more delicate features as explained above. 
+    
+    \begin{table}[!ht]
+    \centering
+    \resizebox{0.8\textwidth}{!}{%
+        \begin{tabulary}{1.1\textwidth}{@{}lCCCccc@{}}
+        \toprule
+         & Match & Corpus non-matched & Parser non-matched & Precision & Recall & F1 \\ \midrule
+        emoter & 91 & 70 & 57 & 0.61 & 0.57 & 0.59 \\
+        phenomenon & 359 & 223 & 294 & 0.55 & 0.62 & 0.58 \\
+        carrier & 267 & 263 & 244 & 0.52 & 0.50 & 0.51 \\
+        possessive & 75 & 48 & 99 & 0.43 & 0.61 & 0.51 \\
+        cognizant & 82 & 84 & 104 & 0.44 & 0.49 & 0.47 \\
+        agent & 267 & 210 & 428 & 0.38 & 0.56 & 0.46 \\
+        possessed & 71 & 24 & 155 & 0.31 & 0.75 & 0.44 \\
+        attribute & 162 & 241 & 170 & 0.49 & 0.40 & 0.44 \\ %\hline
+        destination & 18 & 10 & 121 & 0.13 & 0.64 & 0.22 \\
+        affected & 93 & 70 & 663 & 0.12 & 0.57 & 0.20 \\ %\hline
+        location & 17 & 40 & 226 & 0.07 & 0.30 & 0.11 \\
+        source & 1 & 6 & 13 & 0.07 & 0.14 & 0.10 \\
+        created-phenomenon & 29 & 12 & 647 & 0.04 & 0.71 & 0.08 \\
+        path & 1 & 4 & 19 & 0.05 & 0.20 & 0.08 \\
+        range & 11 & 19 & 240 & 0.04 & 0.37 & 0.08 \\
+        affected-carrier & 33 & 28 & 899 & 0.04 & 0.54 & 0.07 \\
+        affected-possessed & 20 & 6 & 575 & 0.03 & 0.77 & 0.06 \\
+        affected-cognizant & 22 & 34 & 624 & 0.03 & 0.39 & 0.06 \\
+        manner & 1 & 7 & 25 & 0.04 & 0.12 & 0.06 \\
+        perceiver & 10 & 8 & 344 & 0.03 & 0.56 & 0.05 \\
+        agent-carrier & 17 & 12 & 745 & 0.02 & 0.59 & 0.04 \\
+        created & 3 & 15 & 228 & 0.01 & 0.17 & 0.02 \\
+        matchee & 1 & 2 & 91 & 0.01 & 0.33 & 0.02 \\
+        agent-perceiver & 6 & 1 & 657 & 0.01 & 0.86 & 0.02 \\
+        agent-cognizant & 2 & 3 & 633 & 0.00 & 0.40 & 0.01 \\
+        affected-perceiver & 1 & 0 & 544 & 0.00 & 1.00 & 0.00 \\
+        affected-destination & 1 & 0 & 593 & 0.00 & 1.00 & 0.00 \\
+        affected-emoter & 1 & 0 & 631 & 0.00 & 1.00 & 0.00 \\
+        affected-path & 0 & 0 & 494 &  &  &  \\
+        affected-source & 0 & 0 & 490 &  &  & \\ 
+        \bottomrule
+        \end{tabulary}
+    }
+    \caption{The evaluation statistics available for the PARTICIPANT-ROLE-TYPE system from the TRANSITIVITY system network}
+    \label{tab:features-participant-role}
+    \end{table}
+    
+    So far we have discussed the process types and now let's turn attention towards the features from the PARTICIPANT-ROLE-TYPE system. Table \ref{tab:features-participant-role} presents the evaluation data and Figure \ref{fig:participant-roles-f1} depicts the precision, recall and $F_1$ score for each role sorted according to $F_1$ score in descending order while Figure \ref{fig:participant-roles} depicts the absolute number of segments for each feature.
+    
+    \begin{table}[!ht]
+    \centering
+    \begin{tabular}{lccc}
+        \toprule
+        {} & {Precision} & {Recall} & {F1} \\ %\hline
+        \midrule
+        mean & 0.15 & 0.54 & 0.19 \\
+        standard deviation & 0.20 & 0.25 & 0.21 \\
+        min value & 0.00 & 0.13 & 0.01 \\
+        25\% quantile & 0.01 & 0.39 & 0.04 \\
+        50\% quantile & 0.04 & 0.56 & 0.08 \\
+        75\% quantile & 0.27 & 0.66 & 0.44 \\
+        max value & 0.61 & 1.00 (0.75) & 0.59 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Descriptive statistics of the precision, recall and F1 scores for evaluated PARTICIPANT-ROLE features}
+    \label{tab:features-participant-role-accuracy}
+    \end{table}
+    
+    \vspace{1em}
+    \noindent
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{evaluation-results/figures-old/accuracy-syntactic-mood-precission-recall.png}
+        \captionof{figure}{The distribution of precision and recall for selected features from the PARTICIPANT-ROLE system}
+        \label{fig:participant-role-precission-recall}
+    \end{minipage}
+    \quad
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{evaluation-results/figures-old/accuracy-syntactic-mood-f1.png}
+        \captionof{figure}{The distribution of F1 score for selected features from the PARTICIPANT-ROLE system}
+        \label{fig:participant-role-precission-f1}
+    \end{minipage}
+    \vspace{1em}
+    
+    The entire set of evaluation results for participant roles is summarised in Table \ref{tab:features-participant-role-accuracy}. The precision values vary from 0\% to 61\% with an average of 15\%, and the recall values between 54\% and 100\% with an average of 54\%. So the data is characterised by low precision and high recall. This is reflected in the $F_1$ score which is situated at a low average of almost 20\%. The maximum of 100\% recall is a bit unfortunate because there are three features with a single instance provided in the corpus and many provided in the parser output thus the precision of 0\%. So I decided to ignore this value and use the next maximum which is 75\% for possessed participant role.
+    
+    In Table \ref{tab:features-participant-role} a suite of eight features (emoter, phenomenon, carrier, possessive, cognizant, agent, possessed and attribute) have $F_1$ scores descending from almost 60\% to 44\%. Destination and affected features follow with half of the previous (20\%) and then the score halves again to 11\% continuing to descend towards zero. As the accuracy decreases we can notice that multiple features display high recall spikes. This is a manifestation of the assignment of multiple roles to the same participant for the reasons explained above for the process types. 
+
+    From the data presented in Table \ref{tab:features-participant-role} we can conclude that only the first one third of the participant roles can be considered usable with a reasonable level of confidence. It also shows a serious lack of data for the lower one third of the participant roles, which is directly reflected in low precision scores. A hypothesis that I put forward here is that in a larger corpus, with broader coverage over the participant roles, the scores for the rare features would improve considerably compared to this results. The abnormally high number of participants generated by the parser must be addressed in future work starting with an investigation of the Transitivity graph patterns generated from the PTDB, in particular for the features exhibiting recall spikes. 
+    
+    The compound roles such as affected-carrier, affected-possessed, agent-perceiver etc. have scored very low accuracy especially if compared to their simple counter parts. For example carrier role is detected with an accuracy of 51\% and affected role with  20\% while the compound role with very low accuracy of only 7\%. This indicates that in future work the way compound roles are assigned by the parser and how these assignments are evaluated should be rethought and a different approach taken.  
+    
+    The next section concludes this evaluation chapter.
+    % todo finish this section
+
+\section{Discussion}
+\label{sec:evaluation-discussion}
+    
