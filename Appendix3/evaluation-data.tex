@@ -1,4 +1,5 @@
 \chapter{Empirical evaluation data}
+\label{ch:evaluation-data}
 
 \begin{table}[!ht]
     \resizebox{\textwidth}{!}{%  
@@ -166,43 +167,45 @@
     \label{tab:features-transitivity}
 \end{table}
 
-\begin{table}[!ht]
-    \resizebox{\textwidth}{!}{%  
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-            \hline
-            \textbf{Feature} & \textbf{Match} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse\\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse\\ nm\end{tabular}} \\ \hline
-            emoter & 91 & 70 & 57 & 0.61 & 0.57 & 0.59 & 5.48 & 43.48 & 38.51 \\ \hline
-            phenomenon & 359 & 223 & 294 & 0.55 & 0.62 & 0.58 & 21.60 & 38.32 & 45.02 \\ \hline
-            carrier & 267 & 263 & 244 & 0.52 & 0.50 & 0.51 & 16.06 & 49.62 & 47.75 \\ \hline
-            possessive & 75 & 48 & 99 & 0.43 & 0.61 & 0.51 & 4.51 & 39.02 & 56.90 \\ \hline
-            cognizant & 82 & 84 & 104 & 0.44 & 0.49 & 0.47 & 4.93 & 50.60 & 55.91 \\ \hline
-            agent & 267 & 210 & 428 & 0.38 & 0.56 & 0.46 & 16.06 & 44.03 & 61.58 \\ \hline
-            possessed & 71 & 24 & 155 & 0.31 & 0.75 & 0.44 & 4.27 & 25.26 & 68.58 \\ \hline
-            attribute & 162 & 241 & 170 & 0.49 & 0.40 & 0.44 & 9.75 & 59.80 & 51.20 \\ \hline
-            destination & 18 & 10 & 121 & 0.13 & 0.64 & 0.22 & 1.08 & 35.71 & 87.05 \\ \hline
-            affected & 93 & 70 & 663 & 0.12 & 0.57 & 0.20 & 5.60 & 42.94 & 87.70 \\ \hline
-            location & 17 & 40 & 226 & 0.07 & 0.30 & 0.11 & 1.02 & 70.18 & 93.00 \\ \hline
-            source & 1 & 6 & 13 & 0.07 & 0.14 & 0.10 & 0.06 & 85.71 & 92.86 \\ \hline
-            created-phenomenon & 29 & 12 & 647 & 0.04 & 0.71 & 0.08 & 1.74 & 29.27 & 95.71 \\ \hline
-            path & 1 & 4 & 19 & 0.05 & 0.20 & 0.08 & 0.06 & 80.00 & 95.00 \\ \hline
-            range & 11 & 19 & 240 & 0.04 & 0.37 & 0.08 & 0.66 & 63.33 & 95.62 \\ \hline
-            affected-carrier & 33 & 28 & 899 & 0.04 & 0.54 & 0.07 & 1.99 & 45.90 & 96.46 \\ \hline
-            affected-possessed & 20 & 6 & 575 & 0.03 & 0.77 & 0.06 & 1.20 & 23.08 & 96.64 \\ \hline
-            affected-cognizant & 22 & 34 & 624 & 0.03 & 0.39 & 0.06 & 1.32 & 60.71 & 96.59 \\ \hline
-            manner & 1 & 7 & 25 & 0.04 & 0.12 & 0.06 & 0.06 & 87.50 & 96.15 \\ \hline
-            perceiver & 10 & 8 & 344 & 0.03 & 0.56 & 0.05 & 0.60 & 44.44 & 97.18 \\ \hline
-            agent-carrier & 17 & 12 & 745 & 0.02 & 0.59 & 0.04 & 1.02 & 41.38 & 97.77 \\ \hline
-            created & 3 & 15 & 228 & 0.01 & 0.17 & 0.02 & 0.18 & 83.33 & 98.70 \\ \hline
-            matchee & 1 & 2 & 91 & 0.01 & 0.33 & 0.02 & 0.06 & 66.67 & 98.91 \\ \hline
-            agent-perceiver & 6 & 1 & 657 & 0.01 & 0.86 & 0.02 & 0.36 & 14.29 & 99.10 \\ \hline
-            agent-cognizant & 2 & 3 & 633 & 0.00 & 0.40 & 0.01 & 0.12 & 60.00 & 99.69 \\ \hline
-            affected-perceiver & 1 & 0 & 544 & 0.00 & 1.00 & 0.00 & 0.06 & 0.00 & 99.82 \\ \hline
-            affected-destination & 1 & 0 & 593 & 0.00 & 1.00 & 0.00 & 0.06 & 0.00 & 99.83 \\ \hline
-            affected-emoter & 1 & 0 & 631 & 0.00 & 1.00 & 0.00 & 0.06 & 0.00 & 99.84 \\ \hline
-            affected-path & 0 & 0 & 494 & 0.00 &  &  & 0.00 &  & 100.00 \\ \hline
-            affected-source & 0 & 0 & 490 & 0.00 &  &  & 0.00 &  & 100.00 \\ \hline
-        \end{tabular}
+    \begin{table}[!b]
+    \centering
+    \resizebox{0.8\textwidth}{!}{%
+        \begin{tabulary}{1.1\textwidth}{@{}lCCCccc@{}}
+        \toprule
+         & Match & Corpus non-matched & Parser non-matched & Precision & Recall & F1 \\ \midrule
+        emoter & 91 & 70 & 57 & 0.61 & 0.57 & 0.59 \\
+        phenomenon & 359 & 223 & 294 & 0.55 & 0.62 & 0.58 \\
+        carrier & 267 & 263 & 244 & 0.52 & 0.50 & 0.51 \\
+        possessive & 75 & 48 & 99 & 0.43 & 0.61 & 0.51 \\
+        cognizant & 82 & 84 & 104 & 0.44 & 0.49 & 0.47 \\
+        agent & 267 & 210 & 428 & 0.38 & 0.56 & 0.46 \\
+        possessed & 71 & 24 & 155 & 0.31 & 0.75 & 0.44 \\
+        attribute & 162 & 241 & 170 & 0.49 & 0.40 & 0.44 \\ %\hline
+        destination & 18 & 10 & 121 & 0.13 & 0.64 & 0.22 \\
+        affected & 93 & 70 & 663 & 0.12 & 0.57 & 0.20 \\ %\hline
+        location & 17 & 40 & 226 & 0.07 & 0.30 & 0.11 \\
+        source & 1 & 6 & 13 & 0.07 & 0.14 & 0.10 \\
+        created-phenomenon & 29 & 12 & 647 & 0.04 & 0.71 & 0.08 \\
+        path & 1 & 4 & 19 & 0.05 & 0.20 & 0.08 \\
+        range & 11 & 19 & 240 & 0.04 & 0.37 & 0.08 \\
+        affected-carrier & 33 & 28 & 899 & 0.04 & 0.54 & 0.07 \\
+        affected-possessed & 20 & 6 & 575 & 0.03 & 0.77 & 0.06 \\
+        affected-cognizant & 22 & 34 & 624 & 0.03 & 0.39 & 0.06 \\
+        manner & 1 & 7 & 25 & 0.04 & 0.12 & 0.06 \\
+        perceiver & 10 & 8 & 344 & 0.03 & 0.56 & 0.05 \\
+        agent-carrier & 17 & 12 & 745 & 0.02 & 0.59 & 0.04 \\
+        created & 3 & 15 & 228 & 0.01 & 0.17 & 0.02 \\
+        matchee & 1 & 2 & 91 & 0.01 & 0.33 & 0.02 \\
+        agent-perceiver & 6 & 1 & 657 & 0.01 & 0.86 & 0.02 \\
+        agent-cognizant & 2 & 3 & 633 & 0.00 & 0.40 & 0.01 \\
+        affected-perceiver & 1 & 0 & 544 & 0.00 & 1.00 & 0.00 \\
+        affected-destination & 1 & 0 & 593 & 0.00 & 1.00 & 0.00 \\
+        affected-emoter & 1 & 0 & 631 & 0.00 & 1.00 & 0.00 \\
+        affected-path & 0 & 0 & 494 &  &  &  \\
+        affected-source & 0 & 0 & 490 &  &  & \\ 
+        \bottomrule
+        \end{tabulary}
     }
-    \caption{The evaluation statistics available for the PARTICIPANT-ROLE-TYPE system from the Transitivity network}
+    \caption{The evaluation statistics available for the PARTICIPANT-ROLE-TYPE system from the TRANSITIVITY system network}
     \label{tab:features-participant-role}
-\end{table}
+    \end{table}

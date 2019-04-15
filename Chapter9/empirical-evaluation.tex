@@ -761,48 +761,48 @@
 
     % If we look again at Table \ref{tab:ratios-mental} and compare the number of all mental sub-type occurrences (see Figure \ref{fig:mental-types}) to the number of mental type occurrences, then we see that the ratio is quite low (63\%). As the delicacy of the features increases fewer of these features are provided in the corpus. This is a direct manifestation of difficulty in annotating with ever more delicate features. This ratio, therefore, measures the degree of incompleteness at this level of delicacy. Comparing the same ratio for the parser generated segments we notice an opposite result (151\%). This is in fact another measurement of noise generated due to uncertainty when advancing to a more delicate features as explained above. 
 
-    So far we have discussed the process types and now let's turn attention towards the features from the PARTICIPANT-ROLE-TYPE system. Table \ref{tab:features-participant-role} presents the evaluation data and Figure \ref{fig:participant-roles-f1} depicts the precision, recall and F_1 score for each role sorted according to F_1 score in descending order while Figure \ref{fig:participant-roles} depicts the absolute number of segments for each feature.
+    % So far we have discussed the process types and now let's turn attention towards the features from the PARTICIPANT-ROLE-TYPE system. Table \ref{tab:features-participant-role} presents the evaluation data and Figure \ref{fig:participant-roles-f1} depicts the precision, recall and F_1 score for each role sorted according to F_1 score in descending order while Figure \ref{fig:participant-roles} depicts the absolute number of segments for each feature.
 
-    \begin{table}[!ht]
-        \resizebox{0.95\textwidth}{!}{%  
-        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-            \hline
-            \textbf{Feature} & \textbf{Match} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse\\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse\\ nm\end{tabular}} \\ \hline
-            emoter & 91 & 70 & 57 & 0.61 & 0.57 & 0.59 & 5.48 & 43.48 & 38.51 \\ \hline
-            phenomenon & 359 & 223 & 294 & 0.55 & 0.62 & 0.58 & 21.60 & 38.32 & 45.02 \\ \hline
-            carrier & 267 & 263 & 244 & 0.52 & 0.50 & 0.51 & 16.06 & 49.62 & 47.75 \\ \hline
-            possessive & 75 & 48 & 99 & 0.43 & 0.61 & 0.51 & 4.51 & 39.02 & 56.90 \\ \hline
-            cognizant & 82 & 84 & 104 & 0.44 & 0.49 & 0.47 & 4.93 & 50.60 & 55.91 \\ \hline
-            agent & 267 & 210 & 428 & 0.38 & 0.56 & 0.46 & 16.06 & 44.03 & 61.58 \\ \hline
-            possessed & 71 & 24 & 155 & 0.31 & 0.75 & 0.44 & 4.27 & 25.26 & 68.58 \\ \hline
-            attribute & 162 & 241 & 170 & 0.49 & 0.40 & 0.44 & 9.75 & 59.80 & 51.20 \\ \hline
-            destination & 18 & 10 & 121 & 0.13 & 0.64 & 0.22 & 1.08 & 35.71 & 87.05 \\ \hline
-            affected & 93 & 70 & 663 & 0.12 & 0.57 & 0.20 & 5.60 & 42.94 & 87.70 \\ \hline
-            location & 17 & 40 & 226 & 0.07 & 0.30 & 0.11 & 1.02 & 70.18 & 93.00 \\ \hline
-            source & 1 & 6 & 13 & 0.07 & 0.14 & 0.10 & 0.06 & 85.71 & 92.86 \\ \hline
-            created-phenomenon & 29 & 12 & 647 & 0.04 & 0.71 & 0.08 & 1.74 & 29.27 & 95.71 \\ \hline
-            path & 1 & 4 & 19 & 0.05 & 0.20 & 0.08 & 0.06 & 80.00 & 95.00 \\ \hline
-            range & 11 & 19 & 240 & 0.04 & 0.37 & 0.08 & 0.66 & 63.33 & 95.62 \\ \hline
-            affected-carrier & 33 & 28 & 899 & 0.04 & 0.54 & 0.07 & 1.99 & 45.90 & 96.46 \\ \hline
-            affected-possessed & 20 & 6 & 575 & 0.03 & 0.77 & 0.06 & 1.20 & 23.08 & 96.64 \\ \hline
-            affected-cognizant & 22 & 34 & 624 & 0.03 & 0.39 & 0.06 & 1.32 & 60.71 & 96.59 \\ \hline
-            manner & 1 & 7 & 25 & 0.04 & 0.12 & 0.06 & 0.06 & 87.50 & 96.15 \\ \hline
-            perceiver & 10 & 8 & 344 & 0.03 & 0.56 & 0.05 & 0.60 & 44.44 & 97.18 \\ \hline
-            agent-carrier & 17 & 12 & 745 & 0.02 & 0.59 & 0.04 & 1.02 & 41.38 & 97.77 \\ \hline
-            created & 3 & 15 & 228 & 0.01 & 0.17 & 0.02 & 0.18 & 83.33 & 98.70 \\ \hline
-            matchee & 1 & 2 & 91 & 0.01 & 0.33 & 0.02 & 0.06 & 66.67 & 98.91 \\ \hline
-            agent-perceiver & 6 & 1 & 657 & 0.01 & 0.86 & 0.02 & 0.36 & 14.29 & 99.10 \\ \hline
-            agent-cognizant & 2 & 3 & 633 & 0.00 & 0.40 & 0.01 & 0.12 & 60.00 & 99.69 \\ \hline
-            affected-perceiver & 1 & 0 & 544 & 0.00 & 1.00 & 0.00 & 0.06 & 0.00 & 99.82 \\ \hline
-            affected-destination & 1 & 0 & 593 & 0.00 & 1.00 & 0.00 & 0.06 & 0.00 & 99.83 \\ \hline
-            affected-emoter & 1 & 0 & 631 & 0.00 & 1.00 & 0.00 & 0.06 & 0.00 & 99.84 \\ \hline
-            affected-path & 0 & 0 & 494 & 0.00 &  &  & 0.00 &  & 100.00 \\ \hline
-            affected-source & 0 & 0 & 490 & 0.00 &  &  & 0.00 &  & 100.00 \\ \hline
-        \end{tabular}
-    }
-    \caption{The evaluation statistics available for the PARTICIPANT-ROLE-TYPE system from the TRANSITIVITY system network}
-    \label{tab:features-participant-role}
-    \end{table}
+    % \begin{table}[!ht]
+    %     \resizebox{0.95\textwidth}{!}{%  
+    %     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+    %         \hline
+    %         \textbf{Feature} & \textbf{Match} & \textbf{\begin{tabular}[c]{@{}c@{}}Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Parse\\ nm\end{tabular}} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Total \\ matched\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Manual\\ nm\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\%Parse\\ nm\end{tabular}} \\ \hline
+    %         emoter & 91 & 70 & 57 & 0.61 & 0.57 & 0.59 & 5.48 & 43.48 & 38.51 \\ \hline
+    %         phenomenon & 359 & 223 & 294 & 0.55 & 0.62 & 0.58 & 21.60 & 38.32 & 45.02 \\ \hline
+    %         carrier & 267 & 263 & 244 & 0.52 & 0.50 & 0.51 & 16.06 & 49.62 & 47.75 \\ \hline
+    %         possessive & 75 & 48 & 99 & 0.43 & 0.61 & 0.51 & 4.51 & 39.02 & 56.90 \\ \hline
+    %         cognizant & 82 & 84 & 104 & 0.44 & 0.49 & 0.47 & 4.93 & 50.60 & 55.91 \\ \hline
+    %         agent & 267 & 210 & 428 & 0.38 & 0.56 & 0.46 & 16.06 & 44.03 & 61.58 \\ \hline
+    %         possessed & 71 & 24 & 155 & 0.31 & 0.75 & 0.44 & 4.27 & 25.26 & 68.58 \\ \hline
+    %         attribute & 162 & 241 & 170 & 0.49 & 0.40 & 0.44 & 9.75 & 59.80 & 51.20 \\ \hline
+    %         destination & 18 & 10 & 121 & 0.13 & 0.64 & 0.22 & 1.08 & 35.71 & 87.05 \\ \hline
+    %         affected & 93 & 70 & 663 & 0.12 & 0.57 & 0.20 & 5.60 & 42.94 & 87.70 \\ \hline
+    %         location & 17 & 40 & 226 & 0.07 & 0.30 & 0.11 & 1.02 & 70.18 & 93.00 \\ \hline
+    %         source & 1 & 6 & 13 & 0.07 & 0.14 & 0.10 & 0.06 & 85.71 & 92.86 \\ \hline
+    %         created-phenomenon & 29 & 12 & 647 & 0.04 & 0.71 & 0.08 & 1.74 & 29.27 & 95.71 \\ \hline
+    %         path & 1 & 4 & 19 & 0.05 & 0.20 & 0.08 & 0.06 & 80.00 & 95.00 \\ \hline
+    %         range & 11 & 19 & 240 & 0.04 & 0.37 & 0.08 & 0.66 & 63.33 & 95.62 \\ \hline
+    %         affected-carrier & 33 & 28 & 899 & 0.04 & 0.54 & 0.07 & 1.99 & 45.90 & 96.46 \\ \hline
+    %         affected-possessed & 20 & 6 & 575 & 0.03 & 0.77 & 0.06 & 1.20 & 23.08 & 96.64 \\ \hline
+    %         affected-cognizant & 22 & 34 & 624 & 0.03 & 0.39 & 0.06 & 1.32 & 60.71 & 96.59 \\ \hline
+    %         manner & 1 & 7 & 25 & 0.04 & 0.12 & 0.06 & 0.06 & 87.50 & 96.15 \\ \hline
+    %         perceiver & 10 & 8 & 344 & 0.03 & 0.56 & 0.05 & 0.60 & 44.44 & 97.18 \\ \hline
+    %         agent-carrier & 17 & 12 & 745 & 0.02 & 0.59 & 0.04 & 1.02 & 41.38 & 97.77 \\ \hline
+    %         created & 3 & 15 & 228 & 0.01 & 0.17 & 0.02 & 0.18 & 83.33 & 98.70 \\ \hline
+    %         matchee & 1 & 2 & 91 & 0.01 & 0.33 & 0.02 & 0.06 & 66.67 & 98.91 \\ \hline
+    %         agent-perceiver & 6 & 1 & 657 & 0.01 & 0.86 & 0.02 & 0.36 & 14.29 & 99.10 \\ \hline
+    %         agent-cognizant & 2 & 3 & 633 & 0.00 & 0.40 & 0.01 & 0.12 & 60.00 & 99.69 \\ \hline
+    %         affected-perceiver & 1 & 0 & 544 & 0.00 & 1.00 & 0.00 & 0.06 & 0.00 & 99.82 \\ \hline
+    %         affected-destination & 1 & 0 & 593 & 0.00 & 1.00 & 0.00 & 0.06 & 0.00 & 99.83 \\ \hline
+    %         affected-emoter & 1 & 0 & 631 & 0.00 & 1.00 & 0.00 & 0.06 & 0.00 & 99.84 \\ \hline
+    %         affected-path & 0 & 0 & 494 & 0.00 &  &  & 0.00 &  & 100.00 \\ \hline
+    %         affected-source & 0 & 0 & 490 & 0.00 &  &  & 0.00 &  & 100.00 \\ \hline
+    %     \end{tabular}
+    % }
+    % \caption{The evaluation statistics available for the PARTICIPANT-ROLE-TYPE system from the TRANSITIVITY system network}
+    % \label{tab:features-participant-role}
+    % \end{table}
 
     \begin{figure}[!ht]
         \centering
@@ -817,22 +817,22 @@
         \label{fig:participant-roles-f1}
     \end{figure}
 
-    A suite of eight features: emoter, phenomenon, carrier, possessive, cognizant, agent, possessed and attribute have F_1 scores descending from almost 60\% to 44\%. Destination and affected features follow with half of the previous (20\%) and then the score halves again to 11\% continuing to descend towards zero. As the F_1 score decreases we can notice that some features display high recall spikes. This is a manifestation of the assignment of multiple roles to the same participant for the reasons explained above for the process types. 
+    % A suite of eight features: emoter, phenomenon, carrier, possessive, cognizant, agent, possessed and attribute have F_1 scores descending from almost 60\% to 44\%. Destination and affected features follow with half of the previous (20\%) and then the score halves again to 11\% continuing to descend towards zero. As the F_1 score decreases we can notice that some features display high recall spikes. This is a manifestation of the assignment of multiple roles to the same participant for the reasons explained above for the process types. 
 
-    From the data presented in Figure \ref{fig:participant-roles-f1} we can conclude that only one third of the participant roles can be considered usable with a reasonable level of confidence. Yet in Figure \ref{fig:participant-roles} we can see that there is also a serious lack of data, which can explain a part of the low F_1 scores. A hypothesis that I put forward here is that in a larger corpus, with broader coverage over the participant roles, the scores for the rare features would considerably improve. Nonetheless an investigation is needed for Transitivity graph patterns generated from the PTDB, especially on the features exhibiting recall spikes. The next section concludes this evaluation chapter.
+    % From the data presented in Figure \ref{fig:participant-roles-f1} we can conclude that only one third of the participant roles can be considered usable with a reasonable level of confidence. Yet in Figure \ref{fig:participant-roles} we can see that there is also a serious lack of data, which can explain a part of the low F_1 scores. A hypothesis that I put forward here is that in a larger corpus, with broader coverage over the participant roles, the scores for the rare features would considerably improve. Nonetheless an investigation is needed for Transitivity graph patterns generated from the PTDB, especially on the features exhibiting recall spikes. The next section concludes this evaluation chapter.
 
 \section{Discussion}
 \label{sec:evaluation-discussion}
-    In this chapter we have discussed how the empirical evaluation of Parsimonious Vole parser has been conducted. The stage is set through a general presentation of the corpora and what the task at hand is, i.e. identifying and comparing segments available in the manually annotated corpus to those generated automatically by the parser. 
+    % In this chapter we have discussed how the empirical evaluation of Parsimonious Vole parser has been conducted. The stage is set through a general presentation of the corpora and what the task at hand is, i.e. identifying and comparing segments available in the manually annotated corpus to those generated automatically by the parser. 
 
     The first issue is deciding when two segments are the same. This is addressed in Section \ref{sec:segment-alignment} to \ref{sec:stable-marriage} covering a method to convert parser constituents into segments, reading the corpus segments and an algorithm, derived from the stable marriage problem, for matching segments  to detect the amount of overlap.
 
     The results are presented and analysed in Section \ref{sec:results}. This starts with general findings where we can see that 83\% of the segment have identical spans or are slightly shifted. The analysis advances to determine which elements are shifted and sets the foundation for future developments and corrections in the software. Next a syntactic and semantic analysis of constituent elements and systemic features are presented. 
 
-    The syntactic constituents score between 50\% and 90\% F_1 measure whereas the semantic ones are more stable scoring between 79\% and 82\% F_1 measure. These results can be seen in Section \ref{sec:syntactic-constituents} and \ref{sec:semantic-constituents}. When it comes to systemic features evaluation the results vary a lot not only between features at different levels of delicacy but also between sibling features within the same system. Analysis is provided in Section \ref{sec:syntactic-features} and \ref{sec:semantic-features}.
+    % The syntactic constituents score between 50\% and 90\% F_1 measure whereas the semantic ones are more stable scoring between 79\% and 82\% F_1 measure. These results can be seen in Section \ref{sec:syntactic-constituents} and \ref{sec:semantic-constituents}. When it comes to systemic features evaluation the results vary a lot not only between features at different levels of delicacy but also between sibling features within the same system. Analysis is provided in Section \ref{sec:syntactic-features} and \ref{sec:semantic-features}.
 
     Further investigation needs to be conducted to determine the sources and types of errors, shortcomings and potential approaches to improve both the corpus and parser. 
 
-    Because each of the current corpora has a single main annotator, a valuable future task is to add multiple annotators and establish agreement between them. Also, the corpora size is very small and many systemic features are missing or under-represented. For example event relating, environmental and other processes are missing from the corpus just like the distinctions of action types. It would be interesting to extend the annotation and include more MOOD features to study how they vary and how accurately the parser detects them. 
+    % Because each of the current corpora has a single main annotator, a valuable future task is to add multiple annotators and establish agreement between them. Also, the corpora size is very small and many systemic features are missing or under-represented. For example event relating, environmental and other processes are missing from the corpus just like the distinctions of action types. It would be interesting to extend the annotation and include more MOOD features to study how they vary and how accurately the parser detects them. 
 
     Each corpus has been created by a single author providing both syntactic and semantic annotations. This fact is an indication that the current corpus does not constitute a reliable golden standard and a more grounded corpus needs to be developed in the future with multiple independent authors and high inter-annotator agreement. Therefore, the results should be considered indicative and by no means representative of the parser performance or corpus quality. Nevertheless, this is already a good starting point for investigations of certain grammar areas with considerable low performance in order identify and resolve potential problems. Also, this evaluation is the first one and constitutes the baseline for further incremental developments.
