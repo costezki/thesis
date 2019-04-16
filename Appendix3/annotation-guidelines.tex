@@ -1,0 +1,107 @@
+\chapter{Annotation guidelines for OCD corpus}
+\label{ch:corpus-annotation-methodology}
+
+\section{Constituency}
+
+The constituency annotation is based on the Cardiff grammar \citep{Fawcett2008} with some consulting of the traditional grammar \citep{Quirk1985} for clarification; while MOOD systemic selections are based on the Sydney grammar \citep{Halliday2013}. Below follows a set of short descriptions aimed at helping annotators identify main unit types and clause elements. 
+
+Clause -- the main processing unit onto which meanings of different kinds are mapped and integrated into.
+\begin{itemize}
+  \item the punctuation (.?!) at the end of the sentence(the matrix clause) shall be left outside the segment
+  \item in clause complexes, the punctuation(,;``''-), conjunctions(and, or , but \dots) and other nexus markers(if, or, ) shall be left outside the segment. 
+\end{itemize}
+
+Finite -- a part of the verbal group expressing the tense or modality. It either precedes the Predicator or is conflated with it in present and past simple tenses.
+\begin{itemize}
+    \item If the finite is conflated with the predicate do not mark it
+    \item The finite is the first auxiliary verb in the verb group before the subject in declarative clauses and the auxiliary that precedes the subject in interrogative clauses. 
+\end{itemize}
+
+Subject -- the nominal group or a nominal clause that precedes the Predicator in a clause and it is something by reference to which the proposition can be affirmed or denied. The subject is the nearest nominal group or clause that precedes the predicator. 
+
+Predicator -- the part of verbal group minus the finite constituent when they are not conflated. It specifies additional temporal and aspectual relations, voice and the process type (e.g. action, relation, mental process etc.) that is predicated about the Subject. To enforce the syntactic and functional analysis proposed in the Cardiff analysis methodology \citep{Fawcett2008}, the complex clauses need to be separated into individual clauses so that each comply with the ``one main verb per clause'' principle (see below). The predicator is the entire verb group(main verb + auxiliaries) minus the first auxiliary(which is the finite element)
+
+Complement -- the part of the clause that follows the Predicator and has the potential of becoming a Subject, i.e. it can become an axis of the argument. Usually it is a nominal group and rarely a prepositional phrase. 
+\begin{itemize}
+    \item The nominal group, prepositional group or clause that follows the Predicator
+    \item exception are the copulative clauses (when the main verb is “to be”), then the adjectives following the verb receive complement function because they receive participant role of attribute (which is a quality)
+    \item prepositions that can introduce complements are enumerated in table 1
+    \item most clauses have 0 - 2 complements, exception are directional processes that can have 0-4 complements
+\end{itemize}
+
+Adjunct -- do not have the potential of becoming a Subject; therefore arguments cannot be constructed around adjunct elements. They are realized by adverbial and prepositional groups.
+\begin{itemize}
+    \item Prepositional phrases after the clause complements
+    \item adverbs preceding and following the predicator 
+    \item Adjuncts can occur in front of the subject, then the clause becomes thematically marked.
+    \item We do not annotate circumstantial adjuncts (bearing experiential information) but ONLY comment adjuncts (serving an interpersonal modification function in modality or appraisal). For more details see \citet{schulz2015me} guidelines.
+\end{itemize}
+
+Markers -- prepositions, conjunctions, expletives and verb particles. We do not annotate them. [Looking back at this rule I don't know what was behind this decision back in 2013].
+
+Group -- a set of words executing a particular function in a clause. The head of the group dictates the group type and the other words in the group may have other parts of speech and contribute to specifying enriching and further specifying the meaning of the group.
+\begin{itemize}
+    \item note: we do not make distinction between a simple group and a group complex
+    \item prepositional group is a nominal group preceded by a preposition
+\end{itemize}
+
+\section{Clause partition}
+Follow the ``One main verb per clause'' rule. Use the semantic analisys to guide the sentence clause division into clauses. 
+
+When the clauses are connected by a conjunction and have their own subject/objects then the conjunction is the clause border marker.  
+\begin{exe}
+    \ex The lion chased the tourist but she escaped alive. 
+    \ex The lion[Ag-Ca] chased[Pr] the tourist[Af-Pos]
+    \ex she[Ag] escaped[Pr] alive[Ra].
+\end{exe}
+
+When the predicators are conjoined and share subject and/or objects then each predicator will form a new clause and borrow the subject/objects from the other clause. 
+
+\begin{exe}
+    \ex The lion chased and caught the tourist.
+    \ex the lion[Ag-Ca] chased[Pr] the tourist[Af-Pos]
+    \ex the lion[Ag-Ca] caught[Pr] the tourist[Af-Pos]
+\end{exe}
+
+In the case of mental(e.g. know, think, feel, want, like), influential(e.g. start, stop, try, continue, fail) and event relating (e.g. cause) processes the predicates are often complex. Verbs in these classes are known as control and raising verbs \citep{Haegeman91} where a super-ordinate controls subordinate non-finite verb and binds its participants (Subject/Complement). 
+
+In order to comply with “one main verb per clause” principle, each Main Verb of the complex clause becomes a governor of a distinct clause. The subordinate verb with all of its dependent nodes is assigned to a place-holder. The super-ordinate verb receives the place-holder as Complement with the role of Phenomena. If the subject is missing in the subordinate clause then it is copied from the super-ordinate one. 
+
+\begin{exe}
+    \ex The lion wanted/began to chase the tourist.
+    \ex the lion[Cog] wanted/began[Pr] X[Phen]
+    \ex X= the lion[Ag-Ca] to chase[Pr] the tourist[Af-Pos]
+\end{exe}
+
+The meaning of complex clause decomposition can be expressed with an equivalent rephrasing by inserting “something that is” between the Main Verbs, as in example below. 
+
+\begin{exe}
+    \ex The lion wanted/began something that is to chase the tourist.
+\end{exe}
+
+\section{The tricky case of prepositional phrases}
+
+There are cases in mood analysis when deciding the unit type is impossible by relying solely on syntactic analysis (including typed dependency analysis). Prominent cases are the prepositional phrases. These can fill both a Complement and an Adjunct role. For mood analysis this implies that the same syntactic unit can fill a Complement and an Adjunct, while for transitivity analysis, it implies that the same syntactic unit can fill a Participant or a Circumstance. 
+
+\begin{exe}
+    \ex\label{ex:absc1} John goes home through London.
+    \ex\label{ex:absc2} John is building a house for Bob.
+    \ex Her teardrop shines like a diamond.
+    \ex John is building a house for ten years now.
+    \ex John goes to London by fast train.
+\end{exe}
+
+In examples \ref{ex:absc1} and \ref{ex:absc2} the prepositional phrases “through London”1 and “for Bob” are Complements and Participants (Path and Beneficiary roles) while in the latter examples ``like a diamond'', ``for ten years now'' and ``by fast train'' are Adjuncts and Circumstances (of comparison, temporal duration and manner-means).
+
+\section{Making selection from the MOOD system network}
+
+Here is a brief description how to make selections in the MOOD system network. Agency is of primary concern in this work. The rest of the features are annotated as much as the time permits. 
+
+\paragraph{Agency} is a clause level feature and is attributed depending on the experiential analysis of the clause (be it via Transitive or Ergative model). It expresses whether there is an active participant that brings about the unfolding of the process. Is the process brought about from within or from outside? With regards to this an important distinction to be made is between doings and happenings. The probing for doings is usually by asking the questions ``What did X do (to Y)?'' If there is a suitable X then we say that clause has an effective voice. Now effective voice can be (a) operative (that corresponds to active voice in mood analysis) and thus realised with an agent (doer) as subject or (b) receptive (that corresponds to passive voice in mood analysis) and thus goal/medium or beneficiary takes the subject place while the agent is given a secondary role. It can be either overt i.e. agentive (a prepositional phrase complement marked in English via ``by'' preposition) or covert i.e. non-agentive (unspecified).
+
+Many intransitive verbs (with only one participant) are better analysed from Ergative perspective. In this case no external participant is implied to actuate the process and they are realised with a Medium subject. The best question to probe such clauses is by asking “What happened?”. If this probing is more suitable than the one for doing the the clause receives middle selection in the agency system. The middle configurations do not have a active or passive voices thus voice can be used as a probing method \citep[336-354]{Halliday2013}. 
+
+\paragraph{Modality} should be annotated as described in \citet{schulz2015me}.
+
+\paragraph{Remaining MOOD features} should be annotated as described in \citep{Halliday2013}.
+
