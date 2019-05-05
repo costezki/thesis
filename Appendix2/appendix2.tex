@@ -11,170 +11,204 @@ The syntax for decoding patterns is as follows:
 	\item \textit{mrkr} stands for any of the markers listed in the fourth column;
 	\item \textit{//} represents delimiter between multiple patterns;
 	\item punctuation marks \textit{, ; -} in the pattern stand for punctuation marks in the sentence;
-	\item round brackets \textit{()} mean that the element is optional si it may occur but it may as well be absent;
+	\item round brackets \textit{()} mean that the element is optional, so it may occur but it may as well be absent;
 	\item text in quotes \textit{``''} just like punctuation marks is the text that occurs in the sentence;
 	\item square brackets \textit{[]} immediately after clause symbols mean presence (\textit{+}) of absence (\textit{-}) of a \textit{feature} (e.g. +negative means the feature negative must be selected among the clause features) or of a \textit{clause element} (e.g. -Subject means that the clause must not have an element which functions as Subject)
 \end{itemize}
 
-	\clearpage% Flush earlier floats (otherwise order might not be correct)
-	\begin{landscape}% Landscape page
-		\centering % Center table
-		\begin{longtable}{|l|l|l|l|l|}%{|l|l|p{3cm}|p{5cm}|p{5cm}|}
-			\hline
-            
-			{\bf Type}  & {\bf Category}         & {\bf Meaning}                        & {\bf Paratactic mrkrs}                                                                 & {\bf Paratactic template}                                                               \\ \hline
-			\endfirsthead
-            \endhead
-            \endlastfoot
-            
-            Elaboration & Exposition             & in other words, I.e                  & or, or rather, in other words, that is to say, I mean, i.e.,                           & @1 (,) (mrkr) @2 // @1 ;  @2 // @1 , @2 // @1 - @2 //                                   \\ \hline
-			Elaboration & Exemplification        & for example, e.g.                    & for example, for instance, in particular, e.g.                                         & @1 (,) (mrkr) @2 // @1 ;  @2 // @1 , @2 // @1 - @2 //                                   \\ \hline
-			Elaboration & Clarification          & to be precise, viz.                  & in fact, actually, indeed, at least, i.e., viz.,                                       & @1 (,) (mrkr) @2 // @1 ;  @2 // @1 , @2 // @1 - @2 //                                   \\ \hline
-			Extension   & additive:positive      & X and Y                              & and, but also, too, in addition, also, moreover, on the other hand, and that           & @1 mrkr @2 // "not only" @1 "but also" @2 // "both" @1 "and" @2 //                      \\ \hline
-			Extension   & additive:negative      & not X and not Y                      & nor, too, in addition, also, moreover, on the other hand                               & @1 mrkr @2 // ("neither") @1 "nor" @2 //                                                \\ \hline
-			Extension   & additive:adversative   & (but) X and conversely Y             & too, in addition, also, moreover, on the other hand, but                               & @1 (,) mrkr @2 //                                                                       \\ \hline
-			Extension   & variation:replacive    & (instead), not X but Y               & but not, not ? but, instead, but instead, on the contrary                              & @1{[}+negative{]} mrkr @2{[}+positive{]} // @1{[}+positive{]} mrkr @2{[}+negative{]} // \\ \hline
-			Extension   & variation:substractive & X but not all X                      & only, except, but                                                                      & @1 (,) (mrkr) @2 //                                                                     \\ \hline
-			Extension   & alternation            & X or Y                               & or, conversely, alternatively, on the other hand                                       & "either" @1 "or" ("else") @2 // @1 (,) mrkr @2 //                                       \\ \hline
-			Enhancement & temporal: same time    & A meanwhile B                        & and meanwhile, when, and, meanwhile, and at that time,                                 & @1 (,) mrkr @2 //                                                                       \\ \hline
-			Enhancement & temporal: later time   & a subsequently b                     & and then, then, and afterwards, afterwards, and soon afterwards, soon afterwards       & @1 (,) mrkr @2 //                                                                       \\ \hline
-			Enhancement & temporal: earlier time & a previously b                       & and before that, but before that, and first, but first, and till then, and until then, & @1 (,) mrkr @2 //                                                                       \\ \hline
-			Enhancement & spatial: same place    & c there d                            & and there                                                                              & @1 (,) mrkr @2 //                                                                       \\ \hline
-			Enhancement & manner: quality        & A in the way B                       & \textbackslash                                                                         & \textbackslash                                                                          \\ \hline
-			Enhancement & manner: means          & N is via/by means of M               & and in that way, thus, and thus, whereby                                               & @1 (,) mrkr @2 //                                                                       \\ \hline
-			Enhancement & manner: comparison     & N is like M                          & and similarly, and so, thus, as if                                                     & @1 (,) mrkr @2 //                                                                       \\ \hline
-			Enhancement & cause: reason@1        & because P so effect Q                & and, so, and so, and therefore, therefore                                              & @1 (,) mrkr @2 //                                                                       \\ \hline
-			Enhancement & cause: reason@2        & effect Q because of cause P          & for, because                                                                           & @1 (,) mrkr @2 //                                                                       \\ \hline
-			Enhancement & cause: purpose         & because intention Q so action P      & @1 (,) mrkr @2 //                                                                      & \textbackslash                                                                          \\ \hline
-			Enhancement & cause: result          & @1 (,) mrkr @2 //                    & \textbackslash                                                                         & \textbackslash                                                                          \\ \hline
-			Enhancement & condition: positive    & if P then Q                          & and then, then, and in that case                                                       & @1 (,) mrkr @2 //                                                                       \\ \hline
-			Enhancement & condition: negative    & if not p then q                      & or else, or otherwise, otherwise                                                       & @1 (,) mrkr @2 //                                                                       \\ \hline
-			Enhancement & condition: concessive  & if p then contrary to expectations Q & but, yet, and yet, still, but nevertheless, though, however, nevertheless              & @1 (,) mrkr @2 // @1 (;) mrkr @2                                                        \\ \hline
-			
-			\caption{Parataxis}
-			\label{tab:parataxis}
-		\end{longtable}
-
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\begin{longtable}{|l|l|p{3cm}|p{5cm}|p{5cm}|}
-			\hline
-			{\bf Type}  & {\bf Category}         & {\bf Meaning}                        & {\bf Hypotactic-finite mrkr}                                                  & {\bf Hypotactic-finite template}             \\ \hline
-			Elaboration & Exposition             & in other words, I.e                  & \textbackslash                                                                & \textbackslash                               \\ \hline
-			Elaboration & Exemplification        & for example, e.g.                    & \textbackslash                                                                & \textbackslash                               \\ \hline
-			Elaboration & Clarification          & to be precise, viz.                  & who, whose, whom, which, that, where, when , as                               & @a (,)(-)(;) mrkr @b // @a mrkr @b //        \\ \hline
-			Extension   & additive:positive      & X and Y                              & whereas, while                                                                & mrkr @b , @a // @a mrkr @b                   \\ \hline
-			Extension   & additive:negative      & not X and not Y                      & \textbackslash                                                                & \textbackslash                               \\ \hline
-			Extension   & additive:adversative   & (but) X and conversely Y             & whereas, while                                                                & mrkr @b , @a // @a mrkr @b                   \\ \hline
-			Extension   & variation:replacive    & (instead), not X but Y               & \textbackslash                                                                & \textbackslash                               \\ \hline
-			Extension   & variation:substractive & X but not all X                      & except that, but for the fact that, but that,                                 & @a (,) mrkr @b // mrkr @b , @a //            \\ \hline
-			Extension   & alternation            & X or Y                               & "if" @a{[}+negative{]} (,)("then") @b //                                      & \textbackslash                               \\ \hline
-			Enhancement & temporal: same time    & A meanwhile B                        & as, while, when, as soon as, the moment, whenever, every time, but as soon as & @a (,)mrkr @b // mrkr @b (,) @a //           \\ \hline
-			Enhancement & temporal: later time   & a subsequently b                     & after, since, ever since, especially since, and since, and after, then        & @a (,)mrkr @b // mrkr @b (,) @a //           \\ \hline
-			Enhancement & temporal: earlier time & a previously b                       & before, until, till, by the time                                              & @a (,)mrkr @b // mrkr @b (,) @a //           \\ \hline
-			Enhancement & spatial: same place    & c there d                            & as far as, where, wherever, everywhere                                        & @a (,) mrkr @b // mrkr @b , @a //            \\ \hline
-			Enhancement & manner: quality        & A in the way B                       & as                                                                            & @a (,) mrkr @b // mrkr @b , @a //            \\ \hline
-			Enhancement & manner: means          & N is via/by means of M               & @a (,) mrkr @b // mrkr @b , @a //                                             & \textbackslash                               \\ \hline
-			Enhancement & manner: comparison     & N is like M                          & as, as if, like, the way                                                      & @a (,) mrkr @b // mrkr @b , @a //            \\ \hline
-			Enhancement & cause: reason@1        & because P so effect Q                & \textbackslash                                                                & \textbackslash                               \\ \hline
-			Enhancement & cause: reason@2        & effect Q because of cause P          & because, as, since, in case, seeing that, considering                         & @a (,) mrkr @b                               \\ \hline
-			Enhancement & cause: purpose         & because intention Q so action P      & in order that, so that                                                        & @a (,) mrkr @b                               \\ \hline
-			Enhancement & cause: result          & so that                              & @a (,) mrkr @b                                                                & \textbackslash                               \\ \hline
-			Enhancement & condition: positive    & if P then Q                          & if, provided that, as long as, but if, in case                                & mrkr @b (,) ("then") @a // @a (,) mrkr @b // \\ \hline
-			Enhancement & condition: negative    & if not p then q                      & unless                                                                        & @a (,) mrkr @b                               \\ \hline
-			Enhancement & condition: concessive  & if p then contrary to expectations Q & even if, even though, although, though                                        & mrkr @b (,) @a // @a (,) mrkr @b             \\ \hline
-			\caption{Hypotaxis with lower finite clauses}
-			\label{tab:hytpotaxis-finite}
-		\end{longtable}
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\begin{longtable}{|l|l|p{3cm}|p{5cm}|p{5cm}|}
-			\hline
-			{\bf Type}  & {\bf Category}         & {\bf Meaning}                        & {\bf Hypo-non-finite mrkr}                                              & {\bf Hypo-non-finite template}                 \\ \hline
-			Elaboration & Exposition             & in other words, I.e                  & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			Elaboration & Exemplification        & for example, e.g.                    & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			Elaboration & Clarification          & to be precise, viz.                  & @a , @b{[}-Subj{]} // @a @b{[}-Subj{]} // @a , @b // @a @b // @b, @a // & \textbackslash                                 \\ \hline
-			Extension   & additive:positive      & X and Y                              & apart from, besides, with                                               & @a (,) (mrkr) @b// mrkr @b (,) @a// @a , @b // \\ \hline
-			Extension   & additive:negative      & not X and not Y                      & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			Extension   & additive:adversative   & (but) X and conversely Y             & without                                                                 & @a (,) (mrkr) @b// mrkr @b (,) @a// @a ,@b //  \\ \hline
-			Extension   & variation:replacive    & (instead), not X but Y               & instead of                                                              & @a (,) (mrkr) @b// mrkr @b (,) @a//            \\ \hline
-			Extension   & variation:substractive & X but not all X                      & other than                                                              & @a (,) (mrkr) @b// mrkr @b (,) @a//            \\ \hline
-			Extension   & alternation            & X or Y                               & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			Enhancement & temporal: same time    & A meanwhile B                        & @a , @b // @b , @a                                                      & \textbackslash                                 \\ \hline
-			Enhancement & temporal: later time   & a subsequently b                     & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			Enhancement & temporal: earlier time & a previously b                       & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			Enhancement & spatial: same place    & c there d                            & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			Enhancement & manner: quality        & A in the way B                       & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			Enhancement & manner: means          & N is via/by means of M               & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			Enhancement & manner: comparison     & N is like M                          & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			Enhancement & cause: reason@1        & because P so effect Q                & @a , @b // @b , @a                                                      & \textbackslash                                 \\ \hline
-			Enhancement & cause: reason@2        & effect Q because of cause P          & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			Enhancement & cause: purpose         & because intention Q so action P      & @a , @b // @b , @a                                                      & \textbackslash                                 \\ \hline
-			Enhancement & cause: result          & @a , @b                              & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			Enhancement & condition: positive    & if P then Q                          & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			Enhancement & condition: negative    & if not p then q                      & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			Enhancement & condition: concessive  & if p then contrary to expectations Q & \textbackslash                                                          & \textbackslash                                 \\ \hline
-			\caption{Hypotaxis with lower non-finite clauses}
-			\label{tab:hypotaxis-non-finite}
-		\end{longtable}
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\begin{longtable}{|l|l|p{3cm}|p{5cm}|p{5cm}|}
-			\hline
-			{\bf Type}  & {\bf Category}         & {\bf Meaning}                        & {\bf Hypo-non-finite conjunction mrkr} & {\bf Hypo-non-finite conjunction template} \\ \hline
-			Elaboration & Exposition             & in other words, I.e                  & \textbackslash                         & \textbackslash                             \\ \hline
-			Elaboration & Exemplification        & for example, e.g.                    & \textbackslash                         & \textbackslash                             \\ \hline
-			Elaboration & Clarification          & to be precise, viz.                  & \textbackslash                         & \textbackslash                             \\ \hline
-			Extension   & additive:positive      & X and Y                              & \textbackslash                         & \textbackslash                             \\ \hline
-			Extension   & additive:negative      & not X and not Y                      & \textbackslash                         & \textbackslash                             \\ \hline
-			Extension   & additive:adversative   & (but) X and conversely Y             & \textbackslash                         & \textbackslash                             \\ \hline
-			Extension   & variation:replacive    & (instead), not X but Y               & \textbackslash                         & \textbackslash                             \\ \hline
-			Extension   & variation:substractive & X but not all X                      & \textbackslash                         & \textbackslash                             \\ \hline
-			Extension   & alternation            & X or Y                               & \textbackslash                         & \textbackslash                             \\ \hline
-			Enhancement & temporal: same time    & A meanwhile B                        & while, when                            & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			Enhancement & temporal: later time   & a subsequently b                     & since                                  & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			Enhancement & temporal: earlier time & a previously b                       & until, till                            & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			Enhancement & spatial: same place    & c there d                            & \textbackslash                         & \textbackslash                             \\ \hline
-			Enhancement & manner: quality        & A in the way B                       & \textbackslash                         & \textbackslash                             \\ \hline
-			Enhancement & manner: means          & N is via/by means of M               & \textbackslash                         & \textbackslash                             \\ \hline
-			Enhancement & manner: comparison     & N is like M                          & like                                   & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			Enhancement & cause: reason@1        & because P so effect Q                & \textbackslash                         & \textbackslash                             \\ \hline
-			Enhancement & cause: reason@2        & effect Q because of cause P          & \textbackslash                         & \textbackslash                             \\ \hline
-			Enhancement & cause: purpose         & because intention Q so action P      & \textbackslash                         & \textbackslash                             \\ \hline
-			Enhancement & cause: result          & \textbackslash                       & \textbackslash                         & \textbackslash                             \\ \hline
-			Enhancement & condition: positive    & if P then Q                          & if                                     & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			Enhancement & condition: negative    & if not p then q                      & unless                                 & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			Enhancement & condition: concessive  & if p then contrary to expectations Q & even if, even though, though, although & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			\caption{Hypotaxis with lower non finite clause introduced by subordinating conjunction}
-			\label{tab:hypotaxis-non-finite-conjunction}
-		\end{longtable}
-		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\begin{longtable}{|l|l|p{3cm}|p{5cm}|p{5cm}|}
-			\hline
-			{\bf Type}  & {\bf Category}         & {\bf Meaning}                        & {\bf Hypo-non-finite preposition mrkr}                                    & {\bf Hypo-non-finite preposition template} \\ \hline
-			Elaboration & Exposition             & in other words, I.e                  & \textbackslash                                                            & \textbackslash                             \\ \hline
-			Elaboration & Exemplification        & for example, e.g.                    & \textbackslash                                                            & \textbackslash                             \\ \hline
-			Elaboration & Clarification          & to be precise, viz.                  & \textbackslash                                                            & \textbackslash                             \\ \hline
-			Extension   & additive:positive      & X and Y                              & \textbackslash                                                            & \textbackslash                             \\ \hline
-			Extension   & additive:negative      & not X and not Y                      & \textbackslash                                                            & \textbackslash                             \\ \hline
-			Extension   & additive:adversative   & (but) X and conversely Y             & \textbackslash                                                            & \textbackslash                             \\ \hline
-			Extension   & variation:replacive    & (instead), not X but Y               & \textbackslash                                                            & \textbackslash                             \\ \hline
-			Extension   & variation:substractive & X but not all X                      & \textbackslash                                                            & \textbackslash                             \\ \hline
-			Extension   & alternation            & X or Y                               & \textbackslash                                                            & \textbackslash                             \\ \hline
-			Enhancement & temporal: same time    & A meanwhile B                        & in, in the course, in process of, on                                      & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			Enhancement & temporal: later time   & a subsequently b                     & after                                                                     & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			Enhancement & temporal: earlier time & a previously b                       & before                                                                    & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			Enhancement & spatial: same place    & c there d                            & \textbackslash                                                            & \textbackslash                             \\ \hline
-			Enhancement & manner: quality        & A in the way B                       & \textbackslash                                                            & \textbackslash                             \\ \hline
-			Enhancement & manner: means          & N is via/by means of M               & by, by means of                                                           & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			Enhancement & manner: comparison     & N is like M                          & \textbackslash                                                            & \textbackslash                             \\ \hline
-			Enhancement & cause: reason@1        & because P so effect Q                & \textbackslash                                                            & \textbackslash                             \\ \hline
-			Enhancement & cause: reason@2        & effect Q because of cause P          & with, through, by, at, as a result, because of, in case of, in case       & @a (,) mrkr @b                             \\ \hline
-			Enhancement & cause: purpose         & because intention Q so action P      & in order to, so as to, for, for the sake of, with the aim of, for fear of & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			Enhancement & cause: result          & to                                   & @a (,) mrkr @b                                                            & \textbackslash                             \\ \hline
-			Enhancement & condition: positive    & if P then Q                          & in the event of                                                           & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			Enhancement & condition: negative    & if not p then q                      & but for, without                                                          & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			Enhancement & condition: concessive  & if p then contrary to expectations Q & despite, in spite of, without                                             & @a (,) mrkr @b // mrkr @b (,) @a           \\ \hline
-			
-			\caption{Hypotaxis with lower non finite clause introduced by a preposition}
-			\label{tab:hypotaxis-non-finite-preposition}
-		\end{longtable}
-	\end{landscape}
-	%\clearpage% Flush page
+    \clearpage% Flush earlier floats (otherwise order might not be correct)
+    	
+    \begin{landscape}
+    \begin{table}[]
+    \centering
+    \resizebox{1.4\textheight}{!}{%
+        \begin{tabulary}{3\textwidth}{p{7em}p{10em}p{10em}p{18em}p{18em}}
+        \toprule
+        Type & Category & Meaning & Paratactic markers & Paratactic template \\ \midrule
+        Elaboration & Exposition & in other words, I.e & or, or rather, in other words, that is to say, I mean, i.e., & @1 (,) (mrkr) @2 // @1 ;  @2 // @1 , @2 // @1 - @2 // \\
+        Elaboration & Exemplification & for example, e.g. & for example, for instance, in particular, e.g. & @1 (,) (mrkr) @2 // @1 ;  @2 // @1 , @2 // @1 - @2 // \\
+        Elaboration & Clarification & to be precise, viz. & in fact, actually, indeed, at least, i.e., viz., & @1 (,) (mrkr) @2 // @1 ;  @2 // @1 , @2 // @1 - @2 // \\
+        Extension & additive:positive & X and Y & and, but also, too, in addition, also, moreover, on the other hand, and that & @1 mrkr @2 // "not only" @1 "but also" @2 // "both" @1 "and" @2 // \\
+        Extension & additive:negative & not X and not Y & nor, too, in addition, also, moreover, on the other hand & @1 mrkr @2 // ("neither") @1 "nor" @2 // \\
+        Extension & additive:adversative & (but) X and conversely Y & too, in addition, also, moreover, on the other hand, but & @1 (,) mrkr @2 // \\
+        Extension & variation:replacive & (instead), not X but Y & but not, not ? but, instead, but instead, on the contrary & @1{[}+negative{]} mrkr @2{[}+positive{]} // @1{[}+positive{]} mrkr @2{[}+negative{]} // \\
+        Extension & variation:substractive & X but not all X & only, except, but & @1 (,) (mrkr) @2 // \\
+        Extension & alternation & X or Y & or, conversely, alternatively, on the other hand & "either" @1 "or" ("else") @2 // @1 (,) mrkr @2 // \\
+        Enhancement & temporal: same time & A meanwhile B & and meanwhile, when, and, meanwhile, and at that time, & @1 (,) mrkr @2 // \\
+        Enhancement & temporal: later time & a subsequently b & and then, then, and afterwards, afterwards, and soon afterwards, soon afterwards & @1 (,) mrkr @2 // \\
+        Enhancement & temporal: earlier time & a previously b & and before that, but before that, and first, but first, and till then, and until then, & @1 (,) mrkr @2 // \\
+        Enhancement & spatial: same place & c there d & and there & @1 (,) mrkr @2 // \\
+        Enhancement & manner: quality & A in the way B &  &  \\
+        Enhancement & manner: means & N is via/by means of M & and in that way, thus, and thus, whereby & @1 (,) mrkr @2 // \\
+        Enhancement & manner: comparison & N is like M & and similarly, and so, thus, as if & @1 (,) mrkr @2 // \\
+        Enhancement & cause: reason@1 & because P so effect Q & and, so, and so, and therefore, therefore & @1 (,) mrkr @2 // \\
+        Enhancement & cause: reason@2 & effect Q because of cause P & for, because & @1 (,) mrkr @2 // \\
+        Enhancement & cause: purpose & because intention Q so action P &  & @1 (,) mrkr @2 // \\
+        Enhancement & cause: result &  &  & @1 (,) mrkr @2 // \\
+        Enhancement & condition: positive & if P then Q & and then, then, and in that case & @1 (,) mrkr @2 // \\
+        Enhancement & condition: negative & if not p then q & or else, or otherwise, otherwise & @1 (,) mrkr @2 // \\
+        Enhancement & condition: concessive & if p then contrary to expectations Q & but, yet, and yet, still, but nevertheless, though, however, nevertheless & @1 (,) mrkr @2 // @1 (;) mrkr @2 \\ \bottomrule
+        \end{tabulary}%
+    }
+    \caption{Parataxis}
+    \label{tab:parataxis}
+    \end{table}
+    \end{landscape}
+    
+    \newpage
+    
+    
+    \begin{landscape}
+    
+    \begin{table}[]
+    \centering
+    \resizebox{1.4\textheight}{!}{%
+        \begin{tabulary}{3\textwidth}{p{7em}p{10em}p{10em}p{18em}p{18em}}
+        \toprule
+        Type & Category & Meaning & Hypotactic-finite marker & Hypotactic-finite template \\ \midrule
+        Elaboration & Exposition & in other words, I.e &  &  \\
+        Elaboration & Exemplification & for example, e.g. &  &  \\
+        Elaboration & Clarification & to be precise, viz. & who, whose, whom, which, that, where, when , as & @a (,)(-)(;) mrkr @b // @a mrkr @b // \\
+        Extension & additive:positive & X and Y & whereas, while & mrkr @b , @a // @a mrkr @b \\
+        Extension & additive:negative & not X and not Y &  &  \\
+        Extension & additive:adversative & (but) X and conversely Y & whereas, while & mrkr @b , @a // @a mrkr @b \\
+        Extension & variation:replacive & (instead), not X but Y &  &  \\
+        Extension & variation:substractive & X but not all X & except that, but for the fact that, but that, & @a (,) mrkr @b // mrkr @b , @a // \\
+        Extension & alternation & X or Y &  & "if" @a\{{[}\}+negative\{{]}\} (,)("then") @b // \\
+        Enhancement & temporal: same time & A meanwhile B & as, while, when, as soon as, the moment, whenever, every time, but as soon as & @a (,)mrkr @b // mrkr @b (,) @a // \\
+        Enhancement & temporal: later time & a subsequently b & after, since, ever since, especially since, and since, and after, then & @a (,)mrkr @b // mrkr @b (,) @a // \\
+        Enhancement & temporal: earlier time & a previously b & before, until, till, by the time & @a (,)mrkr @b // mrkr @b (,) @a // \\
+        Enhancement & spatial: same place & c there d & as far as, where, wherever, everywhere & @a (,) mrkr @b // mrkr @b , @a // \\
+        Enhancement & manner: quality & A in the way B & as & @a (,) mrkr @b // mrkr @b , @a // \\
+        Enhancement & manner: means & N is via/by means of M & @a (,) mrkr @b // mrkr @b , @a // &  \\
+        Enhancement & manner: comparison & N is like M & as, as if, like, the way & @a (,) mrkr @b // mrkr @b , @a // \\
+        Enhancement & cause: reason@1 & because P so effect Q &  &  \\
+        Enhancement & cause: reason@2 & effect Q because of cause P & because, as, since, in case, seeing that, considering & @a (,) mrkr @b \\
+        Enhancement & cause: purpose & because intention Q so action P & in order that, so that & @a (,) mrkr @b \\
+        Enhancement & cause: result & so that &  & @a (,) mrkr @b \\
+        Enhancement & condition: positive & if P then Q & if, provided that, as long as, but if, in case & mrkr @b (,) ("then") @a // @a (,) mrkr @b // \\
+        Enhancement & condition: negative & if not p then q & unless & @a (,) mrkr @b \\
+        Enhancement & condition: concessive & if p then contrary to expectations Q & even if, even though, although, though & mrkr @b (,) @a // @a (,) mrkr @b \\ \bottomrule
+        \end{tabulary}%
+    }
+    \caption{Hypotaxis with lower finite clauses}
+    \label{tab:hytpotaxis-finite}
+    \end{table}
+    \end{landscape}
+    
+    \newpage
+    
+    \begin{landscape}
+    \begin{table}[]
+    \centering
+    \resizebox{1.4\textheight}{!}{%
+        \begin{tabulary}{3\textwidth}{p{7em}p{10em}p{10em}p{18em}p{18em}}
+        \toprule
+        Type & Category & Meaning & Hypo-non-finite marker & Hypo-non-finite template \\ \midrule
+        Elaboration & Exposition & in other words, I.e &  &  \\
+        Elaboration & Exemplification & for example, e.g. &  &  \\
+        Elaboration & Clarification & to be precise, viz. &  & @a , @b{[}-Subj{]} // @a @b{[}-Subj{]} // @a , @b // @a @b // @b, @a // \\
+        Extension & additive:positive & X and Y & apart from, besides, with & @a (,) (mrkr) @b// mrkr @b (,) @a// @a , @b // \\
+        Extension & additive:negative & not X and not Y &  &  \\
+        Extension & additive:adversative & (but) X and conversely Y & without & @a (,) (mrkr) @b// mrkr @b (,) @a// @a ,@b // \\
+        Extension & variation:replacive & (instead), not X but Y & instead of & @a (,) (mrkr) @b// mrkr @b (,) @a// \\
+        Extension & variation:substractive & X but not all X & other than & @a (,) (mrkr) @b// mrkr @b (,) @a// \\
+        Extension & alternation & X or Y &  &  \\
+        Enhancement & temporal: same time & A meanwhile B &  & @a , @b // @b , @a \\
+        Enhancement & temporal: later time & a subsequently b &  &  \\
+        Enhancement & temporal: earlier time & a previously b &  &  \\
+        Enhancement & spatial: same place & c there d &  &  \\
+        Enhancement & manner: quality & A in the way B &  &  \\
+        Enhancement & manner: means & N is via/by means of M &  &  \\
+        Enhancement & manner: comparison & N is like M &  &  \\
+        Enhancement & cause: reason@1 & because P so effect Q &  & @a , @b // @b , @a \\
+        Enhancement & cause: reason@2 & effect Q because of cause P &  &  \\
+        Enhancement & cause: purpose & because intention Q so action P &  & @a , @b // @b , @a \\
+        Enhancement & cause: result &  &  & @a , @b \\
+        Enhancement & condition: positive & if P then Q &  &  \\
+        Enhancement & condition: negative & if not p then q &  &  \\
+        Enhancement & condition: concessive & if p then contrary to expectations Q &  &  \\ \bottomrule
+        \end{tabulary}%
+    }
+    \caption{Hypotaxis with lower non-finite clauses}
+    \label{tab:hypotaxis-non-finite}
+    \end{table}
+    \end{landscape}
+    
+    \newpage
+    
+    \begin{landscape}
+    \begin{table}[]
+    \centering
+    \resizebox{1.45\textheight}{!}{%
+        \begin{tabulary}{2\textwidth}{p{7em}p{10em}p{10em}p{18em}p{18em}}
+        \toprule
+        Type & Category & Meaning & Hypo-non-finite conjunction marker & Hypo-non-finite conjunction template \\ \midrule
+        Elaboration & Exposition & in other words, I.e &  &  \\
+        Elaboration & Exemplification & for example, e.g. &  &  \\
+        Elaboration & Clarification & to be precise, viz. &  &  \\
+        Extension & additive:positive & X and Y &  &  \\
+        Extension & additive:negative & not X and not Y &  &  \\
+        Extension & additive:adversative & (but) X and conversely Y &  &  \\
+        Extension & variation:replacive & (instead), not X but Y &  &  \\
+        Extension & variation:substractive & X but not all X &  &  \\
+        Extension & alternation & X or Y &  &  \\
+        Enhancement & temporal: same time & A meanwhile B & while, when & @a (,) mrkr @b // mrkr @b (,) @a \\
+        Enhancement & temporal: later time & a subsequently b & since & @a (,) mrkr @b // mrkr @b (,) @a \\
+        Enhancement & temporal: earlier time & a previously b & until, till & @a (,) mrkr @b // mrkr @b (,) @a \\
+        Enhancement & spatial: same place & c there d &  &  \\
+        Enhancement & manner: quality & A in the way B &  &  \\
+        Enhancement & manner: means & N is via/by means of M &  &  \\
+        Enhancement & manner: comparison & N is like M & like & @a (,) mrkr @b // mrkr @b (,) @a \\
+        Enhancement & cause: reason@1 & because P so effect Q &  &  \\
+        Enhancement & cause: reason@2 & effect Q because of cause P &  &  \\
+        Enhancement & cause: purpose & because intention Q so action P &  &  \\
+        Enhancement & cause: result &  &  &  \\
+        Enhancement & condition: positive & if P then Q & if & @a (,) mrkr @b // mrkr @b (,) @a \\
+        Enhancement & condition: negative & if not p then q & unless & @a (,) mrkr @b // mrkr @b (,) @a \\
+        Enhancement & condition: concessive & if p then contrary to expectations Q & even if, even though, though, although & @a (,) mrkr @b // mrkr @b (,) @a \\ \bottomrule
+        \end{tabulary}%
+    }
+    \caption{Hypotaxis with lower non finite clause introduced by subordinating conjunction}
+    \label{tab:hypotaxis-non-finite-conjunction}
+    \end{table}
+    \end{landscape}
+    
+    \newpage
+    
+    \begin{landscape}
+    \begin{table}[]
+    \centering
+    \resizebox{1.45\textheight}{!}{%
+        \begin{tabulary}{2\textwidth}{p{7em}p{10em}p{10em}p{18em}p{18em}}
+        \toprule
+        Type & Category & Meaning & Hypo-non-finite preposition marker & Hypo-non-finite preposition template \\ \midrule
+        Elaboration & Exposition & in other words, I.e &  &  \\
+        Elaboration & Exemplification & for example, e.g. &  &  \\
+        Elaboration & Clarification & to be precise, viz. &  &  \\
+        Extension & additive:positive & X and Y &  &  \\
+        Extension & additive:negative & not X and not Y &  &  \\
+        Extension & additive:adversative & (but) X and conversely Y &  &  \\
+        Extension & variation:replacive & (instead), not X but Y &  &  \\
+        Extension & variation:substractive & X but not all X &  &  \\
+        Extension & alternation & X or Y &  &  \\
+        Enhancement & temporal: same time & A meanwhile B & in, in the course, in process of, on & @a (,) mrkr @b // mrkr @b (,) @a \\
+        Enhancement & temporal: later time & a subsequently b & after & @a (,) mrkr @b // mrkr @b (,) @a \\
+        Enhancement & temporal: earlier time & a previously b & before & @a (,) mrkr @b // mrkr @b (,) @a \\
+        Enhancement & spatial: same place & c there d &  &  \\
+        Enhancement & manner: quality & A in the way B &  &  \\
+        Enhancement & manner: means & N is via/by means of M & by, by means of & @a (,) mrkr @b // mrkr @b (,) @a \\
+        Enhancement & manner: comparison & N is like M &  &  \\
+        Enhancement & cause: reason@1 & because P so effect Q &  &  \\
+        Enhancement & cause: reason@2 & effect Q because of cause P & with, through, by, at, as a result, because of, in case of, in case & @a (,) mrkr @b \\
+        Enhancement & cause: purpose & because intention Q so action P & in order to, so as to, for, for the sake of, with the aim of, for fear of & @a (,) mrkr @b // mrkr @b (,) @a \\
+        Enhancement & cause: result & to &  & @a (,) mrkr @b \\
+        Enhancement & condition: positive & if P then Q & in the event of & @a (,) mrkr @b // mrkr @b (,) @a \\
+        Enhancement & condition: negative & if not p then q & but for, without & @a (,) mrkr @b // mrkr @b (,) @a \\
+        Enhancement & condition: concessive & if p then contrary to expectations Q & despite, in spite of, without & @a (,) mrkr @b // mrkr @b (,) @a \\ \bottomrule
+        \end{tabulary}%
+    }
+    \caption{Hypotaxis with lower non finite clause introduced by a preposition}
+    \label{tab:hypotaxis-non-finite-preposition}
+    \end{table}
+    \end{landscape}
