@@ -8,41 +8,43 @@
 % motivation
 % 
 % - text parsing + sfl
-Building a natural language parser can be seen as a task of creating an artificial text reader which understands the meaning expressed in some text. This thesis aims at a reliable modular method for parsing unrestricted English text into feature-rich constituency structure using Systemic Functional Grammars (SFG), which are chosen because of their versatility to account for the complexity and phenomenological diversity of human language. %In general, the higher the degree of abstraction,the less accurate the coverage becomes; moreover, the richer the linguistic description, the slower the parsing process. 
+Building a natural language parser can be seen as a task of creating an artificial text reader that understands the meaning expressed in some text. This thesis aims at a reliable modular method for parsing unrestricted English text into feature-rich constituency structure using Systemic Functional Grammars (SFG). SFGs are chosen because of their versatility to account for the complexity and phenomenological diversity of human language. %In general, the higher the degree of abstraction,the less accurate the coverage becomes; moreover, the richer the linguistic description, the slower the parsing process. 
 
 % 
 % problem: knowledge gap from state of the art
 % 
 % - not much syntagmatic description, SFL primarely focused on paradigmatic description
-The descriptive power of a Systemic Functional Grammar (SFG) lies to a considerable extent in its separation of descriptive work across ``structure'' (i.e., syntagmatic organisations) and ``choice'' (i.e., paradigmatic organisations). Since it was established, SFL has been primarily concerned with the paradigmatic axis of language. Accounts of the syntagmatic axis of language, such as the syntactic structure, have been put in the background. 
+The descriptive power of a Systemic Functional Grammar (SFG) lies in its separation of descriptive work across ``structure'' (i.e., syntagmatic organisations) and ``choice'' (i.e., paradigmatic organisations). A shortcoming for parsing, however, is that SFL has been primarily concerned with the paradigmatic axis of language, and accounts of the syntagmatic axis of language, such as the syntactic structure, have been put in the background. 
 
 % - generation is easy with sys net and parsing faces computational complexity, non symetrical - probl with parsing with features that depart from directly observable grammatical variations towards increasingly abstract semantic features - this leads to a computational complexity
-Moreover, parsing with features that depart from directly observable grammatical variations towards increasingly abstract semantic features comes at the cost of high computational complexity, which still presents today the biggest challenge in parsing broad coverage texts with full SFGs. \citet{ODonnellBateman2005} discuss how each successive attempt to construct parsing components using SFL then necessarily led to the acceptance of limitations either in grammar size or in language coverage in order to proceed.
+Moreover, parsing with features that depart from directly observable grammatical variations towards increasingly abstract semantic features comes at the cost of high computational complexity, which still presents today the biggest challenge in parsing broad coverage texts with full SFGs.% \citet{ODonnellBateman2005}
+Previous research has discussed how each successive attempt to construct parsing components using SFL then led to the acceptance of limitations either in grammar size or in language coverage.
 
 % 
 % your main claim/hypotheses/research question
 % 
 % - [rq1 reuse positive results , rq2 transform DG] the syntagmatic could be rebuilt from reusing parse outputs with other, simpler grammars focusing on syntagmatic mainly
 % - [rq5 to what extent predefined graph patterns are suitable to spot features] complexity of paradigmatic could be tackled by associating systemic features to pattern graphs and identifying them in the structure
-One of the main contributions of this thesis is the investigation to what degree can cross-theoretical bridges be established between Systemic Functional Linguistic (SFL) and other theories of grammar, Dependency Grammar in particular, in order to compensate for the limited syntagmatic accounts. Second main contribution is investigation on how suitable are predefined graph patterns for detecting systemic features in the constituency structure, in order to reduce the complexity of identifying increasingly abstract grammatical features.  
+One of the main contributions of this thesis is the investigation to what degree cross-theoretical bridges can be established between Systemic Functional Linguistic (SFL) and other theories of grammar, in particular Dependency Grammar, in order to compensate for the limited syntagmatic accounts. A second main contribution is to research how suitable predefined graph patterns are for detecting systemic features in the constituency structure in order to reduce the complexity of identifying increasingly abstract grammatical features.  
 
 % your solutions and three main contributions to research (and technology: parser)
 % - pipeline parser separated in two stages: constituency structure building and enrichment
 % - construction from SDG and null elements using GBT rules - reusing results in other parsers and transforming into SFL structure
 % - enrichment from manually built patterns and from PTDB - using graph patterns to identify features and enrich the structure
-The practical achievement of this thesis lies in the development and evaluation of a SFG parser, named Parsimonious Vole. The implementation follows a pipeline architecture comprising of two major phases: \textit{creation} of the constituency structure from Dependency graphs and structure \textit{enrichment} with the systemic features using graph pattern matching techniques. 
+The technical achievement of this thesis lies in the development and evaluation of a SFG parser, named Parsimonious Vole. The implementation follows a pipeline architecture comprising two major phases: (a) creation of the constituency structure from Dependency graphs and (b) structure enrichment with the systemic features using graph pattern matching techniques. 
 % 
 % main (evaluation) results 
 % 
 % - building structure is of comparable accuracy to previous results [cite1,cite2] ~ 75\%
 % - identifying features, 50 and 30\% 
 
-The empirical evaluation based on two corpora, first, covering constituency structure and Mood features and, second, covering more abstract Transitivity features, provide statistically significant results. The parser accuracy at generating constituency structure (76\%) is comparable to or slightly lower than that achieved in previous attempts, while the accuracy to detect Mood (60\%) and Transitivity (42\%) could not be  compared to any previous works because either they are missing or they are not comparable. 
+The empirical evaluation is based on two manually annotated corpora. First one covers constituency structure and Mood features, and second corpora covers the more abstract Transitivity features. %,provide statistically significant results. 
+The parser accuracy at generating constituency structure (76\%) is slightly lower than that achieved in previous research, while the accuracy to detect Mood (60\%) and Transitivity (42\%) could not be compared to any previous works because either such features are missing or the results are not comparable. 
 
 % and main concluding remark
 % 
 % - more work is needed to improve both parsing structure and identifying features
-The current work shows that (a) reusing parse results with other grammars for structure creation and (b) employing graph patterns for enrichment with systemic features constitutes a viable solution to create feature-rich constituency structures in SFL style. % and the evaluation results constitutes a strong baseline for future studies.
+The current work concludes that (a) reusing parse results with other grammars for structure creation and (b) employing graph patterns for enrichment with systemic features constitutes a viable solution to create feature-rich constituency structures in SFL style. % and the evaluation results constitutes a strong baseline for future studies.
 
 % and constitute a strong baseline for future evaluation studies. 
 
