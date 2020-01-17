@@ -1,0 +1,137 @@
+\chapter{Enrichment}
+
+\begin{figure}[!ht]%{0.4\textwidth}
+		\centering
+		\begin{tikzpicture}[tree-style,,level distance=4em,]
+		\node (cla) [pattern-node] {class:clause}
+		child { node (sub)[pattern-node] {element:Subject,\\ precede:f1}}		
+		child { node (f)[pattern-node] {element:Finite,\\id:f1}};
+		\end{tikzpicture}
+		\caption{Declarative mood pattern graph with relative element order}
+		\label{fig:pg-declarative2}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\begin{tikzpicture}[tree-style,,level distance=4em,]
+	\node (cla) [pattern-node] {class:clause}
+	child { node (f)[pattern-node] {element:Finite,\\precede:s1}}
+	child { node (sub)[pattern-node] {element:Subject,\\id:s1}}	;	
+%	child { node (mv)[pattern-node] {element:main verb,\\id:mv1}};
+	\end{tikzpicture}
+	\caption{Pattern graph for Yes/No interrogative mood}
+	\label{fig:pg-interrogative}
+\end{figure}
+
+\begin{figure}[hbtp]
+    \centering
+    \scalebox{0.8}{
+    \begin{tikzpicture}[tree-style,level distance=5em, level 1/.style={sibling distance=12.5em},]
+    \node[pattern-node, anchor=center](vb1){element:clause}
+    	child {node[pattern-node,xshift=0em] {element:subject,\\operation:update,\\ arg1:\{participant:agent\}} edge from parent node[above] {}}
+    	child {node[pattern-node,xshift=0em] {element:complement,\\operation:update,\\ arg1:\{participant:posessed\}} edge from parent node[below right] {}}
+    	child {node[pattern-node-negative, xshift=0em] {element:complement} edge from parent node[above] {}};
+    \end{tikzpicture}
+    }
+    \caption{PG for inserting agent and possessed participant roles to subject and complement nodes only if there is no second complement.}
+    \label{fig:gp4}
+    \end{figure}
+    
+    
+\section{Enrichment}    
+
+    \begin{figure}[!ht]
+        \centering
+        \scalebox{0.7}{
+        \begin{tikzpicture}[
+        tree-style, 
+    %    edge-style,
+        level 1/.style={sibling distance=10em},
+        level 2/.style={sibling distance=8em},
+        level distance = 4em
+        ]
+        \node[pattern-node]{class: clause}
+        child {node[pattern-node]{element: Subject\\word: He} }
+        child {node[pattern-node]{element: Main verb\\word: gave} }
+        child {node[pattern-node]{element: Complement\\class: nominal group}  {}
+            child {node[pattern-node]{element: Deictic\\word: the} }
+            child {node[pattern-node]{element: Thing\\word: cake} }
+        }
+        child {node[pattern-node]{element: Adjunct\\word: away}  }
+        ;
+        \end{tikzpicture}
+    }
+        \caption{Constituency graph corresponding to Example \ref{ex:transitivity1}}
+        \label{fig:cg-transitive1}
+    \end{figure}
+    
+    
+    \begin{figure}[!ht]
+    \centering
+    \scalebox{0.7}{
+    \begin{tikzpicture}[tree-style, level 1/.style={sibling distance=14em}, level distance = 5em]
+    \node[pattern-node]{class:clause}
+    	child {node[pattern-node, xshift=1.5em]{element: Subject\\operation: update\\arg1:\{participant: agent\}} }
+       	child {node[pattern-node]{element: Main verb\\lemma: give\\operation: update\\arg1:\{process: possessive\}} }
+        child {node[pattern-node, xshift=1em]{element: Complement\\operation: update\\arg1:\{participant: affected-possessed\}}};
+    \end{tikzpicture}
+    }
+    \caption{A graph pattern for inserting agent and affected-possessed participant roles}
+    \label{fig:pg-transitive1}
+    \end{figure}
+    \begin{figure}[!ht]
+        \centering
+        \scalebox{0.7}{
+            \begin{tikzpicture}[
+            tree-style, 
+            %    edge-style,
+            level 1/.style={sibling distance=12em},
+            level 2/.style={sibling distance=8em},
+            level distance = 5em
+            ]
+            \node[pattern-node]{class: clause}
+            child {node[pattern-node, xshift=2em]{element: Subject\\\textit{participant: agent}\\word: He} }
+            child {node[pattern-node]{element: Main verb\\\textit{process: possessive}\\word: gave} }
+            child {node[pattern-node]{element: Complement\\\textit{participant: affected-possessed}\\class: nominal group}  {}
+                child {node[pattern-node]{element: Deictic\\word: the} }
+                child {node[pattern-node]{element: Thing\\word: cake} }
+            }
+            child {node[pattern-node]{element: Adjunct\\word: away}  }
+            ;
+            \end{tikzpicture}
+        }
+        \caption{The resulting constituency graph enriched with participant roles}
+        \label{fig:cgg-transitive1}
+    \end{figure}
+    
+    
+\section{sec}
+
+    \begin{figure}[!ht]
+        \centering
+        \scalebox{0.7}{
+        \begin{tikzpicture}[tree-style,level distance=5em,] 
+        \node[pattern-node, anchor=center] (c) {class:clause}
+        child {node[pattern-node] (subj1) {element:Main Verb}};
+        \end{tikzpicture}
+        }
+        \caption{A graph pattern for \textit{major} feature selection in Figure \ref{fig:mood-fragment}}
+        \label{fig:mood-fragment-major}
+    \end{figure}
+    
+    
+    \begin{figure}[!ht]
+        \centering
+        \begin{dependency}[dep-style-narrow]
+            \begin{deptext}[]
+                PRP \& VBD \& DT \& NN \& RB\\ 
+                He \& gave \& the \& cake \& away\\ 
+            \end{deptext}
+            \depedge[]{2}{1}{nsubj}
+            \depedge{2}{4}{dobj}
+            \depedge{2}{5}{advmod}
+            \depedge{4}{3}{det}
+        \end{dependency}
+        \caption{Dependency representation } %Example of parent-child hierarchical dependency
+        \label{fig:dependency-dg-ex}
+    \end{figure}
