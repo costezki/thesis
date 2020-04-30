@@ -56,7 +56,7 @@
 
     In this thesis, feature structures are important but only in a simplified version serving as graph node descriptions. The main reason is the difference in approach as the main parsing operations, here, are based on graph pattern matching (introduced in the sections below).
 
-    In a broad computer science sense, including Pollard and Sag definition, feature structures are equivalent to graph structures. So any feature structure can be expressed as a graph and any graph can be expressed as a feature structure. But in a narrow sense, as adopted in this thesis, it is useful to employ both concepts but each for a given purpose. The feature structure is reduced to an attribute-value matrix (see Definition \ref{def:fs}) and the graphs to a network of feature structure nodes (see Definition \ref{def:feature-rich-graph}) as depicted in Figure \ref{fig:example-graph-compact1}, i.e. there are no nodes that carry atomic values such as strings, numbers and there are no nodes carrying an id only and no content (caller here referential) as depicted in Figure \ref{fig:example-graph-compact2}.
+    In a broad computer science sense, including Pollard and Sag definition, feature structures are equivalent to graph structures. So any feature structure can be expressed as a graph and any graph can be expressed as a feature structure. But in a narrow sense, as adopted in this thesis, it is useful to employ both concepts but each for a given purpose. The feature structure is reduced to an attribute-value matrix (see Definition \ref{def:fs}) and the graphs to a network of feature structure nodes (see Definition \ref{def:feature-rich-graph}) as depicted in Figure \ref{fig:example-graph-compact1}, i.e. there are no nodes that carry atomic values such as strings, numbers and there are no nodes carrying an id only and no content (called here referential) as depicted in Figure \ref{fig:example-graph-compact2}.
 
     \begin{figure}[!ht]
         \centering
@@ -112,14 +112,14 @@
 
     For example lets imagine a constituency graph fragment of two nodes \textit{Node 1} and \textit{Node 2} where each has three associated features as can be seen in Figure \ref{fig:example-graph-compact1}. If we would insist to dispose of the feature structure within the node and express the features as atomic graph nodes then the result would be a graph structure such as the one in Figure \ref{fig:example-graph-compact2}.
 
-    The main reasons in this separation are efficiency and practicality. First, it scopes the operations on atomic values as belonging to feature structures and not as graph nodes. Second, the graphs remain limited in size, close to the conceptualised linguistic structures, i.e. dependency or constituency. Otherwise, the graphs and the manner in which they are processed would grow in complexity. Firstly, the complexity would manifest through at least one more round of nodes for each dependency or constituency node (e.g. the nodes $v_1 - v_6$ in Figure \ref{fig:example-graph-compact2}) and, secondly, through the need of distinguishing the referential (e.g. Node 1 and Node 2 in Figure \ref{fig:example-graph-compact2}) and atomic nodes (the nodes $v_1 - v_6$).
+    The main reasons in this separation are efficiency and practicality. First, it scopes the operations on atomic values as belonging to feature structures and not as graph nodes. Second, the graphs remain limited in size, close to the conceptualised linguistic structures, i.e. dependency or constituency. Otherwise, the graphs and the manner in which they are processed would rise in complexity. Firstly, the complexity would manifest through at least one more round of nodes for each dependency or constituency node (e.g. the nodes $v_1 - v_6$ in Figure \ref{fig:example-graph-compact2}) and, secondly, through the need of distinguishing the referential (e.g. Node 1 and Node 2 in Figure \ref{fig:example-graph-compact2}) and atomic nodes (the nodes $v_1 - v_6$).
 
 
     \begin{definition}[Feature Structure (FS)]\label{def:fs}
     	A \textit{feature structure} $F$ is a finite set of attribute-value tuples $f_{i} \in F$. A \textit{feature} $f=(a,v)$ is an association between an identifier $a$ (a symbol) and a value $v$ which is either an atomic value (symbol, number, string), a set or another feature structure. 
     \end{definition}
 
-    The values of feature structures may be other feature structures allowing, if needed, hierarchical descriptions. In the current implementation, however, the values of the feature structure are restricted to atomic values or sets of values. The reason for this restriction is the role feature structures play of simply providing descriptions of a graph node in terms of multiple atomic values organised by the FS keys. 
+    The values of feature structures may be other feature structures allowing, if needed, hierarchical descriptions. In the current implementation, however, the values of the feature structure are restricted to atomic values or sets of values. The reason for this restriction is that the feature structures simply provide descriptions of a graph node in terms of multiple atomic values organised by the FS keys. 
 
     For convenience I define two functions to access the identifier and value in a feature structure. The function $name:F \rightarrow symbol$ returns the feature symbol (identifier) $name(f)=a$ and the function $val:F \rightarrow \{atomic, Set, FS\}$ is a function returning the ascribed value of a feature $val(f)=v$. 
 
@@ -153,7 +153,7 @@
     	Exclusive disjunctive set (also called XOR-set) is a conjunction set $S_{XOR}=\{a,b,c...\}$ that is interpreted as a logical exclusive disjunction of its elements $a \bigoplus b \bigoplus c \bigoplus ...$ equivalent to $ (a \wedge \neg (b \wedge c \wedge ... )) \vee (b \wedge \neg (a \wedge c \wedge ...)) \vee (c \wedge \neg (a \wedge b \wedge ...)) $
     \end{definition}
 
-    When conjunction sets are used as values in FSs then the logical operand dictates the interpretation of the FS. When the set type is $S_{AND}$ then all the set elements hold simultaneously as feature values. If it is a $S_{OR}$ then one or more of the set elements hold as values. If it is $S_{XOR}$ then one and only one of set elements holds and finally if it is a $S_{NAND}$ set then none of elements hold as feature values.
+    When conjunction sets are used as values in FSs then the logical operand dictates the interpretation of the FS. When the set type is $S_{AND}$ then all the set elements hold simultaneously as feature values. If it is a $S_{OR}$ then one or more of the set elements hold as values. If it is $S_{XOR}$ then one and only one of set elements holds and finally if it is a $S_{NAND}$ set then none of the elements hold as feature values.
 
     The function $\tau(S)$, defined $\tau:S \rightarrow \{S_{AND},S_{OR},S_{XOR},S_{NAND} \}$, returns the type of the conjunction set and the function $size(S)$, defined $size:S \rightarrow \mathbb{N}$, returns the number of elements in the set. The size function is also denoted as $|S|$.
  
@@ -211,37 +211,37 @@
     \label{fig:cg-graph}
     \end{figure}
 
-    Apart from the essential features of class and function, the CG nodes carry additional class specific features selected from the relevant system network. The features considered in this thesis were described in Chapter \ref{ch:the-grammar}. In addition, the leaf CG nodes contain the features of dependency graph nodes enumerated in Definition \ref{def:dep-graph}. The way CG is enriched with features is described in the next chapter. In Figure \ref{fig:cg-graph}, an example CG is shown that carries tense, modality and polarity features on the clause node in addition to class and element functions. Next section describes the graph traversal in general and two special variants needed later in the chapter. 
+    Apart from the essential features of class and function, the CG nodes carry additional class specific features selected from the relevant system network. The features considered in this thesis were described in Chapter \ref{ch:the-grammar}. In addition, the leaf CG nodes contain the features of dependency graph nodes enumerated in Definition \ref{def:dep-graph}. The way CG is enriched with features is described in the next chapter. In Figure \ref{fig:cg-graph}, an example CG is shown that carries tense, modality and polarity features on the clause node in addition to class and element functions. The next section describes the graph traversal in general and two special variants needed later in the chapter. 
 
 \section{Graph traversal}
     From the general set of operations on graphs defined in graph theory \citep{bondy1976graph, west2001graph} graph traversal in particular is of importance for the current work. It is used for the constituency graph creation step presented in the parsing pipeline from Figure \ref{fig:pipeline-overview} (in Section \ref{sec:architecture}). The constituency graph is created by the traversal of a dependency graph. Traversal is used in this thesis for dependency graphs only.  Next I address these operations in detail.
 
-
-%Another important notion that needs to be addressed is the comparison of graph nodes to each other and deciding whether two of them are the ``same'' in some sense or \textit{congruent}. 
-%later in this chapter we will see that the important operations such as pattern matching depend on comparing nodes to derive whether they are ``the same''. 
-
-%%%%
-%% todo remove congruence; good congruence; good
-%%%%
-%Lets start with node comparison. The simplest form of equivalence, in the labelled graphs such as the one in Figure \ref{fig:example-traversal1}, is the equality of label values. In this example there are no two nodes that are the same because each of them have a unique label. But if we extend the notion of ``sameness'' from the equality of value to some other condition (or rule) then the mathematical term that captures this concept best is that of \textit{congruence} defined in Definition \ref{def:congreunce}. Lets take for example a simple arithmetic rule such as division by 2 which distinguishes odd and even nodes. Under this rule, two nodes are congruent if both are either even or both are odd. In Figure \ref{fig:example-traversal1} the nodes \{2, 4, 6, 8\} are congruent to each other because they are even and conversely the nodes \{1, 3, 5, 7\} are congruent as well. Another example of congruence rule is the node type distinction into continuous line circles and dashed line circles. Under this rule, in Figure \ref{fig:example-traversal1}, the nodes \{3, 5, 7, 8\} are congruent because they are dashed and the rest are congruent because they are in continuous line circles. 
-%
-%\begin{definition}[Congruence]\label{def:congreunce}
-%    A \textit{congruence relation} (or congruence), denoted $\equiv$, is an equivalence relation on a structure that is compatible with the structure. Every congruence relation has a corresponding \textit{quotient} rule (or condition) forming an \textit{equivalence class} (or congruence class) for the relation \citep[26-27]{hungerford1980algebra}.
-%\end{definition}
-%
-%In the case of sets or feature structures the congruence quotient rule needs to be defined corresponding to the structure. An example rule for set congruency can be the threshold of 2 elements on size of the set. Given three sets A=\{0, 1, 2\}, B=\{1, 2\}, C=\{5\}, D=\{6\}, under the above quotient rule, $A \equiv B$ and $C \equiv D$ forming the equivalence classes \{A, B\} and \{C, D\}. In Section \ref{sec:graph-matching} I will return to congruence relation between feature structures and will provide specific (quotient) rules that define equivalence between sets and feature structures. 
-
-%%%%
-%% end of congruence; good congruence; good
-%%%%
-
-%Lets turn now to queries over the graph nodes and edges. The notion of a query, defied in Definition \ref{def:query}, is tightly linked to the notion of congruence. The query is an operation that selects all the nodes or entities corresponding to a congruence class given by a quotient rule (or constraint) on a graph structure. For example in Figure \ref{fig:example-traversal1} a potential query is to return the equivalence class of the dashed nodes \{3, 5, 7, 8\}. The query operation can be extended to the the graph edges. 
-%%In a given dependency graph, similar operation can be used to select all the determiner nodes. In that case we query the nodes with the condition that the part of speech has DT value i.e. \textit{pos=DT}. The same can be achieved by selecting all the edges connecting a noun to its determiner, then the query is formulated for all edges whose relation type is \textit{rel=det}.
-%
-%\begin{definition}[Graph query]\label{def:query}
-%    %Given a graph $G=(V,E)$ to query nodes or edges is to select a set of nodes or a set of edges that satisfy the query constraint condition on feature structure.
-%    Given a graph $G(V,E)$ and a query structure $F$, querying $q_{V}(F,G)$ or $q_{E}(F,G)$ over the nodes $V$ or edges $E$ of a graph $G$ is an operation that returns a set of nodes or edges equivalent to the query structure, $ \forall v \in V,  v \equiv F$. 
-%\end{definition}
+    
+    %Another important notion that needs to be addressed is the comparison of graph nodes to each other and deciding whether two of them are the ``same'' in some sense or \textit{congruent}. 
+    %later in this chapter we will see that the important operations such as pattern matching depend on comparing nodes to derive whether they are ``the same''. 
+    
+    %%%%
+    %% todo remove congruence; good congruence; good
+    %%%%
+    %Lets start with node comparison. The simplest form of equivalence, in the labelled graphs such as the one in Figure \ref{fig:example-traversal1}, is the equality of label values. In this example there are no two nodes that are the same because each of them have a unique label. But if we extend the notion of ``sameness'' from the equality of value to some other condition (or rule) then the mathematical term that captures this concept best is that of \textit{congruence} defined in Definition \ref{def:congreunce}. Lets take for example a simple arithmetic rule such as division by 2 which distinguishes odd and even nodes. Under this rule, two nodes are congruent if both are either even or both are odd. In Figure \ref{fig:example-traversal1} the nodes \{2, 4, 6, 8\} are congruent to each other because they are even and conversely the nodes \{1, 3, 5, 7\} are congruent as well. Another example of congruence rule is the node type distinction into continuous line circles and dashed line circles. Under this rule, in Figure \ref{fig:example-traversal1}, the nodes \{3, 5, 7, 8\} are congruent because they are dashed and the rest are congruent because they are in continuous line circles. 
+    %
+    %\begin{definition}[Congruence]\label{def:congreunce}
+    %    A \textit{congruence relation} (or congruence), denoted $\equiv$, is an equivalence relation on a structure that is compatible with the structure. Every congruence relation has a corresponding \textit{quotient} rule (or condition) forming an \textit{equivalence class} (or congruence class) for the relation \citep[26-27]{hungerford1980algebra}.
+    %\end{definition}
+    %
+    %In the case of sets or feature structures the congruence quotient rule needs to be defined corresponding to the structure. An example rule for set congruency can be the threshold of 2 elements on size of the set. Given three sets A=\{0, 1, 2\}, B=\{1, 2\}, C=\{5\}, D=\{6\}, under the above quotient rule, $A \equiv B$ and $C \equiv D$ forming the equivalence classes \{A, B\} and \{C, D\}. In Section \ref{sec:graph-matching} I will return to congruence relation between feature structures and will provide specific (quotient) rules that define equivalence between sets and feature structures. 
+    
+    %%%%
+    %% end of congruence; good congruence; good
+    %%%%
+    
+    %Lets turn now to queries over the graph nodes and edges. The notion of a query, defied in Definition \ref{def:query}, is tightly linked to the notion of congruence. The query is an operation that selects all the nodes or entities corresponding to a congruence class given by a quotient rule (or constraint) on a graph structure. For example in Figure \ref{fig:example-traversal1} a potential query is to return the equivalence class of the dashed nodes \{3, 5, 7, 8\}. The query operation can be extended to the the graph edges. 
+    %%In a given dependency graph, similar operation can be used to select all the determiner nodes. In that case we query the nodes with the condition that the part of speech has DT value i.e. \textit{pos=DT}. The same can be achieved by selecting all the edges connecting a noun to its determiner, then the query is formulated for all edges whose relation type is \textit{rel=det}.
+    %
+    %\begin{definition}[Graph query]\label{def:query}
+    %    %Given a graph $G=(V,E)$ to query nodes or edges is to select a set of nodes or a set of edges that satisfy the query constraint condition on feature structure.
+    %    Given a graph $G(V,E)$ and a query structure $F$, querying $q_{V}(F,G)$ or $q_{E}(F,G)$ over the nodes $V$ or edges $E$ of a graph $G$ is an operation that returns a set of nodes or edges equivalent to the query structure, $ \forall v \in V,  v \equiv F$. 
+    %\end{definition}
 
     The \textit{graph traversal} defined in Definition \ref{def:traversal} and especially its conditional and generative extensions defined in Definition \ref{def:conditional-traversal} and \ref{def:generative-traversal} are  important operations in this work. They are employed in the first phase of the algorithm, for copying the dependency graph as a constituency graph as will be described in Chapter \ref{ch:parsing-algorithm}.
 
@@ -249,7 +249,7 @@
         Traversal $t(V_S,G)$ of a graph $G$ starting from node $V_S$ is a recursive operation that returns a set of sequentially visited nodes neighbouring each other in either \textit{breadth first} ($t_{BF}$) or \textit{depth first} ($t_{DF}$) orders.
     \end{definition}
 
-    The graph traversal is employed either for searching for a node or an edge or finding a sub-graph that fulfils certain conditions on its nodes and edges if it is a conditional traversal. For example in the semantic enrichment phase (that will be described in Section \ref{sec:enrichment-stage}), to ensure that the semantic patterns are applied iteratively to each clause, all clause sub-graphs without including the embedded (dependent) clauses are selected from a multi-clause CG graphs. 
+    The graph traversal is employed either for searching for a node or an edge or finding a sub-graph that fulfils certain conditions on its nodes and edges if it is a conditional traversal. For example in the semantic enrichment phase (that will be described in Section \ref{sec:enrichment-stage}), to ensure that the semantic patterns are applied iteratively to each clause, all clause sub-graphs without including the embedded (dependent) clauses are selected from multi-clause CG graphs. 
 
     %Using sub-graphs for performing the pattern matching, like in the case of semantic enrichment, decreases drastically the complexity of the graph isomorphism problem (described in Section \ref{sec:graph-matching}) thus increasing the overall performance. 
 
@@ -297,12 +297,12 @@
         \label{fig:example-traversal1}
     \end{figure}
 
-    One of the potential complete traversals for the graph from Figure \ref{fig:example-traversal1} starting from the node 1 is \{1, 2, 3, 4, 5, 6, 7, 8\} using breadth first strategy or \{1, 2, 5, 6, 3, 4, 7, 8\} for depth first strategy. On the other hand, a conditional traversal of non-dashed nodes staring from the node 1 results in \{1, 2, 4, 6\}, \{1, 4, 2, 6\} or \{1, 2, 6, 4\}. The first two traversals corresponding to the breadth first strategy and the third one to the depth first strategy. 
+    One of the potential complete traversals for the graph from Figure \ref{fig:example-traversal1} starting from node 1 is \{1, 2, 3, 4, 5, 6, 7, 8\} using breadth first strategy or \{1, 2, 5, 6, 3, 4, 7, 8\} for depth first strategy. On the other hand, a conditional traversal of non-dashed nodes staring from the node 1 results in \{1, 2, 4, 6\}, \{1, 4, 2, 6\} or \{1, 2, 6, 4\}. The first two traversals corresponding to the breadth first strategy and the third one to the depth first strategy. 
 
     I also use the graph traversal to execute generative operations on a parallel graph, which is a special case of \textit{graph rewriting}. For example DG traversal is employed for bootstrapping (i.e. creating in parallel) the CG as was previously motivated in Section \ref{sec:architecture}.
 
     \begin{definition}[Generative Traversal]\label{def:generative-traversal}
-        Generative traversal $g(M,G)$ of a source graph $G$ via an operation matrix $M$ is an operation resulting in the creation of the target graph $H$ by contextually applying generative operations to bring the latter into existence. The operation matrix $M$ is a set of tuples $(ctx,o,p)$ that link the visited source node context $ctx$ (as features of the node, the edge and previously visited neighbour) to a certain operation $o$ that is executed on the target graph $H$ with parameters $p$.
+        Generative traversal $g(M,G):H$ of a source graph $G$ via an operation matrix $M$ is an operation resulting in the creation of the target graph $H$ by contextually applying generative operations to bring the latter into existence. The operation matrix $M$ is a set of tuples $(ctx,o,p)$ that link the visited source node context $ctx$ (as features of the node, the edge and previously visited neighbour) to a certain operation $o$ that is executed on the target graph $H$ with parameters $p$.
     \end{definition}
 
     \tikzset{
@@ -358,9 +358,9 @@
         \label{fig:example-traversal2}
     \end{figure}
 
-    Next I provide an rough description of what happens when a generative traversal is executed and the exact algorithm will be described in detail in Section \ref{sec:creation-constituency-graph}. For example lets assume that only two types of operation are needed for our task at hand. The first is to create a new node on the target graph once a non-dashed node is visited on the source graph. And, second, is to pass the dashed nodes without doing anything. This is schematically represented in Figure \ref{fig:example-traversal00}. Lets now apply these operations on traversing the example graph using the breadth first strategy following the order provided above: 1, 2, 3, 4, 5, 6, 7, 8. The traversal graph is considered source graph and the target graph is empty at the beginning of the process. Upon visiting node 1 a first node is created on the target graph which is labelled \textit{a}. When traversing nodes 2 and 4 then each of them signal creation of the nodes \textit{b} and \textit{c} as children of \textit{a} in the target graph and correspondingly node 6 signals creation of node \textit{d}. The final target graph is depicted in Figure \ref{fig:example-traversal21} and in Figure \ref{fig:example-traversal22} the source nodes are embedded into the target node to make explicit that the non-dashed nodes (i.e. 3, 5, 7, 8) are simply passed over without any generative operation. 
+    Next I provide a rough description of what happens when a generative traversal is executed; the exact algorithm will be described in detail in Section \ref{sec:creation-constituency-graph}. For example lets assume that only two types of operation are needed for our task at hand. The first is to create a new node on the target graph once a non-dashed node is visited on the source graph. And, second, is to pass the dashed nodes without doing anything. This is schematically represented in Figure \ref{fig:example-traversal00}. Lets now apply these operations on traversing the example graph using the breadth first strategy following the order provided above: 1, 2, 3, 4, 5, 6, 7, 8. The traversal graph is considered source graph and the target graph is empty at the beginning of the process. Upon visiting node 1 a first node is created on the target graph which is labelled \textit{a}. When traversing nodes 2 and 4 then each of them signal creation of the nodes \textit{b} and \textit{c} as children of \textit{a} in the target graph and correspondingly node 6 signals creation of node \textit{d}. The final target graph is depicted in Figure \ref{fig:example-traversal21} and in Figure \ref{fig:example-traversal22} the source nodes are embedded into the target node to make explicit that the non-dashed nodes (i.e. 3, 5, 7, 8) are simply passed over without any generative operation. 
 
-    Now that generative traversal is defined, by analogy, \textit{update}, \textit{insert} and \textit{delete} traversals can be defined on the source or target graph by using the same mechanism of \textit{operation matrices} mapping contexts of visited nodes and edges to update, insert and delete operations. In this work, however, these operations are not used and could be explored in future work if needed.
+    Note that, in the future work, other operations can be explored if needed. Now that generative traversal is defined, by analogy, \textit{update}, \textit{insert} and \textit{delete} traversals can be defined on the source or target graph by using the same mechanism of \textit{operation matrices} mapping contexts of visited nodes and edges to update, insert and delete operations. In this work, however, these operations are not used.
 
     In Section \ref{sec:graphs} the last two definitions were for the constituency and dependency graphs. They are used in this thesis to represent grammatical analysis of a sentence. Next we will look at a special type of graph which represents fragments of structure repeatable across multiple analyses. They represent generalisations or patterns that usually are associated with grammatical features or a set of features which I explain in Chapter \ref{ch:parsing-algorithm}. These graphs are called \textit{pattern graphs} and the next section is dedicated to them.  
 
@@ -529,7 +529,7 @@
     %
     %Thirdly the ordering can be defined in absolute terms via position or in relative terms. Note that in the case of PGs the absolute ordering of nodes is interpreted relatively so PG in figure \ref{fig:pg-declarative} is identical to \ref{fig:pg-declarative2}.
 
-    Patterns like the ones explained above can be created for a wide range of grammatical features. Once the grammatical feature is encoded as a pattern graph it can be identified in parse graphs (DG or CG) via the \textit{graph pattern matching} operation described in Section \ref{sec:graph-matching}. Moreover, once the pattern is identified it can act as a triggering condition for the node update operation. When the pattern is matched then additional features can be added to the nodes of the parse graph and is the mechanism of enriching the parse graph. Coming back to out tense example above, once the pattern \ref{fig:gp1} is identified then the clause can be marked with the tense feature. In the next section I address the graph matching operation and then show how it works using pattern graphs. 
+    Patterns like the ones explained above can be created for a wide range of grammatical features. Once the grammatical feature is encoded as a pattern graph it can be identified in parse graphs (DG or CG) via the \textit{graph pattern matching} operation described in Section \ref{sec:graph-matching}. Moreover, once the pattern is identified it can act as a triggering condition for the node update operation. When the pattern is matched then additional features can be added to the nodes of the parse graph and is the mechanism of enriching the parse graph. Coming back to our tense example above, once the pattern \ref{fig:gp1} is identified then the clause can be marked with the tense feature. In the next section I address the graph matching operation and then show how it works using pattern graphs. 
 
     % skip:complicated, unclear, compressed
     %But such traversal operations cannot be easily defined. While traversal context may be sufficient for generative operations on a new structure, it is insufficient for executing affecting operations on the traversed graph. To overcome this limitation, instead of using traversal context I take a different approach: the \textit{pattern graphs}, defined in previous section combined with generic graph matching algorithm. This mechanism offers a similar algorithmic independence of mapping structural context to operation(s) triggered by it. 
@@ -537,7 +537,7 @@
 \section{Graph matching}
 \label{sec:graph-matching}
 
-    So far we have discussed about constituency and dependency graphs and, in the last section, I introduced pattern graphs. The intuition behind pattern graphs is that they are meant to be matched against or found in other graphs. The patterns graphs can be viewed as small reusable modules and as generalisations consisting of structural patterns. I will address next what it means for two graphs to be the same, i.e. \textit{isomorphic} and how this sameness checking is used in the current work. 
+    So far we have discussed about constituency and dependency graphs and, in the last section, I introduced pattern graphs. The intuition behind pattern graphs is that they are meant to be matched against or found in other graphs. The pattern graphs can be viewed as small reusable modules and as generalisations consisting of structural patterns. I will address next what it means for two graphs to be the same, i.e. \textit{isomorphic} and how this sameness checking is used in the current work. 
 
     In \textit{mathematics} structure-preserving mappings $f:X \rightarrow Y$ (from one object $X$ to the other $Y$) of the same type are called \textit{morphisms}. The morphism $f:X \rightarrow Y$ is called an \textit{isomorphism} if there exists an inverse morphism $g:Y \rightarrow X$ such that $f \circ g = id_{X}$ and $ g \circ f = id_{X}$.
 
@@ -552,16 +552,16 @@
 
     In computer science, the \textit{graph matching} operation is known as a (sub-)graph isomorphism. Two graphs $G=(V_G,E_G)$ and $H=(V_H,E_H)$ are isomorphic if there exists a mapping from the nodes of graph $G$ to the nodes of graph $H$, such that the edge neighbourhood is preserved. In such a context the nodes are unique atomic symbols functioning as node identifiers. 
  
+    Graphs do not always have the same number of nodes (or edges). We say that a graph is smaller than another one, denoted $G \leq H$, when its number of nodes is less than that of the other graph. In such cases, for two graphs $G$ and $H$ where $G<H$, the (sub-)graph matching task is redefined to establishing isomorphism(s) from $G$ to a sub-graph of $H$. 
+    %In this case, the mapping function is relaxed from bijective (perfect mapping from first to second graph) to an injective one (each node from first has a correspondent in the second one).
+    
     \begin{definition}[Graph matching]\label{def:gmatching}
         For two graphs $G$ and $H$, where $G \leq H$, \textit{graph matching} is the operation of finding an isomorphism between $G$ and $H$.
     \end{definition}
 
     \begin{definition}[Graph isomorphism]\label{def:gisomorphism}
-        An isomorphism of graph $G=(V_G,E_G)$ and $H=(V_H,E_H)$ is a bijective function $f:V_G \rightarrow V_H$ such that if any two nodes  $u,v \in V_G$ from $G$ are adjacent $(u,v) \in E_G$ then $f(u), f(v)$ are adjacent in $H$ as well $(f(u), f(v)) \in E_H $.
+        An isomorphism of graph $G=(V_G,E_G)$ and $H=(V_H,E_H)$ is a bijective function $f:V_G \rightarrow V_H$ such that if any two nodes  $u,v \in V_G$ from $G$ are adjacent $(u,v) \in E_G$ then $f(u), f(v)$ are adjacent in $H$ $(f(u), f(v)) \in E_H $.
     \end{definition}
-
-    Graphs do not always have the same number of nodes (or edges). We say that a graph is smaller than another one, denoted $G \leq H$, when its number of nodes is less than that of the other graph. In such cases, for two graphs $G$ and $H$ where $G<H$, the (sub-)graph matching task is redefined to establishing isomorphism(s) from $G$ to a sub-graph of $H$. 
-    %In this case, the mapping function is relaxed from bijective (perfect mapping from first to second graph) to an injective one (each node from first has a correspondent in the second one).
 
     \begin{definition}[Sub-graph isomorphism]\label{def:sgisomorphism}
            Given two feature rich graphs $G=(V_G,E_G)$ and $H=(V_H,E_H)$, $G$ is sub-graph isomorphic to $G$ (denoted $G \subseteq H$) if there is an injective function $f:V_G \rightarrow V_H$ such that
@@ -797,17 +797,17 @@
 \section{Pattern based operations}
 \label{sec:pattern-based-operations}
 
-    Patterns are searched for in a graph always for a purpose. Graph isomorphism is only a precondition for another operation, be it a simple selection (i.e. non-affecting operation) or an affecting operation such as feature structure enrichment (on either nodes or edges), inserting or deleting a node or drawing a new connection between nodes. It seems only natural that the end goal is embedded into the pattern, so that when it is identified, also the desired operation(s) is(are) triggered. I call such graph patterns \textit{operational pattern graphs} (Definition \ref{def:operational-pattern}). Next I explain how to embed  operations into the graph pattern and how they are used in the parsing algorithm. 
+    Patterns are searched for in a graph always for a purpose. Graph isomorphism is only a precondition for another operation, be it a simple selection (i.e. non-affecting operation) or an affecting operation such as feature structure enrichment (on either nodes or edges), inserting or deleting a node or drawing a new connection between nodes. The end goal is embedded into the pattern as operation specification: so that when the pattern is identified, also the desired operation(s) is(are) triggered. I call such graph patterns \textit{operational pattern graphs} (Definition \ref{def:operational-pattern}). Next I explain how to embed  operations into the graph pattern and how they are used in the parsing algorithm. 
 
         \begin{definition}[Operational graph pattern]\label{def:operational-pattern}
-            An \textit{operational graph pattern} is a pattern graph that has at least on one node \textit{operation} and \textit{arg} features.
+            An \textit{operational graph pattern} is a pattern graph that has at least one node \textit{operation} and \textit{arg} features.
         \end{definition}
 
     The operational aspect of the pattern graph is specified in the node FS via three special features: \textit{id}, \textit{operation} and \textit{arg}. The \textit{id} feature (the same as for relative node ordering) is used to mark the node for further referencing as an argument of an operation, the \textit{operation} feature names the function to be executed once the pattern is identified and the \textit{arg} feature specifies the function arguments if any are required; they are tightly coupled with function implementation. If a node has the feature operation then it is called an \textit{operational node}. Also, in the current implementation, the special features such as operation, arg, id, precede etc. are excluded from the pattern matching operation because they have functional roles linked to the implementation and do not describe the linguistic properties of a graph node.
 
     So far the implemented operations are \textit{insert}, which is used for creation of empty nodes, \textit{delete}, which is used for corrections of predictable errors in dependency graphs and the \textit{update} operation, which is the main mechanism behind graph enrichment. These operations are depicted in Figure \ref{fig:pipeline-overview} of the parser pipeline architecture from Section \ref{sec:architecture}.
 
-    Operative patterns are enacted once they are matched to an instance graph. An operative pattern graph $G$ is \textit{enacted} on an instance graph $H$, in two steps. First, the pattern graph is strictly matched to an instance graph. If an isomorphism $f$ is found then, second, for every operational node $v \in G, \exists att(v)=operation$, the specified operation $op = val(v.operation)$ and the corresponding node of the instance graph $u \in H$, the operation is executed on the node of the instance graph $op(u)$. If the arg feature is provided then the operation is executed with that additional argument. 
+    Operative patterns are enacted once they are matched to an instance graph. An operative pattern graph $G$ is \textit{enacted} on an instance graph $H$ in two steps. First, the pattern graph is strictly matched to an instance graph. If an isomorphism $f$ is found then, second, for every operational node $v \in G, \exists att(v)=operation$, the specified operation $op = val(v.operation)$ and the corresponding node of the instance graph $u \in H$, the operation is executed on the node of the instance graph $op(u)$. If the arg feature is provided then the operation is executed with that additional argument. 
 
 \subsection{Pattern based node update} 
 
@@ -990,7 +990,7 @@
 
     In operational terms, the insertion operation means that the whole pattern will first go through a matching process. If there is a match then the new node is created. A important thing about the created node is that it may keep a reference to another node or not. In our example it does keep a reference to the subject of the dominant clause. If so, then all the features of the referee node are inherited by the new node. And if any are additionally provided then the new node overrides the inherited ones.
 
-    This section concludes our journey in the world of graph patterns, isomorphisms and graph based operations. This leaves only one more important data structure to cover: the system networks. 
+    This section concludes our journey into the world of graph patterns, isomorphisms and graph based operations. This leaves only one more important data structure to cover: the system networks. 
 
 \section{Systems and Systemic Networks}
 \label{sec:system-networks-cs}
@@ -1003,10 +1003,10 @@
     	A hierarchy is a finite bounded complete partial order $(\varDelta,\prec)$. 
     \end{definition}
 
-    The next concept that requires closer formalization is that of a system first established in Definition \ref{def:system}. For precision purposes, this has a narrower scope without considering the system networks or precondition constraints; these are introduced shortly afterwards building upon the current one.
+    The next concept that requires closer formalisation is that of a system first established in Definition \ref{def:system}. For precision purposes, this has a narrower scope without considering the system networks or precondition constraints; these are introduced shortly afterwards building upon the current one.
 
     \begin{definition}[System]\label{def:formal-system}
-    A \textit{system} $\Sigma=(l,P,C)$ labelled $l$ is defined by a finite disjoint set of distinct and mutually defining terms called a \textit{choice set} $C$ (of type $S_{XOR}$) and an \textit{entry condition set} $P$ (of type $S_{OR}$, $S_{XOR}$ or $S_{AND}$) establishing the delicacy relations within a system network.
+    A \textit{system} $\Sigma=(l,P,C)$ labelled $l$ is defined by a finite disjoint set of distinct and mutually defining terms called a \textit{choice set} $C$ (of type $S_{XOR}$) and an \textit{entry condition set} $P$ of type $S_{XOR}$ establishing the delicacy relations within a system network.
     %\begin{enumerate}
     %	\item the choice set is a $S_{XOR}$ conjunction set.
     %	\item the entry condition is a $S_{OR}$, $S_{XOR}$ or $S_{AND}$ conjunction set.
@@ -1263,7 +1263,7 @@
     \end{figure}
 
     %The process of creating selection path is sometimes called \textit{system network instantiation}. 
-    The selection path is generated by traversal of the feature network from a given feature node towards the root node. If the node has no incoming edge then the result of traversal is a leaf node and the resulting selection path is complete. For example, if \textit{verbal-marker} feature is selected in the system network depicted in Figure \ref{fig:polarity1} the traversal of the corresponding feature network toward root feature yields the selection path \textit{negative -- interpersonal -- syntactic -- verbal-marker}. This path is also complete with respect to the network because there are no systems younger than the SYNTACTIC-TYPE system.
+    The selection path is generated by traversal of the feature network from a given feature node towards the root node. If the node has no incoming edge then the result of traversal is a leaf node and the resulting selection path is complete. For example, if \textit{verbal-marker} feature is selected in the system network depicted in Figure \ref{fig:polarity1} the traversal of the corresponding feature network toward the root feature yields the selection path \textit{negative -- interpersonal -- syntactic -- verbal-marker}. This path is also complete with respect to the network because there are no systems younger than the SYNTACTIC-TYPE system.
 
     When the system networks define more than one feature in the precondition it leads to split paths. This means that there is more than one feature that needs to or can be preselected. If the edge is a continuous line (depicted  in Figure \ref{fig:feature-network-example1}) the both variants are part of the same selection path. In case the edge is a dashed line (depicted  in Figure \ref{fig:feature-network-example2}) the paths are considered alternative and a further decision making mechanism must be employed to reduce the disjunction to a single variant. In the current work no such mechanism is employed and the parse result is presented with both alternatives. In most cases the entry condition is constituted of a single feature, when there are multiple ones, usually they are conjuncted and only in a small minority of cases entry condition is a disjunction of features.
 
@@ -1288,13 +1288,13 @@
 \label{sec:realisation-reules}
     The previous section explains that in the current work system networks are simplified to a taxonomy of features and no realisation rules are considered. This section explains how the pattern graphs are a substitute for the realisation rules and how they relate to each other.
 
-    The \textit{realisation rule} of a systemic feature specifies how that feature is realised as a syntagmatic structure down to a text form using operations such as insert or expand constituent, order two constituent, preselect another feature, lexicalise etc. They are the essential ingredients binding the paradigmatic description in a syntagmatic structure. Robin Fawcett recurrently emphasises the role of realisation rules in the composition of system networks. He often stresses ``no system networks without realisation rules''. It is the \textit{instantiation} process that in Halliday's words ``is the relation between a semiotic system and the \textit{observable} events or `acts' of meaning'' \citep[emphasis added]{Halliday2003-systemic-theory}. The realisation rules for a systemic feature are the statement of operations through which that feature contributes to the structural configuration (that is being either generated or recognised) \citep[p.86]{Fawcett2000}.
+    The \textit{realisation rule} of a systemic feature specifies how that feature is realised as a syntagmatic structure down to form using operations such as insert or expand constituent, order two constituents, preselect another feature, lexicalise etc. They are the essential ingredients binding the paradigmatic description in a syntagmatic structure. Robin Fawcett emphasises the role of realisation rules in the composition of system networks. He often stresses ``no system networks without realisation rules''. It is the \textit{instantiation} process that in Halliday's words ``is the relation between a semiotic system and the \textit{observable} events or `acts' of meaning'' \citep[emphasis added]{Halliday2003-systemic-theory}. The realisation rules for a systemic feature are the statement of operations through which that feature contributes to the structural configuration (that is being either generated or recognised) \citep[p.86]{Fawcett2000}.
 
     % It is not easy however for linguists and grammarians to provide such statements for the systemic features. Doing so means an explicit formalisation of grammar on top of charting the systemic composition and dependencies which is already a challenging task in its own. Not to mention that writing a good grammar is already a very difficult task. The realisation rules most of the time remain in the minds of the interpreters who can recognise a feature when it occurs. Adding the formal specification of the realisation rule requires tools for consistency checking with respect to the rest of the grammar and large corpus query tool to test various rule hypotheses which are not really available yet. 
 
     %The graph patterns described in this chapter can be a suitable approach to address the problem of missing realisation rules.
 
-    In this work the graph patterns can be considered as bundles of realisation rules and feature selections and therefore an approach to replace the realisation rules. This idea is implicitly covered in Section \ref{sec:pattern-graphs} and here I explicitly describe it through an example. Consider the fragment of the Mood system network from \citet[162]{Halliday2013} depicted in Figure \ref{fig:mood-fragment}. This example aims at three feature selections: major, indicative and declarative. The root feature in the system network is realised through a constituent \textit{clause}, any of the selected fratures is ascribed directly to it, and the selection of any subsequent features impacts the elements below through the associated realisation rules. The pattern graph that captures selection of the major feature is depicted in Figure \ref{fig:mood-fragment-major}. 
+    In this work the graph patterns can be considered as bundles of realisation rules and feature selections and therefore an approach to replace the realisation rules. This idea is implicitly covered in Section \ref{sec:pattern-graphs} and here I explicitly describe it through an example. Consider the fragment of the Mood system network from \citet[162]{Halliday2013} depicted in Figure \ref{fig:mood-fragment}. This example aims at three feature selections: major, indicative and declarative. The root feature in the system network is realised through a constituent \textit{clause}, any of the selected features is ascribed directly to it, and the selection of any subsequent features impacts the elements below through the associated realisation rules. The pattern graph that captures selection of the major feature is depicted in Figure \ref{fig:mood-fragment-major}. 
 
     \begin{figure}[!ht]
         \centering
@@ -1370,10 +1370,10 @@
 \section{Summary}
     This chapter described from a computer science perspective the SFL concepts introduced in Chapter \ref{ch:sfg} and prepares the ground for the following chapters that address the implementation details of the Parsimonious Vole parser.  
 
-    A central theme covered here are the graphs and graph patterns. They play the key role in identifying grammatical features in dependency and constituency structures. They are also an excellent candidate for expressing \textit{systemic realizations} which have not been considered in the current work as being associated with the systemic features.  
+    A central theme covered here are the graphs and graph patterns. They play the key role in identifying grammatical features in dependency and constituency structures. They are also an excellent candidate for expressing \textit{systemic realisations} which have not been considered in the current work as being associated with the systemic features.  
 
     %In Section \ref{sec:realisation-reules} I mentioned that 
-    Authoring realisation rules is a difficult task and requires proper tool support. The same is the case for graph patterns and even more so when they need to be related to systemic networks or network parts. The system network authoring tool, such as the one available in UAM Corpus Tool \citep{ODonnell2008a}, should provide also a graph pattern editor allowing association of graph patterns to systemic features. Unfortunately building such an editor is out of the scope of the current work and is among the priorities in the future developments. Also employing a mature specialised technology for manipulating large amounts of graph data as available in the Semantic Web suite of tools is another direction for the future described in the Section \ref{sec:future-work}.
+    Authoring realisation rules is a difficult task and requires proper tool support. The same is the case for graph patterns and even more so when they need to be related to systemic networks or network parts. The system network authoring tool, such as the one available in UAM Corpus Tool \citep{ODonnell2008a}, could provide also a graph pattern editor allowing association of graph patterns to systemic features. This would have to be embedded into a module implementing a grammar development environment. Building such an editor is an opportunity to create additional value if taken up in the future developments. Also employing a mature specialised technology for manipulating large amounts of graph data as available in the Semantic Web suite of tools is another direction for the future described in the Section \ref{sec:future-work}.
 
     In the next chapter I describe the parsing pipeline and how each step is implemented starting from the Stanford dependency graph all the way down to a rich constituency systemic functional parse structure.
 
