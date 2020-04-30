@@ -39,13 +39,18 @@ The empirical evaluation is based on two manually annotated corpora. First one c
 
 The current work concludes that (a) reusing parse results with other grammars for structure creation and (b) employing graph patterns for enrichment with systemic features constitutes a viable solution to create feature-rich constituency structures in SFL style.
 
-##Final word
+## Final word
 
 In this work I have advanced the work on automatic text analysis in SFL style. The current implementation did not succeed to employ a full SF grammar, and, just like previous attempts, had to accept limitations in the grammar size while maintaining broad language coverage. This task is particularly difficult because of the richness of such grammars. Nonetheless, modern applications desperately need deep feature-rich text analysis functionalities.
 
 My view is that building on top of successful results achieved with other grammars by mapping them to parts of SF grammar constitutes a viable solution to the creation of SFL style constituency structures. Furthermore, employing graph patterns to enrich the structure with systemic features is the key ingredient for performing a delicate feature-rich text analysis.
 
 By further advancing the proposed methods and exploring new ways to cut through complexity, my hope is that one day automatically generating feature-rich text analysis will become the de facto approach employed in truly intelligent agents that can, to a large extent, do with language what people do.
+
+## Stats
+
+    Total Words :84021
+    Headers :200
 
 ## Template credits
 
